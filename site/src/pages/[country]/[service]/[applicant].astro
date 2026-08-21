@@ -1,0 +1,71 @@
+---
+import Base from '../../../layouts/Base.astro';
+import AdSlot from '../../../components/AdSlot.astro';
+import Freshness from '../../../components/Freshness.astro';
+import { records, services, JURISDICTIONS, fmtDate, humanValue } from '../../../lib/data.js';
+
+export function getStaticPaths() {
+  return records.filter(r => r.applicantSlug).map(r => ({
+    params: { country: r.jur.slug, service: r.serviceSlug, applicant: r.applicantSlug },
+    props: { id: r.id },
+  }));
+}
+const { id } = Astro.props;
+const rec = records.find(r => r.id === id);
+const jur = rec.jur;
+const svc = services[rec.jurisdiction].get(rec.serviceSlug);
+const siblings = svc.records.filter(r => r.status === 'ok' && r.id !== rec.id);
+const rank = rec.status === 'ok' ? siblings.filter(s => s.value_days < rec.value_days).length + 1 : null;
+
+const pageUrl = new URL(`/${jur.slug}/${rec.serviceSlug}/${rec.applicantSlug}/`, Astro.site).href;
+const jsonld = [
+  { '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: new URL('/', Astro.site).href },
+      { '@type': 'ListItem', position: 2, name: jur.name, item: new URL(`/${jur.slug}/`, Astro.site).href },
+      { '@type': 'ListItem', position: 3, name: svc.name, item: new URL(`/${jur.slug}/${rec.serviceSlug}/`, Astro.site).href },
+      { '@type': 'ListItem', position: 4, name: `From ${rec.applicant_country_name}`, item: pageUrl },
+    ] },
+  { '@context': 'https://schema.org', '@type': 'GovernmentService',
+    name: `${svc.name} for applicants from ${rec.applicant_country_name} — ${jur.name}`,
+    serviceOperator: { '@type': 'GovernmentOrganization', name: jur.agency },
+    areaServed: jur.name, audience: { '@type': 'Audience', name: `Applicants from ${rec.applicant_country_name}` },
+    url: pageUrl },
+];
+const title = rec.status === 'ok'
+  ? `${jur.name} ${svc.name.toLowerCase()} from ${rec.applicant_country_name}: ${rec.value_raw} (official, ${fmtDate(rec.effective_date)})`
+  : `${jur.name} ${svc.name.toLowerCase()} from ${rec.applicant_country_name}: current official status`;
+---
+<Base title={title}
+      description={`Official ${jur.name} processing time for ${svc.name.toLowerCase()} applications from ${rec.applicant_country_name}: ${humanValue(rec)}. Published by ${jur.agency}, tracked with provenance and history.`}
+      jsonld={jsonld}>
+  <nav class="crumbs"><a href="/">Home</a> › <a href={`/${jur.slug}/`}>{jur.name}</a> › <a href={`/${jur.slug}/${rec.serviceSlug}/`}>{svc.name}</a> › {rec.applicant_country_name}</nav>
+  <h1>{svc.name} ({jur.name}) — applying from {rec.applicant_country_name}</h1>
+  <p class="big">{humanValue(rec)}</p>
+  {rec.status === 'ok' && rank && <p class="badge">#{rank} fastest of {siblings.length + 1} countries with published times</p>}
+  <Freshness record={rec} />
+  <AdSlot position="entity-top" />
+
+  <p>
+    {rec.status === 'ok'
+      ? `${jur.agency} currently reports ${rec.value_raw} to process ${svc.name.toLowerCase()} applications from ${rec.applicant_country_name}. This figure is recalculated by the agency from recent completed cases, so it moves — we re-check it weekly and keep every published value below.`
+      : rec.status === 'unavailable'
+        ? `${jur.agency} does not currently publish a processing time for ${svc.name.toLowerCase()} applications from ${rec.applicant_country_name}. That usually means too few recent applications from this country to compute a reliable figure. We check weekly and will record a value the moment one is published.`
+        : `${jur.agency} currently marks this route as having too little data to publish a reliable processing time. We check weekly and will record a value the moment one is published.`}
+  </p>
+
+  <h2>Recorded history</h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Official value</th><th>Published/updated</th><th>Verified by us</th></tr></thead>
+    <tbody>{rec.history.slice().reverse().map(h => (
+      <tr><td>{h.status === 'ok' ? h.value_raw : humanValue(h)}</td><td class="num">{fmtDate(h.effective_date)}</td><td class="num">{fmtDate(h.retrieved_at)}</td></tr>
+    ))}</tbody>
+  </table></div>
+  <p class="small muted">Tracking began August 2026; a new row appears whenever the official figure changes.</p>
+
+  <h2>Compare</h2>
+  <p class="small">See <a href={`/${jur.slug}/${rec.serviceSlug}/`}>all {svc.records.length} applicant countries for {svc.name.toLowerCase()}</a>{siblings.length ? `, currently ranging from ${siblings[0].value_raw} (${siblings[0].applicant_country_name}) to ${siblings.at(-1).value_raw} (${siblings.at(-1).applicant_country_name})` : ''}.</p>
+
+  <div class="prov">Source: <a href={rec.source_url} rel="noopener nofollow">{jur.agency}</a> · value retrieved {fmtDate(rec.retrieved_at)} · extracted values only · not legal advice.</div>
+  <AdSlot position="entity-bottom" />
+</Base>

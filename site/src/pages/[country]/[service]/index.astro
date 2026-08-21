@@ -1,0 +1,87 @@
+---
+import Base from '../../../layouts/Base.astro';
+import AdSlot from '../../../components/AdSlot.astro';
+import Freshness from '../../../components/Freshness.astro';
+import { services, JURISDICTIONS, fmtDate, humanValue } from '../../../lib/data.js';
+
+export function getStaticPaths() {
+  const paths = [];
+  for (const [code, jur] of Object.entries(JURISDICTIONS)) {
+    for (const svc of services[code].values()) {
+      paths.push({ params: { country: jur.slug, service: svc.slug }, props: { code, slug: svc.slug } });
+    }
+  }
+  return paths;
+}
+const { code, slug } = Astro.props;
+const jur = JURISDICTIONS[code];
+const svc = services[code].get(slug);
+const single = !svc.hasApplicantPages; // GB service-standard pages are the entity page
+const rec = svc.records[0];
+const ok = svc.records.filter(r => r.status === 'ok');
+const median = ok.length ? ok[Math.floor(ok.length / 2)].value_days : null;
+
+const crumbs = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: new URL('/', Astro.site).href },
+    { '@type': 'ListItem', position: 2, name: jur.name, item: new URL(`/${jur.slug}/`, Astro.site).href },
+    { '@type': 'ListItem', position: 3, name: svc.name, item: new URL(`/${jur.slug}/${svc.slug}/`, Astro.site).href },
+  ],
+};
+const govService = {
+  '@context': 'https://schema.org', '@type': 'GovernmentService',
+  name: `${svc.name} — ${jur.name}`,
+  serviceOperator: { '@type': 'GovernmentOrganization', name: jur.agency },
+  areaServed: jur.name,
+  url: new URL(`/${jur.slug}/${svc.slug}/`, Astro.site).href,
+};
+
+const title = single
+  ? `${svc.name} processing time (${jur.name}) — currently ${rec.value_raw}`
+  : `${jur.name} ${svc.name.toLowerCase()} processing time by country — current official figures`;
+const desc = single
+  ? `Official ${jur.name} processing time for ${svc.name}: ${rec.value_raw} as of ${fmtDate(rec.effective_date)}, published by ${jur.agency}. Tracked with history.`
+  : `Current official ${svc.name.toLowerCase()} processing times for ${svc.records.length} applicant countries, published by ${jur.agency}. ${ok.length} countries have published figures.`;
+---
+<Base title={title} description={desc} jsonld={[crumbs, govService]}>
+  <nav class="crumbs"><a href="/">Home</a> › <a href={`/${jur.slug}/`}>{jur.name}</a> › {svc.name}</nav>
+  <h1>{single ? `${svc.name} (${jur.name}): current processing time` : `${jur.name} ${svc.name}: processing time by applicant country`}</h1>
+  <AdSlot position="service-top" />
+
+  {single ? (
+    <>
+      <p class="big">{humanValue(rec)}</p>
+      <Freshness record={rec} />
+      <p>This is the current service standard {jur.agency} publishes for <strong>{rec.service_name}</strong> applications made from outside the UK. It reflects {svc.blurb}. The figure is a published standard, not a guarantee for any individual application.</p>
+      <h2>History we have recorded</h2>
+      <div class="tablewrap"><table>
+        <thead><tr><th>Official value</th><th>Published/updated</th><th>Verified by us</th></tr></thead>
+        <tbody>{rec.history.slice().reverse().map(h => (
+          <tr><td>{h.value_raw}</td><td class="num">{fmtDate(h.effective_date)}</td><td class="num">{fmtDate(h.retrieved_at)}</td></tr>
+        ))}</tbody>
+      </table></div>
+      <p class="small muted">Tracking began August 2026. History grows automatically with each official update.</p>
+    </>
+  ) : (
+    <>
+      <p>{jur.agency} publishes {svc.blurb}, per applicant country, and refreshes the figures roughly weekly. {ok.length} of {svc.records.length} countries currently have a published time{median ? `; the median is ${Math.round(median)} days` : ''}. Countries without a published figure are listed too — that absence is itself official information.</p>
+      <Freshness record={rec} />
+      <div class="tablewrap"><table>
+        <thead><tr><th>Applying from</th><th>Official processing time</th><th></th></tr></thead>
+        <tbody>
+          {svc.records.map(r => (
+            <tr>
+              <td><a href={`/${jur.slug}/${svc.slug}/${r.applicantSlug}/`}>{r.applicant_country_name}</a></td>
+              <td class="num">{humanValue(r)}</td>
+              <td class="small"><a href={`/${jur.slug}/${svc.slug}/${r.applicantSlug}/`}>details</a></td>
+            </tr>
+          ))}
+        </tbody>
+      </table></div>
+    </>
+  )}
+
+  <div class="prov">Source: <a href={rec.source_url} rel="noopener nofollow">{jur.agency}</a> · extracted values only, republished with attribution · not legal advice.</div>
+  <AdSlot position="service-bottom" />
+</Base>

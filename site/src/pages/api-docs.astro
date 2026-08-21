@@ -1,0 +1,30 @@
+---
+import Base from '../layouts/Base.astro';
+import config from '../../site.config.json';
+import { stats } from '../lib/data.js';
+---
+<Base title={`${config.SITE_NAME} JSON API — free static endpoints for the processing-times dataset`}
+      description="Free, no-key JSON API for officially published government processing times: collection indexes, per-route latest values, and history. Plus an MCP server for AI agents.">
+  <h1>JSON API (static, free, no key)</h1>
+  <p>The entire dataset is prebuilt as static JSON — fast, cacheable, and stable. Attribution (CC BY 4.0) required. Full schema: <a href="/api/v1/openapi.yaml">OpenAPI 3.1 spec</a>.</p>
+
+  <h2>Endpoints</h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Path</th><th>Returns</th></tr></thead>
+    <tbody>
+      <tr><td><code>/api/v1/index.json</code></td><td>Dataset stats, sources, and links to all collections</td></tr>
+      <tr><td><code>/api/v1/jurisdictions/ca.json</code></td><td>All Canadian routes with latest values</td></tr>
+      <tr><td><code>/api/v1/jurisdictions/gb.json</code></td><td>All UK routes with latest values</td></tr>
+      <tr><td><code>/api/v1/services/&#123;service_key&#125;.json</code></td><td>One service, all applicant countries (e.g. <code>ca-visitor-visa</code>)</td></tr>
+      <tr><td><code>/api/v1/entities/&#123;entity_id&#125;.json</code></td><td>One route: latest value + full recorded history (e.g. <code>ca-visitor-visa--in</code>)</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Example</h2>
+  <pre class="fresh" style="overflow-x:auto"><code>curl {config.SITE_URL}/api/v1/entities/ca-visitor-visa--in.json</code></pre>
+
+  <h2>For AI agents</h2>
+  <p>An MCP (Model Context Protocol) server exposes <code>search_entities</code>, <code>get_entity</code>, <code>get_latest_value</code> and <code>compare_values</code> over this dataset — see the project repository's <code>machine/mcp-server</code> directory for registration instructions, and <a href="/llms.txt">/llms.txt</a> for a machine-readable site description.</p>
+
+  <p class="small muted">{stats.entities.toLocaleString()} routes · regenerated on every data refresh · values are official government publications, republished with provenance.</p>
+</Base>

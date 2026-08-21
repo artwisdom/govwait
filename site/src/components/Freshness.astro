@@ -1,0 +1,9 @@
+---
+import { fmtDate } from '../lib/data.js';
+const { record } = Astro.props;
+---
+<div class="fresh">
+  <b>Last updated by {record.jurisdiction === 'CA' ? 'IRCC' : 'the Home Office'}:</b> {fmtDate(record.effective_date)}
+  · <span class="muted">Last verified by us: {fmtDate(record.retrieved_at)}</span>
+  · <a href={record.source_url} rel="noopener nofollow">official source ↗</a>
+</div>

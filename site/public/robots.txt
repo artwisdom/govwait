@@ -1,0 +1,5 @@
+# GovWait — all crawlers welcome, including AI agents. See /llms.txt.
+User-agent: *
+Allow: /
+
+Sitemap: https://govwait.example/sitemap.xml

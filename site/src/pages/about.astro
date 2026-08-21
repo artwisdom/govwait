@@ -1,0 +1,39 @@
+---
+import Base from '../layouts/Base.astro';
+import config from '../../site.config.json';
+import { sources, stats, fmtDate } from '../lib/data.js';
+---
+<Base title={`How ${config.SITE_NAME} collects its data — methodology, sources, terms`}
+      description="Every value on this site is an officially published government figure, fetched politely from primary sources, stored with URL and timestamp, and never edited.">
+  <h1>How this data is collected</h1>
+  <p>{config.SITE_NAME} does one thing: it records the processing times that government agencies themselves publish, and keeps the history they overwrite. Nothing here is estimated, crowd-sourced, or inferred.</p>
+
+  <h2>Method</h2>
+  <ul>
+    <li><strong>Primary sources only.</strong> We read the official pages and data files of the agencies listed below — never third-party summaries.</li>
+    <li><strong>Polite, honest collection.</strong> Our collector identifies itself with a bot User-Agent, obeys every robots.txt, waits at least 3 seconds between requests to the same host, and re-checks each source about once a week. It fetches a handful of small files — comparable to one human visit.</li>
+    <li><strong>Values, not content.</strong> We extract the published figure (e.g. “31 days”), the agency's own “last updated” date, the URL, and our retrieval timestamp. All page text on this site is written by us.</li>
+    <li><strong>History is never edited.</strong> When an agency changes a figure, we add a new dated record; old records are kept verbatim. If a value looks wrong, the validation suite blocks publication rather than guessing.</li>
+    <li><strong>Absence is data.</strong> Where an agency publishes “no processing time available”, we say exactly that, dated.</li>
+  </ul>
+
+  <h2>Sources currently tracked</h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Agency</th><th>What we read</th><th>License/terms</th></tr></thead>
+    <tbody>
+      {sources.map(s => (
+        <tr><td>{s.agency}</td><td><a href={s.url} rel="noopener nofollow">{s.name}</a></td><td class="small muted">{s.license_note}</td></tr>
+      ))}
+    </tbody>
+  </table></div>
+  <p class="small muted">Dataset generated {fmtDate(stats.generated_at)} · {stats.entities.toLocaleString()} routes · {stats.observations.toLocaleString()} observations.</p>
+
+  <h2>What the figures mean — and don't</h2>
+  <p>Published processing times are the agencies' own statistics (typically how long recently completed applications took, or a service standard). They are not a promise about any individual application, and they are not legal advice. For decisions that matter, verify against the linked official source — every page links its source for exactly that reason.</p>
+
+  <h2>Reuse &amp; attribution</h2>
+  <p>Extracted values are available via our <a href="/api-docs/">JSON API</a> and MCP server under CC BY 4.0: reuse freely with attribution to {config.SITE_NAME} and the originating agency. Underlying figures remain the respective governments' publications (gov.uk material: Open Government Licence v3.0).</p>
+
+  <h2>Corrections</h2>
+  <p>Spotted a mismatch between a value here and the official page? The official page wins. Contact details will be published when the site goes live.</p>
+</Base>

@@ -1,0 +1,47 @@
+---
+import Base from '../layouts/Base.astro';
+import AdSlot from '../components/AdSlot.astro';
+import config from '../../site.config.json';
+import { stats, services, JURISDICTIONS, fmtDate } from '../lib/data.js';
+
+const jsonld = [{
+  '@context': 'https://schema.org',
+  '@type': 'Dataset',
+  name: `${config.SITE_NAME}: official government processing times`,
+  description: 'Tracked dataset of officially published government processing and wait times for visas, permits, sponsorships and resettlement, with per-value provenance and history.',
+  url: config.SITE_URL,
+  license: 'https://creativecommons.org/licenses/by/4.0/',
+  creator: { '@type': 'Organization', name: config.SITE_NAME },
+  temporalCoverage: `${stats.generated_at.slice(0,10)}/..`,
+  distribution: [{ '@type': 'DataDownload', encodingFormat: 'application/json', contentUrl: `${config.SITE_URL}/api/v1/index.json` }],
+  isBasedOn: Object.values(stats.per_source).map(s => s.name),
+}];
+
+const totalTracked = stats.entities;
+---
+<Base title={`${config.SITE_NAME} — how long government applications actually take right now`}
+      description={`Live-tracked official processing times for ${totalTracked.toLocaleString()} visa, permit and sponsorship routes across ${stats.jurisdictions.length} governments. Every value sourced, dated and historized.`}
+      jsonld={jsonld}>
+  <h1>How long will it take? The current official answer, tracked.</h1>
+  <p>Governments publish how long applications are taking — then overwrite the number every week. We record every value with its source and date, so you can see the <em>current</em> official figure and how it has moved. No estimates, no crowd guesses: only what {Object.values(JURISDICTIONS).map(j=>j.agency.split('(')[0].trim()).join(' and ')} publish, with receipts.</p>
+  <AdSlot position="home-top" />
+  <div class="fresh">Tracking <b>{totalTracked.toLocaleString()}</b> routes · {stats.observations.toLocaleString()} observations recorded · dataset generated {fmtDate(stats.generated_at)}</div>
+
+  {Object.entries(JURISDICTIONS).map(([code, jur]) => (
+    <section>
+      <h2><a href={`/${jur.slug}/`}>{jur.name}</a> <span class="muted small">— {jur.agency}</span></h2>
+      <ul class="grid">
+        {[...services[code].values()].map(svc => (
+          <li>
+            <a href={`/${jur.slug}/${svc.slug}/`}>{svc.name}</a><br />
+            <span class="small muted">{svc.hasApplicantPages ? `${svc.records.length} applicant countries` : svc.records[0].value_raw} · updated {fmtDate(svc.latestEffective)}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  ))}
+
+  <h2>For machines</h2>
+  <p class="small">The same dataset is served as a <a href="/api-docs/">static JSON API</a>, an MCP server for AI agents, and described in <a href="/llms.txt">llms.txt</a>. Attribution required; see <a href="/about/">methodology &amp; terms</a>.</p>
+  <AdSlot position="home-bottom" />
+</Base>
