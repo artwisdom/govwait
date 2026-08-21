@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+venv/
+.venv/
+
+# Secrets — never committed
+.env
+.env.local
+*.pem
+*.key
+
+# Raw fetch cache (large, reproducible)
+data/cache/
+
+# Build outputs
+site/dist/
+site/.astro/
+machine/mcp-server/dist/
+machine/mcp-server/build/
+
+# OS noise
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
