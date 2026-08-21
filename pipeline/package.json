@@ -1,0 +1,11 @@
+{
+  "name": "govwait-pipeline",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Zero-dependency data pipeline: official government processing times -> SQLite -> JSON exports",
+  "scripts": {
+    "run": "node run.js",
+    "refresh": "node run.js --refresh"
+  }
+}

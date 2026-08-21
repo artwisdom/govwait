@@ -15,9 +15,9 @@ All dependencies install locally (`node_modules` inside project). No global inst
 
 ## Phase status
 - [x] Phase 0 — Workspace scaffold (this commit)
-- [ ] Phase 1 — Independent research round → `/research/RESEARCH_LOG.md`
-- [ ] Phase 2 — Niche selection → `/research/NICHE_DECISION.md`
-- [ ] Phase 3 — Data pipeline → `/pipeline`, seed data in `/data`
+- [x] Phase 1 — Research round (22 candidates, source audit, AI-failure test 7/10 errors)
+- [x] Phase 2 — Niche: **government processing & wait times ("GovWait")** — 37/39, zero kills; runner-up: student-visa financial thresholds
+- [x] Phase 3 — Pipeline green: 1,946 records (1,907 IRCC + 39 gov.uk), 484 numeric, validation 11 checks, exports in data/exports/
 - [ ] Phase 4 — Human skin (Astro static site) → `/site`
 - [ ] Phase 5 — Machine skin (static JSON API + MCP server + llms.txt) → `/machine`
 - [ ] Phase 6 — Automation blueprints → `/.github/workflows` (INACTIVE until owner pushes)
@@ -25,7 +25,8 @@ All dependencies install locally (`node_modules` inside project). No global inst
 - [ ] Phase 8 — Deliverables + final report
 
 ## Next step
-Phase 1: generate ≥20 candidate niches, incumbent scan, demand proxies, source audit, AI-failure test. Budget ~30% of session effort here.
+Phase 4: Astro static site from data/exports/latest.json. URL scheme: /canada/visitor-visa/from-india/ etc. SITE_URL placeholder: https://govwait.example (owner swaps at deploy).
 
 ## Open threads
-None yet.
+- US/AU/IE sources WAF-blocked to honest bots — owner-decision item (documented in DEPLOYMENT_GUIDE).
+- NZ/SE/NL/DK verified robots-permitted, not yet built (expansion targets in MAINTENANCE_RUNBOOK).

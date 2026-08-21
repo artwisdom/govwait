@@ -1,0 +1,22 @@
+{
+  "generated_at": "2026-08-21T11:37:38.734Z",
+  "entities": 1946,
+  "observations": 1946,
+  "jurisdictions": [
+    "CA",
+    "GB"
+  ],
+  "services": 48,
+  "per_source": {
+    "govuk-visa-times": {
+      "name": "UK visa processing times (outside UK)",
+      "observations": 39,
+      "latest_effective_date": "2026-06-26"
+    },
+    "ircc-ptime": {
+      "name": "IRCC Check Processing Times data",
+      "observations": 1907,
+      "latest_effective_date": "2026-08-19"
+    }
+  }
+}

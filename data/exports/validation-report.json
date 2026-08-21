@@ -1,0 +1,63 @@
+{
+  "generated_at": "2026-08-21T11:37:38.704Z",
+  "pass": true,
+  "checks": [
+    {
+      "name": "entity-shape",
+      "pass": true,
+      "detail": "0 malformed entity rows"
+    },
+    {
+      "name": "observation-shape",
+      "pass": true,
+      "detail": "0 malformed observations"
+    },
+    {
+      "name": "referential-integrity",
+      "pass": true,
+      "detail": "0 orphaned observations"
+    },
+    {
+      "name": "value-range",
+      "pass": true,
+      "detail": "0 observations outside (0, 3000] days"
+    },
+    {
+      "name": "coverage-ircc-ptime",
+      "pass": true,
+      "detail": "1907 observations (floor 1200)"
+    },
+    {
+      "name": "coverage-govuk-visa-times",
+      "pass": true,
+      "detail": "39 observations (floor 10)"
+    },
+    {
+      "name": "coverage-total",
+      "pass": true,
+      "detail": "1946 total observations (floor 300)"
+    },
+    {
+      "name": "staleness-ircc-ptime",
+      "pass": true,
+      "detail": "latest effective_date 2026-08-19 is 2d old (max 45)"
+    },
+    {
+      "name": "staleness-govuk-visa-times",
+      "pass": true,
+      "detail": "latest effective_date 2026-06-26 is 56d old (max 120)"
+    },
+    {
+      "name": "volatility-guard",
+      "pass": true,
+      "detail": "0 >10x jumps flagged for review",
+      "flagged": []
+    },
+    {
+      "name": "provenance",
+      "pass": true,
+      "detail": "0 observations missing retrieved_at"
+    }
+  ],
+  "failures": []
+}
