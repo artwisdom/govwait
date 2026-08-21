@@ -13,3 +13,11 @@
 11. Skipped the harness Task tools; STATE.md is the progress tracker the brief mandates.
 12. IRCC "No processing time available" entries stored as null-valued records with status flag rather than dropped — absence of a published time is itself information users search for.
 13. Normalized all durations to days (weeks ×7, months ×30.44 flagged approximate) while preserving the original verbatim string in `value_raw` — comparisons need one unit; trust needs the original.
+14. Astro 5 requires Node ≥22.12 (this Mac has 20.19); used Astro 4.16 rather than installing a runtime — brief permits the fallback, rules forbid global installs.
+15. SQLite via the system sqlite3 CLI (`-json`) instead of better-sqlite3 — zero npm deps in the pipeline, no native-compile risk; MCP server reads JSON exports, never the DB.
+16. db.sqlite is committed to git (source of truth must persist across CI runs for history to compound); WAL side files ignored.
+17. Ad slots render as HTML comments only — zero layout shift and zero placeholder pixels until a network is approved.
+18. Site brand kept as working title "GovWait" with reserved-TLD placeholder origin govwait.example; deploy workflow rewrites it from the SITE_URL repo variable.
+19. Refresh cron set to Tue+Fri 14:00 UTC — matches observed IRCC republish cadence with margin, at ~35 min/month of the 2,000-min free tier.
+20. Did not kill the 3 node listeners found during QA — all predate this session and belong to other projects (verified via lsof cwd + start time); killing them would have violated sandbox containment.
+21. Validation MAX_DAYS raised 1500→3000 after a legitimate official value ("58 months", refugee resettlement from TZ) tripped the first run — documented in-code with the observed value.
