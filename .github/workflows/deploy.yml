@@ -1,0 +1,76 @@
+# INACTIVE until this repo is pushed to GitHub by the owner.
+# Estimated usage: ~25 min/month (runs after each data refresh + manual pushes).
+#
+# Builds the Astro site (including the static JSON API under /api/v1) and
+# publishes to GitHub Pages. Owner setup: repo Settings -> Pages -> Source =
+# "GitHub Actions", and set the repository variable SITE_URL to the real domain.
+name: deploy-site
+
+on:
+  push:
+    branches: [main]
+    paths: ["site/**", "data/exports/**", "machine/openapi.yaml"]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+      - name: Install site deps
+        run: cd site && npm ci
+      - name: Build API + site
+        env:
+          SITE_URL: ${{ vars.SITE_URL }} # falls back to site.config.json placeholder if unset
+        run: |
+          node pipeline/build-api.js
+          cp machine/openapi.yaml site/public/api/v1/openapi.yaml
+          cd site && npx astro build
+      - name: Fix robots.txt sitemap host
+        if: ${{ vars.SITE_URL != '' }}
+        run: sed -i "s#https://govwait.example#${{ vars.SITE_URL }}#g" site/dist/robots.txt
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+
+# ---------------------------------------------------------------------------
+# Cloudflare Pages alternative (preferred once a custom domain + pay-per-crawl
+# are wanted). Replace the deploy job above with:
+#
+#  deploy-cf:
+#    needs: build
+#    runs-on: ubuntu-latest
+#    steps:
+#      - uses: actions/checkout@v4
+#      - uses: actions/download-artifact@v4
+#        with: { name: github-pages, path: dist }   # or rebuild as above
+#      - uses: cloudflare/wrangler-action@v3
+#        with:
+#          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}   # owner creates
+#          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }} # owner provides
+#          command: pages deploy dist --project-name=govwait
+# ---------------------------------------------------------------------------

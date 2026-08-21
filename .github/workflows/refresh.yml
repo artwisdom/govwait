@@ -1,0 +1,68 @@
+# INACTIVE until this repo is pushed to GitHub by the owner.
+# Estimated usage: ~35 min/month (2 runs/week x ~4 min; free tier is 2,000).
+#
+# Refreshes the dataset from official sources, validates, and commits ONLY if
+# validation passes. A failed run publishes nothing and writes a diagnosis to
+# the job summary (see MAINTENANCE_RUNBOOK.md for the playbook per failure).
+name: refresh-data
+
+on:
+  schedule:
+    # Tue + Fri 14:00 UTC — IRCC republishes roughly weekly (Tuesdays observed);
+    # two checks/week catches every update without wasting minutes.
+    - cron: "0 14 * * 2,5"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest # sqlite3 CLI preinstalled
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run pipeline (fetch -> validate -> export)
+        id: pipeline
+        env:
+          # Set the repository variable CONTACT_EMAIL so the crawler UA carries
+          # a real contact address (politeness/accountability).
+          CONTACT_EMAIL: ${{ vars.CONTACT_EMAIL }}
+        run: |
+          set -o pipefail
+          node pipeline/run.js --refresh 2>&1 | tee pipeline.log
+
+      - name: Rebuild static API from exports
+        run: node pipeline/build-api.js && cp machine/openapi.yaml site/public/api/v1/openapi.yaml
+
+      - name: Commit data changes (only reached if validation passed)
+        run: |
+          git config user.name "govwait-refresh-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/db.sqlite data/exports site/public/api
+          if git diff --cached --quiet; then
+            echo "No data changes this run." >> "$GITHUB_STEP_SUMMARY"
+          else
+            git commit -m "data: refresh $(date -u +%F)"
+            git push
+            echo "Data refreshed and committed — deploy workflow will publish." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Diagnose failure into job summary
+        if: failure()
+        run: |
+          {
+            echo "## Refresh FAILED — triage with MAINTENANCE_RUNBOOK.md"
+            echo '```'
+            grep -E "FETCH/PARSE FAILURE|FAIL:|robots|HTTP [0-9]+|unparseable" pipeline.log | head -30 || tail -30 pipeline.log
+            echo '```'
+            echo "Failing line above names the source and the exact check/selector."
+          } >> "$GITHUB_STEP_SUMMARY"

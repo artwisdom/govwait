@@ -25,3 +25,7 @@ Thumbs.db
 # Logs
 *.log
 npm-debug.log*
+
+# SQLite WAL side files
+data/db.sqlite-wal
+data/db.sqlite-shm
