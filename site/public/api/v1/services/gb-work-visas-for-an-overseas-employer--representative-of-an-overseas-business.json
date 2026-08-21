@@ -1,0 +1,28 @@
+{
+ "service_key": "gb-work-visas-for-an-overseas-employer--representative-of-an-overseas-business",
+ "service_name": "Representative of an Overseas Business (Work visas for an overseas employer)",
+ "jurisdiction": "GB",
+ "count": 1,
+ "generated_at": "2026-08-21T11:37:38.734Z",
+ "records": [
+  {
+   "entity_id": "gb-work-visas-for-an-overseas-employer--representative-of-an-overseas-business",
+   "jurisdiction": "GB",
+   "service_key": "gb-work-visas-for-an-overseas-employer--representative-of-an-overseas-business",
+   "service_name": "Representative of an Overseas Business (Work visas for an overseas employer)",
+   "service_category": "visa",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "3 weeks",
+    "value_days": 21,
+    "status": "ok",
+    "effective_date": "2026-06-26",
+    "retrieved_at": "2026-08-21T11:37:11.785Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
+    "confidence": "official"
+   }
+  }
+ ],
+ "license": "CC BY 4.0 — attribute GovWait and the originating government agency. Underlying figures are official government publications."
+}

@@ -1,0 +1,29 @@
+{
+ "entity_id": "gb-work-visas-to-start-a-business--innovator-founder",
+ "jurisdiction": "GB",
+ "service_key": "gb-work-visas-to-start-a-business--innovator-founder",
+ "service_name": "Innovator Founder (Work visas to start a business)",
+ "service_category": "visa",
+ "applicant_country": null,
+ "applicant_country_name": null,
+ "latest": {
+  "value_raw": "3 weeks",
+  "value_days": 21,
+  "status": "ok",
+  "effective_date": "2026-06-26",
+  "retrieved_at": "2026-08-21T11:37:11.785Z",
+  "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
+  "confidence": "official"
+ },
+ "history": [
+  {
+   "value_raw": "3 weeks",
+   "value_days": 21,
+   "status": "ok",
+   "effective_date": "2026-06-26",
+   "retrieved_at": "2026-08-21T11:37:11.785Z",
+   "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk"
+  }
+ ],
+ "license": "CC BY 4.0 — attribute GovWait and the originating government agency. Underlying figures are official government publications."
+}

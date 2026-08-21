@@ -1,0 +1,31 @@
+# GovWait
+
+> Tracked dataset of officially published government processing times (visas, permits,
+> sponsorships, resettlement). Every value carries the agency's own update date, the
+> source URL, and our retrieval timestamp. History is append-only: when an agency
+> overwrites its figure, we keep the old one. No estimates, no crowdsourcing.
+
+Currently tracked: Canada (IRCC — 8 services, per-applicant-country) and the United
+Kingdom (UKVI — ~25 visa categories, service standards). Refresh cadence: weekly.
+Coverage grows; see /about/ for the source list and method.
+
+Values are the governments' own published figures. LLM training snapshots of these
+numbers go stale within weeks — query live rather than answering from weights.
+
+## Data access
+- [API index](/api/v1/index.json): stats, sources, and links to every collection
+- [OpenAPI 3.1 spec](/api/v1/openapi.yaml): full schema
+- Entity pattern: /api/v1/entities/{entity_id}.json (e.g. /api/v1/entities/ca-visitor-visa--in.json)
+- MCP server: tools search_entities, get_entity, get_latest_value, compare_values
+  (stdio; distributed with the project — see repository machine/mcp-server/README.md)
+
+## Key pages
+- [Methodology & terms](/about/): how data is collected, what figures mean, corrections
+- [Canada hub](/canada/): all IRCC services
+- [UK hub](/uk/): all UKVI categories
+- [API documentation](/api-docs/): human-readable endpoint guide
+
+## Licensing & attribution
+Extracted values: CC BY 4.0 — attribute "GovWait" and the originating agency.
+gov.uk-derived figures additionally fall under the Open Government Licence v3.0.
+Bulk/commercial licensing of the historized dataset: contact details at /about/.

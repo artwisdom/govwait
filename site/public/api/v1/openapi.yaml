@@ -1,0 +1,165 @@
+openapi: 3.1.0
+info:
+  title: GovWait API
+  version: "1.0.0"
+  summary: Officially published government processing times, tracked with provenance and history.
+  description: |
+    Static, prebuilt JSON served from a CDN. No authentication, no rate-limit headers
+    (be polite anyway). Every value is an official government publication with
+    source URL, the agency's own update date, and our retrieval timestamp.
+    License: CC BY 4.0 — attribute GovWait and the originating agency.
+  license:
+    name: CC BY 4.0
+    identifier: CC-BY-4.0
+servers:
+  - url: https://govwait.example
+    description: Placeholder host — replaced by the production domain at deploy time.
+paths:
+  /api/v1/index.json:
+    get:
+      operationId: getIndex
+      summary: Dataset stats, sources, and links to all collections
+      responses:
+        "200":
+          description: Index document
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Index" }
+  /api/v1/jurisdictions/{code}.json:
+    get:
+      operationId: getJurisdiction
+      summary: All routes for one government (e.g. ca, gb) with latest values
+      parameters:
+        - name: code
+          in: path
+          required: true
+          schema: { type: string, pattern: "^[a-z]{2}$" }
+      responses:
+        "200":
+          description: Jurisdiction collection
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/JurisdictionCollection" }
+        "404": { description: Unknown jurisdiction }
+  /api/v1/services/{service_key}.json:
+    get:
+      operationId: getService
+      summary: One service across all applicant countries (e.g. ca-visitor-visa)
+      parameters:
+        - name: service_key
+          in: path
+          required: true
+          schema: { type: string, pattern: "^[a-z0-9-]+$" }
+      responses:
+        "200":
+          description: Service collection
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/ServiceCollection" }
+        "404": { description: Unknown service }
+  /api/v1/entities/{entity_id}.json:
+    get:
+      operationId: getEntity
+      summary: "One route: latest value plus full recorded history"
+      parameters:
+        - name: entity_id
+          in: path
+          required: true
+          schema: { type: string, pattern: "^[a-z0-9-]+(--[a-z]{2})?$" }
+      responses:
+        "200":
+          description: Entity document
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Entity" }
+        "404": { description: Unknown entity }
+components:
+  schemas:
+    Observation:
+      type: object
+      required: [value_raw, status, effective_date, retrieved_at, source_url]
+      properties:
+        value_raw: { type: string, description: "Verbatim official string, e.g. '31 days'" }
+        value_days: { type: [number, "null"], description: "Normalized to days (weeks x7, months x30.44); null when no time is published" }
+        unit_original: { type: [string, "null"], enum: [days, weeks, months, null] }
+        status: { type: string, enum: [ok, unavailable, insufficient_data] }
+        effective_date: { type: string, format: date, description: "The agency's own last-updated date" }
+        retrieved_at: { type: string, description: "When we fetched it (ISO 8601)" }
+        source_url: { type: string, format: uri }
+        confidence: { type: string, enum: [official] }
+    RecordCore:
+      type: object
+      required: [entity_id, jurisdiction, service_key, service_name, latest]
+      properties:
+        entity_id: { type: string }
+        jurisdiction: { type: string, description: "ISO 3166-1 alpha-2 of the government" }
+        service_key: { type: string }
+        service_name: { type: string }
+        service_category: { type: string, enum: [visa, permit, sponsorship, refugee, settlement, passport] }
+        applicant_country: { type: [string, "null"], description: "ISO 3166-1 alpha-2; null for global service standards" }
+        applicant_country_name: { type: [string, "null"] }
+        latest: { $ref: "#/components/schemas/Observation" }
+    Entity:
+      allOf:
+        - $ref: "#/components/schemas/RecordCore"
+        - type: object
+          required: [history]
+          properties:
+            history:
+              type: array
+              items: { $ref: "#/components/schemas/Observation" }
+            license: { type: string }
+    ServiceCollection:
+      type: object
+      required: [service_key, jurisdiction, count, records]
+      properties:
+        service_key: { type: string }
+        service_name: { type: string }
+        jurisdiction: { type: string }
+        count: { type: integer }
+        generated_at: { type: string }
+        records:
+          type: array
+          items: { $ref: "#/components/schemas/RecordCore" }
+        license: { type: string }
+    JurisdictionCollection:
+      type: object
+      required: [jurisdiction, count, records]
+      properties:
+        jurisdiction: { type: string }
+        count: { type: integer }
+        generated_at: { type: string }
+        services:
+          type: array
+          items: { type: string }
+        records:
+          type: array
+          items: { $ref: "#/components/schemas/RecordCore" }
+        license: { type: string }
+    Index:
+      type: object
+      required: [name, generated_at, endpoints]
+      properties:
+        name: { type: string }
+        description: { type: string }
+        generated_at: { type: string }
+        stats: { type: object }
+        sources:
+          type: array
+          items:
+            type: object
+            properties:
+              id: { type: string }
+              name: { type: string }
+              agency: { type: string }
+              jurisdiction: { type: string }
+              url: { type: string, format: uri }
+              license_note: { type: string }
+        endpoints:
+          type: object
+          properties:
+            jurisdictions: { type: array, items: { type: string } }
+            services: { type: array, items: { type: string } }
+            entity_pattern: { type: string }
+            openapi: { type: string }
+        license: { type: string }

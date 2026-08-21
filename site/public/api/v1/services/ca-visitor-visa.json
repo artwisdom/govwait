@@ -1,0 +1,3808 @@
+{
+ "service_key": "ca-visitor-visa",
+ "service_name": "Visitor visa (applying from outside Canada)",
+ "jurisdiction": "CA",
+ "count": 211,
+ "generated_at": "2026-08-21T11:37:38.734Z",
+ "records": [
+  {
+   "entity_id": "ca-visitor-visa--ad",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "AD",
+   "applicant_country_name": "Andorra",
+   "latest": {
+    "value_raw": "No processing time available",
+    "value_days": null,
+    "status": "unavailable",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--ae",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "AE",
+   "applicant_country_name": "United Arab Emirates",
+   "latest": {
+    "value_raw": "46 days",
+    "value_days": 46,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--af",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "AF",
+   "applicant_country_name": "Afghanistan",
+   "latest": {
+    "value_raw": "68 days",
+    "value_days": 68,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--ag",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "AG",
+   "applicant_country_name": "Antigua & Barbuda",
+   "latest": {
+    "value_raw": "23 days",
+    "value_days": 23,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--ai",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "AI",
+   "applicant_country_name": "Anguilla",
+   "latest": {
+    "value_raw": "No processing time available",
+    "value_days": null,
+    "status": "unavailable",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--al",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "AL",
+   "applicant_country_name": "Albania",
+   "latest": {
+    "value_raw": "39 days",
+    "value_days": 39,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--am",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "AM",
+   "applicant_country_name": "Armenia",
+   "latest": {
+    "value_raw": "22 days",
+    "value_days": 22,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--ao",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "AO",
+   "applicant_country_name": "Angola",
+   "latest": {
+    "value_raw": "162 days",
+    "value_days": 162,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--ar",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "AR",
+   "applicant_country_name": "Argentina",
+   "latest": {
+    "value_raw": "22 days",
+    "value_days": 22,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--at",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "AT",
+   "applicant_country_name": "Austria",
+   "latest": {
+    "value_raw": "26 days",
+    "value_days": 26,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--au",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "AU",
+   "applicant_country_name": "Australia",
+   "latest": {
+    "value_raw": "15 days",
+    "value_days": 15,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--aw",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "AW",
+   "applicant_country_name": "Aruba",
+   "latest": {
+    "value_raw": "No processing time available",
+    "value_days": null,
+    "status": "unavailable",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--az",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "AZ",
+   "applicant_country_name": "Azerbaijan",
+   "latest": {
+    "value_raw": "77 days",
+    "value_days": 77,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--ba",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "BA",
+   "applicant_country_name": "Bosnia & Herzegovina",
+   "latest": {
+    "value_raw": "29 days",
+    "value_days": 29,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--bb",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "BB",
+   "applicant_country_name": "Barbados",
+   "latest": {
+    "value_raw": "43 days",
+    "value_days": 43,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--bd",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "BD",
+   "applicant_country_name": "Bangladesh",
+   "latest": {
+    "value_raw": "44 days",
+    "value_days": 44,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--be",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "BE",
+   "applicant_country_name": "Belgium",
+   "latest": {
+    "value_raw": "35 days",
+    "value_days": 35,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--bf",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "BF",
+   "applicant_country_name": "Burkina Faso",
+   "latest": {
+    "value_raw": "35 days",
+    "value_days": 35,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--bg",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "BG",
+   "applicant_country_name": "Bulgaria",
+   "latest": {
+    "value_raw": "35 days",
+    "value_days": 35,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--bh",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "BH",
+   "applicant_country_name": "Bahrain",
+   "latest": {
+    "value_raw": "69 days",
+    "value_days": 69,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--bi",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "BI",
+   "applicant_country_name": "Burundi",
+   "latest": {
+    "value_raw": "52 days",
+    "value_days": 52,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--bj",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "BJ",
+   "applicant_country_name": "Benin",
+   "latest": {
+    "value_raw": "155 days",
+    "value_days": 155,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--bm",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "BM",
+   "applicant_country_name": "Bermuda",
+   "latest": {
+    "value_raw": "28 days",
+    "value_days": 28,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--bn",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "BN",
+   "applicant_country_name": "Brunei",
+   "latest": {
+    "value_raw": "No processing time available",
+    "value_days": null,
+    "status": "unavailable",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--bo",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "BO",
+   "applicant_country_name": "Bolivia",
+   "latest": {
+    "value_raw": "31 days",
+    "value_days": 31,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--bq",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "BQ",
+   "applicant_country_name": "Caribbean Netherlands",
+   "latest": {
+    "value_raw": "No processing time available",
+    "value_days": null,
+    "status": "unavailable",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--br",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "BR",
+   "applicant_country_name": "Brazil",
+   "latest": {
+    "value_raw": "28 days",
+    "value_days": 28,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--bs",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "BS",
+   "applicant_country_name": "Bahamas",
+   "latest": {
+    "value_raw": "46 days",
+    "value_days": 46,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--bt",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "BT",
+   "applicant_country_name": "Bhutan",
+   "latest": {
+    "value_raw": "20 days",
+    "value_days": 20,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--bw",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "BW",
+   "applicant_country_name": "Botswana",
+   "latest": {
+    "value_raw": "792 days",
+    "value_days": 792,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--by",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "BY",
+   "applicant_country_name": "Belarus",
+   "latest": {
+    "value_raw": "39 days",
+    "value_days": 39,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--bz",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "BZ",
+   "applicant_country_name": "Belize",
+   "latest": {
+    "value_raw": "25 days",
+    "value_days": 25,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--cd",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "CD",
+   "applicant_country_name": "Congo - Kinshasa",
+   "latest": {
+    "value_raw": "50 days",
+    "value_days": 50,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--cf",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "CF",
+   "applicant_country_name": "Central African Republic",
+   "latest": {
+    "value_raw": "102 days",
+    "value_days": 102,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--cg",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "CG",
+   "applicant_country_name": "Congo - Brazzaville",
+   "latest": {
+    "value_raw": "38 days",
+    "value_days": 38,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--ch",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "CH",
+   "applicant_country_name": "Switzerland",
+   "latest": {
+    "value_raw": "33 days",
+    "value_days": 33,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--ci",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "CI",
+   "applicant_country_name": "Côte d’Ivoire",
+   "latest": {
+    "value_raw": "72 days",
+    "value_days": 72,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--cl",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "CL",
+   "applicant_country_name": "Chile",
+   "latest": {
+    "value_raw": "22 days",
+    "value_days": 22,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--cm",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "CM",
+   "applicant_country_name": "Cameroon",
+   "latest": {
+    "value_raw": "58 days",
+    "value_days": 58,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--cn",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "CN",
+   "applicant_country_name": "China",
+   "latest": {
+    "value_raw": "32 days",
+    "value_days": 32,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--co",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "CO",
+   "applicant_country_name": "Colombia",
+   "latest": {
+    "value_raw": "31 days",
+    "value_days": 31,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--cr",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "CR",
+   "applicant_country_name": "Costa Rica",
+   "latest": {
+    "value_raw": "20 days",
+    "value_days": 20,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--cu",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "CU",
+   "applicant_country_name": "Cuba",
+   "latest": {
+    "value_raw": "20 days",
+    "value_days": 20,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--cv",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "CV",
+   "applicant_country_name": "Cape Verde",
+   "latest": {
+    "value_raw": "No processing time available",
+    "value_days": null,
+    "status": "unavailable",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--cy",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "CY",
+   "applicant_country_name": "Cyprus",
+   "latest": {
+    "value_raw": "35 days",
+    "value_days": 35,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--cz",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "CZ",
+   "applicant_country_name": "Czechia",
+   "latest": {
+    "value_raw": "25 days",
+    "value_days": 25,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--de",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "DE",
+   "applicant_country_name": "Germany",
+   "latest": {
+    "value_raw": "22 days",
+    "value_days": 22,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--dj",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "DJ",
+   "applicant_country_name": "Djibouti",
+   "latest": {
+    "value_raw": "78 days",
+    "value_days": 78,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--dk",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "DK",
+   "applicant_country_name": "Denmark",
+   "latest": {
+    "value_raw": "30 days",
+    "value_days": 30,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--dm",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "DM",
+   "applicant_country_name": "Dominica",
+   "latest": {
+    "value_raw": "35 days",
+    "value_days": 35,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--do",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "DO",
+   "applicant_country_name": "Dominican Republic",
+   "latest": {
+    "value_raw": "23 days",
+    "value_days": 23,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--dz",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "DZ",
+   "applicant_country_name": "Algeria",
+   "latest": {
+    "value_raw": "28 days",
+    "value_days": 28,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--ec",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "EC",
+   "applicant_country_name": "Ecuador",
+   "latest": {
+    "value_raw": "27 days",
+    "value_days": 27,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--ee",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "EE",
+   "applicant_country_name": "Estonia",
+   "latest": {
+    "value_raw": "35 days",
+    "value_days": 35,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--eg",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "EG",
+   "applicant_country_name": "Egypt",
+   "latest": {
+    "value_raw": "57 days",
+    "value_days": 57,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--er",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "ER",
+   "applicant_country_name": "Eritrea",
+   "latest": {
+    "value_raw": "21 days",
+    "value_days": 21,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--es",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "ES",
+   "applicant_country_name": "Spain",
+   "latest": {
+    "value_raw": "34 days",
+    "value_days": 34,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--et",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "ET",
+   "applicant_country_name": "Ethiopia",
+   "latest": {
+    "value_raw": "62 days",
+    "value_days": 62,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--fi",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "FI",
+   "applicant_country_name": "Finland",
+   "latest": {
+    "value_raw": "25 days",
+    "value_days": 25,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--fj",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "FJ",
+   "applicant_country_name": "Fiji",
+   "latest": {
+    "value_raw": "17 days",
+    "value_days": 17,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--fm",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "FM",
+   "applicant_country_name": "Micronesia",
+   "latest": {
+    "value_raw": "No processing time available",
+    "value_days": null,
+    "status": "unavailable",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--fr",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "FR",
+   "applicant_country_name": "France",
+   "latest": {
+    "value_raw": "34 days",
+    "value_days": 34,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--ga",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "GA",
+   "applicant_country_name": "Gabon",
+   "latest": {
+    "value_raw": "37 days",
+    "value_days": 37,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--gb",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "GB",
+   "applicant_country_name": "United Kingdom",
+   "latest": {
+    "value_raw": "21 days",
+    "value_days": 21,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--gd",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "GD",
+   "applicant_country_name": "Grenada",
+   "latest": {
+    "value_raw": "22 days",
+    "value_days": 22,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--ge",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "GE",
+   "applicant_country_name": "Georgia",
+   "latest": {
+    "value_raw": "67 days",
+    "value_days": 67,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--gh",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "GH",
+   "applicant_country_name": "Ghana",
+   "latest": {
+    "value_raw": "67 days",
+    "value_days": 67,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--gl",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "GL",
+   "applicant_country_name": "Greenland",
+   "latest": {
+    "value_raw": "No processing time available",
+    "value_days": null,
+    "status": "unavailable",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--gm",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "GM",
+   "applicant_country_name": "Gambia",
+   "latest": {
+    "value_raw": "68 days",
+    "value_days": 68,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--gn",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "GN",
+   "applicant_country_name": "Guinea",
+   "latest": {
+    "value_raw": "51 days",
+    "value_days": 51,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--gq",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "GQ",
+   "applicant_country_name": "Equatorial Guinea",
+   "latest": {
+    "value_raw": "No processing time available",
+    "value_days": null,
+    "status": "unavailable",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--gr",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "GR",
+   "applicant_country_name": "Greece",
+   "latest": {
+    "value_raw": "35 days",
+    "value_days": 35,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--gt",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "GT",
+   "applicant_country_name": "Guatemala",
+   "latest": {
+    "value_raw": "23 days",
+    "value_days": 23,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--gw",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "GW",
+   "applicant_country_name": "Guinea-Bissau",
+   "latest": {
+    "value_raw": "No processing time available",
+    "value_days": null,
+    "status": "unavailable",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--gy",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "GY",
+   "applicant_country_name": "Guyana",
+   "latest": {
+    "value_raw": "19 days",
+    "value_days": 19,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--hk",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "HK",
+   "applicant_country_name": "Hong Kong SAR China",
+   "latest": {
+    "value_raw": "36 days",
+    "value_days": 36,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--hn",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "HN",
+   "applicant_country_name": "Honduras",
+   "latest": {
+    "value_raw": "23 days",
+    "value_days": 23,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--hr",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "HR",
+   "applicant_country_name": "Croatia",
+   "latest": {
+    "value_raw": "No processing time available",
+    "value_days": null,
+    "status": "unavailable",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--ht",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "HT",
+   "applicant_country_name": "Haiti",
+   "latest": {
+    "value_raw": "23 days",
+    "value_days": 23,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--hu",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "HU",
+   "applicant_country_name": "Hungary",
+   "latest": {
+    "value_raw": "21 days",
+    "value_days": 21,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--id",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "ID",
+   "applicant_country_name": "Indonesia",
+   "latest": {
+    "value_raw": "29 days",
+    "value_days": 29,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--ie",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "IE",
+   "applicant_country_name": "Ireland",
+   "latest": {
+    "value_raw": "21 days",
+    "value_days": 21,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--il",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "IL",
+   "applicant_country_name": "Israel",
+   "latest": {
+    "value_raw": "28 days",
+    "value_days": 28,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--in",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "IN",
+   "applicant_country_name": "India",
+   "latest": {
+    "value_raw": "31 days",
+    "value_days": 31,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--io",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "IO",
+   "applicant_country_name": "British Indian Ocean Territory",
+   "latest": {
+    "value_raw": "No processing time available",
+    "value_days": null,
+    "status": "unavailable",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--iq",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "IQ",
+   "applicant_country_name": "Iraq",
+   "latest": {
+    "value_raw": "72 days",
+    "value_days": 72,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--ir",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "IR",
+   "applicant_country_name": "Iran",
+   "latest": {
+    "value_raw": "197 days",
+    "value_days": 197,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--is",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "IS",
+   "applicant_country_name": "Iceland",
+   "latest": {
+    "value_raw": "52 days",
+    "value_days": 52,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--it",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "IT",
+   "applicant_country_name": "Italy",
+   "latest": {
+    "value_raw": "35 days",
+    "value_days": 35,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--jm",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "JM",
+   "applicant_country_name": "Jamaica",
+   "latest": {
+    "value_raw": "27 days",
+    "value_days": 27,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--jo",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "JO",
+   "applicant_country_name": "Jordan",
+   "latest": {
+    "value_raw": "57 days",
+    "value_days": 57,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--jp",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "JP",
+   "applicant_country_name": "Japan",
+   "latest": {
+    "value_raw": "52 days",
+    "value_days": 52,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--ke",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "KE",
+   "applicant_country_name": "Kenya",
+   "latest": {
+    "value_raw": "83 days",
+    "value_days": 83,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--kg",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "KG",
+   "applicant_country_name": "Kyrgyzstan",
+   "latest": {
+    "value_raw": "25 days",
+    "value_days": 25,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--kh",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "KH",
+   "applicant_country_name": "Cambodia",
+   "latest": {
+    "value_raw": "41 days",
+    "value_days": 41,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--ki",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "KI",
+   "applicant_country_name": "Kiribati",
+   "latest": {
+    "value_raw": "No processing time available",
+    "value_days": null,
+    "status": "unavailable",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--km",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "KM",
+   "applicant_country_name": "Comoros",
+   "latest": {
+    "value_raw": "No processing time available",
+    "value_days": null,
+    "status": "unavailable",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--kn",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "KN",
+   "applicant_country_name": "St. Kitts & Nevis",
+   "latest": {
+    "value_raw": "26 days",
+    "value_days": 26,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--kp",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "KP",
+   "applicant_country_name": "North Korea",
+   "latest": {
+    "value_raw": "No processing time available",
+    "value_days": null,
+    "status": "unavailable",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--kr",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "KR",
+   "applicant_country_name": "South Korea",
+   "latest": {
+    "value_raw": "54 days",
+    "value_days": 54,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--kw",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "KW",
+   "applicant_country_name": "Kuwait",
+   "latest": {
+    "value_raw": "69 days",
+    "value_days": 69,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--ky",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "KY",
+   "applicant_country_name": "Cayman Islands",
+   "latest": {
+    "value_raw": "28 days",
+    "value_days": 28,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--kz",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "KZ",
+   "applicant_country_name": "Kazakhstan",
+   "latest": {
+    "value_raw": "23 days",
+    "value_days": 23,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--la",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "LA",
+   "applicant_country_name": "Laos",
+   "latest": {
+    "value_raw": "15 days",
+    "value_days": 15,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--lb",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "LB",
+   "applicant_country_name": "Lebanon",
+   "latest": {
+    "value_raw": "66 days",
+    "value_days": 66,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--lc",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "LC",
+   "applicant_country_name": "St. Lucia",
+   "latest": {
+    "value_raw": "20 days",
+    "value_days": 20,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--li",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "LI",
+   "applicant_country_name": "Liechtenstein",
+   "latest": {
+    "value_raw": "No processing time available",
+    "value_days": null,
+    "status": "unavailable",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--lk",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "LK",
+   "applicant_country_name": "Sri Lanka",
+   "latest": {
+    "value_raw": "37 days",
+    "value_days": 37,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--lr",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "LR",
+   "applicant_country_name": "Liberia",
+   "latest": {
+    "value_raw": "85 days",
+    "value_days": 85,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--ls",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "LS",
+   "applicant_country_name": "Lesotho",
+   "latest": {
+    "value_raw": "No processing time available",
+    "value_days": null,
+    "status": "unavailable",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--lt",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "LT",
+   "applicant_country_name": "Lithuania",
+   "latest": {
+    "value_raw": "20 days",
+    "value_days": 20,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--lu",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "LU",
+   "applicant_country_name": "Luxembourg",
+   "latest": {
+    "value_raw": "35 days",
+    "value_days": 35,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--lv",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "LV",
+   "applicant_country_name": "Latvia",
+   "latest": {
+    "value_raw": "28 days",
+    "value_days": 28,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--ly",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "LY",
+   "applicant_country_name": "Libya",
+   "latest": {
+    "value_raw": "34 days",
+    "value_days": 34,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--ma",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "MA",
+   "applicant_country_name": "Morocco",
+   "latest": {
+    "value_raw": "30 days",
+    "value_days": 30,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--mc",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "MC",
+   "applicant_country_name": "Monaco",
+   "latest": {
+    "value_raw": "No processing time available",
+    "value_days": null,
+    "status": "unavailable",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--md",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "MD",
+   "applicant_country_name": "Moldova",
+   "latest": {
+    "value_raw": "34 days",
+    "value_days": 34,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--me",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "ME",
+   "applicant_country_name": "Montenegro",
+   "latest": {
+    "value_raw": "20 days",
+    "value_days": 20,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--mg",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "MG",
+   "applicant_country_name": "Madagascar",
+   "latest": {
+    "value_raw": "324 days",
+    "value_days": 324,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--mh",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "MH",
+   "applicant_country_name": "Marshall Islands",
+   "latest": {
+    "value_raw": "No processing time available",
+    "value_days": null,
+    "status": "unavailable",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--mk",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "MK",
+   "applicant_country_name": "North Macedonia",
+   "latest": {
+    "value_raw": "28 days",
+    "value_days": 28,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--ml",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "ML",
+   "applicant_country_name": "Mali",
+   "latest": {
+    "value_raw": "94 days",
+    "value_days": 94,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--mm",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "MM",
+   "applicant_country_name": "Myanmar (Burma)",
+   "latest": {
+    "value_raw": "14 days",
+    "value_days": 14,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--mn",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "MN",
+   "applicant_country_name": "Mongolia",
+   "latest": {
+    "value_raw": "38 days",
+    "value_days": 38,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--mo",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "MO",
+   "applicant_country_name": "Macao SAR China",
+   "latest": {
+    "value_raw": "29 days",
+    "value_days": 29,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--mq",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "MQ",
+   "applicant_country_name": "Martinique",
+   "latest": {
+    "value_raw": "No processing time available",
+    "value_days": null,
+    "status": "unavailable",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--mr",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "MR",
+   "applicant_country_name": "Mauritania",
+   "latest": {
+    "value_raw": "68 days",
+    "value_days": 68,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--mt",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "MT",
+   "applicant_country_name": "Malta",
+   "latest": {
+    "value_raw": "36 days",
+    "value_days": 36,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--mu",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "MU",
+   "applicant_country_name": "Mauritius",
+   "latest": {
+    "value_raw": "120 days",
+    "value_days": 120,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--mv",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "MV",
+   "applicant_country_name": "Maldives",
+   "latest": {
+    "value_raw": "No processing time available",
+    "value_days": null,
+    "status": "unavailable",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--mw",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "MW",
+   "applicant_country_name": "Malawi",
+   "latest": {
+    "value_raw": "140 days",
+    "value_days": 140,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--mx",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "MX",
+   "applicant_country_name": "Mexico",
+   "latest": {
+    "value_raw": "33 days",
+    "value_days": 33,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--my",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "MY",
+   "applicant_country_name": "Malaysia",
+   "latest": {
+    "value_raw": "45 days",
+    "value_days": 45,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--mz",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "MZ",
+   "applicant_country_name": "Mozambique",
+   "latest": {
+    "value_raw": "695 days",
+    "value_days": 695,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--na",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "NA",
+   "applicant_country_name": "Namibia",
+   "latest": {
+    "value_raw": "121 days",
+    "value_days": 121,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--nc",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "NC",
+   "applicant_country_name": "New Caledonia",
+   "latest": {
+    "value_raw": "No processing time available",
+    "value_days": null,
+    "status": "unavailable",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--ne",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "NE",
+   "applicant_country_name": "Niger",
+   "latest": {
+    "value_raw": "91 days",
+    "value_days": 91,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--ng",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "NG",
+   "applicant_country_name": "Nigeria",
+   "latest": {
+    "value_raw": "76 days",
+    "value_days": 76,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--ni",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "NI",
+   "applicant_country_name": "Nicaragua",
+   "latest": {
+    "value_raw": "22 days",
+    "value_days": 22,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--nl",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "NL",
+   "applicant_country_name": "Netherlands",
+   "latest": {
+    "value_raw": "29 days",
+    "value_days": 29,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--no",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "NO",
+   "applicant_country_name": "Norway",
+   "latest": {
+    "value_raw": "44 days",
+    "value_days": 44,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--np",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "NP",
+   "applicant_country_name": "Nepal",
+   "latest": {
+    "value_raw": "35 days",
+    "value_days": 35,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--nr",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "NR",
+   "applicant_country_name": "Nauru",
+   "latest": {
+    "value_raw": "No processing time available",
+    "value_days": null,
+    "status": "unavailable",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--nz",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "NZ",
+   "applicant_country_name": "New Zealand",
+   "latest": {
+    "value_raw": "16 days",
+    "value_days": 16,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--om",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "OM",
+   "applicant_country_name": "Oman",
+   "latest": {
+    "value_raw": "71 days",
+    "value_days": 71,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--pa",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "PA",
+   "applicant_country_name": "Panama",
+   "latest": {
+    "value_raw": "29 days",
+    "value_days": 29,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--pe",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "PE",
+   "applicant_country_name": "Peru",
+   "latest": {
+    "value_raw": "30 days",
+    "value_days": 30,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--pf",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "PF",
+   "applicant_country_name": "French Polynesia",
+   "latest": {
+    "value_raw": "No processing time available",
+    "value_days": null,
+    "status": "unavailable",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--pg",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "PG",
+   "applicant_country_name": "Papua New Guinea",
+   "latest": {
+    "value_raw": "No processing time available",
+    "value_days": null,
+    "status": "unavailable",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--ph",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "PH",
+   "applicant_country_name": "Philippines",
+   "latest": {
+    "value_raw": "21 days",
+    "value_days": 21,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--pk",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "PK",
+   "applicant_country_name": "Pakistan",
+   "latest": {
+    "value_raw": "75 days",
+    "value_days": 75,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--pl",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "PL",
+   "applicant_country_name": "Poland",
+   "latest": {
+    "value_raw": "28 days",
+    "value_days": 28,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--pr",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "PR",
+   "applicant_country_name": "Puerto Rico",
+   "latest": {
+    "value_raw": "No processing time available",
+    "value_days": null,
+    "status": "unavailable",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--ps",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "PS",
+   "applicant_country_name": "Palestinian Territories",
+   "latest": {
+    "value_raw": "32 days",
+    "value_days": 32,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--pt",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "PT",
+   "applicant_country_name": "Portugal",
+   "latest": {
+    "value_raw": "36 days",
+    "value_days": 36,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--py",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "PY",
+   "applicant_country_name": "Paraguay",
+   "latest": {
+    "value_raw": "23 days",
+    "value_days": 23,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--qa",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "QA",
+   "applicant_country_name": "Qatar",
+   "latest": {
+    "value_raw": "70 days",
+    "value_days": 70,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--ro",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "RO",
+   "applicant_country_name": "Romania",
+   "latest": {
+    "value_raw": "38 days",
+    "value_days": 38,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--rs",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "RS",
+   "applicant_country_name": "Serbia",
+   "latest": {
+    "value_raw": "25 days",
+    "value_days": 25,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--ru",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "RU",
+   "applicant_country_name": "Russia",
+   "latest": {
+    "value_raw": "34 days",
+    "value_days": 34,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--rw",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "RW",
+   "applicant_country_name": "Rwanda",
+   "latest": {
+    "value_raw": "50 days",
+    "value_days": 50,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--sa",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "SA",
+   "applicant_country_name": "Saudi Arabia",
+   "latest": {
+    "value_raw": "56 days",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--sb",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "SB",
+   "applicant_country_name": "Solomon Islands",
+   "latest": {
+    "value_raw": "No processing time available",
+    "value_days": null,
+    "status": "unavailable",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--sc",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "SC",
+   "applicant_country_name": "Seychelles",
+   "latest": {
+    "value_raw": "No processing time available",
+    "value_days": null,
+    "status": "unavailable",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--sd",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "SD",
+   "applicant_country_name": "Sudan",
+   "latest": {
+    "value_raw": "No processing time available",
+    "value_days": null,
+    "status": "unavailable",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--se",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "SE",
+   "applicant_country_name": "Sweden",
+   "latest": {
+    "value_raw": "23 days",
+    "value_days": 23,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--sg",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "SG",
+   "applicant_country_name": "Singapore",
+   "latest": {
+    "value_raw": "36 days",
+    "value_days": 36,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--si",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "SI",
+   "applicant_country_name": "Slovenia",
+   "latest": {
+    "value_raw": "No processing time available",
+    "value_days": null,
+    "status": "unavailable",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--sk",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "SK",
+   "applicant_country_name": "Slovakia",
+   "latest": {
+    "value_raw": "39 days",
+    "value_days": 39,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--sl",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "SL",
+   "applicant_country_name": "Sierra Leone",
+   "latest": {
+    "value_raw": "84 days",
+    "value_days": 84,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--sm",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "SM",
+   "applicant_country_name": "San Marino",
+   "latest": {
+    "value_raw": "No processing time available",
+    "value_days": null,
+    "status": "unavailable",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--sn",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "SN",
+   "applicant_country_name": "Senegal",
+   "latest": {
+    "value_raw": "49 days",
+    "value_days": 49,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--so",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "SO",
+   "applicant_country_name": "Somalia",
+   "latest": {
+    "value_raw": "37 days",
+    "value_days": 37,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--sr",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "SR",
+   "applicant_country_name": "Suriname",
+   "latest": {
+    "value_raw": "42 days",
+    "value_days": 42,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--ss",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "SS",
+   "applicant_country_name": "South Sudan",
+   "latest": {
+    "value_raw": "No processing time available",
+    "value_days": null,
+    "status": "unavailable",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--st",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "ST",
+   "applicant_country_name": "São Tomé & Príncipe",
+   "latest": {
+    "value_raw": "No processing time available",
+    "value_days": null,
+    "status": "unavailable",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--sv",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "SV",
+   "applicant_country_name": "El Salvador",
+   "latest": {
+    "value_raw": "22 days",
+    "value_days": 22,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--sy",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "SY",
+   "applicant_country_name": "Syria",
+   "latest": {
+    "value_raw": "77 days",
+    "value_days": 77,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--sz",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "SZ",
+   "applicant_country_name": "Eswatini",
+   "latest": {
+    "value_raw": "148 days",
+    "value_days": 148,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--tc",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "TC",
+   "applicant_country_name": "Turks & Caicos Islands",
+   "latest": {
+    "value_raw": "25 days",
+    "value_days": 25,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--td",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "TD",
+   "applicant_country_name": "Chad",
+   "latest": {
+    "value_raw": "69 days",
+    "value_days": 69,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--tg",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "TG",
+   "applicant_country_name": "Togo",
+   "latest": {
+    "value_raw": "153 days",
+    "value_days": 153,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--th",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "TH",
+   "applicant_country_name": "Thailand",
+   "latest": {
+    "value_raw": "21 days",
+    "value_days": 21,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--tj",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "TJ",
+   "applicant_country_name": "Tajikistan",
+   "latest": {
+    "value_raw": "16 days",
+    "value_days": 16,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--tl",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "TL",
+   "applicant_country_name": "Timor-Leste",
+   "latest": {
+    "value_raw": "No processing time available",
+    "value_days": null,
+    "status": "unavailable",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--tm",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "TM",
+   "applicant_country_name": "Turkmenistan",
+   "latest": {
+    "value_raw": "No processing time available",
+    "value_days": null,
+    "status": "unavailable",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--tn",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "TN",
+   "applicant_country_name": "Tunisia",
+   "latest": {
+    "value_raw": "35 days",
+    "value_days": 35,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--to",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "TO",
+   "applicant_country_name": "Tonga",
+   "latest": {
+    "value_raw": "No processing time available",
+    "value_days": null,
+    "status": "unavailable",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--tr",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "TR",
+   "applicant_country_name": "Türkiye",
+   "latest": {
+    "value_raw": "77 days",
+    "value_days": 77,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--tt",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "TT",
+   "applicant_country_name": "Trinidad & Tobago",
+   "latest": {
+    "value_raw": "17 days",
+    "value_days": 17,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--tv",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "TV",
+   "applicant_country_name": "Tuvalu",
+   "latest": {
+    "value_raw": "No processing time available",
+    "value_days": null,
+    "status": "unavailable",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--tw",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "TW",
+   "applicant_country_name": "Taiwan",
+   "latest": {
+    "value_raw": "48 days",
+    "value_days": 48,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--tz",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "TZ",
+   "applicant_country_name": "Tanzania",
+   "latest": {
+    "value_raw": "47 days",
+    "value_days": 47,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--ua",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "UA",
+   "applicant_country_name": "Ukraine",
+   "latest": {
+    "value_raw": "35 days",
+    "value_days": 35,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--ug",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "UG",
+   "applicant_country_name": "Uganda",
+   "latest": {
+    "value_raw": "79 days",
+    "value_days": 79,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--us",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "US",
+   "applicant_country_name": "United States",
+   "latest": {
+    "value_raw": "21 days",
+    "value_days": 21,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--uy",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "UY",
+   "applicant_country_name": "Uruguay",
+   "latest": {
+    "value_raw": "18 days",
+    "value_days": 18,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--uz",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "UZ",
+   "applicant_country_name": "Uzbekistan",
+   "latest": {
+    "value_raw": "20 days",
+    "value_days": 20,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--va",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "VA",
+   "applicant_country_name": "Vatican City",
+   "latest": {
+    "value_raw": "No processing time available",
+    "value_days": null,
+    "status": "unavailable",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--vc",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "VC",
+   "applicant_country_name": "St. Vincent & Grenadines",
+   "latest": {
+    "value_raw": "27 days",
+    "value_days": 27,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--ve",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "VE",
+   "applicant_country_name": "Venezuela",
+   "latest": {
+    "value_raw": "29 days",
+    "value_days": 29,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--vi",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "VI",
+   "applicant_country_name": "U.S. Virgin Islands",
+   "latest": {
+    "value_raw": "No processing time available",
+    "value_days": null,
+    "status": "unavailable",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--vn",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "VN",
+   "applicant_country_name": "Vietnam",
+   "latest": {
+    "value_raw": "28 days",
+    "value_days": 28,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--vu",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "VU",
+   "applicant_country_name": "Vanuatu",
+   "latest": {
+    "value_raw": "No processing time available",
+    "value_days": null,
+    "status": "unavailable",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--wb",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "WB",
+   "applicant_country_name": "WB",
+   "latest": {
+    "value_raw": "32 days",
+    "value_days": 32,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--ws",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "WS",
+   "applicant_country_name": "Samoa",
+   "latest": {
+    "value_raw": "No processing time available",
+    "value_days": null,
+    "status": "unavailable",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--xk",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "XK",
+   "applicant_country_name": "Kosovo",
+   "latest": {
+    "value_raw": "24 days",
+    "value_days": 24,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--ye",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "YE",
+   "applicant_country_name": "Yemen",
+   "latest": {
+    "value_raw": "49 days",
+    "value_days": 49,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--za",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "ZA",
+   "applicant_country_name": "South Africa",
+   "latest": {
+    "value_raw": "357 days",
+    "value_days": 357,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--zm",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "ZM",
+   "applicant_country_name": "Zambia",
+   "latest": {
+    "value_raw": "132 days",
+    "value_days": 132,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa--zw",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa",
+   "service_name": "Visitor visa (applying from outside Canada)",
+   "service_category": "visa",
+   "applicant_country": "ZW",
+   "applicant_country_name": "Zimbabwe",
+   "latest": {
+    "value_raw": "270 days",
+    "value_days": 270,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  }
+ ],
+ "license": "CC BY 4.0 — attribute GovWait and the originating government agency. Underlying figures are official government publications."
+}

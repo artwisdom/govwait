@@ -1,0 +1,104 @@
+{
+ "name": "GovWait API v1",
+ "description": "Officially published government processing times, tracked with provenance and history. Static JSON; no key required.",
+ "generated_at": "2026-08-21T11:37:38.734Z",
+ "stats": {
+  "generated_at": "2026-08-21T11:37:38.734Z",
+  "entities": 1946,
+  "observations": 1946,
+  "jurisdictions": [
+   "CA",
+   "GB"
+  ],
+  "services": 48,
+  "per_source": {
+   "govuk-visa-times": {
+    "name": "UK visa processing times (outside UK)",
+    "observations": 39,
+    "latest_effective_date": "2026-06-26"
+   },
+   "ircc-ptime": {
+    "name": "IRCC Check Processing Times data",
+    "observations": 1907,
+    "latest_effective_date": "2026-08-19"
+   }
+  }
+ },
+ "sources": [
+  {
+   "id": "govuk-visa-times",
+   "name": "UK visa processing times (outside UK)",
+   "agency": "UK Visas and Immigration (Home Office)",
+   "jurisdiction": "GB",
+   "url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
+   "license_note": "Open Government Licence v3.0 — reuse permitted with attribution."
+  },
+  {
+   "id": "ircc-ptime",
+   "name": "IRCC Check Processing Times data",
+   "agency": "Immigration, Refugees and Citizenship Canada",
+   "jurisdiction": "CA",
+   "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html",
+   "license_note": "Government of Canada publication; facts/values extracted under fair-dealing-style factual reuse. Non-commercial reproduction terms noted; we store extracted values with attribution, not page content. Owner review recommended before commercial launch."
+  }
+ ],
+ "endpoints": {
+  "jurisdictions": [
+   "/api/v1/jurisdictions/ca.json",
+   "/api/v1/jurisdictions/gb.json"
+  ],
+  "services": [
+   "/api/v1/services/ca-refugee-gov-assisted.json",
+   "/api/v1/services/ca-refugee-private-refugee-side.json",
+   "/api/v1/services/ca-refugee-private-sponsor-side.json",
+   "/api/v1/services/ca-sponsor-adopted-child.json",
+   "/api/v1/services/ca-sponsor-dependent-child.json",
+   "/api/v1/services/ca-study-permit.json",
+   "/api/v1/services/ca-super-visa.json",
+   "/api/v1/services/ca-visitor-visa.json",
+   "/api/v1/services/ca-work-permit.json",
+   "/api/v1/services/gb-family-visas--adult-coming-to-be-cared-for-by-a-relative.json",
+   "/api/v1/services/gb-family-visas--child.json",
+   "/api/v1/services/gb-family-visas--parent.json",
+   "/api/v1/services/gb-family-visas--partner-or-spouse.json",
+   "/api/v1/services/gb-other-visas-and-permits--british-national-overseas.json",
+   "/api/v1/services/gb-other-visas-and-permits--international-sportsperson.json",
+   "/api/v1/services/gb-other-visas-and-permits--minister-of-religion.json",
+   "/api/v1/services/gb-other-visas-and-permits--returning-resident-visa.json",
+   "/api/v1/services/gb-other-visas-and-permits--scale-up-worker.json",
+   "/api/v1/services/gb-popular-work-visas--health-and-care-worker.json",
+   "/api/v1/services/gb-popular-work-visas--skilled-worker.json",
+   "/api/v1/services/gb-study-visas--child-student.json",
+   "/api/v1/services/gb-study-visas--student.json",
+   "/api/v1/services/gb-study-visas--study-english-in-the-uk-short-term-student-6-to-11-month-english.json",
+   "/api/v1/services/gb-temporary-work-visas--charity-worker.json",
+   "/api/v1/services/gb-temporary-work-visas--creative-worker.json",
+   "/api/v1/services/gb-temporary-work-visas--government-authorised-exchange.json",
+   "/api/v1/services/gb-temporary-work-visas--international-agreement.json",
+   "/api/v1/services/gb-temporary-work-visas--religious-worker.json",
+   "/api/v1/services/gb-temporary-work-visas--seasonal-worker.json",
+   "/api/v1/services/gb-ukraine-visas--homes-for-ukraine.json",
+   "/api/v1/services/gb-visit-visas--chinese-tour-group.json",
+   "/api/v1/services/gb-visit-visas--marriage-visitor.json",
+   "/api/v1/services/gb-visit-visas--standard-visitor.json",
+   "/api/v1/services/gb-visit-visas--transit.json",
+   "/api/v1/services/gb-work-visas-for-an-overseas-employer--graduate-trainee.json",
+   "/api/v1/services/gb-work-visas-for-an-overseas-employer--overseas-domestic-worker.json",
+   "/api/v1/services/gb-work-visas-for-an-overseas-employer--representative-of-an-overseas-business.json",
+   "/api/v1/services/gb-work-visas-for-an-overseas-employer--secondment-worker.json",
+   "/api/v1/services/gb-work-visas-for-an-overseas-employer--senior-or-specialist-worker.json",
+   "/api/v1/services/gb-work-visas-for-an-overseas-employer--service-supplier.json",
+   "/api/v1/services/gb-work-visas-for-an-overseas-employer--uk-expansion-worker.json",
+   "/api/v1/services/gb-work-visas-to-start-a-business--innovator-founder.json",
+   "/api/v1/services/gb-work-visas-to-start-a-business--start-up.json",
+   "/api/v1/services/gb-work-visas-you-can-apply-for-without-a-job-offer--global-talent.json",
+   "/api/v1/services/gb-work-visas-you-can-apply-for-without-a-job-offer--high-potential-individual-h.json",
+   "/api/v1/services/gb-work-visas-you-can-apply-for-without-a-job-offer--india-young-professionals-s.json",
+   "/api/v1/services/gb-work-visas-you-can-apply-for-without-a-job-offer--uk-ancestry.json",
+   "/api/v1/services/gb-work-visas-you-can-apply-for-without-a-job-offer--youth-mobility-scheme.json"
+  ],
+  "entity_pattern": "/api/v1/entities/{entity_id}.json",
+  "openapi": "/api/v1/openapi.yaml"
+ },
+ "license": "CC BY 4.0 — attribute GovWait and the originating government agency. Underlying figures are official government publications."
+}

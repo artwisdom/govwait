@@ -1,0 +1,29 @@
+{
+ "entity_id": "ca-visitor-visa--mv",
+ "jurisdiction": "CA",
+ "service_key": "ca-visitor-visa",
+ "service_name": "Visitor visa (applying from outside Canada)",
+ "service_category": "visa",
+ "applicant_country": "MV",
+ "applicant_country_name": "Maldives",
+ "latest": {
+  "value_raw": "No processing time available",
+  "value_days": null,
+  "status": "unavailable",
+  "effective_date": "2026-08-19",
+  "retrieved_at": "2026-08-21T11:37:08.257Z",
+  "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+  "confidence": "official"
+ },
+ "history": [
+  {
+   "value_raw": "No processing time available",
+   "value_days": null,
+   "status": "unavailable",
+   "effective_date": "2026-08-19",
+   "retrieved_at": "2026-08-21T11:37:08.257Z",
+   "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json"
+  }
+ ],
+ "license": "CC BY 4.0 — attribute GovWait and the originating government agency. Underlying figures are official government publications."
+}

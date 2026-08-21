@@ -1,0 +1,29 @@
+{
+ "entity_id": "ca-refugee-gov-assisted--gh",
+ "jurisdiction": "CA",
+ "service_key": "ca-refugee-gov-assisted",
+ "service_name": "Government-assisted refugee resettlement",
+ "service_category": "refugee",
+ "applicant_country": "GH",
+ "applicant_country_name": "Ghana",
+ "latest": {
+  "value_raw": "Not enough data",
+  "value_days": null,
+  "status": "insufficient_data",
+  "effective_date": "2026-08-19",
+  "retrieved_at": "2026-08-21T11:37:08.257Z",
+  "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+  "confidence": "official"
+ },
+ "history": [
+  {
+   "value_raw": "Not enough data",
+   "value_days": null,
+   "status": "insufficient_data",
+   "effective_date": "2026-08-19",
+   "retrieved_at": "2026-08-21T11:37:08.257Z",
+   "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json"
+  }
+ ],
+ "license": "CC BY 4.0 — attribute GovWait and the originating government agency. Underlying figures are official government publications."
+}

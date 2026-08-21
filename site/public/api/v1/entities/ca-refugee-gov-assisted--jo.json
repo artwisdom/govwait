@@ -1,0 +1,29 @@
+{
+ "entity_id": "ca-refugee-gov-assisted--jo",
+ "jurisdiction": "CA",
+ "service_key": "ca-refugee-gov-assisted",
+ "service_name": "Government-assisted refugee resettlement",
+ "service_category": "refugee",
+ "applicant_country": "JO",
+ "applicant_country_name": "Jordan",
+ "latest": {
+  "value_raw": "30 months",
+  "value_days": 913.2,
+  "status": "ok",
+  "effective_date": "2026-08-19",
+  "retrieved_at": "2026-08-21T11:37:08.257Z",
+  "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+  "confidence": "official"
+ },
+ "history": [
+  {
+   "value_raw": "30 months",
+   "value_days": 913.2,
+   "status": "ok",
+   "effective_date": "2026-08-19",
+   "retrieved_at": "2026-08-21T11:37:08.257Z",
+   "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json"
+  }
+ ],
+ "license": "CC BY 4.0 — attribute GovWait and the originating government agency. Underlying figures are official government publications."
+}

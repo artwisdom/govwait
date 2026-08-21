@@ -1,0 +1,29 @@
+{
+ "entity_id": "ca-super-visa--la",
+ "jurisdiction": "CA",
+ "service_key": "ca-super-visa",
+ "service_name": "Super visa (parents and grandparents)",
+ "service_category": "visa",
+ "applicant_country": "LA",
+ "applicant_country_name": "Laos",
+ "latest": {
+  "value_raw": "No processing time available",
+  "value_days": null,
+  "status": "unavailable",
+  "effective_date": "2026-08-19",
+  "retrieved_at": "2026-08-21T11:37:08.257Z",
+  "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+  "confidence": "official"
+ },
+ "history": [
+  {
+   "value_raw": "No processing time available",
+   "value_days": null,
+   "status": "unavailable",
+   "effective_date": "2026-08-19",
+   "retrieved_at": "2026-08-21T11:37:08.257Z",
+   "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json"
+  }
+ ],
+ "license": "CC BY 4.0 — attribute GovWait and the originating government agency. Underlying figures are official government publications."
+}

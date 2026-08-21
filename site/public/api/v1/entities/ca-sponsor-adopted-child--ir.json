@@ -1,0 +1,29 @@
+{
+ "entity_id": "ca-sponsor-adopted-child--ir",
+ "jurisdiction": "CA",
+ "service_key": "ca-sponsor-adopted-child",
+ "service_name": "Sponsorship: adopted child",
+ "service_category": "sponsorship",
+ "applicant_country": "IR",
+ "applicant_country_name": "Iran",
+ "latest": {
+  "value_raw": "Not enough data",
+  "value_days": null,
+  "status": "insufficient_data",
+  "effective_date": "2026-08-19",
+  "retrieved_at": "2026-08-21T11:37:08.257Z",
+  "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+  "confidence": "official"
+ },
+ "history": [
+  {
+   "value_raw": "Not enough data",
+   "value_days": null,
+   "status": "insufficient_data",
+   "effective_date": "2026-08-19",
+   "retrieved_at": "2026-08-21T11:37:08.257Z",
+   "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json"
+  }
+ ],
+ "license": "CC BY 4.0 — attribute GovWait and the originating government agency. Underlying figures are official government publications."
+}

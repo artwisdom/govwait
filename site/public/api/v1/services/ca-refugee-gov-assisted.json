@@ -1,0 +1,3826 @@
+{
+ "service_key": "ca-refugee-gov-assisted",
+ "service_name": "Government-assisted refugee resettlement",
+ "jurisdiction": "CA",
+ "count": 212,
+ "generated_at": "2026-08-21T11:37:38.734Z",
+ "records": [
+  {
+   "entity_id": "ca-refugee-gov-assisted--ad",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "AD",
+   "applicant_country_name": "Andorra",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--ae",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "AE",
+   "applicant_country_name": "United Arab Emirates",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--af",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "AF",
+   "applicant_country_name": "Afghanistan",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--ag",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "AG",
+   "applicant_country_name": "Antigua & Barbuda",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--ai",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "AI",
+   "applicant_country_name": "Anguilla",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--al",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "AL",
+   "applicant_country_name": "Albania",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--am",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "AM",
+   "applicant_country_name": "Armenia",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--ao",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "AO",
+   "applicant_country_name": "Angola",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--ar",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "AR",
+   "applicant_country_name": "Argentina",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--at",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "AT",
+   "applicant_country_name": "Austria",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--au",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "AU",
+   "applicant_country_name": "Australia",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--aw",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "AW",
+   "applicant_country_name": "Aruba",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--az",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "AZ",
+   "applicant_country_name": "Azerbaijan",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--ba",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "BA",
+   "applicant_country_name": "Bosnia & Herzegovina",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--bb",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "BB",
+   "applicant_country_name": "Barbados",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--bd",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "BD",
+   "applicant_country_name": "Bangladesh",
+   "latest": {
+    "value_raw": "13 months",
+    "value_days": 395.72,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--be",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "BE",
+   "applicant_country_name": "Belgium",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--bf",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "BF",
+   "applicant_country_name": "Burkina Faso",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--bg",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "BG",
+   "applicant_country_name": "Bulgaria",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--bh",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "BH",
+   "applicant_country_name": "Bahrain",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--bi",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "BI",
+   "applicant_country_name": "Burundi",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--bj",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "BJ",
+   "applicant_country_name": "Benin",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--bm",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "BM",
+   "applicant_country_name": "Bermuda",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--bn",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "BN",
+   "applicant_country_name": "Brunei",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--bo",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "BO",
+   "applicant_country_name": "Bolivia",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--bq",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "BQ",
+   "applicant_country_name": "Caribbean Netherlands",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--br",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "BR",
+   "applicant_country_name": "Brazil",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--bs",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "BS",
+   "applicant_country_name": "Bahamas",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--bt",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "BT",
+   "applicant_country_name": "Bhutan",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--bw",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "BW",
+   "applicant_country_name": "Botswana",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--by",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "BY",
+   "applicant_country_name": "Belarus",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--bz",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "BZ",
+   "applicant_country_name": "Belize",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--ca",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "CA",
+   "applicant_country_name": "Canada",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--cd",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "CD",
+   "applicant_country_name": "Congo - Kinshasa",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--cf",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "CF",
+   "applicant_country_name": "Central African Republic",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--cg",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "CG",
+   "applicant_country_name": "Congo - Brazzaville",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--ch",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "CH",
+   "applicant_country_name": "Switzerland",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--ci",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "CI",
+   "applicant_country_name": "Côte d’Ivoire",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--cl",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "CL",
+   "applicant_country_name": "Chile",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--cm",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "CM",
+   "applicant_country_name": "Cameroon",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--cn",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "CN",
+   "applicant_country_name": "China",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--co",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "CO",
+   "applicant_country_name": "Colombia",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--cr",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "CR",
+   "applicant_country_name": "Costa Rica",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--cu",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "CU",
+   "applicant_country_name": "Cuba",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--cv",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "CV",
+   "applicant_country_name": "Cape Verde",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--cy",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "CY",
+   "applicant_country_name": "Cyprus",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--cz",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "CZ",
+   "applicant_country_name": "Czechia",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--de",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "DE",
+   "applicant_country_name": "Germany",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--dj",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "DJ",
+   "applicant_country_name": "Djibouti",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--dk",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "DK",
+   "applicant_country_name": "Denmark",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--dm",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "DM",
+   "applicant_country_name": "Dominica",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--do",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "DO",
+   "applicant_country_name": "Dominican Republic",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--dz",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "DZ",
+   "applicant_country_name": "Algeria",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--ec",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "EC",
+   "applicant_country_name": "Ecuador",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--ee",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "EE",
+   "applicant_country_name": "Estonia",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--eg",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "EG",
+   "applicant_country_name": "Egypt",
+   "latest": {
+    "value_raw": "12 months",
+    "value_days": 365.28,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--er",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "ER",
+   "applicant_country_name": "Eritrea",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--es",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "ES",
+   "applicant_country_name": "Spain",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--et",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "ET",
+   "applicant_country_name": "Ethiopia",
+   "latest": {
+    "value_raw": "18 months",
+    "value_days": 547.92,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--fi",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "FI",
+   "applicant_country_name": "Finland",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--fj",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "FJ",
+   "applicant_country_name": "Fiji",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--fm",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "FM",
+   "applicant_country_name": "Micronesia",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--fr",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "FR",
+   "applicant_country_name": "France",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--ga",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "GA",
+   "applicant_country_name": "Gabon",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--gb",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "GB",
+   "applicant_country_name": "United Kingdom",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--gd",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "GD",
+   "applicant_country_name": "Grenada",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--ge",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "GE",
+   "applicant_country_name": "Georgia",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--gh",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "GH",
+   "applicant_country_name": "Ghana",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--gl",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "GL",
+   "applicant_country_name": "Greenland",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--gm",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "GM",
+   "applicant_country_name": "Gambia",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--gn",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "GN",
+   "applicant_country_name": "Guinea",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--gq",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "GQ",
+   "applicant_country_name": "Equatorial Guinea",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--gr",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "GR",
+   "applicant_country_name": "Greece",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--gt",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "GT",
+   "applicant_country_name": "Guatemala",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--gw",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "GW",
+   "applicant_country_name": "Guinea-Bissau",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--gy",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "GY",
+   "applicant_country_name": "Guyana",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--hk",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "HK",
+   "applicant_country_name": "Hong Kong SAR China",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--hn",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "HN",
+   "applicant_country_name": "Honduras",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--hr",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "HR",
+   "applicant_country_name": "Croatia",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--ht",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "HT",
+   "applicant_country_name": "Haiti",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--hu",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "HU",
+   "applicant_country_name": "Hungary",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--id",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "ID",
+   "applicant_country_name": "Indonesia",
+   "latest": {
+    "value_raw": "29 months",
+    "value_days": 882.76,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--ie",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "IE",
+   "applicant_country_name": "Ireland",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--il",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "IL",
+   "applicant_country_name": "Israel",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--in",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "IN",
+   "applicant_country_name": "India",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--io",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "IO",
+   "applicant_country_name": "British Indian Ocean Territory",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--iq",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "IQ",
+   "applicant_country_name": "Iraq",
+   "latest": {
+    "value_raw": "30 months",
+    "value_days": 913.2,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--ir",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "IR",
+   "applicant_country_name": "Iran",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--is",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "IS",
+   "applicant_country_name": "Iceland",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--it",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "IT",
+   "applicant_country_name": "Italy",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--jm",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "JM",
+   "applicant_country_name": "Jamaica",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--jo",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "JO",
+   "applicant_country_name": "Jordan",
+   "latest": {
+    "value_raw": "30 months",
+    "value_days": 913.2,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--jp",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "JP",
+   "applicant_country_name": "Japan",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--ke",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "KE",
+   "applicant_country_name": "Kenya",
+   "latest": {
+    "value_raw": "20 months",
+    "value_days": 608.8,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--kg",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "KG",
+   "applicant_country_name": "Kyrgyzstan",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--kh",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "KH",
+   "applicant_country_name": "Cambodia",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--ki",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "KI",
+   "applicant_country_name": "Kiribati",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--km",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "KM",
+   "applicant_country_name": "Comoros",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--kn",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "KN",
+   "applicant_country_name": "St. Kitts & Nevis",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--kp",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "KP",
+   "applicant_country_name": "North Korea",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--kr",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "KR",
+   "applicant_country_name": "South Korea",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--kw",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "KW",
+   "applicant_country_name": "Kuwait",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--ky",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "KY",
+   "applicant_country_name": "Cayman Islands",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--kz",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "KZ",
+   "applicant_country_name": "Kazakhstan",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--la",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "LA",
+   "applicant_country_name": "Laos",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--lb",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "LB",
+   "applicant_country_name": "Lebanon",
+   "latest": {
+    "value_raw": "19 months",
+    "value_days": 578.36,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--lc",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "LC",
+   "applicant_country_name": "St. Lucia",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--li",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "LI",
+   "applicant_country_name": "Liechtenstein",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--lk",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "LK",
+   "applicant_country_name": "Sri Lanka",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--lr",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "LR",
+   "applicant_country_name": "Liberia",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--ls",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "LS",
+   "applicant_country_name": "Lesotho",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--lt",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "LT",
+   "applicant_country_name": "Lithuania",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--lu",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "LU",
+   "applicant_country_name": "Luxembourg",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--lv",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "LV",
+   "applicant_country_name": "Latvia",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--ly",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "LY",
+   "applicant_country_name": "Libya",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--ma",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "MA",
+   "applicant_country_name": "Morocco",
+   "latest": {
+    "value_raw": "13 months",
+    "value_days": 395.72,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--mc",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "MC",
+   "applicant_country_name": "Monaco",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--md",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "MD",
+   "applicant_country_name": "Moldova",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--me",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "ME",
+   "applicant_country_name": "Montenegro",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--mg",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "MG",
+   "applicant_country_name": "Madagascar",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--mh",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "MH",
+   "applicant_country_name": "Marshall Islands",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--mk",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "MK",
+   "applicant_country_name": "North Macedonia",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--ml",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "ML",
+   "applicant_country_name": "Mali",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--mm",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "MM",
+   "applicant_country_name": "Myanmar (Burma)",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--mn",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "MN",
+   "applicant_country_name": "Mongolia",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--mo",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "MO",
+   "applicant_country_name": "Macao SAR China",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--mq",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "MQ",
+   "applicant_country_name": "Martinique",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--mr",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "MR",
+   "applicant_country_name": "Mauritania",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--mt",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "MT",
+   "applicant_country_name": "Malta",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--mu",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "MU",
+   "applicant_country_name": "Mauritius",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--mv",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "MV",
+   "applicant_country_name": "Maldives",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--mw",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "MW",
+   "applicant_country_name": "Malawi",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--mx",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "MX",
+   "applicant_country_name": "Mexico",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--my",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "MY",
+   "applicant_country_name": "Malaysia",
+   "latest": {
+    "value_raw": "21 months",
+    "value_days": 639.24,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--mz",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "MZ",
+   "applicant_country_name": "Mozambique",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--na",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "NA",
+   "applicant_country_name": "Namibia",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--nc",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "NC",
+   "applicant_country_name": "New Caledonia",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--ne",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "NE",
+   "applicant_country_name": "Niger",
+   "latest": {
+    "value_raw": "19 months",
+    "value_days": 578.36,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--ng",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "NG",
+   "applicant_country_name": "Nigeria",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--ni",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "NI",
+   "applicant_country_name": "Nicaragua",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--nl",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "NL",
+   "applicant_country_name": "Netherlands",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--no",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "NO",
+   "applicant_country_name": "Norway",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--np",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "NP",
+   "applicant_country_name": "Nepal",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--nr",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "NR",
+   "applicant_country_name": "Nauru",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--nz",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "NZ",
+   "applicant_country_name": "New Zealand",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--om",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "OM",
+   "applicant_country_name": "Oman",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--pa",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "PA",
+   "applicant_country_name": "Panama",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--pe",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "PE",
+   "applicant_country_name": "Peru",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--pf",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "PF",
+   "applicant_country_name": "French Polynesia",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--pg",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "PG",
+   "applicant_country_name": "Papua New Guinea",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--ph",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "PH",
+   "applicant_country_name": "Philippines",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--pk",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "PK",
+   "applicant_country_name": "Pakistan",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--pl",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "PL",
+   "applicant_country_name": "Poland",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--pr",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "PR",
+   "applicant_country_name": "Puerto Rico",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--ps",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "PS",
+   "applicant_country_name": "Palestinian Territories",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--pt",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "PT",
+   "applicant_country_name": "Portugal",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--py",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "PY",
+   "applicant_country_name": "Paraguay",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--qa",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "QA",
+   "applicant_country_name": "Qatar",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--ro",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "RO",
+   "applicant_country_name": "Romania",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--rs",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "RS",
+   "applicant_country_name": "Serbia",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--ru",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "RU",
+   "applicant_country_name": "Russia",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--rw",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "RW",
+   "applicant_country_name": "Rwanda",
+   "latest": {
+    "value_raw": "13 months",
+    "value_days": 395.72,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--sa",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "SA",
+   "applicant_country_name": "Saudi Arabia",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--sb",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "SB",
+   "applicant_country_name": "Solomon Islands",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--sc",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "SC",
+   "applicant_country_name": "Seychelles",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--sd",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "SD",
+   "applicant_country_name": "Sudan",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--se",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "SE",
+   "applicant_country_name": "Sweden",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--sg",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "SG",
+   "applicant_country_name": "Singapore",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--si",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "SI",
+   "applicant_country_name": "Slovenia",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--sk",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "SK",
+   "applicant_country_name": "Slovakia",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--sl",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "SL",
+   "applicant_country_name": "Sierra Leone",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--sm",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "SM",
+   "applicant_country_name": "San Marino",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--sn",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "SN",
+   "applicant_country_name": "Senegal",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--so",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "SO",
+   "applicant_country_name": "Somalia",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--sr",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "SR",
+   "applicant_country_name": "Suriname",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--ss",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "SS",
+   "applicant_country_name": "South Sudan",
+   "latest": {
+    "value_raw": "15 months",
+    "value_days": 456.6,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--st",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "ST",
+   "applicant_country_name": "São Tomé & Príncipe",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--sv",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "SV",
+   "applicant_country_name": "El Salvador",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--sy",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "SY",
+   "applicant_country_name": "Syria",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--sz",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "SZ",
+   "applicant_country_name": "Eswatini",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--tc",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "TC",
+   "applicant_country_name": "Turks & Caicos Islands",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--td",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "TD",
+   "applicant_country_name": "Chad",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--tg",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "TG",
+   "applicant_country_name": "Togo",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--th",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "TH",
+   "applicant_country_name": "Thailand",
+   "latest": {
+    "value_raw": "7 months",
+    "value_days": 213.08,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--tj",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "TJ",
+   "applicant_country_name": "Tajikistan",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--tl",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "TL",
+   "applicant_country_name": "Timor-Leste",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--tm",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "TM",
+   "applicant_country_name": "Turkmenistan",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--tn",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "TN",
+   "applicant_country_name": "Tunisia",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--to",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "TO",
+   "applicant_country_name": "Tonga",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--tr",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "TR",
+   "applicant_country_name": "Türkiye",
+   "latest": {
+    "value_raw": "14 months",
+    "value_days": 426.16,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--tt",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "TT",
+   "applicant_country_name": "Trinidad & Tobago",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--tv",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "TV",
+   "applicant_country_name": "Tuvalu",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--tw",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "TW",
+   "applicant_country_name": "Taiwan",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--tz",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "TZ",
+   "applicant_country_name": "Tanzania",
+   "latest": {
+    "value_raw": "58 months",
+    "value_days": 1765.52,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--ua",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "UA",
+   "applicant_country_name": "Ukraine",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--ug",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "UG",
+   "applicant_country_name": "Uganda",
+   "latest": {
+    "value_raw": "23 months",
+    "value_days": 700.12,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--us",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "US",
+   "applicant_country_name": "United States",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--uy",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "UY",
+   "applicant_country_name": "Uruguay",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--uz",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "UZ",
+   "applicant_country_name": "Uzbekistan",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--va",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "VA",
+   "applicant_country_name": "Vatican City",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--vc",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "VC",
+   "applicant_country_name": "St. Vincent & Grenadines",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--ve",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "VE",
+   "applicant_country_name": "Venezuela",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--vi",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "VI",
+   "applicant_country_name": "U.S. Virgin Islands",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--vn",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "VN",
+   "applicant_country_name": "Vietnam",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--vu",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "VU",
+   "applicant_country_name": "Vanuatu",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--wb",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "WB",
+   "applicant_country_name": "WB",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--ws",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "WS",
+   "applicant_country_name": "Samoa",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--xk",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "XK",
+   "applicant_country_name": "Kosovo",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--ye",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "YE",
+   "applicant_country_name": "Yemen",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--za",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "ZA",
+   "applicant_country_name": "South Africa",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--zm",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "ZM",
+   "applicant_country_name": "Zambia",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-refugee-gov-assisted--zw",
+   "jurisdiction": "CA",
+   "service_key": "ca-refugee-gov-assisted",
+   "service_name": "Government-assisted refugee resettlement",
+   "service_category": "refugee",
+   "applicant_country": "ZW",
+   "applicant_country_name": "Zimbabwe",
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  }
+ ],
+ "license": "CC BY 4.0 — attribute GovWait and the originating government agency. Underlying figures are official government publications."
+}
