@@ -31,19 +31,18 @@ All dependencies install locally (`node_modules` inside project). No sudo or mac
 - Cloudflare Pages: project `govwait` live; `govwait.com` and `www.govwait.com` active over HTTPS
 - Email: `contact@govwait.com` routing active through Cloudflare Email Routing
 - AI crawler policy: listed search/citation crawlers allowed; Managed robots.txt off (see `docs/CLOUDFLARE_CRAWL_POLICY.md`)
-- GitHub deployment: latest verified `deploy-site` run `32548110019` green; it deployed commit `f0cc4e3` to Cloudflare production
-- GitHub Pages: still enabled temporarily as a rollback path; eligible for removal after explicit owner confirmation
+- GitHub deployment: latest verified `deploy-site` run `32571664389` green; it deployed commit `cdcf37b` to Cloudflare production
+- GitHub Pages: disabled; Cloudflare Pages is the sole production host
 - refresh-data workflow: ACTIVE, first run green (22s); cron Tue+Fri 14:00 UTC
 - SITE_URL repo variable = https://govwait.com
 - Repository variables: `SITE_URL`, `CONTACT_EMAIL`, and `CLOUDFLARE_ACCOUNT_ID` set
 - Repository secret: scoped `CLOUDFLARE_API_TOKEN` set (Pages write only)
+- Token hygiene: unused original account token deleted; working `govwait-github-pages-deploy-v2` retained and re-verified by deployment
 
 ## Next step
-With owner confirmation, revoke the unusable first Pages-only token and retire GitHub Pages. Then complete Search Console/Bing onboarding.
+Complete Google Search Console and Bing Webmaster Tools onboarding, with explicit owner approval before any indexing-submission clicks.
 
 ## Open threads
 - US/AU/IE sources WAF-blocked to honest bots — owner-decision item (documented in DEPLOYMENT_GUIDE).
-- One unused Pages-only Cloudflare token named `govwait-github-pages-deploy` was created during setup but its value was not retained; revoke it after owner confirmation. The working encrypted token is `govwait-github-pages-deploy-v2`.
-- GitHub Pages remains enabled until the owner confirms its retirement; Cloudflare is already the active DNS target and production host.
 - `npm audit` reports four Astro 4 build-toolchain advisories (1 moderate, 3 high). Production is pre-rendered static HTML/JSON on Cloudflare Pages—no Astro/Vite development or server runtime is exposed. Plan and test the major Astro 7/Node runtime upgrade before adding any dynamic server rendering; do not apply `npm audit fix --force` blindly.
 - NZ/SE/NL/DK verified robots-permitted, not yet built (expansion targets in MAINTENANCE_RUNBOOK).

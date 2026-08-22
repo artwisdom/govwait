@@ -89,9 +89,9 @@ Local Node is 20.19.6 (Astro pinned to v4 for this reason; CI also pins Node 20)
 - refresh-data cron ACTIVE and proven (first autonomous commit: `data: refresh
   2026-08-22`). deploy-site green. ~60 min/month total of the 2,000 free.
 - Cloudflare migration: production cutover, explicit allow-crawler policy, and
-  GitHub-driven deployment are complete (latest verified run `32548110019`,
-  commit `f0cc4e3`).
-  Retirement of the old GitHub Pages deployment awaits explicit owner confirmation.
+  GitHub-driven deployment are complete. GitHub Pages is disabled, the unused
+  original token is deleted, and retained-token proof run `32571664389` deployed
+  commit `cdcf37b` successfully.
 
 ## 6. Traps and constraints (learned the hard way — do not relearn)
 

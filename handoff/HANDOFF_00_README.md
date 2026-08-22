@@ -71,9 +71,9 @@ style preferences.
 ## Current status snapshot (as of this handoff)
 
 - Repo public and live; Cloudflare Pages project `govwait` serves `govwait.com` and
-  `www.govwait.com` over HTTPS. GitHub Pages remains enabled only as a temporary
-  rollback path; latest verified GitHub-driven Cloudflare deploy run
-  `32548110019` is green on commit `f0cc4e3`.
+  `www.govwait.com` over HTTPS. GitHub Pages is disabled; latest verified
+  GitHub-driven Cloudflare deploy run `32571664389` is green on commit `cdcf37b`
+  after removal of the unused original token.
 - refresh-data cron ACTIVE (Tue+Fri 14:00 UTC); first autonomous data commit already
   landed (`data: refresh 2026-08-22`).
 - `contact@govwait.com` is active through Cloudflare Email Routing and published on

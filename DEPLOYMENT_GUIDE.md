@@ -4,12 +4,11 @@
 `govwait.com` is registered in Cloudflare; the Cloudflare Pages project `govwait`
 serves both the apex and `www` over HTTPS; `contact@govwait.com` forwards through
 Cloudflare Email Routing; and the public About page contains the address. Remaining
-go-live items are Search Console/Bing setup and retiring the old GitHub Pages
-deployment after the owner confirms that cleanup.
+go-live items are Google Search Console and Bing Webmaster Tools setup.
 
 ## Go-live core
 
-1. **[REQUIRED] Create a GitHub repository and push.**
+1. **[DONE] Create a GitHub repository and push.**
    ```bash
    cd data-moat-engine
    git remote add origin git@github.com:<you>/<repo>.git
@@ -35,7 +34,7 @@ deployment after the owner confirms that cleanup.
 
 ## Monetization (CORRECTED Aug 2026 per handoff research — the old Ezoic path is dead)
 
-8. **[DONE; OLD HOST CLEANUP PENDING] Cloudflare hosting and crawler policy.** Cloudflare Pages serves production and GitHub-driven deploy run `32548110019` passed on commit `f0cc4e3`. AI Crawl Control was checked deliberately: every listed crawler remains allowed and Cloudflare Managed robots.txt is off, preserving the repository-owned policy. See `docs/CLOUDFLARE_CRAWL_POLICY.md`. The old GitHub Pages deployment can now be disabled after explicit owner confirmation.
+8. **[DONE] Cloudflare hosting and crawler policy.** Cloudflare Pages is the sole production host; GitHub Pages is disabled. After token cleanup, GitHub-driven deploy run `32571664389` passed on commit `cdcf37b`, proving the retained Pages-only token works. AI Crawl Control was checked deliberately: every listed crawler remains allowed and Cloudflare Managed robots.txt is off, preserving the repository-owned policy. See `docs/CLOUDFLARE_CRAWL_POLICY.md`.
 
 9. **[LATER] Ads — the 2026 ladder.** Prerequisite for ANY approval: the editorial layer (guides, methodology, unique per-page analysis — partially built; expand per roadmap) because 2,000 templated pages alone is the exact "Low Value Content" rejection profile.
    - At **~1,000 sessions/mo**: apply to **Mediavine Journey** (the on-ramp; 70% share; Grow.js works on static sites) + AdSense in parallel (fallback + required standing).

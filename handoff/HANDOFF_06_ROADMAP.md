@@ -15,15 +15,16 @@ never the numbers themselves — six free competitors already have the numbers.*
 
 ## Phase R1 — Cloudflare Pages migration ⚠️ complete before Sept 15, 2026
 
-**Why:** GitHub Pages ToS gray-zones ad-monetized commercial sites + 100GB cap; Cloudflare's Sept 15 AI-crawler defaults change; pay-per-crawl and Monetization Gateway both require the domain on Cloudflare. Migration is prewritten (commented job in deploy.yml).
+**Why:** GitHub Pages ToS gray-zones ad-monetized commercial sites + 100GB cap; Cloudflare's Sept 15 AI-crawler defaults change; pay-per-crawl and Monetization Gateway both require the domain on Cloudflare. The migration workflow is now active in `deploy.yml`.
 **Do:** Cloudflare Pages project `govwait` (or workers-static-assets); move DNS; set AI Crawl Control policy DELIBERATELY: allow search + AI crawlers on HTML pages, note bulk-JSON metering as a later toggle; keep GitHub Actions as CI (wrangler deploy step).
 **Accept:** site serves from Cloudflare on govwait.com; refresh cron still commits; deploy green; crawl-control policy screenshot in repo docs; GitHub Pages turned off.
 
 **Status 2026-08-22:** Pages project, DNS, HTTPS, email routing, deliberate
 allow-crawler policy, scoped GitHub credential, and the automated deploy are
-complete. Remaining strict acceptance items: turn off GitHub Pages after owner
-confirmation and, if desired, add a dashboard screenshot alongside the textual
-policy evidence in `docs/CLOUDFLARE_CRAWL_POLICY.md`.
+complete. GitHub Pages is off, the unused token is deleted, and a retained-token
+proof deployment is green. The operational migration is complete; if desired,
+add a dashboard screenshot alongside the textual policy evidence in
+`docs/CLOUDFLARE_CRAWL_POLICY.md`.
 
 ## Phase R2 — NZ + IRCC-flpt sources (the moat accelerators)
 
