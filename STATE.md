@@ -38,9 +38,18 @@ All dependencies install locally (`node_modules` inside project). No sudo or mac
 - Repository variables: `SITE_URL`, `CONTACT_EMAIL`, and `CLOUDFLARE_ACCOUNT_ID` set
 - Repository secret: scoped `CLOUDFLARE_API_TOKEN` set (Pages write only)
 - Token hygiene: unused original account token deleted; working `govwait-github-pages-deploy-v2` retained and re-verified by deployment
+- Search ownership: Google Search Console domain property `govwait.com` and Bing
+  Webmaster Tools site `https://govwait.com/` verified by DNS on 2026-08-22
+- Search preflight: Google live URL test says the homepage is available to Google,
+  crawl/page fetch/indexing are allowed, and the declared canonical is correct; three
+  representative pages each passed the live Rich Results Test with one valid
+  Breadcrumb item
 
 ## Next step
-Complete Google Search Console and Bing Webmaster Tools onboarding, with explicit owner approval before any indexing-submission clicks.
+With explicit owner approval, click **Submit** once in Google Search Console and
+once in Bing Webmaster Tools for `https://govwait.com/sitemap.xml`. Both forms are
+staged, but neither sitemap has been submitted. Any Google **Request indexing** click
+is a separate later approval; none has been made.
 
 ## Open threads
 - US/AU/IE sources WAF-blocked to honest bots — owner-decision item (documented in DEPLOYMENT_GUIDE).

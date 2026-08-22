@@ -9,7 +9,11 @@ never the numbers themselves — six free competitors already have the numbers.*
 
 - [x] Buy govwait.com; route apex + `www` to Cloudflare Pages; verify HTTPS.
 - [x] Contact email: alias, About page, and `CONTACT_EMAIL` repository variable complete.
-- Google Search Console + Bing Webmaster Tools accounts; submit `/sitemap.xml` to both.
+- [x] Google Search Console domain property + Bing Webmaster Tools site verified;
+  Google homepage live test and three representative Rich Results tests passed.
+- [ ] Submit `https://govwait.com/sitemap.xml` to both. The forms are staged; both
+  Submit clicks remain an explicit owner gate, and no Request indexing click has
+  been made.
 - Cloudflare account (needed for R1). Pay Per Crawl beta + Monetization Gateway waitlists while there.
 - Defensive trademark check "GovWait" CA/UK/US (~$0 to search).
 

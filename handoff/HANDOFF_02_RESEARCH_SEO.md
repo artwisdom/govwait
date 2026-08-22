@@ -9,7 +9,7 @@ in the repo versus what remains (→ roadmap)._
 | Recommendation | Status |
 |---|---|
 | Split sitemaps per template family + honest lastmod | ✅ DONE (`sitemap.xml` index → `sitemap-hubs.xml`, `sitemap-ca.xml`; lastmod = official effective_date only) |
-| IndexNow → Bing (feeds ChatGPT Search) | ✅ DONE (`pipeline/indexnow.js` + refresh.yml step + public key file). **Codex: create Bing Webmaster Tools account (owner step) and verify submissions land** |
+| IndexNow → Bing (feeds ChatGPT Search) | ✅ IMPLEMENTED (`pipeline/indexnow.js` + refresh.yml step + public key file); Bing Webmaster Tools ownership is now verified. Receipt/reporting data may lag, so confirm future refresh submissions appear before calling the dashboard observation complete. |
 | Related-pages module on every leaf | ✅ DONE (same-country cross-service chips; sibling-country links in Compare section) |
 | Month-token title pattern with number | ✅ DONE ("Canada Visitor Visa Processing Time from India — August 2026: 31 days (Official)") |
 | Above-fold: number + updated date + source + MoM change | ✅ DONE (delta line renders once a route has 2 differing published values — history is 1–2 deep today, so deltas appear organically over coming weeks) |
@@ -17,8 +17,8 @@ in the repo versus what remains (→ roadmap)._
 | Attributed official quote (GEO +41% finding) | ✅ DONE (IRCC "most complete applications" quote on CA pages) |
 | FAQ targeting "why is mine slower" + "after biometrics" | ✅ DONE (varied by category/status to avoid pure boilerplate) |
 | Methodology page + About + independence disclaimer | ✅ DONE (about.astro; footer disclaimer on every page) |
-| GSC + Bing WMT accounts, submit sitemaps | ❌ OWNER (accounts) — DEPLOYMENT_GUIDE step 6 |
-| Request-indexing quota on hubs only | ❌ OWNER/Codex after GSC exists |
+| GSC + Bing WMT accounts, submit sitemaps | ⚠️ PROPERTIES VERIFIED; `https://govwait.com/sitemap.xml` staged in both forms, but both Submit clicks remain an explicit owner gate — DEPLOYMENT_GUIDE step 6 |
+| Request-indexing quota on hubs only | ❌ SEPARATE OWNER GATE; none requested. Homepage live test is eligible, but the new property still reports the URL as unknown until discovery/indexing. |
 | Downloadable CSV per dataset + Dataset Search submission | ❌ ROADMAP (R6) |
 | /reports (or /trends) monthly movers section | ❌ ROADMAP (R3) — needs history depth, framework should ship now |
 | History sparklines per route | ❌ ROADMAP (R4) — meaningful at ~6+ observations |

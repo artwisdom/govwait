@@ -92,6 +92,13 @@ Local Node is 20.19.6 (Astro pinned to v4 for this reason; CI also pins Node 20)
   GitHub-driven deployment are complete. GitHub Pages is disabled, the unused
   original token is deleted, and retained-token proof run `32571664389` deployed
   commit `cdcf37b` successfully.
+- Search ownership: Google Search Console domain property `govwait.com` and Bing
+  Webmaster Tools site `https://govwait.com/` are DNS-verified. Google's live test
+  says the homepage can be indexed, and three representative pages passed the live
+  Rich Results Test with valid Breadcrumb markup.
+- Sitemap submission remains an explicit owner gate. The full sitemap URL is staged
+  in both search-console forms, but neither **Submit** button has been clicked and no
+  Google **Request indexing** action has been taken.
 
 ## 6. Traps and constraints (learned the hard way — do not relearn)
 
