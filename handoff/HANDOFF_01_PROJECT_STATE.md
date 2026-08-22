@@ -95,8 +95,9 @@ Local Node is 20.19.6 (Astro pinned to v4 for this reason; CI also pins Node 20)
 ## 6. Traps and constraints (learned the hard way — do not relearn)
 
 1. **WAF-blocked governments** (403 to honest bots; NEVER UA-spoof): travel.state.gov,
-   egov.uscis.gov, ireland.ie, immi.homeaffairs.gov.au. US route: official USCIS
-   Torch API (developer.uscis.gov, owner signup). Re-check quarterly by hand.
+   egov.uscis.gov, ireland.ie, immi.homeaffairs.gov.au. US: verified Aug 2026 — the USCIS
+   developer portal has NO processing-times API (Case Status + FOIA only); no
+   sanctioned automated route exists. Re-check quarterly by hand.
 2. **Astro `<style>` is compile-scoped**: use `<style is:global>` in the layout; a JS
    template expression inside `<style>` silently ships no CSS (bug #1, fixed).
 3. **Sticky `thead` inside an `overflow-x` wrapper** pushes the header over the first

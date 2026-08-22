@@ -22,8 +22,11 @@ projects like this earn ~$0; maintained base case $500–$3K/mo at months 12–1
 | File | What it contains | Read when |
 |---|---|---|
 | `HANDOFF_01_PROJECT_STATE.md` | Complete technical deep dive: every directory, the data model, pipeline internals, the politeness/compliance rules that MUST survive any refactor, CI, deployment state, known constraints and traps | First, fully, before touching code |
-| `HANDOFF_02_RESEARCH.md` | Fresh (Aug 2026) research: SEO/AI-era discoverability for programmatic data sites, monetization specifics with current network requirements, competitor landscape + demand mapping, verified next data sources with URLs and structures | Before planning any growth work |
-| `HANDOFF_03_ROADMAP.md` | Prioritized 12-month build-out: ordered tasks with rationale, acceptance criteria, and effort estimates | To decide what to do next, always |
+| `HANDOFF_02_RESEARCH_SEO.md` | Aug-2026 research: indexing a 2K-page site, the 2026 core/spam updates, information-gain requirements, AI Overviews/ChatGPT/Perplexity citation mechanics, E-E-A-T, link acquisition — each item marked done/roadmap | Before any growth work |
+| `HANDOFF_03_RESEARCH_MONETIZATION.md` | Aug-2026 research: the real ad-network ladder (Journey on-ramp; Ezoic dead), vertical RPM economics, pay-per-crawl reality check, licensing, affiliate trust filter, revenue table | Before any monetization work |
+| `HANDOFF_04_RESEARCH_COMPETITORS.md` | Competitor deep-dive (6 free trackers!), live autocomplete demand mapping, SERP reality, top-20 priority routes, the wedge (history/alerts/API) | Before any product decision |
+| `HANDOFF_05_RESEARCH_SOURCES.md` | Fetch-verified next sources with exact URLs/shapes: NZ JSON API, IRCC flpt (history to 2016!), NO/FI/SE/DK/NL, USCIS correction (no times API exists) | Before adding any source |
+| `HANDOFF_06_ROADMAP.md` | The ordered 12-month plan (R0–R9) with acceptance criteria and standing policies | To decide what to do next, always |
 
 Also read in the repo root (they remain the operating manuals): `EXECUTION_REPORT.md`
 (what was built and why), `DEPLOYMENT_GUIDE.md` (remaining owner steps),
@@ -41,7 +44,9 @@ style preferences.
    between same-host requests; cache everything; never re-fetch what you have.
 2. **Never spoof a browser UA to get around a WAF.** travel.state.gov, egov.uscis.gov,
    ireland.ie, immi.homeaffairs.gov.au block bots — they stay excluded until an
-   official API/dataset route exists (USCIS has one: developer.uscis.gov).
+   official API/dataset route exists (verified Aug 2026: USCIS's developer portal has
+   NO processing-times API — only Case Status and FOIA — so the US has no sanctioned
+   automated route today).
 3. **Official primary sources only. Values, never prose.** Every record carries
    `source_url`, the agency's own `effective_date`, and our `retrieved_at`.
 4. **History is append-only.** Never rewrite or backfill `observations`; a corrected
@@ -58,9 +63,10 @@ style preferences.
 > Read `handoff/HANDOFF_00_README.md`, then `handoff/HANDOFF_01_PROJECT_STATE.md`
 > fully. Confirm you can run the pipeline locally (`node pipeline/run.js` — uses
 > cache, no network needed) and build the site (`cd site && npm ci && npx astro
-> build`). Then read `handoff/HANDOFF_03_ROADMAP.md` and propose which of the next
-> three roadmap items you'll start with and why. Do not modify the politeness layer,
-> validation floors, or history semantics described in the handoff non-negotiables.
+> build`). Then read `handoff/HANDOFF_06_ROADMAP.md` and propose which of R1–R3
+> you will start with and why, citing the relevant research file. Do not modify the
+> politeness layer, validation floors, or history semantics described in the
+> handoff non-negotiables.
 
 ## Current status snapshot (as of this handoff)
 
@@ -71,7 +77,8 @@ style preferences.
   landed (`data: refresh 2026-08-22`).
 - `CONTACT_EMAIL` repo variable NOT yet set (owner to provide; crawler runs as
   "owner-pending" until then) — set it the moment the owner supplies the address.
-- Dataset: 1,946 routes / 2 sources (IRCC Canada per-country JSON, gov.uk Content
-  API); history depth 1–2 observations per route and compounding.
+- Dataset: **2,005 routes / 6 sources** (IRCC per-country + non-country + passports;
+  gov.uk outside-UK + in-UK + HMPO passport); history depth 1–2 observations and
+  compounding twice weekly.
 - Site: redesigned Aug 22 (design system, speed chips, related-route interlinking,
   3 data-generated guides, lastmod sitemap). All QA gates green (`docs/QA_REPORT.md`).

@@ -49,7 +49,7 @@ or **[OPTIONAL]**. Steps exist because hard rules forbade the agent from doing t
 
 ## Coverage expansion blocked by hard rules (owner decisions)
 
-13. **US data (highest-value gap).** `travel.state.gov` and `egov.uscis.gov` block honest bots (Cloudflare 403). Options: (a) **USCIS Torch API** — official developer API, free signup at developer.uscis.gov, then a new source module (the runbook shows how); (b) manual weekly entry of the passport processing time from the official page (2 min/week) — add a `manual` confidence tier first; (c) leave the US out (current state). Never scrape around the WAF.
+13. **US data (highest-value gap).** `travel.state.gov` and `egov.uscis.gov` block honest bots (Cloudflare 403). Options (updated Aug 2026: the USCIS developer portal has **no processing-times API** — only Case Status and FOIA — so there is no sanctioned automated route): (a) manual weekly entry of passport/USCIS times from the official pages (2 min/week) — add a `manual` confidence tier first; (b) leave the US out (current state). Never scrape around the WAF.
 14. **Australia / Ireland.** Same situation (Akamai/CloudFront blocks). Re-check quarterly by hand; both publish rich data if they ever open up or offer official APIs.
 15. **Next automated sources (robots-verified already):** NZ (immigration.govt.nz + dia.govt.nz), Sweden, Netherlands, Denmark — see MAINTENANCE_RUNBOOK "Adding a source".
 

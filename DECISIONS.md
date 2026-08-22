@@ -21,3 +21,9 @@
 19. Refresh cron set to Tue+Fri 14:00 UTC — matches observed IRCC republish cadence with margin, at ~35 min/month of the 2,000-min free tier.
 20. Did not kill the 3 node listeners found during QA — all predate this session and belong to other projects (verified via lsof cwd + start time); killing them would have violated sandbox containment.
 21. Validation MAX_DAYS raised 1500→3000 after a legitimate official value ("58 months", refugee resettlement from TZ) tripped the first run — documented in-code with the observed value.
+22. Owner authorized go-live (repo artwisdom/govwait public, Pages + custom domain govwait.com, refresh cron active); domain purchase + DNS remain owner steps.
+23. Post-launch research round (4 parallel agents) corrected the monetization plan: Ezoic path obsolete (250K min since Feb 2026) → Mediavine Journey at 1K sessions; Raptive 25K PVs but ≥50% tier-1 geo gate; docs updated.
+24. USCIS developer portal verified to have NO processing-times API — corrected earlier docs that implied Torch was a US data route.
+25. Added 4 sources same session (IRCC non-country + CA passports + UK in-UK + UK passport) after fetch-verifying shapes; 2,005 routes total. NZ JSON API + IRCC flpt (history to 2016) specified for Codex in handoff.
+26. Unstamped-source semantics introduced (ircc-passport): insert only on value change, effective_date = first-observed date — keeps history honest when a source publishes no update stamp.
+27. Handoff package for Codex written to /handoff (7 files); Codex owns day-to-day from here per owner's tooling preference.

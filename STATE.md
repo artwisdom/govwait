@@ -22,7 +22,8 @@ All dependencies install locally (`node_modules` inside project). No global inst
 - [x] Phase 5 — Machine skin: 1,997 static API files + OpenAPI 3.1 + MCP server (smoke 8/8) + llms.txt
 - [x] Phase 6 — Workflows written (refresh ~35min/mo, deploy), INACTIVE until pushed
 - [x] Phase 7 — QA: all 13 gates green (docs/QA_REPORT.md)
-- [x] Phase 8 — All deliverables complete; SESSION DONE
+- [x] Phase 8 — All deliverables complete
+- [x] Post-launch (owner-directed): go-live executed (repo public, Pages live, cron active); design system v2; SEO upgrades (split sitemaps, IndexNow, month-token titles, FAQ/deltas); dataset expanded to **2,005 routes / 6 sources**; 4-agent research round; **/handoff package for Codex transfer (7 files)**
 
 ## Deployment status (2026-08-21, owner-authorized)
 - Repo LIVE: https://github.com/artwisdom/govwait (public, main)
@@ -31,7 +32,7 @@ All dependencies install locally (`node_modules` inside project). No global inst
 - SITE_URL repo variable = https://govwait.com
 
 ## Next step
-OWNER: (1) buy govwait.com and point DNS (A 185.199.108.153/.109/.110/.111 + CNAME www -> artwisdom.github.io); (2) provide contact email -> set CONTACT_EMAIL repo variable + About page. Then: enforce HTTPS, Search Console + sitemap, NZ source expansion per MAINTENANCE_RUNBOOK.
+PROJECT TRANSFERS TO CODEX. Owner: buy govwait.com + DNS, provide contact email, then hand Codex the prompt in handoff/HANDOFF_00_README.md. Roadmap: handoff/HANDOFF_06_ROADMAP.md (R1 = Cloudflare Pages migration, time-sensitive before 2026-09-15).
 
 ## Open threads
 - US/AU/IE sources WAF-blocked to honest bots — owner-decision item (documented in DEPLOYMENT_GUIDE).
