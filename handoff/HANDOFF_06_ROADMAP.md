@@ -8,7 +8,7 @@ never the numbers themselves — six free competitors already have the numbers.*
 ## Phase R0 — Owner unblocks (minutes each; some already in DEPLOYMENT_GUIDE)
 
 - [x] Buy govwait.com; route apex + `www` to Cloudflare Pages; verify HTTPS.
-- [ ] Contact email: alias + About page are complete; set the remaining `CONTACT_EMAIL` repository variable.
+- [x] Contact email: alias, About page, and `CONTACT_EMAIL` repository variable complete.
 - Google Search Console + Bing Webmaster Tools accounts; submit `/sitemap.xml` to both.
 - Cloudflare account (needed for R1). Pay Per Crawl beta + Monetization Gateway waitlists while there.
 - Defensive trademark check "GovWait" CA/UK/US (~$0 to search).
@@ -19,10 +19,11 @@ never the numbers themselves — six free competitors already have the numbers.*
 **Do:** Cloudflare Pages project `govwait` (or workers-static-assets); move DNS; set AI Crawl Control policy DELIBERATELY: allow search + AI crawlers on HTML pages, note bulk-JSON metering as a later toggle; keep GitHub Actions as CI (wrangler deploy step).
 **Accept:** site serves from Cloudflare on govwait.com; refresh cron still commits; deploy green; crawl-control policy screenshot in repo docs; GitHub Pages turned off.
 
-**Status 2026-08-22:** Pages project, DNS, HTTPS, email routing, production direct
-deployment, and deliberate allow-crawler policy are complete. Remaining: store the
-scoped GitHub deployment credential, verify the Action green, and turn off GitHub
-Pages. Policy evidence is recorded in `docs/CLOUDFLARE_CRAWL_POLICY.md`.
+**Status 2026-08-22:** Pages project, DNS, HTTPS, email routing, deliberate
+allow-crawler policy, scoped GitHub credential, and the automated deploy are
+complete. Remaining strict acceptance items: turn off GitHub Pages after owner
+confirmation and, if desired, add a dashboard screenshot alongside the textual
+policy evidence in `docs/CLOUDFLARE_CRAWL_POLICY.md`.
 
 ## Phase R2 — NZ + IRCC-flpt sources (the moat accelerators)
 

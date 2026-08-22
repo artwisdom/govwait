@@ -83,15 +83,14 @@ Local Node is 20.19.6 (Astro pinned to v4 for this reason; CI also pins Node 20)
   HTTPS; proxied CNAME records target `govwait.pages.dev`.
 - Cloudflare Email Routing: `contact@govwait.com` active and forwarded to a verified
   owner destination; the About page publishes the alias.
-- Repo variable set: `SITE_URL=https://govwait.com`. NOT set yet:
-  `CONTACT_EMAIL=contact@govwait.com` and the Cloudflare deployment settings needed
-  by the new workflow. The crawler UA remains "owner-pending" in unattended runs
-  until `CONTACT_EMAIL` lands.
+- Repo variables set: `SITE_URL=https://govwait.com`,
+  `CONTACT_EMAIL=contact@govwait.com`, and `CLOUDFLARE_ACCOUNT_ID`. The encrypted
+  `CLOUDFLARE_API_TOKEN` secret has Pages write permission only.
 - refresh-data cron ACTIVE and proven (first autonomous commit: `data: refresh
   2026-08-22`). deploy-site green. ~60 min/month total of the 2,000 free.
-- Cloudflare migration: production cutover and explicit allow-crawler policy are
-  complete. Remaining acceptance gates are one green GitHub-driven Cloudflare
-  deployment and retirement of the old GitHub Pages deployment.
+- Cloudflare migration: production cutover, explicit allow-crawler policy, and
+  GitHub-driven deployment are complete (run `32547912808`, commit `e997494`).
+  Retirement of the old GitHub Pages deployment awaits explicit owner confirmation.
 
 ## 6. Traps and constraints (learned the hard way — do not relearn)
 

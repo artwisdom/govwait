@@ -72,12 +72,12 @@ style preferences.
 
 - Repo public and live; Cloudflare Pages project `govwait` serves `govwait.com` and
   `www.govwait.com` over HTTPS. GitHub Pages remains enabled only as a temporary
-  rollback path until the GitHub-driven Cloudflare deployment is verified green.
+  rollback path; GitHub-driven Cloudflare deploy run `32547912808` is green.
 - refresh-data cron ACTIVE (Tue+Fri 14:00 UTC); first autonomous data commit already
   landed (`data: refresh 2026-08-22`).
 - `contact@govwait.com` is active through Cloudflare Email Routing and published on
-  the About page. The `CONTACT_EMAIL` repository variable still needs to be set;
-  unattended refreshes run as "owner-pending" until it lands.
+  the About page. The `CONTACT_EMAIL` repository variable is set, so unattended
+  refreshes carry the accountable contact in the crawler User-Agent.
 - Dataset: **2,005 routes / 6 sources** (IRCC per-country + non-country + passports;
   gov.uk outside-UK + in-UK + HMPO passport); history depth 1–2 observations and
   compounding twice weekly.

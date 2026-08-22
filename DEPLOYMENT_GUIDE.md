@@ -4,8 +4,8 @@
 `govwait.com` is registered in Cloudflare; the Cloudflare Pages project `govwait`
 serves both the apex and `www` over HTTPS; `contact@govwait.com` forwards through
 Cloudflare Email Routing; and the public About page contains the address. Remaining
-go-live items are the `CONTACT_EMAIL`/Cloudflare deployment settings in GitHub,
-one green automated Cloudflare deployment, and Search Console/Bing setup.
+go-live items are Search Console/Bing setup and retiring the old GitHub Pages
+deployment after the owner confirms that cleanup.
 
 ## Go-live core
 
@@ -19,13 +19,13 @@ one green automated Cloudflare deployment, and Search Console/Bing setup.
 
 2. **[DONE] Deploy to Cloudflare Pages.** Project `govwait` was created by direct upload and is live at `https://govwait.pages.dev`. The production workflow deploys the same validated `site/dist` output to that project.
 
-3. **[REQUIRED] Set repository deployment settings.** Settings → Secrets and variables → Actions:
+3. **[DONE] Set repository deployment settings.** Settings → Secrets and variables → Actions:
    - `SITE_URL` = your real site origin (used for canonicals/sitemap/robots).
    - `CONTACT_EMAIL` = `contact@govwait.com` for the crawler User-Agent.
    - `CLOUDFLARE_ACCOUNT_ID` = the Cloudflare account that owns the `govwait` Pages project.
    - Encrypted secret `CLOUDFLARE_API_TOKEN` = a least-privilege token with Cloudflare Pages edit access only.
 
-4. **[REQUIRED] First data refresh.** Actions → `refresh-data` → Run workflow. Confirm green; from then on it runs Tue+Fri automatically (~35 min/month of the 2,000 free).
+4. **[DONE] First data refresh.** `refresh-data` is green and runs Tue+Fri automatically (~35 min/month of the 2,000 free).
 
 5. **[DONE, $10.46/yr] Custom domain.** `govwait.com` is registered through Cloudflare Registrar with auto-renew and registrar lock enabled. Proxied CNAME records route the apex and `www` to `govwait.pages.dev`; both custom domains are active with HTTPS.
 
@@ -35,7 +35,7 @@ one green automated Cloudflare deployment, and Search Console/Bing setup.
 
 ## Monetization (CORRECTED Aug 2026 per handoff research — the old Ezoic path is dead)
 
-8. **[CUTOVER DONE; CI VERIFICATION PENDING] Cloudflare hosting and crawler policy.** Cloudflare Pages now serves production. AI Crawl Control was checked deliberately: every listed crawler remains allowed and Cloudflare Managed robots.txt is off, preserving the repository-owned policy. See `docs/CLOUDFLARE_CRAWL_POLICY.md`. Disable the old GitHub Pages deployment only after the Cloudflare GitHub Action completes successfully.
+8. **[DONE; OLD HOST CLEANUP PENDING] Cloudflare hosting and crawler policy.** Cloudflare Pages serves production and the GitHub-driven deployment passed on commit `e997494`. AI Crawl Control was checked deliberately: every listed crawler remains allowed and Cloudflare Managed robots.txt is off, preserving the repository-owned policy. See `docs/CLOUDFLARE_CRAWL_POLICY.md`. The old GitHub Pages deployment can now be disabled after explicit owner confirmation.
 
 9. **[LATER] Ads — the 2026 ladder.** Prerequisite for ANY approval: the editorial layer (guides, methodology, unique per-page analysis — partially built; expand per roadmap) because 2,000 templated pages alone is the exact "Low Value Content" rejection profile.
    - At **~1,000 sessions/mo**: apply to **Mediavine Journey** (the on-ramp; 70% share; Grow.js works on static sites) + AdSense in parallel (fallback + required standing).
