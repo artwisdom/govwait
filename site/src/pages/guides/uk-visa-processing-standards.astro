@@ -1,0 +1,44 @@
+---
+import Base from '../../layouts/Base.astro';
+import AdSlot from '../../components/AdSlot.astro';
+import { services, fmtDate } from '../../lib/data.js';
+
+const svcs = [...services.GB.values()];
+const updated = svcs.map(s => s.latestEffective).sort().at(-1);
+const groups = {};
+for (const s of svcs) {
+  const section = (s.records[0].service_name.match(/\(([^)]+)\)$/) || [null, 'Other'])[1];
+  (groups[section] ||= []).push(s);
+}
+---
+<Base title={`UK visa processing times: every current service standard in one table (updated ${fmtDate(updated)})`}
+      description="All published UKVI processing standards for applications made outside the UK — visit, study, work, family — in one tracked table, with what a service standard legally means.">
+  <nav class="crumbs"><a href="/">Home</a> › <a href="/guides/">Guides</a> › UK service standards</nav>
+  <h1>UK visa processing times: every current service standard</h1>
+  <p class="lede">Unlike Canada's per-country statistics, the UK publishes <em>service standards</em>: targets for how long a decision should take once you've attended your biometric appointment, applying from outside the UK. Here is every standard we track, as last updated {fmtDate(updated)}.</p>
+  <AdSlot position="guide-top" />
+
+  {Object.entries(groups).map(([section, list]) => (
+    <section>
+      <h2>{section}</h2>
+      <div class="tablewrap"><table>
+        <thead><tr><th>Category</th><th>Current standard</th></tr></thead>
+        <tbody>
+          {list.map(s => (
+            <tr>
+              <td><a href={`/uk/${s.slug}/`}>{s.name}</a></td>
+              <td class="num">{s.records[0].value_raw}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table></div>
+    </section>
+  ))}
+
+  <h2>What a “standard” is — and isn't</h2>
+  <p>A service standard is the Home Office's own target for the share of applications it aims to decide within the stated window — not a maximum, and not a guarantee. Complex cases, missing documents, or verification checks can push individual decisions well past it, and UKVI occasionally suspends standards entirely on specific routes when volumes spike. That is exactly why the update date matters: a "3 weeks" published in June is a different fact from a "3 weeks" re-confirmed this week.</p>
+  <p>We re-check the official page weekly and record every change with its date, so each category page on this site shows both the current standard and its recorded history. For decisions that matter, confirm against the linked gov.uk source — figures on this site are reference data, not legal advice.</p>
+
+  <div class="prov">Source: UK Visas and Immigration via the gov.uk Content API (Open Government Licence v3.0). Recomputed at every build.</div>
+  <AdSlot position="guide-bottom" />
+</Base>

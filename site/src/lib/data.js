@@ -78,7 +78,30 @@ for (const j of Object.keys(services)) {
     svc.hasApplicantPages = svc.records.some(r => r.applicant_country);
     svc.okCount = svc.records.filter(r => r.status === 'ok').length;
     svc.latestEffective = svc.records.map(r => r.effective_date).sort().at(-1);
+    const ok = svc.records.filter(r => r.status === 'ok');
+    svc.medianDays = ok.length ? ok[Math.floor(ok.length / 2)].value_days : null;
   }
+}
+
+// Speed classification relative to the service median (only meaningful for
+// per-country services with a published value).
+for (const r of records) {
+  const svc = services[r.jurisdiction].get(r.serviceSlug);
+  if (r.status !== 'ok' || !r.applicant_country || !svc.medianDays) { r.speed = null; continue; }
+  const ratio = r.value_days / svc.medianDays;
+  r.speed = ratio <= 0.6 ? { cls: 'fast', label: 'faster than typical' }
+    : ratio <= 1.4 ? { cls: 'typical', label: 'typical' }
+    : ratio <= 2.5 ? { cls: 'slow', label: 'slower than typical' }
+    : { cls: 'veryslow', label: 'much slower than typical' };
+}
+
+/** Other services from the same applicant country (for interlinking). */
+export function relatedRoutes(rec, max = 8) {
+  if (!rec.applicant_country) return [];
+  return records
+    .filter(r => r.applicant_country === rec.applicant_country && r.id !== rec.id && r.jurisdiction === rec.jurisdiction)
+    .sort((a, b) => (a.value_days ?? Infinity) - (b.value_days ?? Infinity))
+    .slice(0, max);
 }
 
 export function fmtDate(iso) {

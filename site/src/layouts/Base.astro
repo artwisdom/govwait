@@ -11,59 +11,131 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
 <title>{title}</title>
 <meta name="description" content={description} />
 <link rel="canonical" href={canonical} />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#fbfaf7" />
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0e1219" />
 {noindex && <meta name="robots" content="noindex" />}
+<meta property="og:site_name" content={config.SITE_NAME} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:type" content="website" />
 <meta property="og:url" content={canonical} />
+<meta name="twitter:card" content="summary" />
 {jsonld.map(obj => <script type="application/ld+json" set:html={JSON.stringify(obj)} />)}
 <style is:global>
-:root{--bg:#fff;--fg:#1a2233;--muted:#5a6478;--line:#e3e7ef;--acc:#0b57d0;--accbg:#eef3fe;--good:#0a7a3d;--warn:#8a5a00;--card:#f7f9fc}
-@media(prefers-color-scheme:dark){:root{--bg:#10141d;--fg:#e8ecf4;--muted:#9aa4b8;--line:#2a3345;--acc:#8ab4f8;--accbg:#1c2941;--good:#7dd8a2;--warn:#e5c07b;--card:#181e2b}}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
-a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
-header{border-bottom:1px solid var(--line)}
-.wrap{max-width:960px;margin:0 auto;padding:0 16px}
-header .wrap{display:flex;align-items:baseline;gap:12px;padding-top:14px;padding-bottom:14px;flex-wrap:wrap}
-.brand{font-weight:700;font-size:1.15rem;color:var(--fg)}
-.tag{color:var(--muted);font-size:.85rem}
-main{padding:20px 0 40px}
-h1{font-size:1.5rem;line-height:1.25;margin:.4em 0}
-h2{font-size:1.15rem;margin:1.6em 0 .5em}
-.big{font-size:2.2rem;font-weight:700;margin:.2em 0}
-.badge{display:inline-block;background:var(--accbg);color:var(--acc);border-radius:6px;padding:2px 10px;font-size:.85rem;font-weight:600}
-.fresh{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:16px 0;font-size:.92rem}
-.fresh b{color:var(--good)}
-table{border-collapse:collapse;width:100%;font-size:.95rem}
-th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line)}
-th{color:var(--muted);font-weight:600;font-size:.85rem}
-tr:hover td{background:var(--card)}
+:root{
+  --bg:#fbfaf7;--panel:#ffffff;--fg:#182030;--muted:#5c6577;--faint:#8b93a5;
+  --line:#e7e4dd;--line2:#efede7;
+  --acc:#1a56c4;--acc-ink:#123f8f;--acc-bg:#e9f0fd;
+  --good:#0e7a44;--good-bg:#e4f4ea;--warn:#8f5502;--warn-bg:#faf0dc;--bad:#a83a2e;--bad-bg:#fbe9e6;
+  --shadow:0 1px 2px rgba(24,32,48,.05),0 4px 14px rgba(24,32,48,.05);
+}
+@media(prefers-color-scheme:dark){:root{
+  --bg:#0e1219;--panel:#161c28;--fg:#e9edf5;--muted:#9aa4b8;--faint:#6d7688;
+  --line:#252d3d;--line2:#1d2434;
+  --acc:#82b1ff;--acc-ink:#a8c8ff;--acc-bg:#1b2a47;
+  --good:#5ecf96;--good-bg:#12301f;--warn:#e2b45e;--warn-bg:#33270e;--bad:#ef8377;--bad-bg:#3a1712;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 4px 14px rgba(0,0,0,.35);
+}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--acc);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+/* header */
+header.site{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;gap:14px;height:58px}
+.brand{display:flex;align-items:center;gap:9px;font-weight:750;font-size:1.12rem;letter-spacing:-.01em;color:var(--fg)}
+.brand svg{width:24px;height:24px;flex:none}
+.brand:hover{text-decoration:none}
+.tagline{color:var(--faint);font-size:.82rem;border-left:1px solid var(--line);padding-left:14px}
+nav.top{margin-left:auto;font-size:.9rem;display:flex;gap:18px;white-space:nowrap}
+nav.top a{color:var(--muted);font-weight:550}
+nav.top a:hover{color:var(--acc)}
+main{padding:30px 0 56px}
+/* type */
+h1{font-size:clamp(1.45rem,3.4vw,1.95rem);line-height:1.22;letter-spacing:-.015em;margin:.35em 0 .45em}
+h2{font-size:1.16rem;letter-spacing:-.01em;margin:1.9em 0 .6em}
+h3{font-size:1rem;margin:1.4em 0 .4em}
+p{margin:.65em 0}
+.lede{font-size:1.06rem;color:var(--muted);max-width:46em}
+.muted{color:var(--muted)}.small{font-size:.86rem}.faint{color:var(--faint)}
 .num{font-variant-numeric:tabular-nums;white-space:nowrap}
-.muted{color:var(--muted)}.small{font-size:.85rem}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px;padding:0;list-style:none}
-.grid li{border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:var(--card)}
-.grid a{font-weight:600}
-.crumbs{font-size:.85rem;color:var(--muted);margin:10px 0 0}
-.prov{border-left:3px solid var(--acc);padding:8px 14px;margin:18px 0;font-size:.9rem;color:var(--muted);background:var(--card);border-radius:0 8px 8px 0}
-footer{border-top:1px solid var(--line);color:var(--muted);font-size:.85rem;padding:18px 0 30px}
-footer .wrap{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between}
-.tablewrap{overflow-x:auto}
-@media(max-width:600px){h1{font-size:1.25rem}.big{font-size:1.8rem}}
+/* value hero */
+.value-hero{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin:.2em 0 .3em}
+.value-hero .v{font-size:clamp(2.5rem,7vw,3.5rem);font-weight:760;letter-spacing:-.03em;font-variant-numeric:tabular-nums;line-height:1.05}
+.value-hero .v.na{font-size:clamp(1.5rem,4vw,2rem);color:var(--muted);font-weight:650}
+/* chips + badges */
+.chip{display:inline-block;border-radius:999px;padding:2.5px 11px;font-size:.8rem;font-weight:650;line-height:1.5}
+.chip.acc{background:var(--acc-bg);color:var(--acc-ink)}
+.chip.fast{background:var(--good-bg);color:var(--good)}
+.chip.typical{background:var(--line2);color:var(--muted)}
+.chip.slow{background:var(--warn-bg);color:var(--warn)}
+.chip.veryslow{background:var(--bad-bg);color:var(--bad)}
+.chip.na{background:var(--line2);color:var(--faint)}
+/* freshness / provenance */
+.fresh{display:flex;gap:10px;align-items:flex-start;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px 16px;margin:18px 0;font-size:.92rem;box-shadow:var(--shadow)}
+.fresh svg{width:18px;height:18px;flex:none;margin-top:2px;color:var(--good)}
+.fresh b{color:var(--fg)}
+.prov{border-left:3px solid var(--acc);padding:9px 15px;margin:22px 0 8px;font-size:.88rem;color:var(--muted);background:var(--panel);border-radius:0 10px 10px 0}
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:13px;padding:0;list-style:none;margin:14px 0}
+.grid li{border:1px solid var(--line);border-radius:12px;padding:14px 16px;background:var(--panel);box-shadow:var(--shadow);transition:border-color .15s}
+.grid li:hover{border-color:var(--acc)}
+.grid a.t{font-weight:650}
+/* stat band */
+.stats{display:flex;gap:26px;flex-wrap:wrap;border:1px solid var(--line);background:var(--panel);border-radius:14px;padding:16px 22px;margin:22px 0;box-shadow:var(--shadow)}
+.stats div{min-width:110px}
+.stats .n{font-size:1.45rem;font-weight:740;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.stats .l{font-size:.8rem;color:var(--muted)}
+/* tables */
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--panel);box-shadow:var(--shadow);margin:14px 0}
+table{border-collapse:collapse;width:100%;font-size:.94rem}
+th,td{text-align:left;padding:9px 14px;border-bottom:1px solid var(--line2)}
+tbody tr:last-child td{border-bottom:none}
+thead th{color:var(--muted);font-weight:620;font-size:.8rem;text-transform:uppercase;letter-spacing:.04em;background:var(--panel)}
+tbody tr:hover td{background:var(--line2)}
+/* crumbs, footer, misc */
+.crumbs{font-size:.84rem;color:var(--faint);margin:2px 0 6px}
+.crumbs a{color:var(--muted)}
+footer.site{border-top:1px solid var(--line);background:var(--panel);color:var(--muted);font-size:.87rem}
+footer.site .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;padding:26px 20px 34px}
+footer.site h4{margin:.2em 0 .5em;font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;color:var(--faint)}
+footer.site ul{list-style:none;margin:0;padding:0}
+footer.site li{margin:.32em 0}
+.related{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.related a{border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:4px 13px;font-size:.86rem;font-weight:550}
+.related a:hover{border-color:var(--acc);text-decoration:none}
+pre.code{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 16px;overflow-x:auto;font-size:.88rem}
+@media(max-width:640px){.tagline{display:none}nav.top{gap:12px;font-size:.84rem}th,td{padding:8px 10px}}
 </style>
 </head>
 <body>
-<header>
+<header class="site">
   <div class="wrap">
-    <a class="brand" href="/">{config.SITE_NAME}</a>
-    <span class="tag">{config.TAGLINE}</span>
-    <nav class="small" style="margin-left:auto"><a href="/canada/">Canada</a> · <a href="/uk/">UK</a> · <a href="/about/">Methodology</a> · <a href="/api-docs/">API</a></nav>
+    <a class="brand" href="/">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="2" y="2" width="60" height="60" rx="14" fill="var(--acc)"/><circle cx="32" cy="32" r="19" fill="none" stroke="var(--panel)" stroke-width="4.5"/><path d="M32 21v11l8 5" fill="none" stroke="var(--panel)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      {config.SITE_NAME}
+    </a>
+    <span class="tagline">{config.TAGLINE}</span>
+    <nav class="top"><a href="/canada/">Canada</a><a href="/uk/">UK</a><a href="/guides/">Guides</a><a href="/about/">Methodology</a><a href="/api-docs/">API</a></nav>
   </div>
 </header>
 <main><div class="wrap"><slot /></div></main>
-<footer>
+<footer class="site">
   <div class="wrap">
-    <span>© 2026 {config.SITE_NAME}. Values are official figures published by the named government agencies; we track and republish them with full provenance. Not legal advice.</span>
-    <span><a href="/about/">How this data is collected</a> · <a href="/api-docs/">JSON API</a> · <a href="/llms.txt">llms.txt</a></span>
+    <div>
+      <h4>{config.SITE_NAME}</h4>
+      <p>Official government processing times, recorded with source and date every week. No estimates, no crowd guesses. Not legal advice.</p>
+    </div>
+    <div>
+      <h4>Data</h4>
+      <ul><li><a href="/canada/">Canada (IRCC)</a></li><li><a href="/uk/">United Kingdom (UKVI)</a></li><li><a href="/guides/">Guides &amp; analysis</a></li><li><a href="/about/">Methodology &amp; sources</a></li></ul>
+    </div>
+    <div>
+      <h4>Machine access</h4>
+      <ul><li><a href="/api-docs/">JSON API (free)</a></li><li><a href="/api/v1/index.json">API index</a></li><li><a href="/api/v1/openapi.yaml">OpenAPI spec</a></li><li><a href="/llms.txt">llms.txt</a></li></ul>
+    </div>
   </div>
 </footer>
 </body>

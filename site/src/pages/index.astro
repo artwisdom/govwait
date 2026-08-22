@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import AdSlot from '../components/AdSlot.astro';
 import config from '../../site.config.json';
-import { stats, services, JURISDICTIONS, fmtDate } from '../lib/data.js';
+import { stats, services, records, JURISDICTIONS, fmtDate } from '../lib/data.js';
 
 const jsonld = [{
   '@context': 'https://schema.org',
@@ -12,20 +12,37 @@ const jsonld = [{
   url: config.SITE_URL,
   license: 'https://creativecommons.org/licenses/by/4.0/',
   creator: { '@type': 'Organization', name: config.SITE_NAME },
-  temporalCoverage: `${stats.generated_at.slice(0,10)}/..`,
+  temporalCoverage: `2026-08-21/..`,
   distribution: [{ '@type': 'DataDownload', encodingFormat: 'application/json', contentUrl: `${config.SITE_URL}/api/v1/index.json` }],
   isBasedOn: Object.values(stats.per_source).map(s => s.name),
 }];
 
-const totalTracked = stats.entities;
+// A few interesting live examples for the hero
+const examples = ['ca-visitor-visa--in', 'ca-study-permit--pk', 'ca-work-permit--mx', 'ca-visitor-visa--ng']
+  .map(id => records.find(r => r.id === id)).filter(Boolean).filter(r => r.status === 'ok');
+const govCount = stats.jurisdictions.length;
 ---
 <Base title={`${config.SITE_NAME} — how long government applications actually take right now`}
-      description={`Live-tracked official processing times for ${totalTracked.toLocaleString()} visa, permit and sponsorship routes across ${stats.jurisdictions.length} governments. Every value sourced, dated and historized.`}
+      description={`Live-tracked official processing times for ${stats.entities.toLocaleString()} visa, permit and sponsorship routes across ${govCount} governments. Every value sourced, dated and historized.`}
       jsonld={jsonld}>
-  <h1>How long will it take? The current official answer, tracked.</h1>
-  <p>Governments publish how long applications are taking — then overwrite the number every week. We record every value with its source and date, so you can see the <em>current</em> official figure and how it has moved. No estimates, no crowd guesses: only what {Object.values(JURISDICTIONS).map(j=>j.agency.split('(')[0].trim()).join(' and ')} publish, with receipts.</p>
+  <h1>How long will it take?<br/>The current official answer, tracked.</h1>
+  <p class="lede">Governments publish how long applications are taking — then overwrite the number every week and keep no history. We record every value with its source and date, so you can see the current official figure, how it has moved, and exactly where it came from.</p>
+
+  <div class="related" style="margin-top:16px">
+    {examples.map(r => (
+      <a href={`/${r.jur.slug}/${r.serviceSlug}/${r.applicantSlug}/`}>
+        {r.jur.name} {services[r.jurisdiction].get(r.serviceSlug).name.toLowerCase()} · {r.applicant_country_name}: <strong class="num">&nbsp;{r.value_raw}</strong>
+      </a>
+    ))}
+  </div>
+
+  <div class="stats">
+    <div><div class="n">{stats.entities.toLocaleString()}</div><div class="l">routes tracked</div></div>
+    <div><div class="n">{stats.observations.toLocaleString()}</div><div class="l">observations recorded</div></div>
+    <div><div class="n">{govCount}</div><div class="l">governments</div></div>
+    <div><div class="n">Weekly</div><div class="l">re-verified cadence</div></div>
+  </div>
   <AdSlot position="home-top" />
-  <div class="fresh">Tracking <b>{totalTracked.toLocaleString()}</b> routes · {stats.observations.toLocaleString()} observations recorded · dataset generated {fmtDate(stats.generated_at)}</div>
 
   {Object.entries(JURISDICTIONS).map(([code, jur]) => (
     <section>
@@ -33,7 +50,7 @@ const totalTracked = stats.entities;
       <ul class="grid">
         {[...services[code].values()].map(svc => (
           <li>
-            <a href={`/${jur.slug}/${svc.slug}/`}>{svc.name}</a><br />
+            <a class="t" href={`/${jur.slug}/${svc.slug}/`}>{svc.name}</a><br />
             <span class="small muted">{svc.hasApplicantPages ? `${svc.records.length} applicant countries` : svc.records[0].value_raw} · updated {fmtDate(svc.latestEffective)}</span>
           </li>
         ))}
@@ -41,7 +58,10 @@ const totalTracked = stats.entities;
     </section>
   ))}
 
+  <h2>Why trust these numbers?</h2>
+  <p class="lede small">Because they aren't ours. Every figure is the government's own published statistic — we just refuse to let it disappear. Each value links its official source, carries the agency's update date and our verification date, and joins a permanent history. <a href="/about/">Read the full methodology.</a></p>
+
   <h2>For machines</h2>
-  <p class="small">The same dataset is served as a <a href="/api-docs/">static JSON API</a>, an MCP server for AI agents, and described in <a href="/llms.txt">llms.txt</a>. Attribution required; see <a href="/about/">methodology &amp; terms</a>.</p>
+  <p class="small">The same dataset is a <a href="/api-docs/">free JSON API</a>, an MCP server for AI agents, and is described in <a href="/llms.txt">llms.txt</a>. Attribution required (CC BY 4.0).</p>
   <AdSlot position="home-bottom" />
 </Base>

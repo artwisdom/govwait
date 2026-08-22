@@ -1,0 +1,24 @@
+---
+import Base from '../../layouts/Base.astro';
+import { stats, fmtDate } from '../../lib/data.js';
+
+const guides = [
+  { slug: 'how-canada-processing-times-work', title: 'How Canada (IRCC) processing times actually work', blurb: 'Where the numbers come from, why they move every week, and how to read them without fooling yourself.' },
+  { slug: 'canada-visitor-visa-by-country', title: 'Canada visitor visa times, analyzed by country', blurb: 'The full spread from fastest to slowest applicant countries, what the median looks like, and which corridors move most.' },
+  { slug: 'uk-visa-processing-standards', title: 'UK visa processing times: every current service standard', blurb: 'All published UKVI standards in one table — visit, study, work, family — and what a "standard" does and doesn\'t promise.' },
+];
+---
+<Base title="Guides & analysis — reading government processing times correctly"
+      description="Original analysis built directly on the tracked dataset: how official processing times are computed, country-by-country breakdowns, and every current UK service standard.">
+  <h1>Guides &amp; analysis</h1>
+  <p class="lede">Written analysis on top of the live dataset. These pages recompute from the newest data on every refresh — the numbers in them are never stale.</p>
+  <ul class="grid">
+    {guides.map(g => (
+      <li>
+        <a class="t" href={`/guides/${g.slug}/`}>{g.title}</a>
+        <p class="small muted" style="margin:.4em 0 0">{g.blurb}</p>
+      </li>
+    ))}
+  </ul>
+  <p class="small muted">Dataset generated {fmtDate(stats.generated_at)} · {stats.entities.toLocaleString()} routes tracked.</p>
+</Base>

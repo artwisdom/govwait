@@ -2,7 +2,7 @@
 import Base from '../../../layouts/Base.astro';
 import AdSlot from '../../../components/AdSlot.astro';
 import Freshness from '../../../components/Freshness.astro';
-import { records, services, JURISDICTIONS, fmtDate, humanValue } from '../../../lib/data.js';
+import { records, services, relatedRoutes, JURISDICTIONS, fmtDate, humanValue } from '../../../lib/data.js';
 
 export function getStaticPaths() {
   return records.filter(r => r.applicantSlug).map(r => ({
@@ -16,6 +16,7 @@ const jur = rec.jur;
 const svc = services[rec.jurisdiction].get(rec.serviceSlug);
 const siblings = svc.records.filter(r => r.status === 'ok' && r.id !== rec.id);
 const rank = rec.status === 'ok' ? siblings.filter(s => s.value_days < rec.value_days).length + 1 : null;
+const related = relatedRoutes(rec);
 
 const pageUrl = new URL(`/${jur.slug}/${rec.serviceSlug}/${rec.applicantSlug}/`, Astro.site).href;
 const jsonld = [
@@ -41,14 +42,18 @@ const title = rec.status === 'ok'
       jsonld={jsonld}>
   <nav class="crumbs"><a href="/">Home</a> › <a href={`/${jur.slug}/`}>{jur.name}</a> › <a href={`/${jur.slug}/${rec.serviceSlug}/`}>{svc.name}</a> › {rec.applicant_country_name}</nav>
   <h1>{svc.name} ({jur.name}) — applying from {rec.applicant_country_name}</h1>
-  <p class="big">{humanValue(rec)}</p>
-  {rec.status === 'ok' && rank && <p class="badge">#{rank} fastest of {siblings.length + 1} countries with published times</p>}
+
+  <div class="value-hero">
+    <span class={`v ${rec.status === 'ok' ? '' : 'na'}`}>{humanValue(rec)}</span>
+    {rec.speed && <span class={`chip ${rec.speed.cls}`}>{rec.speed.label}</span>}
+    {rec.status === 'ok' && rank && <span class="chip acc num">#{rank} of {siblings.length + 1} countries</span>}
+  </div>
   <Freshness record={rec} />
   <AdSlot position="entity-top" />
 
   <p>
     {rec.status === 'ok'
-      ? `${jur.agency} currently reports ${rec.value_raw} to process ${svc.name.toLowerCase()} applications from ${rec.applicant_country_name}. This figure is recalculated by the agency from recent completed cases, so it moves — we re-check it weekly and keep every published value below.`
+      ? `${jur.agency} currently reports ${rec.value_raw} to process ${svc.name.toLowerCase()} applications from ${rec.applicant_country_name}${svc.medianDays ? `, against a median of ${Math.round(svc.medianDays)} days across all countries with published figures` : ''}. The agency recalculates this figure from recent completed cases, so it moves — we re-check it weekly and keep every published value below.`
       : rec.status === 'unavailable'
         ? `${jur.agency} does not currently publish a processing time for ${svc.name.toLowerCase()} applications from ${rec.applicant_country_name}. That usually means too few recent applications from this country to compute a reliable figure. We check weekly and will record a value the moment one is published.`
         : `${jur.agency} currently marks this route as having too little data to publish a reliable processing time. We check weekly and will record a value the moment one is published.`}
@@ -65,6 +70,22 @@ const title = rec.status === 'ok'
 
   <h2>Compare</h2>
   <p class="small">See <a href={`/${jur.slug}/${rec.serviceSlug}/`}>all {svc.records.length} applicant countries for {svc.name.toLowerCase()}</a>{siblings.length ? `, currently ranging from ${siblings[0].value_raw} (${siblings[0].applicant_country_name}) to ${siblings.at(-1).value_raw} (${siblings.at(-1).applicant_country_name})` : ''}.</p>
+
+  {related.length > 0 && (
+    <>
+      <h2>Other {jur.name} routes from {rec.applicant_country_name}</h2>
+      <div class="related">
+        {related.map(r => (
+          <a href={`/${jur.slug}/${r.serviceSlug}/${r.applicantSlug}/`}>{services[r.jurisdiction].get(r.serviceSlug).name}: <strong class="num">&nbsp;{r.status === 'ok' ? r.value_raw : 'n/a'}</strong></a>
+        ))}
+      </div>
+    </>
+  )}
+
+  <h2>Good to know</h2>
+  <p class="small">{rec.status === 'ok'
+    ? `Is ${rec.value_raw} a guarantee? No — it is the agency's own statistic about recently completed applications. Individual cases vary with documentation, checks, and volume. Always confirm against the linked official source before making travel or financial decisions.`
+    : `Can you still apply without a published time? Yes — the absence of a figure reflects the agency's reporting thresholds, not your eligibility. Check the linked official source for the current guidance.`}</p>
 
   <div class="prov">Source: <a href={rec.source_url} rel="noopener nofollow">{jur.agency}</a> · value retrieved {fmtDate(rec.retrieved_at)} · extracted values only · not legal advice.</div>
   <AdSlot position="entity-bottom" />

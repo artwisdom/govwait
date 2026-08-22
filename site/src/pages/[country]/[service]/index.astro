@@ -16,10 +16,9 @@ export function getStaticPaths() {
 const { code, slug } = Astro.props;
 const jur = JURISDICTIONS[code];
 const svc = services[code].get(slug);
-const single = !svc.hasApplicantPages; // GB service-standard pages are the entity page
+const single = !svc.hasApplicantPages;
 const rec = svc.records[0];
 const ok = svc.records.filter(r => r.status === 'ok');
-const median = ok.length ? ok[Math.floor(ok.length / 2)].value_days : null;
 
 const crumbs = {
   '@context': 'https://schema.org', '@type': 'BreadcrumbList',
@@ -47,12 +46,12 @@ const desc = single
 <Base title={title} description={desc} jsonld={[crumbs, govService]}>
   <nav class="crumbs"><a href="/">Home</a> › <a href={`/${jur.slug}/`}>{jur.name}</a> › {svc.name}</nav>
   <h1>{single ? `${svc.name} (${jur.name}): current processing time` : `${jur.name} ${svc.name}: processing time by applicant country`}</h1>
-  <AdSlot position="service-top" />
 
   {single ? (
     <>
-      <p class="big">{humanValue(rec)}</p>
+      <div class="value-hero"><span class={`v ${rec.status === 'ok' ? '' : 'na'}`}>{humanValue(rec)}</span></div>
       <Freshness record={rec} />
+      <AdSlot position="service-top" />
       <p>This is the current service standard {jur.agency} publishes for <strong>{rec.service_name}</strong> applications made from outside the UK. It reflects {svc.blurb}. The figure is a published standard, not a guarantee for any individual application.</p>
       <h2>History we have recorded</h2>
       <div class="tablewrap"><table>
@@ -65,16 +64,17 @@ const desc = single
     </>
   ) : (
     <>
-      <p>{jur.agency} publishes {svc.blurb}, per applicant country, and refreshes the figures roughly weekly. {ok.length} of {svc.records.length} countries currently have a published time{median ? `; the median is ${Math.round(median)} days` : ''}. Countries without a published figure are listed too — that absence is itself official information.</p>
+      <p class="lede">{jur.agency} publishes {svc.blurb}, per applicant country, and refreshes the figures roughly weekly. <strong>{ok.length}</strong> of {svc.records.length} countries currently have a published time{svc.medianDays ? `; the median is ${Math.round(svc.medianDays)} days` : ''}. Countries without a published figure are listed too — that absence is itself official information.</p>
       <Freshness record={rec} />
+      <AdSlot position="service-top" />
       <div class="tablewrap"><table>
-        <thead><tr><th>Applying from</th><th>Official processing time</th><th></th></tr></thead>
+        <thead><tr><th>Applying from</th><th>Official processing time</th><th>vs. typical</th></tr></thead>
         <tbody>
           {svc.records.map(r => (
             <tr>
               <td><a href={`/${jur.slug}/${svc.slug}/${r.applicantSlug}/`}>{r.applicant_country_name}</a></td>
               <td class="num">{humanValue(r)}</td>
-              <td class="small"><a href={`/${jur.slug}/${svc.slug}/${r.applicantSlug}/`}>details</a></td>
+              <td>{r.speed ? <span class={`chip ${r.speed.cls}`}>{r.speed.label}</span> : <span class="chip na">—</span>}</td>
             </tr>
           ))}
         </tbody>

@@ -23,7 +23,7 @@ const jsonld = [{
       jsonld={jsonld}>
   <nav class="crumbs"><a href="/">Home</a> › {jur.name}</nav>
   <h1>{jur.name}: official processing times</h1>
-  <p>All figures below are published by {jur.agency} and re-checked by us on a weekly schedule. Click a service for the full breakdown{svcs.some(s=>s.hasApplicantPages) ? ' by applicant country' : ''}.</p>
+  <p class="lede">All figures below are published by {jur.agency} and re-checked by us on a weekly schedule. Click a service for the full breakdown{svcs.some(s=>s.hasApplicantPages) ? ' by applicant country' : ''}.</p>
   <AdSlot position="hub-top" />
   <div class="tablewrap"><table>
     <thead><tr><th>Service</th><th>Coverage</th><th>Official value</th><th>Last updated</th></tr></thead>
