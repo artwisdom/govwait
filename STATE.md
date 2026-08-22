@@ -24,9 +24,16 @@ All dependencies install locally (`node_modules` inside project). No global inst
 - [x] Phase 7 — QA: all 13 gates green (docs/QA_REPORT.md)
 - [x] Phase 8 — All deliverables complete; SESSION DONE
 
+## Deployment status (2026-08-21, owner-authorized)
+- Repo LIVE: https://github.com/artwisdom/govwait (public, main)
+- GitHub Pages: enabled (workflow source), custom domain govwait.com set, deploy green
+- refresh-data workflow: ACTIVE, first run green (22s); cron Tue+Fri 14:00 UTC
+- SITE_URL repo variable = https://govwait.com
+
 ## Next step
-OWNER: DEPLOYMENT_GUIDE.md step 1 (create GitHub repo + push). A future agent session should start by reading EXECUTION_REPORT.md, then STATE.md, then MAINTENANCE_RUNBOOK.md "Adding a source" for the NZ expansion.
+OWNER: (1) buy govwait.com and point DNS (A 185.199.108.153/.109/.110/.111 + CNAME www -> artwisdom.github.io); (2) provide contact email -> set CONTACT_EMAIL repo variable + About page. Then: enforce HTTPS, Search Console + sitemap, NZ source expansion per MAINTENANCE_RUNBOOK.
 
 ## Open threads
 - US/AU/IE sources WAF-blocked to honest bots — owner-decision item (documented in DEPLOYMENT_GUIDE).
+- CONTACT_EMAIL not yet set (owner chose an alias, address pending) — crawler UA runs as "owner-pending" until then.
 - NZ/SE/NL/DK verified robots-permitted, not yet built (expansion targets in MAINTENANCE_RUNBOOK).
