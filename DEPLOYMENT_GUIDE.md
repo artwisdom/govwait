@@ -28,11 +28,18 @@ or **[OPTIONAL]**. Steps exist because hard rules forbade the agent from doing t
 
 7. **[REQUIRED, 2 min] Publish contact details.** Edit `site/src/pages/about.astro` — replace the "Contact details will be published when the site goes live" line with a real email; commit.
 
-## Monetization (timing matters — do not rush this)
+## Monetization (CORRECTED Aug 2026 per handoff research — the old Ezoic path is dead)
 
-8. **[LATER] Ads.** Apply to **Ezoic** early (no traffic minimum) once you have ~30 days of traffic data; move to **Mediavine (50K sessions/mo)** or **Raptive (100K pageviews/mo)** when eligible. Then replace the `<!-- AD_SLOT -->` comments in `site/src/components/AdSlot.astro` with the network's code. Realistic path per RISK_REGISTER: months of near-zero first.
+8. **[SOON — before Sept 15, 2026] Move hosting to Cloudflare Pages + proxy the domain through Cloudflare.** Three reasons: GitHub Pages ToS gray-zones ad-monetized commercial sites (+100GB/mo bandwidth cap); Cloudflare's AI-crawler defaults change Sept 15, 2026 and you want to SET your policy (recommended: allow AI crawlers on HTML — you want to be the cited source — meter bulk JSON later); and pay-per-crawl/Monetization Gateway require Cloudflare anyway. The `deploy.yml` file contains the commented Cloudflare alternative. Join the Pay Per Crawl beta + Monetization Gateway waitlist (free) while there.
 
-9. **[LATER] Cloudflare pay-per-crawl.** Requires the domain proxied through Cloudflare (free plan). Dashboard → toggle pay-per-crawl when available for your account. Free optionality, not the engine.
+9. **[LATER] Ads — the 2026 ladder.** Prerequisite for ANY approval: the editorial layer (guides, methodology, unique per-page analysis — partially built; expand per roadmap) because 2,000 templated pages alone is the exact "Low Value Content" rejection profile.
+   - At **~1,000 sessions/mo**: apply to **Mediavine Journey** (the on-ramp; 70% share; Grow.js works on static sites) + AdSense in parallel (fallback + required standing).
+   - At **25K pageviews/mo AND ≥50% US/UK/CA/AU/NZ traffic**: apply to **Raptive** (geo gate is the binding constraint, not the pageview count).
+   - Full **Mediavine** upgrade happens automatically via Journey at $5K trailing-12-month ad revenue.
+   - **Never**: Ezoic (250K monthly-visitor minimum since Feb 2026 + reputation collapse) or Monumetric (requires WordPress/Blogger).
+   - Then replace `<!-- AD_SLOT -->` comments in `site/src/components/AdSlot.astro` with the network's code.
+
+9b. **[LATER, ~5–10K PVs] Trust-compatible affiliates** on relevant pages only, always labeled, with a disclosure page: travel/visitor insurance (SafetyWing 10%/364-day cookie; VisitorsCoverage; Insubuy up to $150/sale) and remittance (Wise £10/£50 CPA 365-day; Remitly ~$20 CPA — the correct way to monetize non-tier-1 traffic). **Never**: iVisa-class visa-concierge affiliates (documented 400% fee markups — brand poison for an official-data site) or "dummy ticket" services (misrepresentation gray zone).
 
 ## Machine-skin distribution (after the site is live)
 

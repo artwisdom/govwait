@@ -2,7 +2,7 @@
 import Base from '../../../layouts/Base.astro';
 import AdSlot from '../../../components/AdSlot.astro';
 import Freshness from '../../../components/Freshness.astro';
-import { records, services, relatedRoutes, JURISDICTIONS, fmtDate, humanValue } from '../../../lib/data.js';
+import { records, services, relatedRoutes, JURISDICTIONS, fmtDate, fmtMonthYear, humanValue } from '../../../lib/data.js';
 
 export function getStaticPaths() {
   return records.filter(r => r.applicantSlug).map(r => ({
@@ -33,9 +33,16 @@ const jsonld = [
     areaServed: jur.name, audience: { '@type': 'Audience', name: `Applicants from ${rec.applicant_country_name}` },
     url: pageUrl },
 ];
+const monthTok = fmtMonthYear(rec.effective_date);
+const svcTitle = svc.name.replace(/\b[a-z]/g, c => c.toUpperCase());
 const title = rec.status === 'ok'
-  ? `${jur.name} ${svc.name.toLowerCase()} from ${rec.applicant_country_name}: ${rec.value_raw} (official, ${fmtDate(rec.effective_date)})`
-  : `${jur.name} ${svc.name.toLowerCase()} from ${rec.applicant_country_name}: current official status`;
+  ? `${jur.name} ${svcTitle} Processing Time from ${rec.applicant_country_name} — ${monthTok}: ${rec.value_raw} (Official)`
+  : `${jur.name} ${svcTitle} Processing Time from ${rec.applicant_country_name} — ${monthTok}: No Published Time (Official)`;
+const deltaText = rec.delta
+  ? (rec.delta.dir === 'flat'
+      ? `Unchanged from the previous official update (${fmtDate(rec.delta.prev_date)}).`
+      : `${rec.delta.dir === 'up' ? '▲ Up' : '▼ Down'} ${rec.delta.pct}% from ${rec.delta.prev_raw} (${fmtDate(rec.delta.prev_date)}).`)
+  : null;
 ---
 <Base title={title}
       description={`Official ${jur.name} processing time for ${svc.name.toLowerCase()} applications from ${rec.applicant_country_name}: ${humanValue(rec)}. Published by ${jur.agency}, tracked with provenance and history.`}
@@ -48,9 +55,11 @@ const title = rec.status === 'ok'
     {rec.speed && <span class={`chip ${rec.speed.cls}`}>{rec.speed.label}</span>}
     {rec.status === 'ok' && rank && <span class="chip acc num">#{rank} of {siblings.length + 1} countries</span>}
   </div>
+  {deltaText && <p class="small" style="margin-top:-2px"><strong>{deltaText}</strong></p>}
   <Freshness record={rec} />
   <AdSlot position="entity-top" />
 
+  <h2>How long does a {jur.name} {svc.name.toLowerCase()} take from {rec.applicant_country_name} right now?</h2>
   <p>
     {rec.status === 'ok'
       ? `${jur.agency} currently reports ${rec.value_raw} to process ${svc.name.toLowerCase()} applications from ${rec.applicant_country_name}${svc.medianDays ? `, against a median of ${Math.round(svc.medianDays)} days across all countries with published figures` : ''}. The agency recalculates this figure from recent completed cases, so it moves — we re-check it weekly and keep every published value below.`
@@ -58,6 +67,7 @@ const title = rec.status === 'ok'
         ? `${jur.agency} does not currently publish a processing time for ${svc.name.toLowerCase()} applications from ${rec.applicant_country_name}. That usually means too few recent applications from this country to compute a reliable figure. We check weekly and will record a value the moment one is published.`
         : `${jur.agency} currently marks this route as having too little data to publish a reliable processing time. We check weekly and will record a value the moment one is published.`}
   </p>
+  {rec.jurisdiction === 'CA' && <p class="small muted">IRCC notes its published figures show "how long it took us to process most complete applications in the past" — a backward-looking statistic covering roughly 80% of recently finalized cases, not a guarantee for new applications.</p>}
 
   <h2>Recorded history</h2>
   <div class="tablewrap"><table>
@@ -82,10 +92,25 @@ const title = rec.status === 'ok'
     </>
   )}
 
-  <h2>Good to know</h2>
+  <h2>Common questions</h2>
+  <h3>{rec.status === 'ok' ? `Is ${rec.value_raw} a guarantee?` : 'Can you still apply without a published time?'}</h3>
   <p class="small">{rec.status === 'ok'
-    ? `Is ${rec.value_raw} a guarantee? No — it is the agency's own statistic about recently completed applications. Individual cases vary with documentation, checks, and volume. Always confirm against the linked official source before making travel or financial decisions.`
-    : `Can you still apply without a published time? Yes — the absence of a figure reflects the agency's reporting thresholds, not your eligibility. Check the linked official source for the current guidance.`}</p>
+    ? `No — it is the agency's own statistic about recently completed applications. Individual cases vary with documentation completeness, verification checks, and application volume. Always confirm against the linked official source before making travel or financial decisions.`
+    : `Yes — the absence of a figure reflects the agency's reporting thresholds, not your eligibility. Check the linked official source for the current guidance.`}</p>
+  {rec.jurisdiction === 'CA' && (
+    <>
+      <h3>Does the published time include biometrics? What about "after biometrics"?</h3>
+      <p class="small">IRCC's published clock runs from receipt of a complete application to the final decision, and IRCC states it includes the time taken to provide biometrics. Stage-by-stage clocks ("after biometrics", "after medical") are not published officially — breakdowns you see on forums are applicant anecdotes, not data. We track only what the agency publishes.</p>
+    </>
+  )}
+  <h3>Why might an application take longer than the published time?</h3>
+  <p class="small">{
+    svc.category === 'refugee' || rec.service_category === 'refugee'
+      ? 'Resettlement timelines depend on referral pathways, interview scheduling abroad, and security and medical checks — each adds variance the headline figure averages away. The published number covers most, not all, recently finalized cases.'
+      : rec.service_category === 'sponsorship'
+        ? 'Sponsorship files involve two assessments — the sponsor and the applicant — so an issue with either side extends the clock. Requests for additional documents pause processing and are the most common cause of overruns.'
+        : `The published figure covers most recently finalized cases, not all of them. Incomplete documents, biometrics delays, medical or security verification, and volume surges from ${rec.applicant_country_name} can each push an individual file past the posted time.`
+  }</p>
 
   <div class="prov">Source: <a href={rec.source_url} rel="noopener nofollow">{jur.agency}</a> · value retrieved {fmtDate(rec.retrieved_at)} · extracted values only · not legal advice.</div>
   <AdSlot position="entity-bottom" />

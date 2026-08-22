@@ -109,6 +109,35 @@ export function fmtDate(iso) {
   return new Date(iso.slice(0, 10) + 'T00:00:00Z').toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
 }
 
+export function fmtMonthYear(iso) {
+  return new Date(iso.slice(0, 10) + 'T00:00:00Z').toLocaleDateString('en-US', { year: 'numeric', month: 'long', timeZone: 'UTC' });
+}
+
+// The newest official update date across the dataset — the honest lastmod for
+// aggregate pages (only moves when the data actually moved).
+export const dataLastmod = latest.records.map(r => r.effective_date).sort().at(-1);
+
+// Month-over-month style delta from recorded history (null until a route has
+// two differing published values).
+for (const r of records) {
+  r.delta = null;
+  const h = r.history;
+  if (h.length >= 2) {
+    const prev = h[h.length - 2];
+    const cur = h[h.length - 1];
+    if (prev.status === 'ok' && cur.status === 'ok' && prev.value_days !== cur.value_days) {
+      r.delta = {
+        dir: cur.value_days > prev.value_days ? 'up' : 'down',
+        prev_raw: prev.value_raw,
+        prev_date: prev.effective_date,
+        pct: Math.round(Math.abs(cur.value_days - prev.value_days) / prev.value_days * 100),
+      };
+    } else if (prev.status === 'ok' && cur.status === 'ok') {
+      r.delta = { dir: 'flat', prev_raw: prev.value_raw, prev_date: prev.effective_date, pct: 0 };
+    }
+  }
+}
+
 export function humanValue(r) {
   if (r.status === 'ok') return r.value_raw;
   if (r.status === 'unavailable') return 'No official time published';

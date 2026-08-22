@@ -56,6 +56,12 @@ jobs:
             echo "Data refreshed and committed — deploy workflow will publish." >> "$GITHUB_STEP_SUMMARY"
           fi
 
+      - name: Ping IndexNow with changed URLs (Bing feeds ChatGPT Search)
+        if: ${{ vars.SITE_URL != '' }}
+        env:
+          SITE_URL: ${{ vars.SITE_URL }}
+        run: node pipeline/indexnow.js || echo "IndexNow ping failed (non-fatal)"
+
       - name: Diagnose failure into job summary
         if: failure()
         run: |
