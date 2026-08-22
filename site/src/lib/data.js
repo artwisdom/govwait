@@ -24,6 +24,8 @@ const CATEGORY_BLURBS = {
   permit: 'how long the government is currently taking to process this permit category',
   sponsorship: 'how long the government is currently taking to process this sponsorship category',
   refugee: 'how long the government is currently taking to process this resettlement category',
+  settlement: 'how long the government is currently taking to process this application type',
+  passport: 'how long the government is currently taking to issue passports through this channel',
 };
 
 export function slugify(s) {
@@ -32,9 +34,11 @@ export function slugify(s) {
 
 function serviceSlug(rec) {
   if (rec.jurisdiction === 'CA') return rec.service_key.replace(/^ca-/, '');
-  // GB keys look like gb-<section>--<category>; the category segment is the slug.
-  const seg = rec.service_key.split('--').pop();
-  return seg.replace(/^gb-/, '');
+  // GB keys look like gb-<section>--<category> (or gb-in-uk-<section>--<category>);
+  // the category segment is the slug, in-UK variants keep an in-uk- prefix so
+  // "student" (outside) and "in-uk-student" (inside) don't collide.
+  const seg = rec.service_key.split('--').pop().replace(/^gb-/, '');
+  return rec.service_key.startsWith('gb-in-uk-') ? `in-uk-${seg}` : seg;
 }
 
 // ---- Build the model, with hard collision checks ----

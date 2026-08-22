@@ -6,9 +6,25 @@ import { validate } from './validate.js';
 import { exportAll } from './export.js';
 import * as ircc from './sources/ircc.js';
 import * as govuk from './sources/govuk.js';
+import * as irccNonCountry from './sources/ircc-noncountry.js';
+import * as irccPassport from './sources/ircc-passport.js';
+import * as govukInUk from './sources/govuk-inuk.js';
+import * as govukPassport from './sources/govuk-passport.js';
 
-const SOURCES = [ircc, govuk];
+const SOURCES = [ircc, irccNonCountry, irccPassport, govuk, govukInUk, govukPassport];
 const forceRefresh = process.argv.includes('--refresh');
+
+// Unstamped observations (source publishes no update date): insert only when
+// the value differs from the entity's latest stored observation, with
+// effective_date = first-observed date. Otherwise skip (no history spam).
+function resolveUnstamped(observations) {
+  return observations.filter(o => {
+    if (!o.unstamped) return true;
+    o.effective_date = o.retrieved_at.slice(0, 10);
+    const latest = queryJson(`SELECT value_raw FROM observations WHERE entity_id=${sqlQuote(o.entity_id)} ORDER BY effective_date DESC LIMIT 1`);
+    return !(latest.length && latest[0].value_raw === o.value_raw);
+  });
+}
 
 function upsert(sourceMeta, entities, observations) {
   const stmts = ['BEGIN;'];
@@ -47,7 +63,7 @@ async function main() {
         hardFail = true;
         continue;
       }
-      upsert(mod.source, entities, observations);
+      upsert(mod.source, entities, resolveUnstamped(observations));
       console.log(`[${label}] OK — ${entities.length} entity rows, ${observations.length} observations`);
     } catch (err) {
       console.error(`[${label}] FETCH/PARSE FAILURE: ${err.message}`);

@@ -1,0 +1,29 @@
+{
+ "entity_id": "ca-amend-immigration-record",
+ "jurisdiction": "CA",
+ "service_key": "ca-amend-immigration-record",
+ "service_name": "Amendment of an immigration record",
+ "service_category": "settlement",
+ "applicant_country": null,
+ "applicant_country_name": null,
+ "latest": {
+  "value_raw": "8 weeks",
+  "value_days": 56,
+  "status": "ok",
+  "effective_date": "2026-08-19",
+  "retrieved_at": "2026-08-22T01:17:28.517Z",
+  "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json",
+  "confidence": "official"
+ },
+ "history": [
+  {
+   "value_raw": "8 weeks",
+   "value_days": 56,
+   "status": "ok",
+   "effective_date": "2026-08-19",
+   "retrieved_at": "2026-08-22T01:17:28.517Z",
+   "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json"
+  }
+ ],
+ "license": "CC BY 4.0 — attribute GovWait and the originating government agency. Underlying figures are official government publications."
+}

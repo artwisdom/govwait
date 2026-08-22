@@ -17,9 +17,8 @@ export const source = {
 
 const stripTags = (html) => html.replace(/<[^>]+>/g, ' ').replace(/&amp;/g, '&').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim();
 
-export async function collect({ forceRefresh = false } = {}) {
-  const { body } = await politeFetch(API_URL, { forceRefresh });
-  const retrieved_at = cachedRetrievedAt(API_URL);
+/** Shared gov.uk guidance-page table parser (also used by govuk-inuk.js). */
+export function parseGovukTables({ body, sourceId, humanUrl, keyPrefix, retrieved_at }) {
   const doc = JSON.parse(body);
   const effective = (doc.public_updated_at || '').slice(0, 10);
   const html = doc.details?.body || '';
@@ -47,11 +46,10 @@ export async function collect({ forceRefresh = false } = {}) {
         if (/week|month|day/i.test(time)) { errors.push(`row "${category}": ${norm.error}`); continue; }
         continue; // non-duration informational row: skip, logged in coverage counts
       }
-      const key = `gb-${slugify(section) || 'visa'}--${slugify(category)}`.slice(0, 80);
-      const entityId = key;
+      const key = `${keyPrefix}-${slugify(section) || 'visa'}--${slugify(category)}`.slice(0, 80);
       entities.push({
-        id: entityId,
-        source_id: source.id,
+        id: key,
+        source_id: sourceId,
         jurisdiction: 'GB',
         service_category: 'visa',
         service_key: key,
@@ -60,16 +58,22 @@ export async function collect({ forceRefresh = false } = {}) {
         applicant_country_name: null,
       });
       observations.push({
-        entity_id: entityId,
+        entity_id: key,
         value_raw: time,
         value_days: norm.value_days,
         unit_original: norm.unit_original,
         status: norm.status,
         effective_date: effective,
         retrieved_at,
-        source_url: HUMAN_URL,
+        source_url: humanUrl,
       });
     }
   }
   return { entities, observations, errors };
+}
+
+export async function collect({ forceRefresh = false } = {}) {
+  const { body } = await politeFetch(API_URL, { forceRefresh });
+  const retrieved_at = cachedRetrievedAt(API_URL);
+  return parseGovukTables({ body, sourceId: source.id, humanUrl: HUMAN_URL, keyPrefix: 'gb', retrieved_at });
 }

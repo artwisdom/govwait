@@ -1,0 +1,28 @@
+{
+ "service_key": "ca-citizenship-adoption-part1",
+ "service_name": "Citizenship for a person adopted abroad (Part 1)",
+ "jurisdiction": "CA",
+ "count": 1,
+ "generated_at": "2026-08-22T01:18:52.638Z",
+ "records": [
+  {
+   "entity_id": "ca-citizenship-adoption-part1",
+   "jurisdiction": "CA",
+   "service_key": "ca-citizenship-adoption-part1",
+   "service_name": "Citizenship for a person adopted abroad (Part 1)",
+   "service_category": "settlement",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "Part 1: 4 months",
+    "value_days": 121.76,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-22T01:17:28.517Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json",
+    "confidence": "official"
+   }
+  }
+ ],
+ "license": "CC BY 4.0 — attribute GovWait and the originating government agency. Underlying figures are official government publications."
+}

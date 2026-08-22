@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-22T00:46:48.049Z",
+  "generated_at": "2026-08-22T01:18:52.610Z",
   "pass": true,
   "checks": [
     {
@@ -33,9 +33,29 @@
       "detail": "39 observations (floor 10)"
     },
     {
+      "name": "coverage-ircc-noncountry",
+      "pass": true,
+      "detail": "19 observations (floor 15)"
+    },
+    {
+      "name": "coverage-ircc-passport",
+      "pass": true,
+      "detail": "2 observations (floor 2)"
+    },
+    {
+      "name": "coverage-govuk-inuk-times",
+      "pass": true,
+      "detail": "37 observations (floor 8)"
+    },
+    {
+      "name": "coverage-govuk-passport",
+      "pass": true,
+      "detail": "1 observations (floor 1)"
+    },
+    {
       "name": "coverage-total",
       "pass": true,
-      "detail": "1946 total observations (floor 300)"
+      "detail": "2005 total observations (floor 300)"
     },
     {
       "name": "staleness-ircc-ptime",
@@ -46,6 +66,16 @@
       "name": "staleness-govuk-visa-times",
       "pass": true,
       "detail": "latest effective_date 2026-06-26 is 57d old (max 120)"
+    },
+    {
+      "name": "staleness-ircc-noncountry",
+      "pass": true,
+      "detail": "latest effective_date 2026-08-19 is 3d old (max 45)"
+    },
+    {
+      "name": "staleness-govuk-inuk-times",
+      "pass": true,
+      "detail": "latest effective_date 2025-07-21 is 397d old (max 500)"
     },
     {
       "name": "volatility-guard",

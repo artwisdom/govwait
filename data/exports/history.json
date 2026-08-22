@@ -1,6 +1,146 @@
 {
- "generated_at": "2026-08-22T00:46:48.087Z",
+ "generated_at": "2026-08-22T01:18:52.638Z",
  "entities": {
+  "ca-amend-immigration-record": [
+   {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-22T01:17:28.517Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json"
+   }
+  ],
+  "ca-amend-tr-record": [
+   {
+    "value_raw": "6 weeks",
+    "value_days": 42,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-22T01:17:28.517Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json"
+   }
+  ],
+  "ca-citizenship-adoption-part1": [
+   {
+    "value_raw": "Part 1: 4 months",
+    "value_days": 121.76,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-22T01:17:28.517Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json"
+   }
+  ],
+  "ca-citizenship-record-search": [
+   {
+    "value_raw": "17 months",
+    "value_days": 517.48,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-22T01:17:28.517Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json"
+   }
+  ],
+  "ca-citizenship-renunciation": [
+   {
+    "value_raw": "4 months",
+    "value_days": 121.76,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-22T01:17:28.517Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json"
+   }
+  ],
+  "ca-citizenship-resumption": [
+   {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-22T01:17:28.517Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json"
+   }
+  ],
+  "ca-eta": [
+   {
+    "value_raw": "5 minutes",
+    "value_days": 0.0035,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-22T01:17:28.517Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json"
+   }
+  ],
+  "ca-federal-skilled-trades": [
+   {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-22T01:17:28.517Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json"
+   }
+  ],
+  "ca-iec": [
+   {
+    "value_raw": "7 weeks",
+    "value_days": 49,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-22T01:17:28.517Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json"
+   }
+  ],
+  "ca-iec-past-season": [
+   {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-22T01:17:28.517Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json"
+   }
+  ],
+  "ca-passport-office": [
+   {
+    "value_raw": "up to 2 weeks, plus mail time",
+    "value_days": 14,
+    "status": "ok",
+    "effective_date": "2026-08-22",
+    "retrieved_at": "2026-08-22T01:17:31.484Z",
+    "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-passports/processing-times.html"
+   }
+  ],
+  "ca-passport-service-canada": [
+   {
+    "value_raw": "up to 17 weeks, plus mail time",
+    "value_days": 119,
+    "status": "ok",
+    "effective_date": "2026-08-22",
+    "retrieved_at": "2026-08-22T01:17:31.484Z",
+    "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-passports/processing-times.html"
+   }
+  ],
+  "ca-pr-card-new": [
+   {
+    "value_raw": "40 days",
+    "value_days": 40,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-22T01:17:28.517Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json"
+   }
+  ],
+  "ca-pr-card-renewal": [
+   {
+    "value_raw": "41 days",
+    "value_days": 41,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-22T01:17:28.517Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json"
+   }
+  ],
   "ca-refugee-gov-assisted--ad": [
    {
     "value_raw": "Not enough data",
@@ -6359,6 +6499,26 @@
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json"
+   }
+  ],
+  "ca-replace-immigration-document": [
+   {
+    "value_raw": "7 weeks",
+    "value_days": 49,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-22T01:17:28.517Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json"
+   }
+  ],
+  "ca-sawp": [
+   {
+    "value_raw": "94 days",
+    "value_days": 94,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-22T01:17:28.517Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json"
    }
   ],
   "ca-sponsor-adopted-child--ad": [
@@ -12721,6 +12881,16 @@
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json"
    }
   ],
+  "ca-study-permit-extension": [
+   {
+    "value_raw": "64 days",
+    "value_days": 64,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-22T01:17:28.517Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json"
+   }
+  ],
   "ca-super-visa--ad": [
    {
     "value_raw": "No processing time available",
@@ -14841,6 +15011,26 @@
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json"
    }
   ],
+  "ca-verification-of-status": [
+   {
+    "value_raw": "10 weeks",
+    "value_days": 70,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-22T01:17:28.517Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json"
+   }
+  ],
+  "ca-visitor-record-extension": [
+   {
+    "value_raw": "419 days",
+    "value_days": 419,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-22T01:17:28.517Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json"
+   }
+  ],
   "ca-visitor-visa--ad": [
    {
     "value_raw": "No processing time available",
@@ -16949,6 +17139,16 @@
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json"
+   }
+  ],
+  "ca-visitor-visa-inside": [
+   {
+    "value_raw": "12 days",
+    "value_days": 12,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-22T01:17:28.517Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json"
    }
   ],
   "ca-work-permit--ad": [
@@ -19071,6 +19271,16 @@
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json"
    }
   ],
+  "ca-work-permit-extension": [
+   {
+    "value_raw": "117 days",
+    "value_days": 117,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-22T01:17:28.517Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json"
+   }
+  ],
   "gb-family-visas--adult-coming-to-be-cared-for-by-a-relative": [
    {
     "value_raw": "12 weeks",
@@ -19109,6 +19319,376 @@
     "effective_date": "2026-06-26",
     "retrieved_at": "2026-08-21T11:37:11.785Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk"
+   }
+  ],
+  "gb-in-uk-family-visas--adult-coming-to-be-cared-for-by-a-relative": [
+   {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk"
+   }
+  ],
+  "gb-in-uk-family-visas--child": [
+   {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk"
+   }
+  ],
+  "gb-in-uk-family-visas--parent": [
+   {
+    "value_raw": "12 months*",
+    "value_days": 365.28,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk"
+   }
+  ],
+  "gb-in-uk-family-visas--partner-or-spouse-meeting-minimum-income-and-english-lang": [
+   {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk"
+   }
+  ],
+  "gb-in-uk-family-visas--partner-or-spouse-private-life-minimum-income-and-english": [
+   {
+    "value_raw": "12 months*",
+    "value_days": 365.28,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk"
+   }
+  ],
+  "gb-in-uk-other-visas-and-permits--british-national-overseas": [
+   {
+    "value_raw": "12 weeks",
+    "value_days": 84,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk"
+   }
+  ],
+  "gb-in-uk-other-visas-and-permits--entrepreneur": [
+   {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk"
+   }
+  ],
+  "gb-in-uk-other-visas-and-permits--international-sportsperson": [
+   {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk"
+   }
+  ],
+  "gb-in-uk-other-visas-and-permits--investor": [
+   {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk"
+   }
+  ],
+  "gb-in-uk-other-visas-and-permits--minister-of-religion": [
+   {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk"
+   }
+  ],
+  "gb-in-uk-other-visas-and-permits--scale-up-worker": [
+   {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk"
+   }
+  ],
+  "gb-in-uk-other-visas-and-permits--turkish-businessperson": [
+   {
+    "value_raw": "6 months",
+    "value_days": 182.64,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk"
+   }
+  ],
+  "gb-in-uk-other-visas-and-permits--turkish-worker": [
+   {
+    "value_raw": "6 months",
+    "value_days": 182.64,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk"
+   }
+  ],
+  "gb-in-uk-popular-work-visas--health-and-care-worker": [
+   {
+    "value_raw": "3 weeks",
+    "value_days": 21,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk"
+   }
+  ],
+  "gb-in-uk-popular-work-visas--skilled-worker": [
+   {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk"
+   }
+  ],
+  "gb-in-uk-study-visas--child-student": [
+   {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk"
+   }
+  ],
+  "gb-in-uk-study-visas--student": [
+   {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk"
+   }
+  ],
+  "gb-in-uk-temporary-work-visas--charity-worker": [
+   {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk"
+   }
+  ],
+  "gb-in-uk-temporary-work-visas--creative-worker": [
+   {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk"
+   }
+  ],
+  "gb-in-uk-temporary-work-visas--government-authorised-exchange": [
+   {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk"
+   }
+  ],
+  "gb-in-uk-temporary-work-visas--international-agreement": [
+   {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk"
+   }
+  ],
+  "gb-in-uk-temporary-work-visas--religious-worker": [
+   {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk"
+   }
+  ],
+  "gb-in-uk-ukraine-visas--ukraine-permission-extension-scheme": [
+   {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk"
+   }
+  ],
+  "gb-in-uk-visit-visa--standard-visitor": [
+   {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk"
+   }
+  ],
+  "gb-in-uk-work-visas-for-an-overseas-employer--overseas-domestic-worker": [
+   {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk"
+   }
+  ],
+  "gb-in-uk-work-visas-for-an-overseas-employer--representative-of-an-overseas-busi": [
+   {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk"
+   }
+  ],
+  "gb-in-uk-work-visas-for-an-overseas-employer--secondment-worker": [
+   {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk"
+   }
+  ],
+  "gb-in-uk-work-visas-for-an-overseas-employer--senior-or-specialist-worker": [
+   {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk"
+   }
+  ],
+  "gb-in-uk-work-visas-for-an-overseas-employer--service-supplier": [
+   {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk"
+   }
+  ],
+  "gb-in-uk-work-visas-for-an-overseas-employer--uk-expansion-worker": [
+   {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk"
+   }
+  ],
+  "gb-in-uk-work-visas-to-start-a-business--innovator-founder": [
+   {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk"
+   }
+  ],
+  "gb-in-uk-work-visas-to-start-a-business--start-up": [
+   {
+    "value_raw": "3 weeks",
+    "value_days": 21,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk"
+   }
+  ],
+  "gb-in-uk-work-visas-you-can-apply-for-without-a-job-offer--global-talent": [
+   {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk"
+   }
+  ],
+  "gb-in-uk-work-visas-you-can-apply-for-without-a-job-offer--graduate": [
+   {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk"
+   }
+  ],
+  "gb-in-uk-work-visas-you-can-apply-for-without-a-job-offer--high-potential-indivi": [
+   {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk"
+   }
+  ],
+  "gb-in-uk-work-visas-you-can-apply-for-without-a-job-offer--overseas-domestic-wor": [
+   {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk"
+   }
+  ],
+  "gb-in-uk-work-visas-you-can-apply-for-without-a-job-offer--uk-ancestry": [
+   {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk"
    }
   ],
   "gb-other-visas-and-permits--british-national-overseas": [
@@ -19159,6 +19739,16 @@
     "effective_date": "2026-06-26",
     "retrieved_at": "2026-08-21T11:37:11.785Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk"
+   }
+  ],
+  "gb-passport-standard": [
+   {
+    "value_raw": "within 3 weeks",
+    "value_days": 21,
+    "status": "ok",
+    "effective_date": "2024-01-15",
+    "retrieved_at": "2026-08-22T01:17:37.791Z",
+    "source_url": "https://www.gov.uk/government/organisations/hm-passport-office/about/about-our-services"
    }
   ],
   "gb-popular-work-visas--health-and-care-worker": [

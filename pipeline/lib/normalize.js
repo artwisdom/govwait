@@ -1,22 +1,25 @@
 // Duration normalization. Verbatim strings are preserved upstream; this only
 // produces the comparable value_days. Unknown shapes return {error} so the
 // caller can fail the run rather than silently drop data.
-const DAYS_PER = { day: 1, week: 7, month: 30.44 };
+const DAYS_PER = { minute: 1 / 1440, hour: 1 / 24, day: 1, week: 7, month: 30.44 };
 
 const UNAVAILABLE = new Set(['no processing time available']);
 const INSUFFICIENT = new Set(['not enough data']);
 
 export function normalizeDuration(raw) {
   const s = String(raw).trim();
-  const low = s.toLowerCase();
+  // Trailing footnote markers ("12 months*") — the qualifier stays in value_raw.
+  const low = s.toLowerCase().replace(/[*†‡]+$/, '').trim();
   if (UNAVAILABLE.has(low)) return { status: 'unavailable', value_days: null, unit_original: null };
   if (INSUFFICIENT.has(low)) return { status: 'insufficient_data', value_days: null, unit_original: null };
-  const m = low.match(/^(\d+(?:\.\d+)?)\s*(day|week|month)s?$/);
+  // "up to 2 weeks" / "within 3 weeks" are upper bounds — value_days is the bound;
+  // value_raw upstream keeps the qualifier verbatim.
+  const m = low.match(/^(?:up to |within )?(\d+(?:\.\d+)?)\s*(minute|hour|day|week|month)s?$/);
   if (!m) return { error: `unparseable duration: "${s}"` };
   const n = parseFloat(m[1]);
   const unit = m[2];
   if (n <= 0) return { error: `non-positive duration: "${s}"` };
-  return { status: 'ok', value_days: Math.round(n * DAYS_PER[unit] * 100) / 100, unit_original: unit + 's' };
+  return { status: 'ok', value_days: Math.round(n * DAYS_PER[unit] * 10000) / 10000, unit_original: unit + 's' };
 }
 
 const regionNames = new Intl.DisplayNames(['en'], { type: 'region' });

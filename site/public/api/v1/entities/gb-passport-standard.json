@@ -1,0 +1,29 @@
+{
+ "entity_id": "gb-passport-standard",
+ "jurisdiction": "GB",
+ "service_key": "gb-passport-standard",
+ "service_name": "Passport (standard application)",
+ "service_category": "passport",
+ "applicant_country": null,
+ "applicant_country_name": null,
+ "latest": {
+  "value_raw": "within 3 weeks",
+  "value_days": 21,
+  "status": "ok",
+  "effective_date": "2024-01-15",
+  "retrieved_at": "2026-08-22T01:17:37.791Z",
+  "source_url": "https://www.gov.uk/government/organisations/hm-passport-office/about/about-our-services",
+  "confidence": "official"
+ },
+ "history": [
+  {
+   "value_raw": "within 3 weeks",
+   "value_days": 21,
+   "status": "ok",
+   "effective_date": "2024-01-15",
+   "retrieved_at": "2026-08-22T01:17:37.791Z",
+   "source_url": "https://www.gov.uk/government/organisations/hm-passport-office/about/about-our-services"
+  }
+ ],
+ "license": "CC BY 4.0 — attribute GovWait and the originating government agency. Underlying figures are official government publications."
+}

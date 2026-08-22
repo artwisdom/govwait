@@ -1,0 +1,28 @@
+{
+ "service_key": "ca-passport-service-canada",
+ "service_name": "Passport (Service Canada Centre or by mail)",
+ "jurisdiction": "CA",
+ "count": 1,
+ "generated_at": "2026-08-22T01:18:52.638Z",
+ "records": [
+  {
+   "entity_id": "ca-passport-service-canada",
+   "jurisdiction": "CA",
+   "service_key": "ca-passport-service-canada",
+   "service_name": "Passport (Service Canada Centre or by mail)",
+   "service_category": "passport",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "up to 17 weeks, plus mail time",
+    "value_days": 119,
+    "status": "ok",
+    "effective_date": "2026-08-22",
+    "retrieved_at": "2026-08-22T01:17:31.484Z",
+    "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-passports/processing-times.html",
+    "confidence": "official"
+   }
+  }
+ ],
+ "license": "CC BY 4.0 — attribute GovWait and the originating government agency. Underlying figures are official government publications."
+}

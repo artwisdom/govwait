@@ -1,0 +1,29 @@
+{
+ "entity_id": "ca-verification-of-status",
+ "jurisdiction": "CA",
+ "service_key": "ca-verification-of-status",
+ "service_name": "Verification of status (VoS)",
+ "service_category": "settlement",
+ "applicant_country": null,
+ "applicant_country_name": null,
+ "latest": {
+  "value_raw": "10 weeks",
+  "value_days": 70,
+  "status": "ok",
+  "effective_date": "2026-08-19",
+  "retrieved_at": "2026-08-22T01:17:28.517Z",
+  "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json",
+  "confidence": "official"
+ },
+ "history": [
+  {
+   "value_raw": "10 weeks",
+   "value_days": 70,
+   "status": "ok",
+   "effective_date": "2026-08-19",
+   "retrieved_at": "2026-08-22T01:17:28.517Z",
+   "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json"
+  }
+ ],
+ "license": "CC BY 4.0 — attribute GovWait and the originating government agency. Underlying figures are official government publications."
+}

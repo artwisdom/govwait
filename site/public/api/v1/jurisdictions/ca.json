@@ -1,19 +1,292 @@
 {
  "jurisdiction": "CA",
- "count": 1907,
- "generated_at": "2026-08-22T00:46:48.087Z",
+ "count": 1928,
+ "generated_at": "2026-08-22T01:18:52.638Z",
  "services": [
+  "ca-amend-immigration-record",
+  "ca-amend-tr-record",
+  "ca-citizenship-adoption-part1",
+  "ca-citizenship-record-search",
+  "ca-citizenship-renunciation",
+  "ca-citizenship-resumption",
+  "ca-eta",
+  "ca-federal-skilled-trades",
+  "ca-iec",
+  "ca-iec-past-season",
+  "ca-passport-office",
+  "ca-passport-service-canada",
+  "ca-pr-card-new",
+  "ca-pr-card-renewal",
   "ca-refugee-gov-assisted",
   "ca-refugee-private-refugee-side",
   "ca-refugee-private-sponsor-side",
+  "ca-replace-immigration-document",
+  "ca-sawp",
   "ca-sponsor-adopted-child",
   "ca-sponsor-dependent-child",
   "ca-study-permit",
+  "ca-study-permit-extension",
   "ca-super-visa",
+  "ca-verification-of-status",
+  "ca-visitor-record-extension",
   "ca-visitor-visa",
-  "ca-work-permit"
+  "ca-visitor-visa-inside",
+  "ca-work-permit",
+  "ca-work-permit-extension"
  ],
  "records": [
+  {
+   "entity_id": "ca-amend-immigration-record",
+   "jurisdiction": "CA",
+   "service_key": "ca-amend-immigration-record",
+   "service_name": "Amendment of an immigration record",
+   "service_category": "settlement",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-22T01:17:28.517Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-amend-tr-record",
+   "jurisdiction": "CA",
+   "service_key": "ca-amend-tr-record",
+   "service_name": "Amendment of a temporary resident record",
+   "service_category": "settlement",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "6 weeks",
+    "value_days": 42,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-22T01:17:28.517Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-citizenship-adoption-part1",
+   "jurisdiction": "CA",
+   "service_key": "ca-citizenship-adoption-part1",
+   "service_name": "Citizenship for a person adopted abroad (Part 1)",
+   "service_category": "settlement",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "Part 1: 4 months",
+    "value_days": 121.76,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-22T01:17:28.517Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-citizenship-record-search",
+   "jurisdiction": "CA",
+   "service_key": "ca-citizenship-record-search",
+   "service_name": "Citizenship: search of citizenship records",
+   "service_category": "settlement",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "17 months",
+    "value_days": 517.48,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-22T01:17:28.517Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-citizenship-renunciation",
+   "jurisdiction": "CA",
+   "service_key": "ca-citizenship-renunciation",
+   "service_name": "Citizenship: renunciation",
+   "service_category": "settlement",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "4 months",
+    "value_days": 121.76,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-22T01:17:28.517Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-citizenship-resumption",
+   "jurisdiction": "CA",
+   "service_key": "ca-citizenship-resumption",
+   "service_name": "Citizenship: resumption",
+   "service_category": "settlement",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-22T01:17:28.517Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-eta",
+   "jurisdiction": "CA",
+   "service_key": "ca-eta",
+   "service_name": "Electronic Travel Authorization (eTA)",
+   "service_category": "visa",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "5 minutes",
+    "value_days": 0.0035,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-22T01:17:28.517Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-federal-skilled-trades",
+   "jurisdiction": "CA",
+   "service_key": "ca-federal-skilled-trades",
+   "service_name": "Federal Skilled Trades (Express Entry)",
+   "service_category": "settlement",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-22T01:17:28.517Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-iec",
+   "jurisdiction": "CA",
+   "service_key": "ca-iec",
+   "service_name": "International Experience Canada (current season)",
+   "service_category": "permit",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "7 weeks",
+    "value_days": 49,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-22T01:17:28.517Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-iec-past-season",
+   "jurisdiction": "CA",
+   "service_key": "ca-iec-past-season",
+   "service_name": "International Experience Canada (previous season)",
+   "service_category": "permit",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "Not enough data",
+    "value_days": null,
+    "status": "insufficient_data",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-22T01:17:28.517Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-passport-office",
+   "jurisdiction": "CA",
+   "service_key": "ca-passport-office",
+   "service_name": "Passport (in person at a passport office)",
+   "service_category": "passport",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "up to 2 weeks, plus mail time",
+    "value_days": 14,
+    "status": "ok",
+    "effective_date": "2026-08-22",
+    "retrieved_at": "2026-08-22T01:17:31.484Z",
+    "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-passports/processing-times.html",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-passport-service-canada",
+   "jurisdiction": "CA",
+   "service_key": "ca-passport-service-canada",
+   "service_name": "Passport (Service Canada Centre or by mail)",
+   "service_category": "passport",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "up to 17 weeks, plus mail time",
+    "value_days": 119,
+    "status": "ok",
+    "effective_date": "2026-08-22",
+    "retrieved_at": "2026-08-22T01:17:31.484Z",
+    "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-passports/processing-times.html",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-pr-card-new",
+   "jurisdiction": "CA",
+   "service_key": "ca-pr-card-new",
+   "service_name": "PR card (first card)",
+   "service_category": "settlement",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "40 days",
+    "value_days": 40,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-22T01:17:28.517Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-pr-card-renewal",
+   "jurisdiction": "CA",
+   "service_key": "ca-pr-card-renewal",
+   "service_name": "PR card (renewal or replacement)",
+   "service_category": "settlement",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "41 days",
+    "value_days": 41,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-22T01:17:28.517Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json",
+    "confidence": "official"
+   }
+  },
   {
    "entity_id": "ca-refugee-gov-assisted--ad",
    "jurisdiction": "CA",
@@ -11459,6 +11732,42 @@
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-replace-immigration-document",
+   "jurisdiction": "CA",
+   "service_key": "ca-replace-immigration-document",
+   "service_name": "Replacement of an immigration document",
+   "service_category": "settlement",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "7 weeks",
+    "value_days": 49,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-22T01:17:28.517Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-sawp",
+   "jurisdiction": "CA",
+   "service_key": "ca-sawp",
+   "service_name": "Seasonal Agricultural Worker Program",
+   "service_category": "permit",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "94 days",
+    "value_days": 94,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-22T01:17:28.517Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json",
     "confidence": "official"
    }
   },
@@ -22911,6 +23220,24 @@
    }
   },
   {
+   "entity_id": "ca-study-permit-extension",
+   "jurisdiction": "CA",
+   "service_key": "ca-study-permit-extension",
+   "service_name": "Study permit extension",
+   "service_category": "permit",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "64 days",
+    "value_days": 64,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-22T01:17:28.517Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json",
+    "confidence": "official"
+   }
+  },
+  {
    "entity_id": "ca-super-visa--ad",
    "jurisdiction": "CA",
    "service_key": "ca-super-visa",
@@ -26727,6 +27054,42 @@
    }
   },
   {
+   "entity_id": "ca-verification-of-status",
+   "jurisdiction": "CA",
+   "service_key": "ca-verification-of-status",
+   "service_name": "Verification of status (VoS)",
+   "service_category": "settlement",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "10 weeks",
+    "value_days": 70,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-22T01:17:28.517Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-record-extension",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-record-extension",
+   "service_name": "Visitor record (extend your stay in Canada)",
+   "service_category": "permit",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "419 days",
+    "value_days": 419,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-22T01:17:28.517Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json",
+    "confidence": "official"
+   }
+  },
+  {
    "entity_id": "ca-visitor-visa--ad",
    "jurisdiction": "CA",
    "service_key": "ca-visitor-visa",
@@ -30521,6 +30884,24 @@
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-visitor-visa-inside",
+   "jurisdiction": "CA",
+   "service_key": "ca-visitor-visa-inside",
+   "service_name": "Visitor visa (applying from inside Canada)",
+   "service_category": "visa",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "12 days",
+    "value_days": 12,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-22T01:17:28.517Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json",
     "confidence": "official"
    }
   },
@@ -34337,6 +34718,24 @@
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "ca-work-permit-extension",
+   "jurisdiction": "CA",
+   "service_key": "ca-work-permit-extension",
+   "service_name": "Work permit extension",
+   "service_category": "permit",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "117 days",
+    "value_days": 117,
+    "status": "ok",
+    "effective_date": "2026-08-19",
+    "retrieved_at": "2026-08-22T01:17:28.517Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json",
     "confidence": "official"
    }
   }

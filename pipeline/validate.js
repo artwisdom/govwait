@@ -8,8 +8,13 @@ import { queryJson } from './lib/db.js';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const EXPORTS = path.join(ROOT, 'data', 'exports');
 
-const COVERAGE_FLOORS = { 'ircc-ptime': 1200, 'govuk-visa-times': 10 };
-const STALENESS_DAYS = { 'ircc-ptime': 45, 'govuk-visa-times': 120 };
+const COVERAGE_FLOORS = {
+  'ircc-ptime': 1200, 'govuk-visa-times': 10,
+  'ircc-noncountry': 15, 'ircc-passport': 2, 'govuk-inuk-times': 8, 'govuk-passport': 1,
+};
+// No staleness entry for ircc-passport (unstamped: effective_date = first
+// observed, ages legitimately) or govuk-passport (stable statement, years old).
+const STALENESS_DAYS = { 'ircc-ptime': 45, 'govuk-visa-times': 120, 'ircc-noncountry': 45, 'govuk-inuk-times': 500 };
 const TOTAL_FLOOR = 300;
 // Refugee-resettlement categories legitimately reach ~5 years ("58 months",
 // gov-assisted from TZ, observed 2026-08). 3000d is the absurdity bound.

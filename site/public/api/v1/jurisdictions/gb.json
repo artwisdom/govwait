@@ -1,17 +1,55 @@
 {
  "jurisdiction": "GB",
- "count": 39,
- "generated_at": "2026-08-22T00:46:48.087Z",
+ "count": 77,
+ "generated_at": "2026-08-22T01:18:52.638Z",
  "services": [
   "gb-family-visas--adult-coming-to-be-cared-for-by-a-relative",
   "gb-family-visas--child",
   "gb-family-visas--parent",
   "gb-family-visas--partner-or-spouse",
+  "gb-in-uk-family-visas--adult-coming-to-be-cared-for-by-a-relative",
+  "gb-in-uk-family-visas--child",
+  "gb-in-uk-family-visas--parent",
+  "gb-in-uk-family-visas--partner-or-spouse-meeting-minimum-income-and-english-lang",
+  "gb-in-uk-family-visas--partner-or-spouse-private-life-minimum-income-and-english",
+  "gb-in-uk-other-visas-and-permits--british-national-overseas",
+  "gb-in-uk-other-visas-and-permits--entrepreneur",
+  "gb-in-uk-other-visas-and-permits--international-sportsperson",
+  "gb-in-uk-other-visas-and-permits--investor",
+  "gb-in-uk-other-visas-and-permits--minister-of-religion",
+  "gb-in-uk-other-visas-and-permits--scale-up-worker",
+  "gb-in-uk-other-visas-and-permits--turkish-businessperson",
+  "gb-in-uk-other-visas-and-permits--turkish-worker",
+  "gb-in-uk-popular-work-visas--health-and-care-worker",
+  "gb-in-uk-popular-work-visas--skilled-worker",
+  "gb-in-uk-study-visas--child-student",
+  "gb-in-uk-study-visas--student",
+  "gb-in-uk-temporary-work-visas--charity-worker",
+  "gb-in-uk-temporary-work-visas--creative-worker",
+  "gb-in-uk-temporary-work-visas--government-authorised-exchange",
+  "gb-in-uk-temporary-work-visas--international-agreement",
+  "gb-in-uk-temporary-work-visas--religious-worker",
+  "gb-in-uk-ukraine-visas--ukraine-permission-extension-scheme",
+  "gb-in-uk-visit-visa--standard-visitor",
+  "gb-in-uk-work-visas-for-an-overseas-employer--overseas-domestic-worker",
+  "gb-in-uk-work-visas-for-an-overseas-employer--representative-of-an-overseas-busi",
+  "gb-in-uk-work-visas-for-an-overseas-employer--secondment-worker",
+  "gb-in-uk-work-visas-for-an-overseas-employer--senior-or-specialist-worker",
+  "gb-in-uk-work-visas-for-an-overseas-employer--service-supplier",
+  "gb-in-uk-work-visas-for-an-overseas-employer--uk-expansion-worker",
+  "gb-in-uk-work-visas-to-start-a-business--innovator-founder",
+  "gb-in-uk-work-visas-to-start-a-business--start-up",
+  "gb-in-uk-work-visas-you-can-apply-for-without-a-job-offer--global-talent",
+  "gb-in-uk-work-visas-you-can-apply-for-without-a-job-offer--graduate",
+  "gb-in-uk-work-visas-you-can-apply-for-without-a-job-offer--high-potential-indivi",
+  "gb-in-uk-work-visas-you-can-apply-for-without-a-job-offer--overseas-domestic-wor",
+  "gb-in-uk-work-visas-you-can-apply-for-without-a-job-offer--uk-ancestry",
   "gb-other-visas-and-permits--british-national-overseas",
   "gb-other-visas-and-permits--international-sportsperson",
   "gb-other-visas-and-permits--minister-of-religion",
   "gb-other-visas-and-permits--returning-resident-visa",
   "gb-other-visas-and-permits--scale-up-worker",
+  "gb-passport-standard",
   "gb-popular-work-visas--health-and-care-worker",
   "gb-popular-work-visas--skilled-worker",
   "gb-study-visas--child-student",
@@ -117,6 +155,672 @@
    }
   },
   {
+   "entity_id": "gb-in-uk-family-visas--adult-coming-to-be-cared-for-by-a-relative",
+   "jurisdiction": "GB",
+   "service_key": "gb-in-uk-family-visas--adult-coming-to-be-cared-for-by-a-relative",
+   "service_name": "Adult coming to be cared for by a relative (Family visas, applying inside the UK)",
+   "service_category": "visa",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "gb-in-uk-family-visas--child",
+   "jurisdiction": "GB",
+   "service_key": "gb-in-uk-family-visas--child",
+   "service_name": "Child (Family visas, applying inside the UK)",
+   "service_category": "visa",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "gb-in-uk-family-visas--parent",
+   "jurisdiction": "GB",
+   "service_key": "gb-in-uk-family-visas--parent",
+   "service_name": "Parent (Family visas, applying inside the UK)",
+   "service_category": "visa",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "12 months*",
+    "value_days": 365.28,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "gb-in-uk-family-visas--partner-or-spouse-meeting-minimum-income-and-english-lang",
+   "jurisdiction": "GB",
+   "service_key": "gb-in-uk-family-visas--partner-or-spouse-meeting-minimum-income-and-english-lang",
+   "service_name": "Partner or spouse (meeting minimum income and English language requirements) (Family visas, applying inside the UK)",
+   "service_category": "visa",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "gb-in-uk-family-visas--partner-or-spouse-private-life-minimum-income-and-english",
+   "jurisdiction": "GB",
+   "service_key": "gb-in-uk-family-visas--partner-or-spouse-private-life-minimum-income-and-english",
+   "service_name": "Partner or spouse - private life (minimum income and English language not required) (Family visas, applying inside the UK)",
+   "service_category": "visa",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "12 months*",
+    "value_days": 365.28,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "gb-in-uk-other-visas-and-permits--british-national-overseas",
+   "jurisdiction": "GB",
+   "service_key": "gb-in-uk-other-visas-and-permits--british-national-overseas",
+   "service_name": "British National (Overseas) (Other visas and permits, applying inside the UK)",
+   "service_category": "visa",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "12 weeks",
+    "value_days": 84,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "gb-in-uk-other-visas-and-permits--entrepreneur",
+   "jurisdiction": "GB",
+   "service_key": "gb-in-uk-other-visas-and-permits--entrepreneur",
+   "service_name": "Entrepreneur (Other visas and permits, applying inside the UK)",
+   "service_category": "visa",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "gb-in-uk-other-visas-and-permits--international-sportsperson",
+   "jurisdiction": "GB",
+   "service_key": "gb-in-uk-other-visas-and-permits--international-sportsperson",
+   "service_name": "International Sportsperson (Other visas and permits, applying inside the UK)",
+   "service_category": "visa",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "gb-in-uk-other-visas-and-permits--investor",
+   "jurisdiction": "GB",
+   "service_key": "gb-in-uk-other-visas-and-permits--investor",
+   "service_name": "Investor (Other visas and permits, applying inside the UK)",
+   "service_category": "visa",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "gb-in-uk-other-visas-and-permits--minister-of-religion",
+   "jurisdiction": "GB",
+   "service_key": "gb-in-uk-other-visas-and-permits--minister-of-religion",
+   "service_name": "Minister of Religion (Other visas and permits, applying inside the UK)",
+   "service_category": "visa",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "gb-in-uk-other-visas-and-permits--scale-up-worker",
+   "jurisdiction": "GB",
+   "service_key": "gb-in-uk-other-visas-and-permits--scale-up-worker",
+   "service_name": "Scale-up Worker (Other visas and permits, applying inside the UK)",
+   "service_category": "visa",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "gb-in-uk-other-visas-and-permits--turkish-businessperson",
+   "jurisdiction": "GB",
+   "service_key": "gb-in-uk-other-visas-and-permits--turkish-businessperson",
+   "service_name": "Turkish Businessperson (Other visas and permits, applying inside the UK)",
+   "service_category": "visa",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "6 months",
+    "value_days": 182.64,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "gb-in-uk-other-visas-and-permits--turkish-worker",
+   "jurisdiction": "GB",
+   "service_key": "gb-in-uk-other-visas-and-permits--turkish-worker",
+   "service_name": "Turkish Worker (Other visas and permits, applying inside the UK)",
+   "service_category": "visa",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "6 months",
+    "value_days": 182.64,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "gb-in-uk-popular-work-visas--health-and-care-worker",
+   "jurisdiction": "GB",
+   "service_key": "gb-in-uk-popular-work-visas--health-and-care-worker",
+   "service_name": "Health and Care Worker (Popular work visas, applying inside the UK)",
+   "service_category": "visa",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "3 weeks",
+    "value_days": 21,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "gb-in-uk-popular-work-visas--skilled-worker",
+   "jurisdiction": "GB",
+   "service_key": "gb-in-uk-popular-work-visas--skilled-worker",
+   "service_name": "Skilled Worker (Popular work visas, applying inside the UK)",
+   "service_category": "visa",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "gb-in-uk-study-visas--child-student",
+   "jurisdiction": "GB",
+   "service_key": "gb-in-uk-study-visas--child-student",
+   "service_name": "Child Student (Study visas, applying inside the UK)",
+   "service_category": "visa",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "gb-in-uk-study-visas--student",
+   "jurisdiction": "GB",
+   "service_key": "gb-in-uk-study-visas--student",
+   "service_name": "Student (Study visas, applying inside the UK)",
+   "service_category": "visa",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "gb-in-uk-temporary-work-visas--charity-worker",
+   "jurisdiction": "GB",
+   "service_key": "gb-in-uk-temporary-work-visas--charity-worker",
+   "service_name": "Charity Worker (Temporary work visas, applying inside the UK)",
+   "service_category": "visa",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "gb-in-uk-temporary-work-visas--creative-worker",
+   "jurisdiction": "GB",
+   "service_key": "gb-in-uk-temporary-work-visas--creative-worker",
+   "service_name": "Creative Worker (Temporary work visas, applying inside the UK)",
+   "service_category": "visa",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "gb-in-uk-temporary-work-visas--government-authorised-exchange",
+   "jurisdiction": "GB",
+   "service_key": "gb-in-uk-temporary-work-visas--government-authorised-exchange",
+   "service_name": "Government Authorised Exchange (Temporary work visas, applying inside the UK)",
+   "service_category": "visa",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "gb-in-uk-temporary-work-visas--international-agreement",
+   "jurisdiction": "GB",
+   "service_key": "gb-in-uk-temporary-work-visas--international-agreement",
+   "service_name": "International Agreement (Temporary work visas, applying inside the UK)",
+   "service_category": "visa",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "gb-in-uk-temporary-work-visas--religious-worker",
+   "jurisdiction": "GB",
+   "service_key": "gb-in-uk-temporary-work-visas--religious-worker",
+   "service_name": "Religious Worker (Temporary work visas, applying inside the UK)",
+   "service_category": "visa",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "gb-in-uk-ukraine-visas--ukraine-permission-extension-scheme",
+   "jurisdiction": "GB",
+   "service_key": "gb-in-uk-ukraine-visas--ukraine-permission-extension-scheme",
+   "service_name": "Ukraine Permission Extension scheme (Ukraine visas, applying inside the UK)",
+   "service_category": "visa",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "gb-in-uk-visit-visa--standard-visitor",
+   "jurisdiction": "GB",
+   "service_key": "gb-in-uk-visit-visa--standard-visitor",
+   "service_name": "Standard Visitor (Visit visa, applying inside the UK)",
+   "service_category": "visa",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "gb-in-uk-work-visas-for-an-overseas-employer--overseas-domestic-worker",
+   "jurisdiction": "GB",
+   "service_key": "gb-in-uk-work-visas-for-an-overseas-employer--overseas-domestic-worker",
+   "service_name": "Overseas Domestic Worker (Work visas for an overseas employer, applying inside the UK)",
+   "service_category": "visa",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "gb-in-uk-work-visas-for-an-overseas-employer--representative-of-an-overseas-busi",
+   "jurisdiction": "GB",
+   "service_key": "gb-in-uk-work-visas-for-an-overseas-employer--representative-of-an-overseas-busi",
+   "service_name": "Representative of an Overseas Business (Work visas for an overseas employer, applying inside the UK)",
+   "service_category": "visa",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "gb-in-uk-work-visas-for-an-overseas-employer--secondment-worker",
+   "jurisdiction": "GB",
+   "service_key": "gb-in-uk-work-visas-for-an-overseas-employer--secondment-worker",
+   "service_name": "Secondment Worker (Work visas for an overseas employer, applying inside the UK)",
+   "service_category": "visa",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "gb-in-uk-work-visas-for-an-overseas-employer--senior-or-specialist-worker",
+   "jurisdiction": "GB",
+   "service_key": "gb-in-uk-work-visas-for-an-overseas-employer--senior-or-specialist-worker",
+   "service_name": "Senior or Specialist Worker (Work visas for an overseas employer, applying inside the UK)",
+   "service_category": "visa",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "gb-in-uk-work-visas-for-an-overseas-employer--service-supplier",
+   "jurisdiction": "GB",
+   "service_key": "gb-in-uk-work-visas-for-an-overseas-employer--service-supplier",
+   "service_name": "Service Supplier (Work visas for an overseas employer, applying inside the UK)",
+   "service_category": "visa",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "gb-in-uk-work-visas-for-an-overseas-employer--uk-expansion-worker",
+   "jurisdiction": "GB",
+   "service_key": "gb-in-uk-work-visas-for-an-overseas-employer--uk-expansion-worker",
+   "service_name": "UK Expansion Worker (Work visas for an overseas employer, applying inside the UK)",
+   "service_category": "visa",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "gb-in-uk-work-visas-to-start-a-business--innovator-founder",
+   "jurisdiction": "GB",
+   "service_key": "gb-in-uk-work-visas-to-start-a-business--innovator-founder",
+   "service_name": "Innovator Founder (Work visas to start a business, applying inside the UK)",
+   "service_category": "visa",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "gb-in-uk-work-visas-to-start-a-business--start-up",
+   "jurisdiction": "GB",
+   "service_key": "gb-in-uk-work-visas-to-start-a-business--start-up",
+   "service_name": "Start-up (Work visas to start a business, applying inside the UK)",
+   "service_category": "visa",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "3 weeks",
+    "value_days": 21,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "gb-in-uk-work-visas-you-can-apply-for-without-a-job-offer--global-talent",
+   "jurisdiction": "GB",
+   "service_key": "gb-in-uk-work-visas-you-can-apply-for-without-a-job-offer--global-talent",
+   "service_name": "Global Talent (Work visas you can apply for without a job offer, applying inside the UK)",
+   "service_category": "visa",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "gb-in-uk-work-visas-you-can-apply-for-without-a-job-offer--graduate",
+   "jurisdiction": "GB",
+   "service_key": "gb-in-uk-work-visas-you-can-apply-for-without-a-job-offer--graduate",
+   "service_name": "Graduate (Work visas you can apply for without a job offer, applying inside the UK)",
+   "service_category": "visa",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "gb-in-uk-work-visas-you-can-apply-for-without-a-job-offer--high-potential-indivi",
+   "jurisdiction": "GB",
+   "service_key": "gb-in-uk-work-visas-you-can-apply-for-without-a-job-offer--high-potential-indivi",
+   "service_name": "High Potential Individual (HPI) (Work visas you can apply for without a job offer, applying inside the UK)",
+   "service_category": "visa",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "gb-in-uk-work-visas-you-can-apply-for-without-a-job-offer--overseas-domestic-wor",
+   "jurisdiction": "GB",
+   "service_key": "gb-in-uk-work-visas-you-can-apply-for-without-a-job-offer--overseas-domestic-wor",
+   "service_name": "Overseas Domestic Worker (Work visas you can apply for without a job offer, applying inside the UK)",
+   "service_category": "visa",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "gb-in-uk-work-visas-you-can-apply-for-without-a-job-offer--uk-ancestry",
+   "jurisdiction": "GB",
+   "service_key": "gb-in-uk-work-visas-you-can-apply-for-without-a-job-offer--uk-ancestry",
+   "service_name": "UK Ancestry (Work visas you can apply for without a job offer, applying inside the UK)",
+   "service_category": "visa",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "8 weeks",
+    "value_days": 56,
+    "status": "ok",
+    "effective_date": "2025-07-21",
+    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
+    "confidence": "official"
+   }
+  },
+  {
    "entity_id": "gb-other-visas-and-permits--british-national-overseas",
    "jurisdiction": "GB",
    "service_key": "gb-other-visas-and-permits--british-national-overseas",
@@ -203,6 +907,24 @@
     "effective_date": "2026-06-26",
     "retrieved_at": "2026-08-21T11:37:11.785Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
+    "confidence": "official"
+   }
+  },
+  {
+   "entity_id": "gb-passport-standard",
+   "jurisdiction": "GB",
+   "service_key": "gb-passport-standard",
+   "service_name": "Passport (standard application)",
+   "service_category": "passport",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "within 3 weeks",
+    "value_days": 21,
+    "status": "ok",
+    "effective_date": "2024-01-15",
+    "retrieved_at": "2026-08-22T01:17:37.791Z",
+    "source_url": "https://www.gov.uk/government/organisations/hm-passport-office/about/about-our-services",
     "confidence": "official"
    }
   },
