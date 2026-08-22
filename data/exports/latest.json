@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-21T11:50:35.205Z",
+ "generated_at": "2026-08-22T00:46:48.087Z",
  "sources": [
   {
    "id": "govuk-visa-times",
@@ -9,7 +9,7 @@
    "url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
    "license_note": "Open Government Licence v3.0 — reuse permitted with attribution.",
    "robots_status": "allowed",
-   "robots_checked_at": "2026-08-21T11:50:35.121Z"
+   "robots_checked_at": "2026-08-22T00:46:47.998Z"
   },
   {
    "id": "ircc-ptime",
@@ -19,7 +19,7 @@
    "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html",
    "license_note": "Government of Canada publication; facts/values extracted under fair-dealing-style factual reuse. Non-commercial reproduction terms noted; we store extracted values with attribution, not page content. Owner review recommended before commercial launch.",
    "robots_status": "allowed",
-   "robots_checked_at": "2026-08-21T11:50:34.590Z"
+   "robots_checked_at": "2026-08-22T00:46:44.484Z"
   }
  ],
  "records": [
