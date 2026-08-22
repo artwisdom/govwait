@@ -6,7 +6,7 @@ a coding agent with zero context can operate this project safely and grow it._
 
 ## What GovWait is, in one paragraph
 
-GovWait (repo: `github.com/artwisdom/govwait`, domain `govwait.com` — purchase pending)
+GovWait (repo: `github.com/artwisdom/govwait`, domain `govwait.com` — registered and live on Cloudflare)
 tracks **officially published government processing times** (visas, permits,
 sponsorships) with provenance and append-only history. Governments overwrite these
 numbers weekly and keep no archive; our recorded history is the compounding,
@@ -70,13 +70,14 @@ style preferences.
 
 ## Current status snapshot (as of this handoff)
 
-- Repo public and live; Pages deploy green; custom domain `govwait.com` configured in
-  Pages settings, **DNS pending owner's domain purchase** (github.io URL 301s to the
-  domain until then).
+- Repo public and live; Cloudflare Pages project `govwait` serves `govwait.com` and
+  `www.govwait.com` over HTTPS. GitHub Pages remains enabled only as a temporary
+  rollback path until the GitHub-driven Cloudflare deployment is verified green.
 - refresh-data cron ACTIVE (Tue+Fri 14:00 UTC); first autonomous data commit already
   landed (`data: refresh 2026-08-22`).
-- `CONTACT_EMAIL` repo variable NOT yet set (owner to provide; crawler runs as
-  "owner-pending" until then) — set it the moment the owner supplies the address.
+- `contact@govwait.com` is active through Cloudflare Email Routing and published on
+  the About page. The `CONTACT_EMAIL` repository variable still needs to be set;
+  unattended refreshes run as "owner-pending" until it lands.
 - Dataset: **2,005 routes / 6 sources** (IRCC per-country + non-country + passports;
   gov.uk outside-UK + in-UK + HMPO passport); history depth 1–2 observations and
   compounding twice weekly.

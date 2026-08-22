@@ -29,7 +29,7 @@ sources (official pages/APIs) ──fetch──▶ data/cache/http/  (raw, never
 Normalization: days×1, weeks×7, months×30.44 (flagged approximate in docs); original string always preserved. Unparseable value ⇒ validation failure, not a silent skip.
 
 ## Politeness layer (pipeline/lib/fetcher.js)
-- Honest UA `DataMoatEngineBot/0.1 (contact: <<OWNER_PROVIDES>> — placeholder "owner-pending" during unattended runs)`.
+- Honest UA `DataMoatEngineBot/0.1 (contact: contact@govwait.com)` in production; unattended runs receive it through the `CONTACT_EMAIL` repository variable.
 - robots.txt fetched, cached 7 days, parsed for `User-agent: *` groups; **fail closed** — a 4xx/blocked robots or a matching Disallow kills the source for the run.
 - ≥3s between requests to the same host; every 200 response cached to `data/cache/http/` keyed by URL hash; cache hit ⇒ no network.
 - Hard cap 150 fetches/host/run (config constant), far above actual need (~2/run).
@@ -61,5 +61,5 @@ Report written to `data/exports/validation-report.json`; any FAIL ⇒ exit 1 ⇒
 - **Static API** (`/site/public/api/v1/`): prebuilt JSON — collection indexes + per-entity endpoints mirroring `openapi.yaml`. Free-CDN "API" with zero runtime cost.
 - **MCP server** (`/machine/mcp-server`, TypeScript, stdio): tools `search_entities`, `get_entity`, `get_latest_value`, `compare_values` reading `data/exports/*.json`.
 
-## Refresh loop (Phase 6 blueprint, INACTIVE)
-GitHub Actions cron (2×/week) → run pipeline → validate → commit data diff → rebuild site → Pages deploy. Estimated ~16 min/month, far under the 2,000-min free tier.
+## Refresh and deployment loop
+GitHub Actions cron (2×/week) → run pipeline → validate → commit data diff → rebuild site → Cloudflare Pages deploy. Validation failure stops the data commit and therefore stops publication. Estimated usage remains far below the GitHub Actions free-tier allowance.

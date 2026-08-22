@@ -1,6 +1,6 @@
 # STATE — Data Moat Engine
 
-_Last updated: 2026-08-21 (Phase 0)_
+_Last updated: 2026-08-22_
 
 ## Environment (verified)
 | Runtime | Version |
@@ -25,16 +25,22 @@ All dependencies install locally (`node_modules` inside project). No global inst
 - [x] Phase 8 — All deliverables complete
 - [x] Post-launch (owner-directed): go-live executed (repo public, Pages live, cron active); design system v2; SEO upgrades (split sitemaps, IndexNow, month-token titles, FAQ/deltas); dataset expanded to **2,005 routes / 6 sources**; 4-agent research round; **/handoff package for Codex transfer (7 files)**
 
-## Deployment status (2026-08-21, owner-authorized)
+## Deployment status (2026-08-22, owner-authorized)
 - Repo LIVE: https://github.com/artwisdom/govwait (public, main)
-- GitHub Pages: enabled (workflow source), custom domain govwait.com set, deploy green
+- Domain: `govwait.com` registered in Cloudflare Registrar; auto-renew and registrar lock enabled
+- Cloudflare Pages: project `govwait` live; `govwait.com` and `www.govwait.com` active over HTTPS
+- Email: `contact@govwait.com` routing active through Cloudflare Email Routing
+- AI crawler policy: listed search/citation crawlers allowed; Managed robots.txt off (see `docs/CLOUDFLARE_CRAWL_POLICY.md`)
+- GitHub Pages: still enabled temporarily as a rollback path until the first GitHub-driven Cloudflare deployment is green
 - refresh-data workflow: ACTIVE, first run green (22s); cron Tue+Fri 14:00 UTC
 - SITE_URL repo variable = https://govwait.com
+- CONTACT_EMAIL and Cloudflare deployment settings: pending GitHub re-authentication
 
 ## Next step
-PROJECT TRANSFERS TO CODEX. Owner: buy govwait.com + DNS, provide contact email, then hand Codex the prompt in handoff/HANDOFF_00_README.md. Roadmap: handoff/HANDOFF_06_ROADMAP.md (R1 = Cloudflare Pages migration, time-sensitive before 2026-09-15).
+Re-authenticate GitHub, set the remaining repository variable/secret, push the Cloudflare workflow and contact-page update, verify one green deployment, then retire GitHub Pages.
 
 ## Open threads
 - US/AU/IE sources WAF-blocked to honest bots — owner-decision item (documented in DEPLOYMENT_GUIDE).
-- CONTACT_EMAIL not yet set (owner chose an alias, address pending) — crawler UA runs as "owner-pending" until then.
+- CONTACT_EMAIL is ready (`contact@govwait.com`) but not yet stored as a GitHub repository variable; unattended refreshes use `owner-pending` until that setting lands.
+- Cloudflare production is live from a verified direct upload; GitHub-driven Cloudflare deployment is not complete until the scoped token is stored and the workflow is green.
 - NZ/SE/NL/DK verified robots-permitted, not yet built (expansion targets in MAINTENANCE_RUNBOOK).

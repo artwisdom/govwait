@@ -1,10 +1,11 @@
 # DEPLOYMENT GUIDE — every manual step, in order
 
-**Status update 2026-08-22: steps 1–4 are DONE** (repo public at artwisdom/govwait,
-Pages enabled with custom domain govwait.com, SITE_URL set, refresh cron active).
-Remaining owner steps: buy the domain + DNS (step 5), CONTACT_EMAIL variable (step 3,
-email pending), Search Console/Bing (step 6), contact line (step 7), then the
-monetization ladder below on its traffic gates. See handoff/HANDOFF_06_ROADMAP.md.
+**Status update 2026-08-22:** the repository and refresh cron are active;
+`govwait.com` is registered in Cloudflare; the Cloudflare Pages project `govwait`
+serves both the apex and `www` over HTTPS; `contact@govwait.com` forwards through
+Cloudflare Email Routing; and the public About page contains the address. Remaining
+go-live items are the `CONTACT_EMAIL`/Cloudflare deployment settings in GitHub,
+one green automated Cloudflare deployment, and Search Console/Bing setup.
 
 ## Go-live core
 
@@ -16,23 +17,25 @@ monetization ladder below on its traffic gates. See handoff/HANDOFF_06_ROADMAP.m
    ```
    Pushing activates nothing dangerous by itself: `refresh.yml` runs on cron/manual only, `deploy.yml` deploys only after step 2.
 
-2. **[REQUIRED] Enable GitHub Pages.** Repo → Settings → Pages → Source: **GitHub Actions**. Then Actions tab → run `deploy-site` manually once. Site appears at `https://<you>.github.io/<repo>/`.
+2. **[DONE] Deploy to Cloudflare Pages.** Project `govwait` was created by direct upload and is live at `https://govwait.pages.dev`. The production workflow deploys the same validated `site/dist` output to that project.
 
-3. **[REQUIRED] Set repository variables.** Settings → Secrets and variables → Actions → Variables:
+3. **[REQUIRED] Set repository deployment settings.** Settings → Secrets and variables → Actions:
    - `SITE_URL` = your real site origin (used for canonicals/sitemap/robots).
-   - `CONTACT_EMAIL` = a real contact address for the crawler User-Agent (politeness/accountability; currently `owner-pending`).
+   - `CONTACT_EMAIL` = `contact@govwait.com` for the crawler User-Agent.
+   - `CLOUDFLARE_ACCOUNT_ID` = the Cloudflare account that owns the `govwait` Pages project.
+   - Encrypted secret `CLOUDFLARE_API_TOKEN` = a least-privilege token with Cloudflare Pages edit access only.
 
 4. **[REQUIRED] First data refresh.** Actions → `refresh-data` → Run workflow. Confirm green; from then on it runs Tue+Fri automatically (~35 min/month of the 2,000 free).
 
-5. **[OPTIONAL, ~$10/yr — recommended] Custom domain.** Buy a domain (any registrar). Why it matters: canonical URLs you own (ad networks and Search Console treat `github.io` subdomains poorly), and it is a prerequisite for Cloudflare pay-per-crawl later. Point it at Pages (Settings → Pages → Custom domain) or move hosting to Cloudflare Pages (commented alternative in `deploy.yml`). Update `SITE_URL`.
+5. **[DONE, $10.46/yr] Custom domain.** `govwait.com` is registered through Cloudflare Registrar with auto-renew and registrar lock enabled. Proxied CNAME records route the apex and `www` to `govwait.pages.dev`; both custom domains are active with HTTPS.
 
 6. **[REQUIRED] Google Search Console.** Add the site, submit `/sitemap.xml`. Also run 2–3 entity pages through the Rich Results test (structured data was validated locally but not against Google's tester — needs a live URL).
 
-7. **[REQUIRED, 2 min] Publish contact details.** Edit `site/src/pages/about.astro` — replace the "Contact details will be published when the site goes live" line with a real email; commit.
+7. **[DONE] Publish contact details.** The About page links `contact@govwait.com`; Cloudflare Email Routing forwards that alias to the owner's verified destination address.
 
 ## Monetization (CORRECTED Aug 2026 per handoff research — the old Ezoic path is dead)
 
-8. **[SOON — before Sept 15, 2026] Move hosting to Cloudflare Pages + proxy the domain through Cloudflare.** Three reasons: GitHub Pages ToS gray-zones ad-monetized commercial sites (+100GB/mo bandwidth cap); Cloudflare's AI-crawler defaults change Sept 15, 2026 and you want to SET your policy (recommended: allow AI crawlers on HTML — you want to be the cited source — meter bulk JSON later); and pay-per-crawl/Monetization Gateway require Cloudflare anyway. The `deploy.yml` file contains the commented Cloudflare alternative. Join the Pay Per Crawl beta + Monetization Gateway waitlist (free) while there.
+8. **[CUTOVER DONE; CI VERIFICATION PENDING] Cloudflare hosting and crawler policy.** Cloudflare Pages now serves production. AI Crawl Control was checked deliberately: every listed crawler remains allowed and Cloudflare Managed robots.txt is off, preserving the repository-owned policy. See `docs/CLOUDFLARE_CRAWL_POLICY.md`. Disable the old GitHub Pages deployment only after the Cloudflare GitHub Action completes successfully.
 
 9. **[LATER] Ads — the 2026 ladder.** Prerequisite for ANY approval: the editorial layer (guides, methodology, unique per-page analysis — partially built; expand per roadmap) because 2,000 templated pages alone is the exact "Low Value Content" rejection profile.
    - At **~1,000 sessions/mo**: apply to **Mediavine Journey** (the on-ramp; 70% share; Grow.js works on static sites) + AdSense in parallel (fallback + required standing).

@@ -42,7 +42,7 @@ pipeline/run.js ──▶ data/db.sqlite ──▶ data/exports/{latest,history,
 | `machine/api-conformance.mjs` | Checks every built API file against the spec's shapes | Run in QA |
 | `machine/mcp-server/` | TypeScript stdio MCP server, 4 tools, reads exports. `npm run build && npm run smoke` (8 assertions) | |
 | `.github/workflows/refresh.yml` | Cron Tue+Fri 14:00 UTC: pipeline → build-api → commit data diff → IndexNow ping. Failure diagnosis into job summary | |
-| `.github/workflows/deploy.yml` | On push (site/data/openapi paths): build → GitHub Pages. Commented Cloudflare Pages alternative inside | |
+| `.github/workflows/deploy.yml` | On push (site/data/openapi paths): build → Cloudflare Pages project `govwait` | Requires scoped Cloudflare token in GitHub |
 | `handoff/` | This package | |
 
 Root docs: `EXECUTION_REPORT.md`, `DEPLOYMENT_GUIDE.md` (owner steps; monetization
@@ -78,19 +78,20 @@ Local Node is 20.19.6 (Astro pinned to v4 for this reason; CI also pins Node 20)
 
 - Repo: `github.com/artwisdom/govwait` (public, main). gh CLI on the owner's Mac is
   authed as `artwisdom` (repo+workflow scopes).
-- GitHub Pages: enabled, build_type=workflow, **custom domain govwait.com already
-  configured in Pages settings** — every github.io request 301s there. **DNS is the
-  only missing link**: owner buys govwait.com, then A records @ → 185.199.108.153/
-  .109/.110/.111 + CNAME www → artwisdom.github.io (grey-cloud first so GitHub can
-  issue the cert; can proxy later). After DNS: enable "Enforce HTTPS" in Pages.
-- Repo variable set: `SITE_URL=https://govwait.com`. NOT set: `CONTACT_EMAIL`
-  (crawler UA runs as "owner-pending" — set the moment the owner provides it; also
-  update the About page contact line then).
+- Cloudflare Registrar: `govwait.com` active with auto-renew and registrar lock.
+- Cloudflare Pages: project `govwait`; apex and `www` custom domains active over
+  HTTPS; proxied CNAME records target `govwait.pages.dev`.
+- Cloudflare Email Routing: `contact@govwait.com` active and forwarded to a verified
+  owner destination; the About page publishes the alias.
+- Repo variable set: `SITE_URL=https://govwait.com`. NOT set yet:
+  `CONTACT_EMAIL=contact@govwait.com` and the Cloudflare deployment settings needed
+  by the new workflow. The crawler UA remains "owner-pending" in unattended runs
+  until `CONTACT_EMAIL` lands.
 - refresh-data cron ACTIVE and proven (first autonomous commit: `data: refresh
   2026-08-22`). deploy-site green. ~60 min/month total of the 2,000 free.
-- **Planned migration (roadmap item, before 2026-09-15): Cloudflare Pages** — GitHub
-  Pages ToS gray-zones ad-monetized sites, and Cloudflare's Sept 15 AI-crawler
-  default change + pay-per-crawl + Monetization Gateway all require Cloudflare.
+- Cloudflare migration: production cutover and explicit allow-crawler policy are
+  complete. Remaining acceptance gates are one green GitHub-driven Cloudflare
+  deployment and retirement of the old GitHub Pages deployment.
 
 ## 6. Traps and constraints (learned the hard way — do not relearn)
 
