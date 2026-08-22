@@ -13,7 +13,7 @@ pipeline/run.js ──▶ data/db.sqlite ──▶ data/exports/{latest,history,
                                             │
                     pipeline/build-api.js ──▶ site/public/api/v1/** (≈2,000 files)
                                             │
-                    site/ (Astro 4) ───────▶ site/dist (≈1,965 pages + API + sitemaps)
+                    site/ (Astro 4) ───────▶ site/dist (≈2,090 pages + API + sitemaps)
                                             │
                     machine/mcp-server ─────▶ stdio MCP for AI agents (reads exports)
 ```
@@ -58,7 +58,7 @@ recipe), `RISK_REGISTER.md`, `DECISIONS.md` (21 numbered judgment calls), `STATE
 Normalization: days×1, weeks×7, months×30.44; `value_raw` always preserved verbatim.
 Statuses: `ok` (numeric), `unavailable` ("No processing time available"),
 `insufficient_data` ("Not enough data") — nulls are displayed honestly as official facts.
-Current stats: 1,946 entities; ~484 numeric; sources CA (1,907) + GB (39).
+Current stats: 2,005 entities; ~540 numeric; sources: ircc-ptime (1,907), ircc-noncountry (19), ircc-passport (2), govuk-visa-times (39), govuk-inuk-times (37), govuk-passport (1). Unstamped-source change-detection semantics: see resolveUnstamped() in run.js.
 
 ## 4. Commands (all verified working)
 
@@ -66,7 +66,7 @@ Current stats: 1,946 entities; ~484 numeric; sources CA (1,907) + GB (39).
 node pipeline/run.js              # uses cache — safe offline
 node pipeline/run.js --refresh    # live fetch (polite; ~4 requests total)
 node pipeline/build-api.js        # exports -> static API files
-cd site && npm ci && npx astro build          # ~3s, 1,965 pages
+cd site && npm ci && npx astro build          # ~3s, ~2,090 pages
 cd machine/mcp-server && npm ci && npm run build && npm run smoke
 node machine/api-conformance.mjs  # after a site build
 ```

@@ -10,8 +10,8 @@ GovWait (repo: `github.com/artwisdom/govwait`, domain `govwait.com` — purchase
 tracks **officially published government processing times** (visas, permits,
 sponsorships) with provenance and append-only history. Governments overwrite these
 numbers weekly and keep no archive; our recorded history is the compounding,
-non-backfillable asset. One dataset, three skins: a static Astro site (~1,965 pages),
-a free static JSON API (~2,000 endpoints + OpenAPI 3.1), and an MCP server for AI
+non-backfillable asset. One dataset, three skins: a static Astro site (~2,090 pages),
+a free static JSON API (~2,115 files + OpenAPI 3.1), and an MCP server for AI
 agents. A GitHub Actions cron refreshes data Tue+Fri; a failed validation publishes
 nothing. Revenue plan: display ads (engine), machine access (optionality), dataset
 licensing (lottery ticket). Honest base rates live in `RISK_REGISTER.md` — most

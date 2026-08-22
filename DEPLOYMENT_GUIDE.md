@@ -1,8 +1,10 @@
 # DEPLOYMENT GUIDE — every manual step, in order
 
-Nothing in this repo is live. Each step below is ≤5 minutes and marked **[REQUIRED]**
-or **[OPTIONAL]**. Steps exist because hard rules forbade the agent from doing them
-(accounts, deploys, spend).
+**Status update 2026-08-22: steps 1–4 are DONE** (repo public at artwisdom/govwait,
+Pages enabled with custom domain govwait.com, SITE_URL set, refresh cron active).
+Remaining owner steps: buy the domain + DNS (step 5), CONTACT_EMAIL variable (step 3,
+email pending), Search Console/Bing (step 6), contact line (step 7), then the
+monetization ladder below on its traffic gates. See handoff/HANDOFF_06_ROADMAP.md.
 
 ## Go-live core
 
