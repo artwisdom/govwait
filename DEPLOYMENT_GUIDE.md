@@ -35,7 +35,7 @@ deployment after the owner confirms that cleanup.
 
 ## Monetization (CORRECTED Aug 2026 per handoff research — the old Ezoic path is dead)
 
-8. **[DONE; OLD HOST CLEANUP PENDING] Cloudflare hosting and crawler policy.** Cloudflare Pages serves production and the GitHub-driven deployment passed on commit `e997494`. AI Crawl Control was checked deliberately: every listed crawler remains allowed and Cloudflare Managed robots.txt is off, preserving the repository-owned policy. See `docs/CLOUDFLARE_CRAWL_POLICY.md`. The old GitHub Pages deployment can now be disabled after explicit owner confirmation.
+8. **[DONE; OLD HOST CLEANUP PENDING] Cloudflare hosting and crawler policy.** Cloudflare Pages serves production and GitHub-driven deploy run `32548110019` passed on commit `f0cc4e3`. AI Crawl Control was checked deliberately: every listed crawler remains allowed and Cloudflare Managed robots.txt is off, preserving the repository-owned policy. See `docs/CLOUDFLARE_CRAWL_POLICY.md`. The old GitHub Pages deployment can now be disabled after explicit owner confirmation.
 
 9. **[LATER] Ads — the 2026 ladder.** Prerequisite for ANY approval: the editorial layer (guides, methodology, unique per-page analysis — partially built; expand per roadmap) because 2,000 templated pages alone is the exact "Low Value Content" rejection profile.
    - At **~1,000 sessions/mo**: apply to **Mediavine Journey** (the on-ramp; 70% share; Grow.js works on static sites) + AdSense in parallel (fallback + required standing).

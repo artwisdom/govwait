@@ -31,7 +31,7 @@ All dependencies install locally (`node_modules` inside project). No sudo or mac
 - Cloudflare Pages: project `govwait` live; `govwait.com` and `www.govwait.com` active over HTTPS
 - Email: `contact@govwait.com` routing active through Cloudflare Email Routing
 - AI crawler policy: listed search/citation crawlers allowed; Managed robots.txt off (see `docs/CLOUDFLARE_CRAWL_POLICY.md`)
-- GitHub deployment: `deploy-site` run `32547912808` green; Cloudflare production deployment is commit `e997494`
+- GitHub deployment: latest verified `deploy-site` run `32548110019` green; it deployed commit `f0cc4e3` to Cloudflare production
 - GitHub Pages: still enabled temporarily as a rollback path; eligible for removal after explicit owner confirmation
 - refresh-data workflow: ACTIVE, first run green (22s); cron Tue+Fri 14:00 UTC
 - SITE_URL repo variable = https://govwait.com
