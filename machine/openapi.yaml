@@ -12,8 +12,8 @@ info:
     name: CC BY 4.0
     identifier: CC-BY-4.0
 servers:
-  - url: https://govwait.example
-    description: Placeholder host — replaced by the production domain at deploy time.
+  - url: https://govwait.com
+    description: Production host.
 paths:
   /api/v1/index.json:
     get:

@@ -1,6 +1,6 @@
 {
   "SITE_NAME": "GovWait",
-  "SITE_URL": "https://govwait.example",
+  "SITE_URL": "https://govwait.com",
   "TAGLINE": "Official government processing times, tracked weekly",
-  "NOTE": "SITE_URL is a reserved-TLD placeholder. Owner: replace with the real domain before deploying (see DEPLOYMENT_GUIDE.md step 3). Everything else works unchanged."
+  "NOTE": "Production origin. CI overrides via SITE_URL repo variable if set."
 }

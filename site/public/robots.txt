@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://govwait.example/sitemap.xml
+Sitemap: https://govwait.com/sitemap.xml
