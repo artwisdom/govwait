@@ -45,4 +45,5 @@ With owner confirmation, revoke the unusable first Pages-only token and retire G
 - US/AU/IE sources WAF-blocked to honest bots — owner-decision item (documented in DEPLOYMENT_GUIDE).
 - One unused Pages-only Cloudflare token named `govwait-github-pages-deploy` was created during setup but its value was not retained; revoke it after owner confirmation. The working encrypted token is `govwait-github-pages-deploy-v2`.
 - GitHub Pages remains enabled until the owner confirms its retirement; Cloudflare is already the active DNS target and production host.
+- `npm audit` reports four Astro 4 build-toolchain advisories (1 moderate, 3 high). Production is pre-rendered static HTML/JSON on Cloudflare Pages—no Astro/Vite development or server runtime is exposed. Plan and test the major Astro 7/Node runtime upgrade before adding any dynamic server rendering; do not apply `npm audit fix --force` blindly.
 - NZ/SE/NL/DK verified robots-permitted, not yet built (expansion targets in MAINTENANCE_RUNBOOK).
