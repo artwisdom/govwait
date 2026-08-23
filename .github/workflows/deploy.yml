@@ -5,7 +5,7 @@ name: deploy-site
 on:
   push:
     branches: [main]
-    paths: ["site/**", "data/exports/**", "machine/openapi.yaml"]
+    paths: ["site/**", "data/exports/**", "machine/openapi.yaml", "pipeline/indexnow.js"]
   workflow_dispatch: {}
 
 permissions:

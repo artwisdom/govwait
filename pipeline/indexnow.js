@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 // IndexNow submission for participating search engines (including Bing).
-// Submits every page affected by the latest data commit. Google and dedicated
-// AI-search crawlers use their own discovery systems. Failure is non-fatal:
-// IndexNow is a change hint, not proof of crawling or indexing.
+// Submits every public page affected by the latest data or site commit. Google
+// and dedicated AI-search crawlers use their own discovery systems. Failure is
+// non-fatal: IndexNow is a change hint, not proof of crawling or indexing.
 import { readFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import path from 'node:path';
@@ -13,6 +13,8 @@ const KEY = 'acfaf943552a8fee0a3eee74756ef0b2';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SITE = (process.env.SITE_URL || '').replace(/\/$/, '');
 if (!SITE) { console.log('[indexnow] SITE_URL unset — skipped'); process.exit(0); }
+const BASE_REVISION = process.env.INDEXNOW_BASE || 'HEAD^';
+const GIT_MAX_BUFFER = 64 * 1024 * 1024;
 
 const latest = JSON.parse(readFileSync(path.join(ROOT, 'data', 'exports', 'latest.json'), 'utf8'));
 const JUR = { CA: 'canada', GB: 'uk', NZ: 'new-zealand' };
@@ -57,16 +59,89 @@ function fullSitePaths(records) {
 
 function previousExport() {
   if (process.env.INDEXNOW_FULL === '1') return null;
-  const revision = process.env.INDEXNOW_BASE || 'HEAD^';
   try {
-    return JSON.parse(execFileSync('git', ['show', `${revision}:data/exports/latest.json`], {
+    return JSON.parse(execFileSync('git', ['show', `${BASE_REVISION}:data/exports/latest.json`], {
       cwd: ROOT,
       encoding: 'utf8',
       stdio: ['ignore', 'pipe', 'ignore'],
+      maxBuffer: GIT_MAX_BUFFER,
     }));
   } catch {
-    console.log(`[indexnow] could not read ${revision}; using a full-site submission`);
+    console.log(`[indexnow] could not read ${BASE_REVISION}; using a full-site submission`);
     return null;
+  }
+}
+
+function changedRepositoryFiles() {
+  try {
+    const output = execFileSync('git', ['diff', '--name-only', BASE_REVISION, 'HEAD'], {
+      cwd: ROOT,
+      encoding: 'utf8',
+      stdio: ['ignore', 'pipe', 'ignore'],
+      maxBuffer: GIT_MAX_BUFFER,
+    });
+    return output.split('\n').map(s => s.trim()).filter(Boolean);
+  } catch {
+    console.log(`[indexnow] could not inspect files changed from ${BASE_REVISION}; including the full public set`);
+    return null;
+  }
+}
+
+const DIRECT_SITE_PATHS = new Map([
+  ['site/src/pages/index.astro', ['/']],
+  ['site/src/pages/about.astro', ['/about/']],
+  ['site/src/pages/api-docs.astro', ['/api-docs/']],
+  ['site/src/pages/llms.txt.js', ['/llms.txt']],
+  ['site/src/pages/sitemap.xml.js', ['/sitemap.xml']],
+  ['site/src/pages/sitemap-hubs.xml.js', ['/sitemap-hubs.xml']],
+  ['site/src/pages/sitemap-ca.xml.js', ['/sitemap-ca.xml']],
+  ['site/src/pages/sitemap-gb.xml.js', ['/sitemap-gb.xml']],
+  ['site/src/pages/sitemap-nz.xml.js', ['/sitemap-nz.xml']],
+  ['site/src/lib/sitemap.js', ['/sitemap.xml', '/sitemap-hubs.xml', '/sitemap-ca.xml', '/sitemap-gb.xml', '/sitemap-nz.xml']],
+  ['machine/openapi.yaml', ['/api-docs/']],
+]);
+
+function addRepositoryChangePaths(urls, files, currentRecords, previousRecords) {
+  if (files === null) {
+    for (const p of fullSitePaths(currentRecords)) urls.add(p);
+    for (const p of fullSitePaths(previousRecords)) urls.add(p);
+    return;
+  }
+
+  let sharedSiteCodeChanged = false;
+  for (const file of files) {
+    const direct = DIRECT_SITE_PATHS.get(file);
+    if (direct) {
+      for (const p of direct) urls.add(p);
+      continue;
+    }
+
+    if (file === 'site/src/pages/404.astro') continue;
+    if (file.startsWith('site/src/pages/guides/') && file.endsWith('.astro')) {
+      const name = path.basename(file, '.astro');
+      urls.add(name === 'index' ? '/guides/' : `/guides/${name}/`);
+      continue;
+    }
+    if (file === 'site/public/robots.txt') {
+      urls.add('/robots.txt');
+      continue;
+    }
+
+    // Dynamic templates, publication rules, layouts, styles and shared data can
+    // change many URLs. The exact safe set is the union of old and new public
+    // HTML paths, which also preserves deletion notifications.
+    if (
+      file.startsWith('site/src/') ||
+      file === 'site/astro.config.mjs' ||
+      file === 'site/site.config.json' ||
+      file === 'site/package.json' ||
+      file === 'site/package-lock.json'
+    ) sharedSiteCodeChanged = true;
+  }
+
+  if (sharedSiteCodeChanged) {
+    for (const p of fullSitePaths(currentRecords)) urls.add(p);
+    for (const p of fullSitePaths(previousRecords)) urls.add(p);
   }
 }
 
@@ -85,8 +160,14 @@ if (!previous) {
     if (JSON.stringify(oldRecord) === JSON.stringify(newRecord)) changed.delete(id);
   }
 
-  const sourcesChanged = JSON.stringify(previous.sources) !== JSON.stringify(latest.sources);
-  if (changed.size || sourcesChanged) {
+  const oldSources = new Map(previous.sources.map(s => [s.id, s]));
+  const newSources = new Map(latest.sources.map(s => [s.id, s]));
+  const changedSourceIds = new Set([...oldSources.keys(), ...newSources.keys()]);
+  for (const id of [...changedSourceIds]) {
+    if (JSON.stringify(oldSources.get(id)) === JSON.stringify(newSources.get(id))) changedSourceIds.delete(id);
+  }
+
+  if (changed.size || changedSourceIds.size) {
     for (const p of ['/', '/about/', '/api-docs/', '/guides/']) urls.add(p);
   }
   for (const id of changed) {
@@ -97,6 +178,13 @@ if (!previous) {
       for (const p of pathsForRecord(r)) urls.add(p);
     }
   }
+  for (const r of [...previous.records, ...latest.records]) {
+    if (!changedSourceIds.has(r.source_id)) continue;
+    urls.add(`/${JUR[r.jurisdiction]}/`);
+    for (const p of pathsForRecord(r)) urls.add(p);
+  }
+
+  addRepositoryChangePaths(urls, changedRepositoryFiles(), latest.records, previous.records);
 }
 
 if (!urls.size) {
