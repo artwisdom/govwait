@@ -31,7 +31,7 @@ All dependencies install locally (`node_modules` inside project). No sudo or mac
 - Cloudflare Pages: project `govwait` live; `govwait.com` and `www.govwait.com` active over HTTPS
 - Email: `contact@govwait.com` routing active through Cloudflare Email Routing
 - AI crawler policy: listed search/citation crawlers allowed; Managed robots.txt off (see `docs/CLOUDFLARE_CRAWL_POLICY.md`)
-- GitHub deployment: latest verified `deploy-site` run `32571664389` green; it deployed commit `cdcf37b` to Cloudflare production
+- GitHub deployment: latest verified `deploy-site` run `32659297157` green; it deployed discoverability commit `bc3eb1f` to Cloudflare production
 - GitHub Pages: disabled; Cloudflare Pages is the sole production host
 - refresh-data workflow: ACTIVE, first run green (22s); cron Tue+Fri 14:00 UTC
 - SITE_URL repo variable = https://govwait.com
@@ -57,11 +57,14 @@ All dependencies install locally (`node_modules` inside project). No sudo or mac
   `docs/DISCOVERABILITY_AUDIT.md`.
 - Canonical host: a live Cloudflare 301 sends `www` paths and queries to the
   matching apex URL.
+- Current discovery notifications: the updated root sitemap was resubmitted to
+  Google successfully and to Bing for processing after the production check.
+  The 561-URL full current set received an IndexNow HTTP 200 receipt. These are
+  submission receipts, not proof of indexing or ranking.
 
 ## Next step
-After the hardening deployment is verified, send the full current indexable set
-through IndexNow. Google **Request indexing** for a small set of priority URLs
-remains a separate action-time owner confirmation; none has been made.
+Google **Request indexing** for a small set of priority URLs remains a separate
+action-time owner confirmation; none has been made.
 
 ## Open threads
 - US/AU/IE sources WAF-blocked to honest bots — owner-decision item (documented in DEPLOYMENT_GUIDE).

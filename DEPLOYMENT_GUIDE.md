@@ -33,8 +33,11 @@ submitted to both services.
 6. **[DONE — SEARCH-ENGINE PROCESSING CONTINUES] Search consoles.** The Google
    Search Console domain property `govwait.com` and Bing Webmaster Tools site
    `https://govwait.com/` were verified by DNS on 2026-08-22. The full sitemap URL
-   `https://govwait.com/sitemap.xml` was submitted to both on 2026-08-23. Google
-   reports **Sitemap index / Success**; Bing reports **Submitted / Processing**.
+   `https://govwait.com/sitemap.xml` was submitted to both on 2026-08-23. After
+   the discoverability release reduced the requested index set to 561 useful
+   pages and added a UK child sitemap, Google accepted the root again and Bing
+   accepted it for processing. The full 561-URL set also received an IndexNow
+   HTTP 200 receipt; none of these receipts guarantees indexing.
    The public sitemap returns HTTP 200 as `application/xml`. Google's live URL test
    reports the homepage can be indexed (crawl
    allowed, fetch successful, indexing allowed, declared canonical correct). The

@@ -71,9 +71,9 @@ style preferences.
 ## Current status snapshot (as of this handoff)
 
 - Repo public and live; Cloudflare Pages project `govwait` serves `govwait.com` and
-  `www.govwait.com` over HTTPS. GitHub Pages is disabled; latest verified
-  GitHub-driven Cloudflare deploy run `32571664389` is green on commit `cdcf37b`
-  after removal of the unused original token.
+  redirects `www.govwait.com` permanently to the canonical apex over HTTPS.
+  GitHub Pages is disabled; latest verified GitHub-driven Cloudflare deploy run
+  `32659297157` is green on commit `bc3eb1f`.
 - refresh-data cron ACTIVE (Tue+Fri 14:00 UTC); first autonomous data commit already
   landed (`data: refresh 2026-08-22`).
 - `contact@govwait.com` is active through Cloudflare Email Routing and published on
@@ -90,3 +90,6 @@ style preferences.
   until an official numeric value appears. Search/AI crawler access, dynamic
   `llms.txt`, canonical redirects, honest per-child lastmod, and a blocking SEO
   CI audit are documented in `docs/DISCOVERABILITY_AUDIT.md`.
+- The updated root sitemap was accepted again by Google and Bing after the
+  deployment, and the full 561-URL eligible set received an IndexNow HTTP 200
+  receipt. No Google **Request indexing** click has been made.

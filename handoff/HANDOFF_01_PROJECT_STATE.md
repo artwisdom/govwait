@@ -91,8 +91,8 @@ Local Node is 20.19.6 (Astro pinned to v4 for this reason; CI also pins Node 20)
   2026-08-22`). deploy-site green. ~60 min/month total of the 2,000 free.
 - Cloudflare migration: production cutover, explicit allow-crawler policy, and
   GitHub-driven deployment are complete. GitHub Pages is disabled, the unused
-  original token is deleted, and retained-token proof run `32571664389` deployed
-  commit `cdcf37b` successfully.
+  original token is deleted, and discoverability release run `32659297157`
+  deployed commit `bc3eb1f` successfully.
 - Search ownership: Google Search Console domain property `govwait.com` and Bing
   Webmaster Tools site `https://govwait.com/` are DNS-verified. Google's live test
   says the homepage can be indexed, and three representative pages passed the live
@@ -107,6 +107,9 @@ Local Node is 20.19.6 (Astro pinned to v4 for this reason; CI also pins Node 20)
   crawlable with `noindex, follow` until a numeric official value appears.
   See `docs/DISCOVERABILITY_AUDIT.md` for crawler, sitemap, canonical, CI, and
   point-in-time Cloudflare evidence.
+- After that release, Google accepted the updated sitemap again, Bing accepted
+  it for processing, and the full 561-URL set received an IndexNow HTTP 200
+  receipt. These are submission receipts, not indexing guarantees.
 
 ## 6. Traps and constraints (learned the hard way — do not relearn)
 

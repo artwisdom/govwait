@@ -1,7 +1,7 @@
 # Discoverability audit
 
-_Implemented and locally verified 2026-08-23. Production verification is
-recorded after the corresponding deployment completes._
+_Implemented and production-verified 2026-08-23 in GitHub Actions run
+`32659297157`, commit `bc3eb1f`._
 
 ## Search-indexing policy
 
@@ -60,7 +60,7 @@ Bingbot, Applebot, ChatGPT-User, OAI-SearchBot, GPTBot, Claude search/user
 agents, and Perplexity agents. This proves access and crawling at that moment;
 it does not prove search indexing, citations, rankings, traffic, or revenue.
 
-## Local acceptance receipt
+## Acceptance receipt
 
 ```text
 [seo-audit] 2024 HTML pages; 561 indexable; 561 sitemap URLs
@@ -69,4 +69,10 @@ it does not prove search indexing, citations, rankings, traffic, or revenue.
 [conformance] PASS
 MCP SMOKE TEST: ALL PASS (8/8)
 IndexNow full-set dry run: 561 URLs
+Production deploy: GitHub Actions run 32659297157 succeeded
+Public edge: homepage, crawler files, API, all three sitemaps, index/noindex,
+www canonical redirect, and legacy-slug redirects verified
+IndexNow full-set submission: 561 URLs, HTTP 200 receipt
+Google sitemap resubmission: accepted successfully
+Bing sitemap resubmission: accepted for processing
 ```
