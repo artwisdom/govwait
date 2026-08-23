@@ -31,7 +31,7 @@ All dependencies install locally (`node_modules` inside project). No sudo or mac
 - Cloudflare Pages: project `govwait` live; `govwait.com` and `www.govwait.com` active over HTTPS
 - Email: `contact@govwait.com` routing active through Cloudflare Email Routing
 - AI crawler policy: listed search/citation crawlers allowed; Managed robots.txt off (see `docs/CLOUDFLARE_CRAWL_POLICY.md`)
-- GitHub deployment: latest verified `deploy-site` run `32659297157` green; it deployed discoverability commit `bc3eb1f` to Cloudflare production
+- GitHub deployment: latest verified `deploy-site` run `32667066646` green; it deployed New Zealand commit `84e7ec4` to Cloudflare production (`eea35d8d.govwait.pages.dev`)
 - GitHub Pages: disabled; Cloudflare Pages is the sole production host
 - refresh-data workflow: ACTIVE, first run green (22s); cron Tue+Fri 14:00 UTC
 - SITE_URL repo variable = https://govwait.com
@@ -57,17 +57,18 @@ All dependencies install locally (`node_modules` inside project). No sudo or mac
   `docs/DISCOVERABILITY_AUDIT.md`.
 - Canonical host: a live Cloudflare 301 sends `www` paths and queries to the
   matching apex URL.
-- Current discovery notifications: the updated root sitemap was resubmitted to
-  Google successfully and to Bing for processing after the production check.
-  The 561-URL full current set received an IndexNow HTTP 200 receipt. These are
-  submission receipts, not proof of indexing or ranking.
+- Current discovery notifications: the root sitemap already registered with Google
+  and Bing now advertises the New Zealand child sitemap. After production deploy
+  run `32667066646`, the complete 588-URL current set received an IndexNow HTTP
+  200 receipt. These are discovery/submission receipts, not proof of indexing,
+  ranking, traffic, or revenue.
 
 ## Next step
-No further manual indexing request is needed today. On 2026-08-23 Google
-accepted priority-crawl requests for the three confirmed gaps: UK Standard
-Visitor, the Canada Visitor Visa by Country guide, and Canada Study Permit from
-Pakistan. Do not resubmit duplicates; Google states that repeats do not improve
-queue position or priority.
+Allow the registered root sitemap and successful IndexNow notification to be
+processed. Optional Google priority-crawl requests for the New Zealand hub,
+Visitor Visa page, and New Zealand explainer require fresh owner confirmation at
+action time. Do not resubmit the three earlier confirmed gaps merely to try to
+change priority; Google states that repeats do not improve queue position.
 
 ## Open threads
 - US/AU/IE sources WAF-blocked to honest bots — owner-decision item (documented in DEPLOYMENT_GUIDE).

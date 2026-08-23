@@ -1,14 +1,16 @@
 # Discoverability audit
 
-_Implemented and production-verified 2026-08-23 in GitHub Actions run
-`32659297157`, commit `bc3eb1f`._
+_Implemented and production-verified 2026-08-23. The New Zealand expansion was
+deployed in GitHub Actions run `32667066646`, commit `84e7ec4`._
 
 ## Search-indexing policy
 
-- The site builds 2,024 HTML pages, including the 404 page.
-- 561 pages currently have enough distinct, useful content to request indexing:
-  39 general/Canada hubs and guides, 445 Canadian applicant-country pages with
-  a numeric official value, and 77 UK service pages.
+- The site builds 2,051 HTML pages, including the 404 page.
+- 588 pages currently have enough distinct, useful content to request indexing:
+  41 general/country hubs and guides, 445 Canadian applicant-country pages with
+  a numeric official value, 77 UK service pages, and the first 25 curated New
+  Zealand visa pages. Each New Zealand page combines its official 50th- and
+  80th-percentile figures rather than creating two near-duplicate pages.
 - 1,462 Canadian applicant-country pages where the agency currently publishes
   only `unavailable` or `insufficient_data` remain live, internally linked, and
   crawler-accessible. They carry `noindex, follow` and are excluded from
@@ -28,9 +30,10 @@ index a large family of low-information query variants.
 - `llms.txt` is generated from the live dataset so its route/service counts and
   data date cannot become stale. It links the sitemap, JSON API, OpenAPI file,
   human entry points, and public MCP server.
-- The sitemap index separates hubs, Canadian numeric country pages, and UK
-  services. Each child and the index use the newest official effective date in
-  that exact URL set; build time is never used as `lastmod`.
+- The sitemap index separates hubs, Canadian numeric country pages, UK services,
+  and the first New Zealand cohort. Each child and the index use the newest
+  source-backed effective or first-observed date in that exact URL set; build
+  time is never used as `lastmod`.
 - The homepage publishes WebSite, Organization, and Dataset structured data.
   Content pages retain breadcrumb and government-service markup.
 - Every indexable HTML page has an explicit robots directive, unique title and
@@ -39,7 +42,7 @@ index a large family of low-information query variants.
   crawler policy, or JSON-LD validity regress.
 - The IndexNow notifier submits the exact changed public pages only after the
   corresponding production deployment succeeds. It can also submit the full
-  current 561-URL indexable set and respects the protocol's 10,000-URL request
+  current 588-URL indexable set and respects the protocol's 10,000-URL request
   limit.
 
 ## Cloudflare edge policy
@@ -63,19 +66,20 @@ it does not prove search indexing, citations, rankings, traffic, or revenue.
 ## Acceptance receipt
 
 ```text
-[seo-audit] 2024 HTML pages; 561 indexable; 561 sitemap URLs
+[seo-audit] 2051 HTML pages; 588 indexable; 588 sitemap URLs
 [seo-audit] PASS
-[conformance] checked 2115 API files
+[conformance] checked 2515 API files
 [conformance] PASS
-MCP SMOKE TEST: ALL PASS (8/8)
-IndexNow full-set dry run: 561 URLs
-Production deploy: GitHub Actions run 32659297157 succeeded
-Public edge: homepage, crawler files, API, all three sitemaps, index/noindex,
-www canonical redirect, and legacy-slug redirects verified
-IndexNow full-set submission: 561 URLs, HTTP 200 receipt
-Google sitemap resubmission: accepted successfully
-Bing sitemap resubmission: accepted for processing
-Google priority crawl requests: accepted for all three confirmed gaps
+MCP SMOKE TEST: ALL PASS, including New Zealand search and value checks
+IndexNow full-set dry run: 588 URLs
+Production deploy: GitHub Actions run 32667066646 succeeded
+Cloudflare Pages deployment: https://eea35d8d.govwait.pages.dev
+Public edge: New Zealand hub, Visitor Visa page, explainer, API, robots.txt,
+llms.txt, root sitemap, and 25-URL New Zealand child sitemap verified on govwait.com
+IndexNow full-set submission after deployment: 588 URLs, HTTP 200 receipt
+Existing Google sitemap index: https://govwait.com/sitemap.xml already registered;
+it now advertises sitemap-nz.xml without asserting that Google has processed it
+Earlier Google priority crawl requests: accepted for all three confirmed gaps
   - https://govwait.com/uk/standard-visitor/
   - https://govwait.com/guides/canada-visitor-visa-by-country/
   - https://govwait.com/canada/study-permit/from-pakistan/

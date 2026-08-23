@@ -1,6 +1,6 @@
 # HANDOFF 01 — Project State & Technical Deep Dive
 
-_Everything a coding agent needs to operate GovWait. Current as of 2026-08-22._
+_Everything a coding agent needs to operate GovWait. Current as of 2026-08-23._
 
 ## 1. The one-sentence architecture
 
@@ -28,7 +28,7 @@ pipeline/run.js ──▶ data/db.sqlite ──▶ data/exports/{latest,history,
 | `pipeline/lib/normalize.js` | Duration parsing ("31 days"/"7 weeks"/"58 months"/singulars/"No processing time available"/"Not enough data"). Unknown shape ⇒ pipeline fails | Add branches w/ test values |
 | `pipeline/sources/ircc.js` | Canada: `data-ptime-en.json` (8 categories × ~212 countries; `refugees_private` is `{sponsor,refugee}` nested → 2 entities) | Template for new sources |
 | `pipeline/sources/govuk.js` | UK: gov.uk Content API → HTML tables in `details.body`, `public_updated_at` as effective_date. Redirect docs possible (`schema_name: redirect`) | |
-| `pipeline/validate.js` | 11 checks: shapes, ISO codes, range (0 < days ≤ 3000 — "58 months" refugee value is REAL), coverage floors (ircc ≥1200, govuk ≥10, total ≥300), staleness (45d/120d), 10× jump flags, provenance | ⚠️ Never loosen to force green |
+| `pipeline/validate.js` | 18 checks: shapes, ISO codes, range (0 < days ≤ 3000 — "58 months" refugee value is REAL), coverage floors (including INZ ≥240), staleness where the source publishes a date, p50/p80 integrity, 10× jump flags, provenance | ⚠️ Never loosen to force green |
 | `pipeline/export.js` | Emits `latest.json` (entities + latest obs), `history.json` (all obs grouped), `stats.json` | |
 | `pipeline/build-api.js` | exports → `site/public/api/v1/**` static endpoints | Run before astro build |
 | `pipeline/indexnow.js` | Posts exact changed, indexable URLs to IndexNow; full-current-set and dry-run modes are available. Key file lives at `site/public/<32hex>.txt`; key constant inside the script | Receipt is not proof of indexing |
@@ -36,11 +36,11 @@ pipeline/run.js ──▶ data/db.sqlite ──▶ data/exports/{latest,history,
 | `data/cache/http/`, `data/cache/robots/` | Fetch caches (gitignored) | |
 | `site/` | Astro 4 (Node 20 pin — Astro 5 needs Node ≥22). `site.config.json` = brand + SITE_URL; CI overrides via `SITE_URL` repo var | |
 | `site/src/lib/data.js` | Build-time model: slugs, services map, medians, speed classes (vs service median: ≤0.6 fast / ≤1.4 typical / ≤2.5 slow / else very slow), deltas from history, `relatedRoutes()`, `dataLastmod`. Throws on URL collisions | The brain of the site |
-| `site/src/lib/sitemap.js` + `pages/sitemap*.xml.js` | Sitemap index → hubs + numeric CA applicant pages + UK services. **lastmod = official effective_date for that exact child, never build time** | ⚠️ Keep lastmod honest |
-| `site/src/pages/` | `index`, `[country]/index`, `[country]/[service]/index` (hub for CA; entity page for GB), `[country]/[service]/[applicant]` (CA entity pages), `guides/*` (3 data-generated analyses), `about`, `api-docs`, `404` | |
+| `site/src/lib/sitemap.js` + `pages/sitemap*.xml.js` | Sitemap index → hubs + numeric CA applicant pages + UK services + curated NZ services. **lastmod = source-backed effective/first-observed date for that exact child, never build time** | ⚠️ Keep lastmod honest |
+| `site/src/pages/` | `index`, `[country]/index`, `[country]/[service]/index` (hub for CA; entity page for GB; combined p50/p80 page for NZ), `[country]/[service]/[applicant]` (CA entity pages), `guides/*` (4 data-generated analyses), `about`, `api-docs`, `404` | |
 | `machine/openapi.yaml` | OpenAPI 3.1, copied into the API at build | Keep in sync with build-api.js |
 | `machine/api-conformance.mjs` | Checks every built API file against the spec's shapes | Run in QA |
-| `machine/mcp-server/` | TypeScript stdio MCP server, 4 tools, reads exports. `npm run build && npm run smoke` (8 assertions) | |
+| `machine/mcp-server/` | TypeScript stdio MCP server, 4 tools, reads exports. `npm run build && npm run smoke` (10 assertions, including NZ metric/unit checks) | |
 | `.github/workflows/refresh.yml` | Cron Tue+Fri 14:00 UTC: pipeline → build-api → commit data diff. Failure diagnosis into job summary | |
 | `.github/workflows/deploy.yml` | On push (site/data/openapi paths): build → SEO audit → Cloudflare Pages → IndexNow notification after successful production deploy | Requires scoped Cloudflare token in GitHub |
 | `site/scripts/seo-audit.mjs` | CI gate for unique metadata, canonicals, H1, JSON-LD, internal links, intentional noindex, exact sitemap membership, honest child lastmod, robots and llms.txt | Run after every site build |
@@ -91,8 +91,8 @@ Local Node is 20.19.6 (Astro pinned to v4 for this reason; CI also pins Node 20)
   2026-08-22`). deploy-site green. ~60 min/month total of the 2,000 free.
 - Cloudflare migration: production cutover, explicit allow-crawler policy, and
   GitHub-driven deployment are complete. GitHub Pages is disabled, the unused
-  original token is deleted, and discoverability release run `32659297157`
-  deployed commit `bc3eb1f` successfully.
+  original token is deleted, and New Zealand release run `32667066646`
+  deployed commit `84e7ec4` successfully.
 - Search ownership: Google Search Console domain property `govwait.com` and Bing
   Webmaster Tools site `https://govwait.com/` are DNS-verified. Google's live test
   says the homepage can be indexed, and three representative pages passed the live
@@ -101,14 +101,17 @@ Local Node is 20.19.6 (Astro pinned to v4 for this reason; CI also pins Node 20)
   engines on 2026-08-23. Google reports **Sitemap index / Success**; Bing accepted it
   and reports **Submitted / Processing**.
 - The 2026-08-23 discoverability audit intentionally limits requested indexing
-  to 561 useful/data-backed URLs (39 hubs/guides, 445 numeric CA applicant
-  pages, 77 UK services). The other 1,462 applicant pages stay live and
-  crawlable with `noindex, follow` until a numeric official value appears.
+  to 588 useful/data-backed URLs (41 hubs/guides, 445 numeric CA applicant
+  pages, 77 UK services, and 25 curated NZ visa pages). The other 1,462 Canadian
+  applicant pages stay live and crawlable with `noindex, follow` until a numeric
+  official value appears. All 266 NZ metric entities remain immediately available
+  through the API and MCP server while human pages roll out at ≤30/week.
   See `docs/DISCOVERABILITY_AUDIT.md` for crawler, sitemap, canonical, CI, and
   point-in-time Cloudflare evidence.
-- After that release, Google accepted the updated sitemap again, Bing accepted
-  it for processing, and the full 561-URL set received an IndexNow HTTP 200
-  receipt. These are submission receipts, not indexing guarantees.
+- Google and Bing previously accepted the root sitemap index. It now advertises
+  `sitemap-nz.xml`; the New Zealand production release submitted the full
+  588-URL current set to IndexNow and received HTTP 200. These are discovery and
+  submission receipts, not indexing guarantees.
 - After explicit owner confirmation, Google accepted priority-crawl requests
   for `/uk/standard-visitor/`,
   `/guides/canada-visitor-visa-by-country/`, and

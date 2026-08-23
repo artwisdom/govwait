@@ -73,7 +73,7 @@ style preferences.
 - Repo public and live; Cloudflare Pages project `govwait` serves `govwait.com` and
   redirects `www.govwait.com` permanently to the canonical apex over HTTPS.
   GitHub Pages is disabled; latest verified GitHub-driven Cloudflare deploy run
-  `32659297157` is green on commit `bc3eb1f`.
+  `32667066646` is green on New Zealand commit `84e7ec4`.
 - refresh-data cron ACTIVE (Tue+Fri 14:00 UTC); first autonomous data commit already
   landed (`data: refresh 2026-08-22`).
 - `contact@govwait.com` is active through Cloudflare Email Routing and published on
@@ -90,8 +90,9 @@ style preferences.
   until an official numeric value appears. Search/AI crawler access, dynamic
   `llms.txt`, canonical redirects, honest per-child lastmod, and a blocking SEO
   CI audit are documented in `docs/DISCOVERABILITY_AUDIT.md`.
-- The updated root sitemap was accepted again by Google and Bing after the
-  deployment, and the full 561-URL eligible set received an IndexNow HTTP 200
-  receipt. Google also accepted priority-crawl requests for the three confirmed
-  indexing gaps: UK Standard Visitor, Canada Visitor Visa by Country guide, and
-  Canada Study Permit from Pakistan.
+- The root sitemap previously accepted by Google and Bing now advertises the New
+  Zealand child sitemap. The full 588-URL eligible set received an IndexNow HTTP
+  200 receipt after production deployment. Google also previously accepted
+  priority-crawl requests for the three confirmed indexing gaps: UK Standard
+  Visitor, Canada Visitor Visa by Country guide, and Canada Study Permit from
+  Pakistan.

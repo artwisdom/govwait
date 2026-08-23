@@ -18,9 +18,9 @@ never the numbers themselves — six free competitors already have the numbers.*
   UK Standard Visitor, Canada Visitor Visa by Country guide, and Canada Study
   Permit from Pakistan. All three were added to Google's priority crawl queue.
 - [x] Harden search/AI discovery: canonical `www` 301, explicit search and AI
-  crawler allows, generated `llms.txt`, three honest child sitemaps, structured
+  crawler allows, generated `llms.txt`, four honest child sitemaps, structured
   data, exact IndexNow notifications, and a blocking SEO CI audit. Indexing is
-  requested only for the 561 current data-backed pages; 1,462 official no-value
+  requested only for the 588 current data-backed pages; 1,462 official no-value
   pages automatically graduate from `noindex, follow` when data appears.
 - Cloudflare account (needed for R1). Pay Per Crawl beta + Monetization Gateway waitlists while there.
 - Defensive trademark check "GovWait" CA/UK/US (~$0 to search).
@@ -43,7 +43,10 @@ add a dashboard screenshot alongside the textual policy evidence in
 Per HANDOFF_05 N1–N2. flpt first if choosing one: 10 years of PR history in a day's work.
 **Accept:** validation green with new floors; NZ pages rolled out ≤30/week (feature-flag the getStaticPaths slice — publish new jurisdiction's pages in weekly batches); flpt history renders on PR-program pages; metric semantics labeled (forward vs backward); runbook entries added.
 
-**Status 2026-08-23:** NZ half complete and green: 133 visas / 266 p50+p80 working-day entities in API/MCP, with a 27-page first public cohort and runbook coverage. IRCC flpt remains the unfinished half of R2.
+**Status 2026-08-23:** NZ half complete, green, and production-verified: 133 visas /
+266 p50+p80 working-day entities in API/MCP, with a 27-page first public cohort,
+runbook coverage, deployment run `32667066646`, and a 588-URL IndexNow HTTP 200
+receipt. IRCC flpt remains the unfinished half of R2.
 
 ## Phase R3 — /reports: the weekly-changes digest (the linkable asset + CIC News displacement)
 

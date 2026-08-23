@@ -1,6 +1,6 @@
 // Shared sitemap helpers. lastmod discipline: a URL's lastmod is the newest
-// official effective_date that affects it — never the build timestamp — so Google
-// can verify it against real content changes.
+// source-supplied effective date or unstamped-source first-observed date that
+// affects it — never the build timestamp.
 import { records, services, dataLastmod, JURISDICTIONS } from './data.js';
 
 export function urlset(site, urls) {

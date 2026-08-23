@@ -9,13 +9,14 @@ export async function GET(context) {
   const text = `# GovWait
 
 > Current, source-backed government processing times for visas, permits,
-> sponsorships, resettlement and related services. Every value carries the
-> government's update date, source URL and GovWait retrieval timestamp.
+> sponsorships, resettlement and related services. Every value carries its
+> source URL and either the agency's update date or, when none is published,
+> GovWait's first-observed date. Our retrieval timestamp is also preserved.
 > History is append-only. No estimates and no crowdsourcing.
 
 Canonical site: ${site}/
 Sitemap index: ${site}/sitemap.xml
-Last official data update represented: ${dataLastmod}
+Latest effective or first-observed data date represented: ${dataLastmod}
 Current coverage: ${stats.entities.toLocaleString('en-US')} routes and ${stats.observations.toLocaleString('en-US')} recorded observations.
 
 ## Coverage

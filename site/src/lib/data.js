@@ -189,8 +189,8 @@ export function fmtMonthYearShort(iso) {
   return new Date(iso.slice(0, 10) + 'T00:00:00Z').toLocaleDateString('en-US', { year: 'numeric', month: 'short', timeZone: 'UTC' });
 }
 
-// The newest official update date across the dataset — the honest lastmod for
-// aggregate pages (only moves when the data actually moved).
+// The newest source-supplied effective date or unstamped-source first-observed
+// date across the dataset — the honest lastmod for aggregate pages.
 export const dataLastmod = latest.records.map(r => r.effective_date).sort().at(-1);
 
 // Month-over-month style delta from recorded history (null until a route has
