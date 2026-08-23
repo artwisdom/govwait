@@ -27,6 +27,13 @@ IRCC introduced a new value shape (e.g. "less than 2 weeks"). Add a branch to
 ### `[govuk-visa-times] FETCH/PARSE FAILURE` or `missing details.body`
 gov.uk restructured the guidance page. Fetch `https://www.gov.uk/api/content/guidance/visa-processing-times-applications-outside-the-uk`, inspect `details.body`, adjust the table/heading regex in `pipeline/sources/govuk.js`. If the document moved, the API returns a `redirect` document — follow `redirects[0].destination`.
 
+### `[inz-processing-times] FETCH/PARSE FAILURE` / selector count or name mismatch
+- Open the official [INZ processing-time tool](https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/) and confirm it still renders.
+- Check `robots.txt` first. Never spoof a browser or work around Imperva.
+- The page must expose its complete `<visa-processing :visas="…">` selector. The pipeline follows only those listed IDs and caps the list at 145 to remain under the 150-request host ceiling.
+- If INZ legitimately grows beyond 145 visas, redesign the refresh into bounded cohorts before raising any cap. Do not guess IDs or lower the 240-observation coverage floor.
+- The endpoint has no update stamp. Keep first-observed/change-detection semantics and preserve `working days` as the source unit.
+
 ### `FAIL: staleness-<source>`
 The source hasn't republished within the window (45d IRCC / 120d gov.uk). Check the official page by hand: if the agency genuinely paused updates, raise the window in `pipeline/validate.js` with a dated comment; if they moved the data, treat as relocation (see above).
 
@@ -38,8 +45,9 @@ The source closed its doors. The source is dead to us (hard rule). Remove it fro
 
 ## Adding a source (the growth loop — ~2-4 hours each)
 
-1. Pick from the verified robots-permitted expansion list: **immigration.govt.nz,
-   dia.govt.nz (NZ passports), migrationsverket.se (SE), ind.nl (NL), nyidanmark.dk (DK)**.
+1. Pick from the verified robots-permitted expansion list: **udi.no (Norway),
+   migri.fi (Finland), migrationsverket.se (Sweden), ind.nl (Netherlands),
+   nyidanmark.dk (Denmark)**. NZ passports remain blocked and are not a candidate.
 2. Find the structured data: prefer a JSON/API endpoint (dev tools → Network tab on
    their processing-times tool); else a stable HTML table.
 3. Copy `pipeline/sources/govuk.js` as a template. A source module exports
@@ -52,9 +60,9 @@ The source closed its doors. The source is dead to us (hard rule). Remove it fro
    `cd site && npx astro build`. All green → commit → push.
 
 Blocked-source watchlist (re-check quarterly, by hand in a browser): travel.state.gov,
-egov.uscis.gov (official USCIS Torch developer API exists — free signup, owner
-decision), ireland.ie, immi.homeaffairs.gov.au. If any opens up (or publishes an
-official API/dataset), it is the single highest-value expansion available.
+egov.uscis.gov, passports.govt.nz, ireland.ie, immi.homeaffairs.gov.au. The USCIS
+developer portal currently offers no processing-times API. If a host opens up or
+publishes a sanctioned dataset, it becomes a high-value expansion candidate.
 
 ## Expanding within existing sources
 - IRCC publishes more categories (citizenship, PR cards, family sponsorship beyond

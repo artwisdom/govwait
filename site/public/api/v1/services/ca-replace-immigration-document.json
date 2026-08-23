@@ -3,7 +3,7 @@
  "service_name": "Replacement of an immigration document",
  "jurisdiction": "CA",
  "count": 1,
- "generated_at": "2026-08-22T01:18:52.638Z",
+ "generated_at": "2026-08-23T21:15:38.559Z",
  "records": [
   {
    "entity_id": "ca-replace-immigration-document",
@@ -16,6 +16,7 @@
    "latest": {
     "value_raw": "7 weeks",
     "value_days": 49,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-22T01:17:28.517Z",

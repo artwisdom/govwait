@@ -10,8 +10,8 @@ GovWait (repo: `github.com/artwisdom/govwait`, domain `govwait.com` — register
 tracks **officially published government processing times** (visas, permits,
 sponsorships) with provenance and append-only history. Governments overwrite these
 numbers weekly and keep no archive; our recorded history is the compounding,
-non-backfillable asset. One dataset, three skins: a static Astro site (2,024 HTML pages),
-a free static JSON API (~2,115 files + OpenAPI 3.1), and an MCP server for AI
+non-backfillable asset. One dataset, three skins: a static Astro site (2,051 HTML pages),
+a free static JSON API (2,515 files + OpenAPI 3.1), and an MCP server for AI
 agents. A GitHub Actions cron refreshes data Tue+Fri; a failed validation publishes
 nothing. Revenue plan: display ads (engine), machine access (optionality), dataset
 licensing (lottery ticket). Honest base rates live in `RISK_REGISTER.md` — most
@@ -25,7 +25,7 @@ projects like this earn ~$0; maintained base case $500–$3K/mo at months 12–1
 | `HANDOFF_02_RESEARCH_SEO.md` | Aug-2026 research: indexing a 2K-page site, the 2026 core/spam updates, information-gain requirements, AI Overviews/ChatGPT/Perplexity citation mechanics, E-E-A-T, link acquisition — each item marked done/roadmap | Before any growth work |
 | `HANDOFF_03_RESEARCH_MONETIZATION.md` | Aug-2026 research: the real ad-network ladder (Journey on-ramp; Ezoic dead), vertical RPM economics, pay-per-crawl reality check, licensing, affiliate trust filter, revenue table | Before any monetization work |
 | `HANDOFF_04_RESEARCH_COMPETITORS.md` | Competitor deep-dive (6 free trackers!), live autocomplete demand mapping, SERP reality, top-20 priority routes, the wedge (history/alerts/API) | Before any product decision |
-| `HANDOFF_05_RESEARCH_SOURCES.md` | Fetch-verified next sources with exact URLs/shapes: NZ JSON API, IRCC flpt (history to 2016!), NO/FI/SE/DK/NL, USCIS correction (no times API exists) | Before adding any source |
+| `HANDOFF_05_RESEARCH_SOURCES.md` | Source research and implementation status: NZ API now live; IRCC flpt (history to 2016!), NO/FI/SE/DK/NL next; USCIS correction (no times API exists) | Before adding any source |
 | `HANDOFF_06_ROADMAP.md` | The ordered 12-month plan (R0–R9) with acceptance criteria and standing policies | To decide what to do next, always |
 
 Also read in the repo root (they remain the operating manuals): `EXECUTION_REPORT.md`
@@ -79,13 +79,13 @@ style preferences.
 - `contact@govwait.com` is active through Cloudflare Email Routing and published on
   the About page. The `CONTACT_EMAIL` repository variable is set, so unattended
   refreshes carry the accountable contact in the crawler User-Agent.
-- Dataset: **2,005 routes / 6 sources** (IRCC per-country + non-country + passports;
-  gov.uk outside-UK + in-UK + HMPO passport); history depth 1–2 observations and
+- Dataset: **2,271 metric routes / 7 sources / 3 governments** (Canada, UK and
+  New Zealand; INZ contributes 133 visas × two official percentiles); history depth 1–2 observations and
   compounding twice weekly.
 - Site: redesigned Aug 22 (design system, speed chips, related-route interlinking,
-  3 data-generated guides, lastmod sitemap). All QA gates green (`docs/QA_REPORT.md`).
-- Discoverability hardening is locally green: 561 data-backed pages are
-  indexable and exactly match the three child sitemaps; 1,462 official
+  4 data-generated guides, lastmod sitemap). All QA gates green (`docs/QA_REPORT.md`).
+- Discoverability hardening is locally green: 588 data-backed pages are
+  indexable and exactly match the four child sitemaps; 1,462 official
   unavailable/insufficient country pages remain live with `noindex, follow`
   until an official numeric value appears. Search/AI crawler access, dynamic
   `llms.txt`, canonical redirects, honest per-child lastmod, and a blocking SEO

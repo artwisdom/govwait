@@ -18,7 +18,7 @@
 16. db.sqlite is committed to git (source of truth must persist across CI runs for history to compound); WAL side files ignored.
 17. Ad slots render as HTML comments only — zero layout shift and zero placeholder pixels until a network is approved.
 18. Site brand kept as working title "GovWait" with reserved-TLD placeholder origin govwait.example; deploy workflow rewrites it from the SITE_URL repo variable.
-19. Refresh cron set to Tue+Fri 14:00 UTC — matches observed IRCC republish cadence with margin, at ~35 min/month of the 2,000-min free tier.
+19. Refresh cron set to Tue+Fri 14:00 UTC — matches observed IRCC republish cadence with margin; the seed scope cost ~35 min/month (the 2026-08-23 INZ addition raises the current estimate to ~65 min/month, still within the 2,000-min free tier).
 20. Did not kill the 3 node listeners found during QA — all predate this session and belong to other projects (verified via lsof cwd + start time); killing them would have violated sandbox containment.
 21. Validation MAX_DAYS raised 1500→3000 after a legitimate official value ("58 months", refugee resettlement from TZ) tripped the first run — documented in-code with the observed value.
 22. Owner authorized go-live (repo artwisdom/govwait public, Pages + custom domain govwait.com, refresh cron active); domain purchase + DNS remain owner steps.
@@ -27,3 +27,8 @@
 25. Added 4 sources same session (IRCC non-country + CA passports + UK in-UK + UK passport) after fetch-verifying shapes; 2,005 routes total. NZ JSON API + IRCC flpt (history to 2016) specified for Codex in handoff.
 26. Unstamped-source semantics introduced (ircc-passport): insert only on value change, effective_date = first-observed date — keeps history honest when a source publishes no update stamp.
 27. Handoff package for Codex written to /handoff (7 files); Codex owns day-to-day from here per owner's tooling preference.
+28. Added Immigration New Zealand on 2026-08-23 from the official page's complete 133-entry visa selector plus its public timeline API; never enumerate or guess IDs.
+29. Stored INZ's 50% and 80% measures as two append-only entities sharing one human service page; this preserves machine precision without publishing duplicate landing pages.
+30. Preserved INZ values as official working-day counts (`unit_original='working days'`) rather than inventing calendar-day conversions; the source supplies no update stamp, so dates use first-observed change semantics.
+31. Released 25 reviewed NZ visa pages plus one country hub and one explainer (27 new indexable pages) while exposing all 266 metric entities in the API/MCP layer; future human-page batches remain capped at 30.
+32. Added entity activation state: a route removed from a current official source stops appearing as current, while its observations remain append-only in SQLite.

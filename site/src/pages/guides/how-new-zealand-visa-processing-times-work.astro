@@ -1,0 +1,39 @@
+---
+import Base from '../../layouts/Base.astro';
+import AdSlot from '../../components/AdSlot.astro';
+import { publishedServices, fmtDate } from '../../lib/data.js';
+
+const svcs = publishedServices('NZ').filter(service => service.isPercentileService);
+const updated = svcs.map(service => service.latestEffective).sort().at(-1);
+---
+<Base title="How New Zealand visa processing times work — INZ 50% and 80% figures"
+      description="Understand Immigration New Zealand’s official 50% and 80% visa processing times, working-day rules, limitations, and current figures by visa type.">
+  <nav class="crumbs"><a href="/">Home</a> › <a href="/guides/">Guides</a> › New Zealand processing times</nav>
+  <h1>How New Zealand visa processing times work</h1>
+  <p class="lede">Immigration New Zealand’s current tool gives two useful answers for each visa: when 50% of applications are processed and when 80% are processed. They describe a distribution, not a guaranteed deadline.</p>
+
+  <h2>What 50% and 80% mean</h2>
+  <p>If the tool says 50% are processed within 10 working days, half of the applications represented by the current timeframe were completed by that point. If it says 80% within 20 working days, four out of five were completed by then. The remaining applications can take longer.</p>
+  <p>INZ states that both figures use <strong>working days</strong>. Saturdays, Sundays and New Zealand public holidays are excluded. GovWait preserves those working-day counts exactly; it does not turn them into estimated calendar dates.</p>
+
+  <h2>Why your application can differ</h2>
+  <p>The official timeframe is a guide based on current processing conditions. An incomplete or complex application, requests for more information, verification work and seasonal demand can all extend an individual case. The linked official source—and your Immigration Online account—remain the authority for your application.</p>
+  <AdSlot position="guide-mid" />
+
+  <h2>Current reviewed New Zealand visa pages</h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Visa</th><th>50% processed</th><th>80% processed</th><th>Data date</th></tr></thead>
+    <tbody>{svcs.map(service => (
+      <tr>
+        <td><a href={`/new-zealand/${service.slug}/`}>{service.name}</a></td>
+        <td class="num">{service.percent50.value_raw}</td>
+        <td class="num">{service.percent80.value_raw}</td>
+        <td class="num">{fmtDate(service.latestEffective)}</td>
+      </tr>
+    ))}</tbody>
+  </table></div>
+  <p class="small muted">Current values first observed {fmtDate(updated)}. INZ’s tool does not supply a source update timestamp, so GovWait records the first date each value is observed and adds history only when it changes.</p>
+
+  <h2>Official source</h2>
+  <p>Check the latest figure directly in <a href="https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/" rel="noopener nofollow">Immigration New Zealand’s processing-time tool</a>. GovWait is independent and is not affiliated with the New Zealand Government.</p>
+</Base>

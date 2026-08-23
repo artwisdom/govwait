@@ -11,6 +11,7 @@ const EXPORTS = path.join(ROOT, 'data', 'exports');
 const COVERAGE_FLOORS = {
   'ircc-ptime': 1200, 'govuk-visa-times': 10,
   'ircc-noncountry': 15, 'ircc-passport': 2, 'govuk-inuk-times': 8, 'govuk-passport': 1,
+  'inz-processing-times': 240,
 };
 // No staleness entry for ircc-passport (unstamped: effective_date = first
 // observed, ages legitimately) or govuk-passport (stable statement, years old).
@@ -31,8 +32,9 @@ export function validate() {
   // 1. Type/shape checks
   const badEntities = queryJson(`
     SELECT COUNT(*) n FROM entities
-    WHERE id = '' OR jurisdiction NOT GLOB '[A-Z][A-Z]'
-       OR (applicant_country IS NOT NULL AND applicant_country NOT GLOB '[A-Z][A-Z]')`)[0].n;
+    WHERE active=1 AND (
+      id = '' OR jurisdiction NOT GLOB '[A-Z][A-Z]'
+       OR (applicant_country IS NOT NULL AND applicant_country NOT GLOB '[A-Z][A-Z]'))`)[0].n;
   check('entity-shape', badEntities === 0, `${badEntities} malformed entity rows`);
 
   const badObs = queryJson(`
@@ -52,7 +54,8 @@ export function validate() {
 
   // 3. Coverage floors
   const perSource = queryJson(`
-    SELECT e.source_id, COUNT(*) n FROM observations o JOIN entities e ON e.id=o.entity_id GROUP BY e.source_id`);
+    SELECT e.source_id, COUNT(*) n FROM observations o JOIN entities e ON e.id=o.entity_id
+    WHERE e.active=1 GROUP BY e.source_id`);
   for (const [sid, floor] of Object.entries(COVERAGE_FLOORS)) {
     const n = perSource.find(r => r.source_id === sid)?.n || 0;
     check(`coverage-${sid}`, n >= floor, `${n} observations (floor ${floor})`);
@@ -64,7 +67,7 @@ export function validate() {
   for (const [sid, maxAge] of Object.entries(STALENESS_DAYS)) {
     const row = queryJson(`
       SELECT MAX(o.effective_date) latest FROM observations o JOIN entities e ON e.id=o.entity_id
-      WHERE e.source_id='${sid}'`)[0];
+      WHERE e.source_id='${sid}' AND e.active=1`)[0];
     const latest = row?.latest;
     const age = latest ? Math.floor((Date.now() - new Date(latest + 'T00:00:00Z')) / 86400000) : Infinity;
     check(`staleness-${sid}`, age <= maxAge, `latest effective_date ${latest} is ${age}d old (max ${maxAge})`);

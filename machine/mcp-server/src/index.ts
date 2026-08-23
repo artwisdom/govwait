@@ -15,13 +15,13 @@ const HERE = path.dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = process.env.GOVWAIT_DATA_DIR || path.resolve(HERE, "..", "..", "..", "data", "exports");
 
 type Obs = {
-  value_raw: string; value_days: number | null; status: string;
+  value_raw: string; value_days: number | null; unit_original: string | null; status: string;
   effective_date: string; retrieved_at: string; source_url: string;
 };
 type Rec = {
   id: string; jurisdiction: string; service_key: string; service_name: string;
   service_category: string; applicant_country: string | null; applicant_country_name: string | null;
-  value_raw: string; value_days: number | null; status: string;
+  value_raw: string; value_days: number | null; unit_original: string | null; status: string;
   effective_date: string; retrieved_at: string; source_url: string;
 };
 
@@ -41,6 +41,7 @@ function present(r: Rec) {
     applicant_country: r.applicant_country_name ?? null,
     current_value: r.status === "ok" ? r.value_raw : `no published time (${r.status})`,
     value_days: r.value_days,
+    unit_original: r.unit_original,
     official_last_updated: r.effective_date,
     verified_at: r.retrieved_at,
     source_url: r.source_url,
@@ -53,7 +54,7 @@ server.registerTool("search_entities", {
   description: "Search tracked government processing-time routes by free text (service and/or country, e.g. 'canada study permit pakistan'). Returns matching entity_ids with current values.",
   inputSchema: {
     query: z.string().describe("Free-text query; terms are matched against jurisdiction, service name and applicant country"),
-    jurisdiction: z.string().length(2).optional().describe("Optional ISO country filter for the government, e.g. CA or GB"),
+    jurisdiction: z.string().length(2).optional().describe("Optional ISO country filter for the government, e.g. CA, GB or NZ"),
     limit: z.number().int().min(1).max(50).default(10),
   },
 }, async ({ query, jurisdiction, limit }) => {
@@ -61,7 +62,10 @@ server.registerTool("search_entities", {
   const scored = records
     .filter(r => !jurisdiction || r.jurisdiction === jurisdiction.toUpperCase())
     .map(r => {
-      const hay = `${r.jurisdiction === "CA" ? "canada" : "uk united kingdom"} ${r.service_name} ${r.applicant_country_name ?? ""} ${r.applicant_country ?? ""}`.toLowerCase();
+      const jurisdictionName = r.jurisdiction === "CA" ? "canada"
+        : r.jurisdiction === "NZ" ? "new zealand nz"
+        : "uk united kingdom";
+      const hay = `${jurisdictionName} ${r.service_name} ${r.applicant_country_name ?? ""} ${r.applicant_country ?? ""}`.toLowerCase();
       const hits = terms.filter(t => hay.includes(t)).length;
       return { r, hits };
     })
@@ -81,21 +85,22 @@ server.registerTool("get_entity", {
 });
 
 server.registerTool("get_latest_value", {
-  description: "Get the current official processing time for a service, optionally for a specific applicant country. Example: service_key 'ca-visitor-visa', applicant_country 'IN'.",
+  description: "Get the current official processing time for a service, optionally for a specific applicant country. New Zealand services return both 50% and 80% records.",
   inputSchema: {
-    service_key: z.string().describe("e.g. ca-visitor-visa, ca-study-permit, or any gb-* key from search results"),
-    applicant_country: z.string().length(2).optional().describe("ISO 3166-1 alpha-2 of the applicant's country (omit for UK service standards)"),
+    service_key: z.string().describe("e.g. ca-visitor-visa, nz-visitor-visa, or any key from search results"),
+    applicant_country: z.string().length(2).optional().describe("ISO 3166-1 alpha-2 of the applicant's country (omit for global service metrics)"),
   },
 }, async ({ service_key, applicant_country }) => {
-  const r = records.find(x => x.service_key === service_key && (applicant_country ? x.applicant_country === applicant_country.toUpperCase() : !x.applicant_country));
-  if (!r) {
+  const matches = records.filter(x => x.service_key === service_key && (applicant_country ? x.applicant_country === applicant_country.toUpperCase() : !x.applicant_country));
+  if (!matches.length) {
     const svc = records.filter(x => x.service_key === service_key);
     const hint = svc.length
       ? `service exists; specify applicant_country (one of ${svc.slice(0, 5).map(x => x.applicant_country).join(", ")}, …)`
       : `unknown service_key; known keys include ${[...new Set(records.map(x => x.service_key))].slice(0, 8).join(", ")}, …`;
     return { content: [{ type: "text" as const, text: JSON.stringify({ error: hint }) }], isError: true };
   }
-  return { content: [{ type: "text" as const, text: JSON.stringify({ ...present(r), attribution: ATTRIBUTION }, null, 2) }] };
+  const result = matches.length === 1 ? present(matches[0]) : { service_key, metrics: matches.map(present) };
+  return { content: [{ type: "text" as const, text: JSON.stringify({ ...result, attribution: ATTRIBUTION }, null, 2) }] };
 });
 
 server.registerTool("compare_values", {

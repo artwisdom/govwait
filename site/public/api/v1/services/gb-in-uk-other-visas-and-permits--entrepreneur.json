@@ -3,7 +3,7 @@
  "service_name": "Entrepreneur (Other visas and permits, applying inside the UK)",
  "jurisdiction": "GB",
  "count": 1,
- "generated_at": "2026-08-22T01:18:52.638Z",
+ "generated_at": "2026-08-23T21:15:38.559Z",
  "records": [
   {
    "entity_id": "gb-in-uk-other-visas-and-permits--entrepreneur",
@@ -16,6 +16,7 @@
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2025-07-21",
     "retrieved_at": "2026-08-22T01:17:34.729Z",

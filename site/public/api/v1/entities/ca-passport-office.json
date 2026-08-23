@@ -9,6 +9,7 @@
  "latest": {
   "value_raw": "up to 2 weeks, plus mail time",
   "value_days": 14,
+  "unit_original": "weeks",
   "status": "ok",
   "effective_date": "2026-08-22",
   "retrieved_at": "2026-08-22T01:17:31.484Z",
@@ -19,6 +20,7 @@
   {
    "value_raw": "up to 2 weeks, plus mail time",
    "value_days": 14,
+   "unit_original": "weeks",
    "status": "ok",
    "effective_date": "2026-08-22",
    "retrieved_at": "2026-08-22T01:17:31.484Z",

@@ -23,8 +23,15 @@ const hostCount = new Map(); // host -> fetches this run
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
-function cachePathFor(url) {
-  const h = createHash('sha256').update(url).digest('hex').slice(0, 24);
+function cachePathFor(url, { method = 'GET', form = null } = {}) {
+  const upperMethod = String(method).toUpperCase();
+  // Preserve the original GET cache keys. POST responses must include their
+  // form values in the fingerprint so one endpoint can safely cache many
+  // public records (for example, INZ's visaID lookup).
+  const fingerprint = upperMethod === 'GET' && !form
+    ? url
+    : `${upperMethod}\n${url}\n${JSON.stringify(Object.entries(form || {}).sort())}`;
+  const h = createHash('sha256').update(fingerprint).digest('hex').slice(0, 24);
   return path.join(CACHE_DIR, `${h}.body`);
 }
 
@@ -94,10 +101,17 @@ async function getRobots(host) {
  * Polite fetch. Throws (loudly) if robots forbids, host caps hit, or non-200.
  * 404 robots = allowed (RFC 9309); 401/403/5xx robots = FAIL CLOSED (source dead).
  */
-export async function politeFetch(url, { forceRefresh = false } = {}) {
+export async function politeFetch(url, { forceRefresh = false, method = 'GET', form = null } = {}) {
   mkdirSync(CACHE_DIR, { recursive: true });
   const u = new URL(url);
-  const cacheFile = cachePathFor(url);
+  const upperMethod = String(method).toUpperCase();
+  if (!['GET', 'POST'].includes(upperMethod)) throw new Error(`unsupported HTTP method ${upperMethod}`);
+  if (upperMethod === 'GET' && form) throw new Error('form data is only supported for POST requests');
+  if (upperMethod === 'POST' && (!form || typeof form !== 'object' || Array.isArray(form))) {
+    throw new Error('POST requests require a form object');
+  }
+  const cacheOptions = { method: upperMethod, form };
+  const cacheFile = cachePathFor(url, cacheOptions);
   if (!forceRefresh && existsSync(cacheFile)) {
     return { body: readFileSync(cacheFile, 'utf8'), fromCache: true, url };
   }
@@ -110,16 +124,24 @@ export async function politeFetch(url, { forceRefresh = false } = {}) {
     throw new Error(`robots.txt unreachable on ${u.host} (HTTP ${robots.status}) — failing closed, source is dead to us`);
   }
   await rateLimit(u.host);
-  const res = await fetch(url, { headers: { 'User-Agent': USER_AGENT, 'Accept': 'application/json, text/html;q=0.9, */*;q=0.5' }, redirect: 'follow' });
+  const headers = { 'User-Agent': USER_AGENT, 'Accept': 'application/json, text/html;q=0.9, */*;q=0.5' };
+  let body;
+  if (form) {
+    body = new FormData();
+    for (const [key, value] of Object.entries(form)) body.append(key, String(value));
+  }
+  const res = await fetch(url, { method: upperMethod, headers, body, redirect: 'follow' });
   if (res.status !== 200) throw new Error(`HTTP ${res.status} fetching ${url}`);
-  const body = await res.text();
-  writeFileSync(cacheFile, body);
-  writeFileSync(cacheFile + '.meta', JSON.stringify({ url, retrieved_at: new Date().toISOString(), status: res.status }, null, 2));
-  return { body, fromCache: false, url };
+  const responseBody = await res.text();
+  writeFileSync(cacheFile, responseBody);
+  writeFileSync(cacheFile + '.meta', JSON.stringify({
+    url, method: upperMethod, retrieved_at: new Date().toISOString(), status: res.status,
+  }, null, 2));
+  return { body: responseBody, fromCache: false, url };
 }
 
-export function cachedRetrievedAt(url) {
-  const metaFile = cachePathFor(url) + '.meta';
+export function cachedRetrievedAt(url, options = {}) {
+  const metaFile = cachePathFor(url, options) + '.meta';
   if (existsSync(metaFile)) return JSON.parse(readFileSync(metaFile, 'utf8')).retrieved_at;
   return new Date().toISOString();
 }

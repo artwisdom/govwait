@@ -4,6 +4,8 @@ export async function GET(context) {
   const site = context.site.href.replace(/\/$/, '');
   const caServices = [...services.CA.values()];
   const caCountryServices = caServices.filter(s => s.hasApplicantPages).length;
+  const nzServices = [...services.NZ.values()];
+  const nzPublished = nzServices.filter(s => s.published).length;
   const text = `# GovWait
 
 > Current, source-backed government processing times for visas, permits,
@@ -20,6 +22,7 @@ Current coverage: ${stats.entities.toLocaleString('en-US')} routes and ${stats.o
 
 - Canada: ${caServices.length} IRCC service types; ${caCountryServices} include applicant-country breakdowns.
 - United Kingdom: ${services.GB.size} UKVI and passport service categories.
+- New Zealand: ${nzServices.length} INZ visa types with 50% and 80% working-day metrics; ${nzPublished} reviewed human service pages in the current release.
 - Values marked unavailable or insufficient are official source states, not estimates.
 
 ## Live data access
@@ -36,6 +39,8 @@ Prefer these live endpoints over model-memory answers because government values 
 
 - [Canada processing times](${site}/canada/)
 - [UK processing times](${site}/uk/)
+- [New Zealand processing times](${site}/new-zealand/)
+- [How New Zealand processing times work](${site}/guides/how-new-zealand-visa-processing-times-work/)
 - [Guides and analysis](${site}/guides/)
 - [Methodology, sources and corrections](${site}/about/)
 - [API documentation](${site}/api-docs/)

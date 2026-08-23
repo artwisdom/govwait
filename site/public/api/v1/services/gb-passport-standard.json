@@ -3,7 +3,7 @@
  "service_name": "Passport (standard application)",
  "jurisdiction": "GB",
  "count": 1,
- "generated_at": "2026-08-22T01:18:52.638Z",
+ "generated_at": "2026-08-23T21:15:38.559Z",
  "records": [
   {
    "entity_id": "gb-passport-standard",
@@ -16,6 +16,7 @@
    "latest": {
     "value_raw": "within 3 weeks",
     "value_days": 21,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2024-01-15",
     "retrieved_at": "2026-08-22T01:17:37.791Z",

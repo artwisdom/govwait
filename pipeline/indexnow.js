@@ -7,6 +7,7 @@ import { readFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { isServicePublished } from '../site/src/lib/publication.js';
 
 const KEY = 'acfaf943552a8fee0a3eee74756ef0b2';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -14,7 +15,7 @@ const SITE = (process.env.SITE_URL || '').replace(/\/$/, '');
 if (!SITE) { console.log('[indexnow] SITE_URL unset — skipped'); process.exit(0); }
 
 const latest = JSON.parse(readFileSync(path.join(ROOT, 'data', 'exports', 'latest.json'), 'utf8'));
-const JUR = { CA: 'canada', GB: 'uk' };
+const JUR = { CA: 'canada', GB: 'uk', NZ: 'new-zealand' };
 const slug = s => String(s)
   .normalize('NFKD')
   .replace(/[\u0300-\u036f]/g, '')
@@ -24,11 +25,13 @@ const slug = s => String(s)
 
 function serviceSlug(r) {
   if (r.jurisdiction === 'CA') return r.service_key.replace(/^ca-/, '');
+  if (r.jurisdiction === 'NZ') return r.service_key.replace(/^nz-/, '');
   const segment = r.service_key.split('--').pop().replace(/^gb-/, '');
   return r.service_key.startsWith('gb-in-uk-') ? `in-uk-${segment}` : segment;
 }
 
 function pathsForRecord(r) {
+  if (!isServicePublished(r.jurisdiction, r.service_key)) return [];
   const service = serviceSlug(r);
   const paths = [`/${JUR[r.jurisdiction]}/${service}/`];
   // Country pages without a published value remain useful and crawlable, but
@@ -45,7 +48,8 @@ function fullSitePaths(records) {
     '/guides/how-canada-processing-times-work/',
     '/guides/canada-visitor-visa-by-country/',
     '/guides/uk-visa-processing-standards/',
-    '/canada/', '/uk/',
+    '/guides/how-new-zealand-visa-processing-times-work/',
+    '/canada/', '/uk/', '/new-zealand/',
   ]);
   for (const r of records) for (const p of pathsForRecord(r)) paths.add(p);
   return paths;

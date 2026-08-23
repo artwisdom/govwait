@@ -6,7 +6,8 @@ info:
   description: |
     Static, prebuilt JSON served from a CDN. No authentication, no rate-limit headers
     (be polite anyway). Every value is an official government publication with
-    source URL, the agency's own update date, and our retrieval timestamp.
+    source URL, the agency's own update date when supplied (otherwise the
+    first-observed date), and our retrieval timestamp.
     License: CC BY 4.0 — attribute GovWait and the originating agency.
   license:
     name: CC BY 4.0
@@ -28,7 +29,7 @@ paths:
   /api/v1/jurisdictions/{code}.json:
     get:
       operationId: getJurisdiction
-      summary: All routes for one government (e.g. ca, gb) with latest values
+      summary: All routes for one government (e.g. ca, gb, nz) with latest values
       parameters:
         - name: code
           in: path
@@ -65,7 +66,7 @@ paths:
         - name: entity_id
           in: path
           required: true
-          schema: { type: string, pattern: "^[a-z0-9-]+(--[a-z]{2})?$" }
+          schema: { type: string, pattern: "^[a-z0-9-]+(--(?:[a-z]{2}|p(?:50|80)))?$" }
       responses:
         "200":
           description: Entity document
@@ -77,13 +78,13 @@ components:
   schemas:
     Observation:
       type: object
-      required: [value_raw, status, effective_date, retrieved_at, source_url]
+      required: [value_raw, value_days, unit_original, status, effective_date, retrieved_at, source_url]
       properties:
         value_raw: { type: string, description: "Verbatim official string, e.g. '31 days'" }
-        value_days: { type: [number, "null"], description: "Normalized to days (weeks x7, months x30.44); null when no time is published" }
-        unit_original: { type: [string, "null"], enum: [days, weeks, months, null] }
+        value_days: { type: [number, "null"], description: "Numeric duration. Calendar units are normalized to days (weeks x7, months x30.44). Official working-day figures preserve their working-day count; see unit_original. Null when no time is published." }
+        unit_original: { type: [string, "null"], enum: [minutes, hours, days, weeks, months, working days, null] }
         status: { type: string, enum: [ok, unavailable, insufficient_data] }
-        effective_date: { type: string, format: date, description: "The agency's own last-updated date" }
+        effective_date: { type: string, format: date, description: "The agency's own last-updated date when supplied; otherwise the date GovWait first observed this changed value" }
         retrieved_at: { type: string, description: "When we fetched it (ISO 8601)" }
         source_url: { type: string, format: uri }
         confidence: { type: string, enum: [official] }

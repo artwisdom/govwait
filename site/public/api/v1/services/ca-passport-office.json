@@ -3,7 +3,7 @@
  "service_name": "Passport (in person at a passport office)",
  "jurisdiction": "CA",
  "count": 1,
- "generated_at": "2026-08-22T01:18:52.638Z",
+ "generated_at": "2026-08-23T21:15:38.559Z",
  "records": [
   {
    "entity_id": "ca-passport-office",
@@ -16,6 +16,7 @@
    "latest": {
     "value_raw": "up to 2 weeks, plus mail time",
     "value_days": 14,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2026-08-22",
     "retrieved_at": "2026-08-22T01:17:31.484Z",

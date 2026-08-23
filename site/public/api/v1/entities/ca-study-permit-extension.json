@@ -9,6 +9,7 @@
  "latest": {
   "value_raw": "64 days",
   "value_days": 64,
+  "unit_original": "days",
   "status": "ok",
   "effective_date": "2026-08-19",
   "retrieved_at": "2026-08-22T01:17:28.517Z",
@@ -19,6 +20,7 @@
   {
    "value_raw": "64 days",
    "value_days": 64,
+   "unit_original": "days",
    "status": "ok",
    "effective_date": "2026-08-19",
    "retrieved_at": "2026-08-22T01:17:28.517Z",

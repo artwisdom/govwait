@@ -43,6 +43,8 @@ add a dashboard screenshot alongside the textual policy evidence in
 Per HANDOFF_05 N1–N2. flpt first if choosing one: 10 years of PR history in a day's work.
 **Accept:** validation green with new floors; NZ pages rolled out ≤30/week (feature-flag the getStaticPaths slice — publish new jurisdiction's pages in weekly batches); flpt history renders on PR-program pages; metric semantics labeled (forward vs backward); runbook entries added.
 
+**Status 2026-08-23:** NZ half complete and green: 133 visas / 266 p50+p80 working-day entities in API/MCP, with a 27-page first public cohort and runbook coverage. IRCC flpt remains the unfinished half of R2.
+
 ## Phase R3 — /reports: the weekly-changes digest (the linkable asset + CIC News displacement)
 
 Auto-generated per-jurisdiction "What changed this week/month" pages: biggest movers (▲/▼ %), newly published routes, methodology note; hand-editable intro paragraph per issue (1 sentence is enough). Permanent URLs (/reports/canada/2026-w35/) + a latest alias. RSS feed of changes (also the alert backbone).

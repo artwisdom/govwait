@@ -1,5 +1,5 @@
-# INACTIVE until this repo is pushed to GitHub by the owner.
-# Estimated usage: ~35 min/month (2 runs/week x ~4 min; free tier is 2,000).
+# ACTIVE. Estimated usage after the New Zealand source addition: ~65 min/month
+# (2 runs/week x ~7.5 min; comfortably inside the 2,000-minute free tier).
 #
 # Refreshes the dataset from official sources, validates, and commits ONLY if
 # validation passes. A failed run publishes nothing and writes a diagnosis to

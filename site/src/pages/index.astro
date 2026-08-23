@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import AdSlot from '../components/AdSlot.astro';
 import config from '../../site.config.json';
-import { stats, services, records, JURISDICTIONS, fmtDate, dataLastmod } from '../lib/data.js';
+import { stats, services, records, JURISDICTIONS, publishedServices, fmtDate, dataLastmod } from '../lib/data.js';
 
 const origin = config.SITE_URL.replace(/\/$/, '');
 const orgId = `${origin}/#organization`;
@@ -73,10 +73,14 @@ const govCount = stats.jurisdictions.length;
     <section>
       <h2><a href={`/${jur.slug}/`}>{jur.name}</a> <span class="muted small">— {jur.agency}</span></h2>
       <ul class="grid">
-        {[...services[code].values()].map(svc => (
+        {publishedServices(code).map(svc => (
           <li>
             <a class="t" href={`/${jur.slug}/${svc.slug}/`}>{svc.name}</a><br />
-            <span class="small muted">{svc.hasApplicantPages ? `${svc.records.length} applicant countries` : svc.records[0].value_raw} · updated {fmtDate(svc.latestEffective)}</span>
+            <span class="small muted">{svc.hasApplicantPages
+              ? `${svc.records.length} applicant countries`
+              : svc.isPercentileService
+                ? `50%: ${svc.percent50.value_raw} · 80%: ${svc.percent80.value_raw}`
+                : svc.records[0].value_raw} · data date {fmtDate(svc.latestEffective)}</span>
           </li>
         ))}
       </ul>

@@ -13,7 +13,8 @@ const err = (f, msg) => errors.push(`${f}: ${msg}`);
 
 const STATUS = new Set(['ok', 'unavailable', 'insufficient_data']);
 const CATEGORY = new Set(['visa', 'permit', 'sponsorship', 'refugee', 'settlement', 'passport']);
-const UNITS = new Set(['days', 'weeks', 'months', null]);
+const UNITS = new Set(['minutes', 'hours', 'days', 'weeks', 'months', 'working days', null]);
+const ENTITY_ID = /^[a-z0-9-]+(--(?:[a-z]{2}|p(?:50|80)))?$/;
 
 function checkObs(f, o, label) {
   for (const k of ['value_raw', 'status', 'effective_date', 'retrieved_at', 'source_url']) {
@@ -22,6 +23,7 @@ function checkObs(f, o, label) {
   if (!STATUS.has(o.status)) err(f, `${label}.status invalid: ${o.status}`);
   if (o.status === 'ok' && typeof o.value_days !== 'number') err(f, `${label}: status=ok but value_days not numeric`);
   if (o.status !== 'ok' && o.value_days !== null && o.value_days !== undefined) err(f, `${label}: status=${o.status} but value_days present`);
+  if (!UNITS.has(o.unit_original ?? null)) err(f, `${label}.unit_original invalid: ${o.unit_original}`);
   if (!/^\d{4}-\d{2}-\d{2}$/.test(o.effective_date)) err(f, `${label}.effective_date not a date: ${o.effective_date}`);
   if (!/^https:\/\//.test(o.source_url)) err(f, `${label}.source_url not https`);
 }
@@ -29,6 +31,7 @@ function checkCore(f, r) {
   for (const k of ['entity_id', 'jurisdiction', 'service_key', 'service_name', 'latest']) {
     if (r[k] === undefined) err(f, `record.${k} missing`);
   }
+  if (!ENTITY_ID.test(r.entity_id)) err(f, `bad entity_id ${r.entity_id}`);
   if (!/^[A-Z]{2}$/.test(r.jurisdiction)) err(f, `bad jurisdiction ${r.jurisdiction}`);
   if (r.service_category && !CATEGORY.has(r.service_category)) err(f, `bad category ${r.service_category}`);
   if (r.applicant_country !== null && !/^[A-Z]{2}$/.test(r.applicant_country)) err(f, `bad applicant_country ${r.applicant_country}`);

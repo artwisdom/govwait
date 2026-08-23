@@ -8,6 +8,7 @@ export function getStaticPaths() {
   const paths = [];
   for (const [code, jur] of Object.entries(JURISDICTIONS)) {
     for (const svc of services[code].values()) {
+      if (!svc.published) continue;
       paths.push({ params: { country: jur.slug, service: svc.slug }, props: { code, slug: svc.slug } });
     }
   }
@@ -17,7 +18,8 @@ const { code, slug } = Astro.props;
 const jur = JURISDICTIONS[code];
 const svc = services[code].get(slug);
 const single = !svc.hasApplicantPages;
-const rec = svc.records[0];
+const percentile = svc.isPercentileService;
+const rec = percentile ? svc.percent80 : svc.records[0];
 const ok = svc.records.filter(r => r.status === 'ok');
 
 const crumbs = {
@@ -44,18 +46,47 @@ const scopeDetail = svc.scope
   : null;
 const monthTok = fmtMonthYear(rec.effective_date);
 const monthShort = fmtMonthYearShort(rec.effective_date);
-const title = single
+const title = percentile
+  ? `NZ ${svc.seoName} processing time: 50% ${svc.percent50.value_raw}, 80% ${svc.percent80.value_raw}`
+  : single
   ? `${jur.shortName} ${topic}${scopeDetail ? ` (${scopeDetail})` : ''}: ${humanValue(rec)} (${monthShort})`
   : `${jur.shortName} ${topic} by country (${monthShort})`;
-const desc = single
+const desc = percentile
+  ? `INZ currently reports 50% of ${svc.name} applications processed within ${svc.percent50.value_raw} and 80% within ${svc.percent80.value_raw}. Official source and history.`
+  : single
   ? `${jur.shortAgency} reports ${humanValue(rec)} for ${svc.seoName}${scopeDetail ? ` (${scopeDetail})` : ''}. Updated ${monthTok}, with official-source history.`
   : `Current ${jur.shortAgency} ${topic.toLowerCase()} for ${svc.records.length} applicant countries: ${ok.length} published values. Updated ${monthShort}, with official sources and history.`;
 ---
 <Base title={title} description={desc} jsonld={[crumbs, govService]}>
   <nav class="crumbs"><a href="/">Home</a> › <a href={`/${jur.slug}/`}>{jur.name}</a> › {svc.name}</nav>
-  <h1>{single ? `${svc.name} (${jur.name}): current processing time` : `${jur.name} ${svc.name}: processing time by applicant country`}</h1>
+  <h1>{percentile
+    ? `${svc.name} processing time: current New Zealand figures`
+    : single ? `${svc.name} (${jur.name}): current processing time` : `${jur.name} ${svc.name}: processing time by applicant country`}</h1>
 
-  {single ? (
+  {percentile ? (
+    <>
+      <div class="stats">
+        <div><div class="n">{humanValue(svc.percent50)}</div><div class="l">50% of applications processed</div></div>
+        <div><div class="n">{humanValue(svc.percent80)}</div><div class="l">80% of applications processed</div></div>
+      </div>
+      <Freshness record={svc.percent80} />
+      <AdSlot position="service-top" />
+      <p>Immigration New Zealand currently reports that 50% of <strong>{svc.name}</strong> applications are processed within <strong>{humanValue(svc.percent50)}</strong>, and 80% within <strong>{humanValue(svc.percent80)}</strong>. These are working days, excluding Saturdays, Sundays and New Zealand public holidays.</p>
+      <p>The figures are a guide based on current processing timeframes, not a deadline or promise for an individual application. Missing information, application complexity and peak demand can make a case take longer.</p>
+      <h2>History we have recorded</h2>
+      <div class="tablewrap"><table>
+        <thead><tr><th>Official measure</th><th>Official value</th><th>First observed</th><th>Verified on that observation</th></tr></thead>
+        <tbody>{[
+          ...svc.percent50.history.map(h => ({ ...h, metric: '50% processed' })),
+          ...svc.percent80.history.map(h => ({ ...h, metric: '80% processed' })),
+        ].sort((a, b) => b.effective_date.localeCompare(a.effective_date) || a.metric.localeCompare(b.metric)).map(h => (
+          <tr><td>{h.metric}</td><td>{h.value_raw}</td><td class="num">{fmtDate(h.effective_date)}</td><td class="num">{fmtDate(h.retrieved_at)}</td></tr>
+        ))}</tbody>
+      </table></div>
+      <p class="small muted">INZ does not provide a source update date for this tool. We therefore date a value when GovWait first observes it and add a new history row only when the official value changes.</p>
+      <p class="small"><a href="/guides/how-new-zealand-visa-processing-times-work/">How to read New Zealand’s 50% and 80% processing-time figures →</a></p>
+    </>
+  ) : single ? (
     <>
       <div class="value-hero"><span class={`v ${rec.status === 'ok' ? '' : 'na'}`}>{humanValue(rec)}</span></div>
       <Freshness record={rec} />
@@ -63,12 +94,12 @@ const desc = single
       <p>This is the current figure {jur.agency} publishes for <strong>{rec.service_name}</strong>. It reflects {svc.blurb}. The figure is a published statistic or service standard, not a guarantee for any individual application.</p>
       <h2>History we have recorded</h2>
       <div class="tablewrap"><table>
-        <thead><tr><th>Official value</th><th>Published/updated</th><th>Verified by us</th></tr></thead>
+        <thead><tr><th>Official value</th><th>{rec.unstamped ? 'First observed' : 'Published/updated'}</th><th>Verified on that observation</th></tr></thead>
         <tbody>{rec.history.slice().reverse().map(h => (
           <tr><td>{h.value_raw}</td><td class="num">{fmtDate(h.effective_date)}</td><td class="num">{fmtDate(h.retrieved_at)}</td></tr>
         ))}</tbody>
       </table></div>
-      <p class="small muted">Tracking began August 2026. History grows automatically with each official update.</p>
+      <p class="small muted">Tracking began August 2026. History grows automatically with each official update.{rec.unstamped ? ' This source has no update stamp, so unchanged checks do not create duplicate history rows.' : ''}</p>
     </>
   ) : (
     <>

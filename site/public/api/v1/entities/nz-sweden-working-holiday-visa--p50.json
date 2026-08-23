@@ -1,0 +1,31 @@
+{
+ "entity_id": "nz-sweden-working-holiday-visa--p50",
+ "jurisdiction": "NZ",
+ "service_key": "nz-sweden-working-holiday-visa",
+ "service_name": "Sweden Working Holiday Visa — 50% processed",
+ "service_category": "visa",
+ "applicant_country": null,
+ "applicant_country_name": null,
+ "latest": {
+  "value_raw": "3 working days",
+  "value_days": 3,
+  "unit_original": "working days",
+  "status": "ok",
+  "effective_date": "2026-08-23",
+  "retrieved_at": "2026-08-23T21:08:15.995Z",
+  "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
+  "confidence": "official"
+ },
+ "history": [
+  {
+   "value_raw": "3 working days",
+   "value_days": 3,
+   "unit_original": "working days",
+   "status": "ok",
+   "effective_date": "2026-08-23",
+   "retrieved_at": "2026-08-23T21:08:15.995Z",
+   "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/"
+  }
+ ],
+ "license": "CC BY 4.0 — attribute GovWait and the originating government agency. Underlying figures are official government publications."
+}

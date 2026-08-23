@@ -1,14 +1,15 @@
 ---
 import Base from '../../layouts/Base.astro';
 import AdSlot from '../../components/AdSlot.astro';
-import { services, JURISDICTIONS, fmtDate, fmtMonthYear } from '../../lib/data.js';
+import { services, JURISDICTIONS, publishedServices, fmtDate, fmtMonthYear } from '../../lib/data.js';
 
 export function getStaticPaths() {
   return Object.entries(JURISDICTIONS).map(([code, jur]) => ({ params: { country: jur.slug }, props: { code } }));
 }
 const { code } = Astro.props;
 const jur = JURISDICTIONS[code];
-const svcs = [...services[code].values()];
+const svcs = publishedServices(code);
+const allServiceCount = services[code].size;
 const latest = svcs.map(s => s.latestEffective).sort().at(-1);
 const jsonld = [{
   '@context': 'https://schema.org',
@@ -25,6 +26,7 @@ const jsonld = [{
   <nav class="crumbs"><a href="/">Home</a> › {jur.name}</nav>
   <h1>{jur.name}: official processing times</h1>
   <p class="lede">All figures below are published by {jur.agency} and re-checked by us on a weekly schedule. Click a service for the full breakdown{svcs.some(s=>s.hasApplicantPages) ? ' by applicant country' : ''}.</p>
+  {code === 'NZ' && <p class="small muted">This first reviewed release covers {svcs.length} high-interest visas. The free API already includes all {allServiceCount} visa types in INZ’s current tool; additional human pages are released in quality-checked batches.</p>}
   <AdSlot position="hub-top" />
   <div class="tablewrap"><table>
     <thead><tr><th>Service</th><th>Coverage</th><th>Official value</th><th>Last updated</th></tr></thead>
@@ -32,8 +34,12 @@ const jsonld = [{
       {svcs.map(svc => (
         <tr>
           <td><a href={`/${jur.slug}/${svc.slug}/`}>{svc.name}</a></td>
-          <td class="small muted">{svc.hasApplicantPages ? `${svc.records.length} countries (${svc.okCount} with published times)` : 'service standard'}</td>
-          <td class="num">{svc.hasApplicantPages ? `${svc.records.find(r=>r.status==='ok')?.value_raw ?? '—'} (fastest)` : svc.records[0].value_raw}</td>
+          <td class="small muted">{svc.hasApplicantPages ? `${svc.records.length} countries (${svc.okCount} with published times)` : svc.isPercentileService ? 'current INZ percentiles' : 'service standard'}</td>
+          <td class="num">{svc.hasApplicantPages
+            ? `${svc.records.find(r=>r.status==='ok')?.value_raw ?? '—'} (fastest)`
+            : svc.isPercentileService
+              ? `50%: ${svc.percent50.value_raw} · 80%: ${svc.percent80.value_raw}`
+              : svc.records[0].value_raw}</td>
           <td class="num">{fmtDate(svc.latestEffective)}</td>
         </tr>
       ))}

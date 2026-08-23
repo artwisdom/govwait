@@ -23,7 +23,7 @@ All dependencies install locally (`node_modules` inside project). No sudo or mac
 - [x] Phase 6 — Workflows active (refresh ~35min/mo; deploy to Cloudflare Pages)
 - [x] Phase 7 — QA: all 13 gates green (docs/QA_REPORT.md)
 - [x] Phase 8 — All deliverables complete
-- [x] Post-launch (owner-directed): go-live executed (repo public, Pages live, cron active); design system v2; SEO upgrades (split sitemaps, IndexNow, month-token titles, FAQ/deltas); dataset expanded to **2,005 routes / 6 sources**; 4-agent research round; **/handoff package for Codex transfer (7 files)**
+- [x] Post-launch (owner-directed): go-live executed (repo public, Pages live, cron active); design system v2; SEO upgrades; dataset expanded to **2,271 metric routes / 7 sources / 3 governments**, including all 133 visas in Immigration New Zealand's current tool; **/handoff package for Codex transfer (7 files)**
 
 ## Deployment status (verified through 2026-08-23)
 - Repo LIVE: https://github.com/artwisdom/govwait (public, main)
@@ -48,8 +48,8 @@ All dependencies install locally (`node_modules` inside project). No sudo or mac
   engines on 2026-08-23. Google re-read it as a **Sitemap index / Success**; Bing
   accepted it and currently reports **Submitted / Processing**. The public sitemap
   independently returns HTTP 200 with `application/xml`.
-- Discoverability audit: the site now has 561 intentionally indexable pages and
-  561 matching sitemap URLs across separate hubs/Canada/UK children. Another
+- Discoverability audit: the site now has 588 intentionally indexable pages and
+  588 matching sitemap URLs across separate hubs/Canada/UK/New Zealand children. Another
   1,462 official no-value applicant pages stay live and crawlable with
   `noindex, follow` until they gain a numeric value. A blocking CI audit protects
   metadata, canonicals, internal links, structured data, robots/llms policy,
@@ -72,4 +72,4 @@ queue position or priority.
 ## Open threads
 - US/AU/IE sources WAF-blocked to honest bots — owner-decision item (documented in DEPLOYMENT_GUIDE).
 - `npm audit` reports four Astro 4 build-toolchain advisories (1 moderate, 3 high). Production is pre-rendered static HTML/JSON on Cloudflare Pages—no Astro/Vite development or server runtime is exposed. Plan and test the major Astro 7/Node runtime upgrade before adding any dynamic server rendering; do not apply `npm audit fix --force` blindly.
-- NZ/SE/NL/DK verified robots-permitted, not yet built (expansion targets in MAINTENANCE_RUNBOOK).
+- New Zealand INZ processing times are built. Norway/Finland/Sweden/Netherlands/Denmark remain expansion targets; NZ passports remain blocked.

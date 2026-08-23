@@ -5,6 +5,7 @@
   "type": "module",
   "description": "Zero-dependency data pipeline: official government processing times -> SQLite -> JSON exports",
   "scripts": {
+    "test": "node --test tests/*.test.js",
     "run": "node run.js",
     "refresh": "node run.js --refresh"
   }

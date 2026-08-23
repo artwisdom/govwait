@@ -9,6 +9,7 @@
  "latest": {
   "value_raw": "5 minutes",
   "value_days": 0.0035,
+  "unit_original": "minutes",
   "status": "ok",
   "effective_date": "2026-08-19",
   "retrieved_at": "2026-08-22T01:17:28.517Z",
@@ -19,6 +20,7 @@
   {
    "value_raw": "5 minutes",
    "value_days": 0.0035,
+   "unit_original": "minutes",
    "status": "ok",
    "effective_date": "2026-08-19",
    "retrieved_at": "2026-08-22T01:17:28.517Z",

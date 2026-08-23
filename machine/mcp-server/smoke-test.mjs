@@ -64,6 +64,11 @@ try {
   assert(/^\d+ days?$/.test(oneBody.current_value), `get_latest_value returns a duration (got "${oneBody.current_value}")`);
   assert(!!oneBody.source_url && !!oneBody.official_last_updated, 'get_latest_value carries provenance (source_url + official date)');
 
+  const nz = await rpc('tools/call', { name: 'get_latest_value', arguments: { service_key: 'nz-visitor-visa' } });
+  const nzBody = JSON.parse(nz.result.content[0].text);
+  assert(nzBody.metrics?.length === 2, 'New Zealand service lookup returns both official percentile metrics');
+  assert(nzBody.metrics.every(r => r.unit_original === 'working days'), 'New Zealand metrics preserve the official working-day unit');
+
   const cmp = await rpc('tools/call', { name: 'compare_values', arguments: { service_key: 'ca-visitor-visa', applicant_countries: ['IN', 'NG', 'PH', 'US'] } });
   const cmpBody = JSON.parse(cmp.result.content[0].text);
   assert(cmpBody.comparison.length === 4, 'compare_values returns all 4 requested countries');

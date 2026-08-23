@@ -13,7 +13,7 @@ pipeline/run.js ──▶ data/db.sqlite ──▶ data/exports/{latest,history,
                                             │
                     pipeline/build-api.js ──▶ site/public/api/v1/** (≈2,000 files)
                                             │
-                    site/ (Astro 4) ───────▶ site/dist (2,024 HTML pages + API + sitemaps)
+                    site/ (Astro 4) ───────▶ site/dist (2,051 HTML pages + API + sitemaps)
                                             │
                     machine/mcp-server ─────▶ stdio MCP for AI agents (reads exports)
 ```
@@ -48,26 +48,26 @@ pipeline/run.js ──▶ data/db.sqlite ──▶ data/exports/{latest,history,
 
 Root docs: `EXECUTION_REPORT.md`, `DEPLOYMENT_GUIDE.md` (owner steps; monetization
 section updated Aug 2026), `MAINTENANCE_RUNBOOK.md` (failure playbooks + add-a-source
-recipe), `RISK_REGISTER.md`, `DECISIONS.md` (21 numbered judgment calls), `STATE.md`.
+recipe), `RISK_REGISTER.md`, `DECISIONS.md` (32 numbered judgment calls), `STATE.md`.
 
 ## 3. Data model (SQLite, `pipeline/schema.sql`)
 
 - `sources(id, name, jurisdiction, agency, url, license_note, robots_status, robots_checked_at)`
-- `entities(id, source_id, jurisdiction, service_category, service_key, service_name, applicant_country, applicant_country_name)` — id example: `ca-visitor-visa--in`; UNIQUE(jurisdiction, service_key, applicant_country)
+- `entities(id, source_id, jurisdiction, service_category, service_key, service_name, applicant_country, applicant_country_name, active)` — id examples: `ca-visitor-visa--in`, `nz-visitor-visa--p80`; removed source routes become inactive while history remains; UNIQUE(jurisdiction, service_key, applicant_country)
 - `observations(entity_id, value_raw, value_days, unit_original, status, effective_date, retrieved_at, source_url, confidence)` — UNIQUE(entity_id, effective_date); INSERT OR IGNORE ⇒ **idempotent re-runs; history grows only when the agency republishes**
 
-Normalization: days×1, weeks×7, months×30.44; `value_raw` always preserved verbatim.
+Normalization: days×1, weeks×7, months×30.44; INZ working-day counts are preserved as working days and labeled in `unit_original`; `value_raw` is always preserved.
 Statuses: `ok` (numeric), `unavailable` ("No processing time available"),
 `insufficient_data` ("Not enough data") — nulls are displayed honestly as official facts.
-Current stats: 2,005 entities; ~540 numeric; sources: ircc-ptime (1,907), ircc-noncountry (19), ircc-passport (2), govuk-visa-times (39), govuk-inuk-times (37), govuk-passport (1). Unstamped-source change-detection semantics: see resolveUnstamped() in run.js.
+Current stats: 2,271 active entities; 806 numeric; sources: ircc-ptime (1,907), ircc-noncountry (19), ircc-passport (2), govuk-visa-times (39), govuk-inuk-times (37), govuk-passport (1), inz-processing-times (266 = 133 visas × p50/p80). INZ and Canadian passports use unstamped-source change detection; see `resolveUnstamped()` in run.js.
 
 ## 4. Commands (all verified working)
 
 ```bash
 node pipeline/run.js              # uses cache — safe offline
-node pipeline/run.js --refresh    # live fetch (polite; ~4 requests total)
+node pipeline/run.js --refresh    # live fetch (polite; INZ makes 133 listed lookups, ~7 min total)
 node pipeline/build-api.js        # exports -> static API files
-cd site && npm ci && npm run build && npm run audit:seo  # ~3s, 2,024 HTML pages
+cd site && npm ci && npm run build && npm run audit:seo  # ~3s, 2,051 HTML pages
 cd machine/mcp-server && npm ci && npm run build && npm run smoke
 node machine/api-conformance.mjs  # after a site build
 ```

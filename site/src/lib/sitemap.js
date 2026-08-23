@@ -17,13 +17,14 @@ export function hubUrls() {
     { path: '/guides/how-canada-processing-times-work/', lastmod: dataLastmod },
     { path: '/guides/canada-visitor-visa-by-country/', lastmod: dataLastmod },
     { path: '/guides/uk-visa-processing-standards/', lastmod: dataLastmod },
+    { path: '/guides/how-new-zealand-visa-processing-times-work/', lastmod: dataLastmod },
   ];
   for (const [code, jur] of Object.entries(JURISDICTIONS)) {
     const svcMap = services[code];
     urls.push({ path: `/${jur.slug}/`, lastmod: [...svcMap.values()].map(s => s.latestEffective).sort().at(-1) });
     // UK service pages are their own template family and sitemap so Search
     // Console can report their indexing separately from general hubs.
-    if (code === 'GB') continue;
+    if (code === 'GB' || code === 'NZ') continue;
     for (const svc of svcMap.values()) {
       urls.push({ path: `/${jur.slug}/${svc.slug}/`, lastmod: svc.latestEffective });
     }
@@ -34,6 +35,7 @@ export function hubUrls() {
 export function serviceUrls(jurCode) {
   const jur = JURISDICTIONS[jurCode];
   return [...services[jurCode].values()]
+    .filter(svc => svc.published)
     .map(svc => ({ path: `/${jur.slug}/${svc.slug}/`, lastmod: svc.latestEffective }));
 }
 

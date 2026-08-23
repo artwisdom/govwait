@@ -3,7 +3,7 @@
  "service_name": "Transit (Visit visas)",
  "jurisdiction": "GB",
  "count": 1,
- "generated_at": "2026-08-22T01:18:52.638Z",
+ "generated_at": "2026-08-23T21:15:38.559Z",
  "records": [
   {
    "entity_id": "gb-visit-visas--transit",
@@ -16,6 +16,7 @@
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2026-06-26",
     "retrieved_at": "2026-08-21T11:37:11.785Z",

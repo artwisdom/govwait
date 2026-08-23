@@ -20,6 +20,7 @@ CREATE TABLE IF NOT EXISTS entities (
   service_name TEXT NOT NULL,
   applicant_country TEXT,
   applicant_country_name TEXT,
+  active INTEGER NOT NULL DEFAULT 1 CHECK (active IN (0,1)),
   UNIQUE(jurisdiction, service_key, applicant_country)
 );
 

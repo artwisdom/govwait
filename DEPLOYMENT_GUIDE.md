@@ -26,7 +26,7 @@ submitted to both services.
    - `CLOUDFLARE_ACCOUNT_ID` = the Cloudflare account that owns the `govwait` Pages project.
    - Encrypted secret `CLOUDFLARE_API_TOKEN` = a least-privilege token with Cloudflare Pages edit access only.
 
-4. **[DONE] First data refresh.** `refresh-data` is green and runs Tue+Fri automatically (~35 min/month of the 2,000 free).
+4. **[DONE] Automated data refresh.** `refresh-data` is green and runs Tue+Fri automatically (about 65 min/month after the bounded INZ source addition, still well inside the 2,000-minute free tier).
 
 5. **[DONE, $10.46/yr] Custom domain.** `govwait.com` is registered through Cloudflare Registrar with auto-renew and registrar lock enabled. Proxied CNAME records route the apex and `www` to `govwait.pages.dev`; both custom domains are active with HTTPS.
 
@@ -75,7 +75,7 @@ submitted to both services.
 
 13. **US data (highest-value gap).** `travel.state.gov` and `egov.uscis.gov` block honest bots (Cloudflare 403). Options (updated Aug 2026: the USCIS developer portal has **no processing-times API** — only Case Status and FOIA — so there is no sanctioned automated route): (a) manual weekly entry of passport/USCIS times from the official pages (2 min/week) — add a `manual` confidence tier first; (b) leave the US out (current state). Never scrape around the WAF.
 14. **Australia / Ireland.** Same situation (Akamai/CloudFront blocks). Re-check quarterly by hand; both publish rich data if they ever open up or offer official APIs.
-15. **Next automated sources (robots-verified already):** NZ (immigration.govt.nz + dia.govt.nz), Sweden, Netherlands, Denmark — see MAINTENANCE_RUNBOOK "Adding a source".
+15. **Next automated sources:** Immigration New Zealand is now live. The next robots-verified candidates are Norway, Finland, Sweden, Netherlands and Denmark; NZ passports remain blocked. See MAINTENANCE_RUNBOOK "Adding a source".
 
 ## Placeholders inventory (grep-able)
 - `<<OWNER_PROVIDES>>` → only in docs and `.env.example`.

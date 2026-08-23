@@ -34,4 +34,10 @@ export function queryJson(sql) {
 export function initSchema() {
   const schema = readFileSync(path.join(ROOT, 'pipeline', 'schema.sql'), 'utf8');
   exec(schema);
+  // Forward-compatible migration for databases created before sources could
+  // retire entities. History remains in SQLite; exports include active rows.
+  const columns = queryJson(`PRAGMA table_info(entities)`);
+  if (!columns.some(column => column.name === 'active')) {
+    exec(`ALTER TABLE entities ADD COLUMN active INTEGER NOT NULL DEFAULT 1 CHECK (active IN (0,1));`);
+  }
 }

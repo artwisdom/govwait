@@ -3,7 +3,7 @@
  "service_name": "Verification of status (VoS)",
  "jurisdiction": "CA",
  "count": 1,
- "generated_at": "2026-08-22T01:18:52.638Z",
+ "generated_at": "2026-08-23T21:15:38.559Z",
  "records": [
   {
    "entity_id": "ca-verification-of-status",
@@ -16,6 +16,7 @@
    "latest": {
     "value_raw": "10 weeks",
     "value_days": 70,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-22T01:17:28.517Z",

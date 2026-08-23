@@ -9,6 +9,7 @@
  "latest": {
   "value_raw": "12 months*",
   "value_days": 365.28,
+  "unit_original": "months",
   "status": "ok",
   "effective_date": "2025-07-21",
   "retrieved_at": "2026-08-22T01:17:34.729Z",
@@ -19,6 +20,7 @@
   {
    "value_raw": "12 months*",
    "value_days": 365.28,
+   "unit_original": "months",
    "status": "ok",
    "effective_date": "2025-07-21",
    "retrieved_at": "2026-08-22T01:17:34.729Z",

@@ -3,7 +3,7 @@
  "service_name": "Privately sponsored refugee: sponsor processing",
  "jurisdiction": "CA",
  "count": 212,
- "generated_at": "2026-08-22T01:18:52.638Z",
+ "generated_at": "2026-08-23T21:15:38.559Z",
  "records": [
   {
    "entity_id": "ca-refugee-private-sponsor-side--ad",
@@ -16,6 +16,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -34,6 +35,7 @@
    "latest": {
     "value_raw": "9 months",
     "value_days": 273.96,
+    "unit_original": "months",
     "status": "ok",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -52,6 +54,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -70,6 +73,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -88,6 +92,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -106,6 +111,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -124,6 +130,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -142,6 +149,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -160,6 +168,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -178,6 +187,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -196,6 +206,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -214,6 +225,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -232,6 +244,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -250,6 +263,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -268,6 +282,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -286,6 +301,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -304,6 +320,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -322,6 +339,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -340,6 +358,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -358,6 +377,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -376,6 +396,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -394,6 +415,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -412,6 +434,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -430,6 +453,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -448,6 +472,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -466,6 +491,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -484,6 +510,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -502,6 +529,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -520,6 +548,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -538,6 +567,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -556,6 +586,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -574,6 +605,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -592,6 +624,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -610,6 +643,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -628,6 +662,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -646,6 +681,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -664,6 +700,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -682,6 +719,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -700,6 +738,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -718,6 +757,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -736,6 +776,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -754,6 +795,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -772,6 +814,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -790,6 +833,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -808,6 +852,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -826,6 +871,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -844,6 +890,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -862,6 +909,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -880,6 +928,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -898,6 +947,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -916,6 +966,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -934,6 +985,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -952,6 +1004,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -970,6 +1023,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -988,6 +1042,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1006,6 +1061,7 @@
    "latest": {
     "value_raw": "27 months",
     "value_days": 821.88,
+    "unit_original": "months",
     "status": "ok",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1024,6 +1080,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1042,6 +1099,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1060,6 +1118,7 @@
    "latest": {
     "value_raw": "27 months",
     "value_days": 821.88,
+    "unit_original": "months",
     "status": "ok",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1078,6 +1137,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1096,6 +1156,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1114,6 +1175,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1132,6 +1194,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1150,6 +1213,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1168,6 +1232,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1186,6 +1251,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1204,6 +1270,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1222,6 +1289,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1240,6 +1308,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1258,6 +1327,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1276,6 +1346,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1294,6 +1365,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1312,6 +1384,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1330,6 +1403,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1348,6 +1422,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1366,6 +1441,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1384,6 +1460,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1402,6 +1479,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1420,6 +1498,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1438,6 +1517,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1456,6 +1536,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1474,6 +1555,7 @@
    "latest": {
     "value_raw": "27 months",
     "value_days": 821.88,
+    "unit_original": "months",
     "status": "ok",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1492,6 +1574,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1510,6 +1593,7 @@
    "latest": {
     "value_raw": "26 months",
     "value_days": 791.44,
+    "unit_original": "months",
     "status": "ok",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1528,6 +1612,7 @@
    "latest": {
     "value_raw": "27 months",
     "value_days": 821.88,
+    "unit_original": "months",
     "status": "ok",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1546,6 +1631,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1564,6 +1650,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1582,6 +1669,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1600,6 +1688,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1618,6 +1707,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1636,6 +1726,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1654,6 +1745,7 @@
    "latest": {
     "value_raw": "26 months",
     "value_days": 791.44,
+    "unit_original": "months",
     "status": "ok",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1672,6 +1764,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1690,6 +1783,7 @@
    "latest": {
     "value_raw": "26 months",
     "value_days": 791.44,
+    "unit_original": "months",
     "status": "ok",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1708,6 +1802,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1726,6 +1821,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1744,6 +1840,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1762,6 +1859,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1780,6 +1878,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1798,6 +1897,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1816,6 +1916,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1834,6 +1935,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1852,6 +1954,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1870,6 +1973,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1888,6 +1992,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1906,6 +2011,7 @@
    "latest": {
     "value_raw": "1 month",
     "value_days": 30.44,
+    "unit_original": "months",
     "status": "ok",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1924,6 +2030,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1942,6 +2049,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1960,6 +2068,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1978,6 +2087,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -1996,6 +2106,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2014,6 +2125,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2032,6 +2144,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2050,6 +2163,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2068,6 +2182,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2086,6 +2201,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2104,6 +2220,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2122,6 +2239,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2140,6 +2258,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2158,6 +2277,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2176,6 +2296,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2194,6 +2315,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2212,6 +2334,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2230,6 +2353,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2248,6 +2372,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2266,6 +2391,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2284,6 +2410,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2302,6 +2429,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2320,6 +2448,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2338,6 +2467,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2356,6 +2486,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2374,6 +2505,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2392,6 +2524,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2410,6 +2543,7 @@
    "latest": {
     "value_raw": "29 months",
     "value_days": 882.76,
+    "unit_original": "months",
     "status": "ok",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2428,6 +2562,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2446,6 +2581,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2464,6 +2600,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2482,6 +2619,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2500,6 +2638,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2518,6 +2657,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2536,6 +2676,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2554,6 +2695,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2572,6 +2714,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2590,6 +2733,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2608,6 +2752,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2626,6 +2771,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2644,6 +2790,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2662,6 +2809,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2680,6 +2828,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2698,6 +2847,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2716,6 +2866,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2734,6 +2885,7 @@
    "latest": {
     "value_raw": "25 months",
     "value_days": 761,
+    "unit_original": "months",
     "status": "ok",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2752,6 +2904,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2770,6 +2923,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2788,6 +2942,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2806,6 +2961,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2824,6 +2980,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2842,6 +2999,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2860,6 +3018,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2878,6 +3037,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2896,6 +3056,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2914,6 +3075,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2932,6 +3094,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2950,6 +3113,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2968,6 +3132,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -2986,6 +3151,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3004,6 +3170,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3022,6 +3189,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3040,6 +3208,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3058,6 +3227,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3076,6 +3246,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3094,6 +3265,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3112,6 +3284,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3130,6 +3303,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3148,6 +3322,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3166,6 +3341,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3184,6 +3360,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3202,6 +3379,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3220,6 +3398,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3238,6 +3417,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3256,6 +3436,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3274,6 +3455,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3292,6 +3474,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3310,6 +3493,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3328,6 +3512,7 @@
    "latest": {
     "value_raw": "26 months",
     "value_days": 791.44,
+    "unit_original": "months",
     "status": "ok",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3346,6 +3531,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3364,6 +3550,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3382,6 +3569,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3400,6 +3588,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3418,6 +3607,7 @@
    "latest": {
     "value_raw": "27 months",
     "value_days": 821.88,
+    "unit_original": "months",
     "status": "ok",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3436,6 +3626,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3454,6 +3645,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3472,6 +3664,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3490,6 +3683,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3508,6 +3702,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3526,6 +3721,7 @@
    "latest": {
     "value_raw": "27 months",
     "value_days": 821.88,
+    "unit_original": "months",
     "status": "ok",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3544,6 +3740,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3562,6 +3759,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3580,6 +3778,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3598,6 +3797,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3616,6 +3816,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3634,6 +3835,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3652,6 +3854,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3670,6 +3873,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3688,6 +3892,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3706,6 +3911,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3724,6 +3930,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3742,6 +3949,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3760,6 +3968,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3778,6 +3987,7 @@
    "latest": {
     "value_raw": "26 months",
     "value_days": 791.44,
+    "unit_original": "months",
     "status": "ok",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3796,6 +4006,7 @@
    "latest": {
     "value_raw": "27 months",
     "value_days": 821.88,
+    "unit_original": "months",
     "status": "ok",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",
@@ -3814,6 +4025,7 @@
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,
+    "unit_original": null,
     "status": "insufficient_data",
     "effective_date": "2026-08-19",
     "retrieved_at": "2026-08-21T11:37:08.257Z",

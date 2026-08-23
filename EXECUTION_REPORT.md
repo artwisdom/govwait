@@ -14,7 +14,7 @@ actually taking, per government, per applicant country, with history.
 | Pipeline | Zero-dependency Node 20; politeness layer (honest UA, robots fail-closed, 3s/host, caching, 150/host cap); fails loudly on any anomaly | QA gate 1 |
 | Human skin | Astro 4 static site, **1,961 pages, zero build errors**: entity pages (~7KB each), comparison hubs, methodology/E-E-A-T page; freshness stamp + source link on every value; JSON-LD + canonical + sitemap; 2 reserved ad slots/page (empty comments) | QA gates 2a–2e |
 | Machine skin | Static JSON API (**1,997 files**) + OpenAPI 3.1 spec + conformance checker; **MCP server (TypeScript, stdio, 4 tools) with 8/8 smoke assertions passing**; `llms.txt` | QA gates 3–4 |
-| Automation | `refresh.yml` (Tue+Fri cron, ~35 min/month of 2,000 free) + `deploy.yml` (Pages + Cloudflare alternative), both **INACTIVE until pushed**; failure diagnosis into job summaries | Files reviewed; cannot run until pushed (by design) |
+| Automation | `refresh.yml` (Tue+Fri cron, ~65 min/month after INZ; 2,000 free) + `deploy.yml` (Cloudflare Pages), both active; failure diagnosis into job summaries | Live and verified post-launch |
 | Docs | DEPLOYMENT_GUIDE (15 numbered owner steps), MAINTENANCE_RUNBOOK (<1 hr/week + playbooks), RISK_REGISTER (with base rates), DECISIONS, STATE, QA_REPORT, ARCHITECTURE | This commit |
 
 ## Why this niche (summary; full scoring in NICHE_DECISION.md)
@@ -35,7 +35,7 @@ That history cannot be backfilled by any later competitor.
 - **Nothing is deployed, no accounts created, no domain bought, $0 spent, no remote added.** → DEPLOYMENT_GUIDE steps 1–7.
 - **US/Australia/Ireland sources excluded**: their sites 403 honest bots; we do not spoof browser UAs. Options (incl. the official USCIS developer API) → DEPLOYMENT_GUIDE steps 13–14.
 - Ad code, MCP directory submissions, pay-per-crawl: prepared as checklists only → steps 8–12.
-- NZ/SE/NL/DK sources: robots-verified but unbuilt (session scope cut, breadth-first per brief §0.5) → MAINTENANCE_RUNBOOK "Adding a source".
+- New Zealand INZ source: implemented 2026-08-23 (133 visas / 266 percentile metrics). Norway, Finland, Sweden, Netherlands and Denmark remain expansion candidates → MAINTENANCE_RUNBOOK "Adding a source".
 
 ## Honest first-90-days plan
 

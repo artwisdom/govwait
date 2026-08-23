@@ -1,7 +1,7 @@
 {
  "jurisdiction": "GB",
  "count": 77,
- "generated_at": "2026-08-22T01:18:52.638Z",
+ "generated_at": "2026-08-23T21:15:38.559Z",
  "services": [
   "gb-family-visas--adult-coming-to-be-cared-for-by-a-relative",
   "gb-family-visas--child",
@@ -93,6 +93,7 @@
    "latest": {
     "value_raw": "12 weeks",
     "value_days": 84,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2026-06-26",
     "retrieved_at": "2026-08-21T11:37:11.785Z",
@@ -111,6 +112,7 @@
    "latest": {
     "value_raw": "12 weeks",
     "value_days": 84,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2026-06-26",
     "retrieved_at": "2026-08-21T11:37:11.785Z",
@@ -129,6 +131,7 @@
    "latest": {
     "value_raw": "12 weeks",
     "value_days": 84,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2026-06-26",
     "retrieved_at": "2026-08-21T11:37:11.785Z",
@@ -147,6 +150,7 @@
    "latest": {
     "value_raw": "12 weeks",
     "value_days": 84,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2026-06-26",
     "retrieved_at": "2026-08-21T11:37:11.785Z",
@@ -165,6 +169,7 @@
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2025-07-21",
     "retrieved_at": "2026-08-22T01:17:34.729Z",
@@ -183,6 +188,7 @@
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2025-07-21",
     "retrieved_at": "2026-08-22T01:17:34.729Z",
@@ -201,6 +207,7 @@
    "latest": {
     "value_raw": "12 months*",
     "value_days": 365.28,
+    "unit_original": "months",
     "status": "ok",
     "effective_date": "2025-07-21",
     "retrieved_at": "2026-08-22T01:17:34.729Z",
@@ -219,6 +226,7 @@
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2025-07-21",
     "retrieved_at": "2026-08-22T01:17:34.729Z",
@@ -237,6 +245,7 @@
    "latest": {
     "value_raw": "12 months*",
     "value_days": 365.28,
+    "unit_original": "months",
     "status": "ok",
     "effective_date": "2025-07-21",
     "retrieved_at": "2026-08-22T01:17:34.729Z",
@@ -255,6 +264,7 @@
    "latest": {
     "value_raw": "12 weeks",
     "value_days": 84,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2025-07-21",
     "retrieved_at": "2026-08-22T01:17:34.729Z",
@@ -273,6 +283,7 @@
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2025-07-21",
     "retrieved_at": "2026-08-22T01:17:34.729Z",
@@ -291,6 +302,7 @@
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2025-07-21",
     "retrieved_at": "2026-08-22T01:17:34.729Z",
@@ -309,6 +321,7 @@
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2025-07-21",
     "retrieved_at": "2026-08-22T01:17:34.729Z",
@@ -327,6 +340,7 @@
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2025-07-21",
     "retrieved_at": "2026-08-22T01:17:34.729Z",
@@ -345,6 +359,7 @@
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2025-07-21",
     "retrieved_at": "2026-08-22T01:17:34.729Z",
@@ -363,6 +378,7 @@
    "latest": {
     "value_raw": "6 months",
     "value_days": 182.64,
+    "unit_original": "months",
     "status": "ok",
     "effective_date": "2025-07-21",
     "retrieved_at": "2026-08-22T01:17:34.729Z",
@@ -381,6 +397,7 @@
    "latest": {
     "value_raw": "6 months",
     "value_days": 182.64,
+    "unit_original": "months",
     "status": "ok",
     "effective_date": "2025-07-21",
     "retrieved_at": "2026-08-22T01:17:34.729Z",
@@ -399,6 +416,7 @@
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2025-07-21",
     "retrieved_at": "2026-08-22T01:17:34.729Z",
@@ -417,6 +435,7 @@
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2025-07-21",
     "retrieved_at": "2026-08-22T01:17:34.729Z",
@@ -435,6 +454,7 @@
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2025-07-21",
     "retrieved_at": "2026-08-22T01:17:34.729Z",
@@ -453,6 +473,7 @@
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2025-07-21",
     "retrieved_at": "2026-08-22T01:17:34.729Z",
@@ -471,6 +492,7 @@
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2025-07-21",
     "retrieved_at": "2026-08-22T01:17:34.729Z",
@@ -489,6 +511,7 @@
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2025-07-21",
     "retrieved_at": "2026-08-22T01:17:34.729Z",
@@ -507,6 +530,7 @@
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2025-07-21",
     "retrieved_at": "2026-08-22T01:17:34.729Z",
@@ -525,6 +549,7 @@
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2025-07-21",
     "retrieved_at": "2026-08-22T01:17:34.729Z",
@@ -543,6 +568,7 @@
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2025-07-21",
     "retrieved_at": "2026-08-22T01:17:34.729Z",
@@ -561,6 +587,7 @@
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2025-07-21",
     "retrieved_at": "2026-08-22T01:17:34.729Z",
@@ -579,6 +606,7 @@
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2025-07-21",
     "retrieved_at": "2026-08-22T01:17:34.729Z",
@@ -597,6 +625,7 @@
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2025-07-21",
     "retrieved_at": "2026-08-22T01:17:34.729Z",
@@ -615,6 +644,7 @@
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2025-07-21",
     "retrieved_at": "2026-08-22T01:17:34.729Z",
@@ -633,6 +663,7 @@
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2025-07-21",
     "retrieved_at": "2026-08-22T01:17:34.729Z",
@@ -651,6 +682,7 @@
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2025-07-21",
     "retrieved_at": "2026-08-22T01:17:34.729Z",
@@ -669,6 +701,7 @@
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2025-07-21",
     "retrieved_at": "2026-08-22T01:17:34.729Z",
@@ -687,6 +720,7 @@
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2025-07-21",
     "retrieved_at": "2026-08-22T01:17:34.729Z",
@@ -705,6 +739,7 @@
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2025-07-21",
     "retrieved_at": "2026-08-22T01:17:34.729Z",
@@ -723,6 +758,7 @@
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2025-07-21",
     "retrieved_at": "2026-08-22T01:17:34.729Z",
@@ -741,6 +777,7 @@
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2025-07-21",
     "retrieved_at": "2026-08-22T01:17:34.729Z",
@@ -759,6 +796,7 @@
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2025-07-21",
     "retrieved_at": "2026-08-22T01:17:34.729Z",
@@ -777,6 +815,7 @@
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2025-07-21",
     "retrieved_at": "2026-08-22T01:17:34.729Z",
@@ -795,6 +834,7 @@
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2025-07-21",
     "retrieved_at": "2026-08-22T01:17:34.729Z",
@@ -813,6 +853,7 @@
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2025-07-21",
     "retrieved_at": "2026-08-22T01:17:34.729Z",
@@ -831,6 +872,7 @@
    "latest": {
     "value_raw": "12 weeks",
     "value_days": 84,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2026-06-26",
     "retrieved_at": "2026-08-21T11:37:11.785Z",
@@ -849,6 +891,7 @@
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2026-06-26",
     "retrieved_at": "2026-08-21T11:37:11.785Z",
@@ -867,6 +910,7 @@
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2026-06-26",
     "retrieved_at": "2026-08-21T11:37:11.785Z",
@@ -885,6 +929,7 @@
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2026-06-26",
     "retrieved_at": "2026-08-21T11:37:11.785Z",
@@ -903,6 +948,7 @@
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2026-06-26",
     "retrieved_at": "2026-08-21T11:37:11.785Z",
@@ -921,6 +967,7 @@
    "latest": {
     "value_raw": "within 3 weeks",
     "value_days": 21,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2024-01-15",
     "retrieved_at": "2026-08-22T01:17:37.791Z",
@@ -939,6 +986,7 @@
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2026-06-26",
     "retrieved_at": "2026-08-21T11:37:11.785Z",
@@ -957,6 +1005,7 @@
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2026-06-26",
     "retrieved_at": "2026-08-21T11:37:11.785Z",
@@ -975,6 +1024,7 @@
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2026-06-26",
     "retrieved_at": "2026-08-21T11:37:11.785Z",
@@ -993,6 +1043,7 @@
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2026-06-26",
     "retrieved_at": "2026-08-21T11:37:11.785Z",
@@ -1011,6 +1062,7 @@
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2026-06-26",
     "retrieved_at": "2026-08-21T11:37:11.785Z",
@@ -1029,6 +1081,7 @@
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2026-06-26",
     "retrieved_at": "2026-08-21T11:37:11.785Z",
@@ -1047,6 +1100,7 @@
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2026-06-26",
     "retrieved_at": "2026-08-21T11:37:11.785Z",
@@ -1065,6 +1119,7 @@
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2026-06-26",
     "retrieved_at": "2026-08-21T11:37:11.785Z",
@@ -1083,6 +1138,7 @@
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2026-06-26",
     "retrieved_at": "2026-08-21T11:37:11.785Z",
@@ -1101,6 +1157,7 @@
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2026-06-26",
     "retrieved_at": "2026-08-21T11:37:11.785Z",
@@ -1119,6 +1176,7 @@
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2026-06-26",
     "retrieved_at": "2026-08-21T11:37:11.785Z",
@@ -1137,6 +1195,7 @@
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2026-06-26",
     "retrieved_at": "2026-08-21T11:37:11.785Z",
@@ -1155,6 +1214,7 @@
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2026-06-26",
     "retrieved_at": "2026-08-21T11:37:11.785Z",
@@ -1173,6 +1233,7 @@
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2026-06-26",
     "retrieved_at": "2026-08-21T11:37:11.785Z",
@@ -1191,6 +1252,7 @@
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2026-06-26",
     "retrieved_at": "2026-08-21T11:37:11.785Z",
@@ -1209,6 +1271,7 @@
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2026-06-26",
     "retrieved_at": "2026-08-21T11:37:11.785Z",
@@ -1227,6 +1290,7 @@
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2026-06-26",
     "retrieved_at": "2026-08-21T11:37:11.785Z",
@@ -1245,6 +1309,7 @@
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2026-06-26",
     "retrieved_at": "2026-08-21T11:37:11.785Z",
@@ -1263,6 +1328,7 @@
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2026-06-26",
     "retrieved_at": "2026-08-21T11:37:11.785Z",
@@ -1281,6 +1347,7 @@
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2026-06-26",
     "retrieved_at": "2026-08-21T11:37:11.785Z",
@@ -1299,6 +1366,7 @@
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2026-06-26",
     "retrieved_at": "2026-08-21T11:37:11.785Z",
@@ -1317,6 +1385,7 @@
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2026-06-26",
     "retrieved_at": "2026-08-21T11:37:11.785Z",
@@ -1335,6 +1404,7 @@
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2026-06-26",
     "retrieved_at": "2026-08-21T11:37:11.785Z",
@@ -1353,6 +1423,7 @@
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2026-06-26",
     "retrieved_at": "2026-08-21T11:37:11.785Z",
@@ -1371,6 +1442,7 @@
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2026-06-26",
     "retrieved_at": "2026-08-21T11:37:11.785Z",
@@ -1389,6 +1461,7 @@
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2026-06-26",
     "retrieved_at": "2026-08-21T11:37:11.785Z",
@@ -1407,6 +1480,7 @@
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2026-06-26",
     "retrieved_at": "2026-08-21T11:37:11.785Z",
@@ -1425,6 +1499,7 @@
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2026-06-26",
     "retrieved_at": "2026-08-21T11:37:11.785Z",
@@ -1443,6 +1518,7 @@
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2026-06-26",
     "retrieved_at": "2026-08-21T11:37:11.785Z",
@@ -1461,6 +1537,7 @@
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
+    "unit_original": "weeks",
     "status": "ok",
     "effective_date": "2026-06-26",
     "retrieved_at": "2026-08-21T11:37:11.785Z",

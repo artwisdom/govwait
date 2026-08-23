@@ -9,6 +9,7 @@
  "latest": {
   "value_raw": "8 weeks",
   "value_days": 56,
+  "unit_original": "weeks",
   "status": "ok",
   "effective_date": "2025-07-21",
   "retrieved_at": "2026-08-22T01:17:34.729Z",
@@ -19,6 +20,7 @@
   {
    "value_raw": "8 weeks",
    "value_days": 56,
+   "unit_original": "weeks",
    "status": "ok",
    "effective_date": "2025-07-21",
    "retrieved_at": "2026-08-22T01:17:34.729Z",

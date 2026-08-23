@@ -1,12 +1,13 @@
 {
-  "generated_at": "2026-08-22T01:18:52.638Z",
-  "entities": 2005,
-  "observations": 2005,
+  "generated_at": "2026-08-23T21:15:38.559Z",
+  "entities": 2271,
+  "observations": 2271,
   "jurisdictions": [
     "CA",
-    "GB"
+    "GB",
+    "NZ"
   ],
-  "services": 107,
+  "services": 240,
   "per_source": {
     "govuk-inuk-times": {
       "name": "UK visa processing times (inside UK)",
@@ -22,6 +23,11 @@
       "name": "UK visa processing times (outside UK)",
       "observations": 39,
       "latest_effective_date": "2026-06-26"
+    },
+    "inz-processing-times": {
+      "name": "New Zealand visa application processing times",
+      "observations": 266,
+      "latest_effective_date": "2026-08-23"
     },
     "ircc-noncountry": {
       "name": "IRCC processing times (non-country categories)",

@@ -2,8 +2,9 @@
 
 _Every source below was verified by actual fetch on 2026-08-21 with an honest bot UA
 unless marked otherwise. Items 1–2 of the original build order were IMPLEMENTED the
-same session (IRCC non-country + passports, UK in-UK + HMPO passport — live in the
-pipeline now, 2,005 routes). What remains starts at NZ._
+same session (IRCC non-country + passports, UK in-UK + HMPO passport). Immigration
+New Zealand was implemented and live-verified on 2026-08-23. What remains starts
+at IRCC flpt._
 
 ## Already implemented (for reference — done in pipeline)
 
@@ -12,20 +13,22 @@ pipeline now, 2,005 routes). What remains starts at NZ._
 - ✅ gov.uk `guidance/visa-processing-times-applications-inside-the-uk` (same table parser, footnote markers "12 months*" handled).
 - ✅ gov.uk HMPO `about-our-services` ("usually get your passport within 3 weeks", public_updated_at stamp).
 
-## NEXT UP: the remaining verified build order
+## Implemented after handoff
 
-### N1. New Zealand — Immigration NZ JSON API ⭐ (easy-JSON, ~2h)
+### N1. New Zealand — Immigration NZ JSON API ✅ implemented 2026-08-23
 ```
 POST https://www.immigration.govt.nz/processing-time-api/v1/getTimeline/
 Content-Type: multipart/form-data      field: visaID=<int>
 → {"Name":"Visitor Visa","Percent50":7,"Percent80":11,"AverageWait":"1 week","MostWaitTime":"2 weeks"}
 ```
-- Percent50/Percent80 = DAYS for 50%/80% completion. **Two metrics per visa — store as two entities (`nz-visitor-visa-p50`, `-p80`) or add a metric column; recommend two entities to avoid schema change.**
-- Verified IDs 1–58: ~45 live (1 Visitor, 6 USA WHV, 8 LTSSL Work, 11 Parent&Grandparent Visitor 51d/86d, 17 Transit, 25 Culturally Arranged Marriage, 55 Specific Purpose Work, ~25 WHV variants). Gaps return empty. **IDs >58 unverified (Student/AEWV/residence likely there) — enumerate 1–200 ONCE, cache the ID→Name map, never re-enumerate.**
+- The current official page exposes the complete 133-entry ID→name selector. The collector parses that list and follows only listed IDs; it never enumerates numeric ranges.
+- Percent50/Percent80 are official **working-day** counts for 50%/80% completion. They are stored as two entities per visa (`--p50`, `--p80`) sharing one human service page.
 - robots.txt: API path not disallowed. Imperva/Incapsula present but served honest curl fine — keep fail-closed guard.
-- ~50 POSTs/run with 3s delay ≈ 2.5 min/run. No update stamp in response → **unstamped/change-detection semantics (already built for ircc-passport)**.
+- 133 POSTs/run with 3s delay ≈ 6.7 min plus other sources. No update stamp in response → **unstamped/change-detection semantics**.
 - Update cadence unknown/rolling (tool launched Mar 2026); weekly polling correct.
-- Site work: add NZ to `JURISDICTIONS` (slug 'new-zealand', agency 'Immigration New Zealand'). **Roll out pages 25–30/week per SEO research — do NOT bulk-publish.**
+- Public release: all 266 entities in API/MCP; 25 reviewed visa pages + country hub + explainer = 27 new indexable pages. Future batches remain capped at 30.
+
+## NEXT UP: remaining verified build order
 
 ### N2. Canada — `flpt-en.json` PR programs WITH HISTORY BACK TO 2016 (easy-JSON but schema thought needed, ~3h)
 `https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json` (504KB, monthly, `flpt_lastupdated` "August 10, 2026")
@@ -63,12 +66,11 @@ EU Schengen consulate statistics (annual XLSX — volumes/refusal rates, not tim
 
 | # | Source | Effort | Payoff |
 |---|---|---|---|
-| 1 | NZ JSON API | ~2h | 3rd government; tier-1 geo; easy JSON |
-| 2 | IRCC flpt (PR + history to 2016) | ~3h | **Instant 10-year history for PR programs — biggest moat accelerator** |
-| 3 | Norway UDI | ~2h | 4th government, monthly cadence |
-| 4 | Finland Migri | ~2h | 5th government (respect crawl-delay 5) |
-| 5 | Sweden | ~2h | 6th + citizenship-backlog PR hook |
-| 6 | Denmark | ~2h | 7th |
-| 7 | Netherlands | ~2h | 8th (label statutory semantics) |
+| 1 | IRCC flpt (PR + history to 2016) | ~3h | **Instant 10-year history for PR programs — biggest moat accelerator** |
+| 2 | Norway UDI | ~2h | 4th government, monthly cadence |
+| 3 | Finland Migri | ~2h | 5th government (respect crawl-delay 5) |
+| 4 | Sweden | ~2h | 6th + citizenship-backlog PR hook |
+| 5 | Denmark | ~2h | 7th |
+| 6 | Netherlands | ~2h | 8th (label statutory semantics) |
 
 Every addition: source module + MAP + coverage floor + staleness window + JURISDICTIONS entry + 25–30 pages/week rollout + runbook playbook entry.

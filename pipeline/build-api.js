@@ -33,6 +33,7 @@ const recPublic = (r) => ({
   latest: {
     value_raw: r.value_raw,
     value_days: r.value_days,
+    unit_original: r.unit_original,
     status: r.status,
     effective_date: r.effective_date,
     retrieved_at: r.retrieved_at,
