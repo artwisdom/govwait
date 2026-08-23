@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import AdSlot from '../../components/AdSlot.astro';
-import { services, fmtDate } from '../../lib/data.js';
+import { services, fmtDate, fmtMonthYearShort } from '../../lib/data.js';
 
 const svcs = [...services.GB.values()];
 const updated = svcs.map(s => s.latestEffective).sort().at(-1);
@@ -11,8 +11,8 @@ for (const s of svcs) {
   (groups[section] ||= []).push(s);
 }
 ---
-<Base title={`UK visa processing times: every current service standard in one table (updated ${fmtDate(updated)})`}
-      description="All published UKVI processing standards for applications made outside the UK — visit, study, work, family — in one tracked table, with what a service standard legally means.">
+<Base title={`UK visa processing times — all current standards (${fmtMonthYearShort(updated)})`}
+      description="Compare current UKVI processing standards for visit, study, work and family routes in one source-backed table with recorded history.">
   <nav class="crumbs"><a href="/">Home</a> › <a href="/guides/">Guides</a> › UK service standards</nav>
   <h1>UK visa processing times: every current service standard</h1>
   <p class="lede">Unlike Canada's per-country statistics, the UK publishes <em>service standards</em>: targets for how long a decision should take once you've attended your biometric appointment, applying from outside the UK. Here is every standard we track, as last updated {fmtDate(updated)}.</p>

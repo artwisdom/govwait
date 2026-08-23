@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import AdSlot from '../../components/AdSlot.astro';
-import { services, JURISDICTIONS, fmtDate } from '../../lib/data.js';
+import { services, JURISDICTIONS, fmtDate, fmtMonthYear } from '../../lib/data.js';
 
 export function getStaticPaths() {
   return Object.entries(JURISDICTIONS).map(([code, jur]) => ({ params: { country: jur.slug }, props: { code } }));
@@ -9,6 +9,7 @@ export function getStaticPaths() {
 const { code } = Astro.props;
 const jur = JURISDICTIONS[code];
 const svcs = [...services[code].values()];
+const latest = svcs.map(s => s.latestEffective).sort().at(-1);
 const jsonld = [{
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
@@ -18,8 +19,8 @@ const jsonld = [{
   ],
 }];
 ---
-<Base title={`${jur.name} processing times — every officially published figure, tracked`}
-      description={`Current official processing times published by ${jur.agency}: ${svcs.map(s=>s.name).slice(0,4).join(', ')} and more. Sourced and dated.`}
+<Base title={`${jur.shortName} official visa and government processing times (${fmtMonthYear(latest)})`}
+      description={`Current ${jur.shortAgency} processing times for visas, permits, sponsorship and more. Official ${fmtMonthYear(latest)} figures with sources and recorded history.`}
       jsonld={jsonld}>
   <nav class="crumbs"><a href="/">Home</a> › {jur.name}</nav>
   <h1>{jur.name}: official processing times</h1>

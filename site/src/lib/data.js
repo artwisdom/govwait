@@ -15,8 +15,8 @@ export const sources = latest.sources;
 export const generatedAt = latest.generated_at;
 
 export const JURISDICTIONS = {
-  CA: { slug: 'canada', name: 'Canada', agency: 'Immigration, Refugees and Citizenship Canada (IRCC)' },
-  GB: { slug: 'uk', name: 'United Kingdom', agency: 'UK Visas and Immigration (Home Office)' },
+  CA: { slug: 'canada', name: 'Canada', shortName: 'Canada', shortAgency: 'IRCC', agency: 'Immigration, Refugees and Citizenship Canada (IRCC)' },
+  GB: { slug: 'uk', name: 'United Kingdom', shortName: 'UK', shortAgency: 'UKVI', agency: 'UK Visas and Immigration (Home Office)' },
 };
 
 const CATEGORY_BLURBS = {
@@ -28,8 +28,50 @@ const CATEGORY_BLURBS = {
   passport: 'how long the government is currently taking to issue passports through this channel',
 };
 
+const SEO_SERVICE_NAMES = {
+  'ca-refugee-gov-assisted': 'Government-Assisted Refugee',
+  'ca-refugee-private-refugee-side': 'Private Refugee',
+  'ca-refugee-private-sponsor-side': 'Private Refugee Sponsor',
+  'ca-sponsor-adopted-child': 'Adopted Child Sponsorship',
+  'ca-sponsor-dependent-child': 'Dependent Child Sponsorship',
+  'ca-study-permit': 'Study Permit',
+  'ca-super-visa': 'Super Visa',
+  'ca-visitor-visa': 'Visitor Visa',
+  'ca-work-permit': 'Work Permit',
+};
+
 export function slugify(s) {
-  return String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+  return String(s)
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+function displayServiceName(rec) {
+  if (rec.jurisdiction === 'GB') {
+    // gov.uk appends a source-table section in the final parentheses. Remove
+    // only that final group so meaningful names such as "British National
+    // (Overseas)" and "High Potential Individual (HPI)" remain intact.
+    return rec.service_name.replace(/\s*\([^()]*\)\s*$/, '');
+  }
+  // Keep meaningful Canadian qualifiers such as "parents and grandparents";
+  // only remove the repeated application-location phrase used in page copy.
+  return rec.service_name.replace(/\s*\(applying from outside Canada\)\s*$/i, '');
+}
+
+function serviceScope(rec) {
+  if (rec.jurisdiction !== 'GB') return null;
+  if (rec.service_key.startsWith('gb-in-uk-')) return 'inside the UK';
+  if (rec.source_url.includes('applications-outside-the-uk')) return 'outside the UK';
+  return null;
+}
+
+function serviceSection(rec) {
+  if (rec.jurisdiction !== 'GB') return null;
+  const match = rec.service_name.match(/\(([^()]*)\)\s*$/);
+  return match ? match[1].replace(/, applying inside the UK$/i, '') : null;
 }
 
 function serviceSlug(rec) {
@@ -66,8 +108,11 @@ for (const r of records) {
     services[j].set(r.serviceSlug, {
       slug: r.serviceSlug,
       key: r.service_key,
-      name: r.service_name.replace(/\s*\(.*\)$/, ''),
+      name: displayServiceName(r),
+      seoName: SEO_SERVICE_NAMES[r.service_key] || displayServiceName(r),
       fullName: r.service_name,
+      scope: serviceScope(r),
+      section: serviceSection(r),
       category: r.service_category,
       blurb: CATEGORY_BLURBS[r.service_category] || 'current official processing time',
       jurisdiction: j,
@@ -115,6 +160,10 @@ export function fmtDate(iso) {
 
 export function fmtMonthYear(iso) {
   return new Date(iso.slice(0, 10) + 'T00:00:00Z').toLocaleDateString('en-US', { year: 'numeric', month: 'long', timeZone: 'UTC' });
+}
+
+export function fmtMonthYearShort(iso) {
+  return new Date(iso.slice(0, 10) + 'T00:00:00Z').toLocaleDateString('en-US', { year: 'numeric', month: 'short', timeZone: 'UTC' });
 }
 
 // The newest official update date across the dataset — the honest lastmod for

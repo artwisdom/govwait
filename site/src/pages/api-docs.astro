@@ -3,8 +3,8 @@ import Base from '../layouts/Base.astro';
 import config from '../../site.config.json';
 import { stats } from '../lib/data.js';
 ---
-<Base title={`${config.SITE_NAME} JSON API — free static endpoints for the processing-times dataset`}
-      description="Free, no-key JSON API for officially published government processing times: collection indexes, per-route latest values, and history. Plus an MCP server for AI agents.">
+<Base title={`${config.SITE_NAME} API — free government processing-time data`}
+      description="Free, no-key JSON API for official government processing times, latest route values and history, plus an MCP server for AI agents.">
   <h1>JSON API (static, free, no key)</h1>
   <p>The entire dataset is prebuilt as static JSON — fast, cacheable, and stable. Attribution (CC BY 4.0) required. Full schema: <a href="/api/v1/openapi.yaml">OpenAPI 3.1 spec</a>.</p>
 
@@ -24,7 +24,7 @@ import { stats } from '../lib/data.js';
   <pre class="fresh" style="overflow-x:auto"><code>curl {config.SITE_URL}/api/v1/entities/ca-visitor-visa--in.json</code></pre>
 
   <h2>For AI agents</h2>
-  <p>An MCP (Model Context Protocol) server exposes <code>search_entities</code>, <code>get_entity</code>, <code>get_latest_value</code> and <code>compare_values</code> over this dataset — see the project repository's <code>machine/mcp-server</code> directory for registration instructions, and <a href="/llms.txt">/llms.txt</a> for a machine-readable site description.</p>
+  <p>An MCP (Model Context Protocol) server exposes <code>search_entities</code>, <code>get_entity</code>, <code>get_latest_value</code> and <code>compare_values</code> over this dataset — see the <a href="https://github.com/artwisdom/govwait/tree/main/machine/mcp-server" rel="noopener">public MCP server repository</a> for registration instructions, and <a href="/llms.txt">/llms.txt</a> for a machine-readable site description.</p>
 
   <p class="small muted">{stats.entities.toLocaleString()} routes · regenerated on every data refresh · values are official government publications, republished with provenance.</p>
 </Base>

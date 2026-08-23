@@ -2,7 +2,7 @@
 import Base from '../../../layouts/Base.astro';
 import AdSlot from '../../../components/AdSlot.astro';
 import Freshness from '../../../components/Freshness.astro';
-import { services, JURISDICTIONS, fmtDate, humanValue } from '../../../lib/data.js';
+import { services, JURISDICTIONS, fmtDate, fmtMonthYear, fmtMonthYearShort, humanValue } from '../../../lib/data.js';
 
 export function getStaticPaths() {
   const paths = [];
@@ -36,12 +36,20 @@ const govService = {
   url: new URL(`/${jur.slug}/${svc.slug}/`, Astro.site).href,
 };
 
+const topic = /\bprocessing(?: time)?\b/i.test(svc.seoName) ? svc.seoName : `${svc.seoName} processing time`;
+const sameNameAndScope = [...services[code].values()]
+  .filter(s => s.name === svc.name && s.scope === svc.scope);
+const scopeDetail = svc.scope
+  ? `${svc.scope}${sameNameAndScope.length > 1 && svc.section ? ` — ${svc.section.toLowerCase()}` : ''}`
+  : null;
+const monthTok = fmtMonthYear(rec.effective_date);
+const monthShort = fmtMonthYearShort(rec.effective_date);
 const title = single
-  ? `${svc.name} processing time (${jur.name}) — currently ${rec.value_raw}`
-  : `${jur.name} ${svc.name.toLowerCase()} processing time by country — current official figures`;
+  ? `${jur.shortName} ${topic}${scopeDetail ? ` (${scopeDetail})` : ''}: ${humanValue(rec)} (${monthShort})`
+  : `${jur.shortName} ${topic} by country (${monthShort})`;
 const desc = single
-  ? `Official ${jur.name} processing time for ${svc.name}: ${rec.value_raw} as of ${fmtDate(rec.effective_date)}, published by ${jur.agency}. Tracked with history.`
-  : `Current official ${svc.name.toLowerCase()} processing times for ${svc.records.length} applicant countries, published by ${jur.agency}. ${ok.length} countries have published figures.`;
+  ? `${jur.shortAgency} reports ${humanValue(rec)} for ${svc.seoName}${scopeDetail ? ` (${scopeDetail})` : ''}. Updated ${monthTok}, with official-source history.`
+  : `Current ${jur.shortAgency} ${topic.toLowerCase()} for ${svc.records.length} applicant countries: ${ok.length} published values. Updated ${monthShort}, with official sources and history.`;
 ---
 <Base title={title} description={desc} jsonld={[crumbs, govService]}>
   <nav class="crumbs"><a href="/">Home</a> › <a href={`/${jur.slug}/`}>{jur.name}</a> › {svc.name}</nav>

@@ -2,7 +2,7 @@
 import Base from '../../../layouts/Base.astro';
 import AdSlot from '../../../components/AdSlot.astro';
 import Freshness from '../../../components/Freshness.astro';
-import { records, services, relatedRoutes, JURISDICTIONS, fmtDate, fmtMonthYear, humanValue } from '../../../lib/data.js';
+import { records, services, relatedRoutes, JURISDICTIONS, fmtDate, fmtMonthYear, fmtMonthYearShort, humanValue } from '../../../lib/data.js';
 
 export function getStaticPaths() {
   return records.filter(r => r.applicantSlug).map(r => ({
@@ -34,10 +34,13 @@ const jsonld = [
     url: pageUrl },
 ];
 const monthTok = fmtMonthYear(rec.effective_date);
-const svcTitle = svc.name.replace(/\b[a-z]/g, c => c.toUpperCase());
-const title = rec.status === 'ok'
-  ? `${jur.name} ${svcTitle} Processing Time from ${rec.applicant_country_name} — ${monthTok}: ${rec.value_raw} (Official)`
-  : `${jur.name} ${svcTitle} Processing Time from ${rec.applicant_country_name} — ${monthTok}: No Published Time (Official)`;
+const monthShort = fmtMonthYearShort(rec.effective_date);
+const topic = /\bprocessing(?: time)?\b/i.test(svc.seoName) ? svc.seoName : `${svc.seoName} processing time`;
+const titleValue = rec.status === 'ok'
+  ? rec.value_raw
+  : rec.status === 'unavailable' ? 'No time published' : 'Not enough data';
+const title = `${jur.shortName} ${topic} from ${rec.applicant_country_name}: ${titleValue} (${monthShort})`;
+const description = `${jur.shortAgency} reports ${humanValue(rec)} for ${svc.seoName.toLowerCase()} applicants from ${rec.applicant_country_name} (${monthShort}). Compare countries and view official-source history.`;
 const deltaText = rec.delta
   ? (rec.delta.dir === 'flat'
       ? `Unchanged from the previous official update (${fmtDate(rec.delta.prev_date)}).`
@@ -45,8 +48,9 @@ const deltaText = rec.delta
   : null;
 ---
 <Base title={title}
-      description={`Official ${jur.name} processing time for ${svc.name.toLowerCase()} applications from ${rec.applicant_country_name}: ${humanValue(rec)}. Published by ${jur.agency}, tracked with provenance and history.`}
-      jsonld={jsonld}>
+      description={description}
+      jsonld={jsonld}
+      noindex={rec.status !== 'ok'}>
   <nav class="crumbs"><a href="/">Home</a> › <a href={`/${jur.slug}/`}>{jur.name}</a> › <a href={`/${jur.slug}/${rec.serviceSlug}/`}>{svc.name}</a> › {rec.applicant_country_name}</nav>
   <h1>{svc.name} ({jur.name}) — applying from {rec.applicant_country_name}</h1>
 

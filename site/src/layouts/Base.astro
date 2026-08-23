@@ -12,15 +12,21 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
 <meta name="description" content={description} />
 <link rel="canonical" href={canonical} />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="sitemap" href="/sitemap.xml" type="application/xml" />
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fbfaf7" />
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0e1219" />
-{noindex && <meta name="robots" content="noindex" />}
+<meta name="robots" content={noindex
+  ? 'noindex, follow'
+  : 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1'} />
 <meta property="og:site_name" content={config.SITE_NAME} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:type" content="website" />
 <meta property="og:url" content={canonical} />
+<meta property="og:locale" content="en_US" />
 <meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
 {jsonld.map(obj => <script type="application/ld+json" set:html={JSON.stringify(obj)} />)}
 <style is:global>
 :root{

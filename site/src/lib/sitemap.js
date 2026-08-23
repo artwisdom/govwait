@@ -21,6 +21,9 @@ export function hubUrls() {
   for (const [code, jur] of Object.entries(JURISDICTIONS)) {
     const svcMap = services[code];
     urls.push({ path: `/${jur.slug}/`, lastmod: [...svcMap.values()].map(s => s.latestEffective).sort().at(-1) });
+    // UK service pages are their own template family and sitemap so Search
+    // Console can report their indexing separately from general hubs.
+    if (code === 'GB') continue;
     for (const svc of svcMap.values()) {
       urls.push({ path: `/${jur.slug}/${svc.slug}/`, lastmod: svc.latestEffective });
     }
@@ -28,8 +31,21 @@ export function hubUrls() {
   return urls;
 }
 
+export function serviceUrls(jurCode) {
+  const jur = JURISDICTIONS[jurCode];
+  return [...services[jurCode].values()]
+    .map(svc => ({ path: `/${jur.slug}/${svc.slug}/`, lastmod: svc.latestEffective }));
+}
+
+export function newestLastmod(urls) {
+  return urls.map(u => u.lastmod).filter(Boolean).sort().at(-1);
+}
+
 export function entityUrls(jurCode) {
   return records
-    .filter(r => r.applicantSlug && r.jurisdiction === jurCode)
+    // Keep official "unavailable" states accessible to people and AI agents,
+    // but do not ask search engines to index a country page until it contains
+    // a published value. A route automatically graduates on its first value.
+    .filter(r => r.applicantSlug && r.jurisdiction === jurCode && r.status === 'ok')
     .map(r => ({ path: `/${r.jur.slug}/${r.serviceSlug}/${r.applicantSlug}/`, lastmod: r.effective_date }));
 }

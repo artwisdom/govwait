@@ -11,8 +11,8 @@ const median = Math.round(svc.medianDays);
 const big = ['IN', 'NG', 'PH', 'PK', 'CN', 'BR', 'MX', 'BD', 'VN', 'CO']
   .map(cc => ok.find(r => r.applicant_country === cc)).filter(Boolean);
 ---
-<Base title={`Canada visitor visa processing times by country, analyzed (median ${median} days)`}
-      description={`Where visitor-visa waits stand right now: fastest and slowest applicant countries, the ${median}-day median, major corridors like India, Nigeria and the Philippines, and how to read the spread.`}>
+<Base title={`Canada visitor visa times by country — ${median}-day median`}
+      description={`Compare current IRCC visitor-visa times by country: ${median}-day median, fastest and slowest routes, major corridors, official sources and history.`}>
   <nav class="crumbs"><a href="/">Home</a> › <a href="/guides/">Guides</a> › Visitor visa by country</nav>
   <h1>Canada visitor visa times, analyzed by country</h1>
   <p class="lede">IRCC currently publishes visitor-visa processing times for <strong>{ok.length}</strong> applicant countries (of {svc.records.length} tracked). The median is <strong>{median} days</strong>, but the spread is enormous — the same visa takes {fastest[0].value_raw} from {fastest[0].applicant_country_name} and {slowest[0].value_raw} from {slowest[0].applicant_country_name}. Data as of {fmtDate(svc.latestEffective)}.</p>

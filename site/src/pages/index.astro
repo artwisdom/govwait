@@ -2,28 +2,53 @@
 import Base from '../layouts/Base.astro';
 import AdSlot from '../components/AdSlot.astro';
 import config from '../../site.config.json';
-import { stats, services, records, JURISDICTIONS, fmtDate } from '../lib/data.js';
+import { stats, services, records, JURISDICTIONS, fmtDate, dataLastmod } from '../lib/data.js';
 
-const jsonld = [{
-  '@context': 'https://schema.org',
-  '@type': 'Dataset',
-  name: `${config.SITE_NAME}: official government processing times`,
-  description: 'Tracked dataset of officially published government processing and wait times for visas, permits, sponsorships and resettlement, with per-value provenance and history.',
-  url: config.SITE_URL,
-  license: 'https://creativecommons.org/licenses/by/4.0/',
-  creator: { '@type': 'Organization', name: config.SITE_NAME },
-  temporalCoverage: `2026-08-21/..`,
-  distribution: [{ '@type': 'DataDownload', encodingFormat: 'application/json', contentUrl: `${config.SITE_URL}/api/v1/index.json` }],
-  isBasedOn: Object.values(stats.per_source).map(s => s.name),
-}];
+const origin = config.SITE_URL.replace(/\/$/, '');
+const orgId = `${origin}/#organization`;
+const siteId = `${origin}/#website`;
+const jsonld = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': siteId,
+    url: origin,
+    name: config.SITE_NAME,
+    description: config.TAGLINE,
+    publisher: { '@id': orgId },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': orgId,
+    name: config.SITE_NAME,
+    url: origin,
+    email: 'contact@govwait.com',
+    logo: { '@type': 'ImageObject', url: `${origin}/favicon.svg` },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Dataset',
+    name: `${config.SITE_NAME}: official government processing times`,
+    description: 'Tracked dataset of officially published government processing and wait times for visas, permits, sponsorships and resettlement, with per-value provenance and history.',
+    url: origin,
+    datePublished: '2026-08-21',
+    dateModified: dataLastmod,
+    license: 'https://creativecommons.org/licenses/by/4.0/',
+    creator: { '@id': orgId },
+    temporalCoverage: '2026-08-21/..',
+    distribution: [{ '@type': 'DataDownload', encodingFormat: 'application/json', contentUrl: `${origin}/api/v1/index.json` }],
+    isBasedOn: Object.values(stats.per_source).map(s => s.name),
+  },
+];
 
 // A few interesting live examples for the hero
 const examples = ['ca-visitor-visa--in', 'ca-study-permit--pk', 'ca-work-permit--mx', 'ca-visitor-visa--ng']
   .map(id => records.find(r => r.id === id)).filter(Boolean).filter(r => r.status === 'ok');
 const govCount = stats.jurisdictions.length;
 ---
-<Base title={`${config.SITE_NAME} — how long government applications actually take right now`}
-      description={`Live-tracked official processing times for ${stats.entities.toLocaleString()} visa, permit and sponsorship routes across ${govCount} governments. Every value sourced, dated and historized.`}
+<Base title={`${config.SITE_NAME} — official visa and government processing times`}
+      description={`Current official processing times for ${stats.entities.toLocaleString()} visa, permit and sponsorship routes across ${govCount} governments. Every value is sourced, dated and tracked.`}
       jsonld={jsonld}>
   <h1>How long will it take?<br/>The current official answer, tracked.</h1>
   <p class="lede">Governments publish how long applications are taking — then overwrite the number every week and keep no history. We record every value with its source and date, so you can see the current official figure, how it has moved, and exactly where it came from.</p>
@@ -62,6 +87,6 @@ const govCount = stats.jurisdictions.length;
   <p class="lede small">Because they aren't ours. Every figure is the government's own published statistic — we just refuse to let it disappear. Each value links its official source, carries the agency's update date and our verification date, and joins a permanent history. <a href="/about/">Read the full methodology.</a></p>
 
   <h2>For machines</h2>
-  <p class="small">The same dataset is a <a href="/api-docs/">free JSON API</a>, an MCP server for AI agents, and is described in <a href="/llms.txt">llms.txt</a>. Attribution required (CC BY 4.0).</p>
+  <p class="small">The same dataset is a <a href="/api-docs/">free JSON API</a>, a <a href="https://github.com/artwisdom/govwait/tree/main/machine/mcp-server" rel="noopener">public MCP server for AI agents</a>, and is described in <a href="/llms.txt">llms.txt</a>. Attribution required (CC BY 4.0).</p>
   <AdSlot position="home-bottom" />
 </Base>

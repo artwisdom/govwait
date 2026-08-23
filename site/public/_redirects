@@ -1,0 +1,4 @@
+# Preserve early-launch URLs whose ASCII slugs dropped accented letters.
+/canada/*/from-c-te-d-ivoire/ /canada/:splat/from-cote-d-ivoire/ 301
+/canada/*/from-s-o-tom-pr-ncipe/ /canada/:splat/from-sao-tome-principe/ 301
+/canada/*/from-t-rkiye/ /canada/:splat/from-turkiye/ 301

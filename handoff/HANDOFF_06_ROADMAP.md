@@ -14,6 +14,11 @@ never the numbers themselves — six free competitors already have the numbers.*
 - [x] Submit `https://govwait.com/sitemap.xml` to both (2026-08-23). Google reports
   **Sitemap index / Success**; Bing reports **Submitted / Processing**. Recheck in
   3–7 days. No Request indexing click has been made.
+- [x] Harden search/AI discovery: canonical `www` 301, explicit search and AI
+  crawler allows, generated `llms.txt`, three honest child sitemaps, structured
+  data, exact IndexNow notifications, and a blocking SEO CI audit. Indexing is
+  requested only for the 561 current data-backed pages; 1,462 official no-value
+  pages automatically graduate from `noindex, follow` when data appears.
 - Cloudflare account (needed for R1). Pay Per Crawl beta + Monetization Gateway waitlists while there.
 - Defensive trademark check "GovWait" CA/UK/US (~$0 to search).
 

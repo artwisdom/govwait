@@ -13,7 +13,7 @@ pipeline/run.js ──▶ data/db.sqlite ──▶ data/exports/{latest,history,
                                             │
                     pipeline/build-api.js ──▶ site/public/api/v1/** (≈2,000 files)
                                             │
-                    site/ (Astro 4) ───────▶ site/dist (≈2,090 pages + API + sitemaps)
+                    site/ (Astro 4) ───────▶ site/dist (2,024 HTML pages + API + sitemaps)
                                             │
                     machine/mcp-server ─────▶ stdio MCP for AI agents (reads exports)
 ```
@@ -31,18 +31,19 @@ pipeline/run.js ──▶ data/db.sqlite ──▶ data/exports/{latest,history,
 | `pipeline/validate.js` | 11 checks: shapes, ISO codes, range (0 < days ≤ 3000 — "58 months" refugee value is REAL), coverage floors (ircc ≥1200, govuk ≥10, total ≥300), staleness (45d/120d), 10× jump flags, provenance | ⚠️ Never loosen to force green |
 | `pipeline/export.js` | Emits `latest.json` (entities + latest obs), `history.json` (all obs grouped), `stats.json` | |
 | `pipeline/build-api.js` | exports → `site/public/api/v1/**` static endpoints | Run before astro build |
-| `pipeline/indexnow.js` | Posts changed URLs to IndexNow (Bing→ChatGPT Search). Key file lives at `site/public/<32hex>.txt`; key constant inside the script | |
+| `pipeline/indexnow.js` | Posts exact changed, indexable URLs to IndexNow; full-current-set and dry-run modes are available. Key file lives at `site/public/<32hex>.txt`; key constant inside the script | Receipt is not proof of indexing |
 | `data/db.sqlite` | Source of truth, **committed to git** so CI accumulates history. WAL files gitignored | ⚠️ Never rewrite history rows |
 | `data/cache/http/`, `data/cache/robots/` | Fetch caches (gitignored) | |
 | `site/` | Astro 4 (Node 20 pin — Astro 5 needs Node ≥22). `site.config.json` = brand + SITE_URL; CI overrides via `SITE_URL` repo var | |
 | `site/src/lib/data.js` | Build-time model: slugs, services map, medians, speed classes (vs service median: ≤0.6 fast / ≤1.4 typical / ≤2.5 slow / else very slow), deltas from history, `relatedRoutes()`, `dataLastmod`. Throws on URL collisions | The brain of the site |
-| `site/src/lib/sitemap.js` + `pages/sitemap*.xml.js` | Sitemap index → `sitemap-hubs.xml` + `sitemap-ca.xml`. **lastmod = official effective_date, never build time** (Google verifies; dishonest lastmod ⇒ ignored) | ⚠️ Keep lastmod honest |
+| `site/src/lib/sitemap.js` + `pages/sitemap*.xml.js` | Sitemap index → hubs + numeric CA applicant pages + UK services. **lastmod = official effective_date for that exact child, never build time** | ⚠️ Keep lastmod honest |
 | `site/src/pages/` | `index`, `[country]/index`, `[country]/[service]/index` (hub for CA; entity page for GB), `[country]/[service]/[applicant]` (CA entity pages), `guides/*` (3 data-generated analyses), `about`, `api-docs`, `404` | |
 | `machine/openapi.yaml` | OpenAPI 3.1, copied into the API at build | Keep in sync with build-api.js |
 | `machine/api-conformance.mjs` | Checks every built API file against the spec's shapes | Run in QA |
 | `machine/mcp-server/` | TypeScript stdio MCP server, 4 tools, reads exports. `npm run build && npm run smoke` (8 assertions) | |
-| `.github/workflows/refresh.yml` | Cron Tue+Fri 14:00 UTC: pipeline → build-api → commit data diff → IndexNow ping. Failure diagnosis into job summary | |
-| `.github/workflows/deploy.yml` | On push (site/data/openapi paths): build → Cloudflare Pages project `govwait` | Requires scoped Cloudflare token in GitHub |
+| `.github/workflows/refresh.yml` | Cron Tue+Fri 14:00 UTC: pipeline → build-api → commit data diff. Failure diagnosis into job summary | |
+| `.github/workflows/deploy.yml` | On push (site/data/openapi paths): build → SEO audit → Cloudflare Pages → IndexNow notification after successful production deploy | Requires scoped Cloudflare token in GitHub |
+| `site/scripts/seo-audit.mjs` | CI gate for unique metadata, canonicals, H1, JSON-LD, internal links, intentional noindex, exact sitemap membership, honest child lastmod, robots and llms.txt | Run after every site build |
 | `handoff/` | This package | |
 
 Root docs: `EXECUTION_REPORT.md`, `DEPLOYMENT_GUIDE.md` (owner steps; monetization
@@ -66,7 +67,7 @@ Current stats: 2,005 entities; ~540 numeric; sources: ircc-ptime (1,907), ircc-n
 node pipeline/run.js              # uses cache — safe offline
 node pipeline/run.js --refresh    # live fetch (polite; ~4 requests total)
 node pipeline/build-api.js        # exports -> static API files
-cd site && npm ci && npx astro build          # ~3s, ~2,090 pages
+cd site && npm ci && npm run build && npm run audit:seo  # ~3s, 2,024 HTML pages
 cd machine/mcp-server && npm ci && npm run build && npm run smoke
 node machine/api-conformance.mjs  # after a site build
 ```
@@ -100,6 +101,12 @@ Local Node is 20.19.6 (Astro pinned to v4 for this reason; CI also pins Node 20)
   engines on 2026-08-23. Google reports **Sitemap index / Success**; Bing accepted it
   and reports **Submitted / Processing**. No Google **Request indexing** action has
   been taken; that remains a separate owner gate.
+- The 2026-08-23 discoverability audit intentionally limits requested indexing
+  to 561 useful/data-backed URLs (39 hubs/guides, 445 numeric CA applicant
+  pages, 77 UK services). The other 1,462 applicant pages stay live and
+  crawlable with `noindex, follow` until a numeric official value appears.
+  See `docs/DISCOVERABILITY_AUDIT.md` for crawler, sitemap, canonical, CI, and
+  point-in-time Cloudflare evidence.
 
 ## 6. Traps and constraints (learned the hard way — do not relearn)
 

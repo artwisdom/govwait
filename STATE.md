@@ -48,12 +48,20 @@ All dependencies install locally (`node_modules` inside project). No sudo or mac
   engines on 2026-08-23. Google re-read it as a **Sitemap index / Success**; Bing
   accepted it and currently reports **Submitted / Processing**. The public sitemap
   independently returns HTTP 200 with `application/xml`.
+- Discoverability audit: the site now has 561 intentionally indexable pages and
+  561 matching sitemap URLs across separate hubs/Canada/UK children. Another
+  1,462 official no-value applicant pages stay live and crawlable with
+  `noindex, follow` until they gain a numeric value. A blocking CI audit protects
+  metadata, canonicals, internal links, structured data, robots/llms policy,
+  sitemap membership, and honest child lastmod. See
+  `docs/DISCOVERABILITY_AUDIT.md`.
+- Canonical host: a live Cloudflare 301 sends `www` paths and queries to the
+  matching apex URL.
 
 ## Next step
-No owner action today. Let Google and Bing process the sitemap, then check their
-discovered-URL counts and Bing's final status after 3–7 days. Do not resubmit while
-processing. Any Google **Request indexing** click remains a separate later approval;
-none has been made.
+After the hardening deployment is verified, send the full current indexable set
+through IndexNow. Google **Request indexing** for a small set of priority URLs
+remains a separate action-time owner confirmation; none has been made.
 
 ## Open threads
 - US/AU/IE sources WAF-blocked to honest bots — owner-decision item (documented in DEPLOYMENT_GUIDE).

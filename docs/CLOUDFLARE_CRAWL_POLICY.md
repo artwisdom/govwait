@@ -1,6 +1,6 @@
 # Cloudflare crawler policy
 
-Last verified in the Cloudflare dashboard on 2026-08-22.
+Last verified in the Cloudflare dashboard on 2026-08-23.
 
 ## Deliberate policy
 
@@ -13,6 +13,11 @@ Last verified in the Cloudflare dashboard on 2026-08-22.
 - The deployed `robots.txt` remains the source of truth and currently allows
   every crawler. It also advertises the production sitemap and points agents to
   `/llms.txt` for machine-oriented context.
+- Cloudflare showed approximately 2,230 allowed AI-crawler requests in the
+  preceding 24 hours during this check, mostly ClaudeBot, plus traffic from the
+  major search/citation agents. This is access evidence, not indexing evidence.
+- A live Single Redirect sends `www.govwait.com` to the matching canonical apex
+  URL with a permanent 301 while preserving the path and query string.
 
 ## Why
 

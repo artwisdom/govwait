@@ -44,23 +44,20 @@ jobs:
         run: node pipeline/build-api.js && cp machine/openapi.yaml site/public/api/v1/openapi.yaml
 
       - name: Commit data changes (only reached if validation passed)
+        id: commit
         run: |
           git config user.name "govwait-refresh-bot"
           git config user.email "actions@users.noreply.github.com"
           git add data/db.sqlite data/exports site/public/api
           if git diff --cached --quiet; then
+            echo "data_changed=false" >> "$GITHUB_OUTPUT"
             echo "No data changes this run." >> "$GITHUB_STEP_SUMMARY"
           else
             git commit -m "data: refresh $(date -u +%F)"
             git push
+            echo "data_changed=true" >> "$GITHUB_OUTPUT"
             echo "Data refreshed and committed — deploy workflow will publish." >> "$GITHUB_STEP_SUMMARY"
           fi
-
-      - name: Ping IndexNow with changed URLs (Bing feeds ChatGPT Search)
-        if: ${{ vars.SITE_URL != '' }}
-        env:
-          SITE_URL: ${{ vars.SITE_URL }}
-        run: node pipeline/indexnow.js || echo "IndexNow ping failed (non-fatal)"
 
       - name: Diagnose failure into job summary
         if: failure()

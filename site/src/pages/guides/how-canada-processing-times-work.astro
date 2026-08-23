@@ -7,8 +7,8 @@ const svcs = [...services.CA.values()];
 const perCountry = svcs.filter(s => s.hasApplicantPages);
 const updated = svcs.map(s => s.latestEffective).sort().at(-1);
 ---
-<Base title="How Canada (IRCC) processing times actually work — and why the numbers move weekly"
-      description="IRCC's published processing times are backward-looking statistics recalculated from completed cases, not promises. How to read them, per-service medians, and what 'no processing time available' really means.">
+<Base title="How Canada IRCC processing times work — current guide"
+      description="Learn how IRCC calculates processing times, why figures change, what missing data means, and how to use current medians without treating them as promises.">
   <nav class="crumbs"><a href="/">Home</a> › <a href="/guides/">Guides</a> › How IRCC times work</nav>
   <h1>How Canada's processing times actually work</h1>
   <p class="lede">Immigration, Refugees and Citizenship Canada publishes, for most temporary-residence routes, a processing time per applicant country — and overwrites it roughly every week. Here is what those numbers really are, built on our tracked copy of the data (last official update {fmtDate(updated)}).</p>

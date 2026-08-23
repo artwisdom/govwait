@@ -1,4 +1,57 @@
-# GovWait — all crawlers welcome, including AI agents. See /llms.txt.
+# GovWait intentionally permits search, citation, assistant, archival, and
+# training crawlers. The named groups make that intent machine-auditable;
+# the wildcard keeps the policy open to new crawlers too. See /llms.txt.
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Google-CloudVertexBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: archive.org_bot
+Allow: /
+
 User-agent: *
 Allow: /
 

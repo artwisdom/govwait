@@ -10,7 +10,7 @@ GovWait (repo: `github.com/artwisdom/govwait`, domain `govwait.com` — register
 tracks **officially published government processing times** (visas, permits,
 sponsorships) with provenance and append-only history. Governments overwrite these
 numbers weekly and keep no archive; our recorded history is the compounding,
-non-backfillable asset. One dataset, three skins: a static Astro site (~2,090 pages),
+non-backfillable asset. One dataset, three skins: a static Astro site (2,024 HTML pages),
 a free static JSON API (~2,115 files + OpenAPI 3.1), and an MCP server for AI
 agents. A GitHub Actions cron refreshes data Tue+Fri; a failed validation publishes
 nothing. Revenue plan: display ads (engine), machine access (optionality), dataset
@@ -84,3 +84,9 @@ style preferences.
   compounding twice weekly.
 - Site: redesigned Aug 22 (design system, speed chips, related-route interlinking,
   3 data-generated guides, lastmod sitemap). All QA gates green (`docs/QA_REPORT.md`).
+- Discoverability hardening is locally green: 561 data-backed pages are
+  indexable and exactly match the three child sitemaps; 1,462 official
+  unavailable/insufficient country pages remain live with `noindex, follow`
+  until an official numeric value appears. Search/AI crawler access, dynamic
+  `llms.txt`, canonical redirects, honest per-child lastmod, and a blocking SEO
+  CI audit are documented in `docs/DISCOVERABILITY_AUDIT.md`.
