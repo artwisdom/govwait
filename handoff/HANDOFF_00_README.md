@@ -73,7 +73,8 @@ style preferences.
 - Repo public and live; Cloudflare Pages project `govwait` serves `govwait.com` and
   redirects `www.govwait.com` permanently to the canonical apex over HTTPS.
   GitHub Pages is disabled; latest verified GitHub-driven Cloudflare deploy run
-  `32667066646` is green on New Zealand commit `84e7ec4`.
+  `32667617092` is green on automation commit `cec8e39`. Final New Zealand
+  content commit `0a27449` was deployed in run `32667382747`.
 - refresh-data cron ACTIVE (Tue+Fri 14:00 UTC); first autonomous data commit already
   landed (`data: refresh 2026-08-22`).
 - `contact@govwait.com` is active through Cloudflare Email Routing and published on

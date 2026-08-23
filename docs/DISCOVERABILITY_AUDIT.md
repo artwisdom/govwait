@@ -1,7 +1,8 @@
 # Discoverability audit
 
-_Implemented and production-verified 2026-08-23. The New Zealand expansion was
-deployed in GitHub Actions run `32667066646`, commit `84e7ec4`._
+_Implemented and production-verified 2026-08-23. The New Zealand implementation
+is commit `84e7ec4`; final public wording is commit `0a27449`, deployed in
+GitHub Actions run `32667382747`._
 
 ## Search-indexing policy
 
@@ -72,11 +73,13 @@ it does not prove search indexing, citations, rankings, traffic, or revenue.
 [conformance] PASS
 MCP SMOKE TEST: ALL PASS, including New Zealand search and value checks
 IndexNow full-set dry run: 588 URLs
-Production deploy: GitHub Actions run 32667066646 succeeded
-Cloudflare Pages deployment: https://eea35d8d.govwait.pages.dev
+Production deploy: GitHub Actions run 32667382747 succeeded
+Cloudflare Pages deployment: https://59fac18c.govwait.pages.dev
 Public edge: New Zealand hub, Visitor Visa page, explainer, API, robots.txt,
 llms.txt, root sitemap, and 25-URL New Zealand child sitemap verified on govwait.com
 IndexNow full-set submission after deployment: 588 URLs, HTTP 200 receipt
+IndexNow change-detector proof: run 32667617092 read the large prior export,
+found no public URL change in its automation-only commit, and correctly skipped
 Existing Google sitemap index: https://govwait.com/sitemap.xml already registered;
 it now advertises sitemap-nz.xml without asserting that Google has processed it
 Earlier Google priority crawl requests: accepted for all three confirmed gaps

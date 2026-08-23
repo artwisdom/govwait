@@ -31,7 +31,7 @@ All dependencies install locally (`node_modules` inside project). No sudo or mac
 - Cloudflare Pages: project `govwait` live; `govwait.com` and `www.govwait.com` active over HTTPS
 - Email: `contact@govwait.com` routing active through Cloudflare Email Routing
 - AI crawler policy: listed search/citation crawlers allowed; Managed robots.txt off (see `docs/CLOUDFLARE_CRAWL_POLICY.md`)
-- GitHub deployment: latest verified `deploy-site` run `32667066646` green; it deployed New Zealand commit `84e7ec4` to Cloudflare production (`eea35d8d.govwait.pages.dev`)
+- GitHub deployment: latest verified `deploy-site` run `32667617092` green on automation commit `cec8e39`; final New Zealand content commit `0a27449` deployed in run `32667382747` (`59fac18c.govwait.pages.dev`)
 - GitHub Pages: disabled; Cloudflare Pages is the sole production host
 - refresh-data workflow: ACTIVE, first run green (22s); cron Tue+Fri 14:00 UTC
 - SITE_URL repo variable = https://govwait.com
@@ -59,9 +59,11 @@ All dependencies install locally (`node_modules` inside project). No sudo or mac
   matching apex URL.
 - Current discovery notifications: the root sitemap already registered with Google
   and Bing now advertises the New Zealand child sitemap. After production deploy
-  run `32667066646`, the complete 588-URL current set received an IndexNow HTTP
-  200 receipt. These are discovery/submission receipts, not proof of indexing,
-  ranking, traffic, or revenue.
+  run `32667382747`, the complete 588-URL current set received an IndexNow HTTP
+  200 receipt. Proof run `32667617092` then correctly detected that its
+  automation-only commit changed no public URLs and skipped submission. These
+  are discovery/submission receipts, not proof of indexing, ranking, traffic,
+  or revenue.
 
 ## Next step
 Allow the registered root sitemap and successful IndexNow notification to be

@@ -31,7 +31,7 @@ pipeline/run.js ──▶ data/db.sqlite ──▶ data/exports/{latest,history,
 | `pipeline/validate.js` | 18 checks: shapes, ISO codes, range (0 < days ≤ 3000 — "58 months" refugee value is REAL), coverage floors (including INZ ≥240), staleness where the source publishes a date, p50/p80 integrity, 10× jump flags, provenance | ⚠️ Never loosen to force green |
 | `pipeline/export.js` | Emits `latest.json` (entities + latest obs), `history.json` (all obs grouped), `stats.json` | |
 | `pipeline/build-api.js` | exports → `site/public/api/v1/**` static endpoints | Run before astro build |
-| `pipeline/indexnow.js` | Posts exact changed, indexable URLs to IndexNow; full-current-set and dry-run modes are available. Key file lives at `site/public/<32hex>.txt`; key constant inside the script | Receipt is not proof of indexing |
+| `pipeline/indexnow.js` | Posts exact changed public URLs to IndexNow after deploy. It compares large prior exports safely, maps source-verification and site-template changes, preserves old URLs for deletion hints, and supports full-current-set/dry-run modes. Key file lives at `site/public/<32hex>.txt` | Receipt is not proof of indexing |
 | `data/db.sqlite` | Source of truth, **committed to git** so CI accumulates history. WAL files gitignored | ⚠️ Never rewrite history rows |
 | `data/cache/http/`, `data/cache/robots/` | Fetch caches (gitignored) | |
 | `site/` | Astro 4 (Node 20 pin — Astro 5 needs Node ≥22). `site.config.json` = brand + SITE_URL; CI overrides via `SITE_URL` repo var | |
@@ -42,7 +42,7 @@ pipeline/run.js ──▶ data/db.sqlite ──▶ data/exports/{latest,history,
 | `machine/api-conformance.mjs` | Checks every built API file against the spec's shapes | Run in QA |
 | `machine/mcp-server/` | TypeScript stdio MCP server, 4 tools, reads exports. `npm run build && npm run smoke` (10 assertions, including NZ metric/unit checks) | |
 | `.github/workflows/refresh.yml` | Cron Tue+Fri 14:00 UTC: pipeline → build-api → commit data diff. Failure diagnosis into job summary | |
-| `.github/workflows/deploy.yml` | On push (site/data/openapi paths): build → SEO audit → Cloudflare Pages → IndexNow notification after successful production deploy | Requires scoped Cloudflare token in GitHub |
+| `.github/workflows/deploy.yml` | On push (site/data/openapi/IndexNow paths): build → SEO audit → Cloudflare Pages → IndexNow notification after successful production deploy | Requires scoped Cloudflare token in GitHub |
 | `site/scripts/seo-audit.mjs` | CI gate for unique metadata, canonicals, H1, JSON-LD, internal links, intentional noindex, exact sitemap membership, honest child lastmod, robots and llms.txt | Run after every site build |
 | `handoff/` | This package | |
 
@@ -91,8 +91,9 @@ Local Node is 20.19.6 (Astro pinned to v4 for this reason; CI also pins Node 20)
   2026-08-22`). deploy-site green. ~60 min/month total of the 2,000 free.
 - Cloudflare migration: production cutover, explicit allow-crawler policy, and
   GitHub-driven deployment are complete. GitHub Pages is disabled, the unused
-  original token is deleted, and New Zealand release run `32667066646`
-  deployed commit `84e7ec4` successfully.
+  original token is deleted, and final New Zealand content release run
+  `32667382747` deployed commit `0a27449` successfully. Automation proof run
+  `32667617092` then confirmed that a no-public-change commit skips IndexNow.
 - Search ownership: Google Search Console domain property `govwait.com` and Bing
   Webmaster Tools site `https://govwait.com/` are DNS-verified. Google's live test
   says the homepage can be indexed, and three representative pages passed the live

@@ -45,8 +45,9 @@ Per HANDOFF_05 N1–N2. flpt first if choosing one: 10 years of PR history in a 
 
 **Status 2026-08-23:** NZ half complete, green, and production-verified: 133 visas /
 266 p50+p80 working-day entities in API/MCP, with a 27-page first public cohort,
-runbook coverage, deployment run `32667066646`, and a 588-URL IndexNow HTTP 200
-receipt. IRCC flpt remains the unfinished half of R2.
+runbook coverage, content deployment run `32667382747`, a 588-URL IndexNow HTTP
+200 receipt, and precise-notifier proof run `32667617092`. IRCC flpt remains the
+unfinished half of R2.
 
 ## Phase R3 — /reports: the weekly-changes digest (the linkable asset + CIC News displacement)
 
