@@ -1,6 +1,6 @@
 # STATE — Data Moat Engine
 
-_Last updated: 2026-08-22_
+_Last updated: 2026-08-23_
 
 ## Environment (verified)
 | Runtime | Version |
@@ -25,7 +25,7 @@ All dependencies install locally (`node_modules` inside project). No sudo or mac
 - [x] Phase 8 — All deliverables complete
 - [x] Post-launch (owner-directed): go-live executed (repo public, Pages live, cron active); design system v2; SEO upgrades (split sitemaps, IndexNow, month-token titles, FAQ/deltas); dataset expanded to **2,005 routes / 6 sources**; 4-agent research round; **/handoff package for Codex transfer (7 files)**
 
-## Deployment status (2026-08-22, owner-authorized)
+## Deployment status (verified through 2026-08-23)
 - Repo LIVE: https://github.com/artwisdom/govwait (public, main)
 - Domain: `govwait.com` registered in Cloudflare Registrar; auto-renew and registrar lock enabled
 - Cloudflare Pages: project `govwait` live; `govwait.com` and `www.govwait.com` active over HTTPS
@@ -44,12 +44,16 @@ All dependencies install locally (`node_modules` inside project). No sudo or mac
   crawl/page fetch/indexing are allowed, and the declared canonical is correct; three
   representative pages each passed the live Rich Results Test with one valid
   Breadcrumb item
+- Sitemap onboarding: `https://govwait.com/sitemap.xml` submitted to both search
+  engines on 2026-08-23. Google re-read it as a **Sitemap index / Success**; Bing
+  accepted it and currently reports **Submitted / Processing**. The public sitemap
+  independently returns HTTP 200 with `application/xml`.
 
 ## Next step
-With explicit owner approval, click **Submit** once in Google Search Console and
-once in Bing Webmaster Tools for `https://govwait.com/sitemap.xml`. Both forms are
-staged, but neither sitemap has been submitted. Any Google **Request indexing** click
-is a separate later approval; none has been made.
+No owner action today. Let Google and Bing process the sitemap, then check their
+discovered-URL counts and Bing's final status after 3–7 days. Do not resubmit while
+processing. Any Google **Request indexing** click remains a separate later approval;
+none has been made.
 
 ## Open threads
 - US/AU/IE sources WAF-blocked to honest bots — owner-decision item (documented in DEPLOYMENT_GUIDE).

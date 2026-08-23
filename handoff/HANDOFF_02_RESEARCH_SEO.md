@@ -17,7 +17,7 @@ in the repo versus what remains (→ roadmap)._
 | Attributed official quote (GEO +41% finding) | ✅ DONE (IRCC "most complete applications" quote on CA pages) |
 | FAQ targeting "why is mine slower" + "after biometrics" | ✅ DONE (varied by category/status to avoid pure boilerplate) |
 | Methodology page + About + independence disclaimer | ✅ DONE (about.astro; footer disclaimer on every page) |
-| GSC + Bing WMT accounts, submit sitemaps | ⚠️ PROPERTIES VERIFIED; `https://govwait.com/sitemap.xml` staged in both forms, but both Submit clicks remain an explicit owner gate — DEPLOYMENT_GUIDE step 6 |
+| GSC + Bing WMT accounts, submit sitemaps | ✅ SUBMITTED 2026-08-23; Google reports **Sitemap index / Success**, Bing reports **Submitted / Processing**. Recheck discovered-URL counts and Bing's final state after 3–7 days — DEPLOYMENT_GUIDE step 6. |
 | Request-indexing quota on hubs only | ❌ SEPARATE OWNER GATE; none requested. Homepage live test is eligible, but the new property still reports the URL as unknown until discovery/indexing. |
 | Downloadable CSV per dataset + Dataset Search submission | ❌ ROADMAP (R6) |
 | /reports (or /trends) monthly movers section | ❌ ROADMAP (R3) — needs history depth, framework should ship now |

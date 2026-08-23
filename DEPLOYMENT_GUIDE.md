@@ -5,8 +5,8 @@
 serves both the apex and `www` over HTTPS; `contact@govwait.com` forwards through
 Cloudflare Email Routing; and the public About page contains the address. Google
 Search Console and Bing Webmaster Tools ownership are verified. The remaining
-search go-live action is the explicitly owner-approved sitemap submission in each
-service.
+search-engine work is passive processing/monitoring; the sitemap has now been
+submitted to both services.
 
 ## Go-live core
 
@@ -30,16 +30,19 @@ service.
 
 5. **[DONE, $10.46/yr] Custom domain.** `govwait.com` is registered through Cloudflare Registrar with auto-renew and registrar lock enabled. Proxied CNAME records route the apex and `www` to `govwait.pages.dev`; both custom domains are active with HTTPS.
 
-6. **[READY — SUBMIT CLICKS AWAIT OWNER APPROVAL] Search consoles.** The Google
+6. **[DONE — SEARCH-ENGINE PROCESSING CONTINUES] Search consoles.** The Google
    Search Console domain property `govwait.com` and Bing Webmaster Tools site
    `https://govwait.com/` were verified by DNS on 2026-08-22. The full sitemap URL
-   `https://govwait.com/sitemap.xml` is staged in both forms but has **not** been
-   submitted. Google's live URL test reports the homepage can be indexed (crawl
+   `https://govwait.com/sitemap.xml` was submitted to both on 2026-08-23. Google
+   reports **Sitemap index / Success**; Bing reports **Submitted / Processing**.
+   The public sitemap returns HTTP 200 as `application/xml`. Google's live URL test
+   reports the homepage can be indexed (crawl
    allowed, fetch successful, indexing allowed, declared canonical correct). The
    Canada visitor-visa-from-India, Canada study-permit-from-Pakistan, and UK standard
    visitor pages each passed Google's live Rich Results Test with one valid
-   Breadcrumb item. After explicit owner approval, click **Submit** once in each
-   service. Treat any Google **Request indexing** click as a separate approval.
+   Breadcrumb item. Wait 3–7 days before judging discovered-URL counts or Bing's
+   final processing status. Treat any Google **Request indexing** click as a separate
+   approval; none has been made.
 
 7. **[DONE] Publish contact details.** The About page links `contact@govwait.com`; Cloudflare Email Routing forwards that alias to the owner's verified destination address.
 

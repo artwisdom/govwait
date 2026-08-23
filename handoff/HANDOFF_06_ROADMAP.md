@@ -11,9 +11,9 @@ never the numbers themselves — six free competitors already have the numbers.*
 - [x] Contact email: alias, About page, and `CONTACT_EMAIL` repository variable complete.
 - [x] Google Search Console domain property + Bing Webmaster Tools site verified;
   Google homepage live test and three representative Rich Results tests passed.
-- [ ] Submit `https://govwait.com/sitemap.xml` to both. The forms are staged; both
-  Submit clicks remain an explicit owner gate, and no Request indexing click has
-  been made.
+- [x] Submit `https://govwait.com/sitemap.xml` to both (2026-08-23). Google reports
+  **Sitemap index / Success**; Bing reports **Submitted / Processing**. Recheck in
+  3–7 days. No Request indexing click has been made.
 - Cloudflare account (needed for R1). Pay Per Crawl beta + Monetization Gateway waitlists while there.
 - Defensive trademark check "GovWait" CA/UK/US (~$0 to search).
 

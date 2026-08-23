@@ -96,9 +96,10 @@ Local Node is 20.19.6 (Astro pinned to v4 for this reason; CI also pins Node 20)
   Webmaster Tools site `https://govwait.com/` are DNS-verified. Google's live test
   says the homepage can be indexed, and three representative pages passed the live
   Rich Results Test with valid Breadcrumb markup.
-- Sitemap submission remains an explicit owner gate. The full sitemap URL is staged
-  in both search-console forms, but neither **Submit** button has been clicked and no
-  Google **Request indexing** action has been taken.
+- Sitemap onboarding: `https://govwait.com/sitemap.xml` was submitted to both search
+  engines on 2026-08-23. Google reports **Sitemap index / Success**; Bing accepted it
+  and reports **Submitted / Processing**. No Google **Request indexing** action has
+  been taken; that remains a separate owner gate.
 
 ## 6. Traps and constraints (learned the hard way — do not relearn)
 
