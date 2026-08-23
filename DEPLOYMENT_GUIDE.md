@@ -44,8 +44,11 @@ submitted to both services.
    Canada visitor-visa-from-India, Canada study-permit-from-Pakistan, and UK standard
    visitor pages each passed Google's live Rich Results Test with one valid
    Breadcrumb item. Wait 3–7 days before judging discovered-URL counts or Bing's
-   final processing status. Treat any Google **Request indexing** click as a separate
-   approval; none has been made.
+   final processing status. After explicit owner confirmation, Google accepted
+   priority-crawl requests for the UK Standard Visitor page, Canada Visitor Visa
+   by Country guide, and Canada Study Permit from Pakistan. Do not repeat those
+   requests merely to try to change priority; acceptance still does not prove
+   that a URL is indexed.
 
 7. **[DONE] Publish contact details.** The About page links `contact@govwait.com`; Cloudflare Email Routing forwards that alias to the owner's verified destination address.
 

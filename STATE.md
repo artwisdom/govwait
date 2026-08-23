@@ -63,8 +63,11 @@ All dependencies install locally (`node_modules` inside project). No sudo or mac
   submission receipts, not proof of indexing or ranking.
 
 ## Next step
-Google **Request indexing** for a small set of priority URLs remains a separate
-action-time owner confirmation; none has been made.
+No further manual indexing request is needed today. On 2026-08-23 Google
+accepted priority-crawl requests for the three confirmed gaps: UK Standard
+Visitor, the Canada Visitor Visa by Country guide, and Canada Study Permit from
+Pakistan. Do not resubmit duplicates; Google states that repeats do not improve
+queue position or priority.
 
 ## Open threads
 - US/AU/IE sources WAF-blocked to honest bots — owner-decision item (documented in DEPLOYMENT_GUIDE).

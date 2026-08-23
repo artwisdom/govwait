@@ -99,8 +99,7 @@ Local Node is 20.19.6 (Astro pinned to v4 for this reason; CI also pins Node 20)
   Rich Results Test with valid Breadcrumb markup.
 - Sitemap onboarding: `https://govwait.com/sitemap.xml` was submitted to both search
   engines on 2026-08-23. Google reports **Sitemap index / Success**; Bing accepted it
-  and reports **Submitted / Processing**. No Google **Request indexing** action has
-  been taken; that remains a separate owner gate.
+  and reports **Submitted / Processing**.
 - The 2026-08-23 discoverability audit intentionally limits requested indexing
   to 561 useful/data-backed URLs (39 hubs/guides, 445 numeric CA applicant
   pages, 77 UK services). The other 1,462 applicant pages stay live and
@@ -110,6 +109,11 @@ Local Node is 20.19.6 (Astro pinned to v4 for this reason; CI also pins Node 20)
 - After that release, Google accepted the updated sitemap again, Bing accepted
   it for processing, and the full 561-URL set received an IndexNow HTTP 200
   receipt. These are submission receipts, not indexing guarantees.
+- After explicit owner confirmation, Google accepted priority-crawl requests
+  for `/uk/standard-visitor/`,
+  `/guides/canada-visitor-visa-by-country/`, and
+  `/canada/study-permit/from-pakistan/`. Do not submit those URLs again merely
+  to try to change priority.
 
 ## 6. Traps and constraints (learned the hard way — do not relearn)
 

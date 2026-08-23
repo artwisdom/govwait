@@ -13,7 +13,10 @@ never the numbers themselves — six free competitors already have the numbers.*
   Google homepage live test and three representative Rich Results tests passed.
 - [x] Submit `https://govwait.com/sitemap.xml` to both (2026-08-23). Google reports
   **Sitemap index / Success**; Bing reports **Submitted / Processing**. Recheck in
-  3–7 days. No Request indexing click has been made.
+  3–7 days.
+- [x] Submit the three confirmed priority gaps through Google URL Inspection:
+  UK Standard Visitor, Canada Visitor Visa by Country guide, and Canada Study
+  Permit from Pakistan. All three were added to Google's priority crawl queue.
 - [x] Harden search/AI discovery: canonical `www` 301, explicit search and AI
   crawler allows, generated `llms.txt`, three honest child sitemaps, structured
   data, exact IndexNow notifications, and a blocking SEO CI audit. Indexing is

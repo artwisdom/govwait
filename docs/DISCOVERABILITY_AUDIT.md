@@ -75,4 +75,8 @@ www canonical redirect, and legacy-slug redirects verified
 IndexNow full-set submission: 561 URLs, HTTP 200 receipt
 Google sitemap resubmission: accepted successfully
 Bing sitemap resubmission: accepted for processing
+Google priority crawl requests: accepted for all three confirmed gaps
+  - https://govwait.com/uk/standard-visitor/
+  - https://govwait.com/guides/canada-visitor-visa-by-country/
+  - https://govwait.com/canada/study-permit/from-pakistan/
 ```

@@ -92,4 +92,6 @@ style preferences.
   CI audit are documented in `docs/DISCOVERABILITY_AUDIT.md`.
 - The updated root sitemap was accepted again by Google and Bing after the
   deployment, and the full 561-URL eligible set received an IndexNow HTTP 200
-  receipt. No Google **Request indexing** click has been made.
+  receipt. Google also accepted priority-crawl requests for the three confirmed
+  indexing gaps: UK Standard Visitor, Canada Visitor Visa by Country guide, and
+  Canada Study Permit from Pakistan.
