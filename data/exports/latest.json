@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-23T21:15:38.559Z",
+ "generated_at": "2026-08-25T14:44:18.851Z",
  "sources": [
   {
    "id": "govuk-inuk-times",
@@ -9,7 +9,7 @@
    "url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
    "license_note": "Open Government Licence v3.0 — reuse permitted with attribution.",
    "robots_status": "allowed",
-   "robots_checked_at": "2026-08-23T21:15:37.699Z"
+   "robots_checked_at": "2026-08-25T14:37:32.314Z"
   },
   {
    "id": "govuk-passport",
@@ -19,7 +19,7 @@
    "url": "https://www.gov.uk/government/organisations/hm-passport-office/about/about-our-services",
    "license_note": "Open Government Licence v3.0 — reuse permitted with attribution.",
    "robots_status": "allowed",
-   "robots_checked_at": "2026-08-23T21:15:37.706Z"
+   "robots_checked_at": "2026-08-25T14:37:35.294Z"
   },
   {
    "id": "govuk-visa-times",
@@ -29,7 +29,7 @@
    "url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
    "license_note": "Open Government Licence v3.0 — reuse permitted with attribution.",
    "robots_status": "allowed",
-   "robots_checked_at": "2026-08-23T21:15:37.692Z"
+   "robots_checked_at": "2026-08-25T14:37:29.632Z"
   },
   {
    "id": "inz-processing-times",
@@ -39,7 +39,7 @@
    "url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
    "license_note": "New Zealand Crown copyright; website content licensed CC BY 3.0 New Zealand with written attribution to the Crown and Ministry.",
    "robots_status": "allowed",
-   "robots_checked_at": "2026-08-23T21:15:38.482Z"
+   "robots_checked_at": "2026-08-25T14:44:18.736Z"
   },
   {
    "id": "ircc-noncountry",
@@ -49,7 +49,7 @@
    "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html",
    "license_note": "Government of Canada publication; extracted values with attribution (see ircc-ptime).",
    "robots_status": "allowed",
-   "robots_checked_at": "2026-08-23T21:15:37.670Z"
+   "robots_checked_at": "2026-08-25T14:37:23.104Z"
   },
   {
    "id": "ircc-passport",
@@ -59,7 +59,7 @@
    "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-passports/processing-times.html",
    "license_note": "Government of Canada publication; extracted values with attribution (see ircc-ptime).",
    "robots_status": "allowed",
-   "robots_checked_at": "2026-08-23T21:15:37.685Z"
+   "robots_checked_at": "2026-08-25T14:37:26.122Z"
   },
   {
    "id": "ircc-ptime",
@@ -69,7 +69,7 @@
    "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html",
    "license_note": "Government of Canada publication; facts/values extracted under fair-dealing-style factual reuse. Non-commercial reproduction terms noted; we store extracted values with attribution, not page content. Owner review recommended before commercial launch.",
    "robots_status": "allowed",
-   "robots_checked_at": "2026-08-23T21:15:37.589Z"
+   "robots_checked_at": "2026-08-25T14:37:19.110Z"
   }
  ],
  "records": [

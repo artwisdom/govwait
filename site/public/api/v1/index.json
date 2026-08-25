@@ -1,9 +1,9 @@
 {
  "name": "GovWait API v1",
  "description": "Officially published government processing times, tracked with provenance and history. Static JSON; no key required.",
- "generated_at": "2026-08-23T21:15:38.559Z",
+ "generated_at": "2026-08-25T14:44:18.851Z",
  "stats": {
-  "generated_at": "2026-08-23T21:15:38.559Z",
+  "generated_at": "2026-08-25T14:44:18.851Z",
   "entities": 2271,
   "observations": 2271,
   "jurisdictions": [
