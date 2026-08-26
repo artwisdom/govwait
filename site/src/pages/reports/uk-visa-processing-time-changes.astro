@@ -1,0 +1,70 @@
+---
+import EditorialFrame from '../../components/EditorialFrame.astro';
+import { records, services, dataLastmod, fmtDate } from '../../lib/data.js';
+import { newestDate } from '../../lib/editorial.js';
+
+const all = [...services.GB.values()];
+const outside = all.filter(service => !service.key.startsWith('gb-in-uk-'));
+const inside = all.filter(service => service.key.startsWith('gb-in-uk-'));
+const changes = records.filter(record => record.jurisdiction === 'GB' && record.delta && record.delta.dir !== 'flat');
+const distribution = new Map();
+for (const service of all) {
+  const raw = service.records[0].value_raw;
+  distribution.set(raw, (distribution.get(raw) || 0) + 1);
+}
+const distributionRows = [...distribution].sort((a, b) => Number.parseFloat(a[0]) - Number.parseFloat(b[0]));
+const maxCount = Math.max(...distributionRows.map(([, count]) => count), 1);
+const pairNames = [...new Set(outside.map(service => service.name))];
+const pairs = pairNames.map(name => ({
+  name,
+  outside: outside.find(service => service.name === name),
+  inside: inside.find(service => service.name === name),
+})).filter(pair => pair.outside && pair.inside).filter(pair => pair.outside.records[0].value_raw !== pair.inside.records[0].value_raw);
+const checked = all.map(service => service.latestEffective).sort().at(-1);
+const sources = [...new Set(records.filter(record => record.jurisdiction === 'GB').map(record => record.source_url))];
+---
+<EditorialFrame
+  sectionName="Reports"
+  sectionPath="/reports/"
+  slug="uk-visa-processing-time-changes"
+  title={`UK visa processing standards baseline and changes — ${fmtDate(checked)}`}
+  description={`Compare ${outside.length} outside-UK and ${inside.length} inside-UK visa processing standards, with verified change history as official values move.`}
+  h1="UK visa processing standards: baseline and changes"
+  lede={`UKVI currently publishes ${all.length} tracked processing-time categories across applications made inside and outside the UK. This report separates those contexts and preserves an honest baseline for later change detection.`}
+  modified={newestDate('2026-08-23', dataLastmod)}
+  checked={checked}
+  about={['UK visa processing times', 'UKVI service standards', 'visa decision waiting times']}
+  citations={sources}
+  adPrefix="report-uk"
+>
+  <div class="stats">
+    <div><div class="n">{outside.length}</div><div class="l">outside-UK categories</div></div>
+    <div><div class="n">{inside.length}</div><div class="l">inside-UK categories</div></div>
+    <div><div class="n">{pairs.length}</div><div class="l">matched routes with different times</div></div>
+    <div><div class="n">{changes.length}</div><div class="l">changes since prior observation</div></div>
+  </div>
+
+  {changes.length === 0 && <div class="callout good"><span class="report-status">Baseline only</span><p>There is not yet a second differing stored value for a UK category. A published standard remaining the same cannot be distinguished from “not yet compared” until another observation is stored, so this report does not label the baseline as unchanged.</p></div>}
+
+  <h2>Inside and outside the UK are different clocks</h2>
+  <p>The same route can carry a different published time depending on where the application is made. The official clock begins after identity verification and document submission through the app, or after the biometric appointment, and ends when UKVI sends the decision notice.</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Matched route</th><th>Outside UK</th><th>Inside UK</th></tr></thead>
+    <tbody>{pairs.slice(0, 25).map(pair => (
+      <tr><td>{pair.name}</td><td><a href={`/uk/${pair.outside.slug}/`}>{pair.outside.records[0].value_raw}</a></td><td><a href={`/uk/${pair.inside.slug}/`}>{pair.inside.records[0].value_raw}</a></td></tr>
+    ))}</tbody>
+  </table></div>
+
+  <h2>Current published-time distribution</h2>
+  <div class="bar-list">
+    {distributionRows.map(([value, count]) => (
+      <div class="bar-row"><span>{value}</span><div class="bar-track" aria-hidden="true"><div class="bar-fill" style={`width:${Math.max(3, count / maxCount * 100)}%`}></div></div><span class="num">{count} categories</span></div>
+    ))}
+  </div>
+
+  {changes.length > 0 && <><h2>Verified changes</h2><div class="tablewrap"><table><thead><tr><th>Route</th><th>Previous</th><th>Current</th></tr></thead><tbody>{changes.map(record => (<tr><td><a href={`/uk/${record.serviceSlug}/`}>{services.GB.get(record.serviceSlug).name}</a></td><td>{record.delta.prev_raw}</td><td>{record.value_raw}</td></tr>))}</tbody></table></div></>}
+
+  <h2>Method and limits</h2>
+  <p>GovWait records UKVI’s published processing time or service standard for each category and context. Standards are not maximums. UKVI lists document checks, interviews, further evidence, demand and technical outages among reasons an application may take longer.</p>
+  <div class="prov">Official sources: <a href={sources.find(url => url.includes('outside'))} rel="noopener">applications outside the UK</a> and <a href={sources.find(url => url.includes('inside'))} rel="noopener">applications inside the UK</a> · latest source date represented {fmtDate(checked)}.</div>
+</EditorialFrame>

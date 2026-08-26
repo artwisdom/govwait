@@ -1,0 +1,27 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Corrections policy — GovWait" description="How to report a processing-time mismatch and how GovWait investigates, corrects and documents errors." noindex={true}>
+  <nav class="crumbs"><a href="/">Home</a> › Corrections</nav>
+  <h1>Corrections policy</h1>
+  <p class="lede">The official agency wins whenever a GovWait value and its source disagree. Reports of mismatches are investigated against the primary source and append-only history.</p>
+
+  <h2>Report a possible error</h2>
+  <p>Email <a href="mailto:contact@govwait.com?subject=Possible%20GovWait%20data%20correction">contact@govwait.com</a> with:</p>
+  <ul>
+    <li>the exact GovWait URL;</li>
+    <li>the official government URL;</li>
+    <li>the value and date you observed; and</li>
+    <li>a short description of the mismatch.</li>
+  </ul>
+  <p>Do not send an application number, passport, decision letter or other personal case material.</p>
+
+  <h2>How corrections work</h2>
+  <ol>
+    <li>We reproduce the issue against the current official source.</li>
+    <li>We check the stored raw observation, parser output and validation record.</li>
+    <li>If GovWait is wrong, publication is blocked until the parser or page is corrected and the full validation suite passes.</li>
+    <li>A genuine official change is added as a new dated observation. Prior official observations are not silently rewritten.</li>
+  </ol>
+  <p>Spelling, explanation or accessibility errors in GovWait’s own text are corrected directly, with the page’s modified date updated when the change is material.</p>
+</Base>

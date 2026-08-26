@@ -1,0 +1,49 @@
+---
+import EditorialFrame from '../../components/EditorialFrame.astro';
+import { records, fmtDate } from '../../lib/data.js';
+import { newestDate } from '../../lib/editorial.js';
+
+const outside = records.find(record => record.id === 'gb-visit-visas--standard-visitor');
+const inside = records.find(record => record.id === 'gb-in-uk-visit-visa--standard-visitor');
+const outsideGuide = 'https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk';
+const insideGuide = 'https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk';
+const checked = [outside.effective_date, inside.effective_date].sort().at(-1);
+---
+<EditorialFrame
+  sectionName="Guides"
+  sectionPath="/guides/"
+  slug="uk-standard-visitor-processing-time"
+  title={`UK Standard Visitor visa processing time: ${outside.value_raw} outside the UK`}
+  description={`UKVI currently publishes ${outside.value_raw} for Standard Visitor applications outside the UK. See clock boundaries, the separate inside-UK table and planning limits.`}
+  h1="UK Standard Visitor visa processing time"
+  lede={`The current UKVI table lists ${outside.value_raw} for a Standard Visitor application made outside the UK. It separately lists ${inside.value_raw} for the inside-UK context, so the two should not be quoted as one universal wait.`}
+  modified={newestDate('2026-08-23', checked)}
+  checked={checked}
+  about={['UK Standard Visitor visa', 'UK visitor visa processing time', 'UKVI']}
+  citations={[outsideGuide, insideGuide]}
+  adPrefix="guide-uk-visitor"
+>
+  <div class="stats"><div><div class="n">{outside.value_raw}</div><div class="l">outside the UK</div></div><div><div class="n">{inside.value_raw}</div><div class="l">inside-UK table</div></div><div><div class="n">Mon–Fri</div><div class="l">UK working-week basis</div></div></div>
+
+  <h2>What starts the visitor-visa clock</h2>
+  <p>UKVI says processing begins after identity is verified and the documents and application are submitted through the ID Check app, or after the applicant attends the visa application centre for fingerprints and a photograph. The clock ends when UKVI sends the letter or email stating that a decision has been made.</p>
+
+  <h2>What “{outside.value_raw}” does not include</h2>
+  <p>It does not include the applicant’s preparation before the processing start, the time needed to obtain an appointment beforehand, or every post-decision travel step. UKVI also says applicants are not required to book travel before applying or before a decision is made.</p>
+  <p>The official processing times use the UK working week, Monday to Friday. UK public holidays are included in the published calculation, while public holidays in other countries are not.</p>
+
+  <h2>Outside and inside contexts</h2>
+  <div class="tablewrap"><table><thead><tr><th>Published context</th><th>Current time</th><th>Route page</th></tr></thead><tbody>
+    <tr><td>Standard Visitor — outside UK</td><td>{outside.value_raw}</td><td><a href={`/uk/${outside.serviceSlug}/`}>Current value &amp; history</a></td></tr>
+    <tr><td>Standard Visitor — inside-UK table</td><td>{inside.value_raw}</td><td><a href={`/uk/${inside.serviceSlug}/`}>Current value &amp; history</a></td></tr>
+  </tbody></table></div>
+  <p>The table reports what UKVI publishes; it does not say that every visitor can or should apply from either context.</p>
+
+  <h2>When a decision can take longer</h2>
+  <p>UKVI lists inaccurate information, further evidence, document verification, interviews, personal-circumstance checks, higher demand and technical outages as examples. It says applicants will be contacted within the current processing time if the application will take longer.</p>
+  <div class="callout warn"><strong>Do not turn three weeks into a flight date.</strong> The service standard is a planning reference, not an individual guarantee.</div>
+
+  <h2>Monitor the source date</h2>
+  <p>GovWait stores the UKVI update date and adds history only when the official value changes. The <a href="/reports/uk-visa-processing-time-changes/">UK baseline and changes report</a> shows the current distribution across all categories.</p>
+  <div class="prov">Official sources: <a href={outsideGuide} rel="noopener">UKVI applications outside the UK</a> and <a href={insideGuide} rel="noopener">inside the UK</a> · latest source date represented {fmtDate(checked)}.</div>
+</EditorialFrame>

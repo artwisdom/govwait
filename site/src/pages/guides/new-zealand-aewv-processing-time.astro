@@ -1,0 +1,50 @@
+---
+import EditorialFrame from '../../components/EditorialFrame.astro';
+import { services, fmtDate } from '../../lib/data.js';
+import { newestDate } from '../../lib/editorial.js';
+
+const service = services.NZ.get('accredited-employer-work-visa');
+const p50 = service.percent50;
+const p80 = service.percent80;
+const officialVisa = 'https://www.immigration.govt.nz/visas/accredited-employer-work-visa/';
+const officialStages = 'https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/employer-accreditation-job-check-and-aewv-wait-times/';
+---
+<EditorialFrame
+  sectionName="Guides"
+  sectionPath="/guides/"
+  slug="new-zealand-aewv-processing-time"
+  title={`New Zealand AEWV processing time: 50% ${p50.value_raw}, 80% ${p80.value_raw}`}
+  description={`Current Accredited Employer Work Visa processing times, the employer accreditation and job-check stages, and the difference between INZ's 50% and 80% measures.`}
+  h1="New Zealand Accredited Employer Work Visa processing time"
+  lede={`Immigration New Zealand currently reports 50% of Accredited Employer Work Visa applications processed within ${p50.value_raw} and 80% within ${p80.value_raw}. The visa is only one part of an employer-led sequence.`}
+  modified={newestDate('2026-08-23', service.latestEffective)}
+  checked={service.latestEffective}
+  about={['Accredited Employer Work Visa', 'AEWV', 'New Zealand visa processing times']}
+  citations={[officialVisa, officialStages, p80.source_url]}
+  adPrefix="guide-nz-aewv"
+>
+  <div class="stats"><div><div class="n">{p50.value_raw}</div><div class="l">50% processed</div></div><div><div class="n">{p80.value_raw}</div><div class="l">80% processed</div></div><div><div class="n">{p80.value_days - p50.value_days} days</div><div class="l">gap between the two points</div></div></div>
+
+  <h2>The AEWV timeline has three distinct gateways</h2>
+  <ol>
+    <li><strong>Employer accreditation:</strong> the employer must hold the required INZ accreditation.</li>
+    <li><strong>Job Check:</strong> the employer completes the official job-check step and obtains the job token used for the worker’s application.</li>
+    <li><strong>Worker’s AEWV application:</strong> the applicant submits the visa application using the employer-provided link and required documents.</li>
+  </ol>
+  <p>The {p50.value_raw}/{p80.value_raw} pair on this page is the visa-service figure in GovWait’s tracked tool. It should not be presented as the total time for all three gateways unless the official source explicitly combines them.</p>
+
+  <h2>What the two numbers reveal</h2>
+  <p>INZ calls the 50% point the average wait time and the 80% point “most completed within.” Both are based on working days. Half of represented applications completed by the first point; four out of five completed by the second. The remaining applications took longer.</p>
+  <p>The {p80.value_days - p50.value_days}-working-day gap is useful because a single “typical” number hides the slower half of the distribution. It still does not predict a particular file.</p>
+
+  <h2>Employer and role detail can change the wider plan</h2>
+  <p>INZ also publishes employer-accreditation and Job Check figures, along with AEWV breakdowns by skill level and sector. Those tables can be more useful than the all-roles number when the official category matches the role. GovWait does not infer a skill level or sector from a job title.</p>
+  <div class="callout warn"><strong>Do not combine the stages by guesswork.</strong> Accreditation, Job Check and visa processing are separate official products, and some work can occur before the worker can submit.</div>
+
+  <h2>What can make processing longer</h2>
+  <p>INZ says incomplete applications take longer and may be declined. It must assess immigration requirements and the role requirements, and additional information or verification can extend the wait. The linked official account remains the case-specific source.</p>
+
+  <h2>Track the two measures independently</h2>
+  <p>The <a href="/new-zealand/accredited-employer-work-visa/">AEWV route page</a> stores separate history for the 50% and 80% values. The <a href="/reports/new-zealand-visa-processing-time-changes/">New Zealand report</a> compares the current gap with other reviewed visa types.</p>
+  <div class="prov">Official sources: <a href={officialVisa} rel="noopener">AEWV visa page</a>, <a href={officialStages} rel="noopener">employer, Job Check and AEWV wait times</a>, and the <a href={p80.source_url} rel="noopener">INZ processing-time tool</a>.</div>
+</EditorialFrame>

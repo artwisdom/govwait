@@ -1,7 +1,8 @@
 ---
-import Base from '../../layouts/Base.astro';
+import EditorialFrame from '../../components/EditorialFrame.astro';
 import AdSlot from '../../components/AdSlot.astro';
 import { services, fmtDate, humanValue } from '../../lib/data.js';
+import { newestDate } from '../../lib/editorial.js';
 
 const svc = services.CA.get('visitor-visa');
 const ok = svc.records.filter(r => r.status === 'ok');
@@ -10,12 +11,15 @@ const slowest = ok.slice(-10).reverse();
 const median = Math.round(svc.medianDays);
 const big = ['IN', 'NG', 'PH', 'PK', 'CN', 'BR', 'MX', 'BD', 'VN', 'CO']
   .map(cc => ok.find(r => r.applicant_country === cc)).filter(Boolean);
+const citations = [...new Set(svc.records.map(record => record.source_url))];
 ---
-<Base title={`Canada visitor visa times by country — ${median}-day median`}
-      description={`Compare current IRCC visitor-visa times by country: ${median}-day median, fastest and slowest routes, major corridors, official sources and history.`}>
-  <nav class="crumbs"><a href="/">Home</a> › <a href="/guides/">Guides</a> › Visitor visa by country</nav>
-  <h1>Canada visitor visa times, analyzed by country</h1>
-  <p class="lede">IRCC currently publishes visitor-visa processing times for <strong>{ok.length}</strong> applicant countries (of {svc.records.length} tracked). The median is <strong>{median} days</strong>, but the spread is enormous — the same visa takes {fastest[0].value_raw} from {fastest[0].applicant_country_name} and {slowest[0].value_raw} from {slowest[0].applicant_country_name}. Data as of {fmtDate(svc.latestEffective)}.</p>
+<EditorialFrame sectionName="Guides" sectionPath="/guides/" slug="canada-visitor-visa-by-country"
+  title={`Canada visitor visa times by country — ${median}-day median`}
+  description={`Compare current IRCC visitor-visa times by country: ${median}-day median, fastest and slowest routes, major corridors, official sources and history.`}
+  h1="Canada visitor visa times, analyzed by country"
+  lede={`IRCC currently publishes visitor-visa processing times for ${ok.length} applicant countries (of ${svc.records.length} tracked). The median is ${median} days, while current published values run from ${fastest[0].value_raw} to ${slowest[0].value_raw}. Data as of ${fmtDate(svc.latestEffective)}.`}
+  published="2026-08-22" modified={newestDate('2026-08-23', svc.latestEffective)} checked={svc.latestEffective}
+  about={['Canada visitor visa', 'IRCC processing times']} citations={citations} adPrefix="guide-ca-visitor-compare">
   <AdSlot position="guide-top" />
 
   <h2>Major corridors right now</h2>
@@ -32,21 +36,21 @@ const big = ['IN', 'NG', 'PH', 'PK', 'CN', 'BR', 'MX', 'BD', 'VN', 'CO']
     </tbody>
   </table></div>
 
-  <h2>The ten fastest — and what "fast" hides</h2>
+  <h2>The ten shortest currently published times</h2>
   <div class="related">
     {fastest.map(r => <a href={`/canada/visitor-visa/${r.applicantSlug}/`}>{r.applicant_country_name}: <strong class="num">&nbsp;{r.value_raw}</strong></a>)}
   </div>
-  <p>Short published times cluster in countries with modest application volumes and high approval predictability. A {fastest[0].value_raw} figure does not mean the visa office is idle — it often means the recent sample skews toward straightforward cases.</p>
+  <p>IRCC does not publish the route-level sample size or a reason beside each country value. The ranking therefore shows only the current processing-time statistic; it cannot establish capacity, approval likelihood or why one country is shorter.</p>
 
   <h2>The ten slowest</h2>
   <div class="related">
     {slowest.map(r => <a href={`/canada/visitor-visa/${r.applicantSlug}/`}>{r.applicant_country_name}: <strong class="num">&nbsp;{r.value_raw}</strong></a>)}
   </div>
-  <p>Long tails usually combine heavy demand, additional screening, and local capacity limits. If your country sits here, the practical advice is unglamorous: apply far earlier than feels necessary, and watch the recorded history on your route's page — sustained improvement over several weeks is a real signal, a single good week is not.</p>
+  <p>A longer country value calls for more planning room, but it does not identify the cause. IRCC lists completeness, verification, response time, application volume and complexity among factors that can affect a wait. Watch the dated route history instead of relying on an undated screenshot.</p>
 
   <h2>Read the movement, not just the level</h2>
   <p>Because IRCC recalculates weekly from completed cases, each route's history (which we record and the official site does not keep) tells you whether a corridor is clearing or clogging. Every country page on this site shows that history alongside today's figure — see <a href="/canada/visitor-visa/">the full table of all {svc.records.length} countries</a>.</p>
 
   <div class="prov">Computed from the tracked dataset at build time; updates automatically with every refresh. Source: IRCC. Not legal advice.</div>
   <AdSlot position="guide-bottom" />
-</Base>
+</EditorialFrame>

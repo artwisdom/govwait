@@ -9,15 +9,31 @@ export function urlset(site, urls) {
 }
 
 export function hubUrls() {
+  const phaseOnePublished = '2026-08-23';
   const urls = [
     { path: '/', lastmod: dataLastmod },
     { path: '/about/', lastmod: dataLastmod },
+    { path: '/about/editorial-policy/', lastmod: phaseOnePublished },
+    { path: '/about/research-desk/', lastmod: phaseOnePublished },
     { path: '/api-docs/', lastmod: dataLastmod },
-    { path: '/guides/', lastmod: dataLastmod },
+    { path: '/guides/', lastmod: phaseOnePublished },
     { path: '/guides/how-canada-processing-times-work/', lastmod: dataLastmod },
     { path: '/guides/canada-visitor-visa-by-country/', lastmod: dataLastmod },
+    { path: '/guides/canada-study-permit-from-india/', lastmod: dataLastmod },
+    { path: '/guides/canada-study-permit-from-nigeria/', lastmod: dataLastmod },
+    { path: '/guides/canada-visitor-visa-from-india/', lastmod: dataLastmod },
+    { path: '/guides/canada-visitor-visa-from-philippines/', lastmod: dataLastmod },
+    { path: '/guides/canada-work-permit-from-mexico/', lastmod: dataLastmod },
     { path: '/guides/uk-visa-processing-standards/', lastmod: dataLastmod },
+    { path: '/guides/uk-spouse-visa-processing-time/', lastmod: dataLastmod },
+    { path: '/guides/uk-standard-visitor-processing-time/', lastmod: dataLastmod },
     { path: '/guides/how-new-zealand-visa-processing-times-work/', lastmod: dataLastmod },
+    { path: '/guides/new-zealand-aewv-processing-time/', lastmod: dataLastmod },
+    { path: '/guides/new-zealand-student-visa-processing-time/', lastmod: dataLastmod },
+    { path: '/reports/', lastmod: phaseOnePublished },
+    { path: '/reports/canada-processing-time-changes/', lastmod: dataLastmod },
+    { path: '/reports/uk-visa-processing-time-changes/', lastmod: dataLastmod },
+    { path: '/reports/new-zealand-visa-processing-time-changes/', lastmod: dataLastmod },
   ];
   for (const [code, jur] of Object.entries(JURISDICTIONS)) {
     const svcMap = services[code];

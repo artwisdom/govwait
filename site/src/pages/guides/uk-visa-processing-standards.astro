@@ -1,7 +1,8 @@
 ---
-import Base from '../../layouts/Base.astro';
+import EditorialFrame from '../../components/EditorialFrame.astro';
 import AdSlot from '../../components/AdSlot.astro';
 import { services, fmtDate, fmtMonthYearShort } from '../../lib/data.js';
+import { newestDate } from '../../lib/editorial.js';
 
 const svcs = [...services.GB.values()];
 const updated = svcs.map(s => s.latestEffective).sort().at(-1);
@@ -10,12 +11,15 @@ for (const s of svcs) {
   const section = (s.records[0].service_name.match(/\(([^)]+)\)$/) || [null, 'Other'])[1];
   (groups[section] ||= []).push(s);
 }
+const citations = [...new Set(svcs.flatMap(service => service.records.map(record => record.source_url)))];
 ---
-<Base title={`UK visa processing times — all current standards (${fmtMonthYearShort(updated)})`}
-      description="Compare current UKVI processing standards for visit, study, work and family routes in one source-backed table with recorded history.">
-  <nav class="crumbs"><a href="/">Home</a> › <a href="/guides/">Guides</a> › UK service standards</nav>
-  <h1>UK visa processing times: every current service standard</h1>
-  <p class="lede">Unlike Canada's per-country statistics, the UK publishes <em>service standards</em>: targets for how long a decision should take once you've attended your biometric appointment, applying from outside the UK. Here is every standard we track, as last updated {fmtDate(updated)}.</p>
+<EditorialFrame sectionName="Guides" sectionPath="/guides/" slug="uk-visa-processing-standards"
+  title={`UK visa processing times — all current standards (${fmtMonthYearShort(updated)})`}
+  description="Compare current UKVI processing standards for visit, study, work and family routes in one source-backed table with recorded history."
+  h1="UK visa processing times: every current service standard"
+  lede={`The UK publishes service standards and current processing times for applications made inside and outside the country. Here is every category we track, with the latest source date ${fmtDate(updated)}.`}
+  published="2026-08-22" modified={newestDate('2026-08-23', updated)} checked={updated}
+  about={['UK visa processing times', 'UKVI service standards']} citations={citations} adPrefix="guide-uk-standards">
   <AdSlot position="guide-top" />
 
   {Object.entries(groups).map(([section, list]) => (
@@ -41,4 +45,4 @@ for (const s of svcs) {
 
   <div class="prov">Source: UK Visas and Immigration via the gov.uk Content API (Open Government Licence v3.0). Recomputed at every build.</div>
   <AdSlot position="guide-bottom" />
-</Base>
+</EditorialFrame>

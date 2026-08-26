@@ -1,0 +1,85 @@
+---
+const ga4MeasurementId = import.meta.env.PUBLIC_GA4_MEASUREMENT_ID || '';
+const analyticsEnabled = /^G-[A-Z0-9]+$/i.test(ga4MeasurementId);
+---
+
+{analyticsEnabled && (
+  <>
+    <aside class="consent-panel" id="consent-panel" role="dialog" aria-labelledby="consent-title" hidden>
+      <div>
+        <strong id="consent-title">Optional site analytics</strong>
+        <p>GovWait can use Google Analytics to understand which public pages are useful. It stays off unless you accept. Grow reader tools manage their own choices separately.</p>
+      </div>
+      <div class="consent-actions">
+        <button type="button" class="consent-accept" data-consent="accept">Accept analytics</button>
+        <button type="button" class="consent-decline" data-consent="decline">Decline</button>
+        <a href="/privacy/">Privacy details</a>
+      </div>
+    </aside>
+
+    <script is:inline define:vars={{ ga4MeasurementId }}>
+      (() => {
+        const storageKey = 'govwait_analytics_consent_v1';
+        const panel = document.getElementById('consent-panel');
+        let loaded = false;
+
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+        window.gtag('consent', 'default', {
+          analytics_storage: 'denied',
+          ad_storage: 'denied',
+          ad_user_data: 'denied',
+          ad_personalization: 'denied'
+        });
+
+        const loadAnalytics = () => {
+          window.gtag('consent', 'update', { analytics_storage: 'granted' });
+          if (loaded) return;
+          loaded = true;
+          window.gtag('js', new Date());
+          window.gtag('config', ga4MeasurementId, {
+            allow_google_signals: false,
+            allow_ad_personalization_signals: false
+          });
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(ga4MeasurementId)}`;
+          document.head.appendChild(script);
+        };
+
+        const clearAnalyticsCookies = () => {
+          document.cookie.split(';').forEach((part) => {
+            const name = part.split('=')[0]?.trim();
+            if (!name?.startsWith('_ga')) return;
+            document.cookie = `${name}=; Max-Age=0; path=/; SameSite=Lax`;
+            document.cookie = `${name}=; Max-Age=0; path=/; domain=.govwait.com; SameSite=Lax`;
+          });
+        };
+
+        const saveChoice = (choice) => {
+          try { localStorage.setItem(storageKey, choice); } catch (_) {}
+          if (choice === 'accepted') loadAnalytics();
+          else {
+            window.gtag('consent', 'update', { analytics_storage: 'denied' });
+            clearAnalyticsCookies();
+          }
+          panel.hidden = true;
+        };
+
+        const showChoices = () => {
+          panel.hidden = false;
+          panel.querySelector('[data-consent="accept"]')?.focus();
+        };
+
+        document.querySelector('[data-consent="accept"]')?.addEventListener('click', () => saveChoice('accepted'));
+        document.querySelector('[data-consent="decline"]')?.addEventListener('click', () => saveChoice('declined'));
+        document.querySelector('[data-consent="open"]')?.addEventListener('click', showChoices);
+
+        let choice = null;
+        try { choice = localStorage.getItem(storageKey); } catch (_) {}
+        if (choice === 'accepted') loadAnalytics();
+        else if (choice !== 'declined') showChoices();
+      })();
+    </script>
+  </>
+)}

@@ -1,0 +1,53 @@
+---
+import EditorialFrame from '../../components/EditorialFrame.astro';
+import { records, services, fmtDate } from '../../lib/data.js';
+import { newestDate } from '../../lib/editorial.js';
+
+const rec = records.find(record => record.id === 'ca-work-permit--mx');
+const service = services.CA.get('work-permit');
+const comparisons = ['MX', 'US', 'BR', 'CO', 'PE', 'JM']
+  .map(code => service.records.find(record => record.applicant_country === code))
+  .filter(Boolean);
+const officialGuide = 'https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html';
+---
+<EditorialFrame
+  sectionName="Guides"
+  sectionPath="/guides/"
+  slug="canada-work-permit-from-mexico"
+  title={`Canada work permit processing time from Mexico: ${rec.value_raw}`}
+  description={`Current official Canada work-permit time from Mexico, regional comparisons and a clear separation between employer preparation and IRCC processing.`}
+  h1="Canada work permit processing time from Mexico"
+  lede={`IRCC currently reports ${rec.value_raw} for work-permit applications submitted from Mexico. That figure measures government processing after a complete application—not the employer, job-offer or document-preparation work that may happen first.`}
+  modified={newestDate('2026-08-23', rec.effective_date)}
+  checked={rec.effective_date}
+  about={['Canada work permit', 'Mexico', 'IRCC processing times']}
+  citations={[officialGuide, rec.source_url]}
+  adPrefix="guide-work-mexico"
+>
+  <div class="stats"><div><div class="n">{rec.value_raw}</div><div class="l">Mexico figure</div></div><div><div class="n">{Math.round(service.medianDays)} days</div><div class="l">published-country median</div></div><div><div class="n">{rec.speed.label}</div><div class="l">current relative position</div></div></div>
+
+  <h2>Separate the employer timeline from the IRCC timeline</h2>
+  <p>A person’s overall plan can contain steps before the work-permit application is complete. Depending on the route, those may involve employer documents, a job offer or other authorization. GovWait does not determine which requirements apply. The {rec.value_raw} figure begins only when IRCC receives the complete application selected in its processing-time tool.</p>
+  <p>IRCC’s current general guidance says the clock ends at the decision and includes time to provide biometrics. It does not convert employer preparation or post-decision travel arrangements into processing days.</p>
+
+  <h2>Mexico compared with selected routes in the Americas</h2>
+  <div class="tablewrap"><table><thead><tr><th>Applying from</th><th>Current official time</th><th>Against service median</th></tr></thead><tbody>{comparisons.map(item => (<tr><td><a href={`/canada/work-permit/${item.applicantSlug}/`}>{item.applicant_country_name}</a></td><td>{item.status === 'ok' ? item.value_raw : 'No official time published'}</td><td>{item.speed?.label || 'No stable comparison'}</td></tr>))}</tbody></table></div>
+  <p>The country field describes application location. It does not identify the applicant’s work-permit category or prove the same employer-side steps apply across rows.</p>
+
+  <h2>A better way to plan</h2>
+  <ol>
+    <li>Use the official instructions to identify the correct work-permit route and prerequisites.</li>
+    <li>Keep preparation time outside the IRCC estimate in your own schedule.</li>
+    <li>Check the Mexico value and official data date immediately before submission.</li>
+    <li>Leave room beyond the published figure for verification, document requests and post-decision logistics.</li>
+  </ol>
+  <div class="callout warn"><strong>Employment decisions carry real consequences.</strong> A published processing time is not permission to work and is not a forecast of approval. Use the official permit conditions or qualified advice for eligibility questions.</div>
+
+  <h2>Track the official number over time</h2>
+  <p>The <a href="/canada/work-permit/from-mexico/">Mexico route page</a> records each differing IRCC value and shows the service-wide comparison. The <a href="/reports/canada-processing-time-changes/">Canada report</a> will flag a verified increase or decrease only after a second observation exists.</p>
+
+  <h2>Common questions</h2>
+  <h3>Does the figure include time before a complete application?</h3><p>No. IRCC states that its processing clock starts when it receives the complete application.</p>
+  <h3>Does a short figure guarantee the intended employment start date?</h3><p>No. It is not a maximum or guarantee, and employer preparation and post-decision steps are separate.</p>
+  <div class="prov">Official source: <a href={officialGuide} rel="noopener">IRCC processing-time guidance</a> and <a href={rec.source_url} rel="noopener">IRCC data</a> · checked {fmtDate(rec.effective_date)}.</div>
+</EditorialFrame>

@@ -1,0 +1,48 @@
+---
+import EditorialFrame from '../../components/EditorialFrame.astro';
+import { records, services, fmtDate } from '../../lib/data.js';
+import { newestDate } from '../../lib/editorial.js';
+
+const rec = records.find(record => record.id === 'ca-visitor-visa--ph');
+const service = services.CA.get('visitor-visa');
+const comparisons = ['PH', 'VN', 'ID', 'MY', 'TH', 'SG']
+  .map(code => service.records.find(record => record.applicant_country === code))
+  .filter(Boolean);
+const officialGuide = 'https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html';
+---
+<EditorialFrame
+  sectionName="Guides"
+  sectionPath="/guides/"
+  slug="canada-visitor-visa-from-philippines"
+  title={`Canada visitor visa processing time from the Philippines: ${rec.value_raw}`}
+  description={`Current IRCC visitor-visa time from the Philippines, compared with nearby application countries and separated from preparation and travel time.`}
+  h1="Canada visitor visa processing time from the Philippines"
+  lede={`IRCC currently reports ${rec.value_raw} for a visitor-visa application submitted from the Philippines. That is ${Math.abs(Math.round(service.medianDays - rec.value_days))} days ${rec.value_days <= service.medianDays ? 'below' : 'above'} the current median across countries with a published value.`}
+  modified={newestDate('2026-08-23', rec.effective_date)}
+  checked={rec.effective_date}
+  about={['Canada visitor visa', 'Philippines', 'IRCC processing times']}
+  citations={[officialGuide, rec.source_url]}
+  adPrefix="guide-visitor-philippines"
+>
+  <div class="stats"><div><div class="n">{rec.value_raw}</div><div class="l">Philippines figure</div></div><div><div class="n">{Math.round(service.medianDays)} days</div><div class="l">current service median</div></div><div><div class="n">{fmtDate(rec.effective_date)}</div><div class="l">official data date</div></div></div>
+
+  <h2>Southeast Asian application-country comparison</h2>
+  <div class="tablewrap"><table><thead><tr><th>Applying from</th><th>Current time</th><th>Current comparison</th></tr></thead><tbody>{comparisons.map(item => (<tr><td><a href={`/canada/visitor-visa/${item.applicantSlug}/`}>{item.applicant_country_name}</a></td><td>{item.status === 'ok' ? item.value_raw : 'No official time published'}</td><td>{item.speed?.label || 'No stable comparison'}</td></tr>))}</tbody></table></div>
+  <p>Country comparisons help answer “what is IRCC publishing now?” They do not answer why a particular case took longer or whether an application will be approved.</p>
+
+  <h2>What is inside the official estimate</h2>
+  <p>IRCC says its processing time starts with a complete application and ends when it makes a decision. The published estimate includes time to provide biometrics. Preparation before submission, waiting to receive any later document and the traveler’s own booking schedule are separate.</p>
+
+  <h2>Use two dates, not one</h2>
+  <p>A useful check records both the <strong>official data date</strong> and the <strong>date you looked</strong>. The current value is dated {fmtDate(rec.effective_date)}. GovWait also stores its retrieval time. This prevents an old screenshot from being passed around as if it were current.</p>
+  <p>Visit the <a href="/canada/visitor-visa/from-philippines/">Philippines route history</a> to see every differing value GovWait records. Tracking began in August 2026, so the first row is a baseline.</p>
+
+  <h2>When an individual wait runs longer</h2>
+  <p>IRCC says an application can take longer when it is incomplete or complex, information is difficult to verify, more material is requested, or volumes and processing capacity change. The aggregate figure cannot identify which factor applies to a specific file.</p>
+  <div class="callout"><strong>Safe use:</strong> compare the official figure with your planning needs, add room for uncertainty, and use IRCC’s account or contact tools—not GovWait—for a submitted case.</div>
+
+  <h2>Common questions</h2>
+  <h3>Is {rec.value_raw} the time after biometrics?</h3><p>No. IRCC says biometrics time is included in its wider complete-application-to-decision clock.</p>
+  <h3>Will this page change its date on every build?</h3><p>No. The data and sitemap dates change only when the represented official value or source date changes.</p>
+  <div class="prov">Official source: <a href={officialGuide} rel="noopener">IRCC processing-time guidance</a> and <a href={rec.source_url} rel="noopener">IRCC published data</a>.</div>
+</EditorialFrame>

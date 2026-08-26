@@ -12,7 +12,7 @@ import { sources, stats, fmtDate } from '../lib/data.js';
   <ul>
     <li><strong>Primary sources only.</strong> We read the official pages and data files of the agencies listed below — never third-party summaries.</li>
     <li><strong>Polite, honest collection.</strong> Our collector identifies itself with a bot User-Agent, obeys every robots.txt, waits at least 3 seconds between requests to the same host, enforces a hard per-host request cap, and re-checks each source about once a week.</li>
-    <li><strong>Values, not content.</strong> We extract the published figure (e.g. “31 days”), the agency's own “last updated” date when one exists, the URL, and our retrieval timestamp. For an unstamped source, we clearly use the date a changed value was first observed. All page text on this site is written by us.</li>
+    <li><strong>Values, not copied pages.</strong> We extract the published figure (e.g. “31 days”), the agency's own “last updated” date when one exists, the URL, and our retrieval timestamp. For an unstamped source, we clearly use the date a changed value was first observed. Explanatory text follows our <a href="/about/editorial-policy/">editorial and AI-use policy</a>.</li>
     <li><strong>History is never edited.</strong> When an agency changes a figure, we add a new dated record; old records are kept verbatim. If a value looks wrong, the validation suite blocks publication rather than guessing.</li>
     <li><strong>Absence is data.</strong> Where an agency publishes “no processing time available”, we say exactly that, dated.</li>
   </ul>
@@ -22,7 +22,7 @@ import { sources, stats, fmtDate } from '../lib/data.js';
     <thead><tr><th>Agency</th><th>What we read</th><th>License/terms</th></tr></thead>
     <tbody>
       {sources.map(s => (
-        <tr><td>{s.agency}</td><td><a href={s.url} rel="noopener nofollow">{s.name}</a></td><td class="small muted">{s.license_note}</td></tr>
+        <tr><td>{s.agency}</td><td><a href={s.url} rel="noopener">{s.name}</a></td><td class="small muted">{s.license_note}</td></tr>
       ))}
     </tbody>
   </table></div>
@@ -35,5 +35,8 @@ import { sources, stats, fmtDate } from '../lib/data.js';
   <p>Extracted values are available via our <a href="/api-docs/">JSON API</a> and MCP server under CC BY 4.0: reuse freely with attribution to {config.SITE_NAME} and the originating agency. Underlying figures remain the respective governments' publications (gov.uk material: Open Government Licence v3.0; Immigration New Zealand website content: CC BY 3.0 New Zealand, subject to its stated exceptions).</p>
 
   <h2>Corrections</h2>
-  <p>Spotted a mismatch between a value here and the official page? The official page wins. Email <a href="mailto:contact@govwait.com">contact@govwait.com</a> so we can investigate.</p>
+  <p>Spotted a mismatch between a value here and the official page? The official page wins. Follow the <a href="/corrections/">corrections process</a> or email <a href="mailto:contact@govwait.com">contact@govwait.com</a> so we can investigate.</p>
+
+  <h2>Who publishes this work</h2>
+  <p>The <a href="/about/research-desk/">GovWait Research Desk</a> is the organizational byline for collection, validation and explanatory work. It is not a government office or licensed immigration practice.</p>
 </Base>

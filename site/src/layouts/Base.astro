@@ -1,6 +1,16 @@
 ---
 import config from '../../site.config.json';
-const { title, description, jsonld = [], noindex = false } = Astro.props;
+import PrivacyControls from '../components/PrivacyControls.astro';
+const analyticsEnabled = /^G-[A-Z0-9]+$/i.test(import.meta.env.PUBLIC_GA4_MEASUREMENT_ID || '');
+const {
+  title,
+  description,
+  jsonld = [],
+  noindex = false,
+  ogType = 'website',
+  publishedTime,
+  modifiedTime,
+} = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 ---
 <!doctype html>
@@ -21,12 +31,15 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
 <meta property="og:site_name" content={config.SITE_NAME} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:type" content="website" />
+<meta property="og:type" content={ogType} />
 <meta property="og:url" content={canonical} />
 <meta property="og:locale" content="en_US" />
+{publishedTime && <meta property="article:published_time" content={publishedTime} />}
+{modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
+<script is:inline data-grow-initializer="">!(function(){window.growMe||((window.growMe=function(e){window.growMe._.push(e);}),(window.growMe._=[]));var e=document.createElement("script");(e.type="text/javascript"),(e.src="https://faves.grow.me/main.js"),(e.defer=!0),e.setAttribute("data-grow-faves-site-id","U2l0ZTo1Zjc1NjYzNS02OGNiLTRlZTQtOGQ5MC1kNzc5NTRiZDQ3OWY=");var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t);})();</script>
 {jsonld.map(obj => <script type="application/ld+json" set:html={JSON.stringify(obj)} />)}
 <style is:global>
 :root{
@@ -109,11 +122,21 @@ footer.site .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(220p
 footer.site h4{margin:.2em 0 .5em;font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;color:var(--faint)}
 footer.site ul{list-style:none;margin:0;padding:0}
 footer.site li{margin:.32em 0}
+.footer-button{border:0;background:none;color:var(--acc);font:inherit;padding:0;cursor:pointer}.footer-button:hover{text-decoration:underline;text-underline-offset:3px}
 .related{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
 .related a{border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:4px 13px;font-size:.86rem;font-weight:550}
 .related a:hover{border-color:var(--acc);text-decoration:none}
 pre.code{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 16px;overflow-x:auto;font-size:.88rem}
-@media(max-width:640px){.tagline{display:none}nav.top{gap:12px;font-size:.84rem}th,td{padding:8px 10px}}
+.byline{display:flex;flex-wrap:wrap;gap:5px 16px;color:var(--muted);font-size:.82rem;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:9px 0;margin:16px 0 22px}
+.byline span:not(:last-child)::after{content:""}
+.callout{border:1px solid var(--line);border-radius:12px;padding:14px 17px;margin:18px 0;background:var(--panel);box-shadow:var(--shadow)}
+.callout.good{border-left:4px solid var(--good)}.callout.warn{border-left:4px solid var(--warn)}
+.report-status{display:inline-flex;align-items:center;gap:7px;border-radius:999px;padding:4px 11px;background:var(--acc-bg);color:var(--acc-ink);font-size:.8rem;font-weight:700}
+.bar-list{display:grid;gap:11px;margin:16px 0}.bar-row{display:grid;grid-template-columns:minmax(150px,1.2fr) minmax(180px,2fr) auto;gap:12px;align-items:center;font-size:.9rem}.bar-track{height:10px;border-radius:999px;background:var(--line2);overflow:hidden}.bar-fill{height:100%;border-radius:inherit;background:var(--acc)}
+.policy-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:13px;margin:16px 0}.policy-grid>section{border:1px solid var(--line);border-radius:12px;padding:4px 16px 14px;background:var(--panel)}
+.consent-panel{position:fixed;z-index:30;left:50%;bottom:18px;transform:translateX(-50%);width:min(720px,calc(100% - 28px));display:flex;align-items:center;gap:20px;justify-content:space-between;border:1px solid var(--line);border-radius:14px;background:var(--panel);padding:16px 18px;box-shadow:0 12px 38px rgba(0,0,0,.22)}.consent-panel[hidden]{display:none}.consent-panel p{font-size:.87rem;color:var(--muted);margin:.25em 0 0;max-width:46em}.consent-actions{display:flex;align-items:center;justify-content:flex-end;gap:10px;flex-wrap:wrap;min-width:max-content}.consent-actions button{border:1px solid var(--line);border-radius:8px;padding:7px 11px;font:inherit;font-size:.84rem;font-weight:650;cursor:pointer}.consent-accept{background:var(--acc);border-color:var(--acc)!important;color:#fff}.consent-decline{background:var(--panel);color:var(--fg)}.consent-actions a{font-size:.82rem}
+@media(max-width:760px){.tagline{display:none}.nav-secondary{display:none}nav.top{gap:10px;font-size:.82rem}}
+@media(max-width:640px){header.site .wrap{gap:8px}.brand{font-size:1rem}.brand svg{width:21px;height:21px}nav.top{gap:8px;font-size:.78rem}th,td{padding:8px 10px}.bar-row{grid-template-columns:1fr auto}.bar-track{grid-column:1/-1}.consent-panel{align-items:flex-start;flex-direction:column;gap:12px}.consent-actions{justify-content:flex-start;min-width:0}}
 </style>
 </head>
 <body>
@@ -124,7 +147,7 @@ pre.code{background:var(--panel);border:1px solid var(--line);border-radius:10px
       {config.SITE_NAME}
     </a>
     <span class="tagline">{config.TAGLINE}</span>
-    <nav class="top"><a href="/canada/">Canada</a><a href="/uk/">UK</a><a href="/new-zealand/">NZ</a><a href="/guides/">Guides</a><a href="/about/">Methodology</a><a href="/api-docs/">API</a></nav>
+    <nav class="top" aria-label="Primary"><a href="/canada/">Canada</a><a href="/uk/">UK</a><a href="/new-zealand/">NZ</a><a href="/reports/">Reports</a><a href="/guides/">Guides</a><a class="nav-secondary" href="/about/">Methodology</a><a class="nav-secondary" href="/api-docs/">API</a></nav>
   </div>
 </header>
 <main><div class="wrap"><slot /></div></main>
@@ -143,7 +166,12 @@ pre.code{background:var(--panel);border:1px solid var(--line);border-radius:10px
       <h4>Machine access</h4>
       <ul><li><a href="/api-docs/">JSON API (free)</a></li><li><a href="/api/v1/index.json">API index</a></li><li><a href="/api/v1/openapi.yaml">OpenAPI spec</a></li><li><a href="/llms.txt">llms.txt</a></li></ul>
     </div>
+    <div>
+      <h4>About &amp; policies</h4>
+      <ul><li><a href="/about/editorial-policy/">Editorial policy</a></li><li><a href="/about/research-desk/">Research desk</a></li><li><a href="/contact/">Contact</a></li><li><a href="/corrections/">Corrections</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/terms/">Terms</a></li>{analyticsEnabled && <li><button type="button" class="footer-button" data-consent="open">Cookie choices</button></li>}</ul>
+    </div>
   </div>
 </footer>
+<PrivacyControls />
 </body>
 </html>

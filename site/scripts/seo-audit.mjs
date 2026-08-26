@@ -25,7 +25,7 @@ function serviceSlug(record) {
   return record.service_key.startsWith('gb-in-uk-') ? `in-uk-${segment}` : segment;
 }
 
-const expectedNoindex = new Set(['/404/']);
+const expectedNoindex = new Set(['/404/', '/contact/', '/corrections/', '/privacy/', '/terms/']);
 for (const record of LATEST.records) {
   if (!record.applicant_country || record.status === 'ok') continue;
   const jurisdiction = record.jurisdiction === 'CA' ? 'canada' : record.jurisdiction === 'NZ' ? 'new-zealand' : 'uk';

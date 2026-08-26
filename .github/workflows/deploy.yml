@@ -32,6 +32,7 @@ jobs:
       - name: Build API + site
         env:
           SITE_URL: ${{ vars.SITE_URL }} # falls back to site.config.json placeholder if unset
+          PUBLIC_GA4_MEASUREMENT_ID: ${{ vars.PUBLIC_GA4_MEASUREMENT_ID }}
         run: |
           node pipeline/build-api.js
           cp machine/openapi.yaml site/public/api/v1/openapi.yaml

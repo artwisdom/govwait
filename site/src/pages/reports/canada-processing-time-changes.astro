@@ -1,0 +1,79 @@
+---
+import EditorialFrame from '../../components/EditorialFrame.astro';
+import { records, services, dataLastmod, fmtDate } from '../../lib/data.js';
+import { newestDate } from '../../lib/editorial.js';
+
+const source = records.find(record => record.jurisdiction === 'CA')?.source_url;
+const countryServices = [...services.CA.values()].filter(service => service.hasApplicantPages);
+const rows = countryServices.map(service => {
+  const ok = service.records.filter(record => record.status === 'ok');
+  return {
+    service,
+    ok,
+    low: ok[0],
+    high: ok.at(-1),
+    range: ok.length ? ok.at(-1).value_days - ok[0].value_days : 0,
+  };
+}).sort((a, b) => b.range - a.range);
+const changes = records.filter(record => record.jurisdiction === 'CA' && record.delta && record.delta.dir !== 'flat');
+const tracked = records.filter(record => record.jurisdiction === 'CA' && record.applicant_country);
+const published = tracked.filter(record => record.status === 'ok');
+const maxRange = Math.max(...rows.map(row => row.range), 1);
+const checked = countryServices.map(service => service.latestEffective).sort().at(-1);
+---
+<EditorialFrame
+  sectionName="Reports"
+  sectionPath="/reports/"
+  slug="canada-processing-time-changes"
+  title={`Canada processing-time baseline and changes — ${fmtDate(checked)}`}
+  description={`Current IRCC country coverage, medians and ranges across ${countryServices.length} services, plus verified changes when later observations differ.`}
+  h1="Canada processing-time baseline and changes"
+  lede={`IRCC currently publishes ${published.length.toLocaleString()} usable country-level values across ${countryServices.length} tracked services. This report establishes the August 2026 baseline and will surface verified movement after a later official value differs.`}
+  modified={newestDate('2026-08-23', dataLastmod)}
+  checked={checked}
+  about={['Canada immigration processing times', 'IRCC', 'visa processing-time history']}
+  citations={[source]}
+  adPrefix="report-ca"
+>
+  <div class="stats">
+    <div><div class="n">{published.length.toLocaleString()}</div><div class="l">published country values</div></div>
+    <div><div class="n">{tracked.length.toLocaleString()}</div><div class="l">country routes tracked</div></div>
+    <div><div class="n">{countryServices.length}</div><div class="l">country-level services</div></div>
+    <div><div class="n">{changes.length}</div><div class="l">changes since prior observation</div></div>
+  </div>
+
+  {changes.length === 0 ? (
+    <div class="callout good"><span class="report-status">Baseline only</span><p>No Canadian route has two different stored values yet. That means “no comparison available,” not “all values were unchanged.” A future verified change will appear here without deleting this baseline.</p></div>
+  ) : (
+    <><h2>Verified changes since the prior observation</h2><div class="tablewrap"><table><thead><tr><th>Route</th><th>Previous</th><th>Current</th><th>Direction</th></tr></thead><tbody>{changes.slice(0, 25).map(record => (<tr><td><a href={`/canada/${record.serviceSlug}/${record.applicantSlug}/`}>{services.CA.get(record.serviceSlug).name} from {record.applicant_country_name}</a></td><td>{record.delta.prev_raw}</td><td>{record.value_raw}</td><td>{record.delta.dir === 'up' ? 'Longer' : 'Shorter'} {record.delta.pct}%</td></tr>))}</tbody></table></div></>
+  )}
+
+  <h2>Where country-level times vary most</h2>
+  <p>Each bar shows the distance between the shortest and longest currently published country value within the same service. It compares like with like; a visitor-visa day is not mixed with a sponsorship day.</p>
+  <div class="bar-list">
+    {rows.map(row => (
+      <div class="bar-row">
+        <a href={`/canada/${row.service.slug}/`}>{row.service.name}</a>
+        <div class="bar-track" aria-hidden="true"><div class="bar-fill" style={`width:${Math.max(3, row.range / maxRange * 100)}%`}></div></div>
+        <span class="num">{Math.round(row.range)}-day spread</span>
+      </div>
+    ))}
+  </div>
+
+  <h2>Coverage and current median by service</h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Service</th><th>Published</th><th>Median</th><th>Current range</th></tr></thead>
+    <tbody>{rows.map(row => (
+      <tr>
+        <td><a href={`/canada/${row.service.slug}/`}>{row.service.name}</a></td>
+        <td class="num">{row.ok.length} of {row.service.records.length}</td>
+        <td class="num">{row.service.medianDays ? `${Math.round(row.service.medianDays)} days` : '—'}</td>
+        <td>{row.low && row.high ? `${row.low.value_raw} (${row.low.applicant_country_name}) to ${row.high.value_raw} (${row.high.applicant_country_name})` : '—'}</td>
+      </tr>
+    ))}</tbody>
+  </table></div>
+
+  <h2>Method and limits</h2>
+  <p>Figures are loaded from IRCC’s official processing-time data. A route with no published figure remains in the dataset but is excluded from the median and range. The report does not convert missing values into estimates. Current IRCC guidance says processing times are not a maximum or guarantee and may vary with completeness, verification and volume.</p>
+  <div class="prov">Official source: <a href={source} rel="noopener">Immigration, Refugees and Citizenship Canada</a> · baseline date {fmtDate(checked)} · not legal advice.</div>
+</EditorialFrame>

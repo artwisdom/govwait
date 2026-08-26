@@ -1,0 +1,52 @@
+---
+import EditorialFrame from '../../components/EditorialFrame.astro';
+import { records, services, fmtDate } from '../../lib/data.js';
+import { newestDate } from '../../lib/editorial.js';
+
+const rec = records.find(record => record.id === 'ca-study-permit--ng');
+const service = services.CA.get('study-permit');
+const comparisons = ['NG', 'IN', 'PK', 'GH', 'KE']
+  .map(code => service.records.find(record => record.applicant_country === code))
+  .filter(Boolean);
+const officialGuide = 'https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html';
+---
+<EditorialFrame
+  sectionName="Guides"
+  sectionPath="/guides/"
+  slug="canada-study-permit-from-nigeria"
+  title={`Canada study permit processing time from Nigeria: ${rec.value_raw} (${fmtDate(rec.effective_date)})`}
+  description={`Current official Canada study-permit time from Nigeria, with regional comparisons, clock boundaries, missing-data rules and source-backed history.`}
+  h1="Canada study permit processing time from Nigeria"
+  lede={`IRCC currently reports ${rec.value_raw} for study-permit applications submitted from Nigeria, compared with a ${Math.round(service.medianDays)}-day median across countries where IRCC publishes a value.`}
+  modified={newestDate('2026-08-23', rec.effective_date)}
+  checked={rec.effective_date}
+  about={['Canada study permit', 'Nigeria', 'IRCC processing times']}
+  citations={[officialGuide, rec.source_url]}
+  adPrefix="guide-study-nigeria"
+>
+  <div class="stats"><div><div class="n">{rec.value_raw}</div><div class="l">current Nigeria figure</div></div><div><div class="n">{Math.round(service.medianDays)} days</div><div class="l">service median</div></div><div><div class="n">{service.okCount}</div><div class="l">countries with a published value</div></div></div>
+
+  <h2>How to read Nigeria’s current figure</h2>
+  <p>The official country figure describes an application submitted from Nigeria. IRCC says the clock begins with a complete application, includes time to provide biometrics, and ends at the decision. It can still take longer when documents are incomplete, facts require more verification, volumes rise or the case is complex.</p>
+  <p>Because IRCC publishes a distinct country value only when enough recent information exists, the presence of a Nigeria figure supports comparison. A blank country elsewhere would not mean applications are ignored; IRCC says it may be unable to show a time when too few recent cases exist.</p>
+
+  <h2>Nigeria in a useful regional comparison</h2>
+  <div class="tablewrap"><table><thead><tr><th>Applying from</th><th>Current time</th><th>Current classification</th></tr></thead><tbody>{comparisons.map(item => (<tr><td><a href={`/canada/study-permit/${item.applicantSlug}/`}>{item.applicant_country_name}</a></td><td>{item.status === 'ok' ? item.value_raw : 'No official time published'}</td><td>{item.speed?.label || 'No stable comparison'}</td></tr>))}</tbody></table></div>
+  <p>The table compares current processing-time statistics only. It does not compare eligibility, application quality or approval rates.</p>
+
+  <h2>Three checks before relying on the estimate</h2>
+  <ul>
+    <li><strong>Correct route:</strong> confirm that “study permit outside Canada” is the application type that matches the official tool selection.</li>
+    <li><strong>Correct application country:</strong> use where the application is submitted, which may differ from citizenship.</li>
+    <li><strong>Current date:</strong> verify the value’s official data date. A cached screenshot without a date can outlive the figure it shows.</li>
+  </ul>
+
+  <h2>What GovWait adds</h2>
+  <p>IRCC replaces the current number. GovWait keeps the prior official observations. The <a href="/canada/study-permit/from-nigeria/">Nigeria history page</a> will show whether the published route later becomes shorter, longer or stays at the same value across verified checks. The first observation is a baseline, not a trend.</p>
+  <div class="callout"><strong>Practical boundary:</strong> use the official estimate to plan a buffer, not to diagnose a submitted case. GovWait has no access to IRCC files and cannot expedite an application.</div>
+
+  <h2>Common questions</h2>
+  <h3>Does {rec.value_raw} mean every decision arrives by then?</h3><p>No. IRCC explicitly says processing times are not a maximum or guarantee.</p>
+  <h3>Can calling IRCC make the file move faster?</h3><p>IRCC’s published guidance says calling does not speed processing. Use the official account and contact routes for case-specific information.</p>
+  <div class="prov">Official source: <a href={officialGuide} rel="noopener">IRCC processing-time guidance</a> and <a href={rec.source_url} rel="noopener">IRCC’s published data</a> · checked {fmtDate(rec.effective_date)}.</div>
+</EditorialFrame>

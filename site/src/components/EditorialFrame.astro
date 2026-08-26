@@ -1,0 +1,55 @@
+---
+import Base from '../layouts/Base.astro';
+import AdSlot from './AdSlot.astro';
+import EditorialByline from './EditorialByline.astro';
+import { articleJsonLd, breadcrumbJsonLd } from '../lib/editorial.js';
+
+const {
+  sectionName,
+  sectionPath,
+  slug,
+  title,
+  description,
+  h1,
+  lede,
+  published = '2026-08-23',
+  modified = published,
+  checked = modified,
+  about = [],
+  citations = [],
+  adPrefix = 'editorial',
+} = Astro.props;
+const pagePath = `${sectionPath}${slug}/`;
+const jsonld = [
+  breadcrumbJsonLd({ site: Astro.site, sectionName, sectionPath, pageName: h1, pagePath }),
+  articleJsonLd({
+    site: Astro.site,
+    path: pagePath,
+    title,
+    description,
+    datePublished: published,
+    dateModified: modified,
+    section: sectionName,
+    about,
+    citations,
+  }),
+];
+---
+<Base
+  title={title}
+  description={description}
+  jsonld={jsonld}
+  ogType="article"
+  publishedTime={published}
+  modifiedTime={modified}
+>
+  <nav class="crumbs"><a href="/">Home</a> › <a href={sectionPath}>{sectionName}</a> › {h1}</nav>
+  <article>
+    <h1>{h1}</h1>
+    <p class="lede">{lede}</p>
+    <EditorialByline published={published} checked={checked} />
+    <AdSlot position={`${adPrefix}-top`} />
+    <slot />
+    <AdSlot position={`${adPrefix}-bottom`} />
+  </article>
+</Base>

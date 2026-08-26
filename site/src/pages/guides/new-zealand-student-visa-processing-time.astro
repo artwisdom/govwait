@@ -1,0 +1,52 @@
+---
+import EditorialFrame from '../../components/EditorialFrame.astro';
+import { services, fmtDate } from '../../lib/data.js';
+import { newestDate } from '../../lib/editorial.js';
+
+const service = services.NZ.get('fee-paying-student-visa');
+const p50 = service.percent50;
+const p80 = service.percent80;
+const officialVisa = 'https://www.immigration.govt.nz/visas/fee-paying-student-visa/';
+---
+<EditorialFrame
+  sectionName="Guides"
+  sectionPath="/guides/"
+  slug="new-zealand-student-visa-processing-time"
+  title={`New Zealand student visa processing time: 50% ${p50.value_raw}, 80% ${p80.value_raw}`}
+  description={`Current Fee Paying Student Visa processing times from INZ, with working-day definitions, study-planning boundaries and source-backed history.`}
+  h1="New Zealand Fee Paying Student Visa processing time"
+  lede={`Immigration New Zealand currently reports 50% of Fee Paying Student Visa applications processed within ${p50.value_raw} and 80% within ${p80.value_raw}. These are working-day distribution points, not guaranteed enrolment or travel dates.`}
+  modified={newestDate('2026-08-23', service.latestEffective)}
+  checked={service.latestEffective}
+  about={['New Zealand student visa', 'Fee Paying Student Visa', 'INZ processing times']}
+  citations={[officialVisa, p80.source_url]}
+  adPrefix="guide-nz-student"
+>
+  <div class="stats"><div><div class="n">{p50.value_raw}</div><div class="l">50% processed</div></div><div><div class="n">{p80.value_raw}</div><div class="l">80% processed</div></div><div><div class="n">{p80.value_days - p50.value_days} days</div><div class="l">current distribution gap</div></div></div>
+
+  <h2>Why the 80% figure is important for study planning</h2>
+  <p>The 50% point describes the middle of the represented applications; it does not describe the slower half. The 80% point reaches farther into that distribution, while still leaving one in five represented applications beyond it. A student planning around only the first number discards that uncertainty.</p>
+
+  <h2>Working days are not calendar days</h2>
+  <p>INZ excludes Saturdays, Sundays and New Zealand public holidays from its working-day measure. GovWait preserves the published working-day counts rather than converting them to a calendar date that could be wrong for the submission date and holiday period.</p>
+
+  <h2>Keep three planning periods separate</h2>
+  <ol>
+    <li><strong>Before application:</strong> admission, tuition or funding evidence, supporting documents and any other official prerequisites take their own time.</li>
+    <li><strong>Visa processing:</strong> the current INZ distribution is {p50.value_raw} at 50% and {p80.value_raw} at 80%.</li>
+    <li><strong>After decision:</strong> travel, accommodation, course-start and other arrangements remain separate.</li>
+  </ol>
+  <p>The official visa page—not this guide—defines the current eligibility and document requirements.</p>
+
+  <h2>What can extend an application</h2>
+  <p>INZ explains that incomplete or complex applications, requests for information, verification and demand can increase the wait. A complete file may sit closer to the average, but the published figures do not guarantee that result.</p>
+  <div class="callout warn"><strong>Course dates and visa dates are not interchangeable.</strong> Use the school’s instructions and INZ’s official guidance, and avoid treating the 50% point as a safe latest-submission date.</div>
+
+  <h2>History and wider comparison</h2>
+  <p>The <a href="/new-zealand/fee-paying-student-visa/">student-visa route page</a> keeps the 50% and 80% values as separate append-only series. The <a href="/reports/new-zealand-visa-processing-time-changes/">New Zealand report</a> compares their gap with other reviewed visas and will identify later verified changes.</p>
+
+  <h2>Common questions</h2>
+  <h3>Can {p50.value_raw} be converted to an exact decision date?</h3><p>No. It is a distribution point in working days and half of represented applications took longer.</p>
+  <h3>Does the 80% figure cover every application?</h3><p>No. By definition, the remaining 20% are outside that completion point.</p>
+  <div class="prov">Official sources: <a href={officialVisa} rel="noopener">Fee Paying Student Visa</a> and the <a href={p80.source_url} rel="noopener">INZ processing-time tool</a> · values first observed {fmtDate(service.latestEffective)}.</div>
+</EditorialFrame>

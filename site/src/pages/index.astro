@@ -25,6 +25,8 @@ const jsonld = [
     url: origin,
     email: 'contact@govwait.com',
     logo: { '@type': 'ImageObject', url: `${origin}/favicon.svg` },
+    publishingPrinciples: `${origin}/about/editorial-policy/`,
+    sameAs: ['https://github.com/artwisdom/govwait'],
   },
   {
     '@context': 'https://schema.org',
@@ -51,7 +53,7 @@ const govCount = stats.jurisdictions.length;
       description={`Current official processing times for ${stats.entities.toLocaleString()} visa, permit and sponsorship routes across ${govCount} governments. Every value is sourced, dated and tracked.`}
       jsonld={jsonld}>
   <h1>How long will it take?<br/>The current official answer, tracked.</h1>
-  <p class="lede">Governments publish how long applications are taking — then overwrite the number every week and keep no history. We record every value with its source and date, so you can see the current official figure, how it has moved, and exactly where it came from.</p>
+  <p class="lede">Governments publish how long applications are taking, but their current pages often replace the earlier number. We record each verified value with its source and date, so you can see today’s official figure and, when it changes, the history the source page no longer shows.</p>
 
   <div class="related" style="margin-top:16px">
     {examples.map(r => (
@@ -68,6 +70,14 @@ const govCount = stats.jurisdictions.length;
     <div><div class="n">Weekly</div><div class="l">re-verified cadence</div></div>
   </div>
   <AdSlot position="home-top" />
+
+  <h2>Reports and practical planning guides</h2>
+  <ul class="grid">
+    <li><a class="t" href="/reports/">Processing-time reports</a><p class="small muted">Honest country baselines now; verified increases and decreases after later official observations differ.</p></li>
+    <li><a class="t" href="/guides/canada-study-permit-from-india/">Canada study permit from India</a><p class="small muted">Current official time, major-route comparisons and clean clock boundaries.</p></li>
+    <li><a class="t" href="/guides/uk-spouse-visa-processing-time/">UK spouse and partner visas</a><p class="small muted">Outside, inside and private-life figures without blending different routes.</p></li>
+    <li><a class="t" href="/guides/new-zealand-aewv-processing-time/">New Zealand AEWV timeline</a><p class="small muted">The visa’s 50% and 80% measures inside the employer-led sequence.</p></li>
+  </ul>
 
   {Object.entries(JURISDICTIONS).map(([code, jur]) => (
     <section>
@@ -88,7 +98,7 @@ const govCount = stats.jurisdictions.length;
   ))}
 
   <h2>Why trust these numbers?</h2>
-  <p class="lede small">Because they aren't ours. Every figure is the government's own published statistic — we just refuse to let it disappear. Each value links its official source, carries the agency's update date when supplied (or a clearly labeled first-observed date when not), includes our verification date, and joins a permanent history. <a href="/about/">Read the full methodology.</a></p>
+  <p class="lede small">Because they aren't ours. Every figure is the government's own published statistic — we just refuse to let it disappear. Each value links its official source, carries the agency's update date when supplied (or a clearly labeled first-observed date when not), includes our verification date, and joins a permanent history. Read the <a href="/about/">methodology</a>, <a href="/about/editorial-policy/">editorial policy</a> and <a href="/about/research-desk/">Research Desk byline</a>.</p>
 
   <h2>For machines</h2>
   <p class="small">The same dataset is a <a href="/api-docs/">free JSON API</a>, a <a href="https://github.com/artwisdom/govwait/tree/main/machine/mcp-server" rel="noopener">public MCP server for AI agents</a>, and is described in <a href="/llms.txt">llms.txt</a>. Attribution required (CC BY 4.0).</p>

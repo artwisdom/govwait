@@ -1,0 +1,12 @@
+---
+import { EDITORIAL_AUTHOR, EDITORIAL_POLICY_PATH } from '../lib/editorial.js';
+import { fmtDate } from '../lib/data.js';
+
+const { published, checked, label = 'Data checked' } = Astro.props;
+---
+<div class="byline" aria-label="Article publication details">
+  <span>By <a href={EDITORIAL_AUTHOR.path}><strong>{EDITORIAL_AUTHOR.name}</strong></a></span>
+  <span>Published {fmtDate(published)}</span>
+  {checked && <span>{label} {fmtDate(checked)}</span>}
+  <span><a href={EDITORIAL_POLICY_PATH}>How we make these pages</a></span>
+</div>

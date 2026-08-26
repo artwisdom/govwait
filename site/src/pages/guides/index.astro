@@ -1,8 +1,20 @@
 ---
 import Base from '../../layouts/Base.astro';
+import EditorialByline from '../../components/EditorialByline.astro';
 import { stats, fmtDate } from '../../lib/data.js';
 
-const guides = [
+const planningGuides = [
+  { slug: 'canada-study-permit-from-india', title: 'Canada study permit processing time from India', blurb: 'The current official figure, major-country comparison and a clean separation between preparation, processing and post-decision time.' },
+  { slug: 'canada-study-permit-from-nigeria', title: 'Canada study permit processing time from Nigeria', blurb: 'The Nigeria route, regional comparisons, missing-data rules and append-only history.' },
+  { slug: 'canada-visitor-visa-from-india', title: 'Canada visitor visa processing time from India', blurb: 'What IRCC’s clock includes, why “after biometrics” is a different measure and how India compares.' },
+  { slug: 'canada-visitor-visa-from-philippines', title: 'Canada visitor visa processing time from the Philippines', blurb: 'The current source date, Southeast Asian comparison and practical planning boundaries.' },
+  { slug: 'canada-work-permit-from-mexico', title: 'Canada work permit processing time from Mexico', blurb: 'The government clock separated from employer preparation, with selected Americas comparisons.' },
+  { slug: 'uk-spouse-visa-processing-time', title: 'UK spouse and partner visa processing times', blurb: 'Outside-UK, inside-UK and private-life route figures without blending three different contexts.' },
+  { slug: 'uk-standard-visitor-processing-time', title: 'UK Standard Visitor visa processing time', blurb: 'The official start and end of the clock, current service standards and travel-planning limits.' },
+  { slug: 'new-zealand-aewv-processing-time', title: 'New Zealand AEWV processing time', blurb: 'The 50% and 80% visa measures placed inside the accreditation, Job Check and worker sequence.' },
+  { slug: 'new-zealand-student-visa-processing-time', title: 'New Zealand student visa processing time', blurb: 'Working-day definitions, the current distribution gap and study-planning boundaries.' },
+];
+const methodGuides = [
   { slug: 'how-canada-processing-times-work', title: 'How Canada (IRCC) processing times actually work', blurb: 'Where the numbers come from, why they move every week, and how to read them without fooling yourself.' },
   { slug: 'canada-visitor-visa-by-country', title: 'Canada visitor visa times, analyzed by country', blurb: 'The full spread from fastest to slowest applicant countries, what the median looks like, and which corridors move most.' },
   { slug: 'uk-visa-processing-standards', title: 'UK visa processing times: every current service standard', blurb: 'All published UKVI standards in one table — visit, study, work, family — and what a "standard" does and doesn\'t promise.' },
@@ -12,14 +24,21 @@ const guides = [
 <Base title="Guides & analysis — reading government processing times correctly"
       description="Original analysis built directly on the tracked dataset: how official processing times are computed across Canada, the UK and New Zealand.">
   <h1>Guides &amp; analysis</h1>
-  <p class="lede">Written analysis on top of the live dataset. These pages recompute from the newest data on every refresh — the numbers in them are never stale.</p>
+  <p class="lede">Source-backed planning guides and original analysis on top of the live dataset. Numeric claims recompute from the newest validated data on every refresh.</p>
+  <EditorialByline published="2026-08-22" checked={stats.generated_at} />
+  <h2>High-intent planning guides</h2>
   <ul class="grid">
-    {guides.map(g => (
+    {planningGuides.map(g => (
       <li>
         <a class="t" href={`/guides/${g.slug}/`}>{g.title}</a>
         <p class="small muted" style="margin:.4em 0 0">{g.blurb}</p>
       </li>
     ))}
   </ul>
+  <h2>Methods and full comparisons</h2>
+  <ul class="grid">
+    {methodGuides.map(g => (<li><a class="t" href={`/guides/${g.slug}/`}>{g.title}</a><p class="small muted" style="margin:.4em 0 0">{g.blurb}</p></li>))}
+  </ul>
+  <div class="callout"><strong>Looking for movement?</strong> The <a href="/reports/">processing-time reports</a> establish the current baseline and will surface verified official changes after later observations differ.</div>
   <p class="small muted">Dataset generated {fmtDate(stats.generated_at)} · {stats.entities.toLocaleString()} routes tracked.</p>
 </Base>

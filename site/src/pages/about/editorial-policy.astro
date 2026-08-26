@@ -1,0 +1,30 @@
+---
+import Base from '../../layouts/Base.astro';
+import { dataLastmod } from '../../lib/data.js';
+---
+<Base title="Editorial policy — sources, automation and AI use at GovWait" description="GovWait’s standards for primary sources, automation, AI assistance, authorship, corrections and honest update dates.">
+  <nav class="crumbs"><a href="/">Home</a> › <a href="/about/">Methodology</a> › Editorial policy</nav>
+  <h1>Editorial policy</h1>
+  <p class="lede">GovWait is built to make changing government wait-time data easier to understand without turning uncertainty into a promise.</p>
+  <p class="small muted">Policy published August 23, 2026 · latest represented data date {dataLastmod}.</p>
+
+  <div class="policy-grid">
+    <section><h2>Primary sources</h2><p>Current numeric claims must come from the named government agency. Third-party articles and applicant anecdotes can suggest questions, but they do not replace official figures.</p></section>
+    <section><h2>Append-only history</h2><p>A changed official value creates a new dated observation. Prior observations remain available; the site never rewrites history to make a trend look cleaner.</p></section>
+    <section><h2>Uncertainty stays visible</h2><p>Unavailable, insufficient and unstamped source states are labelled as such. GovWait does not fill a blank with a guess or present a service standard as a guaranteed deadline.</p></section>
+    <section><h2>Useful analysis</h2><p>Editorial pages must add comparison, definition, history, methodology or planning context. Repeating an official number with generic prose is not enough.</p></section>
+  </div>
+
+  <h2>Automation and AI assistance</h2>
+  <p>Automated collectors retrieve permitted official values, and deterministic validators check schemas, status changes, extreme movement, duplicate routes and page output. AI tools may assist with research organization, drafting or code. AI output is not treated as a source. Numeric claims are generated from the validated dataset or checked against a linked primary source before publication.</p>
+  <p>GovWait does not claim that a lawyer, licensed immigration adviser or government officer reviewed a page unless that reviewer is explicitly named. No current page makes that claim.</p>
+
+  <h2>Authorship and dates</h2>
+  <p>Data-driven pages are published by the <a href="/about/research-desk/">GovWait Research Desk</a>, the organizational byline for the site’s collection, validation and explanatory work. A page’s “data checked” date reflects the latest source date or first-observed date represented on that page. Sitemap and structured-data dates use the same evidence; a routine rebuild does not create a fake update.</p>
+
+  <h2>Commercial independence</h2>
+  <p>Advertising or affiliate relationships, if activated, do not determine the processing-time values, route rankings or correction decisions. Paid placements will be labelled. GovWait does not sell visa services or claim it can accelerate an application.</p>
+
+  <h2>Corrections</h2>
+  <p>See the <a href="/corrections/">corrections policy</a> or email <a href="mailto:contact@govwait.com">contact@govwait.com</a>. The linked government source remains authoritative.</p>
+</Base>

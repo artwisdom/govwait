@@ -1,0 +1,52 @@
+---
+import EditorialFrame from '../../components/EditorialFrame.astro';
+import { records, services, fmtDate } from '../../lib/data.js';
+import { newestDate } from '../../lib/editorial.js';
+
+const rec = records.find(record => record.id === 'ca-study-permit--in');
+const service = services.CA.get('study-permit');
+const comparisons = ['IN', 'NG', 'PK', 'PH', 'CN']
+  .map(code => service.records.find(record => record.applicant_country === code))
+  .filter(Boolean);
+const officialGuide = 'https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html';
+---
+<EditorialFrame
+  sectionName="Guides"
+  sectionPath="/guides/"
+  slug="canada-study-permit-from-india"
+  title={`Canada study permit processing time from India: ${rec.value_raw} (${fmtDate(rec.effective_date)})`}
+  description={`IRCC currently reports ${rec.value_raw} for a Canada study permit from India. See what the clock includes, compare major countries and plan without treating it as a promise.`}
+  h1="Canada study permit processing time from India"
+  lede={`IRCC currently reports ${rec.value_raw} for study-permit applications submitted from India. The figure includes biometrics time and runs from receipt of a complete application to the decision, but it is not a guaranteed deadline.`}
+  modified={newestDate('2026-08-23', rec.effective_date)}
+  checked={rec.effective_date}
+  about={['Canada study permit', 'India', 'IRCC processing times']}
+  citations={[officialGuide, rec.source_url]}
+  adPrefix="guide-study-india"
+>
+  <div class="stats"><div><div class="n">{rec.value_raw}</div><div class="l">current India figure</div></div><div><div class="n">{Math.round(service.medianDays)} days</div><div class="l">median across published countries</div></div><div><div class="n">{fmtDate(rec.effective_date)}</div><div class="l">official data date</div></div></div>
+
+  <h2>What the {rec.value_raw} figure measures</h2>
+  <p>IRCC says the processing clock starts when it receives a complete application and ends when it makes a decision. For this route, the published estimate also includes time to provide biometrics. Time spent choosing a school, assembling proof, waiting to submit or arranging travel after a decision sits outside that published clock.</p>
+  <p>The India value is specific to where the application is submitted, not simply nationality. If an Indian citizen is legally applying from another country, the relevant official selection may be that country instead.</p>
+
+  <h2>India compared with other major study-permit routes</h2>
+  <div class="tablewrap"><table><thead><tr><th>Applying from</th><th>Current official time</th><th>Against service median</th></tr></thead><tbody>{comparisons.map(item => (<tr><td><a href={`/canada/study-permit/${item.applicantSlug}/`}>{item.applicant_country_name}</a></td><td>{item.value_raw}</td><td>{item.speed?.label || 'No comparison'}</td></tr>))}</tbody></table></div>
+  <p>This comparison is descriptive. It does not establish why two countries differ, and it should not be used to infer approval chances.</p>
+
+  <h2>A planning timeline that keeps the clocks separate</h2>
+  <ol>
+    <li><strong>Before submission:</strong> use IRCC’s current instructions to assemble a complete application and pay required fees. This preparation time is yours, not part of the published estimate.</li>
+    <li><strong>Official processing clock:</strong> the current India estimate covers the period from the complete application through the decision and includes biometrics time.</li>
+    <li><strong>After the decision:</strong> allow separate time for any passport, travel-document, school or travel arrangements that apply to your situation.</li>
+  </ol>
+  <div class="callout warn"><strong>Do not book around an exact decision day.</strong> IRCC expressly says its figures are not a maximum or guarantee. Completeness, verification, volume and case complexity can extend an individual file.</div>
+
+  <h2>How to monitor the number</h2>
+  <p>Use the <a href="/canada/study-permit/from-india/">India route page</a> for the current value and append-only history. A new history row appears only when IRCC publishes a different value. Also check the <a href="/reports/canada-processing-time-changes/">Canada changes report</a> for the broader service context.</p>
+
+  <h2>Common questions</h2>
+  <h3>Is this a “post-biometrics” wait?</h3><p>No. IRCC’s official figure covers the complete-application-to-decision period and includes biometrics time. A forum timeline beginning after biometrics is a different, anecdotal measure.</p>
+  <h3>Does the figure prove an application is late?</h3><p>No. It is a planning estimate for most applications, not an individual service guarantee. Use IRCC’s own account and contact guidance for a submitted case.</p>
+  <div class="prov">Official source: <a href={officialGuide} rel="noopener">IRCC processing-time guidance</a> · current machine-readable value from <a href={rec.source_url} rel="noopener">IRCC data</a> · not legal advice.</div>
+</EditorialFrame>

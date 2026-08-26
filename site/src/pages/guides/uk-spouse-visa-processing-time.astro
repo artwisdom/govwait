@@ -1,0 +1,58 @@
+---
+import EditorialFrame from '../../components/EditorialFrame.astro';
+import { records, fmtDate } from '../../lib/data.js';
+import { newestDate } from '../../lib/editorial.js';
+
+const outside = records.find(record => record.id === 'gb-family-visas--partner-or-spouse');
+const insideStandard = records.find(record => record.id === 'gb-in-uk-family-visas--partner-or-spouse-meeting-minimum-income-and-english-lang');
+const insidePrivate = records.find(record => record.id === 'gb-in-uk-family-visas--partner-or-spouse-private-life-minimum-income-and-english');
+const outsideGuide = 'https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk';
+const insideGuide = 'https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk';
+const checked = [outside.effective_date, insideStandard.effective_date, insidePrivate.effective_date].sort().at(-1);
+---
+<EditorialFrame
+  sectionName="Guides"
+  sectionPath="/guides/"
+  slug="uk-spouse-visa-processing-time"
+  title={`UK spouse visa processing time: ${outside.value_raw} outside, ${insideStandard.value_raw} inside`}
+  description={`Compare current UKVI partner and spouse visa times outside and inside the UK, including the private-life route and the exact start and end of the clock.`}
+  h1="UK spouse and partner visa processing times"
+  lede={`UKVI currently publishes ${outside.value_raw} for a partner or spouse family-visa application made outside the UK and ${insideStandard.value_raw} for the listed inside-UK route meeting the income and English-language requirements. A separate private-life route is published at ${insidePrivate.value_raw}.`}
+  modified={newestDate('2026-08-23', checked)}
+  checked={checked}
+  about={['UK spouse visa', 'UK partner visa', 'UKVI processing times']}
+  citations={[outsideGuide, insideGuide]}
+  adPrefix="guide-uk-spouse"
+>
+  <div class="tablewrap"><table><thead><tr><th>Application context</th><th>Current published time</th><th>Official source date</th></tr></thead><tbody>
+    <tr><td><a href={`/uk/${outside.serviceSlug}/`}>Partner or spouse — outside the UK</a></td><td>{outside.value_raw}</td><td>{fmtDate(outside.effective_date)}</td></tr>
+    <tr><td><a href={`/uk/${insideStandard.serviceSlug}/`}>Inside UK — listed income and English route</a></td><td>{insideStandard.value_raw}</td><td>{fmtDate(insideStandard.effective_date)}</td></tr>
+    <tr><td><a href={`/uk/${insidePrivate.serviceSlug}/`}>Inside UK — private-life route</a></td><td>{insidePrivate.value_raw}</td><td>{fmtDate(insidePrivate.effective_date)}</td></tr>
+  </tbody></table></div>
+
+  <h2>Why one “UK spouse visa time” is misleading</h2>
+  <p>Application location and route matter. The outside-UK family-visa table uses one published time for partner or spouse applications. The inside-UK table separates the listed route meeting income and English-language requirements from the private-life route. UKVI notes that the private-life figure is based on current volume and is not an agreed service standard.</p>
+
+  <h2>When the UKVI clock starts and ends</h2>
+  <p>For an outside-UK application, UKVI says processing starts after the applicant verifies identity and submits through the ID Check app, or attends the visa application centre to provide biometrics. It ends when UKVI sends a letter or email saying a decision has been made. The inside-UK page uses the equivalent identity-app or UKVCAS/Service and Support Centre starting point.</p>
+  <p>Time spent preparing evidence or waiting for an appointment before that start point should not be silently added to or subtracted from the published processing figure.</p>
+
+  <h2>Reasons UKVI gives for a longer wait</h2>
+  <ul>
+    <li>information is inaccurate or needs further consideration;</li>
+    <li>more evidence is required;</li>
+    <li>supporting documents need verification;</li>
+    <li>an interview or further personal information is needed;</li>
+    <li>visa demand increases; or</li>
+    <li>a technical outage affects visa systems.</li>
+  </ul>
+  <div class="callout warn"><strong>Route choice is a legal question.</strong> This guide compares UKVI’s published clocks only. It does not determine which family route applies or whether requirements are met.</div>
+
+  <h2>How to use the history</h2>
+  <p>Each linked route page preserves a new row when UKVI changes its published value. The <a href="/reports/uk-visa-processing-time-changes/">UK report</a> compares inside and outside categories without blending their different contexts.</p>
+
+  <h2>Common questions</h2>
+  <h3>Does the outside-UK clock start when the online form is opened?</h3><p>No. UKVI ties the start to identity verification and submission through the app or the biometric appointment at a visa application centre.</p>
+  <h3>Is {outside.value_raw} a maximum?</h3><p>No. UKVI describes current processing times and lists reasons individual applications may take longer.</p>
+  <div class="prov">Official sources: <a href={outsideGuide} rel="noopener">outside the UK</a> and <a href={insideGuide} rel="noopener">inside the UK</a> · not legal advice.</div>
+</EditorialFrame>

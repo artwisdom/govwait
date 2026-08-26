@@ -1,0 +1,35 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const url = new URL('/about/research-desk/', Astro.site).href;
+const jsonld = [{
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': `${url}#research-desk`,
+  name: 'GovWait Research Desk',
+  url,
+  parentOrganization: { '@id': `${new URL('/', Astro.site).href}#organization` },
+  email: 'contact@govwait.com',
+  knowsAbout: ['government processing times', 'official-source data', 'visa processing statistics', 'data provenance'],
+}];
+---
+<Base title="GovWait Research Desk — authorship and expertise" description="Who publishes GovWait’s source-backed processing-time data, reports and guides, and what its editorial byline means." jsonld={jsonld}>
+  <nav class="crumbs"><a href="/">Home</a> › <a href="/about/">Methodology</a> › Research desk</nav>
+  <h1>GovWait Research Desk</h1>
+  <p class="lede">The GovWait Research Desk is the organizational byline for the collection, validation and explanatory work published on this independent site.</p>
+
+  <h2>What the desk does</h2>
+  <ul>
+    <li>tracks permitted primary government sources on a bounded schedule;</li>
+    <li>preserves each value with its source URL, source date or honest first-observed date, and retrieval time;</li>
+    <li>runs validation before changed data can publish;</li>
+    <li>turns the dataset into comparisons, baseline reports and plain-language guides; and</li>
+    <li>investigates reported mismatches without rewriting prior official observations.</li>
+  </ul>
+
+  <h2>What the byline does not mean</h2>
+  <p>It is not a government office, law firm or licensed immigration practice. GovWait explains published statistics; it does not assess eligibility, review applications or predict an individual outcome. Explanatory text can be AI-assisted under the <a href="/about/editorial-policy/">editorial policy</a>, but AI is never used as authority for a processing-time value.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about a source, report or reuse request can be sent to <a href="mailto:contact@govwait.com">contact@govwait.com</a>. Do not send personal case documents.</p>
+</Base>

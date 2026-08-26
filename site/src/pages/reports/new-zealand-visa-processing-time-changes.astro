@@ -1,0 +1,61 @@
+---
+import EditorialFrame from '../../components/EditorialFrame.astro';
+import { records, publishedServices, dataLastmod, fmtDate } from '../../lib/data.js';
+import { newestDate } from '../../lib/editorial.js';
+
+const all = publishedServices('NZ').filter(service => service.isPercentileService);
+const rows = all.map(service => ({
+  service,
+  p50: service.percent50.value_days,
+  p80: service.percent80.value_days,
+  gap: service.percent80.value_days - service.percent50.value_days,
+  ratio: service.percent80.value_days / Math.max(service.percent50.value_days, 1),
+})).sort((a, b) => b.gap - a.gap);
+const maxGap = Math.max(...rows.map(row => row.gap), 1);
+const changes = records.filter(record => record.jurisdiction === 'NZ' && record.delta && record.delta.dir !== 'flat');
+const checked = all.map(service => service.latestEffective).sort().at(-1);
+const source = all[0]?.percent80.source_url;
+---
+<EditorialFrame
+  sectionName="Reports"
+  sectionPath="/reports/"
+  slug="new-zealand-visa-processing-time-changes"
+  title={`New Zealand visa wait-time baseline and changes — ${fmtDate(checked)}`}
+  description={`Compare INZ's 50% and 80% processing points across ${all.length} reviewed visas and track later official changes without inventing calendar-day estimates.`}
+  h1="New Zealand visa wait-time baseline and changes"
+  lede={`Immigration New Zealand publishes two points for each visa: when 50% and 80% of represented applications were processed. The distance between them shows how much wider the slower part of the current distribution is.`}
+  modified={newestDate('2026-08-23', dataLastmod)}
+  checked={checked}
+  about={['New Zealand visa processing times', 'Immigration New Zealand', 'visa wait-time percentiles']}
+  citations={[source]}
+  adPrefix="report-nz"
+>
+  <div class="stats">
+    <div><div class="n">{all.length}</div><div class="l">reviewed visa types</div></div>
+    <div><div class="n">50%</div><div class="l">median completion point</div></div>
+    <div><div class="n">80%</div><div class="l">most-completed point</div></div>
+    <div><div class="n">{changes.length}</div><div class="l">changes since prior observation</div></div>
+  </div>
+
+  {changes.length === 0 && <div class="callout good"><span class="report-status">Baseline only</span><p>INZ’s tool does not provide a source update timestamp. GovWait dates these values when first observed and adds a later row only when the official value changes. No route has a second differing stored observation yet.</p></div>}
+
+  <h2>Largest gaps between 50% and 80% processed</h2>
+  <p>A larger gap does not predict a particular application. It shows that the current 80% point sits substantially beyond the halfway point for that visa type. All values remain in INZ working days; this report does not convert them into guessed calendar dates.</p>
+  <div class="bar-list">
+    {rows.map(row => (
+      <div class="bar-row"><a href={`/new-zealand/${row.service.slug}/`}>{row.service.name}</a><div class="bar-track" aria-hidden="true"><div class="bar-fill" style={`width:${Math.max(3, row.gap / maxGap * 100)}%`}></div></div><span class="num">{row.gap}-day gap</span></div>
+    ))}
+  </div>
+
+  <h2>All reviewed visa baselines</h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Visa</th><th>50% processed</th><th>80% processed</th><th>80% ÷ 50%</th></tr></thead>
+    <tbody>{rows.map(row => (<tr><td><a href={`/new-zealand/${row.service.slug}/`}>{row.service.name}</a></td><td>{row.service.percent50.value_raw}</td><td>{row.service.percent80.value_raw}</td><td class="num">{row.ratio.toFixed(1)}×</td></tr>))}</tbody>
+  </table></div>
+
+  {changes.length > 0 && <><h2>Verified changes</h2><div class="tablewrap"><table><thead><tr><th>Visa measure</th><th>Previous</th><th>Current</th></tr></thead><tbody>{changes.map(record => (<tr><td>{record.service_name}</td><td>{record.delta.prev_raw}</td><td>{record.value_raw}</td></tr>))}</tbody></table></div></>}
+
+  <h2>Method and limits</h2>
+  <p>INZ defines the average as the point at which 50% of applications were processed and “most completed within” as the 80% point. Both use working days. Incomplete or complex applications can take longer, and the remaining 20% are outside the second figure.</p>
+  <div class="prov">Official source: <a href={source} rel="noopener">Immigration New Zealand processing-time tool</a> · values first observed {fmtDate(checked)} · not immigration advice.</div>
+</EditorialFrame>

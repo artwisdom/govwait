@@ -1,17 +1,21 @@
 ---
-import Base from '../../layouts/Base.astro';
+import EditorialFrame from '../../components/EditorialFrame.astro';
 import AdSlot from '../../components/AdSlot.astro';
 import { services, fmtDate } from '../../lib/data.js';
+import { newestDate } from '../../lib/editorial.js';
 
 const svcs = [...services.CA.values()];
 const perCountry = svcs.filter(s => s.hasApplicantPages);
 const updated = svcs.map(s => s.latestEffective).sort().at(-1);
+const citations = [...new Set(svcs.flatMap(service => service.records.map(record => record.source_url)))];
 ---
-<Base title="How Canada IRCC processing times work — current guide"
-      description="Learn how IRCC calculates processing times, why figures change, what missing data means, and how to use current medians without treating them as promises.">
-  <nav class="crumbs"><a href="/">Home</a> › <a href="/guides/">Guides</a> › How IRCC times work</nav>
-  <h1>How Canada's processing times actually work</h1>
-  <p class="lede">Immigration, Refugees and Citizenship Canada publishes, for most temporary-residence routes, a processing time per applicant country — and overwrites it roughly every week. Here is what those numbers really are, built on our tracked copy of the data (last official update {fmtDate(updated)}).</p>
+<EditorialFrame sectionName="Guides" sectionPath="/guides/" slug="how-canada-processing-times-work"
+  title="How Canada IRCC processing times work — current guide"
+  description="Learn how IRCC calculates processing times, why figures change, what missing data means, and how to use current medians without treating them as promises."
+  h1="How Canada's processing times actually work"
+  lede={`Immigration, Refugees and Citizenship Canada publishes, for most temporary-residence routes, a processing time per applicant country. Here is how to read those figures, built on our tracked copy of the data (last official update ${fmtDate(updated)}).`}
+  published="2026-08-22" modified={newestDate('2026-08-23', updated)} checked={updated}
+  about={['IRCC processing times', 'Canada immigration']} citations={citations} adPrefix="guide-ca-method">
   <AdSlot position="guide-top" />
 
   <h2>The number is a rear-view mirror, not a forecast</h2>
@@ -43,4 +47,4 @@ const updated = svcs.map(s => s.latestEffective).sort().at(-1);
 
   <div class="prov">All figures on this page are computed from the tracked dataset at build time — they update automatically with every refresh.</div>
   <AdSlot position="guide-bottom" />
-</Base>
+</EditorialFrame>
