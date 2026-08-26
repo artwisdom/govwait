@@ -1,12 +1,13 @@
 # DEPLOYMENT GUIDE — every manual step, in order
 
-**Status update 2026-08-22:** the repository and refresh cron are active;
+**Status update 2026-08-25:** the repository and refresh cron are active;
 `govwait.com` is registered in Cloudflare; the Cloudflare Pages project `govwait`
 serves both the apex and `www` over HTTPS; `contact@govwait.com` forwards through
 Cloudflare Email Routing; and the public About page contains the address. Google
-Search Console and Bing Webmaster Tools ownership are verified. The remaining
-search-engine work is passive processing/monitoring; the sitemap has now been
-submitted to both services.
+Search Console and Bing Webmaster Tools ownership are verified. The Phase 1
+editorial/trust release, consent-gated GA4, verified Grow script, and GA4-to-Search
+Console link are live. The remaining search-engine work is processing and honest
+measurement; setup and submission do not prove indexing, traffic, or ad approval.
 
 ## Go-live core
 
@@ -23,6 +24,7 @@ submitted to both services.
 3. **[DONE] Set repository deployment settings.** Settings → Secrets and variables → Actions:
    - `SITE_URL` = your real site origin (used for canonicals/sitemap/robots).
    - `CONTACT_EMAIL` = `contact@govwait.com` for the crawler User-Agent.
+   - `PUBLIC_GA4_MEASUREMENT_ID` = `G-6ZJ7J3526N` for the consent-gated production stream.
    - `CLOUDFLARE_ACCOUNT_ID` = the Cloudflare account that owns the `govwait` Pages project.
    - Encrypted secret `CLOUDFLARE_API_TOKEN` = a least-privilege token with Cloudflare Pages edit access only.
 
@@ -34,10 +36,12 @@ submitted to both services.
    Search Console domain property `govwait.com` and Bing Webmaster Tools site
    `https://govwait.com/` were verified by DNS on 2026-08-22. The full sitemap URL
    `https://govwait.com/sitemap.xml` was submitted to both on 2026-08-23. After
-   the discoverability release reduced the requested index set to 561 useful
-   pages and added a UK child sitemap, Google accepted the root again and Bing
-   accepted it for processing. The full 561-URL set also received an IndexNow
-   HTTP 200 receipt; none of these receipts guarantees indexing.
+   the discoverability release reduced the requested index set to useful,
+   data-backed pages and added separate child sitemaps, Google accepted the root
+   again and Bing accepted it for processing. The 2026-08-25 Phase 1 release has
+   **603 indexable pages and 603 matching sitemap URLs**; deployment run
+   `32921188032` submitted that complete set to IndexNow and received HTTP 200.
+   None of these receipts guarantees indexing.
    The public sitemap returns HTTP 200 as `application/xml`. Google's live URL test
    reports the homepage can be indexed (crawl
    allowed, fetch successful, indexing allowed, declared canonical correct). The
@@ -46,9 +50,10 @@ submitted to both services.
    Breadcrumb item. Wait 3–7 days before judging discovered-URL counts or Bing's
    final processing status. After explicit owner confirmation, Google accepted
    priority-crawl requests for the UK Standard Visitor page, Canada Visitor Visa
-   by Country guide, and Canada Study Permit from Pakistan. Do not repeat those
-   requests merely to try to change priority; acceptance still does not prove
-   that a URL is indexed.
+   by Country guide, Canada Study Permit from Pakistan, the New Zealand hub,
+   New Zealand Visitor Visa page, and the New Zealand processing-times explainer.
+   Do not repeat those requests merely to try to change priority; acceptance still
+   does not prove that a URL is indexed.
 
 7. **[DONE] Publish contact details.** The About page links `contact@govwait.com`; Cloudflare Email Routing forwards that alias to the owner's verified destination address.
 
@@ -56,7 +61,19 @@ submitted to both services.
 
 8. **[DONE] Cloudflare hosting and crawler policy.** Cloudflare Pages is the sole production host; GitHub Pages is disabled. After token cleanup, GitHub-driven deploy run `32571664389` passed on commit `cdcf37b`, proving the retained Pages-only token works. AI Crawl Control was checked deliberately: every listed crawler remains allowed and Cloudflare Managed robots.txt is off, preserving the repository-owned policy. See `docs/CLOUDFLARE_CRAWL_POLICY.md`.
 
-9. **[LATER] Ads — the 2026 ladder.** Prerequisite for ANY approval: the editorial layer (guides, methodology, unique per-page analysis — partially built; expand per roadmap) because 2,000 templated pages alone is the exact "Low Value Content" rejection profile.
+8b. **[DONE 2026-08-25] Measurement and Grow foundation.** GA4 account/property
+   `GovWait` uses production stream `15489361827` and measurement ID
+   `G-6ZJ7J3526N`; the repository variable is set and the live tag loads only after
+   explicit analytics acceptance. Ad storage, ad user data, ad personalization,
+   Google Signals, and ad-personalization signals remain disabled. GA4 retention is
+   14 months, and the production stream is linked to the `govwait.com` Search
+   Console domain property. Grow accepted the owner-approved bundle, verified its
+   exact script on production, and is ready to accumulate eligibility history.
+   Automailer, Print Pass, the default subscribe form, and automatic inline/mobile
+   recommendations are off; the small reader/share widget remains on. No Journey
+   application or ad approval is implied.
+
+9. **[FOUNDATION LIVE; APPLICATION LATER] Ads — the 2026 ladder.** Prerequisite for ANY approval: the editorial layer (13 guides, 3 jurisdiction reports, methodology, editorial/research-desk identity, and policy pages are live; continue expanding per roadmap) because 2,000 templated pages alone is the exact "Low Value Content" rejection profile.
    - At **~1,000 sessions/mo**: apply to **Mediavine Journey** (the on-ramp; 70% share; Grow.js works on static sites) + AdSense in parallel (fallback + required standing).
    - At **25K pageviews/mo AND ≥50% US/UK/CA/AU/NZ traffic**: apply to **Raptive** (geo gate is the binding constraint, not the pageview count).
    - Full **Mediavine** upgrade happens automatically via Journey at $5K trailing-12-month ad revenue.

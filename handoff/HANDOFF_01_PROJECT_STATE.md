@@ -1,6 +1,6 @@
 # HANDOFF 01 — Project State & Technical Deep Dive
 
-_Everything a coding agent needs to operate GovWait. Current as of 2026-08-23._
+_Everything a coding agent needs to operate GovWait. Current as of 2026-08-25._
 
 ## 1. The one-sentence architecture
 
@@ -13,7 +13,7 @@ pipeline/run.js ──▶ data/db.sqlite ──▶ data/exports/{latest,history,
                                             │
                     pipeline/build-api.js ──▶ site/public/api/v1/** (≈2,000 files)
                                             │
-                    site/ (Astro 4) ───────▶ site/dist (2,051 HTML pages + API + sitemaps)
+                    site/ (Astro 4) ───────▶ site/dist (2,070 HTML pages + API + sitemaps)
                                             │
                     machine/mcp-server ─────▶ stdio MCP for AI agents (reads exports)
 ```
@@ -37,7 +37,7 @@ pipeline/run.js ──▶ data/db.sqlite ──▶ data/exports/{latest,history,
 | `site/` | Astro 4 (Node 20 pin — Astro 5 needs Node ≥22). `site.config.json` = brand + SITE_URL; CI overrides via `SITE_URL` repo var | |
 | `site/src/lib/data.js` | Build-time model: slugs, services map, medians, speed classes (vs service median: ≤0.6 fast / ≤1.4 typical / ≤2.5 slow / else very slow), deltas from history, `relatedRoutes()`, `dataLastmod`. Throws on URL collisions | The brain of the site |
 | `site/src/lib/sitemap.js` + `pages/sitemap*.xml.js` | Sitemap index → hubs + numeric CA applicant pages + UK services + curated NZ services. **lastmod = source-backed effective/first-observed date for that exact child, never build time** | ⚠️ Keep lastmod honest |
-| `site/src/pages/` | `index`, `[country]/index`, `[country]/[service]/index` (hub for CA; entity page for GB; combined p50/p80 page for NZ), `[country]/[service]/[applicant]` (CA entity pages), `guides/*` (4 data-generated analyses), `about`, `api-docs`, `404` | |
+| `site/src/pages/` | `index`, `[country]/index`, `[country]/[service]/index` (hub for CA; entity page for GB; combined p50/p80 page for NZ), `[country]/[service]/[applicant]` (CA entity pages), `guides/*` (13 source-backed analyses), `reports/*` (3 jurisdiction baselines plus hub), trust/policy pages, `about`, `api-docs`, `404` | |
 | `machine/openapi.yaml` | OpenAPI 3.1, copied into the API at build | Keep in sync with build-api.js |
 | `machine/api-conformance.mjs` | Checks every built API file against the spec's shapes | Run in QA |
 | `machine/mcp-server/` | TypeScript stdio MCP server, 4 tools, reads exports. `npm run build && npm run smoke` (10 assertions, including NZ metric/unit checks) | |
@@ -48,7 +48,7 @@ pipeline/run.js ──▶ data/db.sqlite ──▶ data/exports/{latest,history,
 
 Root docs: `EXECUTION_REPORT.md`, `DEPLOYMENT_GUIDE.md` (owner steps; monetization
 section updated Aug 2026), `MAINTENANCE_RUNBOOK.md` (failure playbooks + add-a-source
-recipe), `RISK_REGISTER.md`, `DECISIONS.md` (32 numbered judgment calls), `STATE.md`.
+recipe), `RISK_REGISTER.md`, `DECISIONS.md` (38 numbered judgment calls), `STATE.md`.
 
 ## 3. Data model (SQLite, `pipeline/schema.sql`)
 
@@ -67,7 +67,7 @@ Current stats: 2,271 active entities; 806 numeric; sources: ircc-ptime (1,907), 
 node pipeline/run.js              # uses cache — safe offline
 node pipeline/run.js --refresh    # live fetch (polite; INZ makes 133 listed lookups, ~7 min total)
 node pipeline/build-api.js        # exports -> static API files
-cd site && npm ci && npm run build && npm run audit:seo  # ~3s, 2,051 HTML pages
+cd site && npm ci && npm run build && npm run audit:seo  # ~3s, 2,070 HTML pages
 cd machine/mcp-server && npm ci && npm run build && npm run smoke
 node machine/api-conformance.mjs  # after a site build
 ```
@@ -85,39 +85,49 @@ Local Node is 20.19.6 (Astro pinned to v4 for this reason; CI also pins Node 20)
 - Cloudflare Email Routing: `contact@govwait.com` active and forwarded to a verified
   owner destination; the About page publishes the alias.
 - Repo variables set: `SITE_URL=https://govwait.com`,
-  `CONTACT_EMAIL=contact@govwait.com`, and `CLOUDFLARE_ACCOUNT_ID`. The encrypted
+  `CONTACT_EMAIL=contact@govwait.com`, `PUBLIC_GA4_MEASUREMENT_ID=G-6ZJ7J3526N`,
+  and `CLOUDFLARE_ACCOUNT_ID`. The encrypted
   `CLOUDFLARE_API_TOKEN` secret has Pages write permission only.
 - refresh-data cron ACTIVE and proven (first autonomous commit: `data: refresh
   2026-08-22`). deploy-site green. ~60 min/month total of the 2,000 free.
 - Cloudflare migration: production cutover, explicit allow-crawler policy, and
-  GitHub-driven deployment are complete. GitHub Pages is disabled, the unused
-  original token is deleted, and final New Zealand content release run
-  `32667382747` deployed commit `0a27449` successfully. Automation proof run
-  `32667617092` then confirmed that a no-public-change commit skips IndexNow.
+  GitHub-driven deployment are complete. GitHub Pages is disabled and the unused
+  original token is deleted. Phase 1 commit `2a1729c` deployed in green run
+  `32921188032` to `dfb3a5be.govwait.pages.dev` after integrating the latest
+  refresh-bot commit `3278afe`.
 - Search ownership: Google Search Console domain property `govwait.com` and Bing
   Webmaster Tools site `https://govwait.com/` are DNS-verified. Google's live test
   says the homepage can be indexed, and three representative pages passed the live
   Rich Results Test with valid Breadcrumb markup.
+- GA4 account/property `GovWait` uses production web stream `15489361827` and
+  measurement ID `G-6ZJ7J3526N`. It is consent-gated, configured without ad
+  personalization/Google Signals, and linked to the `govwait.com` Search Console
+  domain property. Grow's publisher portal verified its exact production script;
+  the default subscribe form and automatic inline/mobile recommendations are off,
+  while the small reader/share widget remains enabled. No Journey application has
+  been submitted.
 - Sitemap onboarding: `https://govwait.com/sitemap.xml` was submitted to both search
   engines on 2026-08-23. Google reports **Sitemap index / Success**; Bing accepted it
   and reports **Submitted / Processing**.
-- The 2026-08-23 discoverability audit intentionally limits requested indexing
-  to 588 useful/data-backed URLs (41 hubs/guides, 445 numeric CA applicant
+- The discoverability audit intentionally limits requested indexing
+  to 603 useful/data-backed URLs (56 hubs/guides/reports, 445 numeric CA applicant
   pages, 77 UK services, and 25 curated NZ visa pages). The other 1,462 Canadian
   applicant pages stay live and crawlable with `noindex, follow` until a numeric
   official value appears. All 266 NZ metric entities remain immediately available
   through the API and MCP server while human pages roll out at ≤30/week.
   See `docs/DISCOVERABILITY_AUDIT.md` for crawler, sitemap, canonical, CI, and
   point-in-time Cloudflare evidence.
-- Google and Bing previously accepted the root sitemap index. It now advertises
-  `sitemap-nz.xml`; the New Zealand production release submitted the full
-  588-URL current set to IndexNow and received HTTP 200. These are discovery and
+- Google and Bing previously accepted the root sitemap index. It advertises four
+  child sitemaps; Phase 1 production run `32921188032` submitted the full
+  603-URL current set to IndexNow and received HTTP 200. These are discovery and
   submission receipts, not indexing guarantees.
 - After explicit owner confirmation, Google accepted priority-crawl requests
   for `/uk/standard-visitor/`,
   `/guides/canada-visitor-visa-by-country/`, and
-  `/canada/study-permit/from-pakistan/`. Do not submit those URLs again merely
-  to try to change priority.
+  `/canada/study-permit/from-pakistan/`, plus `/new-zealand/`,
+  `/new-zealand/visitor-visa/`, and
+  `/guides/how-new-zealand-visa-processing-times-work/`. Do not submit those URLs
+  again merely to try to change priority.
 
 ## 6. Traps and constraints (learned the hard way — do not relearn)
 
@@ -139,7 +149,7 @@ Local Node is 20.19.6 (Astro pinned to v4 for this reason; CI also pins Node 20)
    currently guaranteed because lastmod never reads the clock.
 7. **db.sqlite is committed**; a CI refresh race means `git pull --rebase` before
    pushing local commits (the robot may have committed since your last fetch).
-8. **1,960 pages launched at once** is a known SEO risk profile (see HANDOFF_02 §SEO);
+8. **2,070 pages exist at once** is a known SEO risk profile (see HANDOFF_02 §SEO);
    the mitigation is per-page information gain (deltas/ranks/history — partially
    shipped) and NOT bulk-launching future governments (25–30 pages/week rollout).
 9. Politeness cap is 150 fetches/host/run — a full IRCC+gov.uk refresh uses ~4.
@@ -153,6 +163,10 @@ Local Node is 20.19.6 (Astro pinned to v4 for this reason; CI also pins Node 20)
   (Official)"), delta line (renders when history ≥2 differing values), FAQ blocks
   incl. the "after biometrics" answer (the #1 unmet search modifier), footer
   independence disclaimer, corrected 2026 ad-network guidance in DEPLOYMENT_GUIDE.
+- Phase 1 added 9 practical route/corridor guides (13 total), 3 source-backed
+  jurisdiction baseline/change reports plus a report hub, editorial/research-desk
+  identity, policy/correction/contact pages, consent-gated GA4, a verified Grow
+  install with conservative feature defaults, and the GA4↔Search Console link.
 
 ## 8. QA ritual before any push that touches pipeline or site
 

@@ -1,6 +1,6 @@
 # STATE — Data Moat Engine
 
-_Last updated: 2026-08-23_
+_Last updated: 2026-08-25_
 
 ## Environment (verified)
 | Runtime | Version |
@@ -24,22 +24,33 @@ All dependencies install locally (`node_modules` inside project). No sudo or mac
 - [x] Phase 7 — QA: all 13 gates green (docs/QA_REPORT.md)
 - [x] Phase 8 — All deliverables complete
 - [x] Post-launch (owner-directed): go-live executed (repo public, Pages live, cron active); design system v2; SEO upgrades; dataset expanded to **2,271 metric routes / 7 sources / 3 governments**, including all 133 visas in Immigration New Zealand's current tool; **/handoff package for Codex transfer (7 files)**
+- [x] Phase 1 growth/trust foundation: 9 new source-backed planning guides, 3 jurisdiction reports plus report hub, editorial/research-desk bylines and Article schema, contact/corrections/privacy/terms pages, consent-gated GA4, verified Grow installation, and GA4↔Search Console linking
 
-## Deployment status (verified through 2026-08-23)
+## Deployment status (verified through 2026-08-25)
 - Repo LIVE: https://github.com/artwisdom/govwait (public, main)
 - Domain: `govwait.com` registered in Cloudflare Registrar; auto-renew and registrar lock enabled
 - Cloudflare Pages: project `govwait` live; `govwait.com` and `www.govwait.com` active over HTTPS
 - Email: `contact@govwait.com` routing active through Cloudflare Email Routing
 - AI crawler policy: listed search/citation crawlers allowed; Managed robots.txt off (see `docs/CLOUDFLARE_CRAWL_POLICY.md`)
-- GitHub deployment: latest verified `deploy-site` run `32667617092` green on automation commit `cec8e39`; final New Zealand content commit `0a27449` deployed in run `32667382747` (`59fac18c.govwait.pages.dev`)
+- GitHub deployment: Phase 1 commit `2a1729c` deployed green in `deploy-site` run `32921188032` (`dfb3a5be.govwait.pages.dev`) after integrating refresh-bot commit `3278afe`
 - GitHub Pages: disabled; Cloudflare Pages is the sole production host
 - refresh-data workflow: ACTIVE, first run green (22s); cron Tue+Fri 14:00 UTC
 - SITE_URL repo variable = https://govwait.com
-- Repository variables: `SITE_URL`, `CONTACT_EMAIL`, and `CLOUDFLARE_ACCOUNT_ID` set
+- Repository variables: `SITE_URL`, `CONTACT_EMAIL`, `PUBLIC_GA4_MEASUREMENT_ID`, and `CLOUDFLARE_ACCOUNT_ID` set
 - Repository secret: scoped `CLOUDFLARE_API_TOKEN` set (Pages write only)
 - Token hygiene: unused original account token deleted; working `govwait-github-pages-deploy-v2` retained and re-verified by deployment
 - Search ownership: Google Search Console domain property `govwait.com` and Bing
   Webmaster Tools site `https://govwait.com/` verified by DNS on 2026-08-22
+- Measurement setup: GA4 account/property `GovWait`, production web stream
+  `15489361827`, and public measurement ID `G-6ZJ7J3526N` are active. GA4 loads
+  only after an explicit analytics choice; advertising storage, ad user data,
+  ad personalization, Google Signals, and ad-personalization signals remain off.
+  The GA4 stream is linked to the `govwait.com` Search Console domain property.
+- Grow: the owner accepted the Grow bundle and the publisher portal independently
+  verified the exact site-specific script on production. Automailer and Print Pass
+  are off; the default subscribe form is paused; inline/mobile recommended-content
+  overlays are off; the small reader/share widget remains enabled. This is
+  infrastructure readiness, not Journey/ad-network approval.
 - Search preflight: Google live URL test says the homepage is available to Google,
   crawl/page fetch/indexing are allowed, and the declared canonical is correct; three
   representative pages each passed the live Rich Results Test with one valid
@@ -48,8 +59,8 @@ All dependencies install locally (`node_modules` inside project). No sudo or mac
   engines on 2026-08-23. Google re-read it as a **Sitemap index / Success**; Bing
   accepted it and currently reports **Submitted / Processing**. The public sitemap
   independently returns HTTP 200 with `application/xml`.
-- Discoverability audit: the site now has 588 intentionally indexable pages and
-  588 matching sitemap URLs across separate hubs/Canada/UK/New Zealand children. Another
+- Discoverability audit: the site now has 603 intentionally indexable pages and
+  603 matching sitemap URLs across separate hubs/Canada/UK/New Zealand children. Another
   1,462 official no-value applicant pages stay live and crawlable with
   `noindex, follow` until they gain a numeric value. A blocking CI audit protects
   metadata, canonicals, internal links, structured data, robots/llms policy,
@@ -58,19 +69,19 @@ All dependencies install locally (`node_modules` inside project). No sudo or mac
 - Canonical host: a live Cloudflare 301 sends `www` paths and queries to the
   matching apex URL.
 - Current discovery notifications: the root sitemap already registered with Google
-  and Bing now advertises the New Zealand child sitemap. After production deploy
-  run `32667382747`, the complete 588-URL current set received an IndexNow HTTP
-  200 receipt. Proof run `32667617092` then correctly detected that its
-  automation-only commit changed no public URLs and skipped submission. These
+  and Bing advertises four child sitemaps containing 56 hub/editorial/report URLs,
+  445 Canada URLs, 77 UK URLs, and 25 New Zealand URLs. Phase 1 production deploy
+  run `32921188032` submitted the complete 603-URL current set to IndexNow and
+  received HTTP 200. These
   are discovery/submission receipts, not proof of indexing, ranking, traffic,
   or revenue.
 
 ## Next step
 Allow the registered root sitemap and successful IndexNow notification to be
-processed. Optional Google priority-crawl requests for the New Zealand hub,
-Visitor Visa page, and New Zealand explainer require fresh owner confirmation at
-action time. Do not resubmit the three earlier confirmed gaps merely to try to
-change priority; Google states that repeats do not improve queue position.
+processed while GA4 and Search Console collect a real baseline. Do not describe
+the integrations as proof of indexing or traffic. Apply to Journey only when the
+documented traffic/content gate is actually met and the owner approves the
+application at action time; do not enable ad code merely because Grow is present.
 
 ## Open threads
 - US/AU/IE sources WAF-blocked to honest bots — owner-decision item (documented in DEPLOYMENT_GUIDE).

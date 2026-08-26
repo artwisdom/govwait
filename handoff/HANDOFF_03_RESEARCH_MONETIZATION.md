@@ -7,8 +7,9 @@ _Research pass 2026-08-21/22. Verbatim findings below; preamble maps to repo sta
 | Recommendation | Status |
 |---|---|
 | Correct the ad ladder in owner docs (Ezoic dead; Journey on-ramp) | ✅ DONE (DEPLOYMENT_GUIDE §8–9b rewritten) |
-| Editorial layer prerequisite for ad approval | ⚠️ PARTIAL (3 guides + methodology + FAQ blocks shipped; target ~40–80 editorial pages → roadmap R5) |
-| Cloudflare Pages migration + AI Crawl Control before **Sept 15, 2026** | ❌ ROADMAP **R1 — TIME-SENSITIVE** |
+| Editorial layer prerequisite for ad approval | ⚠️ PARTIAL (13 guides + 3 jurisdiction reports + methodology/editorial/trust pages live; target ~40–80 editorial pages → roadmap R5) |
+| Cloudflare Pages migration + AI Crawl Control before **Sept 15, 2026** | ✅ DONE (Pages sole host, canonical apex, deliberate crawler allows, GitHub Pages off) |
+| Consent-gated analytics + Grow foundation | ✅ DONE 2026-08-25 (GA4 linked to Search Console; Grow script production-verified; no Journey application yet) |
 | Pay Per Crawl beta + Monetization Gateway waitlist signups | ❌ OWNER (accounts) — do during R1 |
 | Immutable historical archive discipline (the licensable asset) | ✅ DONE by design (append-only observations; db.sqlite committed) |
 | Plain-language data-license page (commercial license hook) | ❌ ROADMAP (R7) |

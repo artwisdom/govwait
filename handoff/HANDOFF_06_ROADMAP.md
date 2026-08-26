@@ -20,8 +20,12 @@ never the numbers themselves — six free competitors already have the numbers.*
 - [x] Harden search/AI discovery: canonical `www` 301, explicit search and AI
   crawler allows, generated `llms.txt`, four honest child sitemaps, structured
   data, exact IndexNow notifications, and a blocking SEO CI audit. Indexing is
-  requested only for the 588 current data-backed pages; 1,462 official no-value
+  requested only for the 603 current data-backed pages; 1,462 official no-value
   pages automatically graduate from `noindex, follow` when data appears.
+- [x] Privacy-minimal measurement foundation: consent-gated GA4, 14-month retention,
+  ad/personalization signals off, GA4 production stream linked to the `govwait.com`
+  Search Console property, and production-verified Grow script with subscribe and
+  automatic recommendation overlays disabled. This is not ad-network approval.
 - Cloudflare account (needed for R1). Pay Per Crawl beta + Monetization Gateway waitlists while there.
 - Defensive trademark check "GovWait" CA/UK/US (~$0 to search).
 
@@ -37,6 +41,10 @@ complete. GitHub Pages is off, the unused token is deleted, and a retained-token
 proof deployment is green. The operational migration is complete; if desired,
 add a dashboard screenshot alongside the textual policy evidence in
 `docs/CLOUDFLARE_CRAWL_POLICY.md`.
+
+**Production proof 2026-08-25:** Phase 1 commit `2a1729c` deployed in run
+`32921188032`; public-edge checks passed and IndexNow accepted the 603-URL current
+set with HTTP 200.
 
 ## Phase R2 — NZ + IRCC-flpt sources (the moat accelerators)
 
@@ -55,6 +63,11 @@ Auto-generated per-jurisdiction "What changed this week/month" pages: biggest mo
 **Why:** SEO research: original-data reports earn 3.2× links; Boundless proved the citation loop in this exact vertical; CIC News's franchise is prose deltas with decaying URLs — ours compound.
 **Accept:** builds from history automatically; renders gracefully when few changes; RSS validates; first outreach email drafted (template in repo) for the owner to send to CIC News-adjacent reporters on a real data drop.
 
+**Status 2026-08-25:** the first honest baseline layer is live at `/reports/` with
+one source-backed report for Canada, the UK, and New Zealand. It renders a baseline
+without inventing movement when no differing second observation exists. Permanent
+weekly issue URLs, RSS, and outreach on a real change remain unfinished R3 work.
+
 ## Phase R4 — History visualization + alerts
 
 - Inline SVG sparklines (no JS) on entity pages once a route has ≥4 observations; full history chart at ≥8.
@@ -65,6 +78,10 @@ Auto-generated per-jurisdiction "What changed this week/month" pages: biggest mo
 
 Targets from HANDOFF_04's top-20 table: corridor guides (India→CA study, Nigeria→CA study, UK spouse timeline explainer, super-visa-for-parents…), "published vs lived timelines" explainer (the "reddit" distrust bridge), stage-definitions explainer ("after biometrics"), employer/sponsor-side section (the tier-1 RPM fix from HANDOFF_03). All data-fed where possible so they self-update. Write for humans; no AI-boilerplate tells.
 **Accept:** 40+ guide pages live; every top-20 route cross-linked to its guide; AdSense + Journey applications submitted once traffic gate hit (owner clicks).
+
+**Status 2026-08-25:** 13 source-backed guides are live (9 added in Phase 1), with
+organizational bylines, citations, Article/Breadcrumb schema, and policy/correction
+paths. The 40-page depth target and traffic-gated ad applications remain unfinished.
 
 ## Phase R6 — Machine-skin distribution
 
