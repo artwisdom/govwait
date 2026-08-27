@@ -1,6 +1,6 @@
 # STATE — Data Moat Engine
 
-_Last updated: 2026-08-25_
+_Last updated: 2026-08-27_
 
 ## Environment (verified)
 | Runtime | Version |
@@ -23,16 +23,17 @@ All dependencies install locally (`node_modules` inside project). No sudo or mac
 - [x] Phase 6 — Workflows active (refresh ~35min/mo; deploy to Cloudflare Pages)
 - [x] Phase 7 — QA: all 13 gates green (docs/QA_REPORT.md)
 - [x] Phase 8 — All deliverables complete
-- [x] Post-launch (owner-directed): go-live executed (repo public, Pages live, cron active); design system v2; SEO upgrades; dataset expanded to **2,271 metric routes / 7 sources / 3 governments**, including all 133 visas in Immigration New Zealand's current tool; **/handoff package for Codex transfer (7 files)**
+- [x] Post-launch (owner-directed): go-live executed (repo public, Pages live, cron active); design system v2; SEO upgrades; dataset expanded to **2,299 metric routes / 8 sources / 3 governments**, including all 133 visas in Immigration New Zealand's current tool and 28 IRCC forward-looking programs; **/handoff package for Codex transfer (7 files)**
 - [x] Phase 1 growth/trust foundation: 9 new source-backed planning guides, 3 jurisdiction reports plus report hub, editorial/research-desk bylines and Article schema, contact/corrections/privacy/terms pages, consent-gated GA4, verified Grow installation, and GA4↔Search Console linking
+- [x] Phase 2 production release: official IRCC forward-looking estimates for 28 programs, 3,601 application-cohort rows plus 28 headline rows, a distinct forward/backward/service-standard/percentile metric taxonomy, 12 reviewed human pages, static JSON API/OpenAPI/MCP support, and append-only monthly snapshot storage
 
-## Deployment status (verified through 2026-08-25)
+## Deployment status (verified through 2026-08-27)
 - Repo LIVE: https://github.com/artwisdom/govwait (public, main)
 - Domain: `govwait.com` registered in Cloudflare Registrar; auto-renew and registrar lock enabled
 - Cloudflare Pages: project `govwait` live; `govwait.com` and `www.govwait.com` active over HTTPS
 - Email: `contact@govwait.com` routing active through Cloudflare Email Routing
 - AI crawler policy: listed search/citation crawlers allowed; Managed robots.txt off (see `docs/CLOUDFLARE_CRAWL_POLICY.md`)
-- GitHub deployment: Phase 1 commit `2a1729c` deployed green in `deploy-site` run `32921188032` (`dfb3a5be.govwait.pages.dev`) after integrating refresh-bot commit `3278afe`
+- GitHub deployment: Phase 2 commit `5d5f0a9` deployed green in `deploy-site` run `33127083764` (`0933a757.govwait.pages.dev`); the blocking production build and SEO audit passed before Cloudflare publication
 - GitHub Pages: disabled; Cloudflare Pages is the sole production host
 - refresh-data workflow: ACTIVE, first run green (22s); cron Tue+Fri 14:00 UTC
 - SITE_URL repo variable = https://govwait.com
@@ -59,8 +60,8 @@ All dependencies install locally (`node_modules` inside project). No sudo or mac
   engines on 2026-08-23. Google re-read it as a **Sitemap index / Success**; Bing
   accepted it and currently reports **Submitted / Processing**. The public sitemap
   independently returns HTTP 200 with `application/xml`.
-- Discoverability audit: the site now has 603 intentionally indexable pages and
-  603 matching sitemap URLs across separate hubs/Canada/UK/New Zealand children. Another
+- Discoverability audit: the site now has 615 intentionally indexable pages and
+  615 matching sitemap URLs across separate hubs/Canada/UK/New Zealand children. Another
   1,462 official no-value applicant pages stay live and crawlable with
   `noindex, follow` until they gain a numeric value. A blocking CI audit protects
   metadata, canonicals, internal links, structured data, robots/llms policy,
@@ -69,21 +70,29 @@ All dependencies install locally (`node_modules` inside project). No sudo or mac
 - Canonical host: a live Cloudflare 301 sends `www` paths and queries to the
   matching apex URL.
 - Current discovery notifications: the root sitemap already registered with Google
-  and Bing advertises four child sitemaps containing 56 hub/editorial/report URLs,
-  445 Canada URLs, 77 UK URLs, and 25 New Zealand URLs. Phase 1 production deploy
-  run `32921188032` submitted the complete 603-URL current set to IndexNow and
+  and Bing advertises four child sitemaps containing 68 hub/editorial/report/Canada-service
+  URLs, 445 Canada applicant-country URLs, 77 UK URLs, and 25 New Zealand URLs.
+  Phase 2 production run `33127083764` submitted 621 changed URLs to IndexNow—the
+  complete 615-page indexable set plus `llms.txt` and five sitemap documents—and
   received HTTP 200. These
   are discovery/submission receipts, not proof of indexing, ranking, traffic,
   or revenue.
 
 ## Next step
-Allow the registered root sitemap and successful IndexNow notification to be
-processed while GA4 and Search Console collect a real baseline. Do not describe
-the integrations as proof of indexing or traffic. Apply to Journey only when the
-documented traffic/content gate is actually met and the owner approves the
-application at action time; do not enable ad code merely because Grow is present.
+Phase 2 is production-verified. Let the registered sitemap and accepted IndexNow
+notification be processed while GA4 and Search Console collect evidence. The next
+bounded build candidate is Norway UDI, but source expansion should remain a
+separate reviewed phase. Do not describe discovery receipts as proof of indexing,
+traffic, ad approval, or revenue.
+
+Production receipt: **2,299 active entities / 8 sources / 3 governments; 3,629
+forward-estimate rows; 2,082 HTML pages; 615 indexable pages and 615 sitemap
+URLs.** Pipeline tests 7/7, validation 23 checks, SEO audit, 2,572-file API
+conformance, MCP smoke tests, light/dark desktop and mobile visual checks, 12/12
+new-page HTTP 200 checks, API/sitemap/canonical checks, and IndexNow HTTP 200 are
+green.
 
 ## Open threads
 - US/AU/IE sources WAF-blocked to honest bots — owner-decision item (documented in DEPLOYMENT_GUIDE).
 - `npm audit` reports four Astro 4 build-toolchain advisories (1 moderate, 3 high). Production is pre-rendered static HTML/JSON on Cloudflare Pages—no Astro/Vite development or server runtime is exposed. Plan and test the major Astro 7/Node runtime upgrade before adding any dynamic server rendering; do not apply `npm audit fix --force` blindly.
-- New Zealand INZ processing times are built. Norway/Finland/Sweden/Netherlands/Denmark remain expansion targets; NZ passports remain blocked.
+- IRCC forward-looking estimates are production-verified. Norway is the next source target; Finland/Sweden/Netherlands/Denmark follow. NZ passports remain blocked.

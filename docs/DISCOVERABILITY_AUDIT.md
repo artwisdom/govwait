@@ -1,14 +1,16 @@
 # Discoverability audit
 
-_Implemented and production-verified 2026-08-23. The New Zealand implementation
-is commit `84e7ec4`; final public wording is commit `0a27449`, deployed in
-GitHub Actions run `32667382747`._
+_Implemented and production-verified initially on 2026-08-23, expanded by the
+Phase 1 trust/growth release on 2026-08-25, and expanded again by the IRCC
+forward-looking release on 2026-08-27. Current production is commit `5d5f0a9`,
+deployed in GitHub Actions run `33127083764`._
 
 ## Search-indexing policy
 
-- The site builds 2,051 HTML pages, including the 404 page.
-- 588 pages currently have enough distinct, useful content to request indexing:
-  41 general/country hubs and guides, 445 Canadian applicant-country pages with
+- Production builds 2,082 HTML pages, including the 404 page.
+- 615 pages currently have enough distinct, useful content to request indexing:
+  68 general/country hubs, guides, policies, reports, and reviewed Canadian
+  service pages; 445 Canadian applicant-country pages with
   a numeric official value, 77 UK service pages, and the first 25 curated New
   Zealand visa pages. Each New Zealand page combines its official 50th- and
   80th-percentile figures rather than creating two near-duplicate pages.
@@ -43,7 +45,7 @@ index a large family of low-information query variants.
   crawler policy, or JSON-LD validity regress.
 - The IndexNow notifier submits the exact changed public pages only after the
   corresponding production deployment succeeds. It can also submit the full
-  current 588-URL indexable set and respects the protocol's 10,000-URL request
+  current 615-URL indexable set and respects the protocol's 10,000-URL request
   limit.
 
 ## Cloudflare edge policy
@@ -67,23 +69,39 @@ it does not prove search indexing, citations, rankings, traffic, or revenue.
 ## Acceptance receipt
 
 ```text
-[seo-audit] 2051 HTML pages; 588 indexable; 588 sitemap URLs
+[seo-audit] 2082 HTML pages; 615 indexable; 615 sitemap URLs
 [seo-audit] PASS
-[conformance] checked 2515 API files
+[conformance] checked 2572 API files
 [conformance] PASS
-MCP SMOKE TEST: ALL PASS, including New Zealand search and value checks
-IndexNow full-set dry run: 588 URLs
-Production deploy: GitHub Actions run 32667382747 succeeded
-Cloudflare Pages deployment: https://59fac18c.govwait.pages.dev
-Public edge: New Zealand hub, Visitor Visa page, explainer, API, robots.txt,
-llms.txt, root sitemap, and 25-URL New Zealand child sitemap verified on govwait.com
-IndexNow full-set submission after deployment: 588 URLs, HTTP 200 receipt
-IndexNow change-detector proof: run 32667617092 read the large prior export,
-found no public URL change in its automation-only commit, and correctly skipped
+MCP SMOKE TEST: ALL PASS, including New Zealand and IRCC forward/cohort checks
+IndexNow full-set dry run: 615 indexable URLs
+Production deploy: commit 5d5f0a9; GitHub Actions run 33127083764 succeeded
+Cloudflare Pages deployment: https://0933a757.govwait.pages.dev
+Public edge: all 12 new pages, bulk/entity APIs, OpenAPI, robots.txt, llms.txt,
+canonical redirect, and root/four child sitemaps verified on govwait.com
+Live child sitemap counts: hubs 68 + CA 445 + GB 77 + NZ 25 = 615 unique URLs
+IndexNow change submission after deployment: 621 URLs, HTTP 200 receipt
+  (615 indexable pages + llms.txt + five sitemap documents)
 Existing Google sitemap index: https://govwait.com/sitemap.xml already registered;
-it now advertises sitemap-nz.xml without asserting that Google has processed it
+Google reports Sitemap index / Success; Bing reports Submitted / Processing
 Earlier Google priority crawl requests: accepted for all three confirmed gaps
   - https://govwait.com/uk/standard-visitor/
   - https://govwait.com/guides/canada-visitor-visa-by-country/
   - https://govwait.com/canada/study-permit/from-pakistan/
 ```
+
+## Phase 2 production expansion
+
+- Adds 12 reviewed IRCC forward-looking program pages while making all 28 programs
+  and 3,629 projection/cohort rows available to the generated API and MCP server.
+- Production build: 2,082 HTML pages; 615 intentionally indexable pages; exactly 615
+  sitemap URLs. The 12 new pages contain a source-backed current projection,
+  queue information, an accessible cohort chart/table, and an explicit warning
+  that cohort months are not historical publication snapshots.
+- The full IndexNow implementation now derives its hub/editorial/report paths from
+  the same authoritative sitemap helper; a dry run returns exactly 615 URLs.
+- Pipeline tests 7/7, validation 23 checks, SEO audit, 2,572-file API conformance,
+  MCP smoke, and desktop/mobile light/dark visual checks passed before deployment.
+  Public verification then confirmed all 12 pages, 28 programs, 3,601 cohorts,
+  615 sitemap URLs, crawler policy, and canonical behavior. These release receipts
+  are not evidence of search indexing, traffic, ad approval, or revenue.

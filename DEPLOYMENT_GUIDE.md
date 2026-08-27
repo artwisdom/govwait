@@ -1,6 +1,6 @@
 # DEPLOYMENT GUIDE — every manual step, in order
 
-**Status update 2026-08-25:** the repository and refresh cron are active;
+**Status update 2026-08-27:** the repository and refresh cron are active;
 `govwait.com` is registered in Cloudflare; the Cloudflare Pages project `govwait`
 serves both the apex and `www` over HTTPS; `contact@govwait.com` forwards through
 Cloudflare Email Routing; and the public About page contains the address. Google
@@ -8,6 +8,9 @@ Search Console and Bing Webmaster Tools ownership are verified. The Phase 1
 editorial/trust release, consent-gated GA4, verified Grow script, and GA4-to-Search
 Console link are live. The remaining search-engine work is processing and honest
 measurement; setup and submission do not prove indexing, traffic, or ad approval.
+The Phase 2 IRCC forward-looking expansion is production-verified from commit
+`5d5f0a9`, deployment run `33127083764`, and Cloudflare artifact
+`0933a757.govwait.pages.dev`.
 
 ## Go-live core
 
@@ -38,9 +41,10 @@ measurement; setup and submission do not prove indexing, traffic, or ad approval
    `https://govwait.com/sitemap.xml` was submitted to both on 2026-08-23. After
    the discoverability release reduced the requested index set to useful,
    data-backed pages and added separate child sitemaps, Google accepted the root
-   again and Bing accepted it for processing. The 2026-08-25 Phase 1 release has
-   **603 indexable pages and 603 matching sitemap URLs**; deployment run
-   `32921188032` submitted that complete set to IndexNow and received HTTP 200.
+   again and Bing accepted it for processing. The 2026-08-27 Phase 2 release has
+   **615 indexable pages and 615 matching sitemap URLs**; deployment run
+   `33127083764` submitted 621 changed URLs (the 615-page set plus `llms.txt` and
+   five sitemap documents) to IndexNow and received HTTP 200.
    None of these receipts guarantees indexing.
    The public sitemap returns HTTP 200 as `application/xml`. Google's live URL test
    reports the homepage can be indexed (crawl
@@ -56,6 +60,26 @@ measurement; setup and submission do not prove indexing, traffic, or ad approval
    does not prove that a URL is indexed.
 
 7. **[DONE] Publish contact details.** The About page links `contact@govwait.com`; Cloudflare Email Routing forwards that alias to the owner's verified destination address.
+
+## Phase 2 release receipt — complete 2026-08-27
+
+1. **[DONE]** Fetched `origin/main`; it matched local base `35204e5`, so no refresh-bot
+   rebase or database conflict was necessary.
+2. **[DONE]** Reran 7 parser tests, 23 validation checks, API/site builds, 615/615
+   SEO-sitemap audit, 2,572-file API conformance, MCP build/smoke, visual checks,
+   and the 615-URL full IndexNow dry run.
+3. **[DONE]** Owner explicitly approved deployment; commit `5d5f0a9` was pushed to
+   `main`. Run `33127083764` passed the production build/SEO gate and deployed the
+   exact artifact to `0933a757.govwait.pages.dev`.
+4. **[DONE]** All 12 new routes returned HTTP 200. The canonical CEC page matched
+   the Pages artifact and exposed the forward warning, cohort table, canonical,
+   and GovernmentService schema. The bulk API returned 28 programs and 3,601
+   cohorts; the four child sitemaps contained 615 unique URLs; API index, OpenAPI,
+   `llms.txt`, robots policy, and the `www` 301 were verified publicly.
+5. **[DONE — RECEIPT ONLY]** IndexNow accepted 621 changed URLs with HTTP 200: 615
+   indexable pages plus six discovery documents. This does not prove crawling,
+   indexing, ranking, traffic, ad approval, or revenue. Do not resubmit manual
+   Google indexing requests unless a specific high-value URL has a verified gap.
 
 ## Monetization (CORRECTED Aug 2026 per handoff research — the old Ezoic path is dead)
 

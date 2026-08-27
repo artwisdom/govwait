@@ -3,8 +3,9 @@
 _Every source below was verified by actual fetch on 2026-08-21 with an honest bot UA
 unless marked otherwise. Items 1–2 of the original build order were IMPLEMENTED the
 same session (IRCC non-country + passports, UK in-UK + HMPO passport). Immigration
-New Zealand was implemented and live-verified on 2026-08-23. What remains starts
-at IRCC flpt._
+New Zealand was implemented and live-verified on 2026-08-23. IRCC's
+forward-looking file was implemented on 2026-08-26 and production-verified on
+2026-08-27. What remains starts at Norway._
 
 ## Already implemented (for reference — done in pipeline)
 
@@ -28,14 +29,35 @@ Content-Type: multipart/form-data      field: visaID=<int>
 - Update cadence unknown/rolling (tool launched Mar 2026); weekly polling correct.
 - Public release: all 266 entities in API/MCP; 25 reviewed visa pages + country hub + explainer = 27 new indexable pages. Future batches remain capped at 30.
 
-## NEXT UP: remaining verified build order
+### N2. Canada — IRCC `flpt-en.json` ✅ production-verified 2026-08-27
 
-### N2. Canada — `flpt-en.json` PR programs WITH HISTORY BACK TO 2016 (easy-JSON but schema thought needed, ~3h)
-`https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json` (504KB, monthly, `flpt_lastupdated` "August 10, 2026")
-- Programs: CEC, FSW, PNP (base+EE), AIP, caregivers, PGP (Quebec/RoC), QSW, refugees, humanitarian.
-- Keys: `current-flpt` (e.g. cec "6 months" — FORWARD-looking), `total-people` ("About 59,700 people waiting"), `people-ahead`, and **`wait-times` history keyed `program-YYYY/MM` back to 2016**.
-- ⚠️ Semantics differ from the ptime files: forward-looking projections + queue sizes, not backward statistics. **Do not mix silently**: either a `metric_type` column ('backward'|'forward'|'queue') or a distinct service naming ("Express Entry CEC (projected wait)"). Importing the history series gives INSTANT multi-year depth for PR programs — the single biggest moat accelerator available. Queue counts ("people waiting") are a second metric worth storing (great chart + PR material).
-- Spousal inland/outland PR sponsorship (top-12 demand query) likely lives here or in a sibling file — inspect all keys during implementation.
+`https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json`
+
+- Strictly mapped all 28 official programs, including CEC, FSW, PNP base/EE,
+  AIP, caregivers, PGP Quebec/rest-of-Canada, QSW, spouses, refugees, and
+  humanitarian categories. The current file contains 28 headline projections
+  and 3,601 application-cohort rows.
+- Corrected the original research shorthand: `wait-times` keys reaching back to
+  2016 (and earlier for some citizenship rows) are **application submission
+  cohorts in the current snapshot**, not a publication archive. `snapshot_date`
+  and `cohort_month` remain separate everywhere.
+- Stored projections in a distinct append-only `forward_estimates` table and
+  labeled every entity with `metric_type=forward`. Queue totals and people-ahead
+  values remain attached to their exact snapshot; none are silently mixed with
+  backward-looking completion times, service standards, or percentiles.
+- All 28 programs and 3,629 rows are available in the production API/MCP layer.
+  The first public-facing wave is deliberately limited to 12 reviewed,
+  high-interest pages, with current-cohort charts and explicit methodology copy.
+- Validation floors: 28 headline projections, 3,500 cohort rows, 62-day
+  staleness. Strict schema drift fails loudly. `MAX_DAYS=5000` is justified only
+  by the official “More than 10 years” lower-bound value.
+- Production acceptance: pipeline tests 7/7; validation 23 checks; 2,082-page build;
+  615/615 SEO-sitemap gate; 2,572-file API conformance; MCP and visual checks
+  green. Commit `5d5f0a9` deployed in run `33127083764`; all 12 pages, the API,
+  OpenAPI, `llms.txt`, crawler/canonical behavior, and 615 unique sitemap URLs
+  passed live checks. IndexNow accepted 621 changed URLs with HTTP 200.
+
+## NEXT UP: remaining verified build order
 
 ### N3. Norway — UDI (easy-medium HTML, ~2h)
 `https://www.udi.no/en/waiting-time/` hub → 6 server-rendered subpages (citizenship, permanent-residence 24/25/6 months verified, visitor-visa, EU/EEA, expulsion, other). Monthly updates (stated). robots: only /Util/ disallowed. Bonus: query-param "guide" pages server-render answers (`…for-study-permits/?gs=2` → "6 months").
@@ -66,11 +88,10 @@ EU Schengen consulate statistics (annual XLSX — volumes/refusal rates, not tim
 
 | # | Source | Effort | Payoff |
 |---|---|---|---|
-| 1 | IRCC flpt (PR + history to 2016) | ~3h | **Instant 10-year history for PR programs — biggest moat accelerator** |
-| 2 | Norway UDI | ~2h | 4th government, monthly cadence |
-| 3 | Finland Migri | ~2h | 5th government (respect crawl-delay 5) |
-| 4 | Sweden | ~2h | 6th + citizenship-backlog PR hook |
-| 5 | Denmark | ~2h | 7th |
-| 6 | Netherlands | ~2h | 8th (label statutory semantics) |
+| 1 | Norway UDI | ~2h | 4th government, monthly cadence |
+| 2 | Finland Migri | ~2h | 5th government (respect crawl-delay 5) |
+| 3 | Sweden | ~2h | 6th + citizenship-backlog PR hook |
+| 4 | Denmark | ~2h | 7th |
+| 5 | Netherlands | ~2h | 8th (label statutory semantics) |
 
 Every addition: source module + MAP + coverage floor + staleness window + JURISDICTIONS entry + 25–30 pages/week rollout + runbook playbook entry.

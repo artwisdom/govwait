@@ -20,7 +20,7 @@ never the numbers themselves — six free competitors already have the numbers.*
 - [x] Harden search/AI discovery: canonical `www` 301, explicit search and AI
   crawler allows, generated `llms.txt`, four honest child sitemaps, structured
   data, exact IndexNow notifications, and a blocking SEO CI audit. Indexing is
-  requested only for the 603 current data-backed pages; 1,462 official no-value
+  requested only for the 615 current data-backed pages; 1,462 official no-value
   pages automatically graduate from `noindex, follow` when data appears.
 - [x] Privacy-minimal measurement foundation: consent-gated GA4, 14-month retention,
   ad/personalization signals off, GA4 production stream linked to the `govwait.com`
@@ -46,16 +46,34 @@ add a dashboard screenshot alongside the textual policy evidence in
 `32921188032`; public-edge checks passed and IndexNow accepted the 603-URL current
 set with HTTP 200.
 
+**Latest production proof 2026-08-27:** Phase 2 commit `5d5f0a9` deployed in run
+`33127083764` to `0933a757.govwait.pages.dev`; the public apex, canonical redirect,
+API, crawler files, and four child sitemaps passed independent checks.
+
 ## Phase R2 — NZ + IRCC-flpt sources (the moat accelerators)
 
-Per HANDOFF_05 N1–N2. flpt first if choosing one: 10 years of PR history in a day's work.
-**Accept:** validation green with new floors; NZ pages rolled out ≤30/week (feature-flag the getStaticPaths slice — publish new jurisdiction's pages in weekly batches); flpt history renders on PR-program pages; metric semantics labeled (forward vs backward); runbook entries added.
+Per HANDOFF_05 N1–N2. The IRCC file supplies deep application-cohort coverage
+inside each current monthly snapshot, not a reconstructed ten-year publication
+archive. That distinction is now enforced in storage and presentation.
+**Accept:** validation green with new floors; NZ pages rolled out ≤30/week
+(feature-flag the getStaticPaths slice — publish new jurisdiction's pages in
+weekly batches); forward-looking cohort curves and true monthly snapshot history
+render separately on PR-program pages; metric semantics labeled (forward vs
+backward/service standard/percentile); runbook entries added.
 
-**Status 2026-08-23:** NZ half complete, green, and production-verified: 133 visas /
+**Status 2026-08-27 — complete:** NZ is production-verified: 133 visas /
 266 p50+p80 working-day entities in API/MCP, with a 27-page first public cohort,
 runbook coverage, content deployment run `32667382747`, a 588-URL IndexNow HTTP
-200 receipt, and precise-notifier proof run `32667617092`. IRCC flpt remains the
-unfinished half of R2.
+200 receipt, and precise-notifier proof run `32667617092`. IRCC is also production-
+verified: 28 programs, 3,629 forward-estimate rows, 12 reviewed
+human pages, append-only monthly snapshots, explicit `snapshot_date` versus
+`cohort_month`, a 2,082-page build, and 615/615 SEO-sitemap acceptance. Pipeline
+tests 7/7, validation 23 checks, API conformance, MCP, visual QA, and the 615-URL
+IndexNow dry run are green. Commit `5d5f0a9` deployed in run `33127083764`; all
+12 pages, the 28-program/3,601-cohort API, OpenAPI, `llms.txt`, crawler/canonical
+behavior, and 615 unique sitemap URLs passed public checks. IndexNow accepted 621
+changed URLs with HTTP 200. R2 is complete; these receipts do not prove indexing,
+traffic, ad approval, or revenue.
 
 ## Phase R3 — /reports: the weekly-changes digest (the linkable asset + CIC News displacement)
 

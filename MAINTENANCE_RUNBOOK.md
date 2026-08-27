@@ -24,6 +24,13 @@ The failed run's **job summary** names the source and check. Match it below.
 IRCC introduced a new value shape (e.g. "less than 2 weeks"). Add a branch to
 `pipeline/lib/normalize.js` with a test value, run locally, commit. 10 minutes.
 
+### `[ircc-forward-looking] FETCH/PARSE FAILURE` / schema or coverage failure
+- Confirm the official IRCC file still exists at `https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json` and check robots policy first. Never spoof a browser User-Agent.
+- The parser intentionally checks all top-level and program keys exactly. A new or removed key is schema drift to review, not something to ignore. Update the 28-program mapping only after matching the official tool's labels and meaning.
+- Preserve the time axes: `snapshot_date` is the IRCC update/publication date; `cohort_month` is the application submission month. Cohorts reaching back years are not old publication snapshots and must never be presented as such.
+- Do not lower the floors of 28 headline projections and 3,500 cohort rows. The file is expected monthly and becomes stale at 62 days.
+- Keep current projections, queue totals, people-ahead values, and cohort waits in `forward_estimates`; never merge them into backward-looking `observations` history.
+
 ### `[govuk-visa-times] FETCH/PARSE FAILURE` or `missing details.body`
 gov.uk restructured the guidance page. Fetch `https://www.gov.uk/api/content/guidance/visa-processing-times-applications-outside-the-uk`, inspect `details.body`, adjust the table/heading regex in `pipeline/sources/govuk.js`. If the document moved, the API returns a `redirect` document — follow `redirects[0].destination`.
 
@@ -35,7 +42,10 @@ gov.uk restructured the guidance page. Fetch `https://www.gov.uk/api/content/gui
 - The endpoint has no update stamp. Keep first-observed/change-detection semantics and preserve `working days` as the source unit.
 
 ### `FAIL: staleness-<source>`
-The source hasn't republished within the window (45d IRCC / 120d gov.uk). Check the official page by hand: if the agency genuinely paused updates, raise the window in `pipeline/validate.js` with a dated comment; if they moved the data, treat as relocation (see above).
+The source hasn't republished within its window (45d IRCC processing-time files /
+62d IRCC forward-looking file / 120d gov.uk). Check the official page by hand: if
+the agency genuinely paused updates, raise the window in `pipeline/validate.js`
+with a dated comment; if they moved the data, treat as relocation (see above).
 
 ### `FAIL: coverage-<source>`
 Fewer records than the floor — usually a partial parse after a page change. Never lower the floor to make it pass; fix the parser.
@@ -52,7 +62,9 @@ The source closed its doors. The source is dead to us (hard rule). Remove it fro
    their processing-times tool); else a stable HTML table.
 3. Copy `pipeline/sources/govuk.js` as a template. A source module exports
    `source` (metadata incl. license note) and `collect()` returning
-   `{entities, observations, errors}`.
+   `{entities, observations, errors}`. A semantically distinct projection source
+   may also return `forwardEstimates`, but only with its own schema, validation,
+   export, API, and presentation labels.
 4. Register it in `SOURCES` in `pipeline/run.js`; add coverage floor + staleness
    window in `validate.js`; add the jurisdiction to `JURISDICTIONS` in
    `site/src/lib/data.js` (slug + agency name).
@@ -65,8 +77,10 @@ developer portal currently offers no processing-times API. If a host opens up or
 publishes a sanctioned dataset, it becomes a high-value expansion candidate.
 
 ## Expanding within existing sources
-- IRCC publishes more categories (citizenship, PR cards, family sponsorship beyond
-  children) in other JSON files behind the same tool — capture URLs from dev tools.
+- IRCC's forward-looking permanent-residence projections are implemented. Inspect
+  other official files behind the tool only when they add a genuinely distinct
+  category or metric, and preserve their semantics rather than forcing them into
+  the existing observation model.
 - gov.uk has sibling guidance pages (in-UK processing times, passport processing)
   through the same Content API pattern.
 
