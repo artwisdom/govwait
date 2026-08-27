@@ -1,0 +1,122 @@
+---
+import AdSlot from './AdSlot.astro';
+import Freshness from './Freshness.astro';
+import { fmtDate, fmtMonthYearShort, humanValue } from '../lib/data.js';
+
+const { record, service, jurisdiction } = Astro.props;
+const snapshot = record.forwardLooking;
+if (!snapshot?.current || !Array.isArray(snapshot.cohorts)) {
+  throw new Error(`forward-looking detail missing for ${record.id}`);
+}
+const newestFirst = snapshot.cohorts.slice().sort((a, b) => b.cohort_month.localeCompare(a.cohort_month));
+const recent = newestFirst.slice(0, 24);
+const older = newestFirst.slice(24);
+
+// This line is a cross-section of IRCC's current estimates by application
+// month, not a publication-over-time trend. The title and adjacent explanation
+// make that distinction explicit for sighted users and assistive technology.
+const chartRows = snapshot.cohorts.filter(row => row.status === 'ok' && Number.isFinite(row.wait_days)).slice(-24);
+const chartWidth = 760;
+const chartHeight = 250;
+const padX = 42;
+const padTop = 24;
+const padBottom = 48;
+const plotWidth = chartWidth - padX * 2;
+const plotHeight = chartHeight - padTop - padBottom;
+const chartMonths = chartRows.map(row => row.wait_days / 30.44);
+const chartMax = Math.max(...chartMonths, 1);
+const points = chartRows.map((row, index) => ({
+  x: padX + (chartRows.length === 1 ? plotWidth / 2 : index / (chartRows.length - 1) * plotWidth),
+  y: padTop + plotHeight - (row.wait_days / 30.44) / chartMax * plotHeight,
+  row,
+}));
+const line = points.map((point, index) => `${index ? 'L' : 'M'}${point.x.toFixed(1)},${point.y.toFixed(1)}`).join(' ');
+
+const cohortValue = row => row.status === 'ok' ? row.wait_raw : row.wait_raw;
+---
+
+<div class="stats">
+  <div><div class="n">{humanValue(record)}</div><div class="l">IRCC estimate for an application received now</div></div>
+  <div><div class="n queue">{snapshot.current.queue_raw.replace(/ people waiting$/i, '')}</div><div class="l">people currently waiting (IRCC estimate)</div></div>
+</div>
+<Freshness record={record} />
+<AdSlot position="forward-service-top" />
+
+<div class="callout warn">
+  <strong>Forward-looking estimate—not a recent-case average.</strong>
+  <p>IRCC estimates how long a complete application received today may take by using its current inventory, expected processing capacity and expected application volume. It updates this projection monthly. It is not a deadline for an individual file.</p>
+</div>
+
+<h2>What the current {record.value_raw} figure means</h2>
+<p>As of <strong>{fmtDate(record.effective_date)}</strong>, {jurisdiction.agency} estimates a new <strong>{service.name}</strong> application may take <strong>{record.value_raw}</strong>. IRCC also reports <strong>{snapshot.current.queue_raw.toLowerCase()}</strong> in this program. The queue number is approximate and is not a case-status lookup.</p>
+<p>If you already applied, the headline for a new application may not describe your remaining wait. IRCC publishes a separate estimate for each application month below.</p>
+
+{points.length >= 4 && (
+  <>
+    <h2>Current estimate by application month</h2>
+    <figure class="cohort-chart">
+      <svg viewBox={`0 0 ${chartWidth} ${chartHeight}`} role="img" aria-labelledby={`cohort-title-${record.id} cohort-desc-${record.id}`}>
+        <title id={`cohort-title-${record.id}`}>{service.name}: IRCC’s current estimated months remaining by application month</title>
+        <desc id={`cohort-desc-${record.id}`}>A line connecting the most recent {points.length} application-month cohorts with a numeric estimate. This is one current IRCC snapshot, not historical publication values.</desc>
+        <line x1={padX} y1={padTop + plotHeight} x2={padX + plotWidth} y2={padTop + plotHeight} class="axis" />
+        <line x1={padX} y1={padTop} x2={padX} y2={padTop + plotHeight} class="axis" />
+        <line x1={padX} y1={padTop} x2={padX + plotWidth} y2={padTop} class="grid" />
+        <path d={line} class="trend" />
+        {points.map(point => <circle cx={point.x} cy={point.y} r="3.5"><title>{fmtMonthYearShort(point.row.cohort_month)}: {point.row.wait_raw}</title></circle>)}
+        <text x={padX} y={chartHeight - 13} text-anchor="start">{fmtMonthYearShort(points[0].row.cohort_month)}</text>
+        <text x={padX + plotWidth} y={chartHeight - 13} text-anchor="end">{fmtMonthYearShort(points.at(-1).row.cohort_month)}</text>
+        <text x={padX - 8} y={padTop + 4} text-anchor="end">{Math.ceil(chartMax)} mo</text>
+        <text x={padX - 8} y={padTop + plotHeight + 4} text-anchor="end">0</text>
+      </svg>
+      <figcaption>IRCC snapshot dated {fmtDate(snapshot.snapshot_date)}. The horizontal axis is when the application was submitted; the vertical axis is IRCC’s current estimate of time remaining. Rows without a numeric estimate are omitted from the line and remain in the table.</figcaption>
+    </figure>
+  </>
+)}
+
+<h2>If you already applied</h2>
+<p>Find the month IRCC received your complete application. “People ahead” is IRCC’s approximate program queue for that cohort, not a promise that every case is processed in exact order.</p>
+<div class="tablewrap"><table>
+  <thead><tr><th>Application month</th><th>Current estimated time remaining</th><th>Approximate people ahead</th></tr></thead>
+  <tbody>{recent.map(row => (
+    <tr><td class="num">{fmtMonthYearShort(row.cohort_month)}</td><td>{cohortValue(row)}</td><td>{row.queue_raw}</td></tr>
+  ))}</tbody>
+</table></div>
+
+{older.length > 0 && (
+  <details class="older-cohorts">
+    <summary>Show {older.length} older application months</summary>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Application month</th><th>Current estimated time remaining</th><th>Approximate people ahead</th></tr></thead>
+      <tbody>{older.map(row => (
+        <tr><td class="num">{fmtMonthYearShort(row.cohort_month)}</td><td>{cohortValue(row)}</td><td>{row.queue_raw}</td></tr>
+      ))}</tbody>
+    </table></div>
+  </details>
+)}
+
+<p class="small muted"><strong>Important:</strong> these application-month rows are all part of one IRCC snapshot dated {fmtDate(snapshot.snapshot_date)}. They are not 2016–2026 publication history. GovWait stores each future monthly snapshot separately so genuine changes are not overwritten.</p>
+
+<h2>Headline projection history</h2>
+<div class="tablewrap"><table>
+  <thead><tr><th>IRCC estimate for a new application</th><th>Published/updated</th><th>Verified by us</th></tr></thead>
+  <tbody>{record.history.slice().reverse().map(row => (
+    <tr><td>{row.value_raw}</td><td class="num">{fmtDate(row.effective_date)}</td><td class="num">{fmtDate(row.retrieved_at)}</td></tr>
+  ))}</tbody>
+</table></div>
+<p class="small muted">This table is the actual publication history. It begins with the first GovWait import and gains one row only when IRCC publishes a later dated snapshot.</p>
+<p class="small"><a href={`/api/v1/entities/${record.id}.json`}>Download this program’s current projection, cohort estimates and provenance as JSON →</a></p>
+
+<style>
+  .queue{font-size:clamp(1.4rem,4vw,2.3rem)!important}
+  .callout p{margin:.45rem 0 0}
+  .cohort-chart{margin:1rem 0 1.5rem;padding:14px;border:1px solid var(--line);border-radius:14px;background:var(--panel)}
+  .cohort-chart svg{display:block;width:100%;height:auto;color:var(--fg)}
+  .axis{stroke:var(--muted);stroke-width:1.4}
+  .grid{stroke:var(--line);stroke-width:1;stroke-dasharray:5 6}
+  .trend{fill:none;stroke:var(--acc);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+  circle{fill:var(--panel);stroke:var(--acc);stroke-width:2.4}
+  text{fill:var(--muted);font-size:13px;font-family:system-ui,sans-serif}
+  figcaption{font-size:.82rem;color:var(--muted);margin-top:.35rem}
+  .older-cohorts{margin:1rem 0}
+  .older-cohorts summary{cursor:pointer;font-weight:700;color:var(--acc);padding:.5rem 0}
+</style>

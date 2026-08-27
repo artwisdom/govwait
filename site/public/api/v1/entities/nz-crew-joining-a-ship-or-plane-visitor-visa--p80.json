@@ -4,6 +4,7 @@
  "service_key": "nz-crew-joining-a-ship-or-plane-visitor-visa",
  "service_name": "Crew joining a Ship or Plane Visitor Visa — 80% processed",
  "service_category": "visa",
+ "metric_type": "percentile",
  "applicant_country": null,
  "applicant_country_name": null,
  "latest": {

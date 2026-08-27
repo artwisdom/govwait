@@ -3,7 +3,7 @@
  "service_name": "India Young Professionals Scheme visa (Work visas you can apply for without a job offer)",
  "jurisdiction": "GB",
  "count": 1,
- "generated_at": "2026-08-25T14:44:18.851Z",
+ "generated_at": "2026-08-27T23:39:25.471Z",
  "records": [
   {
    "entity_id": "gb-work-visas-you-can-apply-for-without-a-job-offer--india-young-professionals-s",
@@ -11,6 +11,7 @@
    "service_key": "gb-work-visas-you-can-apply-for-without-a-job-offer--india-young-professionals-s",
    "service_name": "India Young Professionals Scheme visa (Work visas you can apply for without a job offer)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {

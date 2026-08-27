@@ -4,6 +4,7 @@
  "service_key": "ca-super-visa",
  "service_name": "Super visa (parents and grandparents)",
  "service_category": "visa",
+ "metric_type": "backward",
  "applicant_country": "FM",
  "applicant_country_name": "Micronesia",
  "latest": {

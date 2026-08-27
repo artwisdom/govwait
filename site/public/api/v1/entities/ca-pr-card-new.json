@@ -4,6 +4,7 @@
  "service_key": "ca-pr-card-new",
  "service_name": "PR card (first card)",
  "service_category": "settlement",
+ "metric_type": "published",
  "applicant_country": null,
  "applicant_country_name": null,
  "latest": {

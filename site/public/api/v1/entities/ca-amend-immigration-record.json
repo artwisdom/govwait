@@ -4,6 +4,7 @@
  "service_key": "ca-amend-immigration-record",
  "service_name": "Amendment of an immigration record",
  "service_category": "settlement",
+ "metric_type": "published",
  "applicant_country": null,
  "applicant_country_name": null,
  "latest": {

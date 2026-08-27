@@ -32,7 +32,7 @@ export async function collect({ forceRefresh = false } = {}) {
   return {
     entities: [{
       id: 'gb-passport-standard', source_id: source.id, jurisdiction: 'GB',
-      service_category: 'passport', service_key: 'gb-passport-standard',
+      service_category: 'passport', metric_type: 'service_standard', service_key: 'gb-passport-standard',
       service_name: 'Passport (standard application)', applicant_country: null, applicant_country_name: null,
     }],
     observations: [{

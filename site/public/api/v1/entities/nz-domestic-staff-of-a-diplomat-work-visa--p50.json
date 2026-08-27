@@ -4,6 +4,7 @@
  "service_key": "nz-domestic-staff-of-a-diplomat-work-visa",
  "service_name": "Domestic Staff of a Diplomat Work Visa — 50% processed",
  "service_category": "visa",
+ "metric_type": "percentile",
  "applicant_country": null,
  "applicant_country_name": null,
  "latest": {

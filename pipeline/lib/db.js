@@ -40,4 +40,7 @@ export function initSchema() {
   if (!columns.some(column => column.name === 'active')) {
     exec(`ALTER TABLE entities ADD COLUMN active INTEGER NOT NULL DEFAULT 1 CHECK (active IN (0,1));`);
   }
+  if (!columns.some(column => column.name === 'metric_type')) {
+    exec(`ALTER TABLE entities ADD COLUMN metric_type TEXT NOT NULL DEFAULT 'published' CHECK (metric_type IN ('published','backward','forward','service_standard','percentile'));`);
+  }
 }

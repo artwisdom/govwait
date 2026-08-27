@@ -61,6 +61,7 @@ export async function collect({ forceRefresh = false } = {}) {
           source_id: source.id,
           jurisdiction: 'CA',
           service_category: spec.category,
+          metric_type: 'backward',
           service_key: v.key,
           service_name: v.name,
           applicant_country: cc.toUpperCase(),

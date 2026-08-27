@@ -26,6 +26,17 @@ paths:
           content:
             application/json:
               schema: { $ref: "#/components/schemas/Index" }
+  /api/v1/ircc-forward-looking.json:
+    get:
+      operationId: getIrccForwardLooking
+      summary: All IRCC forward-looking programs, current queue estimates, and application-month cohorts
+      description: Cohort months are the months applications were submitted within an IRCC snapshot. They are not historical publication dates.
+      responses:
+        "200":
+          description: IRCC forward-looking collection
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/ForwardCollection" }
   /api/v1/jurisdictions/{code}.json:
     get:
       operationId: getJurisdiction
@@ -82,7 +93,7 @@ components:
       properties:
         value_raw: { type: string, description: "Verbatim official string, e.g. '31 days'" }
         value_days: { type: [number, "null"], description: "Numeric duration. Calendar units are normalized to days (weeks x7, months x30.44). Official working-day figures preserve their working-day count; see unit_original. Null when no time is published." }
-        unit_original: { type: [string, "null"], enum: [minutes, hours, days, weeks, months, working days, null] }
+        unit_original: { type: [string, "null"], enum: [minutes, hours, days, weeks, months, years, working days, null] }
         status: { type: string, enum: [ok, unavailable, insufficient_data] }
         effective_date: { type: string, format: date, description: "The agency's own last-updated date when supplied; otherwise the date GovWait first observed this changed value" }
         retrieved_at: { type: string, description: "When we fetched it (ISO 8601)" }
@@ -90,13 +101,14 @@ components:
         confidence: { type: string, enum: [official] }
     RecordCore:
       type: object
-      required: [entity_id, jurisdiction, service_key, service_name, latest]
+      required: [entity_id, jurisdiction, service_key, service_name, metric_type, latest]
       properties:
         entity_id: { type: string }
         jurisdiction: { type: string, description: "ISO 3166-1 alpha-2 of the government" }
         service_key: { type: string }
         service_name: { type: string }
         service_category: { type: string, enum: [visa, permit, sponsorship, refugee, settlement, passport] }
+        metric_type: { type: string, enum: [published, backward, forward, service_standard, percentile], description: "How to interpret the published measure. Forward projections must not be mixed with backward-looking recent-case statistics." }
         applicant_country: { type: [string, "null"], description: "ISO 3166-1 alpha-2; null for global service standards" }
         applicant_country_name: { type: [string, "null"] }
         latest: { $ref: "#/components/schemas/Observation" }
@@ -109,7 +121,57 @@ components:
             history:
               type: array
               items: { $ref: "#/components/schemas/Observation" }
+            forward_looking: { $ref: "#/components/schemas/ForwardDetail" }
             license: { type: string }
+    ForwardValue:
+      type: object
+      required: [wait_raw, wait_days, unit_original, status, queue_raw, queue_people, confidence]
+      properties:
+        cohort_month: { type: string, format: date, description: "Application submission month; present only for already-applied cohort rows" }
+        wait_raw: { type: string, description: "Verbatim IRCC estimate" }
+        wait_days: { type: [number, "null"], description: "Normalized comparison value; qualifiers remain in wait_raw" }
+        unit_original: { type: [string, "null"], enum: [days, weeks, months, years, null] }
+        status: { type: string, enum: [ok, unavailable, insufficient_data] }
+        queue_raw: { type: string, description: "Verbatim approximate IRCC queue wording" }
+        queue_people: { type: integer, minimum: 1, description: "Approximate value or published upper threshold; consult queue_raw for the qualifier" }
+        confidence: { type: string, enum: [official] }
+    ForwardSnapshot:
+      type: object
+      required: [snapshot_date, retrieved_at, source_url, current, cohorts]
+      properties:
+        snapshot_date: { type: string, format: date, description: "IRCC's publication/update date for this projection snapshot" }
+        retrieved_at: { type: string }
+        source_url: { type: string, format: uri }
+        current: { $ref: "#/components/schemas/ForwardValue" }
+        cohorts:
+          type: array
+          items: { $ref: "#/components/schemas/ForwardValue" }
+    ForwardDetail:
+      type: object
+      required: [snapshots]
+      properties:
+        snapshots:
+          type: array
+          items: { $ref: "#/components/schemas/ForwardSnapshot" }
+    ForwardProgram:
+      allOf:
+        - $ref: "#/components/schemas/RecordCore"
+        - type: object
+          required: [forward_looking]
+          properties:
+            forward_looking: { $ref: "#/components/schemas/ForwardDetail" }
+    ForwardCollection:
+      type: object
+      required: [name, description, generated_at, count, programs, license]
+      properties:
+        name: { type: string }
+        description: { type: string }
+        generated_at: { type: string }
+        count: { type: integer }
+        programs:
+          type: array
+          items: { $ref: "#/components/schemas/ForwardProgram" }
+        license: { type: string }
     ServiceCollection:
       type: object
       required: [service_key, jurisdiction, count, records]
@@ -162,5 +224,6 @@ components:
             jurisdictions: { type: array, items: { type: string } }
             services: { type: array, items: { type: string } }
             entity_pattern: { type: string }
+            ircc_forward_looking: { type: string }
             openapi: { type: string }
         license: { type: string }

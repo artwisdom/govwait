@@ -3,7 +3,7 @@
  "service_name": "Amendment of an immigration record",
  "jurisdiction": "CA",
  "count": 1,
- "generated_at": "2026-08-25T14:44:18.851Z",
+ "generated_at": "2026-08-27T23:39:25.471Z",
  "records": [
   {
    "entity_id": "ca-amend-immigration-record",
@@ -11,6 +11,7 @@
    "service_key": "ca-amend-immigration-record",
    "service_name": "Amendment of an immigration record",
    "service_category": "settlement",
+   "metric_type": "published",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {

@@ -4,6 +4,7 @@
  "service_key": "ca-refugee-gov-assisted",
  "service_name": "Government-assisted refugee resettlement",
  "service_category": "refugee",
+ "metric_type": "backward",
  "applicant_country": "LS",
  "applicant_country_name": "Lesotho",
  "latest": {

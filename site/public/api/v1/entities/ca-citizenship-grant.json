@@ -1,0 +1,1732 @@
+{
+ "entity_id": "ca-citizenship-grant",
+ "jurisdiction": "CA",
+ "service_key": "ca-citizenship-grant",
+ "service_name": "Citizenship grant",
+ "service_category": "settlement",
+ "metric_type": "forward",
+ "applicant_country": null,
+ "applicant_country_name": null,
+ "latest": {
+  "value_raw": "About 12 months",
+  "value_days": 365.28,
+  "unit_original": "months",
+  "status": "ok",
+  "effective_date": "2026-08-10",
+  "retrieved_at": "2026-08-27T00:29:54.720Z",
+  "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json",
+  "confidence": "official"
+ },
+ "history": [
+  {
+   "value_raw": "About 12 months",
+   "value_days": 365.28,
+   "unit_original": "months",
+   "status": "ok",
+   "effective_date": "2026-08-10",
+   "retrieved_at": "2026-08-27T00:29:54.720Z",
+   "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
+  }
+ ],
+ "forward_looking": {
+  "snapshots": [
+   {
+    "snapshot_date": "2026-08-10",
+    "retrieved_at": "2026-08-27T00:29:54.720Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json",
+    "current": {
+     "wait_raw": "About 12 months",
+     "wait_days": 365.28,
+     "unit_original": "months",
+     "status": "ok",
+     "queue_raw": "About 328,200 people waiting",
+     "queue_people": 328200,
+     "confidence": "official"
+    },
+    "cohorts": [
+     {
+      "cohort_month": "2006-09-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2007-11-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2008-01-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2008-09-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2009-05-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2009-10-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2010-01-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2010-04-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2010-06-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2011-01-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2011-03-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2011-05-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2011-06-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2011-07-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2011-08-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2011-09-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2011-10-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2011-11-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2012-04-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2012-05-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2012-06-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2012-07-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2013-04-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2013-05-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2013-07-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2013-12-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2014-03-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2014-06-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2014-07-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2014-08-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2014-09-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2014-10-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2014-11-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2015-01-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2015-03-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2015-05-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2015-06-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2015-08-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2015-09-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2015-11-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2016-01-01",
+      "wait_raw": "No data available",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "unavailable",
+      "queue_raw": "About 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2016-02-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2016-03-01",
+      "wait_raw": "No data available",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "unavailable",
+      "queue_raw": "About 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2016-04-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2016-05-01",
+      "wait_raw": "No data available",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "unavailable",
+      "queue_raw": "About 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2016-06-01",
+      "wait_raw": "No data available",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "unavailable",
+      "queue_raw": "About 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2016-07-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2016-08-01",
+      "wait_raw": "No data available",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "unavailable",
+      "queue_raw": "About 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2016-09-01",
+      "wait_raw": "No data available",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "unavailable",
+      "queue_raw": "About 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2016-10-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2016-11-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2016-12-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2017-01-01",
+      "wait_raw": "No data available",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "unavailable",
+      "queue_raw": "About 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2017-02-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2017-03-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2017-04-01",
+      "wait_raw": "No data available",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "unavailable",
+      "queue_raw": "About 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2017-05-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2017-06-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "Less than 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2017-07-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2017-08-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2017-09-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2017-10-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2017-11-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2017-12-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2018-01-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 100 people ahead of you",
+      "queue_people": 100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2018-02-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 200 people ahead of you",
+      "queue_people": 200,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2018-03-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 200 people ahead of you",
+      "queue_people": 200,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2018-04-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 200 people ahead of you",
+      "queue_people": 200,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2018-05-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 200 people ahead of you",
+      "queue_people": 200,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2018-06-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 200 people ahead of you",
+      "queue_people": 200,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2018-07-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 200 people ahead of you",
+      "queue_people": 200,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2018-08-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 200 people ahead of you",
+      "queue_people": 200,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2018-09-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 200 people ahead of you",
+      "queue_people": 200,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2018-10-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 200 people ahead of you",
+      "queue_people": 200,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2018-11-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 300 people ahead of you",
+      "queue_people": 300,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2018-12-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 300 people ahead of you",
+      "queue_people": 300,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2019-01-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 300 people ahead of you",
+      "queue_people": 300,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2019-02-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 300 people ahead of you",
+      "queue_people": 300,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2019-03-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 300 people ahead of you",
+      "queue_people": 300,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2019-04-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 300 people ahead of you",
+      "queue_people": 300,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2019-05-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 400 people ahead of you",
+      "queue_people": 400,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2019-06-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 400 people ahead of you",
+      "queue_people": 400,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2019-07-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 400 people ahead of you",
+      "queue_people": 400,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2019-08-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 400 people ahead of you",
+      "queue_people": 400,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2019-09-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 500 people ahead of you",
+      "queue_people": 500,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2019-10-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 500 people ahead of you",
+      "queue_people": 500,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2019-11-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 500 people ahead of you",
+      "queue_people": 500,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2019-12-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 500 people ahead of you",
+      "queue_people": 500,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2020-01-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 500 people ahead of you",
+      "queue_people": 500,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2020-02-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 600 people ahead of you",
+      "queue_people": 600,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2020-03-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 600 people ahead of you",
+      "queue_people": 600,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2020-04-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 600 people ahead of you",
+      "queue_people": 600,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2020-05-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 600 people ahead of you",
+      "queue_people": 600,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2020-06-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 600 people ahead of you",
+      "queue_people": 600,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2020-07-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 700 people ahead of you",
+      "queue_people": 700,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2020-08-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 700 people ahead of you",
+      "queue_people": 700,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2020-09-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 700 people ahead of you",
+      "queue_people": 700,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2020-10-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 700 people ahead of you",
+      "queue_people": 700,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2020-11-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 800 people ahead of you",
+      "queue_people": 800,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2020-12-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 800 people ahead of you",
+      "queue_people": 800,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2021-01-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 800 people ahead of you",
+      "queue_people": 800,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2021-02-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 800 people ahead of you",
+      "queue_people": 800,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2021-03-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 800 people ahead of you",
+      "queue_people": 800,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2021-04-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 900 people ahead of you",
+      "queue_people": 900,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2021-05-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 900 people ahead of you",
+      "queue_people": 900,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2021-06-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 1,000 people ahead of you",
+      "queue_people": 1000,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2021-07-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 1,000 people ahead of you",
+      "queue_people": 1000,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2021-08-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 1,000 people ahead of you",
+      "queue_people": 1000,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2021-09-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 1,000 people ahead of you",
+      "queue_people": 1000,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2021-10-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 1,100 people ahead of you",
+      "queue_people": 1100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2021-11-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 1,100 people ahead of you",
+      "queue_people": 1100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2021-12-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 1,100 people ahead of you",
+      "queue_people": 1100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2022-01-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 1,200 people ahead of you",
+      "queue_people": 1200,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2022-02-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 1,200 people ahead of you",
+      "queue_people": 1200,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2022-03-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 1,300 people ahead of you",
+      "queue_people": 1300,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2022-04-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 1,400 people ahead of you",
+      "queue_people": 1400,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2022-05-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 1,400 people ahead of you",
+      "queue_people": 1400,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2022-06-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 1,500 people ahead of you",
+      "queue_people": 1500,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2022-07-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 1,600 people ahead of you",
+      "queue_people": 1600,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2022-08-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 1,700 people ahead of you",
+      "queue_people": 1700,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2022-09-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 1,800 people ahead of you",
+      "queue_people": 1800,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2022-10-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 1,900 people ahead of you",
+      "queue_people": 1900,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2022-11-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 2,100 people ahead of you",
+      "queue_people": 2100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2022-12-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 2,300 people ahead of you",
+      "queue_people": 2300,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2023-01-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 2,400 people ahead of you",
+      "queue_people": 2400,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2023-02-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 2,600 people ahead of you",
+      "queue_people": 2600,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2023-03-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 2,800 people ahead of you",
+      "queue_people": 2800,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2023-04-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 3,100 people ahead of you",
+      "queue_people": 3100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2023-05-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 3,300 people ahead of you",
+      "queue_people": 3300,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2023-06-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 3,500 people ahead of you",
+      "queue_people": 3500,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2023-07-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 3,800 people ahead of you",
+      "queue_people": 3800,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2023-08-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 4,100 people ahead of you",
+      "queue_people": 4100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2023-09-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 4,500 people ahead of you",
+      "queue_people": 4500,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2023-10-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 4,800 people ahead of you",
+      "queue_people": 4800,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2023-11-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 5,300 people ahead of you",
+      "queue_people": 5300,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2023-12-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 6,000 people ahead of you",
+      "queue_people": 6000,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2024-01-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 7,200 people ahead of you",
+      "queue_people": 7200,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2024-02-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 8,200 people ahead of you",
+      "queue_people": 8200,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2024-03-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 9,900 people ahead of you",
+      "queue_people": 9900,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2024-04-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 12,000 people ahead of you",
+      "queue_people": 12000,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2024-05-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 13,900 people ahead of you",
+      "queue_people": 13900,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2024-06-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 16,100 people ahead of you",
+      "queue_people": 16100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2024-07-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 17,800 people ahead of you",
+      "queue_people": 17800,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2024-08-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 19,700 people ahead of you",
+      "queue_people": 19700,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2024-09-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 21,700 people ahead of you",
+      "queue_people": 21700,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2024-10-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 23,900 people ahead of you",
+      "queue_people": 23900,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2024-11-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 26,500 people ahead of you",
+      "queue_people": 26500,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2024-12-01",
+      "wait_raw": "About 1 month left",
+      "wait_days": 30.44,
+      "unit_original": "months",
+      "status": "ok",
+      "queue_raw": "About 28,800 people ahead of you",
+      "queue_people": 28800,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2025-01-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 31,500 people ahead of you",
+      "queue_people": 31500,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2025-02-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 34,600 people ahead of you",
+      "queue_people": 34600,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2025-03-01",
+      "wait_raw": "We need more time to process your application",
+      "wait_days": null,
+      "unit_original": null,
+      "status": "insufficient_data",
+      "queue_raw": "About 37,600 people ahead of you",
+      "queue_people": 37600,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2025-04-01",
+      "wait_raw": "About 1 month left",
+      "wait_days": 30.44,
+      "unit_original": "months",
+      "status": "ok",
+      "queue_raw": "About 41,000 people ahead of you",
+      "queue_people": 41000,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2025-05-01",
+      "wait_raw": "2 months left",
+      "wait_days": 60.88,
+      "unit_original": "months",
+      "status": "ok",
+      "queue_raw": "About 43,500 people ahead of you",
+      "queue_people": 43500,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2025-06-01",
+      "wait_raw": "2 months left",
+      "wait_days": 60.88,
+      "unit_original": "months",
+      "status": "ok",
+      "queue_raw": "About 47,000 people ahead of you",
+      "queue_people": 47000,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2025-07-01",
+      "wait_raw": "2 months left",
+      "wait_days": 60.88,
+      "unit_original": "months",
+      "status": "ok",
+      "queue_raw": "About 50,300 people ahead of you",
+      "queue_people": 50300,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2025-08-01",
+      "wait_raw": "2 months left",
+      "wait_days": 60.88,
+      "unit_original": "months",
+      "status": "ok",
+      "queue_raw": "About 54,400 people ahead of you",
+      "queue_people": 54400,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2025-09-01",
+      "wait_raw": "2 months left",
+      "wait_days": 60.88,
+      "unit_original": "months",
+      "status": "ok",
+      "queue_raw": "About 58,900 people ahead of you",
+      "queue_people": 58900,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2025-10-01",
+      "wait_raw": "2 months left",
+      "wait_days": 60.88,
+      "unit_original": "months",
+      "status": "ok",
+      "queue_raw": "About 64,000 people ahead of you",
+      "queue_people": 64000,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2025-11-01",
+      "wait_raw": "3 months left",
+      "wait_days": 91.32,
+      "unit_original": "months",
+      "status": "ok",
+      "queue_raw": "About 70,900 people ahead of you",
+      "queue_people": 70900,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2025-12-01",
+      "wait_raw": "3 months left",
+      "wait_days": 91.32,
+      "unit_original": "months",
+      "status": "ok",
+      "queue_raw": "About 80,100 people ahead of you",
+      "queue_people": 80100,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2026-01-01",
+      "wait_raw": "3 months left",
+      "wait_days": 91.32,
+      "unit_original": "months",
+      "status": "ok",
+      "queue_raw": "About 94,400 people ahead of you",
+      "queue_people": 94400,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2026-02-01",
+      "wait_raw": "4 months left",
+      "wait_days": 121.76,
+      "unit_original": "months",
+      "status": "ok",
+      "queue_raw": "About 119,300 people ahead of you",
+      "queue_people": 119300,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2026-03-01",
+      "wait_raw": "5 months left",
+      "wait_days": 152.2,
+      "unit_original": "months",
+      "status": "ok",
+      "queue_raw": "About 146,700 people ahead of you",
+      "queue_people": 146700,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2026-04-01",
+      "wait_raw": "11 months left",
+      "wait_days": 334.84,
+      "unit_original": "months",
+      "status": "ok",
+      "queue_raw": "About 302,900 people ahead of you",
+      "queue_people": 302900,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2026-05-01",
+      "wait_raw": "12 months left",
+      "wait_days": 365.28,
+      "unit_original": "months",
+      "status": "ok",
+      "queue_raw": "About 326,200 people ahead of you",
+      "queue_people": 326200,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2026-06-01",
+      "wait_raw": "12 months left",
+      "wait_days": 365.28,
+      "unit_original": "months",
+      "status": "ok",
+      "queue_raw": "About 327,600 people ahead of you",
+      "queue_people": 327600,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2026-07-01",
+      "wait_raw": "12 months left",
+      "wait_days": 365.28,
+      "unit_original": "months",
+      "status": "ok",
+      "queue_raw": "About 328,200 people ahead of you",
+      "queue_people": 328200,
+      "confidence": "official"
+     },
+     {
+      "cohort_month": "2026-08-01",
+      "wait_raw": "12 months left",
+      "wait_days": 365.28,
+      "unit_original": "months",
+      "status": "ok",
+      "queue_raw": "About 328,200 people ahead of you",
+      "queue_people": 328200,
+      "confidence": "official"
+     }
+    ]
+   }
+  ]
+ },
+ "license": "CC BY 4.0 — attribute GovWait and the originating government agency. Underlying figures are official government publications."
+}

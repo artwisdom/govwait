@@ -10,16 +10,18 @@ const EXPORTS = path.join(ROOT, 'data', 'exports');
 
 const COVERAGE_FLOORS = {
   'ircc-ptime': 1200, 'govuk-visa-times': 10,
+  'ircc-forward-looking': 28,
   'ircc-noncountry': 15, 'ircc-passport': 2, 'govuk-inuk-times': 8, 'govuk-passport': 1,
   'inz-processing-times': 240,
 };
 // No staleness entry for ircc-passport (unstamped: effective_date = first
 // observed, ages legitimately) or govuk-passport (stable statement, years old).
-const STALENESS_DAYS = { 'ircc-ptime': 45, 'govuk-visa-times': 120, 'ircc-noncountry': 45, 'govuk-inuk-times': 500 };
+const STALENESS_DAYS = { 'ircc-ptime': 45, 'ircc-forward-looking': 62, 'govuk-visa-times': 120, 'ircc-noncountry': 45, 'govuk-inuk-times': 500 };
 const TOTAL_FLOOR = 300;
 // Refugee-resettlement categories legitimately reach ~5 years ("58 months",
-// gov-assisted from TZ, observed 2026-08). 3000d is the absurdity bound.
-const MAX_DAYS = 3000;
+// gov-assisted from TZ, observed 2026-08), and IRCC's forward-looking file
+// publishes "More than 10 years". 5000d remains an absurdity bound.
+const MAX_DAYS = 5000;
 
 export function validate() {
   const checks = [];
@@ -34,6 +36,7 @@ export function validate() {
     SELECT COUNT(*) n FROM entities
     WHERE active=1 AND (
       id = '' OR jurisdiction NOT GLOB '[A-Z][A-Z]'
+       OR metric_type NOT IN ('published','backward','forward','service_standard','percentile')
        OR (applicant_country IS NOT NULL AND applicant_country NOT GLOB '[A-Z][A-Z]'))`)[0].n;
   check('entity-shape', badEntities === 0, `${badEntities} malformed entity rows`);
 
@@ -47,6 +50,27 @@ export function validate() {
 
   const orphans = queryJson(`SELECT COUNT(*) n FROM observations o LEFT JOIN entities e ON e.id=o.entity_id WHERE e.id IS NULL`)[0].n;
   check('referential-integrity', orphans === 0, `${orphans} orphaned observations`);
+
+  const badForward = queryJson(`
+    SELECT COUNT(*) n FROM forward_estimates f LEFT JOIN entities e ON e.id=f.entity_id
+    WHERE e.id IS NULL
+       OR e.metric_type!='forward'
+       OR f.snapshot_date NOT GLOB '[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]'
+       OR (f.cohort_month!='' AND f.cohort_month NOT GLOB '[0-9][0-9][0-9][0-9]-[0-9][0-9]-01')
+       OR (f.status='ok' AND f.wait_days IS NULL)
+       OR (f.status!='ok' AND f.wait_days IS NOT NULL)
+       OR (f.status='ok' AND (f.wait_days<=0 OR f.wait_days>${MAX_DAYS}))
+       OR f.queue_people<=0 OR f.source_url NOT LIKE 'https://%'`)[0].n;
+  check('forward-estimate-shape', badForward === 0, `${badForward} malformed forward-looking estimates`);
+
+  const forwardCurrent = queryJson(`
+    SELECT COUNT(*) n FROM forward_estimates f JOIN entities e ON e.id=f.entity_id
+    WHERE e.active=1 AND e.source_id='ircc-forward-looking' AND f.cohort_month=''`)[0].n;
+  check('forward-current-coverage', forwardCurrent >= 28, `${forwardCurrent} headline forward-looking estimates (floor 28)`);
+  const forwardCohorts = queryJson(`
+    SELECT COUNT(*) n FROM forward_estimates f JOIN entities e ON e.id=f.entity_id
+    WHERE e.active=1 AND e.source_id='ircc-forward-looking' AND f.cohort_month!=''`)[0].n;
+  check('forward-cohort-coverage', forwardCohorts >= 3500, `${forwardCohorts} application-month estimates (floor 3500)`);
 
   // 2. Range sanity
   const outOfRange = queryJson(`SELECT COUNT(*) n FROM observations WHERE status='ok' AND (value_days <= 0 OR value_days > ${MAX_DAYS})`)[0].n;

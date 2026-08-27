@@ -82,6 +82,7 @@ export function parseTimeline(visa, body, retrieved_at) {
       source_id: source.id,
       jurisdiction: 'NZ',
       service_category: category,
+      metric_type: 'percentile',
       service_key: serviceKey,
       service_name: `${visa.name} — ${metric.label}`,
       applicant_country: null,

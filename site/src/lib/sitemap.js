@@ -42,6 +42,7 @@ export function hubUrls() {
     // Console can report their indexing separately from general hubs.
     if (code === 'GB' || code === 'NZ') continue;
     for (const svc of svcMap.values()) {
+      if (!svc.published) continue;
       urls.push({ path: `/${jur.slug}/${svc.slug}/`, lastmod: svc.latestEffective });
     }
   }

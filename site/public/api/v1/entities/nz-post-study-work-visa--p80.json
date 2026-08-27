@@ -4,6 +4,7 @@
  "service_key": "nz-post-study-work-visa",
  "service_name": "Post Study Work Visa — 80% processed",
  "service_category": "visa",
+ "metric_type": "percentile",
  "applicant_country": null,
  "applicant_country_name": null,
  "latest": {

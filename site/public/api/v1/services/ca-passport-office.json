@@ -3,7 +3,7 @@
  "service_name": "Passport (in person at a passport office)",
  "jurisdiction": "CA",
  "count": 1,
- "generated_at": "2026-08-25T14:44:18.851Z",
+ "generated_at": "2026-08-27T23:39:25.471Z",
  "records": [
   {
    "entity_id": "ca-passport-office",
@@ -11,6 +11,7 @@
    "service_key": "ca-passport-office",
    "service_name": "Passport (in person at a passport office)",
    "service_category": "passport",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {

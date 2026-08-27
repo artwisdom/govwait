@@ -4,6 +4,7 @@
  "service_key": "ca-refugee-gov-assisted",
  "service_name": "Government-assisted refugee resettlement",
  "service_category": "refugee",
+ "metric_type": "backward",
  "applicant_country": "XK",
  "applicant_country_name": "Kosovo",
  "latest": {

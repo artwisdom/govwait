@@ -69,6 +69,11 @@ try {
   assert(nzBody.metrics?.length === 2, 'New Zealand service lookup returns both official percentile metrics');
   assert(nzBody.metrics.every(r => r.unit_original === 'working days'), 'New Zealand metrics preserve the official working-day unit');
 
+  const flpt = await rpc('tools/call', { name: 'get_entity', arguments: { entity_id: 'ca-canadian-experience-class' } });
+  const flptBody = JSON.parse(flpt.result.content[0].text);
+  assert(flptBody.metric_type === 'forward', 'IRCC CEC route is explicitly labeled forward-looking');
+  assert(flptBody.forward_looking?.snapshots?.at(-1)?.cohorts?.length >= 120, 'IRCC CEC route exposes the official application-month cohort table');
+
   const cmp = await rpc('tools/call', { name: 'compare_values', arguments: { service_key: 'ca-visitor-visa', applicant_countries: ['IN', 'NG', 'PH', 'US'] } });
   const cmpBody = JSON.parse(cmp.result.content[0].text);
   assert(cmpBody.comparison.length === 4, 'compare_values returns all 4 requested countries');

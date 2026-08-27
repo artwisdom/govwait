@@ -18,11 +18,17 @@ const citations = [...new Set(svcs.flatMap(service => service.records.map(record
   about={['IRCC processing times', 'Canada immigration']} citations={citations} adPrefix="guide-ca-method">
   <AdSlot position="guide-top" />
 
-  <h2>The number is a rear-view mirror, not a forecast</h2>
+  <div class="callout warn"><strong>IRCC publishes two different kinds of time.</strong><p>Country-by-country temporary-residence figures are generally backward-looking. Selected permanent-residence and citizenship programs use monthly forward-looking projections. GovWait labels them separately because comparing the two as if they used one method would be misleading.</p></div>
+
+  <h2>Country-by-country figures are a rear-view mirror</h2>
   <p>IRCC's published figure answers a precise question: <em>how long did it recently take to finalize most applications of this type from this country?</em> It is recalculated from completed cases (typically the time in which ~80% of recent applications were processed). That has three practical consequences:</p>
   <p><strong>1. It moves constantly.</strong> A surge of applications, a processing blitz, or a backlog clean-up shifts the statistic within weeks. That is why we record every published value instead of quoting one — the direction of movement is often more informative than the level.</p>
   <p><strong>2. It is not a promise.</strong> Your case can be faster or much slower than the figure, depending on documentation completeness, security screening, and volumes. Treat it as the best available base rate, not a deadline.</p>
   <p><strong>3. Fast can mean empty.</strong> A very short published time from a small country sometimes reflects a tiny sample of easy cases rather than generous capacity.</p>
+
+  <h2>Forward-looking programs estimate the road ahead</h2>
+  <p>For selected permanent-residence and citizenship programs, IRCC estimates how long a complete application received today may take. It uses the number of applications already waiting, expected processing capacity, expected new applications and—in some programs—annual admissions levels. These figures update monthly and carry <code>metric_type: "forward"</code> in the GovWait API.</p>
+  <p>If someone already applied, IRCC also publishes a current estimate for the month they applied and an approximate number of people ahead. Those application-month rows are one current snapshot, not old publication history. See the <a href="/canada/canadian-experience-class/">Canadian Experience Class projection and cohort table</a> for a live example.</p>
 
   <h2>Current medians per service</h2>
   <div class="tablewrap"><table>

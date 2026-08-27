@@ -48,7 +48,7 @@ export async function collect({ forceRefresh = false } = {}) {
     if (norm.error) { errors.push(`${k}: ${norm.error}`); continue; }
     entities.push({
       id: spec.key, source_id: source.id, jurisdiction: 'CA',
-      service_category: 'passport', service_key: spec.key, service_name: spec.name,
+      service_category: 'passport', metric_type: 'service_standard', service_key: spec.key, service_name: spec.name,
       applicant_country: null, applicant_country_name: null,
     });
     observations.push({

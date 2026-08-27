@@ -4,6 +4,7 @@
  "service_key": "ca-visitor-record-extension",
  "service_name": "Visitor record (extend your stay in Canada)",
  "service_category": "permit",
+ "metric_type": "published",
  "applicant_country": null,
  "applicant_country_name": null,
  "latest": {

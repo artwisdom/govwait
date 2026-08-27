@@ -10,6 +10,8 @@ const { code } = Astro.props;
 const jur = JURISDICTIONS[code];
 const svcs = publishedServices(code);
 const allServiceCount = services[code].size;
+const allForwardCount = [...services[code].values()].filter(service => service.metricType === 'forward').length;
+const publishedForwardCount = svcs.filter(service => service.metricType === 'forward').length;
 const latest = svcs.map(s => s.latestEffective).sort().at(-1);
 const jsonld = [{
   '@context': 'https://schema.org',
@@ -25,7 +27,8 @@ const jsonld = [{
       jsonld={jsonld}>
   <nav class="crumbs"><a href="/">Home</a> › {jur.name}</nav>
   <h1>{jur.name}: official processing times</h1>
-  <p class="lede">All figures below are published by {jur.agency} and re-checked by us on a weekly schedule. Click a service for the full breakdown{svcs.some(s=>s.hasApplicantPages) ? ' by applicant country' : ''}.</p>
+  <p class="lede">All figures below are published by {jur.agency} and re-checked by us on a weekly schedule. Source update cadences range from weekly to monthly. Click a service for the full breakdown{svcs.some(s=>s.hasApplicantPages) ? ' by applicant country' : ''}.</p>
+  {code === 'CA' && allForwardCount > 0 && <p class="small muted">The API tracks all {allForwardCount} current IRCC forward-looking programs and {allForwardCount === publishedForwardCount ? 'all have reviewed human pages' : `${publishedForwardCount} high-interest programs have reviewed human pages in this release`}. These projections are labeled separately from IRCC’s backward-looking recent-case figures.</p>}
   {code === 'NZ' && <p class="small muted">This first reviewed release covers {svcs.length} high-interest visas. The free API already includes all {allServiceCount} visa types in INZ’s current tool; additional human pages are released in quality-checked batches.</p>}
   <AdSlot position="hub-top" />
   <div class="tablewrap"><table>
@@ -34,7 +37,7 @@ const jsonld = [{
       {svcs.map(svc => (
         <tr>
           <td><a href={`/${jur.slug}/${svc.slug}/`}>{svc.name}</a></td>
-          <td class="small muted">{svc.hasApplicantPages ? `${svc.records.length} countries (${svc.okCount} with published times)` : svc.isPercentileService ? 'current INZ percentiles' : 'service standard'}</td>
+          <td class="small muted">{svc.hasApplicantPages ? `${svc.records.length} countries (${svc.okCount} with published times)` : svc.isPercentileService ? 'current INZ percentiles' : svc.metricType === 'forward' ? 'monthly forward-looking projection' : 'service standard'}</td>
           <td class="num">{svc.hasApplicantPages
             ? `${svc.records.find(r=>r.status==='ok')?.value_raw ?? '—'} (fastest)`
             : svc.isPercentileService

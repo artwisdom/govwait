@@ -4,6 +4,7 @@
  "service_key": "nz-entrepreneur-work-visa",
  "service_name": "Entrepreneur Work Visa — 80% processed",
  "service_category": "visa",
+ "metric_type": "percentile",
  "applicant_country": null,
  "applicant_country_name": null,
  "latest": {

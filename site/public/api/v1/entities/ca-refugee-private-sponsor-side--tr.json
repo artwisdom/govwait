@@ -4,6 +4,7 @@
  "service_key": "ca-refugee-private-sponsor-side",
  "service_name": "Privately sponsored refugee: sponsor processing",
  "service_category": "refugee",
+ "metric_type": "backward",
  "applicant_country": "TR",
  "applicant_country_name": "Türkiye",
  "latest": {

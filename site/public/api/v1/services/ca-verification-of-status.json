@@ -3,7 +3,7 @@
  "service_name": "Verification of status (VoS)",
  "jurisdiction": "CA",
  "count": 1,
- "generated_at": "2026-08-25T14:44:18.851Z",
+ "generated_at": "2026-08-27T23:39:25.471Z",
  "records": [
   {
    "entity_id": "ca-verification-of-status",
@@ -11,6 +11,7 @@
    "service_key": "ca-verification-of-status",
    "service_name": "Verification of status (VoS)",
    "service_category": "settlement",
+   "metric_type": "published",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {

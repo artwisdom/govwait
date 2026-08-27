@@ -4,6 +4,7 @@
  "service_key": "nz-medical-treatment-visitor-visa",
  "service_name": "Medical Treatment Visitor Visa — 50% processed",
  "service_category": "visa",
+ "metric_type": "percentile",
  "applicant_country": null,
  "applicant_country_name": null,
  "latest": {

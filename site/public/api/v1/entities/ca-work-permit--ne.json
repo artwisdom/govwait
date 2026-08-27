@@ -4,6 +4,7 @@
  "service_key": "ca-work-permit",
  "service_name": "Work permit (applying from outside Canada)",
  "service_category": "permit",
+ "metric_type": "backward",
  "applicant_country": "NE",
  "applicant_country_name": "Niger",
  "latest": {

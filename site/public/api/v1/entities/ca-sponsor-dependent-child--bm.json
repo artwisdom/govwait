@@ -4,6 +4,7 @@
  "service_key": "ca-sponsor-dependent-child",
  "service_name": "Sponsorship: dependent child",
  "service_category": "sponsorship",
+ "metric_type": "backward",
  "applicant_country": "BM",
  "applicant_country_name": "Bermuda",
  "latest": {

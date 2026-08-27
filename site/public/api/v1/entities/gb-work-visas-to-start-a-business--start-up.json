@@ -4,6 +4,7 @@
  "service_key": "gb-work-visas-to-start-a-business--start-up",
  "service_name": "Start-up (Work visas to start a business)",
  "service_category": "visa",
+ "metric_type": "service_standard",
  "applicant_country": null,
  "applicant_country_name": null,
  "latest": {

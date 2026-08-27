@@ -3,7 +3,7 @@
  "service_name": "Chinese tour group (Visit visas)",
  "jurisdiction": "GB",
  "count": 1,
- "generated_at": "2026-08-25T14:44:18.851Z",
+ "generated_at": "2026-08-27T23:39:25.471Z",
  "records": [
   {
    "entity_id": "gb-visit-visas--chinese-tour-group",
@@ -11,6 +11,7 @@
    "service_key": "gb-visit-visas--chinese-tour-group",
    "service_name": "Chinese tour group (Visit visas)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {

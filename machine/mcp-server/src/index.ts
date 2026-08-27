@@ -20,15 +20,17 @@ type Obs = {
 };
 type Rec = {
   id: string; jurisdiction: string; service_key: string; service_name: string;
-  service_category: string; applicant_country: string | null; applicant_country_name: string | null;
+  service_category: string; metric_type: string; applicant_country: string | null; applicant_country_name: string | null;
   value_raw: string; value_days: number | null; unit_original: string | null; status: string;
   effective_date: string; retrieved_at: string; source_url: string;
 };
 
 const latest = JSON.parse(readFileSync(path.join(DATA_DIR, "latest.json"), "utf8"));
 const historyDoc = JSON.parse(readFileSync(path.join(DATA_DIR, "history.json"), "utf8"));
+const forwardDoc = JSON.parse(readFileSync(path.join(DATA_DIR, "forward-looking.json"), "utf8"));
 const records: Rec[] = latest.records;
 const history: Record<string, Obs[]> = historyDoc.entities;
+const forward: Record<string, unknown> = forwardDoc.entities;
 
 const ATTRIBUTION = "Values are official government publications tracked by GovWait (CC BY 4.0 — attribute GovWait and the originating agency). Not legal advice.";
 
@@ -38,6 +40,7 @@ function present(r: Rec) {
     jurisdiction: r.jurisdiction,
     service: r.service_name,
     service_key: r.service_key,
+    metric_type: r.metric_type,
     applicant_country: r.applicant_country_name ?? null,
     current_value: r.status === "ok" ? r.value_raw : `no published time (${r.status})`,
     value_days: r.value_days,
@@ -76,12 +79,17 @@ server.registerTool("search_entities", {
 });
 
 server.registerTool("get_entity", {
-  description: "Get one route by entity_id (e.g. 'ca-visitor-visa--in'): current value plus full recorded history.",
+  description: "Get one route by entity_id (e.g. 'ca-visitor-visa--in'): current value plus full recorded history. Forward-looking IRCC routes also include application-month cohort estimates.",
   inputSchema: { entity_id: z.string() },
 }, async ({ entity_id }) => {
   const r = records.find(x => x.id === entity_id);
   if (!r) return { content: [{ type: "text" as const, text: JSON.stringify({ error: `unknown entity_id '${entity_id}' — use search_entities first` }) }], isError: true };
-  return { content: [{ type: "text" as const, text: JSON.stringify({ ...present(r), history: history[r.id] ?? [], attribution: ATTRIBUTION }, null, 2) }] };
+  return { content: [{ type: "text" as const, text: JSON.stringify({
+    ...present(r),
+    history: history[r.id] ?? [],
+    ...(forward[r.id] ? { forward_looking: forward[r.id] } : {}),
+    attribution: ATTRIBUTION,
+  }, null, 2) }] };
 });
 
 server.registerTool("get_latest_value", {

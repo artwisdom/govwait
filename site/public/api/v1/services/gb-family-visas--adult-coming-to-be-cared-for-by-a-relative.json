@@ -3,7 +3,7 @@
  "service_name": "Adult coming to be cared for by a relative (Family visas)",
  "jurisdiction": "GB",
  "count": 1,
- "generated_at": "2026-08-25T14:44:18.851Z",
+ "generated_at": "2026-08-27T23:39:25.471Z",
  "records": [
   {
    "entity_id": "gb-family-visas--adult-coming-to-be-cared-for-by-a-relative",
@@ -11,6 +11,7 @@
    "service_key": "gb-family-visas--adult-coming-to-be-cared-for-by-a-relative",
    "service_name": "Adult coming to be cared for by a relative (Family visas)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {

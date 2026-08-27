@@ -4,6 +4,7 @@
  "service_key": "gb-in-uk-work-visas-you-can-apply-for-without-a-job-offer--overseas-domestic-wor",
  "service_name": "Overseas Domestic Worker (Work visas you can apply for without a job offer, applying inside the UK)",
  "service_category": "visa",
+ "metric_type": "service_standard",
  "applicant_country": null,
  "applicant_country_name": null,
  "latest": {

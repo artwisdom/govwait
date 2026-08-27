@@ -3,7 +3,7 @@
  "service_name": "Overseas Domestic Worker (Work visas you can apply for without a job offer, applying inside the UK)",
  "jurisdiction": "GB",
  "count": 1,
- "generated_at": "2026-08-25T14:44:18.851Z",
+ "generated_at": "2026-08-27T23:39:25.471Z",
  "records": [
   {
    "entity_id": "gb-in-uk-work-visas-you-can-apply-for-without-a-job-offer--overseas-domestic-wor",
@@ -11,6 +11,7 @@
    "service_key": "gb-in-uk-work-visas-you-can-apply-for-without-a-job-offer--overseas-domestic-wor",
    "service_name": "Overseas Domestic Worker (Work visas you can apply for without a job offer, applying inside the UK)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {

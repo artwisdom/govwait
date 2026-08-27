@@ -4,6 +4,7 @@
  "service_key": "gb-popular-work-visas--health-and-care-worker",
  "service_name": "Health and Care Worker (Popular work visas)",
  "service_category": "visa",
+ "metric_type": "service_standard",
  "applicant_country": null,
  "applicant_country_name": null,
  "latest": {

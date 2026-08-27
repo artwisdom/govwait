@@ -4,6 +4,7 @@
  "service_key": "gb-in-uk-ukraine-visas--ukraine-permission-extension-scheme",
  "service_name": "Ukraine Permission Extension scheme (Ukraine visas, applying inside the UK)",
  "service_category": "visa",
+ "metric_type": "service_standard",
  "applicant_country": null,
  "applicant_country_name": null,
  "latest": {

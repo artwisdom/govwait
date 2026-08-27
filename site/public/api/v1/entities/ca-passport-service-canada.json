@@ -4,6 +4,7 @@
  "service_key": "ca-passport-service-canada",
  "service_name": "Passport (Service Canada Centre or by mail)",
  "service_category": "passport",
+ "metric_type": "service_standard",
  "applicant_country": null,
  "applicant_country_name": null,
  "latest": {

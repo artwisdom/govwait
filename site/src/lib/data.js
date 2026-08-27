@@ -11,6 +11,7 @@ const EXPORTS = path.join(ROOT, 'data', 'exports');
 
 const latest = JSON.parse(readFileSync(path.join(EXPORTS, 'latest.json'), 'utf8'));
 const historyFile = JSON.parse(readFileSync(path.join(EXPORTS, 'history.json'), 'utf8'));
+const forwardFile = JSON.parse(readFileSync(path.join(EXPORTS, 'forward-looking.json'), 'utf8'));
 export const stats = JSON.parse(readFileSync(path.join(EXPORTS, 'stats.json'), 'utf8'));
 export const sources = latest.sources;
 export const generatedAt = latest.generated_at;
@@ -43,6 +44,18 @@ const SEO_SERVICE_NAMES = {
   'ca-super-visa': 'Super Visa',
   'ca-visitor-visa': 'Visitor Visa',
   'ca-work-permit': 'Work Permit',
+  'ca-atlantic-immigration-program': 'Atlantic Immigration Program',
+  'ca-canadian-experience-class': 'Canadian Experience Class (CEC)',
+  'ca-federal-skilled-worker': 'Federal Skilled Worker',
+  'ca-provincial-nominee-non-express-entry': 'PNP (non-Express Entry)',
+  'ca-provincial-nominee-express-entry': 'PNP (Express Entry)',
+  'ca-quebec-skilled-worker': 'Quebec Skilled Worker',
+  'ca-parents-grandparents-sponsorship-quebec': 'Parents and Grandparents Sponsorship (Quebec)',
+  'ca-parents-grandparents-sponsorship-outside-quebec': 'Parents and Grandparents Sponsorship (outside Quebec)',
+  'ca-spouse-partner-inside-canada-quebec': 'In-Canada Spouse Sponsorship (Quebec)',
+  'ca-spouse-partner-inside-canada-outside-quebec': 'In-Canada Spouse Sponsorship (outside Quebec)',
+  'ca-spouse-partner-outside-canada-quebec': 'Outside-Canada Spouse Sponsorship (Quebec)',
+  'ca-spouse-partner-outside-canada-outside-quebec': 'Outside-Canada Spouse Sponsorship (outside Quebec)',
 };
 
 export function slugify(s) {
@@ -97,6 +110,7 @@ export const records = latest.records.map(r => ({
   jur: JURISDICTIONS[r.jurisdiction],
   applicantSlug: r.applicant_country ? 'from-' + slugify(r.applicant_country_name) : null,
   history: historyFile.entities[r.id] || [],
+  forwardLooking: (forwardFile.entities[r.id]?.snapshots || []).at(-1) || null,
   unstamped: UNSTAMPED_SOURCES.has(r.source_id),
   verified_at: SOURCE_BY_ID.get(r.source_id)?.robots_checked_at || r.retrieved_at,
 }));
@@ -128,10 +142,12 @@ for (const r of records) {
       scope: serviceScope(r),
       section: serviceSection(r),
       category: r.service_category,
+      metricType: r.metric_type,
       blurb: CATEGORY_BLURBS[r.service_category] || 'current official processing time',
       jurisdiction: j,
       published: isServicePublished(j, r.service_key),
       records: [],
+      forwardLooking: r.forwardLooking,
     });
   }
   services[j].get(r.serviceSlug).records.push(r);

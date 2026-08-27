@@ -8,6 +8,7 @@ import { execFileSync } from 'node:child_process';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { isServicePublished } from '../site/src/lib/publication.js';
+import { hubUrls } from '../site/src/lib/sitemap.js';
 
 const KEY = 'acfaf943552a8fee0a3eee74756ef0b2';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -45,14 +46,10 @@ function pathsForRecord(r) {
 }
 
 function fullSitePaths(records) {
-  const paths = new Set([
-    '/', '/about/', '/api-docs/', '/guides/',
-    '/guides/how-canada-processing-times-work/',
-    '/guides/canada-visitor-visa-by-country/',
-    '/guides/uk-visa-processing-standards/',
-    '/guides/how-new-zealand-visa-processing-times-work/',
-    '/canada/', '/uk/', '/new-zealand/',
-  ]);
+  // Reuse the sitemap's authoritative hub/editorial/report set so a full
+  // IndexNow notification cannot silently omit an indexable human page. Old
+  // records are still accepted below to preserve deletion/change hints.
+  const paths = new Set(hubUrls().map(({ path: publicPath }) => publicPath));
   for (const r of records) for (const p of pathsForRecord(r)) paths.add(p);
   return paths;
 }

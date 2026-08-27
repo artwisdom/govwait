@@ -4,6 +4,7 @@
  "service_key": "ca-sponsor-dependent-child",
  "service_name": "Sponsorship: dependent child",
  "service_category": "sponsorship",
+ "metric_type": "backward",
  "applicant_country": "NE",
  "applicant_country_name": "Niger",
  "latest": {

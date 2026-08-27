@@ -4,6 +4,7 @@
  "service_key": "gb-other-visas-and-permits--international-sportsperson",
  "service_name": "International Sportsperson (Other visas and permits)",
  "service_category": "visa",
+ "metric_type": "service_standard",
  "applicant_country": null,
  "applicant_country_name": null,
  "latest": {

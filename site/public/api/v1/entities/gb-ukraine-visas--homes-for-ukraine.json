@@ -4,6 +4,7 @@
  "service_key": "gb-ukraine-visas--homes-for-ukraine",
  "service_name": "Homes for Ukraine (Ukraine visas)",
  "service_category": "visa",
+ "metric_type": "service_standard",
  "applicant_country": null,
  "applicant_country_name": null,
  "latest": {

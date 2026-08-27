@@ -4,6 +4,7 @@
  "service_key": "ca-refugee-private-refugee-side",
  "service_name": "Privately sponsored refugee: refugee processing",
  "service_category": "refugee",
+ "metric_type": "backward",
  "applicant_country": "PR",
  "applicant_country_name": "Puerto Rico",
  "latest": {

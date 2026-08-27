@@ -1,7 +1,7 @@
 {
  "jurisdiction": "NZ",
  "count": 266,
- "generated_at": "2026-08-25T14:44:18.851Z",
+ "generated_at": "2026-08-27T23:39:25.471Z",
  "services": [
   "nz-academic-visitor-visa",
   "nz-accredited-employer-work-visa",
@@ -144,6 +144,7 @@
    "service_key": "nz-academic-visitor-visa",
    "service_name": "Academic Visitor Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -163,6 +164,7 @@
    "service_key": "nz-academic-visitor-visa",
    "service_name": "Academic Visitor Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -182,6 +184,7 @@
    "service_key": "nz-accredited-employer-work-visa",
    "service_name": "Accredited Employer Work Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -201,6 +204,7 @@
    "service_key": "nz-accredited-employer-work-visa",
    "service_name": "Accredited Employer Work Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -220,6 +224,7 @@
    "service_key": "nz-active-investor-plus-visa",
    "service_name": "Active Investor Plus Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -239,6 +244,7 @@
    "service_key": "nz-active-investor-plus-visa",
    "service_name": "Active Investor Plus Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -258,6 +264,7 @@
    "service_key": "nz-adoption-pre-citizenship-visitor-visa",
    "service_name": "Adoption Pre-citizenship Visitor Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -277,6 +284,7 @@
    "service_key": "nz-adoption-pre-citizenship-visitor-visa",
    "service_name": "Adoption Pre-citizenship Visitor Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -296,6 +304,7 @@
    "service_key": "nz-adoption-visitor-visa",
    "service_name": "Adoption Visitor Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -315,6 +324,7 @@
    "service_key": "nz-adoption-visitor-visa",
    "service_name": "Adoption Visitor Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -334,6 +344,7 @@
    "service_key": "nz-antarctic-traveller-visitor-visa",
    "service_name": "Antarctic Traveller Visitor Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -353,6 +364,7 @@
    "service_key": "nz-antarctic-traveller-visitor-visa",
    "service_name": "Antarctic Traveller Visitor Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -372,6 +384,7 @@
    "service_key": "nz-argentina-working-holiday-visa",
    "service_name": "Argentina Working Holiday Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -391,6 +404,7 @@
    "service_key": "nz-argentina-working-holiday-visa",
    "service_name": "Argentina Working Holiday Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -410,6 +424,7 @@
    "service_key": "nz-arts-and-music-festival-visitor-visa",
    "service_name": "Arts and Music Festival Visitor Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -429,6 +444,7 @@
    "service_key": "nz-arts-and-music-festival-visitor-visa",
    "service_name": "Arts and Music Festival Visitor Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -448,6 +464,7 @@
    "service_key": "nz-austria-working-holiday-visa",
    "service_name": "Austria Working Holiday Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -467,6 +484,7 @@
    "service_key": "nz-austria-working-holiday-visa",
    "service_name": "Austria Working Holiday Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -486,6 +504,7 @@
    "service_key": "nz-belgium-working-holiday-visa",
    "service_name": "Belgium Working Holiday Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -505,6 +524,7 @@
    "service_key": "nz-belgium-working-holiday-visa",
    "service_name": "Belgium Working Holiday Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -524,6 +544,7 @@
    "service_key": "nz-brazil-working-holiday-visa",
    "service_name": "Brazil Working Holiday Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -543,6 +564,7 @@
    "service_key": "nz-brazil-working-holiday-visa",
    "service_name": "Brazil Working Holiday Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -562,6 +584,7 @@
    "service_key": "nz-business-visitor-visa",
    "service_name": "Business Visitor Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -581,6 +604,7 @@
    "service_key": "nz-business-visitor-visa",
    "service_name": "Business Visitor Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -600,6 +624,7 @@
    "service_key": "nz-canada-working-holiday-visa",
    "service_name": "Canada Working Holiday Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -619,6 +644,7 @@
    "service_key": "nz-canada-working-holiday-visa",
    "service_name": "Canada Working Holiday Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -638,6 +664,7 @@
    "service_key": "nz-child-of-a-new-zealander-visitor-visa",
    "service_name": "Child of a New Zealander Visitor Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -657,6 +684,7 @@
    "service_key": "nz-child-of-a-new-zealander-visitor-visa",
    "service_name": "Child of a New Zealander Visitor Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -676,6 +704,7 @@
    "service_key": "nz-child-of-a-student-visitor-visa",
    "service_name": "Child of a Student Visitor Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -695,6 +724,7 @@
    "service_key": "nz-child-of-a-student-visitor-visa",
    "service_name": "Child of a Student Visitor Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -714,6 +744,7 @@
    "service_key": "nz-child-of-a-worker-visitor-visa",
    "service_name": "Child of a Worker Visitor Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -733,6 +764,7 @@
    "service_key": "nz-child-of-a-worker-visitor-visa",
    "service_name": "Child of a Worker Visitor Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -752,6 +784,7 @@
    "service_key": "nz-child-of-military-visitor-visa",
    "service_name": "Child of Military Visitor Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -771,6 +804,7 @@
    "service_key": "nz-child-of-military-visitor-visa",
    "service_name": "Child of Military Visitor Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -790,6 +824,7 @@
    "service_key": "nz-chile-working-holiday-visa",
    "service_name": "Chile Working Holiday Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -809,6 +844,7 @@
    "service_key": "nz-chile-working-holiday-visa",
    "service_name": "Chile Working Holiday Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -828,6 +864,7 @@
    "service_key": "nz-china-skilled-workers-visa",
    "service_name": "China Skilled Workers Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -847,6 +884,7 @@
    "service_key": "nz-china-skilled-workers-visa",
    "service_name": "China Skilled Workers Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -866,6 +904,7 @@
    "service_key": "nz-china-special-work-visa",
    "service_name": "China Special Work Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -885,6 +924,7 @@
    "service_key": "nz-china-special-work-visa",
    "service_name": "China Special Work Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -904,6 +944,7 @@
    "service_key": "nz-china-working-holiday-visa",
    "service_name": "China Working Holiday Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -923,6 +964,7 @@
    "service_key": "nz-china-working-holiday-visa",
    "service_name": "China Working Holiday Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -942,6 +984,7 @@
    "service_key": "nz-crew-joining-a-ship-or-plane-visitor-visa",
    "service_name": "Crew joining a Ship or Plane Visitor Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -961,6 +1004,7 @@
    "service_key": "nz-crew-joining-a-ship-or-plane-visitor-visa",
    "service_name": "Crew joining a Ship or Plane Visitor Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -980,6 +1024,7 @@
    "service_key": "nz-croatia-working-holiday-visa",
    "service_name": "Croatia Working Holiday Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -999,6 +1044,7 @@
    "service_key": "nz-croatia-working-holiday-visa",
    "service_name": "Croatia Working Holiday Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1018,6 +1064,7 @@
    "service_key": "nz-culturally-arranged-marriage-visitor-visa",
    "service_name": "Culturally Arranged Marriage Visitor Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1037,6 +1084,7 @@
    "service_key": "nz-culturally-arranged-marriage-visitor-visa",
    "service_name": "Culturally Arranged Marriage Visitor Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1056,6 +1104,7 @@
    "service_key": "nz-czech-working-holiday-visa",
    "service_name": "Czech Working Holiday Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1075,6 +1124,7 @@
    "service_key": "nz-czech-working-holiday-visa",
    "service_name": "Czech Working Holiday Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1094,6 +1144,7 @@
    "service_key": "nz-denmark-working-holiday-visa",
    "service_name": "Denmark Working Holiday Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1113,6 +1164,7 @@
    "service_key": "nz-denmark-working-holiday-visa",
    "service_name": "Denmark Working Holiday Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1132,6 +1184,7 @@
    "service_key": "nz-dependent-child-resident-visa",
    "service_name": "Dependent Child Resident Visa — 50% processed",
    "service_category": "settlement",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1151,6 +1204,7 @@
    "service_key": "nz-dependent-child-resident-visa",
    "service_name": "Dependent Child Resident Visa — 80% processed",
    "service_category": "settlement",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1170,6 +1224,7 @@
    "service_key": "nz-dependent-child-student-visa",
    "service_name": "Dependent Child Student Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1189,6 +1244,7 @@
    "service_key": "nz-dependent-child-student-visa",
    "service_name": "Dependent Child Student Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1208,6 +1264,7 @@
    "service_key": "nz-dismissed-worker-visitor-visa",
    "service_name": "Dismissed Worker Visitor Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1227,6 +1284,7 @@
    "service_key": "nz-dismissed-worker-visitor-visa",
    "service_name": "Dismissed Worker Visitor Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1246,6 +1304,7 @@
    "service_key": "nz-domestic-staff-of-a-diplomat-work-visa",
    "service_name": "Domestic Staff of a Diplomat Work Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1265,6 +1324,7 @@
    "service_key": "nz-domestic-staff-of-a-diplomat-work-visa",
    "service_name": "Domestic Staff of a Diplomat Work Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1284,6 +1344,7 @@
    "service_key": "nz-english-language-student-visa",
    "service_name": "English Language Student Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1303,6 +1364,7 @@
    "service_key": "nz-english-language-student-visa",
    "service_name": "English Language Student Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1322,6 +1384,7 @@
    "service_key": "nz-entertainers-work-visa",
    "service_name": "Entertainers Work Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1341,6 +1404,7 @@
    "service_key": "nz-entertainers-work-visa",
    "service_name": "Entertainers Work Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1360,6 +1424,7 @@
    "service_key": "nz-entrepreneur-work-visa",
    "service_name": "Entrepreneur Work Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1379,6 +1444,7 @@
    "service_key": "nz-entrepreneur-work-visa",
    "service_name": "Entrepreneur Work Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1398,6 +1464,7 @@
    "service_key": "nz-escort-of-medical-patients-visitor-visa",
    "service_name": "Escort of Medical Patients Visitor Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1417,6 +1484,7 @@
    "service_key": "nz-escort-of-medical-patients-visitor-visa",
    "service_name": "Escort of Medical Patients Visitor Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1436,6 +1504,7 @@
    "service_key": "nz-estonia-working-holiday-visa",
    "service_name": "Estonia Working Holiday Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1455,6 +1524,7 @@
    "service_key": "nz-estonia-working-holiday-visa",
    "service_name": "Estonia Working Holiday Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1474,6 +1544,7 @@
    "service_key": "nz-exchange-student-visa",
    "service_name": "Exchange Student Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1493,6 +1564,7 @@
    "service_key": "nz-exchange-student-visa",
    "service_name": "Exchange Student Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1512,6 +1584,7 @@
    "service_key": "nz-fee-paying-student-visa",
    "service_name": "Fee Paying Student Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1531,6 +1604,7 @@
    "service_key": "nz-fee-paying-student-visa",
    "service_name": "Fee Paying Student Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1550,6 +1624,7 @@
    "service_key": "nz-finland-working-holiday-visa",
    "service_name": "Finland Working Holiday Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1569,6 +1644,7 @@
    "service_key": "nz-finland-working-holiday-visa",
    "service_name": "Finland Working Holiday Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1588,6 +1664,7 @@
    "service_key": "nz-fishing-crew-work-visa",
    "service_name": "Fishing Crew Work Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1607,6 +1684,7 @@
    "service_key": "nz-fishing-crew-work-visa",
    "service_name": "Fishing Crew Work Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1626,6 +1704,7 @@
    "service_key": "nz-foreign-government-supported-student-visa",
    "service_name": "Foreign Government Supported Student Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1645,6 +1724,7 @@
    "service_key": "nz-foreign-government-supported-student-visa",
    "service_name": "Foreign Government Supported Student Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1664,6 +1744,7 @@
    "service_key": "nz-france-working-holiday-visa",
    "service_name": "France Working Holiday Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1683,6 +1764,7 @@
    "service_key": "nz-france-working-holiday-visa",
    "service_name": "France Working Holiday Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1702,6 +1784,7 @@
    "service_key": "nz-german-law-student-visitor-visa",
    "service_name": "German Law Student Visitor Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1721,6 +1804,7 @@
    "service_key": "nz-german-law-student-visitor-visa",
    "service_name": "German Law Student Visitor Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1740,6 +1824,7 @@
    "service_key": "nz-germany-working-holiday-visa",
    "service_name": "Germany Working Holiday Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1759,6 +1844,7 @@
    "service_key": "nz-germany-working-holiday-visa",
    "service_name": "Germany Working Holiday Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1778,6 +1864,7 @@
    "service_key": "nz-global-impact-permanent-residence-visa",
    "service_name": "Global Impact Permanent Residence Visa — 50% processed",
    "service_category": "settlement",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1797,6 +1884,7 @@
    "service_key": "nz-global-impact-permanent-residence-visa",
    "service_name": "Global Impact Permanent Residence Visa — 80% processed",
    "service_category": "settlement",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1816,6 +1904,7 @@
    "service_key": "nz-group-visitor-visa",
    "service_name": "Group Visitor Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1835,6 +1924,7 @@
    "service_key": "nz-group-visitor-visa",
    "service_name": "Group Visitor Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1854,6 +1944,7 @@
    "service_key": "nz-guardian-visitor-visa",
    "service_name": "Guardian Visitor Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1873,6 +1964,7 @@
    "service_key": "nz-guardian-visitor-visa",
    "service_name": "Guardian Visitor Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1892,6 +1984,7 @@
    "service_key": "nz-hong-kong-sar-working-holiday-visa",
    "service_name": "Hong Kong SAR Working Holiday Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1911,6 +2004,7 @@
    "service_key": "nz-hong-kong-sar-working-holiday-visa",
    "service_name": "Hong Kong SAR Working Holiday Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1930,6 +2024,7 @@
    "service_key": "nz-hungary-working-holiday-visa",
    "service_name": "Hungary Working Holiday Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1949,6 +2044,7 @@
    "service_key": "nz-hungary-working-holiday-visa",
    "service_name": "Hungary Working Holiday Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1968,6 +2064,7 @@
    "service_key": "nz-indonesia-special-work-visa",
    "service_name": "Indonesia Special Work Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1987,6 +2084,7 @@
    "service_key": "nz-indonesia-special-work-visa",
    "service_name": "Indonesia Special Work Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2006,6 +2104,7 @@
    "service_key": "nz-ireland-working-holiday-visa",
    "service_name": "Ireland Working Holiday Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2025,6 +2124,7 @@
    "service_key": "nz-ireland-working-holiday-visa",
    "service_name": "Ireland Working Holiday Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2044,6 +2144,7 @@
    "service_key": "nz-israel-working-holiday-visa",
    "service_name": "Israel Working Holiday Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2063,6 +2164,7 @@
    "service_key": "nz-israel-working-holiday-visa",
    "service_name": "Israel Working Holiday Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2082,6 +2184,7 @@
    "service_key": "nz-italy-working-holiday-visa",
    "service_name": "Italy Working Holiday Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2101,6 +2204,7 @@
    "service_key": "nz-italy-working-holiday-visa",
    "service_name": "Italy Working Holiday Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2120,6 +2224,7 @@
    "service_key": "nz-japan-working-holiday-visa",
    "service_name": "Japan Working Holiday Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2139,6 +2244,7 @@
    "service_key": "nz-japan-working-holiday-visa",
    "service_name": "Japan Working Holiday Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2158,6 +2264,7 @@
    "service_key": "nz-japanese-interpreters-work-visa",
    "service_name": "Japanese Interpreters Work Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2177,6 +2284,7 @@
    "service_key": "nz-japanese-interpreters-work-visa",
    "service_name": "Japanese Interpreters Work Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2196,6 +2304,7 @@
    "service_key": "nz-korea-working-holiday-visa",
    "service_name": "Korea Working Holiday Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2215,6 +2324,7 @@
    "service_key": "nz-korea-working-holiday-visa",
    "service_name": "Korea Working Holiday Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2234,6 +2344,7 @@
    "service_key": "nz-latvia-working-holiday-visa",
    "service_name": "Latvia Working Holiday Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2253,6 +2364,7 @@
    "service_key": "nz-latvia-working-holiday-visa",
    "service_name": "Latvia Working Holiday Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2272,6 +2384,7 @@
    "service_key": "nz-lithuania-working-holiday-visa",
    "service_name": "Lithuania Working Holiday Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2291,6 +2404,7 @@
    "service_key": "nz-lithuania-working-holiday-visa",
    "service_name": "Lithuania Working Holiday Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2310,6 +2424,7 @@
    "service_key": "nz-long-term-skill-shortage-list-work-visa",
    "service_name": "Long Term Skill Shortage List Work Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2329,6 +2444,7 @@
    "service_key": "nz-long-term-skill-shortage-list-work-visa",
    "service_name": "Long Term Skill Shortage List Work Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2348,6 +2464,7 @@
    "service_key": "nz-luxembourg-working-holiday-visa",
    "service_name": "Luxembourg Working Holiday Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2367,6 +2484,7 @@
    "service_key": "nz-luxembourg-working-holiday-visa",
    "service_name": "Luxembourg Working Holiday Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2386,6 +2504,7 @@
    "service_key": "nz-malaysia-working-holiday-visa",
    "service_name": "Malaysia Working Holiday Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2405,6 +2524,7 @@
    "service_key": "nz-malaysia-working-holiday-visa",
    "service_name": "Malaysia Working Holiday Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2424,6 +2544,7 @@
    "service_key": "nz-malta-working-holiday-visa",
    "service_name": "Malta Working Holiday Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2443,6 +2564,7 @@
    "service_key": "nz-malta-working-holiday-visa",
    "service_name": "Malta Working Holiday Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2462,6 +2584,7 @@
    "service_key": "nz-medical-treatment-visitor-visa",
    "service_name": "Medical Treatment Visitor Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2481,6 +2604,7 @@
    "service_key": "nz-medical-treatment-visitor-visa",
    "service_name": "Medical Treatment Visitor Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2500,6 +2624,7 @@
    "service_key": "nz-mexico-working-holiday-visa",
    "service_name": "Mexico Working Holiday Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2519,6 +2644,7 @@
    "service_key": "nz-mexico-working-holiday-visa",
    "service_name": "Mexico Working Holiday Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2538,6 +2664,7 @@
    "service_key": "nz-netherlands-working-holiday-visa",
    "service_name": "Netherlands Working Holiday Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2557,6 +2684,7 @@
    "service_key": "nz-netherlands-working-holiday-visa",
    "service_name": "Netherlands Working Holiday Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2576,6 +2704,7 @@
    "service_key": "nz-norway-working-holiday-visa",
    "service_name": "Norway Working Holiday Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2595,6 +2724,7 @@
    "service_key": "nz-norway-working-holiday-visa",
    "service_name": "Norway Working Holiday Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2614,6 +2744,7 @@
    "service_key": "nz-nz-government-scholarship-student-visa",
    "service_name": "NZ Government Scholarship Student Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2633,6 +2764,7 @@
    "service_key": "nz-nz-government-scholarship-student-visa",
    "service_name": "NZ Government Scholarship Student Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2652,6 +2784,7 @@
    "service_key": "nz-occupational-registration-visitor-visa",
    "service_name": "Occupational Registration Visitor Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2671,6 +2804,7 @@
    "service_key": "nz-occupational-registration-visitor-visa",
    "service_name": "Occupational Registration Visitor Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2690,6 +2824,7 @@
    "service_key": "nz-pacific-access-category-resident-visa",
    "service_name": "Pacific Access Category Resident Visa — 50% processed",
    "service_category": "settlement",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2709,6 +2844,7 @@
    "service_key": "nz-pacific-access-category-resident-visa",
    "service_name": "Pacific Access Category Resident Visa — 80% processed",
    "service_category": "settlement",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2728,6 +2864,7 @@
    "service_key": "nz-parent-and-grandparent-visitor-visa",
    "service_name": "Parent and Grandparent Visitor Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2747,6 +2884,7 @@
    "service_key": "nz-parent-and-grandparent-visitor-visa",
    "service_name": "Parent and Grandparent Visitor Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2766,6 +2904,7 @@
    "service_key": "nz-parent-resident-visa",
    "service_name": "Parent Resident Visa — 50% processed",
    "service_category": "settlement",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2785,6 +2924,7 @@
    "service_key": "nz-parent-resident-visa",
    "service_name": "Parent Resident Visa — 80% processed",
    "service_category": "settlement",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2804,6 +2944,7 @@
    "service_key": "nz-parent-retirement-resident-visa",
    "service_name": "Parent Retirement Resident Visa — 50% processed",
    "service_category": "settlement",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2823,6 +2964,7 @@
    "service_key": "nz-parent-retirement-resident-visa",
    "service_name": "Parent Retirement Resident Visa — 80% processed",
    "service_category": "settlement",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2842,6 +2984,7 @@
    "service_key": "nz-partner-of-a-new-zealander-resident-visa",
    "service_name": "Partner of a New Zealander Resident Visa — 50% processed",
    "service_category": "settlement",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2861,6 +3004,7 @@
    "service_key": "nz-partner-of-a-new-zealander-resident-visa",
    "service_name": "Partner of a New Zealander Resident Visa — 80% processed",
    "service_category": "settlement",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2880,6 +3024,7 @@
    "service_key": "nz-partner-of-a-new-zealander-visitor-visa",
    "service_name": "Partner of a New Zealander Visitor Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2899,6 +3044,7 @@
    "service_key": "nz-partner-of-a-new-zealander-visitor-visa",
    "service_name": "Partner of a New Zealander Visitor Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2918,6 +3064,7 @@
    "service_key": "nz-partner-of-a-new-zealander-work-visa",
    "service_name": "Partner of a New Zealander Work Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2937,6 +3084,7 @@
    "service_key": "nz-partner-of-a-new-zealander-work-visa",
    "service_name": "Partner of a New Zealander Work Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2956,6 +3104,7 @@
    "service_key": "nz-partner-of-a-student-visitor-visa",
    "service_name": "Partner of a Student Visitor Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2975,6 +3124,7 @@
    "service_key": "nz-partner-of-a-student-visitor-visa",
    "service_name": "Partner of a Student Visitor Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -2994,6 +3144,7 @@
    "service_key": "nz-partner-of-a-student-work-visa",
    "service_name": "Partner of a Student Work Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3013,6 +3164,7 @@
    "service_key": "nz-partner-of-a-student-work-visa",
    "service_name": "Partner of a Student Work Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3032,6 +3184,7 @@
    "service_key": "nz-partner-of-a-worker-visitor-visa",
    "service_name": "Partner of a Worker Visitor Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3051,6 +3204,7 @@
    "service_key": "nz-partner-of-a-worker-visitor-visa",
    "service_name": "Partner of a Worker Visitor Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3070,6 +3224,7 @@
    "service_key": "nz-partner-of-a-worker-work-visa",
    "service_name": "Partner of a Worker Work Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3089,6 +3244,7 @@
    "service_key": "nz-partner-of-a-worker-work-visa",
    "service_name": "Partner of a Worker Work Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3108,6 +3264,7 @@
    "service_key": "nz-partner-of-an-nz-scholarship-student-work-visa",
    "service_name": "Partner of an NZ Scholarship Student Work Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3127,6 +3284,7 @@
    "service_key": "nz-partner-of-an-nz-scholarship-student-work-visa",
    "service_name": "Partner of an NZ Scholarship Student Work Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3146,6 +3304,7 @@
    "service_key": "nz-partner-of-military-visitor-visa",
    "service_name": "Partner of Military Visitor Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3165,6 +3324,7 @@
    "service_key": "nz-partner-of-military-visitor-visa",
    "service_name": "Partner of Military Visitor Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3184,6 +3344,7 @@
    "service_key": "nz-partner-of-military-work-visa",
    "service_name": "Partner of Military Work Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3203,6 +3364,7 @@
    "service_key": "nz-partner-of-military-work-visa",
    "service_name": "Partner of Military Work Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3222,6 +3384,7 @@
    "service_key": "nz-pathway-student-visa",
    "service_name": "Pathway Student Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3241,6 +3404,7 @@
    "service_key": "nz-pathway-student-visa",
    "service_name": "Pathway Student Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3260,6 +3424,7 @@
    "service_key": "nz-permanent-resident-visa",
    "service_name": "Permanent Resident Visa — 50% processed",
    "service_category": "settlement",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3279,6 +3444,7 @@
    "service_key": "nz-permanent-resident-visa",
    "service_name": "Permanent Resident Visa — 80% processed",
    "service_category": "settlement",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3298,6 +3464,7 @@
    "service_key": "nz-peru-working-holiday-visa",
    "service_name": "Peru Working Holiday Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3317,6 +3484,7 @@
    "service_key": "nz-peru-working-holiday-visa",
    "service_name": "Peru Working Holiday Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3336,6 +3504,7 @@
    "service_key": "nz-philippines-special-work-visa",
    "service_name": "Philippines Special Work Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3355,6 +3524,7 @@
    "service_key": "nz-philippines-special-work-visa",
    "service_name": "Philippines Special Work Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3374,6 +3544,7 @@
    "service_key": "nz-philippines-working-holiday-visa",
    "service_name": "Philippines Working Holiday Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3393,6 +3564,7 @@
    "service_key": "nz-philippines-working-holiday-visa",
    "service_name": "Philippines Working Holiday Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3412,6 +3584,7 @@
    "service_key": "nz-pitcairn-islander-visitor-visa",
    "service_name": "Pitcairn Islander Visitor Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3431,6 +3604,7 @@
    "service_key": "nz-pitcairn-islander-visitor-visa",
    "service_name": "Pitcairn Islander Visitor Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3450,6 +3624,7 @@
    "service_key": "nz-poland-working-holiday-visa",
    "service_name": "Poland Working Holiday Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3469,6 +3644,7 @@
    "service_key": "nz-poland-working-holiday-visa",
    "service_name": "Poland Working Holiday Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3488,6 +3664,7 @@
    "service_key": "nz-portugal-working-holiday-visa",
    "service_name": "Portugal Working Holiday Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3507,6 +3684,7 @@
    "service_key": "nz-portugal-working-holiday-visa",
    "service_name": "Portugal Working Holiday Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3526,6 +3704,7 @@
    "service_key": "nz-post-study-work-visa",
    "service_name": "Post Study Work Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3545,6 +3724,7 @@
    "service_key": "nz-post-study-work-visa",
    "service_name": "Post Study Work Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3564,6 +3744,7 @@
    "service_key": "nz-primary-sector-trainees-work-visa",
    "service_name": "Primary Sector Trainees Work Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3583,6 +3764,7 @@
    "service_key": "nz-primary-sector-trainees-work-visa",
    "service_name": "Primary Sector Trainees Work Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3602,6 +3784,7 @@
    "service_key": "nz-private-yacht-or-plane-visitor-visa",
    "service_name": "Private Yacht or Plane Visitor Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3621,6 +3804,7 @@
    "service_key": "nz-private-yacht-or-plane-visitor-visa",
    "service_name": "Private Yacht or Plane Visitor Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3640,6 +3824,7 @@
    "service_key": "nz-recognised-seasonal-employer-limited-visa",
    "service_name": "Recognised Seasonal Employer Limited Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3659,6 +3844,7 @@
    "service_key": "nz-recognised-seasonal-employer-limited-visa",
    "service_name": "Recognised Seasonal Employer Limited Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3678,6 +3864,7 @@
    "service_key": "nz-refugee-claimant-visitor-visa",
    "service_name": "Refugee Claimant Visitor Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3697,6 +3884,7 @@
    "service_key": "nz-refugee-claimant-visitor-visa",
    "service_name": "Refugee Claimant Visitor Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3716,6 +3904,7 @@
    "service_key": "nz-religious-worker-resident-visa",
    "service_name": "Religious Worker Resident Visa — 50% processed",
    "service_category": "settlement",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3735,6 +3924,7 @@
    "service_key": "nz-religious-worker-resident-visa",
    "service_name": "Religious Worker Resident Visa — 80% processed",
    "service_category": "settlement",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3754,6 +3944,7 @@
    "service_key": "nz-religious-worker-work-visa",
    "service_name": "Religious Worker Work Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3773,6 +3964,7 @@
    "service_key": "nz-religious-worker-work-visa",
    "service_name": "Religious Worker Work Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3792,6 +3984,7 @@
    "service_key": "nz-republic-of-korea-special-work-visa",
    "service_name": "Republic of Korea Special Work Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3811,6 +4004,7 @@
    "service_key": "nz-republic-of-korea-special-work-visa",
    "service_name": "Republic of Korea Special Work Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3830,6 +4024,7 @@
    "service_key": "nz-samoan-quota-resident-visa",
    "service_name": "Samoan Quota Resident Visa — 50% processed",
    "service_category": "settlement",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3849,6 +4044,7 @@
    "service_key": "nz-samoan-quota-resident-visa",
    "service_name": "Samoan Quota Resident Visa — 80% processed",
    "service_category": "settlement",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3868,6 +4064,7 @@
    "service_key": "nz-second-or-subsequent-resident-visa",
    "service_name": "Second or Subsequent Resident Visa — 50% processed",
    "service_category": "settlement",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3887,6 +4084,7 @@
    "service_key": "nz-second-or-subsequent-resident-visa",
    "service_name": "Second or Subsequent Resident Visa — 80% processed",
    "service_category": "settlement",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3906,6 +4104,7 @@
    "service_key": "nz-short-term-entertainment-act-visitor-visa",
    "service_name": "Short-term Entertainment Act Visitor Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3925,6 +4124,7 @@
    "service_key": "nz-short-term-entertainment-act-visitor-visa",
    "service_name": "Short-term Entertainment Act Visitor Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3944,6 +4144,7 @@
    "service_key": "nz-singapore-work-exchange-programme-visa",
    "service_name": "Singapore Work Exchange Programme Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3963,6 +4164,7 @@
    "service_key": "nz-singapore-work-exchange-programme-visa",
    "service_name": "Singapore Work Exchange Programme Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -3982,6 +4184,7 @@
    "service_key": "nz-skilled-migrant-category-resident-visa",
    "service_name": "Skilled Migrant Category Resident Visa — 50% processed",
    "service_category": "settlement",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4001,6 +4204,7 @@
    "service_key": "nz-skilled-migrant-category-resident-visa",
    "service_name": "Skilled Migrant Category Resident Visa — 80% processed",
    "service_category": "settlement",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4020,6 +4224,7 @@
    "service_key": "nz-slovakia-working-holiday-visa",
    "service_name": "Slovakia Working Holiday Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4039,6 +4244,7 @@
    "service_key": "nz-slovakia-working-holiday-visa",
    "service_name": "Slovakia Working Holiday Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4058,6 +4264,7 @@
    "service_key": "nz-slovenia-working-holiday-visa",
    "service_name": "Slovenia Working Holiday Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4077,6 +4284,7 @@
    "service_key": "nz-slovenia-working-holiday-visa",
    "service_name": "Slovenia Working Holiday Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4096,6 +4304,7 @@
    "service_key": "nz-south-island-contribution-work-visa",
    "service_name": "South Island Contribution Work Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4115,6 +4324,7 @@
    "service_key": "nz-south-island-contribution-work-visa",
    "service_name": "South Island Contribution Work Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4134,6 +4344,7 @@
    "service_key": "nz-spain-working-holiday-visa",
    "service_name": "Spain Working Holiday Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4153,6 +4364,7 @@
    "service_key": "nz-spain-working-holiday-visa",
    "service_name": "Spain Working Holiday Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4172,6 +4384,7 @@
    "service_key": "nz-specific-purpose-work-visa",
    "service_name": "Specific Purpose Work Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4191,6 +4404,7 @@
    "service_key": "nz-specific-purpose-work-visa",
    "service_name": "Specific Purpose Work Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4210,6 +4424,7 @@
    "service_key": "nz-sports-events-visitor-visa",
    "service_name": "Sports Events Visitor Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4229,6 +4444,7 @@
    "service_key": "nz-sports-events-visitor-visa",
    "service_name": "Sports Events Visitor Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4248,6 +4464,7 @@
    "service_key": "nz-straight-to-residence-visa",
    "service_name": "Straight to Residence Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4267,6 +4484,7 @@
    "service_key": "nz-straight-to-residence-visa",
    "service_name": "Straight to Residence Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4286,6 +4504,7 @@
    "service_key": "nz-student-and-trainee-work-visa",
    "service_name": "Student and Trainee Work Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4305,6 +4524,7 @@
    "service_key": "nz-student-and-trainee-work-visa",
    "service_name": "Student and Trainee Work Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4324,6 +4544,7 @@
    "service_key": "nz-super-yachts-visitor-visa",
    "service_name": "Super Yachts Visitor Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4343,6 +4564,7 @@
    "service_key": "nz-super-yachts-visitor-visa",
    "service_name": "Super Yachts Visitor Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4362,6 +4584,7 @@
    "service_key": "nz-sweden-working-holiday-visa",
    "service_name": "Sweden Working Holiday Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4381,6 +4604,7 @@
    "service_key": "nz-sweden-working-holiday-visa",
    "service_name": "Sweden Working Holiday Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4400,6 +4624,7 @@
    "service_key": "nz-taiwan-working-holiday-visa",
    "service_name": "Taiwan Working Holiday Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4419,6 +4644,7 @@
    "service_key": "nz-taiwan-working-holiday-visa",
    "service_name": "Taiwan Working Holiday Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4438,6 +4664,7 @@
    "service_key": "nz-talent-accredited-employer-resident-visa",
    "service_name": "Talent (Accredited Employer) Resident Visa — 50% processed",
    "service_category": "settlement",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4457,6 +4684,7 @@
    "service_key": "nz-talent-accredited-employer-resident-visa",
    "service_name": "Talent (Accredited Employer) Resident Visa — 80% processed",
    "service_category": "settlement",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4476,6 +4704,7 @@
    "service_key": "nz-talent-accredited-employer-work-visa",
    "service_name": "Talent (Accredited Employer) Work Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4495,6 +4724,7 @@
    "service_key": "nz-talent-accredited-employer-work-visa",
    "service_name": "Talent (Accredited Employer) Work Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4514,6 +4744,7 @@
    "service_key": "nz-temporary-retirement-visitor-visa",
    "service_name": "Temporary Retirement Visitor Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4533,6 +4764,7 @@
    "service_key": "nz-temporary-retirement-visitor-visa",
    "service_name": "Temporary Retirement Visitor Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4552,6 +4784,7 @@
    "service_key": "nz-thai-chefs-work-visa",
    "service_name": "Thai Chefs Work Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4571,6 +4804,7 @@
    "service_key": "nz-thai-chefs-work-visa",
    "service_name": "Thai Chefs Work Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4590,6 +4824,7 @@
    "service_key": "nz-thailand-working-holiday-visa",
    "service_name": "Thailand Working Holiday Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4609,6 +4844,7 @@
    "service_key": "nz-thailand-working-holiday-visa",
    "service_name": "Thailand Working Holiday Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4628,6 +4864,7 @@
    "service_key": "nz-tour-escort-visitor-visa",
    "service_name": "Tour Escort Visitor Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4647,6 +4884,7 @@
    "service_key": "nz-tour-escort-visitor-visa",
    "service_name": "Tour Escort Visitor Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4666,6 +4904,7 @@
    "service_key": "nz-transit-visa",
    "service_name": "Transit Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4685,6 +4924,7 @@
    "service_key": "nz-transit-visa",
    "service_name": "Transit Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4704,6 +4944,7 @@
    "service_key": "nz-turkey-working-holiday-visa",
    "service_name": "Turkey Working Holiday Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4723,6 +4964,7 @@
    "service_key": "nz-turkey-working-holiday-visa",
    "service_name": "Turkey Working Holiday Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4742,6 +4984,7 @@
    "service_key": "nz-united-kingdom-working-holiday-visa",
    "service_name": "United Kingdom Working Holiday Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4761,6 +5004,7 @@
    "service_key": "nz-united-kingdom-working-holiday-visa",
    "service_name": "United Kingdom Working Holiday Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4780,6 +5024,7 @@
    "service_key": "nz-uruguay-working-holiday-visa",
    "service_name": "Uruguay Working Holiday Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4799,6 +5044,7 @@
    "service_key": "nz-uruguay-working-holiday-visa",
    "service_name": "Uruguay Working Holiday Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4818,6 +5064,7 @@
    "service_key": "nz-usa-working-holiday-visa",
    "service_name": "USA Working Holiday Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4837,6 +5084,7 @@
    "service_key": "nz-usa-working-holiday-visa",
    "service_name": "USA Working Holiday Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4856,6 +5104,7 @@
    "service_key": "nz-victims-of-family-violence-resident-visa",
    "service_name": "Victims of Family Violence Resident Visa — 50% processed",
    "service_category": "settlement",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4875,6 +5124,7 @@
    "service_key": "nz-victims-of-family-violence-resident-visa",
    "service_name": "Victims of Family Violence Resident Visa — 80% processed",
    "service_category": "settlement",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4894,6 +5144,7 @@
    "service_key": "nz-victims-of-family-violence-work-visa",
    "service_name": "Victims of Family Violence Work Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4913,6 +5164,7 @@
    "service_key": "nz-victims-of-family-violence-work-visa",
    "service_name": "Victims of Family Violence Work Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4932,6 +5184,7 @@
    "service_key": "nz-vietnam-special-work-visa",
    "service_name": "Vietnam Special Work Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4951,6 +5204,7 @@
    "service_key": "nz-vietnam-special-work-visa",
    "service_name": "Vietnam Special Work Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4970,6 +5224,7 @@
    "service_key": "nz-vietnam-working-holiday-visa",
    "service_name": "Vietnam Working Holiday Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -4989,6 +5244,7 @@
    "service_key": "nz-vietnam-working-holiday-visa",
    "service_name": "Vietnam Working Holiday Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -5008,6 +5264,7 @@
    "service_key": "nz-visiting-media-visitor-visa",
    "service_name": "Visiting Media Visitor Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -5027,6 +5284,7 @@
    "service_key": "nz-visiting-media-visitor-visa",
    "service_name": "Visiting Media Visitor Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -5046,6 +5304,7 @@
    "service_key": "nz-visitor-visa",
    "service_name": "Visitor Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -5065,6 +5324,7 @@
    "service_key": "nz-visitor-visa",
    "service_name": "Visitor Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -5084,6 +5344,7 @@
    "service_key": "nz-vocational-trainee-student-visa",
    "service_name": "Vocational Trainee Student Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -5103,6 +5364,7 @@
    "service_key": "nz-vocational-trainee-student-visa",
    "service_name": "Vocational Trainee Student Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -5122,6 +5384,7 @@
    "service_key": "nz-work-exchange-scheme-work-visa",
    "service_name": "Work Exchange Scheme Work Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -5141,6 +5404,7 @@
    "service_key": "nz-work-exchange-scheme-work-visa",
    "service_name": "Work Exchange Scheme Work Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -5160,6 +5424,7 @@
    "service_key": "nz-work-to-residence-visa",
    "service_name": "Work to Residence Visa — 50% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -5179,6 +5444,7 @@
    "service_key": "nz-work-to-residence-visa",
    "service_name": "Work to Residence Visa — 80% processed",
    "service_category": "visa",
+   "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {

@@ -3,7 +3,7 @@
  "service_name": "Work permit (applying from outside Canada)",
  "jurisdiction": "CA",
  "count": 212,
- "generated_at": "2026-08-25T14:44:18.851Z",
+ "generated_at": "2026-08-27T23:39:25.471Z",
  "records": [
   {
    "entity_id": "ca-work-permit--ad",
@@ -11,6 +11,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "AD",
    "applicant_country_name": "Andorra",
    "latest": {
@@ -30,6 +31,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "AE",
    "applicant_country_name": "United Arab Emirates",
    "latest": {
@@ -49,6 +51,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "AF",
    "applicant_country_name": "Afghanistan",
    "latest": {
@@ -68,6 +71,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "AG",
    "applicant_country_name": "Antigua & Barbuda",
    "latest": {
@@ -87,6 +91,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "AI",
    "applicant_country_name": "Anguilla",
    "latest": {
@@ -106,6 +111,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "AL",
    "applicant_country_name": "Albania",
    "latest": {
@@ -125,6 +131,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "AM",
    "applicant_country_name": "Armenia",
    "latest": {
@@ -144,6 +151,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "AO",
    "applicant_country_name": "Angola",
    "latest": {
@@ -163,6 +171,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "AR",
    "applicant_country_name": "Argentina",
    "latest": {
@@ -182,6 +191,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "AT",
    "applicant_country_name": "Austria",
    "latest": {
@@ -201,6 +211,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "AU",
    "applicant_country_name": "Australia",
    "latest": {
@@ -220,6 +231,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "AW",
    "applicant_country_name": "Aruba",
    "latest": {
@@ -239,6 +251,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "AZ",
    "applicant_country_name": "Azerbaijan",
    "latest": {
@@ -258,6 +271,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "BA",
    "applicant_country_name": "Bosnia & Herzegovina",
    "latest": {
@@ -277,6 +291,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "BB",
    "applicant_country_name": "Barbados",
    "latest": {
@@ -296,6 +311,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "BD",
    "applicant_country_name": "Bangladesh",
    "latest": {
@@ -315,6 +331,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "BE",
    "applicant_country_name": "Belgium",
    "latest": {
@@ -334,6 +351,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "BF",
    "applicant_country_name": "Burkina Faso",
    "latest": {
@@ -353,6 +371,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "BG",
    "applicant_country_name": "Bulgaria",
    "latest": {
@@ -372,6 +391,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "BH",
    "applicant_country_name": "Bahrain",
    "latest": {
@@ -391,6 +411,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "BI",
    "applicant_country_name": "Burundi",
    "latest": {
@@ -410,6 +431,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "BJ",
    "applicant_country_name": "Benin",
    "latest": {
@@ -429,6 +451,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "BM",
    "applicant_country_name": "Bermuda",
    "latest": {
@@ -448,6 +471,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "BN",
    "applicant_country_name": "Brunei",
    "latest": {
@@ -467,6 +491,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "BO",
    "applicant_country_name": "Bolivia",
    "latest": {
@@ -486,6 +511,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "BQ",
    "applicant_country_name": "Caribbean Netherlands",
    "latest": {
@@ -505,6 +531,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "BR",
    "applicant_country_name": "Brazil",
    "latest": {
@@ -524,6 +551,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "BS",
    "applicant_country_name": "Bahamas",
    "latest": {
@@ -543,6 +571,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "BT",
    "applicant_country_name": "Bhutan",
    "latest": {
@@ -562,6 +591,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "BW",
    "applicant_country_name": "Botswana",
    "latest": {
@@ -581,6 +611,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "BY",
    "applicant_country_name": "Belarus",
    "latest": {
@@ -600,6 +631,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "BZ",
    "applicant_country_name": "Belize",
    "latest": {
@@ -619,6 +651,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "CA",
    "applicant_country_name": "Canada",
    "latest": {
@@ -638,6 +671,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "CD",
    "applicant_country_name": "Congo - Kinshasa",
    "latest": {
@@ -657,6 +691,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "CF",
    "applicant_country_name": "Central African Republic",
    "latest": {
@@ -676,6 +711,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "CG",
    "applicant_country_name": "Congo - Brazzaville",
    "latest": {
@@ -695,6 +731,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "CH",
    "applicant_country_name": "Switzerland",
    "latest": {
@@ -714,6 +751,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "CI",
    "applicant_country_name": "Côte d’Ivoire",
    "latest": {
@@ -733,6 +771,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "CL",
    "applicant_country_name": "Chile",
    "latest": {
@@ -752,6 +791,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "CM",
    "applicant_country_name": "Cameroon",
    "latest": {
@@ -771,6 +811,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "CN",
    "applicant_country_name": "China",
    "latest": {
@@ -790,6 +831,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "CO",
    "applicant_country_name": "Colombia",
    "latest": {
@@ -809,6 +851,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "CR",
    "applicant_country_name": "Costa Rica",
    "latest": {
@@ -828,6 +871,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "CU",
    "applicant_country_name": "Cuba",
    "latest": {
@@ -847,6 +891,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "CV",
    "applicant_country_name": "Cape Verde",
    "latest": {
@@ -866,6 +911,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "CY",
    "applicant_country_name": "Cyprus",
    "latest": {
@@ -885,6 +931,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "CZ",
    "applicant_country_name": "Czechia",
    "latest": {
@@ -904,6 +951,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "DE",
    "applicant_country_name": "Germany",
    "latest": {
@@ -923,6 +971,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "DJ",
    "applicant_country_name": "Djibouti",
    "latest": {
@@ -942,6 +991,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "DK",
    "applicant_country_name": "Denmark",
    "latest": {
@@ -961,6 +1011,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "DM",
    "applicant_country_name": "Dominica",
    "latest": {
@@ -980,6 +1031,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "DO",
    "applicant_country_name": "Dominican Republic",
    "latest": {
@@ -999,6 +1051,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "DZ",
    "applicant_country_name": "Algeria",
    "latest": {
@@ -1018,6 +1071,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "EC",
    "applicant_country_name": "Ecuador",
    "latest": {
@@ -1037,6 +1091,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "EE",
    "applicant_country_name": "Estonia",
    "latest": {
@@ -1056,6 +1111,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "EG",
    "applicant_country_name": "Egypt",
    "latest": {
@@ -1075,6 +1131,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "ER",
    "applicant_country_name": "Eritrea",
    "latest": {
@@ -1094,6 +1151,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "ES",
    "applicant_country_name": "Spain",
    "latest": {
@@ -1113,6 +1171,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "ET",
    "applicant_country_name": "Ethiopia",
    "latest": {
@@ -1132,6 +1191,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "FI",
    "applicant_country_name": "Finland",
    "latest": {
@@ -1151,6 +1211,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "FJ",
    "applicant_country_name": "Fiji",
    "latest": {
@@ -1170,6 +1231,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "FM",
    "applicant_country_name": "Micronesia",
    "latest": {
@@ -1189,6 +1251,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "FR",
    "applicant_country_name": "France",
    "latest": {
@@ -1208,6 +1271,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "GA",
    "applicant_country_name": "Gabon",
    "latest": {
@@ -1227,6 +1291,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "GB",
    "applicant_country_name": "United Kingdom",
    "latest": {
@@ -1246,6 +1311,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "GD",
    "applicant_country_name": "Grenada",
    "latest": {
@@ -1265,6 +1331,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "GE",
    "applicant_country_name": "Georgia",
    "latest": {
@@ -1284,6 +1351,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "GH",
    "applicant_country_name": "Ghana",
    "latest": {
@@ -1303,6 +1371,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "GL",
    "applicant_country_name": "Greenland",
    "latest": {
@@ -1322,6 +1391,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "GM",
    "applicant_country_name": "Gambia",
    "latest": {
@@ -1341,6 +1411,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "GN",
    "applicant_country_name": "Guinea",
    "latest": {
@@ -1360,6 +1431,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "GQ",
    "applicant_country_name": "Equatorial Guinea",
    "latest": {
@@ -1379,6 +1451,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "GR",
    "applicant_country_name": "Greece",
    "latest": {
@@ -1398,6 +1471,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "GT",
    "applicant_country_name": "Guatemala",
    "latest": {
@@ -1417,6 +1491,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "GW",
    "applicant_country_name": "Guinea-Bissau",
    "latest": {
@@ -1436,6 +1511,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "GY",
    "applicant_country_name": "Guyana",
    "latest": {
@@ -1455,6 +1531,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "HK",
    "applicant_country_name": "Hong Kong SAR China",
    "latest": {
@@ -1474,6 +1551,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "HN",
    "applicant_country_name": "Honduras",
    "latest": {
@@ -1493,6 +1571,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "HR",
    "applicant_country_name": "Croatia",
    "latest": {
@@ -1512,6 +1591,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "HT",
    "applicant_country_name": "Haiti",
    "latest": {
@@ -1531,6 +1611,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "HU",
    "applicant_country_name": "Hungary",
    "latest": {
@@ -1550,6 +1631,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "ID",
    "applicant_country_name": "Indonesia",
    "latest": {
@@ -1569,6 +1651,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "IE",
    "applicant_country_name": "Ireland",
    "latest": {
@@ -1588,6 +1671,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "IL",
    "applicant_country_name": "Israel",
    "latest": {
@@ -1607,6 +1691,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "IN",
    "applicant_country_name": "India",
    "latest": {
@@ -1626,6 +1711,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "IO",
    "applicant_country_name": "British Indian Ocean Territory",
    "latest": {
@@ -1645,6 +1731,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "IQ",
    "applicant_country_name": "Iraq",
    "latest": {
@@ -1664,6 +1751,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "IR",
    "applicant_country_name": "Iran",
    "latest": {
@@ -1683,6 +1771,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "IS",
    "applicant_country_name": "Iceland",
    "latest": {
@@ -1702,6 +1791,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "IT",
    "applicant_country_name": "Italy",
    "latest": {
@@ -1721,6 +1811,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "JM",
    "applicant_country_name": "Jamaica",
    "latest": {
@@ -1740,6 +1831,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "JO",
    "applicant_country_name": "Jordan",
    "latest": {
@@ -1759,6 +1851,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "JP",
    "applicant_country_name": "Japan",
    "latest": {
@@ -1778,6 +1871,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "KE",
    "applicant_country_name": "Kenya",
    "latest": {
@@ -1797,6 +1891,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "KG",
    "applicant_country_name": "Kyrgyzstan",
    "latest": {
@@ -1816,6 +1911,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "KH",
    "applicant_country_name": "Cambodia",
    "latest": {
@@ -1835,6 +1931,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "KI",
    "applicant_country_name": "Kiribati",
    "latest": {
@@ -1854,6 +1951,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "KM",
    "applicant_country_name": "Comoros",
    "latest": {
@@ -1873,6 +1971,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "KN",
    "applicant_country_name": "St. Kitts & Nevis",
    "latest": {
@@ -1892,6 +1991,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "KP",
    "applicant_country_name": "North Korea",
    "latest": {
@@ -1911,6 +2011,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "KR",
    "applicant_country_name": "South Korea",
    "latest": {
@@ -1930,6 +2031,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "KW",
    "applicant_country_name": "Kuwait",
    "latest": {
@@ -1949,6 +2051,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "KY",
    "applicant_country_name": "Cayman Islands",
    "latest": {
@@ -1968,6 +2071,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "KZ",
    "applicant_country_name": "Kazakhstan",
    "latest": {
@@ -1987,6 +2091,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "LA",
    "applicant_country_name": "Laos",
    "latest": {
@@ -2006,6 +2111,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "LB",
    "applicant_country_name": "Lebanon",
    "latest": {
@@ -2025,6 +2131,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "LC",
    "applicant_country_name": "St. Lucia",
    "latest": {
@@ -2044,6 +2151,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "LI",
    "applicant_country_name": "Liechtenstein",
    "latest": {
@@ -2063,6 +2171,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "LK",
    "applicant_country_name": "Sri Lanka",
    "latest": {
@@ -2082,6 +2191,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "LR",
    "applicant_country_name": "Liberia",
    "latest": {
@@ -2101,6 +2211,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "LS",
    "applicant_country_name": "Lesotho",
    "latest": {
@@ -2120,6 +2231,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "LT",
    "applicant_country_name": "Lithuania",
    "latest": {
@@ -2139,6 +2251,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "LU",
    "applicant_country_name": "Luxembourg",
    "latest": {
@@ -2158,6 +2271,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "LV",
    "applicant_country_name": "Latvia",
    "latest": {
@@ -2177,6 +2291,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "LY",
    "applicant_country_name": "Libya",
    "latest": {
@@ -2196,6 +2311,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "MA",
    "applicant_country_name": "Morocco",
    "latest": {
@@ -2215,6 +2331,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "MC",
    "applicant_country_name": "Monaco",
    "latest": {
@@ -2234,6 +2351,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "MD",
    "applicant_country_name": "Moldova",
    "latest": {
@@ -2253,6 +2371,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "ME",
    "applicant_country_name": "Montenegro",
    "latest": {
@@ -2272,6 +2391,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "MG",
    "applicant_country_name": "Madagascar",
    "latest": {
@@ -2291,6 +2411,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "MH",
    "applicant_country_name": "Marshall Islands",
    "latest": {
@@ -2310,6 +2431,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "MK",
    "applicant_country_name": "North Macedonia",
    "latest": {
@@ -2329,6 +2451,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "ML",
    "applicant_country_name": "Mali",
    "latest": {
@@ -2348,6 +2471,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "MM",
    "applicant_country_name": "Myanmar (Burma)",
    "latest": {
@@ -2367,6 +2491,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "MN",
    "applicant_country_name": "Mongolia",
    "latest": {
@@ -2386,6 +2511,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "MO",
    "applicant_country_name": "Macao SAR China",
    "latest": {
@@ -2405,6 +2531,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "MQ",
    "applicant_country_name": "Martinique",
    "latest": {
@@ -2424,6 +2551,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "MR",
    "applicant_country_name": "Mauritania",
    "latest": {
@@ -2443,6 +2571,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "MT",
    "applicant_country_name": "Malta",
    "latest": {
@@ -2462,6 +2591,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "MU",
    "applicant_country_name": "Mauritius",
    "latest": {
@@ -2481,6 +2611,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "MV",
    "applicant_country_name": "Maldives",
    "latest": {
@@ -2500,6 +2631,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "MW",
    "applicant_country_name": "Malawi",
    "latest": {
@@ -2519,6 +2651,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "MX",
    "applicant_country_name": "Mexico",
    "latest": {
@@ -2538,6 +2671,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "MY",
    "applicant_country_name": "Malaysia",
    "latest": {
@@ -2557,6 +2691,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "MZ",
    "applicant_country_name": "Mozambique",
    "latest": {
@@ -2576,6 +2711,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "NA",
    "applicant_country_name": "Namibia",
    "latest": {
@@ -2595,6 +2731,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "NC",
    "applicant_country_name": "New Caledonia",
    "latest": {
@@ -2614,6 +2751,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "NE",
    "applicant_country_name": "Niger",
    "latest": {
@@ -2633,6 +2771,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "NG",
    "applicant_country_name": "Nigeria",
    "latest": {
@@ -2652,6 +2791,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "NI",
    "applicant_country_name": "Nicaragua",
    "latest": {
@@ -2671,6 +2811,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "NL",
    "applicant_country_name": "Netherlands",
    "latest": {
@@ -2690,6 +2831,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "NO",
    "applicant_country_name": "Norway",
    "latest": {
@@ -2709,6 +2851,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "NP",
    "applicant_country_name": "Nepal",
    "latest": {
@@ -2728,6 +2871,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "NR",
    "applicant_country_name": "Nauru",
    "latest": {
@@ -2747,6 +2891,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "NZ",
    "applicant_country_name": "New Zealand",
    "latest": {
@@ -2766,6 +2911,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "OM",
    "applicant_country_name": "Oman",
    "latest": {
@@ -2785,6 +2931,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "PA",
    "applicant_country_name": "Panama",
    "latest": {
@@ -2804,6 +2951,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "PE",
    "applicant_country_name": "Peru",
    "latest": {
@@ -2823,6 +2971,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "PF",
    "applicant_country_name": "French Polynesia",
    "latest": {
@@ -2842,6 +2991,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "PG",
    "applicant_country_name": "Papua New Guinea",
    "latest": {
@@ -2861,6 +3011,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "PH",
    "applicant_country_name": "Philippines",
    "latest": {
@@ -2880,6 +3031,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "PK",
    "applicant_country_name": "Pakistan",
    "latest": {
@@ -2899,6 +3051,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "PL",
    "applicant_country_name": "Poland",
    "latest": {
@@ -2918,6 +3071,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "PR",
    "applicant_country_name": "Puerto Rico",
    "latest": {
@@ -2937,6 +3091,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "PS",
    "applicant_country_name": "Palestinian Territories",
    "latest": {
@@ -2956,6 +3111,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "PT",
    "applicant_country_name": "Portugal",
    "latest": {
@@ -2975,6 +3131,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "PY",
    "applicant_country_name": "Paraguay",
    "latest": {
@@ -2994,6 +3151,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "QA",
    "applicant_country_name": "Qatar",
    "latest": {
@@ -3013,6 +3171,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "RO",
    "applicant_country_name": "Romania",
    "latest": {
@@ -3032,6 +3191,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "RS",
    "applicant_country_name": "Serbia",
    "latest": {
@@ -3051,6 +3211,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "RU",
    "applicant_country_name": "Russia",
    "latest": {
@@ -3070,6 +3231,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "RW",
    "applicant_country_name": "Rwanda",
    "latest": {
@@ -3089,6 +3251,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "SA",
    "applicant_country_name": "Saudi Arabia",
    "latest": {
@@ -3108,6 +3271,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "SB",
    "applicant_country_name": "Solomon Islands",
    "latest": {
@@ -3127,6 +3291,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "SC",
    "applicant_country_name": "Seychelles",
    "latest": {
@@ -3146,6 +3311,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "SD",
    "applicant_country_name": "Sudan",
    "latest": {
@@ -3165,6 +3331,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "SE",
    "applicant_country_name": "Sweden",
    "latest": {
@@ -3184,6 +3351,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "SG",
    "applicant_country_name": "Singapore",
    "latest": {
@@ -3203,6 +3371,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "SI",
    "applicant_country_name": "Slovenia",
    "latest": {
@@ -3222,6 +3391,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "SK",
    "applicant_country_name": "Slovakia",
    "latest": {
@@ -3241,6 +3411,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "SL",
    "applicant_country_name": "Sierra Leone",
    "latest": {
@@ -3260,6 +3431,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "SM",
    "applicant_country_name": "San Marino",
    "latest": {
@@ -3279,6 +3451,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "SN",
    "applicant_country_name": "Senegal",
    "latest": {
@@ -3298,6 +3471,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "SO",
    "applicant_country_name": "Somalia",
    "latest": {
@@ -3317,6 +3491,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "SR",
    "applicant_country_name": "Suriname",
    "latest": {
@@ -3336,6 +3511,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "SS",
    "applicant_country_name": "South Sudan",
    "latest": {
@@ -3355,6 +3531,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "ST",
    "applicant_country_name": "São Tomé & Príncipe",
    "latest": {
@@ -3374,6 +3551,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "SV",
    "applicant_country_name": "El Salvador",
    "latest": {
@@ -3393,6 +3571,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "SY",
    "applicant_country_name": "Syria",
    "latest": {
@@ -3412,6 +3591,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "SZ",
    "applicant_country_name": "Eswatini",
    "latest": {
@@ -3431,6 +3611,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "TC",
    "applicant_country_name": "Turks & Caicos Islands",
    "latest": {
@@ -3450,6 +3631,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "TD",
    "applicant_country_name": "Chad",
    "latest": {
@@ -3469,6 +3651,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "TG",
    "applicant_country_name": "Togo",
    "latest": {
@@ -3488,6 +3671,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "TH",
    "applicant_country_name": "Thailand",
    "latest": {
@@ -3507,6 +3691,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "TJ",
    "applicant_country_name": "Tajikistan",
    "latest": {
@@ -3526,6 +3711,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "TL",
    "applicant_country_name": "Timor-Leste",
    "latest": {
@@ -3545,6 +3731,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "TM",
    "applicant_country_name": "Turkmenistan",
    "latest": {
@@ -3564,6 +3751,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "TN",
    "applicant_country_name": "Tunisia",
    "latest": {
@@ -3583,6 +3771,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "TO",
    "applicant_country_name": "Tonga",
    "latest": {
@@ -3602,6 +3791,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "TR",
    "applicant_country_name": "Türkiye",
    "latest": {
@@ -3621,6 +3811,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "TT",
    "applicant_country_name": "Trinidad & Tobago",
    "latest": {
@@ -3640,6 +3831,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "TV",
    "applicant_country_name": "Tuvalu",
    "latest": {
@@ -3659,6 +3851,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "TW",
    "applicant_country_name": "Taiwan",
    "latest": {
@@ -3678,6 +3871,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "TZ",
    "applicant_country_name": "Tanzania",
    "latest": {
@@ -3697,6 +3891,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "UA",
    "applicant_country_name": "Ukraine",
    "latest": {
@@ -3716,6 +3911,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "UG",
    "applicant_country_name": "Uganda",
    "latest": {
@@ -3735,6 +3931,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "US",
    "applicant_country_name": "United States",
    "latest": {
@@ -3754,6 +3951,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "UY",
    "applicant_country_name": "Uruguay",
    "latest": {
@@ -3773,6 +3971,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "UZ",
    "applicant_country_name": "Uzbekistan",
    "latest": {
@@ -3792,6 +3991,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "VA",
    "applicant_country_name": "Vatican City",
    "latest": {
@@ -3811,6 +4011,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "VC",
    "applicant_country_name": "St. Vincent & Grenadines",
    "latest": {
@@ -3830,6 +4031,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "VE",
    "applicant_country_name": "Venezuela",
    "latest": {
@@ -3849,6 +4051,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "VI",
    "applicant_country_name": "U.S. Virgin Islands",
    "latest": {
@@ -3868,6 +4071,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "VN",
    "applicant_country_name": "Vietnam",
    "latest": {
@@ -3887,6 +4091,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "VU",
    "applicant_country_name": "Vanuatu",
    "latest": {
@@ -3906,6 +4111,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "WB",
    "applicant_country_name": "WB",
    "latest": {
@@ -3925,6 +4131,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "WS",
    "applicant_country_name": "Samoa",
    "latest": {
@@ -3944,6 +4151,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "XK",
    "applicant_country_name": "Kosovo",
    "latest": {
@@ -3963,6 +4171,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "YE",
    "applicant_country_name": "Yemen",
    "latest": {
@@ -3982,6 +4191,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "ZA",
    "applicant_country_name": "South Africa",
    "latest": {
@@ -4001,6 +4211,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "ZM",
    "applicant_country_name": "Zambia",
    "latest": {
@@ -4020,6 +4231,7 @@
    "service_key": "ca-work-permit",
    "service_name": "Work permit (applying from outside Canada)",
    "service_category": "permit",
+   "metric_type": "backward",
    "applicant_country": "ZW",
    "applicant_country_name": "Zimbabwe",
    "latest": {

@@ -4,6 +4,7 @@
  "service_key": "ca-citizenship-adoption-part1",
  "service_name": "Citizenship for a person adopted abroad (Part 1)",
  "service_category": "settlement",
+ "metric_type": "published",
  "applicant_country": null,
  "applicant_country_name": null,
  "latest": {

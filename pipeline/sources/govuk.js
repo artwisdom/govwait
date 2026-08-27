@@ -52,6 +52,7 @@ export function parseGovukTables({ body, sourceId, humanUrl, keyPrefix, retrieve
         source_id: sourceId,
         jurisdiction: 'GB',
         service_category: 'visa',
+        metric_type: 'service_standard',
         service_key: key,
         service_name: `${category} (${section || 'UK visa'})`,
         applicant_country: null,

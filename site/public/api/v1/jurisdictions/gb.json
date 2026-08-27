@@ -1,7 +1,7 @@
 {
  "jurisdiction": "GB",
  "count": 77,
- "generated_at": "2026-08-25T14:44:18.851Z",
+ "generated_at": "2026-08-27T23:39:25.471Z",
  "services": [
   "gb-family-visas--adult-coming-to-be-cared-for-by-a-relative",
   "gb-family-visas--child",
@@ -88,6 +88,7 @@
    "service_key": "gb-family-visas--adult-coming-to-be-cared-for-by-a-relative",
    "service_name": "Adult coming to be cared for by a relative (Family visas)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -107,6 +108,7 @@
    "service_key": "gb-family-visas--child",
    "service_name": "Child (Family visas)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -126,6 +128,7 @@
    "service_key": "gb-family-visas--parent",
    "service_name": "Parent (Family visas)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -145,6 +148,7 @@
    "service_key": "gb-family-visas--partner-or-spouse",
    "service_name": "Partner or spouse (Family visas)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -164,6 +168,7 @@
    "service_key": "gb-in-uk-family-visas--adult-coming-to-be-cared-for-by-a-relative",
    "service_name": "Adult coming to be cared for by a relative (Family visas, applying inside the UK)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -183,6 +188,7 @@
    "service_key": "gb-in-uk-family-visas--child",
    "service_name": "Child (Family visas, applying inside the UK)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -202,6 +208,7 @@
    "service_key": "gb-in-uk-family-visas--parent",
    "service_name": "Parent (Family visas, applying inside the UK)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -221,6 +228,7 @@
    "service_key": "gb-in-uk-family-visas--partner-or-spouse-meeting-minimum-income-and-english-lang",
    "service_name": "Partner or spouse (meeting minimum income and English language requirements) (Family visas, applying inside the UK)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -240,6 +248,7 @@
    "service_key": "gb-in-uk-family-visas--partner-or-spouse-private-life-minimum-income-and-english",
    "service_name": "Partner or spouse - private life (minimum income and English language not required) (Family visas, applying inside the UK)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -259,6 +268,7 @@
    "service_key": "gb-in-uk-other-visas-and-permits--british-national-overseas",
    "service_name": "British National (Overseas) (Other visas and permits, applying inside the UK)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -278,6 +288,7 @@
    "service_key": "gb-in-uk-other-visas-and-permits--entrepreneur",
    "service_name": "Entrepreneur (Other visas and permits, applying inside the UK)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -297,6 +308,7 @@
    "service_key": "gb-in-uk-other-visas-and-permits--international-sportsperson",
    "service_name": "International Sportsperson (Other visas and permits, applying inside the UK)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -316,6 +328,7 @@
    "service_key": "gb-in-uk-other-visas-and-permits--investor",
    "service_name": "Investor (Other visas and permits, applying inside the UK)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -335,6 +348,7 @@
    "service_key": "gb-in-uk-other-visas-and-permits--minister-of-religion",
    "service_name": "Minister of Religion (Other visas and permits, applying inside the UK)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -354,6 +368,7 @@
    "service_key": "gb-in-uk-other-visas-and-permits--scale-up-worker",
    "service_name": "Scale-up Worker (Other visas and permits, applying inside the UK)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -373,6 +388,7 @@
    "service_key": "gb-in-uk-other-visas-and-permits--turkish-businessperson",
    "service_name": "Turkish Businessperson (Other visas and permits, applying inside the UK)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -392,6 +408,7 @@
    "service_key": "gb-in-uk-other-visas-and-permits--turkish-worker",
    "service_name": "Turkish Worker (Other visas and permits, applying inside the UK)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -411,6 +428,7 @@
    "service_key": "gb-in-uk-popular-work-visas--health-and-care-worker",
    "service_name": "Health and Care Worker (Popular work visas, applying inside the UK)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -430,6 +448,7 @@
    "service_key": "gb-in-uk-popular-work-visas--skilled-worker",
    "service_name": "Skilled Worker (Popular work visas, applying inside the UK)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -449,6 +468,7 @@
    "service_key": "gb-in-uk-study-visas--child-student",
    "service_name": "Child Student (Study visas, applying inside the UK)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -468,6 +488,7 @@
    "service_key": "gb-in-uk-study-visas--student",
    "service_name": "Student (Study visas, applying inside the UK)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -487,6 +508,7 @@
    "service_key": "gb-in-uk-temporary-work-visas--charity-worker",
    "service_name": "Charity Worker (Temporary work visas, applying inside the UK)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -506,6 +528,7 @@
    "service_key": "gb-in-uk-temporary-work-visas--creative-worker",
    "service_name": "Creative Worker (Temporary work visas, applying inside the UK)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -525,6 +548,7 @@
    "service_key": "gb-in-uk-temporary-work-visas--government-authorised-exchange",
    "service_name": "Government Authorised Exchange (Temporary work visas, applying inside the UK)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -544,6 +568,7 @@
    "service_key": "gb-in-uk-temporary-work-visas--international-agreement",
    "service_name": "International Agreement (Temporary work visas, applying inside the UK)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -563,6 +588,7 @@
    "service_key": "gb-in-uk-temporary-work-visas--religious-worker",
    "service_name": "Religious Worker (Temporary work visas, applying inside the UK)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -582,6 +608,7 @@
    "service_key": "gb-in-uk-ukraine-visas--ukraine-permission-extension-scheme",
    "service_name": "Ukraine Permission Extension scheme (Ukraine visas, applying inside the UK)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -601,6 +628,7 @@
    "service_key": "gb-in-uk-visit-visa--standard-visitor",
    "service_name": "Standard Visitor (Visit visa, applying inside the UK)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -620,6 +648,7 @@
    "service_key": "gb-in-uk-work-visas-for-an-overseas-employer--overseas-domestic-worker",
    "service_name": "Overseas Domestic Worker (Work visas for an overseas employer, applying inside the UK)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -639,6 +668,7 @@
    "service_key": "gb-in-uk-work-visas-for-an-overseas-employer--representative-of-an-overseas-busi",
    "service_name": "Representative of an Overseas Business (Work visas for an overseas employer, applying inside the UK)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -658,6 +688,7 @@
    "service_key": "gb-in-uk-work-visas-for-an-overseas-employer--secondment-worker",
    "service_name": "Secondment Worker (Work visas for an overseas employer, applying inside the UK)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -677,6 +708,7 @@
    "service_key": "gb-in-uk-work-visas-for-an-overseas-employer--senior-or-specialist-worker",
    "service_name": "Senior or Specialist Worker (Work visas for an overseas employer, applying inside the UK)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -696,6 +728,7 @@
    "service_key": "gb-in-uk-work-visas-for-an-overseas-employer--service-supplier",
    "service_name": "Service Supplier (Work visas for an overseas employer, applying inside the UK)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -715,6 +748,7 @@
    "service_key": "gb-in-uk-work-visas-for-an-overseas-employer--uk-expansion-worker",
    "service_name": "UK Expansion Worker (Work visas for an overseas employer, applying inside the UK)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -734,6 +768,7 @@
    "service_key": "gb-in-uk-work-visas-to-start-a-business--innovator-founder",
    "service_name": "Innovator Founder (Work visas to start a business, applying inside the UK)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -753,6 +788,7 @@
    "service_key": "gb-in-uk-work-visas-to-start-a-business--start-up",
    "service_name": "Start-up (Work visas to start a business, applying inside the UK)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -772,6 +808,7 @@
    "service_key": "gb-in-uk-work-visas-you-can-apply-for-without-a-job-offer--global-talent",
    "service_name": "Global Talent (Work visas you can apply for without a job offer, applying inside the UK)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -791,6 +828,7 @@
    "service_key": "gb-in-uk-work-visas-you-can-apply-for-without-a-job-offer--graduate",
    "service_name": "Graduate (Work visas you can apply for without a job offer, applying inside the UK)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -810,6 +848,7 @@
    "service_key": "gb-in-uk-work-visas-you-can-apply-for-without-a-job-offer--high-potential-indivi",
    "service_name": "High Potential Individual (HPI) (Work visas you can apply for without a job offer, applying inside the UK)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -829,6 +868,7 @@
    "service_key": "gb-in-uk-work-visas-you-can-apply-for-without-a-job-offer--overseas-domestic-wor",
    "service_name": "Overseas Domestic Worker (Work visas you can apply for without a job offer, applying inside the UK)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -848,6 +888,7 @@
    "service_key": "gb-in-uk-work-visas-you-can-apply-for-without-a-job-offer--uk-ancestry",
    "service_name": "UK Ancestry (Work visas you can apply for without a job offer, applying inside the UK)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -867,6 +908,7 @@
    "service_key": "gb-other-visas-and-permits--british-national-overseas",
    "service_name": "British National (Overseas) (Other visas and permits)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -886,6 +928,7 @@
    "service_key": "gb-other-visas-and-permits--international-sportsperson",
    "service_name": "International Sportsperson (Other visas and permits)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -905,6 +948,7 @@
    "service_key": "gb-other-visas-and-permits--minister-of-religion",
    "service_name": "Minister of Religion (Other visas and permits)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -924,6 +968,7 @@
    "service_key": "gb-other-visas-and-permits--returning-resident-visa",
    "service_name": "Returning Resident visa (Other visas and permits)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -943,6 +988,7 @@
    "service_key": "gb-other-visas-and-permits--scale-up-worker",
    "service_name": "Scale-up Worker (Other visas and permits)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -962,6 +1008,7 @@
    "service_key": "gb-passport-standard",
    "service_name": "Passport (standard application)",
    "service_category": "passport",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -981,6 +1028,7 @@
    "service_key": "gb-popular-work-visas--health-and-care-worker",
    "service_name": "Health and Care Worker (Popular work visas)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1000,6 +1048,7 @@
    "service_key": "gb-popular-work-visas--skilled-worker",
    "service_name": "Skilled Worker (Popular work visas)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1019,6 +1068,7 @@
    "service_key": "gb-study-visas--child-student",
    "service_name": "Child Student (Study visas)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1038,6 +1088,7 @@
    "service_key": "gb-study-visas--student",
    "service_name": "Student (Study visas)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1057,6 +1108,7 @@
    "service_key": "gb-study-visas--study-english-in-the-uk-short-term-student-6-to-11-month-english",
    "service_name": "Study English in the UK: Short-term student (6 to 11 month English language courses) (Study visas)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1076,6 +1128,7 @@
    "service_key": "gb-temporary-work-visas--charity-worker",
    "service_name": "Charity Worker (Temporary work visas)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1095,6 +1148,7 @@
    "service_key": "gb-temporary-work-visas--creative-worker",
    "service_name": "Creative Worker (Temporary work visas)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1114,6 +1168,7 @@
    "service_key": "gb-temporary-work-visas--government-authorised-exchange",
    "service_name": "Government Authorised Exchange (Temporary work visas)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1133,6 +1188,7 @@
    "service_key": "gb-temporary-work-visas--international-agreement",
    "service_name": "International Agreement (Temporary work visas)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1152,6 +1208,7 @@
    "service_key": "gb-temporary-work-visas--religious-worker",
    "service_name": "Religious Worker (Temporary work visas)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1171,6 +1228,7 @@
    "service_key": "gb-temporary-work-visas--seasonal-worker",
    "service_name": "Seasonal Worker (Temporary work visas)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1190,6 +1248,7 @@
    "service_key": "gb-ukraine-visas--homes-for-ukraine",
    "service_name": "Homes for Ukraine (Ukraine visas)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1209,6 +1268,7 @@
    "service_key": "gb-visit-visas--chinese-tour-group",
    "service_name": "Chinese tour group (Visit visas)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1228,6 +1288,7 @@
    "service_key": "gb-visit-visas--marriage-visitor",
    "service_name": "Marriage Visitor (Visit visas)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1247,6 +1308,7 @@
    "service_key": "gb-visit-visas--standard-visitor",
    "service_name": "Standard Visitor (Visit visas)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1266,6 +1328,7 @@
    "service_key": "gb-visit-visas--transit",
    "service_name": "Transit (Visit visas)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1285,6 +1348,7 @@
    "service_key": "gb-work-visas-for-an-overseas-employer--graduate-trainee",
    "service_name": "Graduate Trainee (Work visas for an overseas employer)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1304,6 +1368,7 @@
    "service_key": "gb-work-visas-for-an-overseas-employer--overseas-domestic-worker",
    "service_name": "Overseas Domestic Worker (Work visas for an overseas employer)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1323,6 +1388,7 @@
    "service_key": "gb-work-visas-for-an-overseas-employer--representative-of-an-overseas-business",
    "service_name": "Representative of an Overseas Business (Work visas for an overseas employer)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1342,6 +1408,7 @@
    "service_key": "gb-work-visas-for-an-overseas-employer--secondment-worker",
    "service_name": "Secondment Worker (Work visas for an overseas employer)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1361,6 +1428,7 @@
    "service_key": "gb-work-visas-for-an-overseas-employer--senior-or-specialist-worker",
    "service_name": "Senior or Specialist Worker (Work visas for an overseas employer)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1380,6 +1448,7 @@
    "service_key": "gb-work-visas-for-an-overseas-employer--service-supplier",
    "service_name": "Service Supplier (Work visas for an overseas employer)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1399,6 +1468,7 @@
    "service_key": "gb-work-visas-for-an-overseas-employer--uk-expansion-worker",
    "service_name": "UK Expansion Worker (Work visas for an overseas employer)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1418,6 +1488,7 @@
    "service_key": "gb-work-visas-to-start-a-business--innovator-founder",
    "service_name": "Innovator Founder (Work visas to start a business)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1437,6 +1508,7 @@
    "service_key": "gb-work-visas-to-start-a-business--start-up",
    "service_name": "Start-up (Work visas to start a business)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1456,6 +1528,7 @@
    "service_key": "gb-work-visas-you-can-apply-for-without-a-job-offer--global-talent",
    "service_name": "Global Talent (Work visas you can apply for without a job offer)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1475,6 +1548,7 @@
    "service_key": "gb-work-visas-you-can-apply-for-without-a-job-offer--high-potential-individual-h",
    "service_name": "High Potential Individual (HPI) (Work visas you can apply for without a job offer)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1494,6 +1568,7 @@
    "service_key": "gb-work-visas-you-can-apply-for-without-a-job-offer--india-young-professionals-s",
    "service_name": "India Young Professionals Scheme visa (Work visas you can apply for without a job offer)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1513,6 +1588,7 @@
    "service_key": "gb-work-visas-you-can-apply-for-without-a-job-offer--uk-ancestry",
    "service_name": "UK Ancestry (Work visas you can apply for without a job offer)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
@@ -1532,6 +1608,7 @@
    "service_key": "gb-work-visas-you-can-apply-for-without-a-job-offer--youth-mobility-scheme",
    "service_name": "Youth Mobility Scheme (Work visas you can apply for without a job offer)",
    "service_category": "visa",
+   "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {

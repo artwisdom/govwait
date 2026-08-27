@@ -4,6 +4,7 @@
  "service_key": "gb-passport-standard",
  "service_name": "Passport (standard application)",
  "service_category": "passport",
+ "metric_type": "service_standard",
  "applicant_country": null,
  "applicant_country_name": null,
  "latest": {

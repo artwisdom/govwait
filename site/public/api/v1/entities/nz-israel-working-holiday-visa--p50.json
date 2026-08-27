@@ -4,6 +4,7 @@
  "service_key": "nz-israel-working-holiday-visa",
  "service_name": "Israel Working Holiday Visa — 50% processed",
  "service_category": "visa",
+ "metric_type": "percentile",
  "applicant_country": null,
  "applicant_country_name": null,
  "latest": {

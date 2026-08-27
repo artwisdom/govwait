@@ -4,6 +4,7 @@
  "service_key": "ca-visitor-visa",
  "service_name": "Visitor visa (applying from outside Canada)",
  "service_category": "visa",
+ "metric_type": "backward",
  "applicant_country": "LU",
  "applicant_country_name": "Luxembourg",
  "latest": {

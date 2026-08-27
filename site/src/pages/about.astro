@@ -6,12 +6,12 @@ import { sources, stats, fmtDate } from '../lib/data.js';
 <Base title={`How ${config.SITE_NAME} collects its data — methodology, sources, terms`}
       description="Every value on this site is an officially published government figure, fetched politely from primary sources, stored with URL and timestamp, and never edited.">
   <h1>How this data is collected</h1>
-  <p>{config.SITE_NAME} does one thing: it records the processing times that government agencies themselves publish, and keeps the history they overwrite. Nothing here is estimated, crowd-sourced, or inferred.</p>
+  <p>{config.SITE_NAME} records the processing times that government agencies themselves publish, and keeps the history they overwrite. GovWait does not create estimates or crowd guesses. When an agency publishes a forward-looking projection, we preserve it verbatim and label it as a projection rather than mixing it with backward-looking statistics.</p>
 
   <h2>Method</h2>
   <ul>
     <li><strong>Primary sources only.</strong> We read the official pages and data files of the agencies listed below — never third-party summaries.</li>
-    <li><strong>Polite, honest collection.</strong> Our collector identifies itself with a bot User-Agent, obeys every robots.txt, waits at least 3 seconds between requests to the same host, enforces a hard per-host request cap, and re-checks each source about once a week.</li>
+    <li><strong>Polite, honest collection.</strong> Our collector identifies itself with a bot User-Agent, obeys every robots.txt, waits at least 3 seconds between requests to the same host, enforces a hard per-host request cap, and checks on a weekly schedule. Source publication cadences range from weekly to monthly.</li>
     <li><strong>Values, not copied pages.</strong> We extract the published figure (e.g. “31 days”), the agency's own “last updated” date when one exists, the URL, and our retrieval timestamp. For an unstamped source, we clearly use the date a changed value was first observed. Explanatory text follows our <a href="/about/editorial-policy/">editorial and AI-use policy</a>.</li>
     <li><strong>History is never edited.</strong> When an agency changes a figure, we add a new dated record; old records are kept verbatim. If a value looks wrong, the validation suite blocks publication rather than guessing.</li>
     <li><strong>Absence is data.</strong> Where an agency publishes “no processing time available”, we say exactly that, dated.</li>
@@ -26,10 +26,10 @@ import { sources, stats, fmtDate } from '../lib/data.js';
       ))}
     </tbody>
   </table></div>
-  <p class="small muted">Dataset generated {fmtDate(stats.generated_at)} · {stats.entities.toLocaleString()} routes · {stats.observations.toLocaleString()} observations.</p>
+  <p class="small muted">Dataset generated {fmtDate(stats.generated_at)} · {stats.entities.toLocaleString()} routes · {stats.observations.toLocaleString()} observations · {stats.forward_looking_estimates.toLocaleString()} current IRCC headline/cohort projection rows.</p>
 
   <h2>What the figures mean — and don't</h2>
-  <p>Published processing times are the agencies' own statistics (typically how long recently completed applications took, or a service standard). They are not a promise about any individual application, and they are not legal advice. For decisions that matter, verify against the linked official source — every page links its source for exactly that reason.</p>
+  <p>Published processing times may be backward-looking statistics, forward-looking projections, percentile measures or service standards. Each page labels the method it uses. None is a promise about an individual application, and none is legal advice. For decisions that matter, verify against the linked official source — every page links its source for exactly that reason.</p>
 
   <h2>Reuse &amp; attribution</h2>
   <p>Extracted values are available via our <a href="/api-docs/">JSON API</a> and MCP server under CC BY 4.0: reuse freely with attribution to {config.SITE_NAME} and the originating agency. Underlying figures remain the respective governments' publications (gov.uk material: Open Government Licence v3.0; Immigration New Zealand website content: CC BY 3.0 New Zealand, subject to its stated exceptions).</p>

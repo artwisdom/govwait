@@ -4,6 +4,7 @@
  "service_key": "gb-visit-visas--standard-visitor",
  "service_name": "Standard Visitor (Visit visas)",
  "service_category": "visa",
+ "metric_type": "service_standard",
  "applicant_country": null,
  "applicant_country_name": null,
  "latest": {

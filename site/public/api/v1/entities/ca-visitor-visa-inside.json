@@ -4,6 +4,7 @@
  "service_key": "ca-visitor-visa-inside",
  "service_name": "Visitor visa (applying from inside Canada)",
  "service_category": "visa",
+ "metric_type": "published",
  "applicant_country": null,
  "applicant_country_name": null,
  "latest": {

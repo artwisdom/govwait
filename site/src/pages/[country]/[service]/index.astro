@@ -2,6 +2,7 @@
 import Base from '../../../layouts/Base.astro';
 import AdSlot from '../../../components/AdSlot.astro';
 import Freshness from '../../../components/Freshness.astro';
+import ForwardLookingPanel from '../../../components/ForwardLookingPanel.astro';
 import { services, JURISDICTIONS, fmtDate, fmtMonthYear, fmtMonthYearShort, humanValue } from '../../../lib/data.js';
 
 export function getStaticPaths() {
@@ -20,6 +21,7 @@ const svc = services[code].get(slug);
 const single = !svc.hasApplicantPages;
 const percentile = svc.isPercentileService;
 const rec = percentile ? svc.percent80 : svc.records[0];
+const forward = rec.metric_type === 'forward';
 const ok = svc.records.filter(r => r.status === 'ok');
 
 const crumbs = {
@@ -46,12 +48,31 @@ const scopeDetail = svc.scope
   : null;
 const monthTok = fmtMonthYear(rec.effective_date);
 const monthShort = fmtMonthYearShort(rec.effective_date);
-const title = percentile
+const forwardTitleNames = {
+  'ca-atlantic-immigration-program': 'Canada Atlantic immigration wait',
+  'ca-canadian-experience-class': 'Canada CEC processing time',
+  'ca-federal-skilled-worker': 'Canada FSW processing time',
+  'ca-provincial-nominee-non-express-entry': 'Canada PNP non-Express Entry wait',
+  'ca-provincial-nominee-express-entry': 'Canada PNP Express Entry wait',
+  'ca-quebec-skilled-worker': 'Quebec skilled worker processing time',
+  'ca-parents-grandparents-sponsorship-quebec': 'Canada PGP Quebec wait',
+  'ca-parents-grandparents-sponsorship-outside-quebec': 'Canada PGP outside-Quebec wait',
+  'ca-spouse-partner-inside-canada-quebec': 'In-Canada spouse Quebec wait',
+  'ca-spouse-partner-inside-canada-outside-quebec': 'In-Canada spouse outside-Quebec wait',
+  'ca-spouse-partner-outside-canada-quebec': 'Overseas spouse Quebec wait',
+  'ca-spouse-partner-outside-canada-outside-quebec': 'Overseas spouse outside-Quebec wait',
+};
+const forwardTitleName = forwardTitleNames[rec.service_key] || `${jur.shortName} ${svc.seoName} wait`;
+const title = forward
+  ? `${forwardTitleName}: projected ${humanValue(rec)}`
+  : percentile
   ? `NZ ${svc.seoName} processing time: 50% ${svc.percent50.value_raw}, 80% ${svc.percent80.value_raw}`
   : single
   ? `${jur.shortName} ${topic}${scopeDetail ? ` (${scopeDetail})` : ''}: ${humanValue(rec)} (${monthShort})`
   : `${jur.shortName} ${topic} by country (${monthShort})`;
-const desc = percentile
+const desc = forward
+  ? `IRCC's ${forwardTitleName.toLowerCase()} is projected at ${humanValue(rec)}. See the current queue and application-month estimates, updated ${monthShort}.`
+  : percentile
   ? `INZ currently reports 50% of ${svc.name} applications processed within ${svc.percent50.value_raw} and 80% within ${svc.percent80.value_raw}. Official source and history.`
   : single
   ? `${jur.shortAgency} reports ${humanValue(rec)} for ${svc.seoName}${scopeDetail ? ` (${scopeDetail})` : ''}. Updated ${monthTok}, with official-source history.`
@@ -59,11 +80,15 @@ const desc = percentile
 ---
 <Base title={title} description={desc} jsonld={[crumbs, govService]}>
   <nav class="crumbs"><a href="/">Home</a> › <a href={`/${jur.slug}/`}>{jur.name}</a> › {svc.name}</nav>
-  <h1>{percentile
+  <h1>{forward
+    ? `${svc.name}: current projected processing time`
+    : percentile
     ? `${svc.name} processing time: current New Zealand figures`
     : single ? `${svc.name} (${jur.name}): current processing time` : `${jur.name} ${svc.name}: processing time by applicant country`}</h1>
 
-  {percentile ? (
+  {forward ? (
+    <ForwardLookingPanel record={rec} service={svc} jurisdiction={jur} />
+  ) : percentile ? (
     <>
       <div class="stats">
         <div><div class="n">{humanValue(svc.percent50)}</div><div class="l">50% of applications processed</div></div>

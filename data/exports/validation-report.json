@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T14:44:18.802Z",
+  "generated_at": "2026-08-27T23:39:25.413Z",
   "pass": true,
   "checks": [
     {
@@ -18,9 +18,24 @@
       "detail": "0 orphaned observations"
     },
     {
+      "name": "forward-estimate-shape",
+      "pass": true,
+      "detail": "0 malformed forward-looking estimates"
+    },
+    {
+      "name": "forward-current-coverage",
+      "pass": true,
+      "detail": "28 headline forward-looking estimates (floor 28)"
+    },
+    {
+      "name": "forward-cohort-coverage",
+      "pass": true,
+      "detail": "3601 application-month estimates (floor 3500)"
+    },
+    {
       "name": "value-range",
       "pass": true,
-      "detail": "0 observations outside (0, 3000] days"
+      "detail": "0 observations outside (0, 5000] days"
     },
     {
       "name": "coverage-ircc-ptime",
@@ -31,6 +46,11 @@
       "name": "coverage-govuk-visa-times",
       "pass": true,
       "detail": "39 observations (floor 10)"
+    },
+    {
+      "name": "coverage-ircc-forward-looking",
+      "pass": true,
+      "detail": "28 observations (floor 28)"
     },
     {
       "name": "coverage-ircc-noncountry",
@@ -60,27 +80,32 @@
     {
       "name": "coverage-total",
       "pass": true,
-      "detail": "2271 total observations (floor 300)"
+      "detail": "2299 total observations (floor 300)"
     },
     {
       "name": "staleness-ircc-ptime",
       "pass": true,
-      "detail": "latest effective_date 2026-08-19 is 6d old (max 45)"
+      "detail": "latest effective_date 2026-08-19 is 8d old (max 45)"
+    },
+    {
+      "name": "staleness-ircc-forward-looking",
+      "pass": true,
+      "detail": "latest effective_date 2026-08-10 is 17d old (max 62)"
     },
     {
       "name": "staleness-govuk-visa-times",
       "pass": true,
-      "detail": "latest effective_date 2026-06-26 is 60d old (max 120)"
+      "detail": "latest effective_date 2026-06-26 is 62d old (max 120)"
     },
     {
       "name": "staleness-ircc-noncountry",
       "pass": true,
-      "detail": "latest effective_date 2026-08-19 is 6d old (max 45)"
+      "detail": "latest effective_date 2026-08-19 is 8d old (max 45)"
     },
     {
       "name": "staleness-govuk-inuk-times",
       "pass": true,
-      "detail": "latest effective_date 2025-07-21 is 400d old (max 500)"
+      "detail": "latest effective_date 2025-07-21 is 402d old (max 500)"
     },
     {
       "name": "volatility-guard",

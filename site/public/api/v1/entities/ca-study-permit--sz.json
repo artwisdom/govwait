@@ -4,6 +4,7 @@
  "service_key": "ca-study-permit",
  "service_name": "Study permit (applying from outside Canada)",
  "service_category": "permit",
+ "metric_type": "backward",
  "applicant_country": "SZ",
  "applicant_country_name": "Eswatini",
  "latest": {

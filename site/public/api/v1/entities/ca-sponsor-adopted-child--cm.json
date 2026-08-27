@@ -4,6 +4,7 @@
  "service_key": "ca-sponsor-adopted-child",
  "service_name": "Sponsorship: adopted child",
  "service_category": "sponsorship",
+ "metric_type": "backward",
  "applicant_country": "CM",
  "applicant_country_name": "Cameroon",
  "latest": {

@@ -12,6 +12,7 @@ const API = path.join(ROOT, 'site', 'public', 'api', 'v1');
 
 const latest = JSON.parse(readFileSync(path.join(EXPORTS, 'latest.json'), 'utf8'));
 const history = JSON.parse(readFileSync(path.join(EXPORTS, 'history.json'), 'utf8'));
+const forward = JSON.parse(readFileSync(path.join(EXPORTS, 'forward-looking.json'), 'utf8'));
 const stats = JSON.parse(readFileSync(path.join(EXPORTS, 'stats.json'), 'utf8'));
 
 const ATTribution = 'CC BY 4.0 — attribute GovWait and the originating government agency. Underlying figures are official government publications.';
@@ -28,6 +29,7 @@ const recPublic = (r) => ({
   service_key: r.service_key,
   service_name: r.service_name,
   service_category: r.service_category,
+  metric_type: r.metric_type,
   applicant_country: r.applicant_country,
   applicant_country_name: r.applicant_country_name,
   latest: {
@@ -47,9 +49,26 @@ for (const r of latest.records) {
   writeFileSync(path.join(API, 'entities', `${r.id}.json`), j({
     ...recPublic(r),
     history: history.entities[r.id] || [],
+    ...(forward.entities[r.id] ? { forward_looking: forward.entities[r.id] } : {}),
     license: ATTribution,
   }));
 }
+
+// One bulk machine-readable endpoint for IRCC forward-looking projections.
+// Program entity endpoints carry the same detail, while this collection makes
+// dataset/AI ingestion possible with a single request.
+const forwardRecords = latest.records.filter(record => forward.entities[record.id]);
+writeFileSync(path.join(API, 'ircc-forward-looking.json'), j({
+  name: 'IRCC forward-looking processing times',
+  description: 'Current new-application projections plus application-month cohort estimates. Cohort months are submission dates within each IRCC snapshot, not historical publication dates.',
+  generated_at: latest.generated_at,
+  count: forwardRecords.length,
+  programs: forwardRecords.map(record => ({
+    ...recPublic(record),
+    forward_looking: forward.entities[record.id],
+  })),
+  license: ATTribution,
+}));
 
 // services/{service_key}.json
 const byService = {};
@@ -91,9 +110,10 @@ writeFileSync(path.join(API, 'index.json'), j({
     jurisdictions: Object.keys(byJur).map(c => `/api/v1/jurisdictions/${c}.json`),
     services: Object.keys(byService).map(k => `/api/v1/services/${k}.json`),
     entity_pattern: '/api/v1/entities/{entity_id}.json',
+    ircc_forward_looking: '/api/v1/ircc-forward-looking.json',
     openapi: '/api/v1/openapi.yaml',
   },
   license: ATTribution,
 }));
 
-console.log(`[build-api] wrote ${latest.records.length} entity endpoints, ${Object.keys(byService).length} service endpoints, ${Object.keys(byJur).length} jurisdiction endpoints`);
+console.log(`[build-api] wrote ${latest.records.length} entity endpoints, ${Object.keys(byService).length} service endpoints, ${Object.keys(byJur).length} jurisdiction endpoints, ${forwardRecords.length} forward-looking programs`);

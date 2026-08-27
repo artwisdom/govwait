@@ -4,6 +4,7 @@
  "service_key": "ca-refugee-private-refugee-side",
  "service_name": "Privately sponsored refugee: refugee processing",
  "service_category": "refugee",
+ "metric_type": "backward",
  "applicant_country": "BI",
  "applicant_country_name": "Burundi",
  "latest": {

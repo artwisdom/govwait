@@ -1,17 +1,19 @@
 {
  "name": "GovWait API v1",
  "description": "Officially published government processing times, tracked with provenance and history. Static JSON; no key required.",
- "generated_at": "2026-08-25T14:44:18.851Z",
+ "generated_at": "2026-08-27T23:39:25.471Z",
  "stats": {
-  "generated_at": "2026-08-25T14:44:18.851Z",
-  "entities": 2271,
-  "observations": 2271,
+  "generated_at": "2026-08-27T23:39:25.471Z",
+  "entities": 2299,
+  "observations": 2299,
+  "forward_looking_estimates": 3629,
+  "forward_looking_snapshots": 1,
   "jurisdictions": [
    "CA",
    "GB",
    "NZ"
   ],
-  "services": 240,
+  "services": 268,
   "per_source": {
    "govuk-inuk-times": {
     "name": "UK visa processing times (inside UK)",
@@ -32,6 +34,11 @@
     "name": "New Zealand visa application processing times",
     "observations": 266,
     "latest_effective_date": "2026-08-23"
+   },
+   "ircc-forward-looking": {
+    "name": "IRCC forward-looking processing times and in-queue estimates",
+    "observations": 28,
+    "latest_effective_date": "2026-08-10"
    },
    "ircc-noncountry": {
     "name": "IRCC processing times (non-country categories)",
@@ -84,6 +91,14 @@
    "license_note": "New Zealand Crown copyright; website content licensed CC BY 3.0 New Zealand with written attribution to the Crown and Ministry."
   },
   {
+   "id": "ircc-forward-looking",
+   "name": "IRCC forward-looking processing times and in-queue estimates",
+   "agency": "Immigration, Refugees and Citizenship Canada",
+   "jurisdiction": "CA",
+   "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html",
+   "license_note": "Government of Canada factual publication. GovWait stores extracted estimates, queue figures and provenance with attribution; it does not reproduce IRCC page copy."
+  },
+  {
    "id": "ircc-noncountry",
    "name": "IRCC processing times (non-country categories)",
    "agency": "Immigration, Refugees and Citizenship Canada",
@@ -117,25 +132,53 @@
   "services": [
    "/api/v1/services/ca-amend-immigration-record.json",
    "/api/v1/services/ca-amend-tr-record.json",
+   "/api/v1/services/ca-atlantic-immigration-program.json",
+   "/api/v1/services/ca-canadian-experience-class.json",
+   "/api/v1/services/ca-caregivers.json",
    "/api/v1/services/ca-citizenship-adoption-part1.json",
+   "/api/v1/services/ca-citizenship-certificate.json",
+   "/api/v1/services/ca-citizenship-grant.json",
    "/api/v1/services/ca-citizenship-record-search.json",
    "/api/v1/services/ca-citizenship-renunciation.json",
    "/api/v1/services/ca-citizenship-resumption.json",
    "/api/v1/services/ca-eta.json",
    "/api/v1/services/ca-federal-skilled-trades.json",
+   "/api/v1/services/ca-federal-skilled-worker.json",
+   "/api/v1/services/ca-government-assisted-refugees-outside-quebec.json",
+   "/api/v1/services/ca-government-assisted-refugees-quebec.json",
+   "/api/v1/services/ca-humanitarian-compassionate-outside-quebec.json",
+   "/api/v1/services/ca-humanitarian-compassionate-quebec.json",
    "/api/v1/services/ca-iec.json",
    "/api/v1/services/ca-iec-past-season.json",
+   "/api/v1/services/ca-parents-grandparents-sponsorship-outside-quebec.json",
+   "/api/v1/services/ca-parents-grandparents-sponsorship-quebec.json",
    "/api/v1/services/ca-passport-office.json",
    "/api/v1/services/ca-passport-service-canada.json",
    "/api/v1/services/ca-pr-card-new.json",
    "/api/v1/services/ca-pr-card-renewal.json",
+   "/api/v1/services/ca-privately-sponsored-refugees-outside-quebec.json",
+   "/api/v1/services/ca-privately-sponsored-refugees-quebec.json",
+   "/api/v1/services/ca-protected-person-dependants-abroad-outside-quebec.json",
+   "/api/v1/services/ca-protected-person-dependants-abroad-quebec.json",
+   "/api/v1/services/ca-protected-persons-in-canada-outside-quebec.json",
+   "/api/v1/services/ca-protected-persons-in-canada-quebec.json",
+   "/api/v1/services/ca-provincial-nominee-express-entry.json",
+   "/api/v1/services/ca-provincial-nominee-non-express-entry.json",
+   "/api/v1/services/ca-quebec-business-class.json",
+   "/api/v1/services/ca-quebec-skilled-worker.json",
    "/api/v1/services/ca-refugee-gov-assisted.json",
    "/api/v1/services/ca-refugee-private-refugee-side.json",
    "/api/v1/services/ca-refugee-private-sponsor-side.json",
    "/api/v1/services/ca-replace-immigration-document.json",
    "/api/v1/services/ca-sawp.json",
+   "/api/v1/services/ca-self-employed-persons.json",
    "/api/v1/services/ca-sponsor-adopted-child.json",
    "/api/v1/services/ca-sponsor-dependent-child.json",
+   "/api/v1/services/ca-spouse-partner-inside-canada-outside-quebec.json",
+   "/api/v1/services/ca-spouse-partner-inside-canada-quebec.json",
+   "/api/v1/services/ca-spouse-partner-outside-canada-outside-quebec.json",
+   "/api/v1/services/ca-spouse-partner-outside-canada-quebec.json",
+   "/api/v1/services/ca-start-up-visa.json",
    "/api/v1/services/ca-study-permit.json",
    "/api/v1/services/ca-study-permit-extension.json",
    "/api/v1/services/ca-super-visa.json",
@@ -357,6 +400,7 @@
    "/api/v1/services/nz-work-to-residence-visa.json"
   ],
   "entity_pattern": "/api/v1/entities/{entity_id}.json",
+  "ircc_forward_looking": "/api/v1/ircc-forward-looking.json",
   "openapi": "/api/v1/openapi.yaml"
  },
  "license": "CC BY 4.0 — attribute GovWait and the originating government agency. Underlying figures are official government publications."

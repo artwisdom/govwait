@@ -4,6 +4,7 @@
  "service_key": "ca-passport-office",
  "service_name": "Passport (in person at a passport office)",
  "service_category": "passport",
+ "metric_type": "service_standard",
  "applicant_country": null,
  "applicant_country_name": null,
  "latest": {

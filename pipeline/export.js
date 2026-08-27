@@ -12,7 +12,7 @@ export function exportAll() {
 
   const sources = queryJson(`SELECT * FROM sources ORDER BY id`);
   const latest = queryJson(`
-    SELECT e.id, e.source_id, e.jurisdiction, e.service_category, e.service_key, e.service_name,
+    SELECT e.id, e.source_id, e.jurisdiction, e.service_category, e.metric_type, e.service_key, e.service_name,
            e.applicant_country, e.applicant_country_name,
            o.value_raw, o.value_days, o.unit_original, o.status, o.effective_date, o.retrieved_at, o.source_url, o.confidence
     FROM entities e
@@ -33,10 +33,50 @@ export function exportAll() {
     });
   }
 
+  const forwardRows = queryJson(`
+    SELECT f.entity_id, f.snapshot_date, f.cohort_month, f.wait_raw, f.wait_days,
+           f.unit_original, f.status, f.queue_raw, f.queue_people, f.retrieved_at,
+           f.source_url, f.confidence
+    FROM forward_estimates f JOIN entities e ON e.id=f.entity_id
+    WHERE e.active=1
+    ORDER BY f.entity_id, f.snapshot_date, f.cohort_month`);
+  const forwardEntities = {};
+  const snapshotMaps = new Map();
+  for (const row of forwardRows) {
+    if (!forwardEntities[row.entity_id]) forwardEntities[row.entity_id] = { snapshots: [] };
+    let perEntity = snapshotMaps.get(row.entity_id);
+    if (!perEntity) { perEntity = new Map(); snapshotMaps.set(row.entity_id, perEntity); }
+    let snapshot = perEntity.get(row.snapshot_date);
+    if (!snapshot) {
+      snapshot = {
+        snapshot_date: row.snapshot_date,
+        retrieved_at: row.retrieved_at,
+        source_url: row.source_url,
+        current: null,
+        cohorts: [],
+      };
+      perEntity.set(row.snapshot_date, snapshot);
+      forwardEntities[row.entity_id].snapshots.push(snapshot);
+    }
+    const value = {
+      wait_raw: row.wait_raw,
+      wait_days: row.wait_days,
+      unit_original: row.unit_original,
+      status: row.status,
+      queue_raw: row.queue_raw,
+      queue_people: row.queue_people,
+      confidence: row.confidence,
+    };
+    if (row.cohort_month === '') snapshot.current = value;
+    else snapshot.cohorts.push({ cohort_month: row.cohort_month, ...value });
+  }
+
   const stats = {
     generated_at: new Date().toISOString(),
     entities: latest.length,
     observations: historyRows.length,
+    forward_looking_estimates: forwardRows.length,
+    forward_looking_snapshots: [...new Set(forwardRows.map(row => row.snapshot_date))].length,
     jurisdictions: [...new Set(latest.map(r => r.jurisdiction))].sort(),
     services: [...new Set(latest.map(r => r.service_key))].length,
     per_source: Object.fromEntries(sources.map(s => [s.id, {
@@ -48,6 +88,7 @@ export function exportAll() {
 
   writeFileSync(path.join(EXPORTS, 'latest.json'), JSON.stringify({ generated_at: stats.generated_at, sources, records: latest }, null, 1));
   writeFileSync(path.join(EXPORTS, 'history.json'), JSON.stringify({ generated_at: stats.generated_at, entities: history }, null, 1));
+  writeFileSync(path.join(EXPORTS, 'forward-looking.json'), JSON.stringify({ generated_at: stats.generated_at, entities: forwardEntities }, null, 1));
   writeFileSync(path.join(EXPORTS, 'stats.json'), JSON.stringify(stats, null, 2));
   return stats;
 }

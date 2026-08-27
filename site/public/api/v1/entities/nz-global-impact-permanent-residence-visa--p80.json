@@ -4,6 +4,7 @@
  "service_key": "nz-global-impact-permanent-residence-visa",
  "service_name": "Global Impact Permanent Residence Visa — 80% processed",
  "service_category": "settlement",
+ "metric_type": "percentile",
  "applicant_country": null,
  "applicant_country_name": null,
  "latest": {
