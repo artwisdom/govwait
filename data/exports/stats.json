@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-27T23:39:25.471Z",
+  "generated_at": "2026-08-28T23:27:50.366Z",
   "entities": 2299,
-  "observations": 2299,
+  "observations": 4225,
   "forward_looking_estimates": 3629,
   "forward_looking_snapshots": 1,
   "jurisdictions": [
@@ -38,8 +38,8 @@
     },
     "ircc-noncountry": {
       "name": "IRCC processing times (non-country categories)",
-      "observations": 19,
-      "latest_effective_date": "2026-08-19"
+      "observations": 38,
+      "latest_effective_date": "2026-08-26"
     },
     "ircc-passport": {
       "name": "Canadian passport processing times",
@@ -48,8 +48,8 @@
     },
     "ircc-ptime": {
       "name": "IRCC Check Processing Times data",
-      "observations": 1907,
-      "latest_effective_date": "2026-08-19"
+      "observations": 3814,
+      "latest_effective_date": "2026-08-26"
     }
   }
 }

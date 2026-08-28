@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-27T23:39:25.413Z",
+  "generated_at": "2026-08-28T23:27:50.308Z",
   "pass": true,
   "checks": [
     {
@@ -40,7 +40,7 @@
     {
       "name": "coverage-ircc-ptime",
       "pass": true,
-      "detail": "1907 observations (floor 1200)"
+      "detail": "3814 observations (floor 1200)"
     },
     {
       "name": "coverage-govuk-visa-times",
@@ -55,7 +55,7 @@
     {
       "name": "coverage-ircc-noncountry",
       "pass": true,
-      "detail": "19 observations (floor 15)"
+      "detail": "38 observations (floor 15)"
     },
     {
       "name": "coverage-ircc-passport",
@@ -80,32 +80,32 @@
     {
       "name": "coverage-total",
       "pass": true,
-      "detail": "2299 total observations (floor 300)"
+      "detail": "4225 total observations (floor 300)"
     },
     {
       "name": "staleness-ircc-ptime",
       "pass": true,
-      "detail": "latest effective_date 2026-08-19 is 8d old (max 45)"
+      "detail": "latest effective_date 2026-08-26 is 2d old (max 45)"
     },
     {
       "name": "staleness-ircc-forward-looking",
       "pass": true,
-      "detail": "latest effective_date 2026-08-10 is 17d old (max 62)"
+      "detail": "latest effective_date 2026-08-10 is 18d old (max 62)"
     },
     {
       "name": "staleness-govuk-visa-times",
       "pass": true,
-      "detail": "latest effective_date 2026-06-26 is 62d old (max 120)"
+      "detail": "latest effective_date 2026-06-26 is 63d old (max 120)"
     },
     {
       "name": "staleness-ircc-noncountry",
       "pass": true,
-      "detail": "latest effective_date 2026-08-19 is 8d old (max 45)"
+      "detail": "latest effective_date 2026-08-26 is 2d old (max 45)"
     },
     {
       "name": "staleness-govuk-inuk-times",
       "pass": true,
-      "detail": "latest effective_date 2025-07-21 is 402d old (max 500)"
+      "detail": "latest effective_date 2025-07-21 is 403d old (max 500)"
     },
     {
       "name": "volatility-guard",

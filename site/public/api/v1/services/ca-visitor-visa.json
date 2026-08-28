@@ -3,7 +3,7 @@
  "service_name": "Visitor visa (applying from outside Canada)",
  "jurisdiction": "CA",
  "count": 211,
- "generated_at": "2026-08-27T23:39:25.471Z",
+ "generated_at": "2026-08-28T23:27:50.366Z",
  "records": [
   {
    "entity_id": "ca-visitor-visa--ad",
@@ -19,8 +19,8 @@
     "value_days": null,
     "unit_original": null,
     "status": "unavailable",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -35,12 +35,12 @@
    "applicant_country": "AE",
    "applicant_country_name": "United Arab Emirates",
    "latest": {
-    "value_raw": "46 days",
-    "value_days": 46,
+    "value_raw": "45 days",
+    "value_days": 45,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -59,8 +59,8 @@
     "value_days": 68,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -79,8 +79,8 @@
     "value_days": 23,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -99,8 +99,8 @@
     "value_days": null,
     "unit_original": null,
     "status": "unavailable",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -115,12 +115,12 @@
    "applicant_country": "AL",
    "applicant_country_name": "Albania",
    "latest": {
-    "value_raw": "39 days",
-    "value_days": 39,
+    "value_raw": "41 days",
+    "value_days": 41,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -135,12 +135,12 @@
    "applicant_country": "AM",
    "applicant_country_name": "Armenia",
    "latest": {
-    "value_raw": "22 days",
-    "value_days": 22,
+    "value_raw": "19 days",
+    "value_days": 19,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -155,12 +155,12 @@
    "applicant_country": "AO",
    "applicant_country_name": "Angola",
    "latest": {
-    "value_raw": "162 days",
-    "value_days": 162,
+    "value_raw": "179 days",
+    "value_days": 179,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -175,12 +175,12 @@
    "applicant_country": "AR",
    "applicant_country_name": "Argentina",
    "latest": {
-    "value_raw": "22 days",
-    "value_days": 22,
+    "value_raw": "23 days",
+    "value_days": 23,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -195,12 +195,12 @@
    "applicant_country": "AT",
    "applicant_country_name": "Austria",
    "latest": {
-    "value_raw": "26 days",
-    "value_days": 26,
+    "value_raw": "23 days",
+    "value_days": 23,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -219,8 +219,8 @@
     "value_days": 15,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -239,8 +239,8 @@
     "value_days": null,
     "unit_original": null,
     "status": "unavailable",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -255,12 +255,12 @@
    "applicant_country": "AZ",
    "applicant_country_name": "Azerbaijan",
    "latest": {
-    "value_raw": "77 days",
-    "value_days": 77,
+    "value_raw": "76 days",
+    "value_days": 76,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -275,12 +275,12 @@
    "applicant_country": "BA",
    "applicant_country_name": "Bosnia & Herzegovina",
    "latest": {
-    "value_raw": "29 days",
-    "value_days": 29,
+    "value_raw": "24 days",
+    "value_days": 24,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -295,12 +295,12 @@
    "applicant_country": "BB",
    "applicant_country_name": "Barbados",
    "latest": {
-    "value_raw": "43 days",
-    "value_days": 43,
+    "value_raw": "35 days",
+    "value_days": 35,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -315,12 +315,12 @@
    "applicant_country": "BD",
    "applicant_country_name": "Bangladesh",
    "latest": {
-    "value_raw": "44 days",
-    "value_days": 44,
+    "value_raw": "43 days",
+    "value_days": 43,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -335,12 +335,12 @@
    "applicant_country": "BE",
    "applicant_country_name": "Belgium",
    "latest": {
-    "value_raw": "35 days",
-    "value_days": 35,
+    "value_raw": "36 days",
+    "value_days": 36,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -355,12 +355,12 @@
    "applicant_country": "BF",
    "applicant_country_name": "Burkina Faso",
    "latest": {
-    "value_raw": "35 days",
-    "value_days": 35,
+    "value_raw": "36 days",
+    "value_days": 36,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -375,12 +375,12 @@
    "applicant_country": "BG",
    "applicant_country_name": "Bulgaria",
    "latest": {
-    "value_raw": "35 days",
-    "value_days": 35,
+    "value_raw": "34 days",
+    "value_days": 34,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -395,12 +395,12 @@
    "applicant_country": "BH",
    "applicant_country_name": "Bahrain",
    "latest": {
-    "value_raw": "69 days",
-    "value_days": 69,
+    "value_raw": "67 days",
+    "value_days": 67,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -415,12 +415,12 @@
    "applicant_country": "BI",
    "applicant_country_name": "Burundi",
    "latest": {
-    "value_raw": "52 days",
-    "value_days": 52,
+    "value_raw": "56 days",
+    "value_days": 56,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -435,12 +435,12 @@
    "applicant_country": "BJ",
    "applicant_country_name": "Benin",
    "latest": {
-    "value_raw": "155 days",
-    "value_days": 155,
+    "value_raw": "127 days",
+    "value_days": 127,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -455,12 +455,12 @@
    "applicant_country": "BM",
    "applicant_country_name": "Bermuda",
    "latest": {
-    "value_raw": "28 days",
-    "value_days": 28,
+    "value_raw": "29 days",
+    "value_days": 29,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -479,8 +479,8 @@
     "value_days": null,
     "unit_original": null,
     "status": "unavailable",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -495,12 +495,12 @@
    "applicant_country": "BO",
    "applicant_country_name": "Bolivia",
    "latest": {
-    "value_raw": "31 days",
-    "value_days": 31,
+    "value_raw": "30 days",
+    "value_days": 30,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -519,8 +519,8 @@
     "value_days": null,
     "unit_original": null,
     "status": "unavailable",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -539,8 +539,8 @@
     "value_days": 28,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -555,12 +555,12 @@
    "applicant_country": "BS",
    "applicant_country_name": "Bahamas",
    "latest": {
-    "value_raw": "46 days",
-    "value_days": 46,
+    "value_raw": "48 days",
+    "value_days": 48,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -575,12 +575,12 @@
    "applicant_country": "BT",
    "applicant_country_name": "Bhutan",
    "latest": {
-    "value_raw": "20 days",
-    "value_days": 20,
+    "value_raw": "21 days",
+    "value_days": 21,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -595,12 +595,12 @@
    "applicant_country": "BW",
    "applicant_country_name": "Botswana",
    "latest": {
-    "value_raw": "792 days",
-    "value_days": 792,
+    "value_raw": "764 days",
+    "value_days": 764,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -615,12 +615,12 @@
    "applicant_country": "BY",
    "applicant_country_name": "Belarus",
    "latest": {
-    "value_raw": "39 days",
-    "value_days": 39,
+    "value_raw": "33 days",
+    "value_days": 33,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -639,8 +639,8 @@
     "value_days": 25,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -655,12 +655,12 @@
    "applicant_country": "CD",
    "applicant_country_name": "Congo - Kinshasa",
    "latest": {
-    "value_raw": "50 days",
-    "value_days": 50,
+    "value_raw": "49 days",
+    "value_days": 49,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -675,12 +675,12 @@
    "applicant_country": "CF",
    "applicant_country_name": "Central African Republic",
    "latest": {
-    "value_raw": "102 days",
-    "value_days": 102,
-    "unit_original": "days",
-    "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "value_raw": "No processing time available",
+    "value_days": null,
+    "unit_original": null,
+    "status": "unavailable",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -699,8 +699,8 @@
     "value_days": 38,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -715,12 +715,12 @@
    "applicant_country": "CH",
    "applicant_country_name": "Switzerland",
    "latest": {
-    "value_raw": "33 days",
-    "value_days": 33,
+    "value_raw": "35 days",
+    "value_days": 35,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -735,12 +735,12 @@
    "applicant_country": "CI",
    "applicant_country_name": "Côte d’Ivoire",
    "latest": {
-    "value_raw": "72 days",
-    "value_days": 72,
+    "value_raw": "71 days",
+    "value_days": 71,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -755,12 +755,12 @@
    "applicant_country": "CL",
    "applicant_country_name": "Chile",
    "latest": {
-    "value_raw": "22 days",
-    "value_days": 22,
+    "value_raw": "24 days",
+    "value_days": 24,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -775,12 +775,12 @@
    "applicant_country": "CM",
    "applicant_country_name": "Cameroon",
    "latest": {
-    "value_raw": "58 days",
-    "value_days": 58,
+    "value_raw": "55 days",
+    "value_days": 55,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -795,12 +795,12 @@
    "applicant_country": "CN",
    "applicant_country_name": "China",
    "latest": {
-    "value_raw": "32 days",
-    "value_days": 32,
+    "value_raw": "33 days",
+    "value_days": 33,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -815,12 +815,12 @@
    "applicant_country": "CO",
    "applicant_country_name": "Colombia",
    "latest": {
-    "value_raw": "31 days",
-    "value_days": 31,
+    "value_raw": "30 days",
+    "value_days": 30,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -839,8 +839,8 @@
     "value_days": 20,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -859,8 +859,8 @@
     "value_days": 20,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -879,8 +879,8 @@
     "value_days": null,
     "unit_original": null,
     "status": "unavailable",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -895,12 +895,12 @@
    "applicant_country": "CY",
    "applicant_country_name": "Cyprus",
    "latest": {
-    "value_raw": "35 days",
-    "value_days": 35,
+    "value_raw": "34 days",
+    "value_days": 34,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -915,12 +915,12 @@
    "applicant_country": "CZ",
    "applicant_country_name": "Czechia",
    "latest": {
-    "value_raw": "25 days",
-    "value_days": 25,
+    "value_raw": "20 days",
+    "value_days": 20,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -935,12 +935,12 @@
    "applicant_country": "DE",
    "applicant_country_name": "Germany",
    "latest": {
-    "value_raw": "22 days",
-    "value_days": 22,
+    "value_raw": "21 days",
+    "value_days": 21,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -959,8 +959,8 @@
     "value_days": 78,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -975,12 +975,12 @@
    "applicant_country": "DK",
    "applicant_country_name": "Denmark",
    "latest": {
-    "value_raw": "30 days",
-    "value_days": 30,
+    "value_raw": "29 days",
+    "value_days": 29,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -995,12 +995,12 @@
    "applicant_country": "DM",
    "applicant_country_name": "Dominica",
    "latest": {
-    "value_raw": "35 days",
-    "value_days": 35,
+    "value_raw": "29 days",
+    "value_days": 29,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1015,12 +1015,12 @@
    "applicant_country": "DO",
    "applicant_country_name": "Dominican Republic",
    "latest": {
-    "value_raw": "23 days",
-    "value_days": 23,
+    "value_raw": "24 days",
+    "value_days": 24,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1039,8 +1039,8 @@
     "value_days": 28,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1059,8 +1059,8 @@
     "value_days": 27,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1075,12 +1075,12 @@
    "applicant_country": "EE",
    "applicant_country_name": "Estonia",
    "latest": {
-    "value_raw": "35 days",
-    "value_days": 35,
+    "value_raw": "38 days",
+    "value_days": 38,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1095,12 +1095,12 @@
    "applicant_country": "EG",
    "applicant_country_name": "Egypt",
    "latest": {
-    "value_raw": "57 days",
-    "value_days": 57,
+    "value_raw": "59 days",
+    "value_days": 59,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1115,12 +1115,12 @@
    "applicant_country": "ER",
    "applicant_country_name": "Eritrea",
    "latest": {
-    "value_raw": "21 days",
-    "value_days": 21,
+    "value_raw": "68 days",
+    "value_days": 68,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1139,8 +1139,8 @@
     "value_days": 34,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1155,12 +1155,12 @@
    "applicant_country": "ET",
    "applicant_country_name": "Ethiopia",
    "latest": {
-    "value_raw": "62 days",
-    "value_days": 62,
+    "value_raw": "38 days",
+    "value_days": 38,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1175,12 +1175,12 @@
    "applicant_country": "FI",
    "applicant_country_name": "Finland",
    "latest": {
-    "value_raw": "25 days",
-    "value_days": 25,
+    "value_raw": "24 days",
+    "value_days": 24,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1199,8 +1199,8 @@
     "value_days": 17,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1219,8 +1219,8 @@
     "value_days": null,
     "unit_original": null,
     "status": "unavailable",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1235,12 +1235,12 @@
    "applicant_country": "FR",
    "applicant_country_name": "France",
    "latest": {
-    "value_raw": "34 days",
-    "value_days": 34,
+    "value_raw": "36 days",
+    "value_days": 36,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1255,12 +1255,12 @@
    "applicant_country": "GA",
    "applicant_country_name": "Gabon",
    "latest": {
-    "value_raw": "37 days",
-    "value_days": 37,
+    "value_raw": "41 days",
+    "value_days": 41,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1275,12 +1275,12 @@
    "applicant_country": "GB",
    "applicant_country_name": "United Kingdom",
    "latest": {
-    "value_raw": "21 days",
-    "value_days": 21,
+    "value_raw": "20 days",
+    "value_days": 20,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1295,12 +1295,12 @@
    "applicant_country": "GD",
    "applicant_country_name": "Grenada",
    "latest": {
-    "value_raw": "22 days",
-    "value_days": 22,
+    "value_raw": "23 days",
+    "value_days": 23,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1315,12 +1315,12 @@
    "applicant_country": "GE",
    "applicant_country_name": "Georgia",
    "latest": {
-    "value_raw": "67 days",
-    "value_days": 67,
+    "value_raw": "65 days",
+    "value_days": 65,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1335,12 +1335,12 @@
    "applicant_country": "GH",
    "applicant_country_name": "Ghana",
    "latest": {
-    "value_raw": "67 days",
-    "value_days": 67,
+    "value_raw": "77 days",
+    "value_days": 77,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1359,8 +1359,8 @@
     "value_days": null,
     "unit_original": null,
     "status": "unavailable",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1375,12 +1375,12 @@
    "applicant_country": "GM",
    "applicant_country_name": "Gambia",
    "latest": {
-    "value_raw": "68 days",
-    "value_days": 68,
+    "value_raw": "99 days",
+    "value_days": 99,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1395,12 +1395,12 @@
    "applicant_country": "GN",
    "applicant_country_name": "Guinea",
    "latest": {
-    "value_raw": "51 days",
-    "value_days": 51,
+    "value_raw": "60 days",
+    "value_days": 60,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1415,12 +1415,12 @@
    "applicant_country": "GQ",
    "applicant_country_name": "Equatorial Guinea",
    "latest": {
-    "value_raw": "No processing time available",
-    "value_days": null,
-    "unit_original": null,
-    "status": "unavailable",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "value_raw": "125 days",
+    "value_days": 125,
+    "unit_original": "days",
+    "status": "ok",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1435,12 +1435,12 @@
    "applicant_country": "GR",
    "applicant_country_name": "Greece",
    "latest": {
-    "value_raw": "35 days",
-    "value_days": 35,
+    "value_raw": "44 days",
+    "value_days": 44,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1459,8 +1459,8 @@
     "value_days": 23,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1479,8 +1479,8 @@
     "value_days": null,
     "unit_original": null,
     "status": "unavailable",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1495,12 +1495,12 @@
    "applicant_country": "GY",
    "applicant_country_name": "Guyana",
    "latest": {
-    "value_raw": "19 days",
-    "value_days": 19,
+    "value_raw": "18 days",
+    "value_days": 18,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1519,8 +1519,8 @@
     "value_days": 36,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1535,12 +1535,12 @@
    "applicant_country": "HN",
    "applicant_country_name": "Honduras",
    "latest": {
-    "value_raw": "23 days",
-    "value_days": 23,
+    "value_raw": "24 days",
+    "value_days": 24,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1559,8 +1559,8 @@
     "value_days": null,
     "unit_original": null,
     "status": "unavailable",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1579,8 +1579,8 @@
     "value_days": 23,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1599,8 +1599,8 @@
     "value_days": 21,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1615,12 +1615,12 @@
    "applicant_country": "ID",
    "applicant_country_name": "Indonesia",
    "latest": {
-    "value_raw": "29 days",
-    "value_days": 29,
+    "value_raw": "28 days",
+    "value_days": 28,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1635,12 +1635,12 @@
    "applicant_country": "IE",
    "applicant_country_name": "Ireland",
    "latest": {
-    "value_raw": "21 days",
-    "value_days": 21,
+    "value_raw": "20 days",
+    "value_days": 20,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1655,12 +1655,12 @@
    "applicant_country": "IL",
    "applicant_country_name": "Israel",
    "latest": {
-    "value_raw": "28 days",
-    "value_days": 28,
+    "value_raw": "30 days",
+    "value_days": 30,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1675,12 +1675,12 @@
    "applicant_country": "IN",
    "applicant_country_name": "India",
    "latest": {
-    "value_raw": "31 days",
-    "value_days": 31,
+    "value_raw": "32 days",
+    "value_days": 32,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1699,8 +1699,8 @@
     "value_days": null,
     "unit_original": null,
     "status": "unavailable",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1715,12 +1715,12 @@
    "applicant_country": "IQ",
    "applicant_country_name": "Iraq",
    "latest": {
-    "value_raw": "72 days",
-    "value_days": 72,
+    "value_raw": "92 days",
+    "value_days": 92,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1735,12 +1735,12 @@
    "applicant_country": "IR",
    "applicant_country_name": "Iran",
    "latest": {
-    "value_raw": "197 days",
-    "value_days": 197,
+    "value_raw": "157 days",
+    "value_days": 157,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1759,8 +1759,8 @@
     "value_days": 52,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1775,12 +1775,12 @@
    "applicant_country": "IT",
    "applicant_country_name": "Italy",
    "latest": {
-    "value_raw": "35 days",
-    "value_days": 35,
+    "value_raw": "36 days",
+    "value_days": 36,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1799,8 +1799,8 @@
     "value_days": 27,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1819,8 +1819,8 @@
     "value_days": 57,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1835,12 +1835,12 @@
    "applicant_country": "JP",
    "applicant_country_name": "Japan",
    "latest": {
-    "value_raw": "52 days",
-    "value_days": 52,
+    "value_raw": "53 days",
+    "value_days": 53,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1855,12 +1855,12 @@
    "applicant_country": "KE",
    "applicant_country_name": "Kenya",
    "latest": {
-    "value_raw": "83 days",
-    "value_days": 83,
+    "value_raw": "95 days",
+    "value_days": 95,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1875,12 +1875,12 @@
    "applicant_country": "KG",
    "applicant_country_name": "Kyrgyzstan",
    "latest": {
-    "value_raw": "25 days",
-    "value_days": 25,
+    "value_raw": "20 days",
+    "value_days": 20,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1895,12 +1895,12 @@
    "applicant_country": "KH",
    "applicant_country_name": "Cambodia",
    "latest": {
-    "value_raw": "41 days",
-    "value_days": 41,
+    "value_raw": "42 days",
+    "value_days": 42,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1919,8 +1919,8 @@
     "value_days": null,
     "unit_original": null,
     "status": "unavailable",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1939,8 +1939,8 @@
     "value_days": null,
     "unit_original": null,
     "status": "unavailable",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1955,12 +1955,12 @@
    "applicant_country": "KN",
    "applicant_country_name": "St. Kitts & Nevis",
    "latest": {
-    "value_raw": "26 days",
-    "value_days": 26,
+    "value_raw": "27 days",
+    "value_days": 27,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1979,8 +1979,8 @@
     "value_days": null,
     "unit_original": null,
     "status": "unavailable",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -1999,8 +1999,8 @@
     "value_days": 54,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2015,12 +2015,12 @@
    "applicant_country": "KW",
    "applicant_country_name": "Kuwait",
    "latest": {
-    "value_raw": "69 days",
-    "value_days": 69,
+    "value_raw": "66 days",
+    "value_days": 66,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2035,12 +2035,12 @@
    "applicant_country": "KY",
    "applicant_country_name": "Cayman Islands",
    "latest": {
-    "value_raw": "28 days",
-    "value_days": 28,
+    "value_raw": "27 days",
+    "value_days": 27,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2055,12 +2055,12 @@
    "applicant_country": "KZ",
    "applicant_country_name": "Kazakhstan",
    "latest": {
-    "value_raw": "23 days",
-    "value_days": 23,
+    "value_raw": "21 days",
+    "value_days": 21,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2075,12 +2075,12 @@
    "applicant_country": "LA",
    "applicant_country_name": "Laos",
    "latest": {
-    "value_raw": "15 days",
-    "value_days": 15,
+    "value_raw": "19 days",
+    "value_days": 19,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2095,12 +2095,12 @@
    "applicant_country": "LB",
    "applicant_country_name": "Lebanon",
    "latest": {
-    "value_raw": "66 days",
-    "value_days": 66,
+    "value_raw": "67 days",
+    "value_days": 67,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2115,12 +2115,12 @@
    "applicant_country": "LC",
    "applicant_country_name": "St. Lucia",
    "latest": {
-    "value_raw": "20 days",
-    "value_days": 20,
+    "value_raw": "16 days",
+    "value_days": 16,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2139,8 +2139,8 @@
     "value_days": null,
     "unit_original": null,
     "status": "unavailable",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2155,12 +2155,12 @@
    "applicant_country": "LK",
    "applicant_country_name": "Sri Lanka",
    "latest": {
-    "value_raw": "37 days",
-    "value_days": 37,
+    "value_raw": "39 days",
+    "value_days": 39,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2175,12 +2175,12 @@
    "applicant_country": "LR",
    "applicant_country_name": "Liberia",
    "latest": {
-    "value_raw": "85 days",
-    "value_days": 85,
+    "value_raw": "87 days",
+    "value_days": 87,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2199,8 +2199,8 @@
     "value_days": null,
     "unit_original": null,
     "status": "unavailable",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2215,12 +2215,12 @@
    "applicant_country": "LT",
    "applicant_country_name": "Lithuania",
    "latest": {
-    "value_raw": "20 days",
-    "value_days": 20,
+    "value_raw": "30 days",
+    "value_days": 30,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2235,12 +2235,12 @@
    "applicant_country": "LU",
    "applicant_country_name": "Luxembourg",
    "latest": {
-    "value_raw": "35 days",
-    "value_days": 35,
+    "value_raw": "36 days",
+    "value_days": 36,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2255,12 +2255,12 @@
    "applicant_country": "LV",
    "applicant_country_name": "Latvia",
    "latest": {
-    "value_raw": "28 days",
-    "value_days": 28,
+    "value_raw": "30 days",
+    "value_days": 30,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2275,12 +2275,12 @@
    "applicant_country": "LY",
    "applicant_country_name": "Libya",
    "latest": {
-    "value_raw": "34 days",
-    "value_days": 34,
+    "value_raw": "36 days",
+    "value_days": 36,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2295,12 +2295,12 @@
    "applicant_country": "MA",
    "applicant_country_name": "Morocco",
    "latest": {
-    "value_raw": "30 days",
-    "value_days": 30,
+    "value_raw": "28 days",
+    "value_days": 28,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2319,8 +2319,8 @@
     "value_days": null,
     "unit_original": null,
     "status": "unavailable",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2339,8 +2339,8 @@
     "value_days": 34,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2355,12 +2355,12 @@
    "applicant_country": "ME",
    "applicant_country_name": "Montenegro",
    "latest": {
-    "value_raw": "20 days",
-    "value_days": 20,
+    "value_raw": "28 days",
+    "value_days": 28,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2375,12 +2375,12 @@
    "applicant_country": "MG",
    "applicant_country_name": "Madagascar",
    "latest": {
-    "value_raw": "324 days",
-    "value_days": 324,
+    "value_raw": "289 days",
+    "value_days": 289,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2399,8 +2399,8 @@
     "value_days": null,
     "unit_original": null,
     "status": "unavailable",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2415,12 +2415,12 @@
    "applicant_country": "MK",
    "applicant_country_name": "North Macedonia",
    "latest": {
-    "value_raw": "28 days",
-    "value_days": 28,
+    "value_raw": "37 days",
+    "value_days": 37,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2435,12 +2435,12 @@
    "applicant_country": "ML",
    "applicant_country_name": "Mali",
    "latest": {
-    "value_raw": "94 days",
-    "value_days": 94,
+    "value_raw": "95 days",
+    "value_days": 95,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2455,12 +2455,12 @@
    "applicant_country": "MM",
    "applicant_country_name": "Myanmar (Burma)",
    "latest": {
-    "value_raw": "14 days",
-    "value_days": 14,
+    "value_raw": "20 days",
+    "value_days": 20,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2479,8 +2479,8 @@
     "value_days": 38,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2495,12 +2495,12 @@
    "applicant_country": "MO",
    "applicant_country_name": "Macao SAR China",
    "latest": {
-    "value_raw": "29 days",
-    "value_days": 29,
+    "value_raw": "27 days",
+    "value_days": 27,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2519,8 +2519,8 @@
     "value_days": null,
     "unit_original": null,
     "status": "unavailable",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2535,12 +2535,12 @@
    "applicant_country": "MR",
    "applicant_country_name": "Mauritania",
    "latest": {
-    "value_raw": "68 days",
-    "value_days": 68,
+    "value_raw": "59 days",
+    "value_days": 59,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2555,12 +2555,12 @@
    "applicant_country": "MT",
    "applicant_country_name": "Malta",
    "latest": {
-    "value_raw": "36 days",
-    "value_days": 36,
+    "value_raw": "65 days",
+    "value_days": 65,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2575,12 +2575,12 @@
    "applicant_country": "MU",
    "applicant_country_name": "Mauritius",
    "latest": {
-    "value_raw": "120 days",
-    "value_days": 120,
+    "value_raw": "126 days",
+    "value_days": 126,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2599,8 +2599,8 @@
     "value_days": null,
     "unit_original": null,
     "status": "unavailable",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2615,12 +2615,12 @@
    "applicant_country": "MW",
    "applicant_country_name": "Malawi",
    "latest": {
-    "value_raw": "140 days",
-    "value_days": 140,
+    "value_raw": "161 days",
+    "value_days": 161,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2639,8 +2639,8 @@
     "value_days": 33,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2655,12 +2655,12 @@
    "applicant_country": "MY",
    "applicant_country_name": "Malaysia",
    "latest": {
-    "value_raw": "45 days",
-    "value_days": 45,
+    "value_raw": "31 days",
+    "value_days": 31,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2679,8 +2679,8 @@
     "value_days": 695,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2695,12 +2695,12 @@
    "applicant_country": "NA",
    "applicant_country_name": "Namibia",
    "latest": {
-    "value_raw": "121 days",
-    "value_days": 121,
+    "value_raw": "111 days",
+    "value_days": 111,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2719,8 +2719,8 @@
     "value_days": null,
     "unit_original": null,
     "status": "unavailable",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2735,12 +2735,12 @@
    "applicant_country": "NE",
    "applicant_country_name": "Niger",
    "latest": {
-    "value_raw": "91 days",
-    "value_days": 91,
+    "value_raw": "78 days",
+    "value_days": 78,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2755,12 +2755,12 @@
    "applicant_country": "NG",
    "applicant_country_name": "Nigeria",
    "latest": {
-    "value_raw": "76 days",
-    "value_days": 76,
+    "value_raw": "78 days",
+    "value_days": 78,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2779,8 +2779,8 @@
     "value_days": 22,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2795,12 +2795,12 @@
    "applicant_country": "NL",
    "applicant_country_name": "Netherlands",
    "latest": {
-    "value_raw": "29 days",
-    "value_days": 29,
+    "value_raw": "25 days",
+    "value_days": 25,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2815,12 +2815,12 @@
    "applicant_country": "NO",
    "applicant_country_name": "Norway",
    "latest": {
-    "value_raw": "44 days",
-    "value_days": 44,
+    "value_raw": "40 days",
+    "value_days": 40,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2835,12 +2835,12 @@
    "applicant_country": "NP",
    "applicant_country_name": "Nepal",
    "latest": {
-    "value_raw": "35 days",
-    "value_days": 35,
+    "value_raw": "34 days",
+    "value_days": 34,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2859,8 +2859,8 @@
     "value_days": null,
     "unit_original": null,
     "status": "unavailable",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2879,8 +2879,8 @@
     "value_days": 16,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2895,12 +2895,12 @@
    "applicant_country": "OM",
    "applicant_country_name": "Oman",
    "latest": {
-    "value_raw": "71 days",
-    "value_days": 71,
+    "value_raw": "69 days",
+    "value_days": 69,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2919,8 +2919,8 @@
     "value_days": 29,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2939,8 +2939,8 @@
     "value_days": 30,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2959,8 +2959,8 @@
     "value_days": null,
     "unit_original": null,
     "status": "unavailable",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2979,8 +2979,8 @@
     "value_days": null,
     "unit_original": null,
     "status": "unavailable",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -2995,12 +2995,12 @@
    "applicant_country": "PH",
    "applicant_country_name": "Philippines",
    "latest": {
-    "value_raw": "21 days",
-    "value_days": 21,
+    "value_raw": "20 days",
+    "value_days": 20,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3015,12 +3015,12 @@
    "applicant_country": "PK",
    "applicant_country_name": "Pakistan",
    "latest": {
-    "value_raw": "75 days",
-    "value_days": 75,
+    "value_raw": "77 days",
+    "value_days": 77,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3035,12 +3035,12 @@
    "applicant_country": "PL",
    "applicant_country_name": "Poland",
    "latest": {
-    "value_raw": "28 days",
-    "value_days": 28,
+    "value_raw": "23 days",
+    "value_days": 23,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3059,8 +3059,8 @@
     "value_days": null,
     "unit_original": null,
     "status": "unavailable",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3075,12 +3075,12 @@
    "applicant_country": "PS",
    "applicant_country_name": "Palestinian Territories",
    "latest": {
-    "value_raw": "32 days",
-    "value_days": 32,
+    "value_raw": "23 days",
+    "value_days": 23,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3095,12 +3095,12 @@
    "applicant_country": "PT",
    "applicant_country_name": "Portugal",
    "latest": {
-    "value_raw": "36 days",
-    "value_days": 36,
+    "value_raw": "37 days",
+    "value_days": 37,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3115,12 +3115,12 @@
    "applicant_country": "PY",
    "applicant_country_name": "Paraguay",
    "latest": {
-    "value_raw": "23 days",
-    "value_days": 23,
+    "value_raw": "57 days",
+    "value_days": 57,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3135,12 +3135,12 @@
    "applicant_country": "QA",
    "applicant_country_name": "Qatar",
    "latest": {
-    "value_raw": "70 days",
-    "value_days": 70,
+    "value_raw": "69 days",
+    "value_days": 69,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3159,8 +3159,8 @@
     "value_days": 38,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3175,12 +3175,12 @@
    "applicant_country": "RS",
    "applicant_country_name": "Serbia",
    "latest": {
-    "value_raw": "25 days",
-    "value_days": 25,
+    "value_raw": "24 days",
+    "value_days": 24,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3195,12 +3195,12 @@
    "applicant_country": "RU",
    "applicant_country_name": "Russia",
    "latest": {
-    "value_raw": "34 days",
-    "value_days": 34,
+    "value_raw": "26 days",
+    "value_days": 26,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3215,12 +3215,12 @@
    "applicant_country": "RW",
    "applicant_country_name": "Rwanda",
    "latest": {
-    "value_raw": "50 days",
-    "value_days": 50,
+    "value_raw": "48 days",
+    "value_days": 48,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3239,8 +3239,8 @@
     "value_days": 56,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3259,8 +3259,8 @@
     "value_days": null,
     "unit_original": null,
     "status": "unavailable",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3279,8 +3279,8 @@
     "value_days": null,
     "unit_original": null,
     "status": "unavailable",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3295,12 +3295,12 @@
    "applicant_country": "SD",
    "applicant_country_name": "Sudan",
    "latest": {
-    "value_raw": "No processing time available",
-    "value_days": null,
-    "unit_original": null,
-    "status": "unavailable",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "value_raw": "26 days",
+    "value_days": 26,
+    "unit_original": "days",
+    "status": "ok",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3315,12 +3315,12 @@
    "applicant_country": "SE",
    "applicant_country_name": "Sweden",
    "latest": {
-    "value_raw": "23 days",
-    "value_days": 23,
+    "value_raw": "22 days",
+    "value_days": 22,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3335,12 +3335,12 @@
    "applicant_country": "SG",
    "applicant_country_name": "Singapore",
    "latest": {
-    "value_raw": "36 days",
-    "value_days": 36,
+    "value_raw": "29 days",
+    "value_days": 29,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3359,8 +3359,8 @@
     "value_days": null,
     "unit_original": null,
     "status": "unavailable",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3375,12 +3375,12 @@
    "applicant_country": "SK",
    "applicant_country_name": "Slovakia",
    "latest": {
-    "value_raw": "39 days",
-    "value_days": 39,
+    "value_raw": "40 days",
+    "value_days": 40,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3395,12 +3395,12 @@
    "applicant_country": "SL",
    "applicant_country_name": "Sierra Leone",
    "latest": {
-    "value_raw": "84 days",
-    "value_days": 84,
+    "value_raw": "89 days",
+    "value_days": 89,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3419,8 +3419,8 @@
     "value_days": null,
     "unit_original": null,
     "status": "unavailable",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3435,12 +3435,12 @@
    "applicant_country": "SN",
    "applicant_country_name": "Senegal",
    "latest": {
-    "value_raw": "49 days",
-    "value_days": 49,
+    "value_raw": "48 days",
+    "value_days": 48,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3455,12 +3455,12 @@
    "applicant_country": "SO",
    "applicant_country_name": "Somalia",
    "latest": {
-    "value_raw": "37 days",
-    "value_days": 37,
+    "value_raw": "40 days",
+    "value_days": 40,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3475,12 +3475,12 @@
    "applicant_country": "SR",
    "applicant_country_name": "Suriname",
    "latest": {
-    "value_raw": "42 days",
-    "value_days": 42,
+    "value_raw": "34 days",
+    "value_days": 34,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3499,8 +3499,8 @@
     "value_days": null,
     "unit_original": null,
     "status": "unavailable",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3519,8 +3519,8 @@
     "value_days": null,
     "unit_original": null,
     "status": "unavailable",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3535,12 +3535,12 @@
    "applicant_country": "SV",
    "applicant_country_name": "El Salvador",
    "latest": {
-    "value_raw": "22 days",
-    "value_days": 22,
+    "value_raw": "23 days",
+    "value_days": 23,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3555,12 +3555,12 @@
    "applicant_country": "SY",
    "applicant_country_name": "Syria",
    "latest": {
-    "value_raw": "77 days",
-    "value_days": 77,
+    "value_raw": "78 days",
+    "value_days": 78,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3575,12 +3575,12 @@
    "applicant_country": "SZ",
    "applicant_country_name": "Eswatini",
    "latest": {
-    "value_raw": "148 days",
-    "value_days": 148,
+    "value_raw": "359 days",
+    "value_days": 359,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3595,12 +3595,12 @@
    "applicant_country": "TC",
    "applicant_country_name": "Turks & Caicos Islands",
    "latest": {
-    "value_raw": "25 days",
-    "value_days": 25,
+    "value_raw": "27 days",
+    "value_days": 27,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3619,8 +3619,8 @@
     "value_days": 69,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3635,12 +3635,12 @@
    "applicant_country": "TG",
    "applicant_country_name": "Togo",
    "latest": {
-    "value_raw": "153 days",
-    "value_days": 153,
+    "value_raw": "134 days",
+    "value_days": 134,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3655,12 +3655,12 @@
    "applicant_country": "TH",
    "applicant_country_name": "Thailand",
    "latest": {
-    "value_raw": "21 days",
-    "value_days": 21,
+    "value_raw": "22 days",
+    "value_days": 22,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3679,8 +3679,8 @@
     "value_days": 16,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3699,8 +3699,8 @@
     "value_days": null,
     "unit_original": null,
     "status": "unavailable",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3719,8 +3719,8 @@
     "value_days": null,
     "unit_original": null,
     "status": "unavailable",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3735,12 +3735,12 @@
    "applicant_country": "TN",
    "applicant_country_name": "Tunisia",
    "latest": {
-    "value_raw": "35 days",
-    "value_days": 35,
+    "value_raw": "36 days",
+    "value_days": 36,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3759,8 +3759,8 @@
     "value_days": null,
     "unit_original": null,
     "status": "unavailable",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3775,12 +3775,12 @@
    "applicant_country": "TR",
    "applicant_country_name": "Türkiye",
    "latest": {
-    "value_raw": "77 days",
-    "value_days": 77,
+    "value_raw": "76 days",
+    "value_days": 76,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3795,12 +3795,12 @@
    "applicant_country": "TT",
    "applicant_country_name": "Trinidad & Tobago",
    "latest": {
-    "value_raw": "17 days",
-    "value_days": 17,
+    "value_raw": "16 days",
+    "value_days": 16,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3819,8 +3819,8 @@
     "value_days": null,
     "unit_original": null,
     "status": "unavailable",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3835,12 +3835,12 @@
    "applicant_country": "TW",
    "applicant_country_name": "Taiwan",
    "latest": {
-    "value_raw": "48 days",
-    "value_days": 48,
+    "value_raw": "50 days",
+    "value_days": 50,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3855,12 +3855,12 @@
    "applicant_country": "TZ",
    "applicant_country_name": "Tanzania",
    "latest": {
-    "value_raw": "47 days",
-    "value_days": 47,
+    "value_raw": "46 days",
+    "value_days": 46,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3875,12 +3875,12 @@
    "applicant_country": "UA",
    "applicant_country_name": "Ukraine",
    "latest": {
-    "value_raw": "35 days",
-    "value_days": 35,
+    "value_raw": "26 days",
+    "value_days": 26,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3895,12 +3895,12 @@
    "applicant_country": "UG",
    "applicant_country_name": "Uganda",
    "latest": {
-    "value_raw": "79 days",
-    "value_days": 79,
+    "value_raw": "83 days",
+    "value_days": 83,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3919,8 +3919,8 @@
     "value_days": 21,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3935,12 +3935,12 @@
    "applicant_country": "UY",
    "applicant_country_name": "Uruguay",
    "latest": {
-    "value_raw": "18 days",
-    "value_days": 18,
+    "value_raw": "19 days",
+    "value_days": 19,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3955,12 +3955,12 @@
    "applicant_country": "UZ",
    "applicant_country_name": "Uzbekistan",
    "latest": {
-    "value_raw": "20 days",
-    "value_days": 20,
+    "value_raw": "17 days",
+    "value_days": 17,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3979,8 +3979,8 @@
     "value_days": null,
     "unit_original": null,
     "status": "unavailable",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -3995,12 +3995,12 @@
    "applicant_country": "VC",
    "applicant_country_name": "St. Vincent & Grenadines",
    "latest": {
-    "value_raw": "27 days",
-    "value_days": 27,
+    "value_raw": "22 days",
+    "value_days": 22,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -4015,12 +4015,12 @@
    "applicant_country": "VE",
    "applicant_country_name": "Venezuela",
    "latest": {
-    "value_raw": "29 days",
-    "value_days": 29,
+    "value_raw": "30 days",
+    "value_days": 30,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -4039,8 +4039,8 @@
     "value_days": null,
     "unit_original": null,
     "status": "unavailable",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -4055,12 +4055,12 @@
    "applicant_country": "VN",
    "applicant_country_name": "Vietnam",
    "latest": {
-    "value_raw": "28 days",
-    "value_days": 28,
+    "value_raw": "29 days",
+    "value_days": 29,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -4079,8 +4079,8 @@
     "value_days": null,
     "unit_original": null,
     "status": "unavailable",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -4095,12 +4095,12 @@
    "applicant_country": "WB",
    "applicant_country_name": "WB",
    "latest": {
-    "value_raw": "32 days",
-    "value_days": 32,
+    "value_raw": "23 days",
+    "value_days": 23,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -4119,8 +4119,8 @@
     "value_days": null,
     "unit_original": null,
     "status": "unavailable",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -4135,12 +4135,12 @@
    "applicant_country": "XK",
    "applicant_country_name": "Kosovo",
    "latest": {
-    "value_raw": "24 days",
-    "value_days": 24,
+    "value_raw": "21 days",
+    "value_days": 21,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -4155,12 +4155,12 @@
    "applicant_country": "YE",
    "applicant_country_name": "Yemen",
    "latest": {
-    "value_raw": "49 days",
-    "value_days": 49,
+    "value_raw": "29 days",
+    "value_days": 29,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -4175,12 +4175,12 @@
    "applicant_country": "ZA",
    "applicant_country_name": "South Africa",
    "latest": {
-    "value_raw": "357 days",
-    "value_days": 357,
+    "value_raw": "409 days",
+    "value_days": 409,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -4195,12 +4195,12 @@
    "applicant_country": "ZM",
    "applicant_country_name": "Zambia",
    "latest": {
-    "value_raw": "132 days",
-    "value_days": 132,
+    "value_raw": "141 days",
+    "value_days": 141,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }
@@ -4215,12 +4215,12 @@
    "applicant_country": "ZW",
    "applicant_country_name": "Zimbabwe",
    "latest": {
-    "value_raw": "270 days",
-    "value_days": 270,
+    "value_raw": "337 days",
+    "value_days": 337,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-21T11:37:08.257Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:47.375Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
     "confidence": "official"
    }

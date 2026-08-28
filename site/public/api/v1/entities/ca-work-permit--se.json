@@ -8,12 +8,12 @@
  "applicant_country": "SE",
  "applicant_country_name": "Sweden",
  "latest": {
-  "value_raw": "No processing time available",
-  "value_days": null,
-  "unit_original": null,
-  "status": "unavailable",
-  "effective_date": "2026-08-19",
-  "retrieved_at": "2026-08-21T11:37:08.257Z",
+  "value_raw": "8 weeks",
+  "value_days": 56,
+  "unit_original": "weeks",
+  "status": "ok",
+  "effective_date": "2026-08-26",
+  "retrieved_at": "2026-08-28T23:20:47.375Z",
   "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
   "confidence": "official"
  },
@@ -25,6 +25,15 @@
    "status": "unavailable",
    "effective_date": "2026-08-19",
    "retrieved_at": "2026-08-21T11:37:08.257Z",
+   "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json"
+  },
+  {
+   "value_raw": "8 weeks",
+   "value_days": 56,
+   "unit_original": "weeks",
+   "status": "ok",
+   "effective_date": "2026-08-26",
+   "retrieved_at": "2026-08-28T23:20:47.375Z",
    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json"
   }
  ],

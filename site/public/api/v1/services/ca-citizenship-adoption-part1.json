@@ -3,7 +3,7 @@
  "service_name": "Citizenship for a person adopted abroad (Part 1)",
  "jurisdiction": "CA",
  "count": 1,
- "generated_at": "2026-08-27T23:39:25.471Z",
+ "generated_at": "2026-08-28T23:27:50.366Z",
  "records": [
   {
    "entity_id": "ca-citizenship-adoption-part1",
@@ -19,8 +19,8 @@
     "value_days": 121.76,
     "unit_original": "months",
     "status": "ok",
-    "effective_date": "2026-08-19",
-    "retrieved_at": "2026-08-22T01:17:28.517Z",
+    "effective_date": "2026-08-26",
+    "retrieved_at": "2026-08-28T23:20:53.386Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json",
     "confidence": "official"
    }

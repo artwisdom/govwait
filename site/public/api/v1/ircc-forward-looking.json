@@ -1,7 +1,7 @@
 {
  "name": "IRCC forward-looking processing times",
  "description": "Current new-application projections plus application-month cohort estimates. Cohort months are submission dates within each IRCC snapshot, not historical publication dates.",
- "generated_at": "2026-08-27T23:39:25.471Z",
+ "generated_at": "2026-08-28T23:27:50.366Z",
  "count": 28,
  "programs": [
   {
