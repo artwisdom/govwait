@@ -3,7 +3,7 @@
  "service_name": "Accredited Employer Work Visa — 50% processed",
  "jurisdiction": "NZ",
  "count": 2,
- "generated_at": "2026-09-01T02:22:17.881Z",
+ "generated_at": "2026-09-01T17:38:38.773Z",
  "records": [
   {
    "entity_id": "nz-accredited-employer-work-visa--p50",
@@ -15,12 +15,12 @@
    "applicant_country": null,
    "applicant_country_name": null,
    "latest": {
-    "value_raw": "22 working days",
-    "value_days": 22,
+    "value_raw": "21 working days",
+    "value_days": 21,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-08-23",
-    "retrieved_at": "2026-08-23T21:02:39.891Z",
+    "effective_date": "2026-09-01",
+    "retrieved_at": "2026-09-01T17:31:49.367Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }

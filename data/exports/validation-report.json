@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-01T02:22:17.826Z",
+  "generated_at": "2026-09-01T17:38:38.695Z",
   "pass": true,
   "checks": [
     {
@@ -75,7 +75,7 @@
     {
       "name": "coverage-inz-processing-times",
       "pass": true,
-      "detail": "266 observations (floor 240)"
+      "detail": "368 observations (floor 240)"
     },
     {
       "name": "coverage-udi-waiting-times",
@@ -85,7 +85,7 @@
     {
       "name": "coverage-total",
       "pass": true,
-      "detail": "4244 total observations (floor 300)"
+      "detail": "4346 total observations (floor 300)"
     },
     {
       "name": "staleness-ircc-ptime",
