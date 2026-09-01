@@ -2,20 +2,20 @@
 
 _Implemented and production-verified initially on 2026-08-23, expanded by the
 Phase 1 trust/growth release on 2026-08-25, and expanded again by the IRCC
-forward-looking release on 2026-08-27. Current production is commit `5d5f0a9`,
-deployed in GitHub Actions run `33127083764`. A 635-URL Norway expansion passed
-local gates on 2026-08-30 but is not yet production._
+forward-looking release on 2026-08-27, and expanded by Norway UDI on 2026-08-31.
+Current production is commit `a9100bb`, deployed in GitHub Actions run
+`33462368754` to `74bd35d1.govwait.pages.dev`._
 
 ## Search-indexing policy
 
-- Production builds 2,082 HTML pages, including the 404 page.
-- 615 pages currently have enough distinct, useful content to request indexing:
-  68 general/country hubs, guides, policies, reports, and reviewed Canadian
-  service pages; 445 Canadian applicant-country pages with
-  a numeric official value, 77 UK service pages, and the first 25 curated New
-  Zealand visa pages. Each New Zealand page combines its official 50th- and
-  80th-percentile figures rather than creating two near-duplicate pages.
-- 1,462 Canadian applicant-country pages where the agency currently publishes
+- Production builds 2,104 HTML pages, including the 404 page.
+- 635 pages currently have enough distinct, useful content to request indexing:
+  71 general/country hubs, guides, policies, reports, and reviewed Canadian
+  service pages; 443 Canadian applicant-country pages with a numeric official
+  value, 77 UK service pages, the first 25 curated New Zealand visa pages, and
+  19 complete Norway UDI table routes. Each New Zealand page combines its official
+  50th- and 80th-percentile figures rather than creating two near-duplicate pages.
+- 1,464 Canadian applicant-country pages where the agency currently publishes
   only `unavailable` or `insufficient_data` remain live, internally linked, and
   crawler-accessible. They carry `noindex, follow` and are excluded from
   sitemaps and IndexNow until an official numeric value appears.
@@ -35,7 +35,7 @@ index a large family of low-information query variants.
   data date cannot become stale. It links the sitemap, JSON API, OpenAPI file,
   human entry points, and public MCP server.
 - The sitemap index separates hubs, Canadian numeric country pages, UK services,
-  and the first New Zealand cohort. Each child and the index use the newest
+  the first New Zealand cohort, and Norway UDI services. Each child and the index use the newest
   source-backed effective or first-observed date in that exact URL set; build
   time is never used as `lastmod`.
 - The homepage publishes WebSite, Organization, and Dataset structured data.
@@ -46,7 +46,7 @@ index a large family of low-information query variants.
   crawler policy, or JSON-LD validity regress.
 - The IndexNow notifier submits the exact changed public pages only after the
   corresponding production deployment succeeds. It can also submit the full
-  current 615-URL indexable set and respects the protocol's 10,000-URL request
+  current 635-URL indexable set and respects the protocol's 10,000-URL request
   limit.
 
 ## Cloudflare edge policy
@@ -70,19 +70,19 @@ it does not prove search indexing, citations, rankings, traffic, or revenue.
 ## Acceptance receipt
 
 ```text
-[seo-audit] 2082 HTML pages; 615 indexable; 615 sitemap URLs
+[seo-audit] 2104 HTML pages; 635 indexable; 635 sitemap URLs
 [seo-audit] PASS
-[conformance] checked 2572 API files
+[conformance] checked 2611 API files
 [conformance] PASS
-MCP SMOKE TEST: ALL PASS, including New Zealand and IRCC forward/cohort checks
-IndexNow full-set dry run: 615 indexable URLs
-Production deploy: commit 5d5f0a9; GitHub Actions run 33127083764 succeeded
-Cloudflare Pages deployment: https://0933a757.govwait.pages.dev
-Public edge: all 12 new pages, bulk/entity APIs, OpenAPI, robots.txt, llms.txt,
-canonical redirect, and root/four child sitemaps verified on govwait.com
-Live child sitemap counts: hubs 68 + CA 445 + GB 77 + NZ 25 = 615 unique URLs
-IndexNow change submission after deployment: 621 URLs, HTTP 200 receipt
-  (615 indexable pages + llms.txt + five sitemap documents)
+MCP SMOKE TEST: ALL PASS, including Norway, New Zealand and IRCC semantic checks
+IndexNow full-set dry run: 635 indexable URLs
+Production deploy: commit a9100bb; GitHub Actions run 33462368754 succeeded
+Cloudflare Pages deployment: https://74bd35d1.govwait.pages.dev
+Public edge: all 22 Norway URLs, bulk/entity APIs, OpenAPI, robots.txt, llms.txt,
+canonical/artifact parity, www redirect, and root/five child sitemaps verified
+Live child sitemap counts: hubs 71 + CA 443 + GB 77 + NZ 25 + NO 19 = 635 URLs
+IndexNow change submission after deployment: 642 URLs, HTTP 200 receipt
+  (635 indexable pages + llms.txt + six sitemap documents)
 Existing Google sitemap index: https://govwait.com/sitemap.xml already registered;
 Google reports Sitemap index / Success; Bing reports Submitted / Processing
 Earlier Google priority crawl requests: accepted for all three confirmed gaps
@@ -107,12 +107,12 @@ Earlier Google priority crawl requests: accepted for all three confirmed gaps
   615 sitemap URLs, crawler policy, and canonical behavior. These release receipts
   are not evidence of search indexing, traffic, ad approval, or revenue.
 
-## Norway deployment candidate (local, not production)
+## Norway production expansion
 
 - Adds 19 distinct UDI service pages, one Norway hub, one source-method guide, and
   one honest baseline report: 22 new indexable URLs. A fifth child sitemap contains
   exactly the 19 service URLs; hubs contains the country, guide, and report URLs.
-- Candidate build: 2,104 HTML pages; 635 intentionally indexable pages; exactly 635
+- Production build: 2,104 HTML pages; 635 intentionally indexable pages; exactly 635
   sitemap URLs. Child counts are hubs 71 + CA 443 + GB 77 + NZ 25 + NO 19 = 635.
   The Canadian numeric count changed from the earlier production snapshot because
   the 2026-08-28 official refresh changed current availability; this is data-driven,
@@ -124,6 +124,8 @@ Earlier Google priority crawl requests: accepted for all three confirmed gaps
 - Release gates: 12/12 parser tests, 25 validation checks, SEO audit, 2,611-file API
   conformance, MCP build/smoke, 635-URL full IndexNow dry run, `git diff --check`,
   and desktop/mobile browser checks all pass.
-- No Norway URL has been deployed, publicly verified, submitted through IndexNow,
-  requested manually in Google, indexed, ranked, visited, or monetized. Those are
-  separate later evidence states.
+- Commit `a9100bb` deployed in run `33462368754`. All 22 Norway URLs, public APIs,
+  five-child sitemap family, crawler files, canonical/artifact parity, and `www`
+  redirect passed edge checks. IndexNow accepted 642 URLs with HTTP 200.
+- No manual Norway Google indexing request, confirmed indexing, ranking, search
+  traffic, ad approval, or revenue is claimed. Those are separate later evidence states.

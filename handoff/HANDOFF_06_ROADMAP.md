@@ -18,9 +18,9 @@ never the numbers themselves — six free competitors already have the numbers.*
   UK Standard Visitor, Canada Visitor Visa by Country guide, and Canada Study
   Permit from Pakistan. All three were added to Google's priority crawl queue.
 - [x] Harden search/AI discovery: canonical `www` 301, explicit search and AI
-  crawler allows, generated `llms.txt`, four honest child sitemaps, structured
+  crawler allows, generated `llms.txt`, five honest child sitemaps, structured
   data, exact IndexNow notifications, and a blocking SEO CI audit. Indexing is
-  requested only for the 615 current data-backed pages; 1,462 official no-value
+  requested only for the 635 current data-backed pages; 1,464 official no-value
   pages automatically graduate from `noindex, follow` when data appears.
 - [x] Privacy-minimal measurement foundation: consent-gated GA4, 14-month retention,
   ad/personalization signals off, GA4 production stream linked to the `govwait.com`
@@ -46,9 +46,10 @@ add a dashboard screenshot alongside the textual policy evidence in
 `32921188032`; public-edge checks passed and IndexNow accepted the 603-URL current
 set with HTTP 200.
 
-**Latest production proof 2026-08-27:** Phase 2 commit `5d5f0a9` deployed in run
-`33127083764` to `0933a757.govwait.pages.dev`; the public apex, canonical redirect,
-API, crawler files, and four child sitemaps passed independent checks.
+**Latest production proof 2026-08-31:** Norway commit `a9100bb` deployed in run
+`33462368754` to `74bd35d1.govwait.pages.dev`; the public apex, all 22 Norway URLs,
+API provenance, crawler files, canonical redirect, and five child sitemaps passed
+independent checks. IndexNow accepted 642 URLs with HTTP 200.
 
 ## Phase R2 — NZ + IRCC-flpt sources (the moat accelerators)
 
@@ -82,7 +83,7 @@ Auto-generated per-jurisdiction "What changed this week/month" pages: biggest mo
 **Accept:** builds from history automatically; renders gracefully when few changes; RSS validates; first outreach email drafted (template in repo) for the owner to send to CIC News-adjacent reporters on a real data drop.
 
 **Status 2026-08-25:** the first honest baseline layer is live at `/reports/` with
-one source-backed report for Canada, the UK, and New Zealand. It renders a baseline
+one source-backed report for Canada, the UK, New Zealand, and Norway. It renders a baseline
 without inventing movement when no differing second observation exists. Permanent
 weekly issue URLs, RSS, and outreach on a real change remain unfinished R3 work.
 
@@ -97,7 +98,8 @@ weekly issue URLs, RSS, and outreach on a real change remain unfinished R3 work.
 Targets from HANDOFF_04's top-20 table: corridor guides (India→CA study, Nigeria→CA study, UK spouse timeline explainer, super-visa-for-parents…), "published vs lived timelines" explainer (the "reddit" distrust bridge), stage-definitions explainer ("after biometrics"), employer/sponsor-side section (the tier-1 RPM fix from HANDOFF_03). All data-fed where possible so they self-update. Write for humans; no AI-boilerplate tells.
 **Accept:** 40+ guide pages live; every top-20 route cross-linked to its guide; AdSense + Journey applications submitted once traffic gate hit (owner clicks).
 
-**Status 2026-08-25:** 13 source-backed guides are live (9 added in Phase 1), with
+**Status 2026-08-31:** 14 source-backed guides are live (9 added in Phase 1 plus
+the Norway method guide), with
 organizational bylines, citations, Article/Breadcrumb schema, and policy/correction
 paths. The 40-page depth target and traffic-gated ad applications remain unfinished.
 
@@ -111,14 +113,15 @@ CSV downloads per dataset + per-page Dataset schema → Google Dataset Search; M
 One per 2–4 weeks per HANDOFF_05 build order, each with the Sweden-citizenship-style PR hook where one exists. Per-host crawl-delay override (Migri needs 5s) — small fetcher change.
 **Accept:** 6–8 governments by month 6; each addition followed by its /reports issue and a pitch email.
 
-**Status 2026-08-30:** Norway's first bounded slice is locally release-ready: 19
+**Status 2026-08-31:** Norway's first bounded slice is production-verified: 19
 complete UDI table-backed routes, 22 new indexable pages, a source-method guide,
 an honest baseline report, fifth child sitemap, and full API/OpenAPI/MCP/`llms.txt`
 integration. Live collection, 12 parser tests, 25 validation checks, 2,104-page
 build, 635/635 SEO-sitemap audit, 2,611-file API conformance, MCP smoke, responsive
-visual QA, and the 635-URL IndexNow dry run pass. Deployment was owner-approved on
-2026-08-31; the workflow and public verification remain the gate. After that release, Finland is next and
-must use its documented 5-second crawl delay.
+visual QA, and the 635-URL IndexNow dry run pass. Commit `a9100bb` deployed in run
+`33462368754`; all 22 Norway URLs and public machine/discovery surfaces passed edge
+checks, and IndexNow accepted 642 URLs with HTTP 200. Finland is next and must use
+its documented 5-second crawl delay.
 
 ## Phase R8 — Day-90/120 SEO checkpoint (calendar it)
 

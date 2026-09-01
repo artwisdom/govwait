@@ -1,6 +1,6 @@
 # DEPLOYMENT GUIDE — every manual step, in order
 
-**Status update 2026-08-27:** the repository and refresh cron are active;
+**Status update 2026-08-31:** the repository and refresh cron are active;
 `govwait.com` is registered in Cloudflare; the Cloudflare Pages project `govwait`
 serves both the apex and `www` over HTTPS; `contact@govwait.com` forwards through
 Cloudflare Email Routing; and the public About page contains the address. Google
@@ -8,11 +8,9 @@ Search Console and Bing Webmaster Tools ownership are verified. The Phase 1
 editorial/trust release, consent-gated GA4, verified Grow script, and GA4-to-Search
 Console link are live. The remaining search-engine work is processing and honest
 measurement; setup and submission do not prove indexing, traffic, or ad approval.
-The Phase 2 IRCC forward-looking expansion is production-verified from commit
-`5d5f0a9`, deployment run `33127083764`, and Cloudflare artifact
-`0933a757.govwait.pages.dev`. A Norway UDI expansion passed every local release
-gate on 2026-08-30 but is not committed, deployed, or submitted for discovery;
-the production figures elsewhere in this document therefore remain unchanged.
+The Norway UDI expansion is production-verified from commit `a9100bb`, deployment
+run `33462368754`, and Cloudflare artifact `74bd35d1.govwait.pages.dev`. It expands
+the live product to 2,318 routes, 2,104 HTML pages, and 635 indexable/sitemap URLs.
 
 ## Go-live core
 
@@ -43,10 +41,10 @@ the production figures elsewhere in this document therefore remain unchanged.
    `https://govwait.com/sitemap.xml` was submitted to both on 2026-08-23. After
    the discoverability release reduced the requested index set to useful,
    data-backed pages and added separate child sitemaps, Google accepted the root
-   again and Bing accepted it for processing. The 2026-08-27 Phase 2 release has
-   **615 indexable pages and 615 matching sitemap URLs**; deployment run
-   `33127083764` submitted 621 changed URLs (the 615-page set plus `llms.txt` and
-   five sitemap documents) to IndexNow and received HTTP 200.
+   again and Bing accepted it for processing. The 2026-08-31 Norway release has
+   **635 indexable pages and 635 matching sitemap URLs**; deployment run
+   `33462368754` submitted 642 changed URLs (the 635-page set plus `llms.txt` and
+   six sitemap documents) to IndexNow and received HTTP 200.
    None of these receipts guarantees indexing.
    The public sitemap returns HTTP 200 as `application/xml`. Google's live URL test
    reports the homepage can be indexed (crawl
@@ -83,23 +81,27 @@ the production figures elsewhere in this document therefore remain unchanged.
    indexing, ranking, traffic, ad approval, or revenue. Do not resubmit manual
    Google indexing requests unless a specific high-value URL has a verified gap.
 
-## Norway release candidate — deployment approved 2026-08-31, verification pending
+## Norway release receipt — complete 2026-08-31
 
-1. **[DONE LOCALLY]** Integrated 19 UDI routes from 5 complete, dated official
+1. **[DONE]** Integrated 19 UDI routes from 5 complete, dated official
    tables. The collector uses an honest contact-bearing User-Agent, respects UDI's
    robots policy and request spacing, validates every expected row, and excludes
    personalised questionnaire paths.
-2. **[DONE LOCALLY]** Added Norway country/service pages, a source-method guide, a
+2. **[DONE]** Added Norway country/service pages, a source-method guide, a
    baseline-only change report, fifth child sitemap, JSON API/OpenAPI/MCP support,
-   `llms.txt`, navigation, and exact IndexNow URL mapping. The candidate adds 22
+   `llms.txt`, navigation, and exact IndexNow URL mapping. The release adds 22
    indexable URLs and brings the local sitemap set to 635.
-3. **[DONE LOCALLY]** Live collection returned 19/19 records dated 2026-08-27.
+3. **[DONE]** Live collection returned 19/19 records dated 2026-08-27.
    Parser tests 12/12, validation 25 checks, a 2,104-page build, 635/635 SEO-sitemap
    audit, 2,611-file API conformance, MCP smoke, 635-URL IndexNow dry run, diff
    validation, and desktop/mobile rendered checks passed.
-4. **[APPROVED — IN PROGRESS]** The owner said `Approve Norway deployment` on
-   2026-08-31, authorizing commit, push, production deployment, public-edge
-   verification, and the workflow's post-deploy IndexNow notification. These
+4. **[DONE]** The owner approved deployment. Commit `a9100bb` passed run
+   `33462368754` and deployed to `74bd35d1.govwait.pages.dev`; the production build
+   and 635/635 SEO-sitemap audit were blocking steps before publication.
+5. **[DONE]** All 22 Norway URLs returned HTTP 200. The hub rendered 19 rows with
+   no browser warnings; the published range, UDI provenance, API, five child
+   sitemaps, `llms.txt`, robots policy, canonicals, artifact parity, and the `www`
+   redirect passed public checks. IndexNow accepted 642 URLs with HTTP 200. These
    actions still do not prove indexing, traffic, ad approval, or revenue.
 
 ## Monetization (CORRECTED Aug 2026 per handoff research — the old Ezoic path is dead)
@@ -118,7 +120,7 @@ the production figures elsewhere in this document therefore remain unchanged.
    recommendations are off; the small reader/share widget remains on. No Journey
    application or ad approval is implied.
 
-9. **[FOUNDATION LIVE; APPLICATION LATER] Ads — the 2026 ladder.** Prerequisite for ANY approval: the editorial layer (13 guides, 3 jurisdiction reports, methodology, editorial/research-desk identity, and policy pages are live; continue expanding per roadmap) because 2,000 templated pages alone is the exact "Low Value Content" rejection profile.
+9. **[FOUNDATION LIVE; APPLICATION LATER] Ads — the 2026 ladder.** Prerequisite for ANY approval: the editorial layer (14 guides, 4 jurisdiction reports, methodology, editorial/research-desk identity, and policy pages are live; continue expanding per roadmap) because 2,000 templated pages alone is the exact "Low Value Content" rejection profile.
    - At **~1,000 sessions/mo**: apply to **Mediavine Journey** (the on-ramp; 70% share; Grow.js works on static sites) + AdSense in parallel (fallback + required standing).
    - At **25K pageviews/mo AND ≥50% US/UK/CA/AU/NZ traffic**: apply to **Raptive** (geo gate is the binding constraint, not the pageview count).
    - Full **Mediavine** upgrade happens automatically via Journey at $5K trailing-12-month ad revenue.
@@ -137,9 +139,8 @@ the production figures elsewhere in this document therefore remain unchanged.
 
 13. **US data (highest-value gap).** `travel.state.gov` and `egov.uscis.gov` block honest bots (Cloudflare 403). Options (updated Aug 2026: the USCIS developer portal has **no processing-times API** — only Case Status and FOIA — so there is no sanctioned automated route): (a) manual weekly entry of passport/USCIS times from the official pages (2 min/week) — add a `manual` confidence tier first; (b) leave the US out (current state). Never scrape around the WAF.
 14. **Australia / Ireland.** Same situation (Akamai/CloudFront blocks). Re-check quarterly by hand; both publish rich data if they ever open up or offer official APIs.
-15. **Next automated sources:** Immigration New Zealand is live and Norway is a
-   locally validated deployment candidate. After Norway is publicly verified, the
-   next robots-verified candidates are Finland, Sweden, Netherlands and Denmark;
+15. **Next automated sources:** Immigration New Zealand and Norway UDI are live.
+   The next robots-verified candidates are Finland, Sweden, Netherlands and Denmark;
    NZ passports remain blocked. See MAINTENANCE_RUNBOOK "Adding a source".
 
 ## Placeholders inventory (grep-able)

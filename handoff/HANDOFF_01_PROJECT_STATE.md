@@ -1,7 +1,7 @@
 # HANDOFF 01 — Project State & Technical Deep Dive
 
-_Everything a coding agent needs to operate GovWait. Current as of 2026-08-30;
-production remains the 2026-08-27 Phase 2 release, with Norway local-only._
+_Everything a coding agent needs to operate GovWait. Current as of 2026-08-31;
+Norway UDI is production-verified._
 
 ## 1. The one-sentence architecture
 
@@ -12,9 +12,9 @@ rebuilt by GitHub Actions on a Tue+Fri cron; validation failures stop publicatio
 ```
 pipeline/run.js ──▶ data/db.sqlite ──▶ data/exports/{latest,history,forward-looking,stats}.json
                                             │
-                    pipeline/build-api.js ──▶ site/public/api/v1/** (2,611 candidate files)
+                    pipeline/build-api.js ──▶ site/public/api/v1/** (2,611 production files)
                                             │
-                    site/ (Astro 4) ───────▶ site/dist (2,104 candidate HTML pages)
+                    site/ (Astro 4) ───────▶ site/dist (2,104 production HTML pages)
                                             │
                     machine/mcp-server ─────▶ stdio MCP for AI agents (reads exports)
 ```
@@ -31,7 +31,7 @@ pipeline/run.js ──▶ data/db.sqlite ──▶ data/exports/{latest,history,
 | `pipeline/sources/ircc-flpt.js` | Canada: strict 28-program parser for `flpt-en.json`; preserves publication snapshot, application cohort, projection, queue, and people-ahead semantics separately | ⚠️ Cohort month is not publication history |
 | `pipeline/sources/govuk.js` | UK: gov.uk Content API → HTML tables in `details.body`, `public_updated_at` as effective_date. Redirect docs possible (`schema_name: redirect`) | |
 | `pipeline/sources/udi.js` | Norway: five fixed, server-rendered UDI waiting-time tables; strict 19-row mapping and page-date checks; no personalised questionnaire probing | Unknown/missing/duplicate rows fail |
-| `pipeline/validate.js` | 25 candidate checks: shapes, ISO codes, range (0 < days ≤ 5000), coverage floors (including INZ ≥240, UDI 19, and IRCC forward 28 headlines/3,500 cohorts), staleness, p50/p80 and forward-shape integrity, 10× jump flags, provenance | ⚠️ Never loosen to force green |
+| `pipeline/validate.js` | 25 production checks: shapes, ISO codes, range (0 < days ≤ 5000), coverage floors (including INZ ≥240, UDI 19, and IRCC forward 28 headlines/3,500 cohorts), staleness, p50/p80 and forward-shape integrity, 10× jump flags, provenance | ⚠️ Never loosen to force green |
 | `pipeline/export.js` | Emits `latest.json` (entities + latest obs), `history.json` (all backward/published history grouped), `forward-looking.json` (forward snapshots/cohorts), `stats.json` | |
 | `pipeline/build-api.js` | exports → `site/public/api/v1/**` static endpoints | Run before astro build |
 | `pipeline/indexnow.js` | Posts exact changed public URLs to IndexNow after deploy. It compares large prior exports safely, maps source-verification and site-template changes, preserves old URLs for deletion hints, and supports full-current-set/dry-run modes. Key file lives at `site/public/<32hex>.txt` | Receipt is not proof of indexing |
@@ -39,8 +39,8 @@ pipeline/run.js ──▶ data/db.sqlite ──▶ data/exports/{latest,history,
 | `data/cache/http/`, `data/cache/robots/` | Fetch caches (gitignored) | |
 | `site/` | Astro 4 (Node 20 pin — Astro 5 needs Node ≥22). `site.config.json` = brand + SITE_URL; CI overrides via `SITE_URL` repo var | |
 | `site/src/lib/data.js` | Build-time model: slugs, services map, medians, speed classes (vs service median: ≤0.6 fast / ≤1.4 typical / ≤2.5 slow / else very slow), deltas from history, `relatedRoutes()`, `dataLastmod`. Throws on URL collisions | The brain of the site |
-| `site/src/lib/sitemap.js` + `pages/sitemap*.xml.js` | Candidate sitemap index → hubs + numeric CA applicant pages + UK services + curated NZ services + 19 Norway services + 12 reviewed IRCC forward pages. **lastmod = source-backed effective/first-observed date for that exact child, never build time** | ⚠️ Keep lastmod honest |
-| `site/src/pages/` | `index`, `[country]/index`, `[country]/[service]/index` (hub/forward page for CA; entity page for GB/NO; combined p50/p80 page for NZ), `[country]/[service]/[applicant]` (CA entity pages), `guides/*` (14 candidate analyses), `reports/*` (4 candidate jurisdiction baselines plus hub), trust/policy pages, `about`, `api-docs`, `404` | |
+| `site/src/lib/sitemap.js` + `pages/sitemap*.xml.js` | Production sitemap index → hubs + numeric CA applicant pages + UK services + curated NZ services + 19 Norway services + 12 reviewed IRCC forward pages. **lastmod = source-backed effective/first-observed date for that exact child, never build time** | ⚠️ Keep lastmod honest |
+| `site/src/pages/` | `index`, `[country]/index`, `[country]/[service]/index` (hub/forward page for CA; entity page for GB/NO; combined p50/p80 page for NZ), `[country]/[service]/[applicant]` (CA entity pages), `guides/*` (14 analyses), `reports/*` (4 jurisdiction baselines plus hub), trust/policy pages, `about`, `api-docs`, `404` | |
 | `machine/openapi.yaml` | OpenAPI 3.1, copied into the API at build | Keep in sync with build-api.js |
 | `machine/api-conformance.mjs` | Checks every built API file against the spec's shapes | Run in QA |
 | `machine/mcp-server/` | TypeScript stdio MCP server, 4 tools, reads exports. `npm run build && npm run smoke` checks NZ metric/unit and IRCC forward/cohort semantics | |
@@ -51,7 +51,7 @@ pipeline/run.js ──▶ data/db.sqlite ──▶ data/exports/{latest,history,
 
 Root docs: `EXECUTION_REPORT.md`, `DEPLOYMENT_GUIDE.md` (owner steps; monetization
 section updated Aug 2026), `MAINTENANCE_RUNBOOK.md` (failure playbooks + add-a-source
-recipe), `RISK_REGISTER.md`, `DECISIONS.md` (47 numbered judgment calls), `STATE.md`.
+recipe), `RISK_REGISTER.md`, `DECISIONS.md` (48 numbered judgment calls), `STATE.md`.
 
 ## 3. Data model (SQLite, `pipeline/schema.sql`)
 
@@ -63,12 +63,12 @@ recipe), `RISK_REGISTER.md`, `DECISIONS.md` (47 numbered judgment calls), `STATE
 Normalization: days×1, weeks×7, months×30.44; INZ working-day counts are preserved as working days and labeled in `unit_original`; `value_raw` is always preserved.
 Statuses: `ok` (numeric), `unavailable` ("No processing time available"),
 `insufficient_data` ("Not enough data") — nulls are displayed honestly as official facts.
-Production has 2,299 active entities / 8 sources and includes
+Production has 2,318 active entities / 9 sources / 4 governments and includes
 `ircc-forward-looking` (28 entities; 28 headline + 3,601 cohort rows in the
 current snapshot). INZ and Canadian passports use unstamped-source change
 detection; IRCC forward-looking uses the source's monthly publication date.
-The local Norway candidate has 2,318 active entities / 9 sources / 4 governments
-and 4,244 observations; UDI supplies its own page update date.
+Norway contributes 19 UDI entities; the full production dataset has 4,244
+observations. UDI supplies its own page update date.
 
 ## 4. Commands (all verified working)
 
@@ -76,7 +76,7 @@ and 4,244 observations; UDI supplies its own page update date.
 node pipeline/run.js              # uses cache — safe offline
 node pipeline/run.js --refresh    # live fetch (polite; INZ makes 133 listed lookups, ~7 min total)
 node pipeline/build-api.js        # exports -> static API files
-cd site && npm ci && npm run build && npm run audit:seo  # candidate: 2,104 HTML; 635 indexable/sitemap
+cd site && npm ci && npm run build && npm run audit:seo  # production: 2,104 HTML; 635 indexable/sitemap
 cd machine/mcp-server && npm ci && npm run build && npm run smoke
 node machine/api-conformance.mjs  # after a site build
 ```
@@ -101,8 +101,8 @@ Local Node is 20.19.6 (Astro pinned to v4 for this reason; CI also pins Node 20)
   2026-08-22`). deploy-site green. ~60 min/month total of the 2,000 free.
 - Cloudflare migration: production cutover, explicit allow-crawler policy, and
   GitHub-driven deployment are complete. GitHub Pages is disabled and the unused
-  original token is deleted. Phase 2 commit `5d5f0a9` deployed in green run
-  `33127083764` to `0933a757.govwait.pages.dev`.
+  original token is deleted. Norway commit `a9100bb` deployed in green run
+  `33462368754` to `74bd35d1.govwait.pages.dev`.
 - Search ownership: Google Search Console domain property `govwait.com` and Bing
   Webmaster Tools site `https://govwait.com/` are DNS-verified. Google's live test
   says the homepage can be indexed, and three representative pages passed the live
@@ -118,17 +118,17 @@ Local Node is 20.19.6 (Astro pinned to v4 for this reason; CI also pins Node 20)
   engines on 2026-08-23. Google reports **Sitemap index / Success**; Bing accepted it
   and reports **Submitted / Processing**.
 - The discoverability audit intentionally limits requested indexing
-  to 615 useful/data-backed URLs (68 hubs/guides/reports/reviewed CA service pages,
-  445 numeric CA applicant
-  pages, 77 UK services, and 25 curated NZ visa pages). The other 1,462 Canadian
+  to 635 useful/data-backed URLs (71 hubs/guides/reports/reviewed CA service pages,
+  443 numeric CA applicant pages, 77 UK services, 25 curated NZ visa pages, and
+  19 Norway UDI service pages). The other 1,464 Canadian
   applicant pages stay live and crawlable with `noindex, follow` until a numeric
   official value appears. All 266 NZ metric entities remain immediately available
   through the API and MCP server while human pages roll out at ≤30/week.
   See `docs/DISCOVERABILITY_AUDIT.md` for crawler, sitemap, canonical, CI, and
   point-in-time Cloudflare evidence.
-- Google and Bing previously accepted the root sitemap index. It advertises four
-  child sitemaps; Phase 2 production run `33127083764` submitted 621 changed URLs
-  (615 indexable pages plus `llms.txt` and five sitemap documents) to IndexNow and
+- Google and Bing previously accepted the root sitemap index. It advertises five
+  child sitemaps; Norway production run `33462368754` submitted 642 URLs
+  (635 indexable pages plus `llms.txt` and six sitemap documents) to IndexNow and
   received HTTP 200. These are discovery and
   submission receipts, not indexing guarantees.
 - After explicit owner confirmation, Google accepted priority-crawl requests
@@ -152,7 +152,7 @@ Local Node is 20.19.6 (Astro pinned to v4 for this reason; CI also pins Node 20)
   programs, 3,601 cohorts, API/OpenAPI/`llms.txt`, 615 unique sitemap URLs,
   canonical behavior, crawler policy, and IndexNow HTTP 200.
 
-### Norway candidate proof (local only)
+### Norway production proof
 
 - Adds 19 UDI entities from five complete table pages, a Norway hub, 19 service
   pages, one source-method guide, one baseline report, a fifth child sitemap, and
@@ -160,12 +160,13 @@ Local Node is 20.19.6 (Astro pinned to v4 for this reason; CI also pins Node 20)
 - Live refresh on 2026-08-30 returned 19/19 rows carrying UDI's 2026-08-27 source
   date. Exact ranges remain verbatim and use their upper endpoint only for
   conservative normalized comparison.
-- Local acceptance: 12 parser tests; 25 validation checks; 2,104 HTML / 635
+- Acceptance: 12 parser tests; 25 validation checks; 2,104 HTML / 635
   indexable / 635 sitemap URLs; 2,611-file API conformance; MCP build/smoke;
   635-URL IndexNow dry run; diff check; desktop/mobile rendered QA.
-- Deployment was owner-approved on 2026-08-31 but has no production receipt yet.
-  Production remains commit `5d5f0a9` with 2,299 entities, 2,082 HTML pages, and
-  615 sitemap URLs until the release workflow and public-edge verification succeed.
+- Commit `a9100bb` passed run `33462368754` and deployed to
+  `74bd35d1.govwait.pages.dev`. All 22 Norway URLs, API provenance, five child
+  sitemaps, crawler files, canonicals/artifact parity, and the `www` redirect passed
+  public checks. IndexNow accepted 642 URLs with HTTP 200.
 
 ## 6. Traps and constraints (learned the hard way — do not relearn)
 
@@ -189,7 +190,7 @@ Local Node is 20.19.6 (Astro pinned to v4 for this reason; CI also pins Node 20)
    currently guaranteed because lastmod never reads the clock.
 7. **db.sqlite is committed**; a CI refresh race means `git pull --rebase` before
    pushing local commits (the robot may have committed since your last fetch).
-8. **2,082 production pages (2,104 in the Norway candidate) exist at once** is a known SEO risk profile (see
+8. **2,104 production pages exist at once** is a known SEO risk profile (see
    HANDOFF_02 §SEO);
    the mitigation is per-page information gain (deltas/ranks/history — partially
    shipped) and NOT bulk-launching future governments (25–30 pages/week rollout).
@@ -208,9 +209,9 @@ Local Node is 20.19.6 (Astro pinned to v4 for this reason; CI also pins Node 20)
   jurisdiction baseline/change reports plus a report hub, editorial/research-desk
   identity, policy/correction/contact pages, consent-gated GA4, a verified Grow
   install with conservative feature defaults, and the GA4↔Search Console link.
-- The local Norway phase adds a 19-route UDI collector plus 22 indexable pages,
+- The production Norway phase adds a 19-route UDI collector plus 22 indexable pages,
   source-specific guide/report copy, and complete machine/discovery integration;
-  it remains behind the owner deployment gate.
+  and passed the owner deployment and public-verification gates.
 
 ## 8. QA ritual before any push that touches pipeline or site
 
