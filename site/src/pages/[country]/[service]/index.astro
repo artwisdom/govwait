@@ -22,6 +22,8 @@ const single = !svc.hasApplicantPages;
 const percentile = svc.isPercentileService;
 const rec = percentile ? svc.percent80 : svc.records[0];
 const forward = rec.metric_type === 'forward';
+const norway = rec.jurisdiction === 'NO';
+const publishedRange = norway && /\d\s*[–—-]\s*\d/.test(rec.value_raw);
 const ok = svc.records.filter(r => r.status === 'ok');
 
 const crumbs = {
@@ -68,7 +70,9 @@ const title = forward
   : percentile
   ? `NZ ${svc.seoName} processing time: 50% ${svc.percent50.value_raw}, 80% ${svc.percent80.value_raw}`
   : single
-  ? `${jur.shortName} ${topic}${scopeDetail ? ` (${scopeDetail})` : ''}: ${humanValue(rec)} (${monthShort})`
+  ? norway
+    ? `${jur.shortName} ${topic}: ${humanValue(rec)}`
+    : `${jur.shortName} ${topic}${scopeDetail ? ` (${scopeDetail})` : ''}: ${humanValue(rec)} (${monthShort})`
   : `${jur.shortName} ${topic} by country (${monthShort})`;
 const desc = forward
   ? `IRCC's ${forwardTitleName.toLowerCase()} is projected at ${humanValue(rec)}. See the current queue and application-month estimates, updated ${monthShort}.`
@@ -117,6 +121,12 @@ const desc = forward
       <Freshness record={rec} />
       <AdSlot position="service-top" />
       <p>This is the current figure {jur.agency} publishes for <strong>{rec.service_name}</strong>. It reflects {svc.blurb}. The figure is a published statistic or service standard, not a guarantee for any individual application.</p>
+      {norway && <>
+        <h2>How to read this UDI waiting time</h2>
+        <p>UDI describes its waiting times as guides that can change while an application is being processed. The official source page explains which authority handles this route and when its clock begins. GovWait preserves UDI’s exact wording and update date; it does not infer a personal case status or completion date.</p>
+        {publishedRange && <p class="small muted">UDI publishes this route as a range. The API keeps <strong>{rec.value_raw}</strong> verbatim and uses the upper end only in the normalized <code>value_days</code> comparison field, as a conservative planning bound.</p>}
+        <p class="small"><a href="/guides/how-norway-udi-waiting-times-work/">How Norway’s UDI waiting-time tables work →</a></p>
+      </>}
       <h2>History we have recorded</h2>
       <div class="tablewrap"><table>
         <thead><tr><th>Official value</th><th>{rec.unstamped ? 'First observed' : 'Published/updated'}</th><th>Verified on that observation</th></tr></thead>

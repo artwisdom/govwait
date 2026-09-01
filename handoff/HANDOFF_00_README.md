@@ -3,7 +3,7 @@
 _Prepared 2026-08-21/22 by Claude (Fable 5) for transfer of day-to-day development to
 Codex. The owner (Michael) manages his web projects there; this package is written so
 a coding agent with zero context can operate this project safely and grow it. Operational
-status refreshed 2026-08-27 after the Phase 2 production release._
+status refreshed 2026-08-30 after the Norway deployment candidate passed local QA._
 
 ## What GovWait is, in one paragraph
 
@@ -18,7 +18,9 @@ nothing. Revenue plan: display ads (engine), machine access (optionality), datas
 licensing (lottery ticket). Honest base rates live in `RISK_REGISTER.md` — most
 projects like this earn ~$0; maintained base case $500–$3K/mo at months 12–18.
 Phase 2 adds IRCC's forward-looking estimates with explicitly separate publication-
-snapshot and application-cohort semantics.
+snapshot and application-cohort semantics. The current working tree also contains a
+fully validated 19-route Norway UDI candidate. The owner approved deployment on
+2026-08-31; it is not production until the release and public verification pass.
 
 ## The files in this package
 
@@ -28,7 +30,7 @@ snapshot and application-cohort semantics.
 | `HANDOFF_02_RESEARCH_SEO.md` | Aug-2026 research: indexing a 2K-page site, the 2026 core/spam updates, information-gain requirements, AI Overviews/ChatGPT/Perplexity citation mechanics, E-E-A-T, link acquisition — each item marked done/roadmap | Before any growth work |
 | `HANDOFF_03_RESEARCH_MONETIZATION.md` | Aug-2026 research: the real ad-network ladder (Journey on-ramp; Ezoic dead), vertical RPM economics, pay-per-crawl reality check, licensing, affiliate trust filter, revenue table | Before any monetization work |
 | `HANDOFF_04_RESEARCH_COMPETITORS.md` | Competitor deep-dive (6 free trackers!), live autocomplete demand mapping, SERP reality, top-20 priority routes, the wedge (history/alerts/API) | Before any product decision |
-| `HANDOFF_05_RESEARCH_SOURCES.md` | Source research and implementation status: NZ and IRCC forward-looking live; NO/FI/SE/DK/NL next; USCIS correction (no times API exists) | Before adding any source |
+| `HANDOFF_05_RESEARCH_SOURCES.md` | Source research and implementation status: NZ and IRCC forward-looking live; Norway locally release-ready; FI/SE/DK/NL next; USCIS correction (no times API exists) | Before adding any source |
 | `HANDOFF_06_ROADMAP.md` | The ordered 12-month plan (R0–R9) with acceptance criteria and standing policies | To decide what to do next, always |
 
 Also read in the repo root (they remain the operating manuals): `EXECUTION_REPORT.md`
@@ -112,3 +114,11 @@ style preferences.
   all 12 public pages, API/OpenAPI/`llms.txt`, 615 unique sitemap URLs, canonical
   behavior, and crawler policy pass. These are release receipts, not indexing,
   traffic, ad-approval, or revenue proof.
+- Norway is a **local deployment candidate, not production**: 19 table-backed UDI
+  routes from 5 official pages; 2,318 active entities / 9 sources / 4 governments;
+  2,104 HTML pages; 635 indexable/sitemap URLs; and 2,611 generated API files.
+  Twelve parser tests, 25 validation checks, SEO/API/MCP gates, a 635-URL IndexNow
+  dry run, and desktop/mobile rendered checks pass. The candidate deliberately
+  excludes personalised UDI questionnaire routes and preserves exact published
+  ranges. No commit, push, deploy, public check, discovery submission, indexing,
+  traffic, ad approval, or revenue is claimed.

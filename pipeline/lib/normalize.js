@@ -12,6 +12,18 @@ export function normalizeDuration(raw) {
   const low = s.toLowerCase().replace(/[*†‡]+$/, '').trim();
   if (UNAVAILABLE.has(low)) return { status: 'unavailable', value_days: null, unit_original: null };
   if (INSUFFICIENT.has(low)) return { status: 'insufficient_data', value_days: null, unit_original: null };
+  // Official sources occasionally publish a range (for example UDI's
+  // "15–29 days"). Preserve that exact range in value_raw upstream and use
+  // its upper end for the single comparable value_days field. This is the
+  // conservative planning bound, not a claim that every case takes 29 days.
+  const range = low.match(/^(\d+(?:\.\d+)?)\s*(?:-|–|—)\s*(\d+(?:\.\d+)?)\s*(minute|hour|day|week|month)s?$/);
+  if (range) {
+    const min = parseFloat(range[1]);
+    const max = parseFloat(range[2]);
+    const unit = range[3];
+    if (min <= 0 || max <= 0 || max < min) return { error: `invalid duration range: "${s}"` };
+    return { status: 'ok', value_days: Math.round(max * DAYS_PER[unit] * 10000) / 10000, unit_original: unit + 's' };
+  }
   // "up to 2 weeks" / "within 3 weeks" are upper bounds — value_days is the bound;
   // value_raw upstream keeps the qualifier verbatim.
   const m = low.match(/^(?:up to |within )?(\d+(?:\.\d+)?)\s*(minute|hour|day|week|month)s?$/);

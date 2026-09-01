@@ -1,6 +1,6 @@
 # STATE — Data Moat Engine
 
-_Last updated: 2026-08-27_
+_Last updated: 2026-08-30_
 
 ## Environment (verified)
 | Runtime | Version |
@@ -26,6 +26,8 @@ All dependencies install locally (`node_modules` inside project). No sudo or mac
 - [x] Post-launch (owner-directed): go-live executed (repo public, Pages live, cron active); design system v2; SEO upgrades; dataset expanded to **2,299 metric routes / 8 sources / 3 governments**, including all 133 visas in Immigration New Zealand's current tool and 28 IRCC forward-looking programs; **/handoff package for Codex transfer (7 files)**
 - [x] Phase 1 growth/trust foundation: 9 new source-backed planning guides, 3 jurisdiction reports plus report hub, editorial/research-desk bylines and Article schema, contact/corrections/privacy/terms pages, consent-gated GA4, verified Grow installation, and GA4↔Search Console linking
 - [x] Phase 2 production release: official IRCC forward-looking estimates for 28 programs, 3,601 application-cohort rows plus 28 headline rows, a distinct forward/backward/service-standard/percentile metric taxonomy, 12 reviewed human pages, static JSON API/OpenAPI/MCP support, and append-only monthly snapshot storage
+- [x] Norway UDI deployment candidate: 19 complete table-backed routes from 5 official pages, strict schema/date checks, range-preserving normalization, country/service pages, one guide, one baseline report, sitemap/API/OpenAPI/MCP/discovery integration, and responsive rendered QA
+- [ ] Norway production release: owner approved deployment on 2026-08-31; commit, push, deployment, public verification, and IndexNow receipt are in progress
 
 ## Deployment status (verified through 2026-08-27)
 - Repo LIVE: https://github.com/artwisdom/govwait (public, main)
@@ -78,11 +80,34 @@ All dependencies install locally (`node_modules` inside project). No sudo or mac
   are discovery/submission receipts, not proof of indexing, ranking, traffic,
   or revenue.
 
+## Norway deployment candidate (local only, verified 2026-08-30)
+
+The working tree adds the fourth government, Norway, from UDI's five complete
+server-rendered waiting-time tables. It intentionally excludes UDI's personalised
+questionnaire routes: the collector does not guess combinations, enumerate hidden
+parameters, or transmit applicant information. UDI's exact published ranges are
+preserved (for example, `15–29 days`); their upper end is used only for conservative
+normalized comparisons. No explicit page-reuse licence was located, so GovWait
+stores factual values only, gives agency attribution and source links, and does not
+copy UDI page prose.
+
+Candidate receipt: **2,318 active entities / 9 sources / 4 governments; 4,244
+observations; 3,629 forward-estimate rows; 2,104 HTML pages; 635 intentionally
+indexable pages and 635 matching sitemap URLs.** The Norway slice adds 19 service
+pages, one country hub, one guide, and one baseline report (22 indexable URLs) plus
+a fifth child sitemap. Live collection returned all 19 expected UDI records with
+UDI's official 2026-08-27 update date. Parser tests 12/12, validation 25 checks,
+SEO audit, 2,611-file API conformance, MCP build/smoke, 635-URL IndexNow dry run,
+`git diff --check`, and desktop/mobile rendered checks are green.
+
 ## Next step
-Phase 2 is production-verified. Let the registered sitemap and accepted IndexNow
-notification be processed while GA4 and Search Console collect evidence. The next
-bounded build candidate is Norway UDI, but source expansion should remain a
-separate reviewed phase. Do not describe discovery receipts as proof of indexing,
+
+The owner approved the Norway deployment on 2026-08-31. Commit, push, Cloudflare
+deployment, public-edge verification, and the workflow's IndexNow notification
+are now authorized and in progress. Until those checks succeed, production remains
+Phase 2 at commit `5d5f0a9`; Norway is not yet claimed live. After a successful
+Norway release, Finland Migri is the next bounded source candidate. Do not describe
+build, deployment, discovery, or submission receipts as proof of indexing,
 traffic, ad approval, or revenue.
 
 Production receipt: **2,299 active entities / 8 sources / 3 governments; 3,629
@@ -95,4 +120,4 @@ green.
 ## Open threads
 - US/AU/IE sources WAF-blocked to honest bots — owner-decision item (documented in DEPLOYMENT_GUIDE).
 - `npm audit` reports four Astro 4 build-toolchain advisories (1 moderate, 3 high). Production is pre-rendered static HTML/JSON on Cloudflare Pages—no Astro/Vite development or server runtime is exposed. Plan and test the major Astro 7/Node runtime upgrade before adding any dynamic server rendering; do not apply `npm audit fix --force` blindly.
-- IRCC forward-looking estimates are production-verified. Norway is the next source target; Finland/Sweden/Netherlands/Denmark follow. NZ passports remain blocked.
+- IRCC forward-looking estimates are production-verified. Norway is locally release-ready but not deployed; Finland/Sweden/Netherlands/Denmark follow. NZ passports remain blocked.

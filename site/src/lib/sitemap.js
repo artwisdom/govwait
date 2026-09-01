@@ -10,6 +10,7 @@ export function urlset(site, urls) {
 
 export function hubUrls() {
   const phaseOnePublished = '2026-08-23';
+  const norwayPublished = '2026-08-30';
   const urls = [
     { path: '/', lastmod: dataLastmod },
     { path: '/about/', lastmod: dataLastmod },
@@ -30,17 +31,19 @@ export function hubUrls() {
     { path: '/guides/how-new-zealand-visa-processing-times-work/', lastmod: dataLastmod },
     { path: '/guides/new-zealand-aewv-processing-time/', lastmod: dataLastmod },
     { path: '/guides/new-zealand-student-visa-processing-time/', lastmod: dataLastmod },
+    { path: '/guides/how-norway-udi-waiting-times-work/', lastmod: norwayPublished },
     { path: '/reports/', lastmod: phaseOnePublished },
     { path: '/reports/canada-processing-time-changes/', lastmod: dataLastmod },
     { path: '/reports/uk-visa-processing-time-changes/', lastmod: dataLastmod },
     { path: '/reports/new-zealand-visa-processing-time-changes/', lastmod: dataLastmod },
+    { path: '/reports/norway-processing-time-changes/', lastmod: norwayPublished },
   ];
   for (const [code, jur] of Object.entries(JURISDICTIONS)) {
     const svcMap = services[code];
     urls.push({ path: `/${jur.slug}/`, lastmod: [...svcMap.values()].map(s => s.latestEffective).sort().at(-1) });
     // UK service pages are their own template family and sitemap so Search
     // Console can report their indexing separately from general hubs.
-    if (code === 'GB' || code === 'NZ') continue;
+    if (code === 'GB' || code === 'NZ' || code === 'NO') continue;
     for (const svc of svcMap.values()) {
       if (!svc.published) continue;
       urls.push({ path: `/${jur.slug}/${svc.slug}/`, lastmod: svc.latestEffective });

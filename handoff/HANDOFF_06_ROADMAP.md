@@ -111,6 +111,15 @@ CSV downloads per dataset + per-page Dataset schema → Google Dataset Search; M
 One per 2–4 weeks per HANDOFF_05 build order, each with the Sweden-citizenship-style PR hook where one exists. Per-host crawl-delay override (Migri needs 5s) — small fetcher change.
 **Accept:** 6–8 governments by month 6; each addition followed by its /reports issue and a pitch email.
 
+**Status 2026-08-30:** Norway's first bounded slice is locally release-ready: 19
+complete UDI table-backed routes, 22 new indexable pages, a source-method guide,
+an honest baseline report, fifth child sitemap, and full API/OpenAPI/MCP/`llms.txt`
+integration. Live collection, 12 parser tests, 25 validation checks, 2,104-page
+build, 635/635 SEO-sitemap audit, 2,611-file API conformance, MCP smoke, responsive
+visual QA, and the 635-URL IndexNow dry run pass. Deployment was owner-approved on
+2026-08-31; the workflow and public verification remain the gate. After that release, Finland is next and
+must use its documented 5-second crawl delay.
+
 ## Phase R8 — Day-90/120 SEO checkpoint (calendar it)
 
 Per-sitemap indexation review in GSC; template families <40% indexed at day 90 = fix template (more info-gain per page), don't resubmit; prune/consolidate zero-impression near-duplicate pages into regional tables (301s). Bing/ChatGPT citation spot-checks (the early signal). Judge the project at day 120–180, not day 30 (HANDOFF_02 hard truth #2).

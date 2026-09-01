@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-28T23:27:50.308Z",
+  "generated_at": "2026-09-01T02:22:17.826Z",
   "pass": true,
   "checks": [
     {
@@ -78,34 +78,44 @@
       "detail": "266 observations (floor 240)"
     },
     {
+      "name": "coverage-udi-waiting-times",
+      "pass": true,
+      "detail": "19 observations (floor 19)"
+    },
+    {
       "name": "coverage-total",
       "pass": true,
-      "detail": "4225 total observations (floor 300)"
+      "detail": "4244 total observations (floor 300)"
     },
     {
       "name": "staleness-ircc-ptime",
       "pass": true,
-      "detail": "latest effective_date 2026-08-26 is 2d old (max 45)"
+      "detail": "latest effective_date 2026-08-26 is 6d old (max 45)"
     },
     {
       "name": "staleness-ircc-forward-looking",
       "pass": true,
-      "detail": "latest effective_date 2026-08-10 is 18d old (max 62)"
+      "detail": "latest effective_date 2026-08-10 is 22d old (max 62)"
     },
     {
       "name": "staleness-govuk-visa-times",
       "pass": true,
-      "detail": "latest effective_date 2026-06-26 is 63d old (max 120)"
+      "detail": "latest effective_date 2026-06-26 is 67d old (max 120)"
     },
     {
       "name": "staleness-ircc-noncountry",
       "pass": true,
-      "detail": "latest effective_date 2026-08-26 is 2d old (max 45)"
+      "detail": "latest effective_date 2026-08-26 is 6d old (max 45)"
     },
     {
       "name": "staleness-govuk-inuk-times",
       "pass": true,
-      "detail": "latest effective_date 2025-07-21 is 403d old (max 500)"
+      "detail": "latest effective_date 2025-07-21 is 407d old (max 500)"
+    },
+    {
+      "name": "staleness-udi-waiting-times",
+      "pass": true,
+      "detail": "latest effective_date 2026-08-27 is 5d old (max 45)"
     },
     {
       "name": "volatility-guard",

@@ -20,6 +20,7 @@ export const JURISDICTIONS = {
   CA: { slug: 'canada', name: 'Canada', shortName: 'Canada', shortAgency: 'IRCC', agency: 'Immigration, Refugees and Citizenship Canada (IRCC)' },
   GB: { slug: 'uk', name: 'United Kingdom', shortName: 'UK', shortAgency: 'UKVI', agency: 'UK Visas and Immigration (Home Office)' },
   NZ: { slug: 'new-zealand', name: 'New Zealand', shortName: 'NZ', shortAgency: 'INZ', agency: 'Immigration New Zealand (INZ)' },
+  NO: { slug: 'norway', name: 'Norway', shortName: 'Norway', shortAgency: 'UDI', agency: 'Norwegian Directorate of Immigration (UDI)' },
 };
 
 const SOURCE_BY_ID = new Map(sources.map(source => [source.id, source]));
@@ -56,6 +57,25 @@ const SEO_SERVICE_NAMES = {
   'ca-spouse-partner-inside-canada-outside-quebec': 'In-Canada Spouse Sponsorship (outside Quebec)',
   'ca-spouse-partner-outside-canada-quebec': 'Outside-Canada Spouse Sponsorship (Quebec)',
   'ca-spouse-partner-outside-canada-outside-quebec': 'Outside-Canada Spouse Sponsorship (outside Quebec)',
+  'no-appeal-legal-cost-coverage': 'UDI appeal-cost coverage',
+  'no-brexit-residence-permit': 'UDI Brexit residence permit',
+  'no-eea-family-residence-card': 'UDI EEA family residence card',
+  'no-eea-permanent-residence-card': 'UDI permanent EEA residence',
+  'no-expulsion-decision': 'UDI expulsion decision',
+  'no-permanent-residence-family-immigration': 'UDI permanent residence (family)',
+  'no-permanent-residence-other': 'UDI permanent residence (other permits)',
+  'no-permanent-residence-protection-humanitarian': 'UDI permanent residence (protection)',
+  'no-permanent-residence-work-immigration': 'UDI permanent residence (work)',
+  'no-residence-permit-abuse-victim': 'UDI abuse-victim residence permit',
+  'no-residence-permit-humanitarian-grounds': 'UDI humanitarian residence permit',
+  'no-residence-permit-medical-treatment': 'UDI medical-treatment residence permit',
+  'no-residence-permit-norwegian-parent-at-birth': 'UDI Norwegian-parent residence permit',
+  'no-revoke-entry-ban-eea-citizen': 'UDI entry-ban revocation (EU/EEA)',
+  'no-revoke-entry-ban-eea-covered-non-eea-citizen': 'UDI entry-ban revocation (EEA-covered)',
+  'no-revoke-entry-ban-non-eea-citizen': 'UDI entry-ban revocation (non-EU/EEA)',
+  'no-visitor-visa-embassy-another-country': 'UDI visitor visa (other-country embassy)',
+  'no-visitor-visa-embassy-country-of-residence': 'UDI visitor visa (home-country embassy)',
+  'no-visitor-visa-udi': 'UDI visitor visa decision',
 };
 
 export function slugify(s) {
@@ -96,6 +116,7 @@ function serviceSection(rec) {
 function serviceSlug(rec) {
   if (rec.jurisdiction === 'CA') return rec.service_key.replace(/^ca-/, '');
   if (rec.jurisdiction === 'NZ') return rec.service_key.replace(/^nz-/, '');
+  if (rec.jurisdiction === 'NO') return rec.service_key.replace(/^no-/, '');
   // GB keys look like gb-<section>--<category> (or gb-in-uk-<section>--<category>);
   // the category segment is the slug, in-UK variants keep an in-uk- prefix so
   // "student" (outside) and "in-uk-student" (inside) don't collide.

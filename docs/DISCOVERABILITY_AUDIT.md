@@ -3,7 +3,8 @@
 _Implemented and production-verified initially on 2026-08-23, expanded by the
 Phase 1 trust/growth release on 2026-08-25, and expanded again by the IRCC
 forward-looking release on 2026-08-27. Current production is commit `5d5f0a9`,
-deployed in GitHub Actions run `33127083764`._
+deployed in GitHub Actions run `33127083764`. A 635-URL Norway expansion passed
+local gates on 2026-08-30 but is not yet production._
 
 ## Search-indexing policy
 
@@ -105,3 +106,24 @@ Earlier Google priority crawl requests: accepted for all three confirmed gaps
   Public verification then confirmed all 12 pages, 28 programs, 3,601 cohorts,
   615 sitemap URLs, crawler policy, and canonical behavior. These release receipts
   are not evidence of search indexing, traffic, ad approval, or revenue.
+
+## Norway deployment candidate (local, not production)
+
+- Adds 19 distinct UDI service pages, one Norway hub, one source-method guide, and
+  one honest baseline report: 22 new indexable URLs. A fifth child sitemap contains
+  exactly the 19 service URLs; hubs contains the country, guide, and report URLs.
+- Candidate build: 2,104 HTML pages; 635 intentionally indexable pages; exactly 635
+  sitemap URLs. Child counts are hubs 71 + CA 443 + GB 77 + NZ 25 + NO 19 = 635.
+  The Canadian numeric count changed from the earlier production snapshot because
+  the 2026-08-28 official refresh changed current availability; this is data-driven,
+  not a sitemap-policy change.
+- The Norway titles, descriptions, canonicals, H1s, internal links, structured data,
+  source attribution, exact range display, and mobile overflow behavior were checked
+  in the built site. `sitemap-no.xml` uses UDI's official 2026-08-27 date, never the
+  2026-08-30 retrieval or build date.
+- Release gates: 12/12 parser tests, 25 validation checks, SEO audit, 2,611-file API
+  conformance, MCP build/smoke, 635-URL full IndexNow dry run, `git diff --check`,
+  and desktop/mobile browser checks all pass.
+- No Norway URL has been deployed, publicly verified, submitted through IndexNow,
+  requested manually in Google, indexed, ranked, visited, or monetized. Those are
+  separate later evidence states.

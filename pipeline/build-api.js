@@ -15,7 +15,7 @@ const history = JSON.parse(readFileSync(path.join(EXPORTS, 'history.json'), 'utf
 const forward = JSON.parse(readFileSync(path.join(EXPORTS, 'forward-looking.json'), 'utf8'));
 const stats = JSON.parse(readFileSync(path.join(EXPORTS, 'stats.json'), 'utf8'));
 
-const ATTribution = 'CC BY 4.0 — attribute GovWait and the originating government agency. Underlying figures are official government publications.';
+const ATTribution = 'GovWait extracted-value compilation: CC BY 4.0 — attribute GovWait and the originating government agency. Underlying source terms vary; consult each source license_note in /api/v1/index.json.';
 
 rmSync(API, { recursive: true, force: true });
 mkdirSync(path.join(API, 'jurisdictions'), { recursive: true });

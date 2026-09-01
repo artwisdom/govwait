@@ -1,19 +1,20 @@
 {
  "name": "GovWait API v1",
  "description": "Officially published government processing times, tracked with provenance and history. Static JSON; no key required.",
- "generated_at": "2026-08-28T23:27:50.366Z",
+ "generated_at": "2026-09-01T02:22:17.881Z",
  "stats": {
-  "generated_at": "2026-08-28T23:27:50.366Z",
-  "entities": 2299,
-  "observations": 4225,
+  "generated_at": "2026-09-01T02:22:17.881Z",
+  "entities": 2318,
+  "observations": 4244,
   "forward_looking_estimates": 3629,
   "forward_looking_snapshots": 1,
   "jurisdictions": [
    "CA",
    "GB",
+   "NO",
    "NZ"
   ],
-  "services": 268,
+  "services": 287,
   "per_source": {
    "govuk-inuk-times": {
     "name": "UK visa processing times (inside UK)",
@@ -54,6 +55,11 @@
     "name": "IRCC Check Processing Times data",
     "observations": 3814,
     "latest_effective_date": "2026-08-26"
+   },
+   "udi-waiting-times": {
+    "name": "Norway immigration waiting times",
+    "observations": 19,
+    "latest_effective_date": "2026-08-27"
    }
   }
  },
@@ -121,12 +127,21 @@
    "jurisdiction": "CA",
    "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html",
    "license_note": "Government of Canada publication; facts/values extracted under fair-dealing-style factual reuse. Non-commercial reproduction terms noted; we store extracted values with attribution, not page content. Owner review recommended before commercial launch."
+  },
+  {
+   "id": "udi-waiting-times",
+   "name": "Norway immigration waiting times",
+   "agency": "Norwegian Directorate of Immigration (UDI)",
+   "jurisdiction": "NO",
+   "url": "https://www.udi.no/en/waiting-time/",
+   "license_note": "Official public information; no explicit page-reuse license was identified as of 2026-08-30. GovWait stores only extracted factual values with attribution and source links, not UDI page copy."
   }
  ],
  "endpoints": {
   "jurisdictions": [
    "/api/v1/jurisdictions/ca.json",
    "/api/v1/jurisdictions/gb.json",
+   "/api/v1/jurisdictions/no.json",
    "/api/v1/jurisdictions/nz.json"
   ],
   "services": [
@@ -265,6 +280,25 @@
    "/api/v1/services/gb-work-visas-you-can-apply-for-without-a-job-offer--india-young-professionals-s.json",
    "/api/v1/services/gb-work-visas-you-can-apply-for-without-a-job-offer--uk-ancestry.json",
    "/api/v1/services/gb-work-visas-you-can-apply-for-without-a-job-offer--youth-mobility-scheme.json",
+   "/api/v1/services/no-appeal-legal-cost-coverage.json",
+   "/api/v1/services/no-brexit-residence-permit.json",
+   "/api/v1/services/no-eea-family-residence-card.json",
+   "/api/v1/services/no-eea-permanent-residence-card.json",
+   "/api/v1/services/no-expulsion-decision.json",
+   "/api/v1/services/no-permanent-residence-family-immigration.json",
+   "/api/v1/services/no-permanent-residence-other.json",
+   "/api/v1/services/no-permanent-residence-protection-humanitarian.json",
+   "/api/v1/services/no-permanent-residence-work-immigration.json",
+   "/api/v1/services/no-residence-permit-abuse-victim.json",
+   "/api/v1/services/no-residence-permit-humanitarian-grounds.json",
+   "/api/v1/services/no-residence-permit-medical-treatment.json",
+   "/api/v1/services/no-residence-permit-norwegian-parent-at-birth.json",
+   "/api/v1/services/no-revoke-entry-ban-eea-citizen.json",
+   "/api/v1/services/no-revoke-entry-ban-eea-covered-non-eea-citizen.json",
+   "/api/v1/services/no-revoke-entry-ban-non-eea-citizen.json",
+   "/api/v1/services/no-visitor-visa-embassy-another-country.json",
+   "/api/v1/services/no-visitor-visa-embassy-country-of-residence.json",
+   "/api/v1/services/no-visitor-visa-udi.json",
    "/api/v1/services/nz-academic-visitor-visa.json",
    "/api/v1/services/nz-accredited-employer-work-visa.json",
    "/api/v1/services/nz-active-investor-plus-visa.json",
@@ -403,5 +437,5 @@
   "ircc_forward_looking": "/api/v1/ircc-forward-looking.json",
   "openapi": "/api/v1/openapi.yaml"
  },
- "license": "CC BY 4.0 — attribute GovWait and the originating government agency. Underlying figures are official government publications."
+ "license": "GovWait extracted-value compilation: CC BY 4.0 — attribute GovWait and the originating government agency. Underlying source terms vary; consult each source license_note in /api/v1/index.json."
 }

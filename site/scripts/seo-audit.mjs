@@ -21,6 +21,7 @@ function slugify(value) {
 function serviceSlug(record) {
   if (record.jurisdiction === 'CA') return record.service_key.replace(/^ca-/, '');
   if (record.jurisdiction === 'NZ') return record.service_key.replace(/^nz-/, '');
+  if (record.jurisdiction === 'NO') return record.service_key.replace(/^no-/, '');
   const segment = record.service_key.split('--').pop().replace(/^gb-/, '');
   return record.service_key.startsWith('gb-in-uk-') ? `in-uk-${segment}` : segment;
 }
@@ -28,7 +29,8 @@ function serviceSlug(record) {
 const expectedNoindex = new Set(['/404/', '/contact/', '/corrections/', '/privacy/', '/terms/']);
 for (const record of LATEST.records) {
   if (!record.applicant_country || record.status === 'ok') continue;
-  const jurisdiction = record.jurisdiction === 'CA' ? 'canada' : record.jurisdiction === 'NZ' ? 'new-zealand' : 'uk';
+  const jurisdiction = { CA: 'canada', GB: 'uk', NZ: 'new-zealand', NO: 'norway' }[record.jurisdiction];
+  if (!jurisdiction) throw new Error(`unknown jurisdiction ${record.jurisdiction} in SEO audit`);
   expectedNoindex.add(`/${jurisdiction}/${serviceSlug(record)}/from-${slugify(record.applicant_country_name)}/`);
 }
 

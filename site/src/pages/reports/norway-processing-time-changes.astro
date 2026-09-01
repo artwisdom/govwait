@@ -1,0 +1,57 @@
+---
+import EditorialFrame from '../../components/EditorialFrame.astro';
+import { records, services, fmtDate } from '../../lib/data.js';
+import { newestDate } from '../../lib/editorial.js';
+
+const rows = records.filter(record => record.jurisdiction === 'NO' && record.status === 'ok')
+  .sort((a, b) => b.value_days - a.value_days || a.service_name.localeCompare(b.service_name));
+const changes = rows.filter(record => record.delta && record.delta.dir !== 'flat');
+const checked = rows.map(record => record.effective_date).sort().at(-1);
+const sources = [...new Set(rows.map(record => record.source_url))];
+const maxDays = Math.max(...rows.map(record => record.value_days), 1);
+---
+<EditorialFrame
+  sectionName="Reports"
+  sectionPath="/reports/"
+  slug="norway-processing-time-changes"
+  title={`Norway UDI waiting-time baseline and changes — ${fmtDate(checked)}`}
+  description={`Current UDI waiting-time baseline across ${rows.length} table-backed Norway immigration routes, with source dates and verified changes after later observations differ.`}
+  h1="Norway UDI waiting-time baseline and changes"
+  lede={`UDI currently publishes ${rows.length} complete table-backed waiting-time routes across ${sources.length} source pages. This report preserves the first baseline and will list movement only after a later official value actually differs.`}
+  published="2026-08-30"
+  modified={newestDate('2026-08-30', checked)}
+  checked={checked}
+  about={['Norway immigration waiting times', 'UDI processing times', 'waiting-time history']}
+  citations={sources}
+  adPrefix="report-no"
+>
+  <div class="stats">
+    <div><div class="n">{rows.length}</div><div class="l">current routes</div></div>
+    <div><div class="n">{sources.length}</div><div class="l">official table pages</div></div>
+    <div><div class="n">{fmtDate(checked)}</div><div class="l">latest source update</div></div>
+    <div><div class="n">{changes.length}</div><div class="l">verified changes</div></div>
+  </div>
+
+  {changes.length === 0 ? (
+    <div class="callout good"><span class="report-status">Baseline only</span><p>No Norway route has two different stored values yet. That means movement cannot be measured yet; it does not prove that every wait stayed flat before tracking began.</p></div>
+  ) : (
+    <><h2>Verified changes since the prior UDI observation</h2><div class="tablewrap"><table><thead><tr><th>Route</th><th>Previous</th><th>Current</th><th>Direction</th></tr></thead><tbody>{changes.map(record => (<tr><td><a href={`/norway/${record.serviceSlug}/`}>{services.NO.get(record.serviceSlug).name}</a></td><td>{record.delta.prev_raw}</td><td>{record.value_raw}</td><td>{record.delta.dir === 'up' ? 'Longer' : 'Shorter'} {record.delta.pct}%</td></tr>))}</tbody></table></div></>
+  )}
+
+  <h2>Current planning spectrum</h2>
+  <p>These bars put the normalized durations on one visual scale. They are a planning overview, not a performance ranking: the routes involve different decisions, authorities and starting points. Exact official wording remains beside every bar.</p>
+  <div class="bar-list">
+    {rows.map(record => (
+      <div class="bar-row">
+        <a href={`/norway/${record.serviceSlug}/`}>{services.NO.get(record.serviceSlug).name}</a>
+        <div class="bar-track" aria-hidden="true"><div class="bar-fill" style={`width:${Math.max(3, record.value_days / maxDays * 100)}%`}></div></div>
+        <span class="num">{record.value_raw}</span>
+      </div>
+    ))}
+  </div>
+
+  <h2>Method and limits</h2>
+  <p>The collector reads only UDI’s complete server-rendered tables, requires every mapped row and the official “Last updated” date, and fails the release if a table disappears or an unknown row appears. Personalised questionnaire pages are outside this baseline. For the one published visitor-visa range, the chart uses the upper end while the exact range remains visible.</p>
+  <p>See <a href="/guides/how-norway-udi-waiting-times-work/">the Norway methodology guide</a> for clock boundaries, range handling and why personalised routes are excluded.</p>
+  <div class="prov">Official sources: {sources.map((url, index) => <>{index ? ' · ' : ''}<a href={url} rel="noopener">UDI table {index + 1}</a></>)} · baseline update {fmtDate(checked)} · not immigration or legal advice.</div>
+</EditorialFrame>

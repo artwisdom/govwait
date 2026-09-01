@@ -57,7 +57,7 @@ server.registerTool("search_entities", {
   description: "Search tracked government processing-time routes by free text (service and/or country, e.g. 'canada study permit pakistan'). Returns matching entity_ids with current values.",
   inputSchema: {
     query: z.string().describe("Free-text query; terms are matched against jurisdiction, service name and applicant country"),
-    jurisdiction: z.string().length(2).optional().describe("Optional ISO country filter for the government, e.g. CA, GB or NZ"),
+    jurisdiction: z.string().length(2).optional().describe("Optional ISO country filter for the government, e.g. CA, GB, NZ or NO"),
     limit: z.number().int().min(1).max(50).default(10),
   },
 }, async ({ query, jurisdiction, limit }) => {
@@ -67,6 +67,7 @@ server.registerTool("search_entities", {
     .map(r => {
       const jurisdictionName = r.jurisdiction === "CA" ? "canada"
         : r.jurisdiction === "NZ" ? "new zealand nz"
+        : r.jurisdiction === "NO" ? "norway norwegian udi"
         : "uk united kingdom";
       const hay = `${jurisdictionName} ${r.service_name} ${r.applicant_country_name ?? ""} ${r.applicant_country ?? ""}`.toLowerCase();
       const hits = terms.filter(t => hay.includes(t)).length;

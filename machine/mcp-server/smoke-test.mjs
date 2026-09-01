@@ -69,6 +69,11 @@ try {
   assert(nzBody.metrics?.length === 2, 'New Zealand service lookup returns both official percentile metrics');
   assert(nzBody.metrics.every(r => r.unit_original === 'working days'), 'New Zealand metrics preserve the official working-day unit');
 
+  const no = await rpc('tools/call', { name: 'get_latest_value', arguments: { service_key: 'no-visitor-visa-udi' } });
+  const noBody = JSON.parse(no.result.content[0].text);
+  assert(noBody.entity_id === 'no-visitor-visa-udi', 'Norway service lookup resolves the UDI visitor-visa route');
+  assert(noBody.current_value === '45 days' && noBody.jurisdiction === 'NO', 'Norway result preserves the current official value and jurisdiction');
+
   const flpt = await rpc('tools/call', { name: 'get_entity', arguments: { entity_id: 'ca-canadian-experience-class' } });
   const flptBody = JSON.parse(flpt.result.content[0].text);
   assert(flptBody.metric_type === 'forward', 'IRCC CEC route is explicitly labeled forward-looking');
@@ -83,6 +88,10 @@ try {
   const search = await rpc('tools/call', { name: 'search_entities', arguments: { query: 'study permit pakistan' } });
   const searchBody = JSON.parse(search.result.content[0].text);
   assert(searchBody.matches.some(m => m.entity_id === 'ca-study-permit--pk'), 'search_entities finds ca-study-permit--pk for "study permit pakistan"');
+
+  const noSearch = await rpc('tools/call', { name: 'search_entities', arguments: { query: 'norway udi visitor visa' } });
+  const noSearchBody = JSON.parse(noSearch.result.content[0].text);
+  assert(noSearchBody.matches.some(m => m.entity_id === 'no-visitor-visa-udi'), 'search_entities finds the Norway UDI visitor-visa route');
 
   console.log('\nSMOKE TEST: ALL PASS');
   server.kill();

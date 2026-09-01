@@ -41,9 +41,21 @@ gov.uk restructured the guidance page. Fetch `https://www.gov.uk/api/content/gui
 - If INZ legitimately grows beyond 145 visas, redesign the refresh into bounded cohorts before raising any cap. Do not guess IDs or lower the 240-observation coverage floor.
 - The endpoint has no update stamp. Keep first-observed/change-detection semantics and preserve `working days` as the source unit.
 
+### `[udi-waiting-times] FETCH/PARSE FAILURE` / table or date mismatch
+- Check UDI's official [waiting-time hub](https://www.udi.no/en/waiting-time/) and
+  `robots.txt` first. Never spoof a browser User-Agent or probe personalised guide
+  combinations.
+- The collector follows five fixed server-rendered table pages and requires exactly
+  19 mapped rows. An unknown, missing, or duplicate row is schema drift to review;
+  do not lower the 19-route coverage floor.
+- Every selected page must carry UDI's own update date. The source normally updates
+  monthly and becomes stale at 45 days.
+- Preserve an exact published range in `value_raw`; use the upper endpoint only for
+  conservative normalized comparison. Do not present it as a single official wait.
+
 ### `FAIL: staleness-<source>`
-The source hasn't republished within its window (45d IRCC processing-time files /
-62d IRCC forward-looking file / 120d gov.uk). Check the official page by hand: if
+The source hasn't republished within its window (45d IRCC processing-time files and
+UDI / 62d IRCC forward-looking file / 120d gov.uk). Check the official page by hand: if
 the agency genuinely paused updates, raise the window in `pipeline/validate.js`
 with a dated comment; if they moved the data, treat as relocation (see above).
 
@@ -55,9 +67,10 @@ The source closed its doors. The source is dead to us (hard rule). Remove it fro
 
 ## Adding a source (the growth loop — ~2-4 hours each)
 
-1. Pick from the verified robots-permitted expansion list: **udi.no (Norway),
-   migri.fi (Finland), migrationsverket.se (Sweden), ind.nl (Netherlands),
-   nyidanmark.dk (Denmark)**. NZ passports remain blocked and are not a candidate.
+1. Norway UDI is implemented in the current deployment candidate. Pick the next
+   source from the verified robots-permitted list: **migri.fi (Finland),
+   migrationsverket.se (Sweden), ind.nl (Netherlands), nyidanmark.dk (Denmark)**.
+   NZ passports remain blocked and are not a candidate.
 2. Find the structured data: prefer a JSON/API endpoint (dev tools → Network tab on
    their processing-times tool); else a stable HTML table.
 3. Copy `pipeline/sources/govuk.js` as a template. A source module exports

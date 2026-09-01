@@ -8,7 +8,9 @@ info:
     (be polite anyway). Every value is an official government publication with
     source URL, the agency's own update date when supplied (otherwise the
     first-observed date), and our retrieval timestamp.
-    License: CC BY 4.0 — attribute GovWait and the originating agency.
+    GovWait's extracted-value compilation is CC BY 4.0 — attribute GovWait and
+    the originating agency. Underlying source terms vary; consult each source's
+    license_note in the API index.
   license:
     name: CC BY 4.0
     identifier: CC-BY-4.0
@@ -40,7 +42,7 @@ paths:
   /api/v1/jurisdictions/{code}.json:
     get:
       operationId: getJurisdiction
-      summary: All routes for one government (e.g. ca, gb, nz) with latest values
+      summary: All routes for one government (e.g. ca, gb, nz, no) with latest values
       parameters:
         - name: code
           in: path
@@ -92,7 +94,7 @@ components:
       required: [value_raw, value_days, unit_original, status, effective_date, retrieved_at, source_url]
       properties:
         value_raw: { type: string, description: "Verbatim official string, e.g. '31 days'" }
-        value_days: { type: [number, "null"], description: "Numeric duration. Calendar units are normalized to days (weeks x7, months x30.44). Official working-day figures preserve their working-day count; see unit_original. Null when no time is published." }
+        value_days: { type: [number, "null"], description: "Numeric duration. Calendar units are normalized to days (weeks x7, months x30.44). Official working-day figures preserve their working-day count; see unit_original. For a published range, this field uses the upper end while value_raw preserves the complete range. Null when no time is published." }
         unit_original: { type: [string, "null"], enum: [minutes, hours, days, weeks, months, years, working days, null] }
         status: { type: string, enum: [ok, unavailable, insufficient_data] }
         effective_date: { type: string, format: date, description: "The agency's own last-updated date when supplied; otherwise the date GovWait first observed this changed value" }

@@ -16,6 +16,7 @@ import { stats } from '../lib/data.js';
       <tr><td><code>/api/v1/jurisdictions/ca.json</code></td><td>All Canadian routes with latest values</td></tr>
       <tr><td><code>/api/v1/jurisdictions/gb.json</code></td><td>All UK routes with latest values</td></tr>
       <tr><td><code>/api/v1/jurisdictions/nz.json</code></td><td>All New Zealand visa types with 50% and 80% working-day metrics</td></tr>
+      <tr><td><code>/api/v1/jurisdictions/no.json</code></td><td>All table-backed Norway UDI waiting-time routes with official update dates</td></tr>
       <tr><td><code>/api/v1/ircc-forward-looking.json</code></td><td>All IRCC forward-looking programs, current queue estimates and application-month cohorts</td></tr>
       <tr><td><code>/api/v1/services/&#123;service_key&#125;.json</code></td><td>One service, all applicant countries (e.g. <code>ca-visitor-visa</code>)</td></tr>
       <tr><td><code>/api/v1/entities/&#123;entity_id&#125;.json</code></td><td>One route: latest value + full recorded history (e.g. <code>ca-visitor-visa--in</code>)</td></tr>
@@ -25,6 +26,7 @@ import { stats } from '../lib/data.js';
   <h2>Example</h2>
   <pre class="fresh" style="overflow-x:auto"><code>curl {config.SITE_URL}/api/v1/entities/ca-visitor-visa--in.json</code></pre>
   <p class="small muted">For New Zealand, each visa service has separate <code>--p50</code> and <code>--p80</code> entities. The numeric value remains a working-day count and is labeled <code>unit_original: "working days"</code>.</p>
+  <p class="small muted">For a published range such as UDI’s <code>15–29 days</code>, <code>value_raw</code> keeps the full official range and <code>value_days</code> uses its upper end for conservative comparison.</p>
   <p class="small muted">IRCC forward-looking records use <code>metric_type: "forward"</code>. Their <code>cohort_month</code> is when an application was submitted within a current IRCC snapshot—not the date IRCC published that value. Snapshot dates remain separate so the two timelines cannot be silently mixed.</p>
 
   <h2>For AI agents</h2>

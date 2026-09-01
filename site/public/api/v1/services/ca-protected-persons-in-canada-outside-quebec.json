@@ -3,7 +3,7 @@
  "service_name": "Protected persons and Convention refugees in Canada — outside Quebec",
  "jurisdiction": "CA",
  "count": 1,
- "generated_at": "2026-08-28T23:27:50.366Z",
+ "generated_at": "2026-09-01T02:22:17.881Z",
  "records": [
   {
    "entity_id": "ca-protected-persons-in-canada-outside-quebec",
@@ -26,5 +26,5 @@
    }
   }
  ],
- "license": "CC BY 4.0 — attribute GovWait and the originating government agency. Underlying figures are official government publications."
+ "license": "GovWait extracted-value compilation: CC BY 4.0 — attribute GovWait and the originating government agency. Underlying source terms vary; consult each source license_note in /api/v1/index.json."
 }

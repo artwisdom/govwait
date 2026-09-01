@@ -12,8 +12,9 @@ import * as irccPassport from './sources/ircc-passport.js';
 import * as govukInUk from './sources/govuk-inuk.js';
 import * as govukPassport from './sources/govuk-passport.js';
 import * as inz from './sources/inz.js';
+import * as udi from './sources/udi.js';
 
-const SOURCES = [ircc, irccFlpt, irccNonCountry, irccPassport, govuk, govukInUk, govukPassport, inz];
+const SOURCES = [ircc, irccFlpt, irccNonCountry, irccPassport, govuk, govukInUk, govukPassport, inz, udi];
 const forceRefresh = process.argv.includes('--refresh');
 
 // Unstamped observations (source publishes no update date): insert only when

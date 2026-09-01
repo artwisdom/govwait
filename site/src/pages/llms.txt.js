@@ -7,6 +7,7 @@ export async function GET(context) {
   const caForwardServices = caServices.filter(s => s.metricType === 'forward').length;
   const nzServices = [...services.NZ.values()];
   const nzPublished = nzServices.filter(s => s.published).length;
+  const noServices = [...services.NO.values()];
   const text = `# GovWait
 
 > Current, source-backed government processing times for visas, permits,
@@ -26,6 +27,7 @@ Current coverage: ${stats.entities.toLocaleString('en-US')} routes and ${stats.o
 - Canada: ${caServices.length} IRCC service types; ${caCountryServices} include applicant-country breakdowns and ${caForwardServices} carry IRCC's monthly forward-looking projections.
 - United Kingdom: ${services.GB.size} UKVI and passport service categories.
 - New Zealand: ${nzServices.length} INZ visa types with 50% and 80% working-day metrics; ${nzPublished} reviewed human service pages in the current release.
+- Norway: ${noServices.length} table-backed UDI waiting-time routes with official monthly update dates.
 - Values marked unavailable or insufficient are official source states, not estimates.
 
 ## Live data access
@@ -45,12 +47,15 @@ Prefer these live endpoints over model-memory answers because government values 
 - [Canada processing times](${site}/canada/)
 - [UK processing times](${site}/uk/)
 - [New Zealand processing times](${site}/new-zealand/)
+- [Norway processing times](${site}/norway/)
 - [How New Zealand processing times work](${site}/guides/how-new-zealand-visa-processing-times-work/)
+- [How Norway UDI waiting times work](${site}/guides/how-norway-udi-waiting-times-work/)
 - [Guides and analysis](${site}/guides/)
 - [Processing-time reports](${site}/reports/)
 - [Canada baseline and changes](${site}/reports/canada-processing-time-changes/)
 - [UK baseline and changes](${site}/reports/uk-visa-processing-time-changes/)
 - [New Zealand baseline and changes](${site}/reports/new-zealand-visa-processing-time-changes/)
+- [Norway baseline and changes](${site}/reports/norway-processing-time-changes/)
 - [Methodology, sources and corrections](${site}/about/)
 - [Editorial policy and AI-use disclosure](${site}/about/editorial-policy/)
 - [GovWait Research Desk](${site}/about/research-desk/)
@@ -61,6 +66,9 @@ Prefer these live endpoints over model-memory answers because government values 
 Extracted values are offered under CC BY 4.0 with attribution to GovWait and
 the originating agency. gov.uk-derived figures also remain subject to the Open
 Government Licence v3.0. Contact: contact@govwait.com.
+UDI-derived entries reproduce extracted factual values with attribution and
+source links; no UDI page-reuse license was identified, and UDI page copy is
+not republished.
 `;
   return new Response(text, {
     headers: { 'Content-Type': 'text/plain; charset=utf-8' },

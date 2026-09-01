@@ -1,0 +1,30 @@
+{
+ "service_key": "no-residence-permit-abuse-victim",
+ "service_name": "Residence permit for victims of abuse by a spouse or cohabitant",
+ "jurisdiction": "NO",
+ "count": 1,
+ "generated_at": "2026-09-01T02:22:17.881Z",
+ "records": [
+  {
+   "entity_id": "no-residence-permit-abuse-victim",
+   "jurisdiction": "NO",
+   "service_key": "no-residence-permit-abuse-victim",
+   "service_name": "Residence permit for victims of abuse by a spouse or cohabitant",
+   "service_category": "permit",
+   "metric_type": "published",
+   "applicant_country": null,
+   "applicant_country_name": null,
+   "latest": {
+    "value_raw": "6 months",
+    "value_days": 182.64,
+    "unit_original": "months",
+    "status": "ok",
+    "effective_date": "2026-08-27",
+    "retrieved_at": "2026-08-30T22:03:44.333Z",
+    "source_url": "https://www.udi.no/en/waiting-time/other-types-of-cases/",
+    "confidence": "official"
+   }
+  }
+ ],
+ "license": "GovWait extracted-value compilation: CC BY 4.0 — attribute GovWait and the originating government agency. Underlying source terms vary; consult each source license_note in /api/v1/index.json."
+}

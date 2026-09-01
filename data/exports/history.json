@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-28T23:27:50.366Z",
+ "generated_at": "2026-09-01T02:22:17.881Z",
  "entities": {
   "ca-amend-immigration-record": [
    {
@@ -39696,6 +39696,215 @@
     "effective_date": "2026-06-26",
     "retrieved_at": "2026-08-21T11:37:11.785Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk"
+   }
+  ],
+  "no-appeal-legal-cost-coverage": [
+   {
+    "value_raw": "6 months",
+    "value_days": 182.64,
+    "unit_original": "months",
+    "status": "ok",
+    "effective_date": "2026-08-27",
+    "retrieved_at": "2026-08-30T22:03:44.333Z",
+    "source_url": "https://www.udi.no/en/waiting-time/other-types-of-cases/"
+   }
+  ],
+  "no-brexit-residence-permit": [
+   {
+    "value_raw": "6 months",
+    "value_days": 182.64,
+    "unit_original": "months",
+    "status": "ok",
+    "effective_date": "2026-08-27",
+    "retrieved_at": "2026-08-30T22:03:38.369Z",
+    "source_url": "https://www.udi.no/en/waiting-time/residency-according-to-the-eueea-and-brexit-regulations/"
+   }
+  ],
+  "no-eea-family-residence-card": [
+   {
+    "value_raw": "6 months",
+    "value_days": 182.64,
+    "unit_original": "months",
+    "status": "ok",
+    "effective_date": "2026-08-27",
+    "retrieved_at": "2026-08-30T22:03:38.369Z",
+    "source_url": "https://www.udi.no/en/waiting-time/residency-according-to-the-eueea-and-brexit-regulations/"
+   }
+  ],
+  "no-eea-permanent-residence-card": [
+   {
+    "value_raw": "6 months",
+    "value_days": 182.64,
+    "unit_original": "months",
+    "status": "ok",
+    "effective_date": "2026-08-27",
+    "retrieved_at": "2026-08-30T22:03:38.369Z",
+    "source_url": "https://www.udi.no/en/waiting-time/residency-according-to-the-eueea-and-brexit-regulations/"
+   }
+  ],
+  "no-expulsion-decision": [
+   {
+    "value_raw": "10 months",
+    "value_days": 304.4,
+    "unit_original": "months",
+    "status": "ok",
+    "effective_date": "2026-08-27",
+    "retrieved_at": "2026-08-30T22:03:41.334Z",
+    "source_url": "https://www.udi.no/en/waiting-time/expulsion-and-lifting-a-prohibition-of-entry/"
+   }
+  ],
+  "no-permanent-residence-family-immigration": [
+   {
+    "value_raw": "25 months",
+    "value_days": 761,
+    "unit_original": "months",
+    "status": "ok",
+    "effective_date": "2026-08-27",
+    "retrieved_at": "2026-08-30T22:03:32.338Z",
+    "source_url": "https://www.udi.no/en/waiting-time/permanent-residence-permit/"
+   }
+  ],
+  "no-permanent-residence-other": [
+   {
+    "value_raw": "25 months",
+    "value_days": 761,
+    "unit_original": "months",
+    "status": "ok",
+    "effective_date": "2026-08-27",
+    "retrieved_at": "2026-08-30T22:03:32.338Z",
+    "source_url": "https://www.udi.no/en/waiting-time/permanent-residence-permit/"
+   }
+  ],
+  "no-permanent-residence-protection-humanitarian": [
+   {
+    "value_raw": "25 months",
+    "value_days": 761,
+    "unit_original": "months",
+    "status": "ok",
+    "effective_date": "2026-08-27",
+    "retrieved_at": "2026-08-30T22:03:32.338Z",
+    "source_url": "https://www.udi.no/en/waiting-time/permanent-residence-permit/"
+   }
+  ],
+  "no-permanent-residence-work-immigration": [
+   {
+    "value_raw": "24 months",
+    "value_days": 730.56,
+    "unit_original": "months",
+    "status": "ok",
+    "effective_date": "2026-08-27",
+    "retrieved_at": "2026-08-30T22:03:32.338Z",
+    "source_url": "https://www.udi.no/en/waiting-time/permanent-residence-permit/"
+   }
+  ],
+  "no-residence-permit-abuse-victim": [
+   {
+    "value_raw": "6 months",
+    "value_days": 182.64,
+    "unit_original": "months",
+    "status": "ok",
+    "effective_date": "2026-08-27",
+    "retrieved_at": "2026-08-30T22:03:44.333Z",
+    "source_url": "https://www.udi.no/en/waiting-time/other-types-of-cases/"
+   }
+  ],
+  "no-residence-permit-humanitarian-grounds": [
+   {
+    "value_raw": "10 months",
+    "value_days": 304.4,
+    "unit_original": "months",
+    "status": "ok",
+    "effective_date": "2026-08-27",
+    "retrieved_at": "2026-08-30T22:03:44.333Z",
+    "source_url": "https://www.udi.no/en/waiting-time/other-types-of-cases/"
+   }
+  ],
+  "no-residence-permit-medical-treatment": [
+   {
+    "value_raw": "3 months",
+    "value_days": 91.32,
+    "unit_original": "months",
+    "status": "ok",
+    "effective_date": "2026-08-27",
+    "retrieved_at": "2026-08-30T22:03:44.333Z",
+    "source_url": "https://www.udi.no/en/waiting-time/other-types-of-cases/"
+   }
+  ],
+  "no-residence-permit-norwegian-parent-at-birth": [
+   {
+    "value_raw": "17 months",
+    "value_days": 517.48,
+    "unit_original": "months",
+    "status": "ok",
+    "effective_date": "2026-08-27",
+    "retrieved_at": "2026-08-30T22:03:44.333Z",
+    "source_url": "https://www.udi.no/en/waiting-time/other-types-of-cases/"
+   }
+  ],
+  "no-revoke-entry-ban-eea-citizen": [
+   {
+    "value_raw": "6 months",
+    "value_days": 182.64,
+    "unit_original": "months",
+    "status": "ok",
+    "effective_date": "2026-08-27",
+    "retrieved_at": "2026-08-30T22:03:41.334Z",
+    "source_url": "https://www.udi.no/en/waiting-time/expulsion-and-lifting-a-prohibition-of-entry/"
+   }
+  ],
+  "no-revoke-entry-ban-eea-covered-non-eea-citizen": [
+   {
+    "value_raw": "6 months",
+    "value_days": 182.64,
+    "unit_original": "months",
+    "status": "ok",
+    "effective_date": "2026-08-27",
+    "retrieved_at": "2026-08-30T22:03:41.334Z",
+    "source_url": "https://www.udi.no/en/waiting-time/expulsion-and-lifting-a-prohibition-of-entry/"
+   }
+  ],
+  "no-revoke-entry-ban-non-eea-citizen": [
+   {
+    "value_raw": "5 months",
+    "value_days": 152.2,
+    "unit_original": "months",
+    "status": "ok",
+    "effective_date": "2026-08-27",
+    "retrieved_at": "2026-08-30T22:03:41.334Z",
+    "source_url": "https://www.udi.no/en/waiting-time/expulsion-and-lifting-a-prohibition-of-entry/"
+   }
+  ],
+  "no-visitor-visa-embassy-another-country": [
+   {
+    "value_raw": "15–29 days",
+    "value_days": 29,
+    "unit_original": "days",
+    "status": "ok",
+    "effective_date": "2026-08-27",
+    "retrieved_at": "2026-08-30T22:03:35.355Z",
+    "source_url": "https://www.udi.no/en/waiting-time/visitor-visa/"
+   }
+  ],
+  "no-visitor-visa-embassy-country-of-residence": [
+   {
+    "value_raw": "15 days",
+    "value_days": 15,
+    "unit_original": "days",
+    "status": "ok",
+    "effective_date": "2026-08-27",
+    "retrieved_at": "2026-08-30T22:03:35.355Z",
+    "source_url": "https://www.udi.no/en/waiting-time/visitor-visa/"
+   }
+  ],
+  "no-visitor-visa-udi": [
+   {
+    "value_raw": "45 days",
+    "value_days": 45,
+    "unit_original": "days",
+    "status": "ok",
+    "effective_date": "2026-08-27",
+    "retrieved_at": "2026-08-30T22:03:35.355Z",
+    "source_url": "https://www.udi.no/en/waiting-time/visitor-visa/"
    }
   ],
   "nz-academic-visitor-visa--p50": [

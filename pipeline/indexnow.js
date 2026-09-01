@@ -18,7 +18,7 @@ const BASE_REVISION = process.env.INDEXNOW_BASE || 'HEAD^';
 const GIT_MAX_BUFFER = 64 * 1024 * 1024;
 
 const latest = JSON.parse(readFileSync(path.join(ROOT, 'data', 'exports', 'latest.json'), 'utf8'));
-const JUR = { CA: 'canada', GB: 'uk', NZ: 'new-zealand' };
+const JUR = { CA: 'canada', GB: 'uk', NZ: 'new-zealand', NO: 'norway' };
 const slug = s => String(s)
   .normalize('NFKD')
   .replace(/[\u0300-\u036f]/g, '')
@@ -29,6 +29,7 @@ const slug = s => String(s)
 function serviceSlug(r) {
   if (r.jurisdiction === 'CA') return r.service_key.replace(/^ca-/, '');
   if (r.jurisdiction === 'NZ') return r.service_key.replace(/^nz-/, '');
+  if (r.jurisdiction === 'NO') return r.service_key.replace(/^no-/, '');
   const segment = r.service_key.split('--').pop().replace(/^gb-/, '');
   return r.service_key.startsWith('gb-in-uk-') ? `in-uk-${segment}` : segment;
 }
@@ -94,7 +95,8 @@ const DIRECT_SITE_PATHS = new Map([
   ['site/src/pages/sitemap-ca.xml.js', ['/sitemap-ca.xml']],
   ['site/src/pages/sitemap-gb.xml.js', ['/sitemap-gb.xml']],
   ['site/src/pages/sitemap-nz.xml.js', ['/sitemap-nz.xml']],
-  ['site/src/lib/sitemap.js', ['/sitemap.xml', '/sitemap-hubs.xml', '/sitemap-ca.xml', '/sitemap-gb.xml', '/sitemap-nz.xml']],
+  ['site/src/pages/sitemap-no.xml.js', ['/sitemap-no.xml']],
+  ['site/src/lib/sitemap.js', ['/sitemap.xml', '/sitemap-hubs.xml', '/sitemap-ca.xml', '/sitemap-gb.xml', '/sitemap-nz.xml', '/sitemap-no.xml']],
   ['machine/openapi.yaml', ['/api-docs/']],
 ]);
 

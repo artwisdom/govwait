@@ -20,6 +20,12 @@ const tracked = records.filter(record => record.jurisdiction === 'CA' && record.
 const published = tracked.filter(record => record.status === 'ok');
 const maxRange = Math.max(...rows.map(row => row.range), 1);
 const checked = countryServices.map(service => service.latestEffective).sort().at(-1);
+const changePath = record => record.applicantSlug
+  ? `/canada/${record.serviceSlug}/${record.applicantSlug}/`
+  : `/canada/${record.serviceSlug}/`;
+const changeLabel = record => record.applicant_country_name
+  ? `${services.CA.get(record.serviceSlug).name} from ${record.applicant_country_name}`
+  : services.CA.get(record.serviceSlug).name;
 ---
 <EditorialFrame
   sectionName="Reports"
@@ -45,7 +51,7 @@ const checked = countryServices.map(service => service.latestEffective).sort().a
   {changes.length === 0 ? (
     <div class="callout good"><span class="report-status">Baseline only</span><p>No Canadian route has two different stored values yet. That means “no comparison available,” not “all values were unchanged.” A future verified change will appear here without deleting this baseline.</p></div>
   ) : (
-    <><h2>Verified changes since the prior observation</h2><div class="tablewrap"><table><thead><tr><th>Route</th><th>Previous</th><th>Current</th><th>Direction</th></tr></thead><tbody>{changes.slice(0, 25).map(record => (<tr><td><a href={`/canada/${record.serviceSlug}/${record.applicantSlug}/`}>{services.CA.get(record.serviceSlug).name} from {record.applicant_country_name}</a></td><td>{record.delta.prev_raw}</td><td>{record.value_raw}</td><td>{record.delta.dir === 'up' ? 'Longer' : 'Shorter'} {record.delta.pct}%</td></tr>))}</tbody></table></div></>
+    <><h2>Verified changes since the prior observation</h2><div class="tablewrap"><table><thead><tr><th>Route</th><th>Previous</th><th>Current</th><th>Direction</th></tr></thead><tbody>{changes.slice(0, 25).map(record => (<tr><td><a href={changePath(record)}>{changeLabel(record)}</a></td><td>{record.delta.prev_raw}</td><td>{record.value_raw}</td><td>{record.delta.dir === 'up' ? 'Longer' : 'Shorter'} {record.delta.pct}%</td></tr>))}</tbody></table></div></>
   )}
 
   <h2>Where country-level times vary most</h2>

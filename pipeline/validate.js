@@ -13,10 +13,11 @@ const COVERAGE_FLOORS = {
   'ircc-forward-looking': 28,
   'ircc-noncountry': 15, 'ircc-passport': 2, 'govuk-inuk-times': 8, 'govuk-passport': 1,
   'inz-processing-times': 240,
+  'udi-waiting-times': 19,
 };
 // No staleness entry for ircc-passport (unstamped: effective_date = first
 // observed, ages legitimately) or govuk-passport (stable statement, years old).
-const STALENESS_DAYS = { 'ircc-ptime': 45, 'ircc-forward-looking': 62, 'govuk-visa-times': 120, 'ircc-noncountry': 45, 'govuk-inuk-times': 500 };
+const STALENESS_DAYS = { 'ircc-ptime': 45, 'ircc-forward-looking': 62, 'govuk-visa-times': 120, 'ircc-noncountry': 45, 'govuk-inuk-times': 500, 'udi-waiting-times': 45 };
 const TOTAL_FLOOR = 300;
 // Refugee-resettlement categories legitimately reach ~5 years ("58 months",
 // gov-assisted from TZ, observed 2026-08), and IRCC's forward-looking file

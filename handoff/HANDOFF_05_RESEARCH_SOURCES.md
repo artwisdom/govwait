@@ -5,7 +5,9 @@ unless marked otherwise. Items 1–2 of the original build order were IMPLEMENTE
 same session (IRCC non-country + passports, UK in-UK + HMPO passport). Immigration
 New Zealand was implemented and live-verified on 2026-08-23. IRCC's
 forward-looking file was implemented on 2026-08-26 and production-verified on
-2026-08-27. What remains starts at Norway._
+2026-08-27. Norway was implemented and locally validated on 2026-08-30; deployment
+was owner-approved on 2026-08-31 and awaits a production receipt. What remains to
+build starts at Finland._
 
 ## Already implemented (for reference — done in pipeline)
 
@@ -57,10 +59,30 @@ Content-Type: multipart/form-data      field: visaID=<int>
   OpenAPI, `llms.txt`, crawler/canonical behavior, and 615 unique sitemap URLs
   passed live checks. IndexNow accepted 621 changed URLs with HTTP 200.
 
-## NEXT UP: remaining verified build order
+### N3. Norway — UDI ✅ local deployment candidate 2026-08-30
 
-### N3. Norway — UDI (easy-medium HTML, ~2h)
-`https://www.udi.no/en/waiting-time/` hub → 6 server-rendered subpages (citizenship, permanent-residence 24/25/6 months verified, visitor-visa, EU/EEA, expulsion, other). Monthly updates (stated). robots: only /Util/ disallowed. Bonus: query-param "guide" pages server-render answers (`…for-study-permits/?gs=2` → "6 months").
+- Uses five complete server-rendered table pages linked from UDI's waiting-time
+  hub: permanent residence, visitor visas, EU/EEA and Brexit residence, expulsion
+  and entry-ban lifting, and other cases.
+- Strictly maps 19 official rows. Unknown, missing, or duplicate rows, a changed
+  table count, or a missing official update date stops publication.
+- Current live refresh returned 19/19 rows, all with UDI's `27 August 2026` update
+  stamp. UDI states a monthly update pattern; the validation window is 45 days.
+- Published ranges are preserved exactly (`15–29 days`) and normalized by their
+  upper endpoint only for conservative comparisons. User-facing pages explain the
+  range and that UDI's figures are planning guides, not individual guarantees.
+- Personalised question-and-answer guides for family, work, study, citizenship,
+  and similar routes are intentionally excluded. The collector does not guess
+  selections, enumerate hidden parameters, or transmit personal information.
+- No explicit UDI page-reuse licence was located. The implementation stores only
+  factual values, supplies clear agency attribution and official source links, and
+  does not reproduce page prose.
+- Candidate acceptance: 2,318 entities / 9 sources / 4 governments; 2,104 HTML;
+  635/635 SEO-sitemap; 2,611-file API conformance; parser tests 12/12; validation
+  25 checks; MCP, responsive browser QA, and a 635-URL IndexNow dry run green.
+  This is local evidence only; Norway is not deployed or submitted for discovery.
+
+## NEXT UP: remaining verified build order
 
 ### N4. Finland — Migri (medium HTML-table, ~2h)
 `https://migri.fi/en/processing-times` — **127 uniform tables** (most/minority/max-by-law × electronic/paper). Verified: employed person 1/2/2 months; citizenship 35 months. Stated cadence: **every 2 months**. ⚠️ robots has `crawl-delay: 5` — bump the per-host delay to 5s for this host (fetcher currently does 3s globally; make it per-host configurable).
@@ -88,7 +110,7 @@ EU Schengen consulate statistics (annual XLSX — volumes/refusal rates, not tim
 
 | # | Source | Effort | Payoff |
 |---|---|---|---|
-| 1 | Norway UDI | ~2h | 4th government, monthly cadence |
+| 1 | Norway UDI | Built; deploy gate | 4th government, monthly cadence |
 | 2 | Finland Migri | ~2h | 5th government (respect crawl-delay 5) |
 | 3 | Sweden | ~2h | 6th + citizenship-backlog PR hook |
 | 4 | Denmark | ~2h | 7th |

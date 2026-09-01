@@ -1,0 +1,63 @@
+---
+import EditorialFrame from '../../components/EditorialFrame.astro';
+import AdSlot from '../../components/AdSlot.astro';
+import { publishedServices, fmtDate } from '../../lib/data.js';
+import { newestDate } from '../../lib/editorial.js';
+
+const services = publishedServices('NO');
+const rows = services.map(service => ({ service, record: service.records[0] }))
+  .sort((a, b) => a.record.service_name.localeCompare(b.record.service_name));
+const updated = rows.map(row => row.record.effective_date).sort().at(-1);
+const citations = [...new Set(rows.map(row => row.record.source_url))];
+const rangeRows = rows.filter(row => /\d\s*[–—-]\s*\d/.test(row.record.value_raw));
+---
+<EditorialFrame
+  sectionName="Guides"
+  sectionPath="/guides/"
+  slug="how-norway-udi-waiting-times-work"
+  title="How Norway UDI waiting times work — 19 current official routes"
+  description="Understand Norway UDI's dated immigration waiting-time tables, current values, update cadence, range handling and limits without guessing personalised routes."
+  h1="How Norway’s UDI waiting times work"
+  lede={`The Norwegian Directorate of Immigration publishes dated waiting-time tables for several case types. GovWait currently tracks ${rows.length} complete, table-backed routes from ${citations.length} official pages and preserves each later change without probing UDI’s personalised questionnaires.`}
+  published="2026-08-30"
+  modified={newestDate('2026-08-30', updated)}
+  checked={updated}
+  about={['Norway immigration waiting times', 'Norwegian Directorate of Immigration', 'UDI']}
+  citations={citations}
+  adPrefix="guide-no-method"
+>
+  <div class="stats">
+    <div><div class="n">{rows.length}</div><div class="l">table-backed routes</div></div>
+    <div><div class="n">{citations.length}</div><div class="l">official source pages</div></div>
+    <div><div class="n">{fmtDate(updated)}</div><div class="l">latest source update</div></div>
+    <div><div class="n">Monthly</div><div class="l">stated update pattern</div></div>
+  </div>
+
+  <h2>What the figure does—and does not—mean</h2>
+  <p>UDI presents these times as planning guides. They can change while an application is pending, and an individual case can take longer. The relevant official page explains which authority handles the route and where its clock starts; those details are not identical across visitor visas, residence cases and entry-ban matters.</p>
+  <p>GovWait therefore records the exact published value, UDI’s own update date, the official URL and our retrieval time. We do not calculate a personal decision date, treat the figure as a guarantee or infer anything about an application’s status.</p>
+
+  <h2>Why the personalised guides are not in this release</h2>
+  <p>UDI also uses question-and-answer guides for family, work, study, citizenship and several other topics. Their answers depend on selections such as application type and personal circumstances. This first Norway dataset uses only complete server-rendered tables whose routes are explicitly listed by UDI. It does not enumerate hidden parameters, invent country combinations or submit personal information.</p>
+  <AdSlot position="guide-no-mid" />
+
+  <h2>Current table-backed UDI routes</h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Route</th><th>Official wait</th><th>UDI update</th></tr></thead>
+    <tbody>{rows.map(({ service, record }) => (
+      <tr>
+        <td><a href={`/norway/${service.slug}/`}>{service.name}</a></td>
+        <td class="num">{record.value_raw}</td>
+        <td class="num">{fmtDate(record.effective_date)}</td>
+      </tr>
+    ))}</tbody>
+  </table></div>
+
+  <h2>How ranges are represented</h2>
+  <p>UDI currently publishes {rangeRows.length === 1 ? 'one value as a range' : `${rangeRows.length} values as ranges`}: {rangeRows.map(row => `${row.service.name} (${row.record.value_raw})`).join(', ')}. GovWait keeps that wording unchanged in <code>value_raw</code>. Because the shared API also needs one normalized comparison number, <code>value_days</code> uses the range’s upper end. That conservative field is for sorting and charts; the full official range remains the value people should read.</p>
+
+  <h2>History starts with a baseline</h2>
+  <p>This Norway release creates the first stored observation for each route. A later UDI update adds a new dated row only when appropriate; it does not overwrite this baseline. Until a different second value exists, the site will say that movement is not yet measurable rather than claiming the wait was unchanged.</p>
+
+  <div class="prov">Official sources: {citations.map((url, index) => <>{index ? ' · ' : ''}<a href={url} rel="noopener nofollow">UDI waiting-time table {index + 1}</a></>)} · latest represented update {fmtDate(updated)} · not immigration or legal advice.</div>
+</EditorialFrame>

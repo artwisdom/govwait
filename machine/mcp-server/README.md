@@ -50,6 +50,9 @@ now, and how does that compare to Nigeria and the Philippines?"* — it should c
 For New Zealand, try *"What are the current Visitor Visa processing times?"* The
 `nz-visitor-visa` service returns both INZ's 50% and 80% working-day metrics.
 
+For Norway, try *"What is UDI's current visitor-visa waiting time?"* The server
+returns the dated, table-backed UDI routes and their official source pages.
+
 ## Distribution (owner steps — see DEPLOYMENT_GUIDE.md)
 
 Directory submissions (PulseMCP, mcp.so, Glama, Smithery) are prepared as a checklist

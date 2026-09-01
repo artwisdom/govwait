@@ -10,7 +10,9 @@ Console link are live. The remaining search-engine work is processing and honest
 measurement; setup and submission do not prove indexing, traffic, or ad approval.
 The Phase 2 IRCC forward-looking expansion is production-verified from commit
 `5d5f0a9`, deployment run `33127083764`, and Cloudflare artifact
-`0933a757.govwait.pages.dev`.
+`0933a757.govwait.pages.dev`. A Norway UDI expansion passed every local release
+gate on 2026-08-30 but is not committed, deployed, or submitted for discovery;
+the production figures elsewhere in this document therefore remain unchanged.
 
 ## Go-live core
 
@@ -81,6 +83,25 @@ The Phase 2 IRCC forward-looking expansion is production-verified from commit
    indexing, ranking, traffic, ad approval, or revenue. Do not resubmit manual
    Google indexing requests unless a specific high-value URL has a verified gap.
 
+## Norway release candidate — deployment approved 2026-08-31, verification pending
+
+1. **[DONE LOCALLY]** Integrated 19 UDI routes from 5 complete, dated official
+   tables. The collector uses an honest contact-bearing User-Agent, respects UDI's
+   robots policy and request spacing, validates every expected row, and excludes
+   personalised questionnaire paths.
+2. **[DONE LOCALLY]** Added Norway country/service pages, a source-method guide, a
+   baseline-only change report, fifth child sitemap, JSON API/OpenAPI/MCP support,
+   `llms.txt`, navigation, and exact IndexNow URL mapping. The candidate adds 22
+   indexable URLs and brings the local sitemap set to 635.
+3. **[DONE LOCALLY]** Live collection returned 19/19 records dated 2026-08-27.
+   Parser tests 12/12, validation 25 checks, a 2,104-page build, 635/635 SEO-sitemap
+   audit, 2,611-file API conformance, MCP smoke, 635-URL IndexNow dry run, diff
+   validation, and desktop/mobile rendered checks passed.
+4. **[APPROVED — IN PROGRESS]** The owner said `Approve Norway deployment` on
+   2026-08-31, authorizing commit, push, production deployment, public-edge
+   verification, and the workflow's post-deploy IndexNow notification. These
+   actions still do not prove indexing, traffic, ad approval, or revenue.
+
 ## Monetization (CORRECTED Aug 2026 per handoff research — the old Ezoic path is dead)
 
 8. **[DONE] Cloudflare hosting and crawler policy.** Cloudflare Pages is the sole production host; GitHub Pages is disabled. After token cleanup, GitHub-driven deploy run `32571664389` passed on commit `cdcf37b`, proving the retained Pages-only token works. AI Crawl Control was checked deliberately: every listed crawler remains allowed and Cloudflare Managed robots.txt is off, preserving the repository-owned policy. See `docs/CLOUDFLARE_CRAWL_POLICY.md`.
@@ -116,7 +137,10 @@ The Phase 2 IRCC forward-looking expansion is production-verified from commit
 
 13. **US data (highest-value gap).** `travel.state.gov` and `egov.uscis.gov` block honest bots (Cloudflare 403). Options (updated Aug 2026: the USCIS developer portal has **no processing-times API** — only Case Status and FOIA — so there is no sanctioned automated route): (a) manual weekly entry of passport/USCIS times from the official pages (2 min/week) — add a `manual` confidence tier first; (b) leave the US out (current state). Never scrape around the WAF.
 14. **Australia / Ireland.** Same situation (Akamai/CloudFront blocks). Re-check quarterly by hand; both publish rich data if they ever open up or offer official APIs.
-15. **Next automated sources:** Immigration New Zealand is now live. The next robots-verified candidates are Norway, Finland, Sweden, Netherlands and Denmark; NZ passports remain blocked. See MAINTENANCE_RUNBOOK "Adding a source".
+15. **Next automated sources:** Immigration New Zealand is live and Norway is a
+   locally validated deployment candidate. After Norway is publicly verified, the
+   next robots-verified candidates are Finland, Sweden, Netherlands and Denmark;
+   NZ passports remain blocked. See MAINTENANCE_RUNBOOK "Adding a source".
 
 ## Placeholders inventory (grep-able)
 - `<<OWNER_PROVIDES>>` → only in docs and `.env.example`.

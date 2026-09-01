@@ -1,15 +1,16 @@
 {
-  "generated_at": "2026-08-28T23:27:50.366Z",
-  "entities": 2299,
-  "observations": 4225,
+  "generated_at": "2026-09-01T02:22:17.881Z",
+  "entities": 2318,
+  "observations": 4244,
   "forward_looking_estimates": 3629,
   "forward_looking_snapshots": 1,
   "jurisdictions": [
     "CA",
     "GB",
+    "NO",
     "NZ"
   ],
-  "services": 268,
+  "services": 287,
   "per_source": {
     "govuk-inuk-times": {
       "name": "UK visa processing times (inside UK)",
@@ -50,6 +51,11 @@
       "name": "IRCC Check Processing Times data",
       "observations": 3814,
       "latest_effective_date": "2026-08-26"
+    },
+    "udi-waiting-times": {
+      "name": "Norway immigration waiting times",
+      "observations": 19,
+      "latest_effective_date": "2026-08-27"
     }
   }
 }
