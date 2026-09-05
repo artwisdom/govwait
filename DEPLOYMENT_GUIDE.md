@@ -1,6 +1,6 @@
 # DEPLOYMENT GUIDE — every manual step, in order
 
-**Status update 2026-08-31:** the repository and refresh cron are active;
+**Status update 2026-09-04:** the repository and refresh cron are active;
 `govwait.com` is registered in Cloudflare; the Cloudflare Pages project `govwait`
 serves both the apex and `www` over HTTPS; `contact@govwait.com` forwards through
 Cloudflare Email Routing; and the public About page contains the address. Google
@@ -8,9 +8,9 @@ Search Console and Bing Webmaster Tools ownership are verified. The Phase 1
 editorial/trust release, consent-gated GA4, verified Grow script, and GA4-to-Search
 Console link are live. The remaining search-engine work is processing and honest
 measurement; setup and submission do not prove indexing, traffic, or ad approval.
-The Norway UDI expansion is production-verified from commit `a9100bb`, deployment
-run `33462368754`, and Cloudflare artifact `74bd35d1.govwait.pages.dev`. It expands
-the live product to 2,318 routes, 2,104 HTML pages, and 635 indexable/sitemap URLs.
+The Phase 3 growth release is production-verified from commit `d635236`, deployment
+run `33934940206`, and Cloudflare artifact `dbdfa613.govwait.pages.dev`. The live
+product now has 2,318 routes, 2,107 HTML pages, and 638 indexable/sitemap URLs.
 
 ## Go-live core
 
@@ -31,7 +31,7 @@ the live product to 2,318 routes, 2,104 HTML pages, and 635 indexable/sitemap UR
    - `CLOUDFLARE_ACCOUNT_ID` = the Cloudflare account that owns the `govwait` Pages project.
    - Encrypted secret `CLOUDFLARE_API_TOKEN` = a least-privilege token with Cloudflare Pages edit access only.
 
-4. **[DONE] Automated data refresh.** `refresh-data` is green and runs Tue+Fri automatically (about 65 min/month after the bounded INZ source addition, still well inside the 2,000-minute free tier).
+4. **[ACTIVE — LAST RUN FAILED CLOSED] Automated data refresh.** `refresh-data` runs Tue+Fri automatically (about 65 min/month after the bounded INZ source addition, still well inside the 2,000-minute free tier). The 2026-09-04 run stopped before export because UDI's `robots.txt` returned HTTP 403 to the GitHub runner. No unverified data was published; preserve fail-closed behavior and recheck the unchanged official route on the next run.
 
 5. **[DONE, $10.46/yr] Custom domain.** `govwait.com` is registered through Cloudflare Registrar with auto-renew and registrar lock enabled. Proxied CNAME records route the apex and `www` to `govwait.pages.dev`; both custom domains are active with HTTPS.
 
@@ -41,9 +41,9 @@ the live product to 2,318 routes, 2,104 HTML pages, and 635 indexable/sitemap UR
    `https://govwait.com/sitemap.xml` was submitted to both on 2026-08-23. After
    the discoverability release reduced the requested index set to useful,
    data-backed pages and added separate child sitemaps, Google accepted the root
-   again and Bing accepted it for processing. The 2026-08-31 Norway release has
-   **635 indexable pages and 635 matching sitemap URLs**; deployment run
-   `33462368754` submitted 642 changed URLs (the 635-page set plus `llms.txt` and
+   again and Bing accepted it for processing. The 2026-09-04 Phase 3 release has
+   **638 indexable pages and 638 matching sitemap URLs**; deployment run
+   `33934940206` submitted 646 URLs (the 638-page set plus RSS, `llms.txt`, and
    six sitemap documents) to IndexNow and received HTTP 200.
    None of these receipts guarantees indexing.
    The public sitemap returns HTTP 200 as `application/xml`. Google's live URL test
@@ -55,7 +55,8 @@ the live product to 2,318 routes, 2,104 HTML pages, and 635 indexable/sitemap UR
    final processing status. After explicit owner confirmation, Google accepted
    priority-crawl requests for the UK Standard Visitor page, Canada Visitor Visa
    by Country guide, Canada Study Permit from Pakistan, the New Zealand hub,
-   New Zealand Visitor Visa page, and the New Zealand processing-times explainer.
+   New Zealand Visitor Visa page, the New Zealand processing-times explainer, the
+   Canada 2026-08-26 report, and the New Zealand 2021 Resident Visa guide.
    Do not repeat those requests merely to try to change priority; acceptance still
    does not prove that a URL is indexed.
 
@@ -104,6 +105,21 @@ the live product to 2,318 routes, 2,104 HTML pages, and 635 indexable/sitemap UR
    redirect passed public checks. IndexNow accepted 642 URLs with HTTP 200. These
    actions still do not prove indexing, traffic, ad approval, or revenue.
 
+## Phase 3 growth release receipt — complete 2026-09-04
+
+1. **[DONE]** Added permanent Canada and New Zealand dated report issues, complete
+   change tables, report RSS, and a source-backed New Zealand 2021 Resident Visa
+   guide that states the route is closed instead of inventing a current wait.
+2. **[DONE]** Parser tests 12/12, validation 25 checks, a 2,107-page build, 638/638
+   SEO-sitemap audit, 2,611-file API conformance, MCP build/smoke, RSS/sitemap XML
+   validation, 638-URL IndexNow dry run, diff checks, and public checks passed.
+3. **[DONE]** Commit `d635236` passed run `33934940206` and deployed to
+   `dbdfa613.govwait.pages.dev`. The apex matched the artifact; all three new pages,
+   RSS, `llms.txt`, sitemaps, canonicals, and the path-preserving `www` redirect passed.
+4. **[DONE — RECEIPTS ONLY]** IndexNow accepted 646 URLs with HTTP 200. Google added
+   the Canada report and New Zealand guide to its priority crawl queue. Neither
+   submission proves indexing, ranking, traffic, ad approval, or revenue.
+
 ## Monetization (CORRECTED Aug 2026 per handoff research — the old Ezoic path is dead)
 
 8. **[DONE] Cloudflare hosting and crawler policy.** Cloudflare Pages is the sole production host; GitHub Pages is disabled. After token cleanup, GitHub-driven deploy run `32571664389` passed on commit `cdcf37b`, proving the retained Pages-only token works. AI Crawl Control was checked deliberately: every listed crawler remains allowed and Cloudflare Managed robots.txt is off, preserving the repository-owned policy. See `docs/CLOUDFLARE_CRAWL_POLICY.md`.
@@ -120,7 +136,7 @@ the live product to 2,318 routes, 2,104 HTML pages, and 635 indexable/sitemap UR
    recommendations are off; the small reader/share widget remains on. No Journey
    application or ad approval is implied.
 
-9. **[FOUNDATION LIVE; APPLICATION LATER] Ads — the 2026 ladder.** Prerequisite for ANY approval: the editorial layer (14 guides, 4 jurisdiction reports, methodology, editorial/research-desk identity, and policy pages are live; continue expanding per roadmap) because 2,000 templated pages alone is the exact "Low Value Content" rejection profile.
+9. **[FOUNDATION LIVE; APPLICATION LATER] Ads — the 2026 ladder.** Prerequisite for ANY approval: the editorial layer (15 guides, 4 jurisdiction reports, 2 permanent dated issues, methodology, editorial/research-desk identity, and policy pages are live; continue expanding per roadmap) because 2,000 templated pages alone is the exact "Low Value Content" rejection profile.
    - At **~1,000 sessions/mo**: apply to **Mediavine Journey** (the on-ramp; 70% share; Grow.js works on static sites) + AdSense in parallel (fallback + required standing).
    - At **25K pageviews/mo AND ≥50% US/UK/CA/AU/NZ traffic**: apply to **Raptive** (geo gate is the binding constraint, not the pageview count).
    - Full **Mediavine** upgrade happens automatically via Journey at $5K trailing-12-month ad revenue.

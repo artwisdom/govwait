@@ -20,7 +20,7 @@ never the numbers themselves — six free competitors already have the numbers.*
 - [x] Harden search/AI discovery: canonical `www` 301, explicit search and AI
   crawler allows, generated `llms.txt`, five honest child sitemaps, structured
   data, exact IndexNow notifications, and a blocking SEO CI audit. Indexing is
-  requested only for the 635 current data-backed pages; 1,464 official no-value
+  requested only for the 638 current data-backed pages; 1,464 official no-value
   pages automatically graduate from `noindex, follow` when data appears.
 - [x] Privacy-minimal measurement foundation: consent-gated GA4, 14-month retention,
   ad/personalization signals off, GA4 production stream linked to the `govwait.com`
@@ -46,10 +46,12 @@ add a dashboard screenshot alongside the textual policy evidence in
 `32921188032`; public-edge checks passed and IndexNow accepted the 603-URL current
 set with HTTP 200.
 
-**Latest production proof 2026-08-31:** Norway commit `a9100bb` deployed in run
-`33462368754` to `74bd35d1.govwait.pages.dev`; the public apex, all 22 Norway URLs,
-API provenance, crawler files, canonical redirect, and five child sitemaps passed
-independent checks. IndexNow accepted 642 URLs with HTTP 200.
+**Latest production proof 2026-09-04:** Phase 3 commit `d635236` deployed in run
+`33934940206` to `dbdfa613.govwait.pages.dev`; the apex matched the artifact and
+the three new pages, RSS, `llms.txt`, canonicals, crawler files, path-preserving
+`www` redirect, and 638 sitemap URLs passed independent checks. IndexNow accepted
+646 URLs with HTTP 200. Google added the two owner-approved URLs to its priority
+crawl queue; that is not proof of indexing.
 
 ## Phase R2 — NZ + IRCC-flpt sources (the moat accelerators)
 
@@ -82,10 +84,13 @@ Auto-generated per-jurisdiction "What changed this week/month" pages: biggest mo
 **Why:** SEO research: original-data reports earn 3.2× links; Boundless proved the citation loop in this exact vertical; CIC News's franchise is prose deltas with decaying URLs — ours compound.
 **Accept:** builds from history automatically; renders gracefully when few changes; RSS validates; first outreach email drafted (template in repo) for the owner to send to CIC News-adjacent reporters on a real data drop.
 
-**Status 2026-08-25:** the first honest baseline layer is live at `/reports/` with
-one source-backed report for Canada, the UK, New Zealand, and Norway. It renders a baseline
-without inventing movement when no differing second observation exists. Permanent
-weekly issue URLs, RSS, and outreach on a real change remain unfinished R3 work.
+**Status 2026-09-04 — core product live:** the original baseline layer remains,
+and append-only history now generates permanent dated issues with complete change,
+unchanged, and availability tables. Canada 2026-08-26 and New Zealand 2026-09-01
+issues are live; RSS validates and is advertised sitewide, in `llms.txt`, the
+sitemap, and IndexNow. The Canada issue and the source-backed New Zealand 2021
+Resident Visa guide received Google priority-crawl requests. A restrained outreach
+template and any actual external outreach remain separately approval-gated work.
 
 ## Phase R4 — History visualization + alerts
 
@@ -98,10 +103,11 @@ weekly issue URLs, RSS, and outreach on a real change remain unfinished R3 work.
 Targets from HANDOFF_04's top-20 table: corridor guides (India→CA study, Nigeria→CA study, UK spouse timeline explainer, super-visa-for-parents…), "published vs lived timelines" explainer (the "reddit" distrust bridge), stage-definitions explainer ("after biometrics"), employer/sponsor-side section (the tier-1 RPM fix from HANDOFF_03). All data-fed where possible so they self-update. Write for humans; no AI-boilerplate tells.
 **Accept:** 40+ guide pages live; every top-20 route cross-linked to its guide; AdSense + Journey applications submitted once traffic gate hit (owner clicks).
 
-**Status 2026-08-31:** 14 source-backed guides are live (9 added in Phase 1 plus
-the Norway method guide), with
+**Status 2026-09-04:** 15 source-backed guides are live (9 added in Phase 1, the
+Norway method guide, and the Phase 3 New Zealand closed-route guide), with
 organizational bylines, citations, Article/Breadcrumb schema, and policy/correction
-paths. The 40-page depth target and traffic-gated ad applications remain unfinished.
+paths. Two permanent dated report issues also add original historical analysis. The
+40-page depth target and traffic-gated ad applications remain unfinished.
 
 ## Phase R6 — Machine-skin distribution
 

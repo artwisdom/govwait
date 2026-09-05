@@ -16,7 +16,7 @@ The first Search Console window (August 21-31, 2026) showed:
 - 476 query rows and 283 pages with impressions; and
 - 533 URLs reported indexed and 1,063 not indexed in the page-indexing report.
 
-The page-indexing totals are not a clean ratio against GovWait's intended sitemap set because the report can include discovered noindex URLs, older states and different canonical timing. The deployed site has 635 intended indexable URLs; this release candidate has 638 after the September 1 data refresh produced a second permanent issue. Treat 533 as encouraging early coverage, not proof that 84% of the exact intended set is indexed.
+The page-indexing totals are not a clean ratio against GovWait's intended sitemap set because the report can include discovered noindex URLs, older states and different canonical timing. Production now has 638 intended indexable URLs after the September 1 data refresh produced a second permanent issue. Treat 533 as encouraging early coverage, not proof that 84% of the exact intended set is indexed.
 
 Demand signals already visible:
 
@@ -47,9 +47,9 @@ Reference pages:
 
 ## Phase 3 — original reports and demand-proven answers
 
-Status: owner approved on 2026-09-04; production deployment and receipts are in progress.
+Status: production-verified on 2026-09-04.
 
-This candidate:
+This release:
 
 - generates permanent dated report issues from every pair of consecutive stored observations;
 - publishes `/reports/canada/2026-08-26/` with 219 numeric changes, 237 unchanged comparable values, 3 newly available values and 5 newly unavailable values;
@@ -63,11 +63,11 @@ This candidate:
 
 Production acceptance:
 
-1. Owner approves deployment.
-2. GitHub Actions passes build and SEO audit.
-3. Cloudflare serves the exact new pages and RSS feed.
-4. IndexNow receipt is recorded as a notification only.
-5. Google URL Inspection requests are made for the two new pages after public verification; a request is not indexing proof.
+1. The owner approved deployment and two manual Google requests.
+2. Commit `d635236` passed GitHub Actions run `33934940206`, including the 2,107-page build and 638/638 SEO-sitemap audit.
+3. Cloudflare deployed the exact artifact to `dbdfa613.govwait.pages.dev`; the apex matched it byte-for-byte for the Canada issue, and all three new pages plus RSS, `llms.txt`, sitemap membership, canonicals and the path-preserving `www` redirect passed public checks.
+4. IndexNow accepted 646 URLs with HTTP 200: the 638 indexable URLs plus RSS, `llms.txt`, the sitemap index and five child sitemaps. This is a notification receipt only.
+5. Google Search Console added the Canada August 26 issue and the New Zealand 2021 Resident Visa guide to its priority crawl queue. The automatically generated New Zealand September 1 issue remains discoverable through internal links, the registered sitemap and IndexNow. A request is not indexing proof.
 
 ## Phase 4 — query-led editorial improvements
 

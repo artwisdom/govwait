@@ -8,7 +8,7 @@ in the repo versus what remains (→ roadmap)._
 
 | Recommendation | Status |
 |---|---|
-| Split sitemaps per template family + honest lastmod | ✅ DONE (`sitemap.xml` index → four child sitemaps; lastmod = source-backed effective/first-observed date, never build time) |
+| Split sitemaps per template family + honest lastmod | ✅ DONE (`sitemap.xml` index → five child sitemaps; lastmod = source-backed effective/first-observed or substantive editorial date, never build time) |
 | IndexNow → Bing (feeds ChatGPT Search) | ✅ IMPLEMENTED (`pipeline/indexnow.js` + refresh.yml step + public key file); Bing Webmaster Tools ownership is now verified. Receipt/reporting data may lag, so confirm future refresh submissions appear before calling the dashboard observation complete. |
 | Related-pages module on every leaf | ✅ DONE (same-country cross-service chips; sibling-country links in Compare section) |
 | Month-token title pattern with number | ✅ DONE ("Canada Visitor Visa Processing Time from India — August 2026: 31 days (Official)") |
@@ -18,9 +18,9 @@ in the repo versus what remains (→ roadmap)._
 | FAQ targeting "why is mine slower" + "after biometrics" | ✅ DONE (varied by category/status to avoid pure boilerplate) |
 | Methodology page + About + independence disclaimer | ✅ DONE (About, editorial policy, Research Desk, corrections/contact paths; footer disclaimer on every page) |
 | GSC + Bing WMT accounts, submit sitemaps | ✅ SUBMITTED 2026-08-23; Google reports **Sitemap index / Success**, Bing reports **Submitted / Processing**. Recheck discovered-URL counts and Bing's final state after 3–7 days — DEPLOYMENT_GUIDE step 6. |
-| Request-indexing quota on hubs only | ✅ OWNER-APPROVED REQUESTS SENT for three earlier priority gaps plus the NZ hub, NZ Visitor Visa and NZ explainer. Do not repeat; queue acceptance is not indexing proof. |
+| Request-indexing quota on selected priority pages only | ✅ OWNER-APPROVED REQUESTS SENT for three earlier priority gaps; the NZ hub, NZ Visitor Visa and NZ explainer; and Phase 3's Canada dated report plus NZ 2021 Resident Visa guide. Do not repeat; queue acceptance is not indexing proof. |
 | Downloadable CSV per dataset + Dataset Search submission | ❌ ROADMAP (R6) |
-| /reports (or /trends) monthly movers section | ⚠️ BASELINE LIVE (3 jurisdiction reports + hub); permanent weekly/monthly issues and RSS remain R3 |
+| /reports (or /trends) monthly movers section | ✅ PHASE 3 CORE LIVE (4 jurisdiction reports + hub, permanent Canada/NZ dated issues, complete change tables and RSS); external outreach remains separately gated |
 | History sparklines per route | ❌ ROADMAP (R4) — meaningful at ~6+ observations |
 | 25–30 pages/week rollout for new governments | ⚠️ POLICY — encoded in roadmap; do NOT bulk-launch NZ etc. |
 | Per-sitemap indexation tracking, prune at day 90 | ❌ ROADMAP (R8) |

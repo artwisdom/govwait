@@ -1,7 +1,7 @@
 # HANDOFF 01 — Project State & Technical Deep Dive
 
-_Everything a coding agent needs to operate GovWait. Current as of 2026-08-31;
-Norway UDI is production-verified._
+_Everything a coding agent needs to operate GovWait. Current as of 2026-09-04;
+Phase 3 permanent reports and demand-proven guide are production-verified._
 
 ## 1. The one-sentence architecture
 
@@ -14,7 +14,7 @@ pipeline/run.js ──▶ data/db.sqlite ──▶ data/exports/{latest,history,
                                             │
                     pipeline/build-api.js ──▶ site/public/api/v1/** (2,611 production files)
                                             │
-                    site/ (Astro 4) ───────▶ site/dist (2,104 production HTML pages)
+                    site/ (Astro 4) ───────▶ site/dist (2,107 production HTML pages)
                                             │
                     machine/mcp-server ─────▶ stdio MCP for AI agents (reads exports)
 ```
@@ -76,7 +76,7 @@ observations. UDI supplies its own page update date.
 node pipeline/run.js              # uses cache — safe offline
 node pipeline/run.js --refresh    # live fetch (polite; INZ makes 133 listed lookups, ~7 min total)
 node pipeline/build-api.js        # exports -> static API files
-cd site && npm ci && npm run build && npm run audit:seo  # production: 2,104 HTML; 635 indexable/sitemap
+cd site && npm ci && npm run build && npm run audit:seo  # production: 2,107 HTML; 638 indexable/sitemap
 cd machine/mcp-server && npm ci && npm run build && npm run smoke
 node machine/api-conformance.mjs  # after a site build
 ```
@@ -98,11 +98,13 @@ Local Node is 20.19.6 (Astro pinned to v4 for this reason; CI also pins Node 20)
   and `CLOUDFLARE_ACCOUNT_ID`. The encrypted
   `CLOUDFLARE_API_TOKEN` secret has Pages write permission only.
 - refresh-data cron ACTIVE and proven (first autonomous commit: `data: refresh
-  2026-08-22`). deploy-site green. ~60 min/month total of the 2,000 free.
+  2026-08-22`). The 2026-09-04 run failed closed when UDI's robots endpoint returned
+  HTTP 403 to the runner; it exported nothing and did not alter production. deploy-site
+  remains green. ~60 min/month total of the 2,000 free.
 - Cloudflare migration: production cutover, explicit allow-crawler policy, and
   GitHub-driven deployment are complete. GitHub Pages is disabled and the unused
-  original token is deleted. Norway commit `a9100bb` deployed in green run
-  `33462368754` to `74bd35d1.govwait.pages.dev`.
+  original token is deleted. Phase 3 commit `d635236` deployed in green run
+  `33934940206` to `dbdfa613.govwait.pages.dev`.
 - Search ownership: Google Search Console domain property `govwait.com` and Bing
   Webmaster Tools site `https://govwait.com/` are DNS-verified. Google's live test
   says the homepage can be indexed, and three representative pages passed the live
@@ -118,7 +120,7 @@ Local Node is 20.19.6 (Astro pinned to v4 for this reason; CI also pins Node 20)
   engines on 2026-08-23. Google reports **Sitemap index / Success**; Bing accepted it
   and reports **Submitted / Processing**.
 - The discoverability audit intentionally limits requested indexing
-  to 635 useful/data-backed URLs (71 hubs/guides/reports/reviewed CA service pages,
+  to 638 useful/data-backed URLs (74 hubs/guides/reports/reviewed CA service pages,
   443 numeric CA applicant pages, 77 UK services, 25 curated NZ visa pages, and
   19 Norway UDI service pages). The other 1,464 Canadian
   applicant pages stay live and crawlable with `noindex, follow` until a numeric
@@ -127,16 +129,19 @@ Local Node is 20.19.6 (Astro pinned to v4 for this reason; CI also pins Node 20)
   See `docs/DISCOVERABILITY_AUDIT.md` for crawler, sitemap, canonical, CI, and
   point-in-time Cloudflare evidence.
 - Google and Bing previously accepted the root sitemap index. It advertises five
-  child sitemaps; Norway production run `33462368754` submitted 642 URLs
-  (635 indexable pages plus `llms.txt` and six sitemap documents) to IndexNow and
+  child sitemaps; Phase 3 production run `33934940206` submitted 646 URLs
+  (638 indexable pages plus RSS, `llms.txt`, the sitemap index and five child
+  sitemaps) to IndexNow and
   received HTTP 200. These are discovery and
   submission receipts, not indexing guarantees.
 - After explicit owner confirmation, Google accepted priority-crawl requests
   for `/uk/standard-visitor/`,
   `/guides/canada-visitor-visa-by-country/`, and
   `/canada/study-permit/from-pakistan/`, plus `/new-zealand/`,
-  `/new-zealand/visitor-visa/`, and
-  `/guides/how-new-zealand-visa-processing-times-work/`. Do not submit those URLs
+  `/new-zealand/visitor-visa/`,
+  `/guides/how-new-zealand-visa-processing-times-work/`,
+  `/reports/canada/2026-08-26/`, and
+  `/guides/new-zealand-2021-resident-visa-processing-time/`. Do not submit those URLs
   again merely to try to change priority.
 
 ### Phase 2 production proof
@@ -168,6 +173,24 @@ Local Node is 20.19.6 (Astro pinned to v4 for this reason; CI also pins Node 20)
   sitemaps, crawler files, canonicals/artifact parity, and the `www` redirect passed
   public checks. IndexNow accepted 642 URLs with HTTP 200.
 
+### Phase 3 growth production proof
+
+- Adds permanent dated report issues derived from every meaningful pair of
+  consecutive observations, while keeping unchanged and unavailable states separate.
+  Production contains Canada 2026-08-26 (219 numeric changes) and New Zealand
+  2026-09-01 (102 numeric changes), plus a valid change-report RSS feed.
+- Adds a source-backed New Zealand 2021 Resident Visa guide that answers proven
+  Search Console demand without inventing a current wait for a route INZ says closed
+  on 2022-07-31. INZ's three cited pages were rechecked on 2026-09-04.
+- Acceptance: 12 parser tests; 25 validation checks; 2,107 HTML / 638 indexable /
+  638 sitemap URLs; 2,611-file API conformance; MCP build/smoke; valid RSS/sitemaps;
+  638-URL IndexNow dry run; diff and public-edge checks.
+- Commit `d635236` passed run `33934940206` and deployed to
+  `dbdfa613.govwait.pages.dev`. The apex matched the artifact; all three new pages,
+  RSS, `llms.txt`, sitemaps, canonicals and the `www` redirect passed public checks.
+  IndexNow accepted 646 URLs with HTTP 200. Google accepted the two owner-approved
+  URLs into its priority crawl queue; this is not indexing proof.
+
 ## 6. Traps and constraints (learned the hard way — do not relearn)
 
 1. **WAF-blocked governments** (403 to honest bots; NEVER UA-spoof): travel.state.gov,
@@ -190,7 +213,7 @@ Local Node is 20.19.6 (Astro pinned to v4 for this reason; CI also pins Node 20)
    currently guaranteed because lastmod never reads the clock.
 7. **db.sqlite is committed**; a CI refresh race means `git pull --rebase` before
    pushing local commits (the robot may have committed since your last fetch).
-8. **2,104 production pages exist at once** is a known SEO risk profile (see
+8. **2,107 production pages exist at once** is a known SEO risk profile (see
    HANDOFF_02 §SEO);
    the mitigation is per-page information gain (deltas/ranks/history — partially
    shipped) and NOT bulk-launching future governments (25–30 pages/week rollout).
@@ -212,6 +235,9 @@ Local Node is 20.19.6 (Astro pinned to v4 for this reason; CI also pins Node 20)
 - The production Norway phase adds a 19-route UDI collector plus 22 indexable pages,
   source-specific guide/report copy, and complete machine/discovery integration;
   and passed the owner deployment and public-verification gates.
+- Phase 3 adds permanent complete-change issues, report RSS, an official-source
+  closed-route guide, sitewide feed discovery, honest editorial `lastmod`, and a
+  blocking feed/link SEO audit. The outreach portion remains separately gated.
 
 ## 8. QA ritual before any push that touches pipeline or site
 
