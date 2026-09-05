@@ -4,6 +4,7 @@ import EditorialByline from '../../components/EditorialByline.astro';
 import { stats, fmtDate } from '../../lib/data.js';
 
 const planningGuides = [
+  { slug: 'new-zealand-2021-resident-visa-processing-time', title: 'New Zealand 2021 Resident Visa processing time', blurb: 'Why the closed one-off route has no honest current universal wait figure, the dated official totals and the correct case-status path.' },
   { slug: 'canada-study-permit-from-india', title: 'Canada study permit processing time from India', blurb: 'The current official figure, major-country comparison and a clean separation between preparation, processing and post-decision time.' },
   { slug: 'canada-study-permit-from-nigeria', title: 'Canada study permit processing time from Nigeria', blurb: 'The Nigeria route, regional comparisons, missing-data rules and append-only history.' },
   { slug: 'canada-visitor-visa-from-india', title: 'Canada visitor visa processing time from India', blurb: 'What IRCC’s clock includes, why “after biometrics” is a different measure and how India compares.' },
@@ -40,6 +41,6 @@ const methodGuides = [
   <ul class="grid">
     {methodGuides.map(g => (<li><a class="t" href={`/guides/${g.slug}/`}>{g.title}</a><p class="small muted" style="margin:.4em 0 0">{g.blurb}</p></li>))}
   </ul>
-  <div class="callout"><strong>Looking for movement?</strong> The <a href="/reports/">processing-time reports</a> establish the current baseline and will surface verified official changes after later observations differ.</div>
+  <div class="callout"><strong>Looking for movement?</strong> The <a href="/reports/">processing-time reports</a> now include permanent dated issues whenever consecutive official values differ, while keeping unchanged and unavailable states separate.</div>
   <p class="small muted">Dataset generated {fmtDate(stats.generated_at)} · {stats.entities.toLocaleString()} routes tracked.</p>
 </Base>

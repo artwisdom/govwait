@@ -17,7 +17,7 @@ const checked = [outside.effective_date, inside.effective_date].sort().at(-1);
   description={`UKVI currently publishes ${outside.value_raw} for Standard Visitor applications outside the UK. See clock boundaries, the separate inside-UK table and planning limits.`}
   h1="UK Standard Visitor visa processing time"
   lede={`The current UKVI table lists ${outside.value_raw} for a Standard Visitor application made outside the UK. It separately lists ${inside.value_raw} for the inside-UK context, so the two should not be quoted as one universal wait.`}
-  modified={newestDate('2026-08-23', checked)}
+  modified={newestDate('2026-09-04', checked)}
   checked={checked}
   about={['UK Standard Visitor visa', 'UK visitor visa processing time', 'UKVI']}
   citations={[outsideGuide, insideGuide]}
@@ -44,6 +44,6 @@ const checked = [outside.effective_date, inside.effective_date].sort().at(-1);
   <div class="callout warn"><strong>Do not turn three weeks into a flight date.</strong> The service standard is a planning reference, not an individual guarantee.</div>
 
   <h2>Monitor the source date</h2>
-  <p>GovWait stores the UKVI update date and adds history only when the official value changes. The <a href="/reports/uk-visa-processing-time-changes/">UK baseline and changes report</a> shows the current distribution across all categories.</p>
+  <p>GovWait stores each distinct UKVI update date in append-only history, whether the later published value changes or stays the same. The <a href="/reports/uk-visa-processing-time-changes/">UK baseline and changes report</a> shows the current distribution across all categories.</p>
   <div class="prov">Official sources: <a href={outsideGuide} rel="noopener">UKVI applications outside the UK</a> and <a href={insideGuide} rel="noopener">inside the UK</a> · latest source date represented {fmtDate(checked)}.</div>
 </EditorialFrame>

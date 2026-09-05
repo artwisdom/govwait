@@ -1,0 +1,61 @@
+---
+import EditorialFrame from '../../components/EditorialFrame.astro';
+
+const visaPage = 'https://www.immigration.govt.nz/visas/2021-resident-visa/';
+const programmeUpdate = 'https://www.immigration.govt.nz/about-us/news-centre/2021-resident-visa/';
+const statusPage = 'https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/check-your-application-progress/';
+---
+<EditorialFrame
+  sectionName="Guides"
+  sectionPath="/guides/"
+  slug="new-zealand-2021-resident-visa-processing-time"
+  title="NZ 2021 Resident Visa processing time: closed-route status"
+  description="The NZ 2021 Resident Visa closed in July 2022 and has no current universal wait figure in INZ’s processing-time tool. See official totals and how to check a case."
+  h1="New Zealand 2021 Resident Visa processing time"
+  lede="There is no honest current processing-time number to quote for a new 2021 Resident Visa application: Immigration New Zealand says the one-off route closed to new applicants on July 31, 2022. People with an existing application should use their INZ account for case-specific progress rather than substitute the wait time for a different resident visa."
+  published="2026-09-04"
+  modified="2026-09-04"
+  checked="2026-09-04"
+  about={['New Zealand 2021 Resident Visa', '2021 Resident Visa processing time', 'Immigration New Zealand']}
+  citations={[visaPage, programmeUpdate, statusPage]}
+  adPrefix="guide-nz-2021-rv"
+>
+  <div class="stats">
+    <div><div class="n">Closed</div><div class="l">new applications</div></div>
+    <div><div class="n">July 31, 2022</div><div class="l">application deadline</div></div>
+    <div><div class="n">106,349</div><div class="l">applications received, reported June 2024</div></div>
+    <div><div class="n">103,961</div><div class="l">applications approved, reported June 2024</div></div>
+  </div>
+
+  <div class="callout warn"><strong>No current GovWait estimate.</strong> INZ’s current processing-time tool does not provide a 50% or 80% figure for this closed route. GovWait does not copy the timing of another resident category or turn old programme totals into a personal forecast.</div>
+
+  <h2>What the official record says</h2>
+  <p>INZ describes the 2021 Resident Visa as a one-off pathway created for eligible migrants affected by COVID-19 disruption. Applications opened on December 1, 2021 and closed on July 31, 2022. The route was tied to historical eligibility and presence requirements; it is not a visa that a new applicant can choose today.</p>
+  <p>In an update published June 13, 2024, INZ reported receiving <strong>106,349 applications covering 217,586 people</strong>. It reported <strong>103,961 applications approved, covering 212,649 people</strong>. Those are dated programme totals, not a present-day queue estimate.</p>
+
+  <h2>Why the totals do not reveal your remaining wait</h2>
+  <p>Subtracting approvals from applications does not produce a reliable “applications still pending” number. The public totals on that page do not split every non-approved application into pending, declined, withdrawn or otherwise closed outcomes. They also do not provide submission dates, complexity or verification status for an individual file.</p>
+  <p>INZ says decision time depends on the visa, the applicant’s circumstances and the information supplied. It may need more information or third-party verification. A programme-wide total therefore cannot be converted into a date for one application.</p>
+
+  <h2>How an existing applicant can check progress</h2>
+  <ol>
+    <li><strong>Use the online account connected to the application.</strong> INZ says the account shows whether it needs more information and provides available progress information.</li>
+    <li><strong>Watch the contact details used in the application.</strong> INZ may phone, email or post a notification in the account if it needs supporting information.</li>
+    <li><strong>Use INZ’s official contact route when appropriate.</strong> Its status guidance says an applicant can contact INZ if an application is taking longer than the normal timeframe for that visa.</li>
+  </ol>
+  <p>GovWait cannot access an application, identify its queue position or predict its decision. Do not post application numbers, passport details or other personal information here.</p>
+
+  <h2>Do not substitute another resident-visa time</h2>
+  <p>The current <a href="/new-zealand/permanent-resident-visa/">Permanent Resident Visa</a>, Skilled Migrant Category and other residence routes have different eligibility rules and processing cohorts. Their published 50% and 80% figures do not describe an old 2021 Resident Visa file.</p>
+  <p>For current routes, read <a href="/guides/how-new-zealand-visa-processing-times-work/">how INZ processing times work</a> and use the <a href="/new-zealand/">New Zealand processing-time index</a>. GovWait keeps working days, source dates and percentile meanings intact rather than converting them into a guessed calendar deadline.</p>
+
+  <h2>Common questions</h2>
+  <h3>Can I apply for the 2021 Resident Visa now?</h3>
+  <p>No. INZ’s current visa page marks the route closed to new applicants on July 31, 2022.</p>
+  <h3>What is the current average processing time?</h3>
+  <p>INZ’s current processing-time tool does not provide a current 50% or 80% figure for this route. An old forum timeline or another visa category is not a valid replacement.</p>
+  <h3>Do the June 2024 totals show how many cases are pending?</h3>
+  <p>No. The difference between applications received and approved is not labeled as a pending backlog on the official update, so GovWait does not describe it that way.</p>
+
+  <div class="prov">Official sources: <a href={visaPage} rel="noopener">INZ 2021 Resident Visa page</a> · <a href={programmeUpdate} rel="noopener">INZ programme update dated June 13, 2024</a> · <a href={statusPage} rel="noopener">INZ application-status guidance</a> · checked September 4, 2026 · not immigration or legal advice.</div>
+</EditorialFrame>

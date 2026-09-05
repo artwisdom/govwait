@@ -1,0 +1,117 @@
+---
+import EditorialFrame from '../../../components/EditorialFrame.astro';
+import { fmtDate } from '../../../lib/data.js';
+import { reportIssues } from '../../../lib/reports.js';
+
+export function getStaticPaths() {
+  return reportIssues.map(report => ({
+    params: { country: report.jur.slug, issue: report.slug },
+    props: { reportKey: report.key },
+  }));
+}
+
+const { reportKey } = Astro.props;
+const report = reportIssues.find(item => item.key === reportKey);
+if (!report) throw new Error(`Unknown report issue: ${reportKey}`);
+
+const previousLabel = report.previousDates.length === 1
+  ? fmtDate(report.previousDates[0])
+  : `${fmtDate(report.previousDates[0])} through ${fmtDate(report.previousDates.at(-1))}`;
+const pct = value => `${Number.isInteger(value) ? value : value.toFixed(1)}%`;
+const statusLabel = status => status === 'ok' ? 'published' : status === 'unavailable' ? 'unavailable' : 'insufficient data';
+const evergreenReportPaths = {
+  CA: '/reports/canada-processing-time-changes/',
+  GB: '/reports/uk-visa-processing-time-changes/',
+  NZ: '/reports/new-zealand-visa-processing-time-changes/',
+  NO: '/reports/norway-processing-time-changes/',
+};
+const title = `${report.jur.shortName} processing-time changes — ${fmtDate(report.date)}`;
+const description = `${report.jur.shortAgency} processing-time update: ${report.changes.length} published values changed between ${previousLabel} and ${fmtDate(report.date)}, with every route linked to its source history.`;
+---
+<EditorialFrame
+  sectionName="Reports"
+  sectionPath="/reports/"
+  slug={`${report.jur.slug}/${report.slug}`}
+  title={title}
+  description={description}
+  h1={`${report.jur.shortName} processing-time changes: ${fmtDate(report.date)}`}
+  lede={`GovWait compared ${report.comparisons.length.toLocaleString()} ${report.jur.shortAgency} records from ${previousLabel} with the official values dated ${fmtDate(report.date)}. Of ${report.comparable.length.toLocaleString()} routes with a published value at both checks, ${report.changes.length.toLocaleString()} changed and ${report.unchanged.length.toLocaleString()} stayed at the same published value.`}
+  published={report.published}
+  modified={report.published}
+  checked={report.date}
+  about={[`${report.jur.name} processing times`, `${report.jur.shortAgency} processing-time changes`, 'government processing-time history']}
+  citations={report.sourceUrls}
+  adPrefix={`report-${report.jurisdiction.toLowerCase()}-issue`}
+>
+  <div class="stats">
+    <div><div class="n">{report.changes.length.toLocaleString()}</div><div class="l">published values changed</div></div>
+    <div><div class="n">{report.longer.length.toLocaleString()}</div><div class="l">became longer</div></div>
+    <div><div class="n">{report.shorter.length.toLocaleString()}</div><div class="l">became shorter</div></div>
+    <div><div class="n">{report.unchanged.length.toLocaleString()}</div><div class="l">same published value</div></div>
+  </div>
+
+  <div class="callout good">
+    <span class="report-status">Permanent change issue</span>
+    <p>This URL preserves the comparison dated {fmtDate(report.date)}. Later refreshes create new issues instead of rewriting this one. Subscribe to the <a href="/reports/feed.xml">GovWait reports RSS feed</a> for newly detected changes.</p>
+  </div>
+
+  <h2>Largest increases</h2>
+  <p>“Longer” means the agency’s newer published value increased; it does not mean every individual application slowed by that amount.</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Route</th><th>{previousLabel}</th><th>{fmtDate(report.date)}</th><th>Change</th></tr></thead>
+    <tbody>{report.longer.slice(0, 15).map(item => (
+      <tr>
+        <td>{item.path ? <a href={item.path}>{item.label}</a> : item.label}</td>
+        <td>{item.previousRaw}</td><td>{item.currentRaw}</td><td>Longer {pct(item.percentage)}</td>
+      </tr>
+    ))}</tbody>
+  </table></div>
+
+  <h2>Largest decreases</h2>
+  <p>“Shorter” means the newer official value fell. It remains a planning statistic, not a deadline or a promise for a particular case.</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Route</th><th>{previousLabel}</th><th>{fmtDate(report.date)}</th><th>Change</th></tr></thead>
+    <tbody>{report.shorter.slice(0, 15).map(item => (
+      <tr>
+        <td>{item.path ? <a href={item.path}>{item.label}</a> : item.label}</td>
+        <td>{item.previousRaw}</td><td>{item.currentRaw}</td><td>Shorter {pct(item.percentage)}</td>
+      </tr>
+    ))}</tbody>
+  </table></div>
+
+  <h2>Where changes were concentrated</h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Service</th><th>Changed routes</th><th>Longer</th><th>Shorter</th></tr></thead>
+    <tbody>{report.servicesChanged.map(service => (
+      <tr><td>{service.serviceName}</td><td class="num">{service.changed}</td><td class="num">{service.longer}</td><td class="num">{service.shorter}</td></tr>
+    ))}</tbody>
+  </table></div>
+
+  {(report.becameAvailable.length > 0 || report.becameUnavailable.length > 0) && <>
+    <h2>Availability changes</h2>
+    <p>A missing official value is a separate state, not a zero-day wait. In this check, {report.becameAvailable.length} {report.becameAvailable.length === 1 ? 'route gained' : 'routes gained'} a published value and {report.becameUnavailable.length} {report.becameUnavailable.length === 1 ? 'route stopped' : 'routes stopped'} showing one.</p>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Route</th><th>Previous state</th><th>Current state</th></tr></thead>
+      <tbody>{[...report.becameAvailable, ...report.becameUnavailable].map(item => (
+        <tr><td>{item.path ? <a href={item.path}>{item.label}</a> : item.label}</td><td>{item.previousRaw || statusLabel(item.previousStatus)}</td><td>{item.currentRaw || statusLabel(item.currentStatus)}</td></tr>
+      ))}</tbody>
+    </table></div>
+  </>}
+
+  <h2>Complete list of changed published values</h2>
+  <p>The table below contains all {report.changes.length.toLocaleString()} numeric changes in this issue, not only the largest movements.</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Route</th><th>Previous</th><th>Current</th><th>Direction</th></tr></thead>
+    <tbody>{report.changes.map(item => (
+      <tr>
+        <td>{item.path ? <a href={item.path}>{item.label}</a> : item.label}</td>
+        <td>{item.previousRaw}</td><td>{item.currentRaw}</td><td>{item.direction === 'longer' ? 'Longer' : 'Shorter'} {pct(item.percentage)}</td>
+      </tr>
+    ))}</tbody>
+  </table></div>
+
+  <h2>Method and limits</h2>
+  <p>GovWait compares consecutive rows in its append-only history. A numeric change is counted only when both official observations contain a published duration and the normalized values differ. Unchanged values and unavailable states are counted separately. Percentages are calculated from normalized days, while the tables retain the agency’s original day-or-week wording.</p>
+  <p>This analysis describes changes in published planning figures, not case outcomes, approval odds or a guarantee for an individual application. Read the <a href={evergreenReportPaths[report.jurisdiction]}>current {report.jur.shortName} comparison and methodology</a> or the <a href="/about/">full GovWait methodology</a>.</p>
+  <div class="prov">Official sources: {report.sourceUrls.map((url, index) => <>{index ? ' · ' : ''}<a href={url} rel="noopener">{report.jur.shortAgency} dataset {index + 1}</a></>)} · compared {previousLabel} with {fmtDate(report.date)} · not immigration or legal advice.</div>
+</EditorialFrame>

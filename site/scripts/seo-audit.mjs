@@ -94,6 +94,7 @@ for (const file of htmlFiles) {
   const title = capture(html, /<title>([\s\S]*?)<\/title>/i);
   const description = capture(html, /<meta name="description" content="([^"]*)"/i);
   const canonical = capture(html, /<link rel="canonical" href="([^"]*)"/i);
+  const reportFeed = capture(html, /<link rel="alternate" href="([^"]*)" type="application\/rss\+xml"/i);
   const robots = capture(html, /<meta name="robots" content="([^"]*)"/i);
   const h1Count = (html.match(/<h1\b/gi) || []).length;
   const jsonLd = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/gi)];
@@ -101,6 +102,7 @@ for (const file of htmlFiles) {
   if (!title) errors.push(`${url}: missing title`);
   if (!description) errors.push(`${url}: missing meta description`);
   if (!canonical) errors.push(`${url}: missing canonical`);
+  if (reportFeed !== '/reports/feed.xml') errors.push(`${url}: missing report-feed autodiscovery`);
   if (!robots) errors.push(`${url}: missing robots directive`);
   if (h1Count !== 1) errors.push(`${url}: expected one H1, found ${h1Count}`);
   if (title.length > 180) errors.push(`${url}: runaway title length ${title.length}`);
@@ -173,8 +175,18 @@ for (const agent of ['Googlebot', 'Bingbot', 'OAI-SearchBot', 'Claude-SearchBot'
 }
 
 const llmsText = readFileSync(path.join(DIST, 'llms.txt'), 'utf8');
-for (const required of [`Canonical site: ${canonicalOrigin}/`, `${canonicalOrigin}/sitemap.xml`, `${canonicalOrigin}/api/v1/index.json`]) {
+for (const required of [`Canonical site: ${canonicalOrigin}/`, `${canonicalOrigin}/sitemap.xml`, `${canonicalOrigin}/api/v1/index.json`, `${canonicalOrigin}/reports/feed.xml`]) {
   if (!llmsText.includes(required)) errors.push(`llms.txt: missing ${required}`);
+}
+
+const reportFeedText = readFileSync(path.join(DIST, 'reports', 'feed.xml'), 'utf8');
+for (const required of ['<rss version="2.0"', '<atom:link', `${canonicalOrigin}/reports/feed.xml`, '<item>']) {
+  if (!reportFeedText.includes(required)) errors.push(`reports/feed.xml: missing ${required}`);
+}
+for (const match of reportFeedText.matchAll(/<item>[\s\S]*?<link>([^<]+)<\/link>[\s\S]*?<\/item>/g)) {
+  const itemUrl = new URL(match[1]);
+  if (itemUrl.origin !== canonicalOrigin) errors.push(`reports/feed.xml: off-site item ${match[1]}`);
+  else if (!localTargetExists(itemUrl.pathname)) errors.push(`reports/feed.xml: missing item target ${itemUrl.pathname}`);
 }
 
 console.log(`[seo-audit] ${pages.length} HTML pages; ${indexable.length} indexable; ${sitemapUrls.length} sitemap URLs`);

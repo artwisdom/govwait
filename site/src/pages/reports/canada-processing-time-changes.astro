@@ -2,6 +2,7 @@
 import EditorialFrame from '../../components/EditorialFrame.astro';
 import { records, services, dataLastmod, fmtDate } from '../../lib/data.js';
 import { newestDate } from '../../lib/editorial.js';
+import { latestReportIssue } from '../../lib/reports.js';
 
 const source = records.find(record => record.jurisdiction === 'CA')?.source_url;
 const countryServices = [...services.CA.values()].filter(service => service.hasApplicantPages);
@@ -15,7 +16,8 @@ const rows = countryServices.map(service => {
     range: ok.length ? ok.at(-1).value_days - ok[0].value_days : 0,
   };
 }).sort((a, b) => b.range - a.range);
-const changes = records.filter(record => record.jurisdiction === 'CA' && record.delta && record.delta.dir !== 'flat');
+const changes = records.filter(record => record.jurisdiction === 'CA' && record.delta && record.delta.dir !== 'flat')
+  .sort((a, b) => b.delta.pct - a.delta.pct || a.service_name.localeCompare(b.service_name));
 const tracked = records.filter(record => record.jurisdiction === 'CA' && record.applicant_country);
 const published = tracked.filter(record => record.status === 'ok');
 const maxRange = Math.max(...rows.map(row => row.range), 1);
@@ -26,16 +28,17 @@ const changePath = record => record.applicantSlug
 const changeLabel = record => record.applicant_country_name
   ? `${services.CA.get(record.serviceSlug).name} from ${record.applicant_country_name}`
   : services.CA.get(record.serviceSlug).name;
+const latestIssue = latestReportIssue('CA');
 ---
 <EditorialFrame
   sectionName="Reports"
   sectionPath="/reports/"
   slug="canada-processing-time-changes"
-  title={`Canada processing-time baseline and changes — ${fmtDate(checked)}`}
+  title={`Canada processing-time changes and comparison — ${fmtDate(checked)}`}
   description={`Current IRCC country coverage, medians and ranges across ${countryServices.length} services, plus verified changes when later observations differ.`}
-  h1="Canada processing-time baseline and changes"
-  lede={`IRCC currently publishes ${published.length.toLocaleString()} usable country-level values across ${countryServices.length} tracked services. This report establishes the August 2026 baseline and will surface verified movement after a later official value differs.`}
-  modified={newestDate('2026-08-23', dataLastmod)}
+  h1="Canada processing-time changes and comparison"
+  lede={`IRCC currently publishes ${published.length.toLocaleString()} usable country-level values across ${countryServices.length} tracked services. GovWait now has consecutive official observations and separates verified movement, unchanged values and unavailable states.`}
+  modified={newestDate('2026-09-04', dataLastmod)}
   checked={checked}
   about={['Canada immigration processing times', 'IRCC', 'visa processing-time history']}
   citations={[source]}
@@ -47,6 +50,8 @@ const changeLabel = record => record.applicant_country_name
     <div><div class="n">{countryServices.length}</div><div class="l">country-level services</div></div>
     <div><div class="n">{changes.length}</div><div class="l">changes since prior observation</div></div>
   </div>
+
+  {latestIssue && <div class="callout good"><span class="report-status">{latestIssue.changes.length} verified value changes</span><p>The official values dated {fmtDate(latestIssue.date)} include {latestIssue.longer.length} increases and {latestIssue.shorter.length} decreases. <a href={latestIssue.path}>Open the permanent dated issue</a> for the complete list, availability changes and comparison method.</p></div>}
 
   {changes.length === 0 ? (
     <div class="callout good"><span class="report-status">Baseline only</span><p>No Canadian route has two different stored values yet. That means “no comparison available,” not “all values were unchanged.” A future verified change will appear here without deleting this baseline.</p></div>

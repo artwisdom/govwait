@@ -90,6 +90,7 @@ const DIRECT_SITE_PATHS = new Map([
   ['site/src/pages/about.astro', ['/about/']],
   ['site/src/pages/api-docs.astro', ['/api-docs/']],
   ['site/src/pages/llms.txt.js', ['/llms.txt']],
+  ['site/src/pages/reports/feed.xml.js', ['/reports/feed.xml']],
   ['site/src/pages/sitemap.xml.js', ['/sitemap.xml']],
   ['site/src/pages/sitemap-hubs.xml.js', ['/sitemap-hubs.xml']],
   ['site/src/pages/sitemap-ca.xml.js', ['/sitemap-ca.xml']],
@@ -167,7 +168,10 @@ if (!previous) {
   }
 
   if (changed.size || changedSourceIds.size) {
-    for (const p of ['/', '/about/', '/api-docs/', '/guides/']) urls.add(p);
+    for (const p of ['/', '/about/', '/api-docs/', '/guides/', '/reports/', '/reports/feed.xml']) urls.add(p);
+    for (const { path: publicPath } of hubUrls()) {
+      if (publicPath.startsWith('/reports/')) urls.add(publicPath);
+    }
   }
   for (const id of changed) {
     const oldRecord = oldById.get(id);

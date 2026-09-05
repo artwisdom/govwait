@@ -23,6 +23,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
 <link rel="canonical" href={canonical} />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 <link rel="sitemap" href="/sitemap.xml" type="application/xml" />
+<link rel="alternate" href="/reports/feed.xml" type="application/rss+xml" title="GovWait processing-time change reports" />
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fbfaf7" />
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0e1219" />
 <meta name="robots" content={noindex
@@ -164,7 +165,7 @@ pre.code{background:var(--panel);border:1px solid var(--line);border-radius:10px
     </div>
     <div>
       <h4>Machine access</h4>
-      <ul><li><a href="/api-docs/">JSON API (free)</a></li><li><a href="/api/v1/index.json">API index</a></li><li><a href="/api/v1/openapi.yaml">OpenAPI spec</a></li><li><a href="/llms.txt">llms.txt</a></li></ul>
+      <ul><li><a href="/api-docs/">JSON API (free)</a></li><li><a href="/api/v1/index.json">API index</a></li><li><a href="/api/v1/openapi.yaml">OpenAPI spec</a></li><li><a href="/reports/feed.xml">Change-report RSS</a></li><li><a href="/llms.txt">llms.txt</a></li></ul>
     </div>
     <div>
       <h4>About &amp; policies</h4>
