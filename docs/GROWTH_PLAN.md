@@ -1,6 +1,6 @@
 # GovWait growth plan
 
-Last reviewed: 2026-09-04 (America/New_York)
+Last reviewed: 2026-09-06 (America/New_York)
 
 This plan separates technical discovery, crawling, indexing, traffic, audience retention, ad approval and revenue. None proves the next. Growth work must preserve GovWait's official-source boundaries, append-only history, polite collection rules, honest dates and no-hype language.
 
@@ -8,21 +8,37 @@ This plan separates technical discovery, crawling, indexing, traffic, audience r
 
 ### Google Search Console
 
-The first Search Console window (August 21-31, 2026) showed:
+The latest available 28-day Search Console window (August 21-September 4, 2026,
+read on September 6) showed:
 
-- 12 clicks from 3,854 impressions;
+- 15 clicks from 5.95K displayed impressions;
 - 0.3% click-through rate;
-- average position 44.3;
-- 476 query rows and 283 pages with impressions; and
-- 533 URLs reported indexed and 1,063 not indexed in the page-indexing report.
+- average position 40.9; and
+- the strongest query-led opportunity remains New Zealand.
 
-The page-indexing totals are not a clean ratio against GovWait's intended sitemap set because the report can include discovered noindex URLs, older states and different canonical timing. Production now has 638 intended indexable URLs after the September 1 data refresh produced a second permanent issue. Treat 533 as encouraging early coverage, not proof that 84% of the exact intended set is indexed.
+The latest page-indexing totals were not re-read in this review. The earlier report
+showed 533 URLs indexed and 1,063 not indexed, but those totals are not a clean
+ratio against GovWait's intended sitemap set because the report can include
+discovered noindex URLs, older states and different canonical timing. Production
+still has 638 intended indexable URLs until Phase 4 is deployed. Treat the earlier
+533 as encouraging early coverage, not proof that a fixed percentage of the exact
+intended set is indexed.
 
 Demand signals already visible:
 
-- New Zealand 2021 Resident Visa and Critical Purpose searches are the largest query cluster, mostly in positions 28-54.
-- Several current New Zealand visa pages have 270-309 impressions but average positions in the 36-71 range.
-- Near-win Canadian pages include Private Refugee from Pakistan (93 impressions, position 4.3), Visitor Visa from Colombia (35, position 6.5), Visitor Visa from Nepal (30, position 5.2), Study Permit from Ghana (23, position 8.9) and Visitor Visa from Egypt (20, position 4.7).
+- Five Critical Purpose search variants total 429 impressions, mostly in average
+  positions 39-52; no current GovWait page answered that closed-route intent.
+- Current New Zealand service pages with substantial impressions include Skilled
+  Migrant Category (558, position 34.0), Specific Purpose Work Visa (548, position
+  53.5), Work to Residence (526, position 70.5), Visitor Visa (518, position 50.5)
+  and Permanent Resident Visa (500, position 58.0).
+- The Dependent Child Resident page has 89 impressions at position 31.6, while
+  related dependent-child queries appear around position 32.
+- Near-win Canadian pages include Private Refugee from Pakistan (93 impressions,
+  position 4.3), Visitor Visa from Colombia (62, position 6.9), Visitor Visa from
+  Nepal (30, position 5.2), Study Permit from Ghana (26, position 8.8), and Visitor
+  Visa from Qatar (75, position 10.7). These are the next editorial cohort, not a
+  reason to change source facts or create duplicate URLs.
 
 ### Google Analytics 4
 
@@ -71,13 +87,32 @@ Production acceptance:
 
 ## Phase 4 — query-led editorial improvements
 
-Start immediately after Phase 3 is live; publishing can continue weekly while results accumulate.
+Status: first four-page cohort validated and owner-approved on 2026-09-06;
+production and discovery receipts are pending.
 
-1. Publish 2-4 substantive pages per week only where Search Console shows real demand and an official source can answer it.
-2. Next candidate: a Critical Purpose Visitor Visa closed-route guide, after a fresh official-source review.
-3. Deepen the high-impression New Zealand pages with route-specific definitions, related current routes and clearer intent matching.
-4. Improve titles and opening answers on near-win Canadian pages without changing their URLs or source meaning.
-5. Recheck each cohort after 28 days. Measurement takes time even when implementation does not; keep shipping bounded cohorts instead of waiting idle.
+The candidate:
+
+1. Adds a Critical Purpose Visitor Visa guide based on fresh INZ phase-out,
+   archived-route, current case-status and Specific Purpose sources. It publishes
+   no invented current wait for the closed COVID-era route.
+2. Deepens the Skilled Migrant Category, Specific Purpose Work Visa and Dependent
+   Child Resident Visa pages with unique route boundaries, official links and
+   tighter titles/descriptions while preserving the current source-derived figures.
+3. Adds the guide to the home page, guide hub, sitemap and `llms.txt`, and gives
+   only the four substantively changed URLs an honest September 6 `lastmod`.
+4. Adds blocking audit assertions for the cohort's sitemap dates, source-backed
+   sections and cross-link between the closed historical route and current
+   Specific Purpose route.
+
+Local acceptance: 2,108 HTML pages, 639 indexable pages, 639 matching sitemap
+URLs, 2,611 API files, parser tests 12/12, clean static build, SEO and XML checks,
+API conformance, MCP smoke, 639-URL IndexNow dry run, and desktop/mobile rendered
+checks. These are local build receipts only.
+
+After an owner-approved production release and one priority-crawl request for the
+new guide, improve the Canadian near-win cohort without changing URLs or source
+meaning. Recheck each cohort after 28 days. Measurement takes time even when
+implementation does not; keep shipping bounded cohorts instead of waiting idle.
 
 Gate: no mass page generation. Google explicitly recommends people-first, original content and warns against automation mainly intended to attract search traffic.
 

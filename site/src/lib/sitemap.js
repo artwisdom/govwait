@@ -3,6 +3,7 @@
 // real substantive publish/modified date. Neither uses the build clock.
 import { records, services, dataLastmod, JURISDICTIONS } from './data.js';
 import { reportIssues } from './reports.js';
+import { serviceEditorialLastmod } from './service-editorial.js';
 
 export function urlset(site, urls) {
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(u =>
@@ -13,13 +14,14 @@ export function hubUrls() {
   const phaseOnePublished = '2026-08-23';
   const norwayPublished = '2026-08-30';
   const growthPhasePublished = '2026-09-04';
+  const phaseFourPublished = '2026-09-06';
   const urls = [
-    { path: '/', lastmod: growthPhasePublished },
+    { path: '/', lastmod: phaseFourPublished },
     { path: '/about/', lastmod: dataLastmod },
     { path: '/about/editorial-policy/', lastmod: phaseOnePublished },
     { path: '/about/research-desk/', lastmod: phaseOnePublished },
     { path: '/api-docs/', lastmod: dataLastmod },
-    { path: '/guides/', lastmod: growthPhasePublished },
+    { path: '/guides/', lastmod: phaseFourPublished },
     { path: '/guides/how-canada-processing-times-work/', lastmod: dataLastmod },
     { path: '/guides/canada-visitor-visa-by-country/', lastmod: dataLastmod },
     { path: '/guides/canada-study-permit-from-india/', lastmod: growthPhasePublished },
@@ -32,6 +34,7 @@ export function hubUrls() {
     { path: '/guides/uk-standard-visitor-processing-time/', lastmod: growthPhasePublished },
     { path: '/guides/how-new-zealand-visa-processing-times-work/', lastmod: dataLastmod },
     { path: '/guides/new-zealand-2021-resident-visa-processing-time/', lastmod: growthPhasePublished },
+    { path: '/guides/new-zealand-critical-purpose-visitor-visa-processing-time/', lastmod: phaseFourPublished },
     { path: '/guides/new-zealand-aewv-processing-time/', lastmod: dataLastmod },
     { path: '/guides/new-zealand-student-visa-processing-time/', lastmod: dataLastmod },
     { path: '/guides/how-norway-udi-waiting-times-work/', lastmod: norwayPublished },
@@ -63,7 +66,10 @@ export function serviceUrls(jurCode) {
   const jur = JURISDICTIONS[jurCode];
   return [...services[jurCode].values()]
     .filter(svc => svc.published)
-    .map(svc => ({ path: `/${jur.slug}/${svc.slug}/`, lastmod: svc.latestEffective }));
+    .map(svc => ({
+      path: `/${jur.slug}/${svc.slug}/`,
+      lastmod: serviceEditorialLastmod(svc.key, svc.latestEffective),
+    }));
 }
 
 export function newestLastmod(urls) {

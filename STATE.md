@@ -1,6 +1,6 @@
 # STATE — Data Moat Engine
 
-_Last updated: 2026-09-04_
+_Last updated: 2026-09-06_
 
 ## Environment (verified)
 | Runtime | Version |
@@ -29,6 +29,7 @@ All dependencies install locally (`node_modules` inside project). No sudo or mac
 - [x] Norway UDI deployment candidate: 19 complete table-backed routes from 5 official pages, strict schema/date checks, range-preserving normalization, country/service pages, one guide, one baseline report, sitemap/API/OpenAPI/MCP/discovery integration, and responsive rendered QA
 - [x] Norway production release: commit `a9100bb`, deployment run `33462368754`, Cloudflare artifact `74bd35d1.govwait.pages.dev`, all 22 Norway URLs publicly green, and a 642-URL IndexNow HTTP 200 receipt
 - [x] Phase 3 growth release: permanent Canada and New Zealand change issues, complete change tables, report RSS, a demand-proven New Zealand 2021 Resident Visa guide, honest editorial dates, and expanded crawler/IndexNow coverage; commit `d635236`, run `33934940206`, and both approved Google crawl requests are verified
+- [ ] Phase 4 query-led growth release: the four-page candidate is fully validated and owner-approved; commit/push, production deployment, public verification and discovery notification are in progress
 
 ## Deployment status (verified through 2026-09-04)
 - Repo LIVE: https://github.com/artwisdom/govwait (public, main)
@@ -133,14 +134,38 @@ in run `33934940206` to `dbdfa613.govwait.pages.dev`; IndexNow accepted 646 URLs
 with HTTP 200. Google added the two owner-approved URLs to its priority crawl queue.
 These receipts do not prove indexing, rankings, traffic, ad approval or revenue.
 
+## Phase 4 growth candidate (local only, verified 2026-09-06)
+
+Fresh Search Console evidence for August 21 through September 4 shows 15 clicks
+from 5.95K displayed impressions, 0.3% CTR and average position 40.9. Five Critical
+Purpose query variants total 429 impressions. The Skilled Migrant and Specific
+Purpose service pages have 558 and 548 impressions respectively, while the
+Dependent Child Resident page has 89 impressions at average position 31.6.
+
+The bounded first cohort adds one source-backed Critical Purpose Visitor Visa
+closed-route guide and route-specific improvements to those three existing New
+Zealand pages. It adds the new guide to the home page, guide hub, `llms.txt` and
+sitemap; applies September 6 `lastmod` only to pages substantively edited that
+day; and adds blocking audit checks for all four pages. Official INZ route,
+phase-out and case-status sources were freshly reviewed.
+
+Local receipt: **2,318 active entities / 9 sources / 4 governments; 2,108 HTML
+pages; 639 intentionally indexable pages and 639 matching sitemap URLs; 2,611
+API files.** Parser tests 12/12, static build, SEO audit, sitemap/RSS XML,
+API conformance, MCP build/smoke, 639-URL IndexNow dry run, `git diff --check`,
+and desktop/mobile rendered checks are green. The API packaging check also caught
+and corrected a missing copied OpenAPI artifact before the final passing build.
+
+This is not yet a production release. The owner approved deployment and one
+Google priority-crawl request on September 6; production receipts remain pending.
+
 ## Next step
 
-Begin the query-led Phase 4 editorial cohort: strengthen high-impression New Zealand
-routes and near-win Canadian pages, then publish the Critical Purpose Visitor Visa
-closed-route guide only after a fresh official-source review. Keep collecting GA4
-and Search Console evidence and let the registered sitemap process; do not resubmit
-URLs merely to manufacture activity. Finland Migri remains the next bounded source
-candidate and requires a 5-second crawl delay.
+Complete the authorized Phase 4 commit, deployment, public-edge verification,
+IndexNow notification and one Google priority-crawl request for the new Critical
+Purpose guide. The next bounded cohort should improve the demonstrated Canadian
+near-win pages; do not resubmit unchanged URLs merely to manufacture activity.
+Finland Migri remains the next source candidate and requires a 5-second crawl delay.
 
 ## Open threads
 - US/AU/IE sources WAF-blocked to honest bots — owner-decision item (documented in DEPLOYMENT_GUIDE).

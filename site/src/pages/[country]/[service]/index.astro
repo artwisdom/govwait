@@ -4,6 +4,7 @@ import AdSlot from '../../../components/AdSlot.astro';
 import Freshness from '../../../components/Freshness.astro';
 import ForwardLookingPanel from '../../../components/ForwardLookingPanel.astro';
 import { services, JURISDICTIONS, fmtDate, fmtMonthYear, fmtMonthYearShort, humanValue } from '../../../lib/data.js';
+import { SERVICE_EDITORIAL } from '../../../lib/service-editorial.js';
 
 export function getStaticPaths() {
   const paths = [];
@@ -21,6 +22,7 @@ const svc = services[code].get(slug);
 const single = !svc.hasApplicantPages;
 const percentile = svc.isPercentileService;
 const rec = percentile ? svc.percent80 : svc.records[0];
+const serviceEditorial = SERVICE_EDITORIAL[rec.service_key];
 const forward = rec.metric_type === 'forward';
 const norway = rec.jurisdiction === 'NO';
 const publishedRange = norway && /\d\s*[–—-]\s*\d/.test(rec.value_raw);
@@ -68,7 +70,8 @@ const forwardTitleName = forwardTitleNames[rec.service_key] || `${jur.shortName}
 const title = forward
   ? `${forwardTitleName}: projected ${humanValue(rec)}`
   : percentile
-  ? `NZ ${svc.seoName} processing time: 50% ${svc.percent50.value_raw}, 80% ${svc.percent80.value_raw}`
+  ? serviceEditorial?.title?.(svc.percent50, svc.percent80)
+    || `NZ ${svc.seoName} processing time: 50% ${svc.percent50.value_raw}, 80% ${svc.percent80.value_raw}`
   : single
   ? norway
     ? `${jur.shortName} ${topic}: ${humanValue(rec)}`
@@ -77,7 +80,8 @@ const title = forward
 const desc = forward
   ? `IRCC's ${forwardTitleName.toLowerCase()} is projected at ${humanValue(rec)}. See the current queue and application-month estimates, updated ${monthShort}.`
   : percentile
-  ? `INZ currently reports 50% of ${svc.name} applications processed within ${svc.percent50.value_raw} and 80% within ${svc.percent80.value_raw}. Official source and history.`
+  ? serviceEditorial?.description?.(svc.percent50, svc.percent80)
+    || `INZ currently reports 50% of ${svc.name} applications processed within ${svc.percent50.value_raw} and 80% within ${svc.percent80.value_raw}. Official source and history.`
   : single
   ? `${jur.shortAgency} reports ${humanValue(rec)} for ${svc.seoName}${scopeDetail ? ` (${scopeDetail})` : ''}. Updated ${monthTok}, with official-source history.`
   : `Current ${jur.shortAgency} ${topic.toLowerCase()} for ${svc.records.length} applicant countries: ${ok.length} published values. Updated ${monthShort}, with official sources and history.`;
@@ -102,6 +106,12 @@ const desc = forward
       <AdSlot position="service-top" />
       <p>Immigration New Zealand currently reports that 50% of <strong>{svc.name}</strong> applications are processed within <strong>{humanValue(svc.percent50)}</strong>, and 80% within <strong>{humanValue(svc.percent80)}</strong>. These are working days, excluding Saturdays, Sundays and New Zealand public holidays.</p>
       <p>The figures are a guide based on current processing timeframes, not a deadline or promise for an individual application. Missing information, application complexity and peak demand can make a case take longer.</p>
+      {serviceEditorial && <>
+        <h2>{serviceEditorial.heading}</h2>
+        {serviceEditorial.paragraphs.map(paragraph => <p>{paragraph}</p>)}
+        {serviceEditorial.callout && <div class="callout"><strong>{serviceEditorial.callout.lead}</strong> {serviceEditorial.callout.body} <a href={serviceEditorial.callout.path}>{serviceEditorial.callout.label} →</a></div>}
+        <p class="small muted">Route facts checked September 6, 2026 against <a href={serviceEditorial.sourceUrl} rel="noopener nofollow">{serviceEditorial.sourceLabel}</a>. Eligibility and visa conditions can change; the official page controls.</p>
+      </>}
       <h2>History we have recorded</h2>
       <div class="tablewrap"><table>
         <thead><tr><th>Official measure</th><th>Official value</th><th>First observed</th><th>Verified on that observation</th></tr></thead>

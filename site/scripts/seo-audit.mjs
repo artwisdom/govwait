@@ -147,6 +147,7 @@ const sitemapIndexPath = path.join(DIST, 'sitemap.xml');
 const sitemapIndex = extractSitemapEntries(readFileSync(sitemapIndexPath, 'utf8'));
 if (!sitemapIndex.length) errors.push('sitemap.xml: no child sitemaps');
 const sitemapUrls = [];
+const sitemapLastmods = new Map();
 for (const child of sitemapIndex) {
   const childUrl = new URL(child.loc);
   const childPath = path.join(DIST, childUrl.pathname.replace(/^\//, ''));
@@ -157,7 +158,10 @@ for (const child of sitemapIndex) {
   const entries = extractSitemapEntries(readFileSync(childPath, 'utf8'));
   const newest = entries.map(entry => entry.lastmod).sort().at(-1);
   if (child.lastmod !== newest) errors.push(`${childUrl.pathname}: index lastmod ${child.lastmod} != child max ${newest}`);
-  sitemapUrls.push(...entries.map(entry => entry.loc));
+  for (const entry of entries) {
+    sitemapUrls.push(entry.loc);
+    sitemapLastmods.set(entry.loc, entry.lastmod);
+  }
 }
 
 const duplicateSitemapUrls = sitemapUrls.filter((url, i) => sitemapUrls.indexOf(url) !== i);
@@ -166,6 +170,45 @@ const canonicalSet = new Set(indexable.map(page => page.canonical));
 const sitemapSet = new Set(sitemapUrls);
 for (const canonical of canonicalSet) if (!sitemapSet.has(canonical)) errors.push(`indexable URL missing from sitemaps: ${canonical}`);
 for (const sitemapUrl of sitemapSet) if (!canonicalSet.has(sitemapUrl)) errors.push(`sitemap URL is not indexable HTML: ${sitemapUrl}`);
+
+// Phase 4's query-led cohort is intentionally small and hand-reviewed. Pin its
+// discoverability and content invariants so a later template refactor cannot
+// silently erase the source-backed additions or publish a dishonest lastmod.
+const phaseFourPages = [
+  {
+    url: '/guides/new-zealand-critical-purpose-visitor-visa-processing-time/',
+    lastmod: '2026-09-06',
+    required: ['No current GovWait estimate.', 'July 31, 2022', 'href="/new-zealand/specific-purpose-work-visa/"'],
+  },
+  {
+    url: '/new-zealand/skilled-migrant-category-resident-visa/',
+    lastmod: '2026-09-06',
+    required: ['Where this wait fits in the Skilled Migrant route', 'https://www.immigration.govt.nz/visas/skilled-migrant-category-resident-visa/'],
+  },
+  {
+    url: '/new-zealand/specific-purpose-work-visa/',
+    lastmod: '2026-09-06',
+    required: ['What the Specific Purpose Work Visa clock covers', 'href="/guides/new-zealand-critical-purpose-visitor-visa-processing-time/"'],
+  },
+  {
+    url: '/new-zealand/dependent-child-resident-visa/',
+    lastmod: '2026-09-06',
+    required: ['Which dependent-child route this time describes', 'https://www.immigration.govt.nz/visas/dependent-child-resident-visa/'],
+  },
+];
+for (const page of phaseFourPages) {
+  const absoluteUrl = `${canonicalOrigin}${page.url}`;
+  if (sitemapLastmods.get(absoluteUrl) !== page.lastmod) {
+    errors.push(`${page.url}: expected sitemap lastmod ${page.lastmod}, found ${sitemapLastmods.get(absoluteUrl) || 'missing'}`);
+  }
+  const outputPath = path.join(DIST, page.url.replace(/^\/+|\/+$/g, ''), 'index.html');
+  let html = '';
+  try { html = readFileSync(outputPath, 'utf8'); }
+  catch { errors.push(`${page.url}: Phase 4 output missing`); }
+  for (const snippet of page.required) {
+    if (html && !html.includes(snippet)) errors.push(`${page.url}: missing Phase 4 content: ${snippet}`);
+  }
+}
 
 const robotsText = readFileSync(path.join(DIST, 'robots.txt'), 'utf8');
 if (!robotsText.includes(`Sitemap: ${canonicalOrigin}/sitemap.xml`)) errors.push('robots.txt: canonical sitemap declaration missing');
