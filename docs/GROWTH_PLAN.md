@@ -16,13 +16,12 @@ read on September 6) showed:
 - average position 40.9; and
 - the strongest query-led opportunity remains New Zealand.
 
-The latest page-indexing totals were not re-read in this review. The earlier report
-showed 533 URLs indexed and 1,063 not indexed, but those totals are not a clean
+The Search Console overview read on September 6 showed 570 URLs indexed and 1,079
+not indexed, but those totals are not a clean
 ratio against GovWait's intended sitemap set because the report can include
 discovered noindex URLs, older states and different canonical timing. Production
-still has 638 intended indexable URLs until Phase 4 is deployed. Treat the earlier
-533 as encouraging early coverage, not proof that a fixed percentage of the exact
-intended set is indexed.
+now has 639 intended indexable URLs after Phase 4. Treat 570 as encouraging early
+coverage, not proof that a fixed percentage of the exact intended set is indexed.
 
 Demand signals already visible:
 
@@ -87,8 +86,7 @@ Production acceptance:
 
 ## Phase 4 — query-led editorial improvements
 
-Status: first four-page cohort validated and owner-approved on 2026-09-06;
-production and discovery receipts are pending.
+Status: first four-page cohort production-verified on 2026-09-06.
 
 The candidate:
 
@@ -104,15 +102,18 @@ The candidate:
    sections and cross-link between the closed historical route and current
    Specific Purpose route.
 
-Local acceptance: 2,108 HTML pages, 639 indexable pages, 639 matching sitemap
+Release acceptance: 2,108 HTML pages, 639 indexable pages, 639 matching sitemap
 URLs, 2,611 API files, parser tests 12/12, clean static build, SEO and XML checks,
 API conformance, MCP smoke, 639-URL IndexNow dry run, and desktop/mobile rendered
-checks. These are local build receipts only.
+checks. Commit `8a512aa` passed deployment run `34073350458` and published to
+`51f5121a.govwait.pages.dev`; the apex matched that artifact, all four changed
+pages and the complete public discovery surface passed independent checks, and
+IndexNow accepted 646 affected URLs with HTTP 200. Google accepted one approved
+priority-crawl request for the new guide. These receipts are not indexing proof.
 
-After an owner-approved production release and one priority-crawl request for the
-new guide, improve the Canadian near-win cohort without changing URLs or source
-meaning. Recheck each cohort after 28 days. Measurement takes time even when
-implementation does not; keep shipping bounded cohorts instead of waiting idle.
+Next, improve the Canadian near-win cohort without changing URLs or source meaning.
+Recheck each cohort after 28 days. Measurement takes time even when implementation
+does not; keep shipping bounded cohorts instead of waiting idle.
 
 Gate: no mass page generation. Google explicitly recommends people-first, original content and warns against automation mainly intended to attract search traffic.
 

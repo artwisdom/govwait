@@ -20,7 +20,7 @@ never the numbers themselves — six free competitors already have the numbers.*
 - [x] Harden search/AI discovery: canonical `www` 301, explicit search and AI
   crawler allows, generated `llms.txt`, five honest child sitemaps, structured
   data, exact IndexNow notifications, and a blocking SEO CI audit. Indexing is
-  requested only for the 638 current data-backed pages; 1,464 official no-value
+  requested only for the 639 current data-backed pages; 1,464 official no-value
   pages automatically graduate from `noindex, follow` when data appears.
 - [x] Privacy-minimal measurement foundation: consent-gated GA4, 14-month retention,
   ad/personalization signals off, GA4 production stream linked to the `govwait.com`
@@ -46,12 +46,12 @@ add a dashboard screenshot alongside the textual policy evidence in
 `32921188032`; public-edge checks passed and IndexNow accepted the 603-URL current
 set with HTTP 200.
 
-**Latest production proof 2026-09-04:** Phase 3 commit `d635236` deployed in run
-`33934940206` to `dbdfa613.govwait.pages.dev`; the apex matched the artifact and
-the three new pages, RSS, `llms.txt`, canonicals, crawler files, path-preserving
-`www` redirect, and 638 sitemap URLs passed independent checks. IndexNow accepted
-646 URLs with HTTP 200. Google added the two owner-approved URLs to its priority
-crawl queue; that is not proof of indexing.
+**Latest production proof 2026-09-06:** Phase 4 commit `8a512aa` deployed in run
+`34073350458` to `51f5121a.govwait.pages.dev`; the apex guide matched the artifact
+byte-for-byte and all four changed pages, `llms.txt`, canonicals, crawler files,
+path-preserving `www` redirect, and 639 unique sitemap URLs passed independent
+checks. IndexNow accepted 646 affected public/discovery URLs with HTTP 200. Google
+added the new guide to its priority crawl queue; that is not proof of indexing.
 
 ## Phase R2 — NZ + IRCC-flpt sources (the moat accelerators)
 
@@ -103,11 +103,13 @@ template and any actual external outreach remain separately approval-gated work.
 Targets from HANDOFF_04's top-20 table: corridor guides (India→CA study, Nigeria→CA study, UK spouse timeline explainer, super-visa-for-parents…), "published vs lived timelines" explainer (the "reddit" distrust bridge), stage-definitions explainer ("after biometrics"), employer/sponsor-side section (the tier-1 RPM fix from HANDOFF_03). All data-fed where possible so they self-update. Write for humans; no AI-boilerplate tells.
 **Accept:** 40+ guide pages live; every top-20 route cross-linked to its guide; AdSense + Journey applications submitted once traffic gate hit (owner clicks).
 
-**Status 2026-09-04:** 15 source-backed guides are live (9 added in Phase 1, the
-Norway method guide, and the Phase 3 New Zealand closed-route guide), with
+**Status 2026-09-06:** 16 source-backed guides are live (9 added in Phase 1, the
+Norway method guide, the Phase 3 New Zealand closed-route guide, and the Phase 4
+Critical Purpose closed-route guide), with
 organizational bylines, citations, Article/Breadcrumb schema, and policy/correction
-paths. Two permanent dated report issues also add original historical analysis. The
-40-page depth target and traffic-gated ad applications remain unfinished.
+paths. Phase 4 also added unique route context to three high-opportunity New Zealand
+service pages. Two permanent dated report issues add original historical analysis.
+The 40-page depth target and traffic-gated ad applications remain unfinished.
 
 ## Phase R6 — Machine-skin distribution
 

@@ -29,15 +29,15 @@ All dependencies install locally (`node_modules` inside project). No sudo or mac
 - [x] Norway UDI deployment candidate: 19 complete table-backed routes from 5 official pages, strict schema/date checks, range-preserving normalization, country/service pages, one guide, one baseline report, sitemap/API/OpenAPI/MCP/discovery integration, and responsive rendered QA
 - [x] Norway production release: commit `a9100bb`, deployment run `33462368754`, Cloudflare artifact `74bd35d1.govwait.pages.dev`, all 22 Norway URLs publicly green, and a 642-URL IndexNow HTTP 200 receipt
 - [x] Phase 3 growth release: permanent Canada and New Zealand change issues, complete change tables, report RSS, a demand-proven New Zealand 2021 Resident Visa guide, honest editorial dates, and expanded crawler/IndexNow coverage; commit `d635236`, run `33934940206`, and both approved Google crawl requests are verified
-- [ ] Phase 4 query-led growth release: the four-page candidate is fully validated and owner-approved; commit/push, production deployment, public verification and discovery notification are in progress
+- [x] Phase 4 query-led growth release: commit `8a512aa`, deployment run `34073350458`, Cloudflare artifact `51f5121a.govwait.pages.dev`, 639/639 production sitemap audit, IndexNow HTTP 200, and the approved Google crawl request are verified
 
-## Deployment status (verified through 2026-09-04)
+## Deployment status (verified through 2026-09-06)
 - Repo LIVE: https://github.com/artwisdom/govwait (public, main)
 - Domain: `govwait.com` registered in Cloudflare Registrar; auto-renew and registrar lock enabled
 - Cloudflare Pages: project `govwait` live; `govwait.com` and `www.govwait.com` active over HTTPS
 - Email: `contact@govwait.com` routing active through Cloudflare Email Routing
 - AI crawler policy: listed search/citation crawlers allowed; Managed robots.txt off (see `docs/CLOUDFLARE_CRAWL_POLICY.md`)
-- GitHub deployment: Phase 3 commit `d635236` deployed green in `deploy-site` run `33934940206` (`dbdfa613.govwait.pages.dev`); the blocking 2,107-page production build and 638/638 SEO-sitemap audit passed before Cloudflare publication
+- GitHub deployment: Phase 4 commit `8a512aa` deployed green in `deploy-site` run `34073350458` (`51f5121a.govwait.pages.dev`); the blocking 2,108-page production build and 639/639 SEO-sitemap audit passed before Cloudflare publication
 - GitHub Pages: disabled; Cloudflare Pages is the sole production host
 - refresh-data workflow: ACTIVE; cron Tue+Fri 14:00 UTC. The 2026-09-04 run failed
   closed on UDI `robots.txt` HTTP 403 and exported nothing; production still serves
@@ -66,8 +66,8 @@ All dependencies install locally (`node_modules` inside project). No sudo or mac
   engines on 2026-08-23. Google re-read it as a **Sitemap index / Success**; Bing
   accepted it and currently reports **Submitted / Processing**. The public sitemap
   independently returns HTTP 200 with `application/xml`.
-- Discoverability audit: the site now has 638 intentionally indexable pages and
-  638 matching sitemap URLs across separate hubs/Canada/UK/New Zealand/Norway children. Another
+- Discoverability audit: the site now has 639 intentionally indexable pages and
+  639 matching sitemap URLs across separate hubs/Canada/UK/New Zealand/Norway children. Another
   1,464 official no-value applicant pages stay live and crawlable with
   `noindex, follow` until they gain a numeric value. A blocking CI audit protects
   metadata, canonicals, internal links, structured data, robots/llms policy,
@@ -76,13 +76,13 @@ All dependencies install locally (`node_modules` inside project). No sudo or mac
 - Canonical host: a live Cloudflare 301 sends `www` paths and queries to the
   matching apex URL.
 - Current discovery notifications: the root sitemap already registered with Google
-  and Bing advertises five child sitemaps containing 74 hub/editorial/report/Canada-service
+  and Bing advertises five child sitemaps containing 75 hub/editorial/report/Canada-service
   URLs, 443 Canada applicant-country URLs, 77 UK URLs, 25 New Zealand URLs, and
-  19 Norway URLs. Phase 3 production run `33934940206` submitted 646 URLs
-  to IndexNow—the complete 638-page indexable set plus RSS, `llms.txt`, the sitemap
-  index and five child sitemaps—and received HTTP 200. Google also accepted
-  priority-crawl requests for the Canada August 26 issue and New Zealand 2021
-  Resident Visa guide. These
+  19 Norway URLs. Phase 4 production run `34073350458` notified IndexNow of 646
+  affected public/discovery URLs and received HTTP 200. Google also accepted the
+  owner-approved priority-crawl request for the new Critical Purpose Visitor Visa
+  guide, in addition to the earlier Canada issue and New Zealand 2021 Resident
+  Visa guide requests. These
   are discovery/submission receipts, not proof of indexing, ranking, traffic,
   or revenue.
 
@@ -134,7 +134,7 @@ in run `33934940206` to `dbdfa613.govwait.pages.dev`; IndexNow accepted 646 URLs
 with HTTP 200. Google added the two owner-approved URLs to its priority crawl queue.
 These receipts do not prove indexing, rankings, traffic, ad approval or revenue.
 
-## Phase 4 growth candidate (local only, verified 2026-09-06)
+## Phase 4 growth release (production-verified 2026-09-06)
 
 Fresh Search Console evidence for August 21 through September 4 shows 15 clicks
 from 5.95K displayed impressions, 0.3% CTR and average position 40.9. Five Critical
@@ -149,23 +149,27 @@ sitemap; applies September 6 `lastmod` only to pages substantively edited that
 day; and adds blocking audit checks for all four pages. Official INZ route,
 phase-out and case-status sources were freshly reviewed.
 
-Local receipt: **2,318 active entities / 9 sources / 4 governments; 2,108 HTML
+Release receipt: **2,318 active entities / 9 sources / 4 governments; 2,108 HTML
 pages; 639 intentionally indexable pages and 639 matching sitemap URLs; 2,611
 API files.** Parser tests 12/12, static build, SEO audit, sitemap/RSS XML,
 API conformance, MCP build/smoke, 639-URL IndexNow dry run, `git diff --check`,
 and desktop/mobile rendered checks are green. The API packaging check also caught
 and corrected a missing copied OpenAPI artifact before the final passing build.
 
-This is not yet a production release. The owner approved deployment and one
-Google priority-crawl request on September 6; production receipts remain pending.
+Commit `8a512aa` passed GitHub Actions run `34073350458` and deployed to
+`51f5121a.govwait.pages.dev`. The apex guide is byte-identical to that artifact;
+all four Phase 4 pages, 639 unique sitemap URLs, XML/RSS, `llms.txt`, robots policy,
+canonicals and the path-preserving `www` redirect passed public checks. IndexNow
+accepted 646 affected public/discovery URLs with HTTP 200. Google added the new
+guide to its priority crawl queue. These are deployment and submission receipts,
+not proof of indexing, rankings, traffic, ad approval or revenue.
 
 ## Next step
 
-Complete the authorized Phase 4 commit, deployment, public-edge verification,
-IndexNow notification and one Google priority-crawl request for the new Critical
-Purpose guide. The next bounded cohort should improve the demonstrated Canadian
-near-win pages; do not resubmit unchanged URLs merely to manufacture activity.
-Finland Migri remains the next source candidate and requires a 5-second crawl delay.
+Build the next bounded editorial cohort around the demonstrated Canadian near-win
+pages; do not resubmit unchanged URLs merely to manufacture activity. Keep measuring
+the Phase 4 cohort for 28 days while continuing weekly improvements. Finland Migri
+remains the next source candidate and requires a 5-second crawl delay.
 
 ## Open threads
 - US/AU/IE sources WAF-blocked to honest bots — owner-decision item (documented in DEPLOYMENT_GUIDE).
