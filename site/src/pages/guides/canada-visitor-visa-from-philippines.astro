@@ -9,6 +9,7 @@ const comparisons = ['PH', 'VN', 'ID', 'MY', 'TH', 'SG']
   .map(code => service.records.find(record => record.applicant_country === code))
   .filter(Boolean);
 const officialGuide = 'https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html';
+const officialVisitorGuide = 'https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/visitor-visa.html';
 ---
 <EditorialFrame
   sectionName="Guides"
@@ -18,10 +19,10 @@ const officialGuide = 'https://www.canada.ca/en/immigration-refugees-citizenship
   description={`Current IRCC visitor-visa time from the Philippines, compared with nearby application countries and separated from preparation and travel time.`}
   h1="Canada visitor visa processing time from the Philippines"
   lede={`IRCC currently reports ${rec.value_raw} for a visitor-visa application submitted from the Philippines. That is ${Math.abs(Math.round(service.medianDays - rec.value_days))} days ${rec.value_days <= service.medianDays ? 'below' : 'above'} the current median across countries with a published value.`}
-  modified={newestDate('2026-08-23', rec.effective_date)}
+  modified={newestDate('2026-09-07', rec.effective_date)}
   checked={rec.effective_date}
   about={['Canada visitor visa', 'Philippines', 'IRCC processing times']}
-  citations={[officialGuide, rec.source_url]}
+  citations={[officialGuide, officialVisitorGuide, rec.source_url]}
   adPrefix="guide-visitor-philippines"
 >
   <div class="stats"><div><div class="n">{rec.value_raw}</div><div class="l">Philippines figure</div></div><div><div class="n">{Math.round(service.medianDays)} days</div><div class="l">current service median</div></div><div><div class="n">{fmtDate(rec.effective_date)}</div><div class="l">official data date</div></div></div>
@@ -31,7 +32,7 @@ const officialGuide = 'https://www.canada.ca/en/immigration-refugees-citizenship
   <p>Country comparisons help answer “what is IRCC publishing now?” They do not answer why a particular case took longer or whether an application will be approved.</p>
 
   <h2>What is inside the official estimate</h2>
-  <p>IRCC says its processing time starts with a complete application and ends when it makes a decision. The published estimate includes time to provide biometrics. Preparation before submission, waiting to receive any later document and the traveler’s own booking schedule are separate.</p>
+  <p>IRCC’s general calculation guidance says processing starts when a complete application is submitted and ends when it makes a decision. Its current visitor-visa guide separately says the time needed to give biometrics is not included. Preparation before submission, waiting to receive any later document and the traveler’s own booking schedule are also separate.</p>
 
   <h2>Use two dates, not one</h2>
   <p>A useful check records both the <strong>official data date</strong> and the <strong>date you looked</strong>. The current value is dated {fmtDate(rec.effective_date)}. GovWait also stores its retrieval time. This prevents an old screenshot from being passed around as if it were current.</p>
@@ -42,7 +43,7 @@ const officialGuide = 'https://www.canada.ca/en/immigration-refugees-citizenship
   <div class="callout"><strong>Safe use:</strong> compare the official figure with your planning needs, add room for uncertainty, and use IRCC’s account or contact tools—not GovWait—for a submitted case.</div>
 
   <h2>Common questions</h2>
-  <h3>Is {rec.value_raw} the time after biometrics?</h3><p>No. IRCC says biometrics time is included in its wider complete-application-to-decision clock.</p>
+  <h3>Is {rec.value_raw} the time after biometrics?</h3><p>No. IRCC publishes a country-level visitor-visa statistic, not a personal stage timer, and its current visitor-visa guide says the time needed to give biometrics is not included.</p>
   <h3>Will this page change its date on every build?</h3><p>No. The data and sitemap dates change only when the represented official value or source date changes.</p>
-  <div class="prov">Official source: <a href={officialGuide} rel="noopener">IRCC processing-time guidance</a> and <a href={rec.source_url} rel="noopener">IRCC published data</a>.</div>
+  <div class="prov">Official source: <a href={officialGuide} rel="noopener">IRCC processing-time guidance</a>, <a href={officialVisitorGuide} rel="noopener">IRCC visitor-visa guidance</a> and <a href={rec.source_url} rel="noopener">IRCC published data</a>.</div>
 </EditorialFrame>

@@ -1,6 +1,6 @@
 # GovWait growth plan
 
-Last reviewed: 2026-09-06 (America/New_York)
+Last reviewed: 2026-09-07 (America/New_York)
 
 This plan separates technical discovery, crawling, indexing, traffic, audience retention, ad approval and revenue. None proves the next. Growth work must preserve GovWait's official-source boundaries, append-only history, polite collection rules, honest dates and no-hype language.
 
@@ -111,9 +111,42 @@ pages and the complete public discovery surface passed independent checks, and
 IndexNow accepted 646 affected URLs with HTTP 200. Google accepted one approved
 priority-crawl request for the new guide. These receipts are not indexing proof.
 
-Next, improve the Canadian near-win cohort without changing URLs or source meaning.
-Recheck each cohort after 28 days. Measurement takes time even when implementation
-does not; keep shipping bounded cohorts instead of waiting idle.
+### Phase 4B — Canadian near-win cohort
+
+Status: local release candidate on 2026-09-07; not committed, pushed or deployed.
+
+This second bounded cohort improves four existing Canadian pages that already have
+Search Console impressions and average positions between 4.3 and 10.7:
+
+- Private Refugee from Pakistan;
+- Visitor Visa from Qatar;
+- Visitor Visa from Colombia; and
+- Visitor Visa from Nepal.
+
+Each page keeps its URL and official value. Titles are now 50–58 characters,
+descriptions 145–156 characters, H1s match the demonstrated query, and the body
+adds either a transparent same-snapshot median comparison or a source-backed
+explanation of the refugee-side stage. Official processing-time, route and case-
+status links are visible on the page. Blocking audit checks protect all four.
+
+Fresh source review also found that IRCC's current visitor-visa guide says the
+displayed processing time does not include the time needed to give biometrics,
+while GovWait's older visitor copy said it did. The candidate corrects that claim
+across all visitor-country pages and the India/Philippines visitor guides. This is
+a factual correction, not a scaled SEO cohort. The 171 indexable visitor-country
+pages, the Pakistan near-win page and two corrected guides receive an honest
+September 7 editorial `lastmod`; unrelated URLs do not.
+
+Local acceptance: 2,108 HTML pages, 639 indexable pages, 639 matching sitemap URLs,
+2,611 API files, parser tests 12/12, static build, SEO and XML checks, API
+conformance, MCP build/smoke, 639-URL conservative IndexNow dry run, `git diff
+--check`, and responsive rendered checks are green. Production remains Phase 4
+commit `8a512aa` until the owner approves this release.
+
+After deployment, recheck the four-page cohort after 28 days. Measurement takes
+time even when implementation does not; keep shipping bounded cohorts instead of
+waiting idle. Google already knows these URLs from Search Console impressions, so
+manual priority-crawl requests would add no useful evidence.
 
 Gate: no mass page generation. Google explicitly recommends people-first, original content and warns against automation mainly intended to attract search traffic.
 

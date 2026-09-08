@@ -4,6 +4,7 @@
 import { records, services, dataLastmod, JURISDICTIONS } from './data.js';
 import { reportIssues } from './reports.js';
 import { serviceEditorialLastmod } from './service-editorial.js';
+import { applicantEditorialLastmod } from './applicant-editorial.js';
 
 export function urlset(site, urls) {
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(u =>
@@ -15,6 +16,9 @@ export function hubUrls() {
   const norwayPublished = '2026-08-30';
   const growthPhasePublished = '2026-09-04';
   const phaseFourPublished = '2026-09-06';
+  const visitorGuidanceCorrected = '2026-09-07';
+  const visitorIndiaDataLastmod = records.find(record => record.id === 'ca-visitor-visa--in')?.effective_date;
+  const visitorPhilippinesDataLastmod = records.find(record => record.id === 'ca-visitor-visa--ph')?.effective_date;
   const urls = [
     { path: '/', lastmod: phaseFourPublished },
     { path: '/about/', lastmod: dataLastmod },
@@ -26,8 +30,8 @@ export function hubUrls() {
     { path: '/guides/canada-visitor-visa-by-country/', lastmod: dataLastmod },
     { path: '/guides/canada-study-permit-from-india/', lastmod: growthPhasePublished },
     { path: '/guides/canada-study-permit-from-nigeria/', lastmod: dataLastmod },
-    { path: '/guides/canada-visitor-visa-from-india/', lastmod: dataLastmod },
-    { path: '/guides/canada-visitor-visa-from-philippines/', lastmod: dataLastmod },
+    { path: '/guides/canada-visitor-visa-from-india/', lastmod: [visitorIndiaDataLastmod, visitorGuidanceCorrected].filter(Boolean).sort().at(-1) },
+    { path: '/guides/canada-visitor-visa-from-philippines/', lastmod: [visitorPhilippinesDataLastmod, visitorGuidanceCorrected].filter(Boolean).sort().at(-1) },
     { path: '/guides/canada-work-permit-from-mexico/', lastmod: dataLastmod },
     { path: '/guides/uk-visa-processing-standards/', lastmod: dataLastmod },
     { path: '/guides/uk-spouse-visa-processing-time/', lastmod: dataLastmod },
@@ -82,5 +86,8 @@ export function entityUrls(jurCode) {
     // but do not ask search engines to index a country page until it contains
     // a published value. A route automatically graduates on its first value.
     .filter(r => r.applicantSlug && r.jurisdiction === jurCode && r.status === 'ok')
-    .map(r => ({ path: `/${r.jur.slug}/${r.serviceSlug}/${r.applicantSlug}/`, lastmod: r.effective_date }));
+    .map(r => ({
+      path: `/${r.jur.slug}/${r.serviceSlug}/${r.applicantSlug}/`,
+      lastmod: applicantEditorialLastmod(r.id, r.effective_date),
+    }));
 }

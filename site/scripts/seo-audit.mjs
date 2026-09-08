@@ -210,6 +210,117 @@ for (const page of phaseFourPages) {
   }
 }
 
+// Phase 4B improves only four Canadian URLs that already have Search Console
+// impressions. Assert their query-matching metadata, source-backed additions
+// and honest editorial/data lastmod without freezing a value that should change
+// on the next official source update.
+const canadianEditorialModified = '2026-09-07';
+const canadianNearWinPages = [
+  {
+    id: 'ca-refugee-private-refugee-side--pk',
+    url: '/canada/refugee-private-refugee-side/from-pakistan/',
+    titlePrefix: 'Canada Private Refugee from Pakistan',
+    h1: 'Canada private refugee processing time from Pakistan',
+    required: [
+      'data-applicant-editorial="ca-refugee-private-refugee-side--pk"',
+      'Which part of the private-refugee process this measures',
+      'not the separately published sponsor-processing value',
+      'https://www.canada.ca/en/immigration-refugees-citizenship/services/refugees/sponsor-refugee/private-sponsorship-program/how-we-process-applications.html',
+    ],
+  },
+  ...[
+    ['co', 'colombia', 'Colombia'],
+    ['np', 'nepal', 'Nepal'],
+    ['qa', 'qatar', 'Qatar'],
+  ].map(([countryCode, slug, country]) => ({
+    id: `ca-visitor-visa--${countryCode}`,
+    url: `/canada/visitor-visa/from-${slug}/`,
+    titlePrefix: `Canada Visitor Visa from ${country}`,
+    h1: `Canada visitor visa processing time from ${country}`,
+    required: [
+      `data-applicant-editorial="ca-visitor-visa--${countryCode}"`,
+      `What the ${country} result covers`,
+      'It is not an inside-Canada visitor-visa time',
+      'https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/visitor-visa.html',
+    ],
+  })),
+];
+for (const page of canadianNearWinPages) {
+  const record = LATEST.records.find(item => item.id === page.id);
+  if (!record) {
+    errors.push(`${page.url}: Phase 4B source record missing`);
+    continue;
+  }
+  const expectedLastmod = [record.effective_date, canadianEditorialModified].sort().at(-1);
+  const absoluteUrl = `${canonicalOrigin}${page.url}`;
+  if (sitemapLastmods.get(absoluteUrl) !== expectedLastmod) {
+    errors.push(`${page.url}: expected sitemap lastmod ${expectedLastmod}, found ${sitemapLastmods.get(absoluteUrl) || 'missing'}`);
+  }
+  const outputPath = path.join(DIST, page.url.replace(/^\/+|\/+$/g, ''), 'index.html');
+  let html = '';
+  try { html = readFileSync(outputPath, 'utf8'); }
+  catch { errors.push(`${page.url}: Phase 4B output missing`); }
+  const expectedMonth = new Date(`${record.effective_date.slice(0, 10)}T00:00:00Z`).toLocaleDateString('en-US', {
+    month: 'short', year: 'numeric', timeZone: 'UTC',
+  });
+  const expectedTitle = `${page.titlePrefix}: ${record.value_raw} (${expectedMonth})`;
+  const builtPage = pages.find(item => item.url === page.url);
+  if (builtPage?.title !== expectedTitle) errors.push(`${page.url}: expected title ${expectedTitle}, found ${builtPage?.title || 'missing'}`);
+  if (builtPage && (builtPage.title.length < 50 || builtPage.title.length > 60)) errors.push(`${page.url}: Phase 4B title length ${builtPage.title.length} is outside 50-60`);
+  if (builtPage && (builtPage.description.length < 140 || builtPage.description.length > 160)) errors.push(`${page.url}: Phase 4B description length ${builtPage.description.length} is outside 140-160`);
+  if (html && !html.includes(`<h1>${page.h1}</h1>`)) errors.push(`${page.url}: missing query-matching H1`);
+  for (const snippet of page.required) {
+    if (html && !html.includes(snippet)) errors.push(`${page.url}: missing Phase 4B content: ${snippet}`);
+  }
+}
+
+// IRCC's visitor-specific page changed the biometrics boundary. This is a
+// route-family factual correction, not a ranking experiment: all rendered
+// visitor-country pages must carry the current wording, and every indexable one
+// must advertise the real correction date in the sitemap.
+const currentVisitorBiometricsCopy = [
+  'does not include the time needed to give biometrics',
+  'the time needed to give biometrics is not included',
+];
+const staleVisitorBiometricsCopy = 'includes the time taken to provide biometrics';
+for (const record of LATEST.records.filter(item => item.service_key === 'ca-visitor-visa')) {
+  const url = `/canada/visitor-visa/from-${slugify(record.applicant_country_name)}/`;
+  const outputPath = path.join(DIST, url.replace(/^\/+|\/+$/g, ''), 'index.html');
+  let html = '';
+  try { html = readFileSync(outputPath, 'utf8'); }
+  catch { errors.push(`${url}: corrected visitor-visa output missing`); }
+  if (html && !currentVisitorBiometricsCopy.some(snippet => html.includes(snippet))) errors.push(`${url}: current visitor-visa biometrics boundary missing`);
+  if (html && html.includes(staleVisitorBiometricsCopy)) errors.push(`${url}: stale visitor-visa biometrics claim remains`);
+  if (record.status === 'ok') {
+    const expectedLastmod = [record.effective_date, canadianEditorialModified].sort().at(-1);
+    const absoluteUrl = `${canonicalOrigin}${url}`;
+    if (sitemapLastmods.get(absoluteUrl) !== expectedLastmod) {
+      errors.push(`${url}: expected visitor-guidance lastmod ${expectedLastmod}, found ${sitemapLastmods.get(absoluteUrl) || 'missing'}`);
+    }
+  }
+}
+
+for (const [url, recordId] of [
+  ['/guides/canada-visitor-visa-from-india/', 'ca-visitor-visa--in'],
+  ['/guides/canada-visitor-visa-from-philippines/', 'ca-visitor-visa--ph'],
+]) {
+  const record = LATEST.records.find(item => item.id === recordId);
+  const expectedLastmod = [record?.effective_date, canadianEditorialModified].filter(Boolean).sort().at(-1);
+  const absoluteUrl = `${canonicalOrigin}${url}`;
+  if (sitemapLastmods.get(absoluteUrl) !== expectedLastmod) {
+    errors.push(`${url}: expected corrected-guide lastmod ${expectedLastmod}, found ${sitemapLastmods.get(absoluteUrl) || 'missing'}`);
+  }
+  const outputPath = path.join(DIST, url.replace(/^\/+|\/+$/g, ''), 'index.html');
+  let html = '';
+  try { html = readFileSync(outputPath, 'utf8'); }
+  catch { errors.push(`${url}: corrected visitor guide output missing`); }
+  if (html && !currentVisitorBiometricsCopy.some(snippet => html.includes(snippet))) errors.push(`${url}: current visitor-guide biometrics boundary missing`);
+  if (html && html.includes(staleVisitorBiometricsCopy)) errors.push(`${url}: stale visitor-guide biometrics claim remains`);
+  if (html && !html.includes('https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/visitor-visa.html')) {
+    errors.push(`${url}: current IRCC visitor-visa source missing`);
+  }
+}
+
 const robotsText = readFileSync(path.join(DIST, 'robots.txt'), 'utf8');
 if (!robotsText.includes(`Sitemap: ${canonicalOrigin}/sitemap.xml`)) errors.push('robots.txt: canonical sitemap declaration missing');
 if (/Disallow:\s*\//i.test(robotsText)) errors.push('robots.txt: whole-site disallow found');

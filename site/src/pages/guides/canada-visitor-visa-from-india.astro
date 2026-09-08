@@ -9,6 +9,7 @@ const comparisons = ['IN', 'PH', 'PK', 'NG', 'CN', 'BD']
   .map(code => service.records.find(record => record.applicant_country === code))
   .filter(Boolean);
 const officialGuide = 'https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html';
+const officialVisitorGuide = 'https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/visitor-visa.html';
 ---
 <EditorialFrame
   sectionName="Guides"
@@ -17,18 +18,18 @@ const officialGuide = 'https://www.canada.ca/en/immigration-refugees-citizenship
   title={`Canada visitor visa processing time from India: ${rec.value_raw} (${fmtDate(rec.effective_date)})`}
   description={`IRCC’s current visitor-visa time from India, what the clock includes, how India compares and why post-biometrics anecdotes are a different measure.`}
   h1="Canada visitor visa processing time from India"
-  lede={`IRCC currently reports ${rec.value_raw} for visitor-visa applications submitted from India. The number covers the official processing clock, including biometrics time, but does not reserve a decision date for an individual traveler.`}
-  modified={newestDate('2026-08-23', rec.effective_date)}
+  lede={`IRCC currently reports ${rec.value_raw} for visitor-visa applications submitted from India. Its current visitor-visa guide says the time needed to give biometrics is not included, and the figure does not reserve a decision date for an individual traveler.`}
+  modified={newestDate('2026-09-07', rec.effective_date)}
   checked={rec.effective_date}
   about={['Canada visitor visa', 'India', 'IRCC processing times']}
-  citations={[officialGuide, rec.source_url]}
+  citations={[officialGuide, officialVisitorGuide, rec.source_url]}
   adPrefix="guide-visitor-india"
 >
   <div class="stats"><div><div class="n">{rec.value_raw}</div><div class="l">India right now</div></div><div><div class="n">{Math.round(service.medianDays)} days</div><div class="l">published-country median</div></div><div><div class="n">{rec.speed.label}</div><div class="l">relative to the current median</div></div></div>
 
   <h2>The official clock versus the travel calendar</h2>
-  <p>IRCC’s clock starts when it receives a complete application and ends at the decision. Its current guidance says biometrics time is included. The clock does not include the days spent preparing before submission, and a decision is not the same as being ready to travel in every situation.</p>
-  <p>That distinction matters because many search results describe “time after biometrics.” IRCC does not publish the India figure on that basis. Applicant reports can be useful personal stories, but they cannot be compared directly with the official complete-application-to-decision statistic.</p>
+  <p>IRCC’s general calculation guidance says the processing period starts when a complete application is submitted and ends at the decision. Its current visitor-visa guide separately says the time needed to give biometrics is not included. Days spent preparing before submission and post-decision travel arrangements also sit outside this country statistic.</p>
+  <p>That distinction matters because many search results describe “time after biometrics.” IRCC does not publish the India figure as a personal post-biometrics countdown. Applicant reports can be useful personal stories, but they cannot be compared directly with the official country statistic.</p>
 
   <h2>India compared with other large visitor-visa routes</h2>
   <div class="tablewrap"><table><thead><tr><th>Applying from</th><th>Current official time</th><th>Relative to median</th></tr></thead><tbody>{comparisons.map(item => (<tr><td><a href={`/canada/visitor-visa/${item.applicantSlug}/`}>{item.applicant_country_name}</a></td><td>{item.value_raw}</td><td>{item.speed?.label || '—'}</td></tr>))}</tbody></table></div>
@@ -43,6 +44,7 @@ const officialGuide = 'https://www.canada.ca/en/immigration-refugees-citizenship
 
   <h2>Common questions</h2>
   <h3>Is the India figure based on citizenship?</h3><p>It is selected by the country from which the application is submitted. Citizenship and application location can differ.</p>
+  <h3>Is this an “after biometrics” estimate?</h3><p>No. IRCC publishes a country-level visitor-visa statistic, not a personal stage timer, and its current visitor-visa guide says the time needed to give biometrics is not included.</p>
   <h3>Does a request for more documents fit inside the estimate?</h3><p>The published figure is an aggregate planning measure. An individual request, verification step or delay responding can make a case take longer.</p>
-  <div class="prov">Official source: <a href={officialGuide} rel="noopener">IRCC current processing times</a> and <a href={rec.source_url} rel="noopener">IRCC data</a> · data date {fmtDate(rec.effective_date)}.</div>
+  <div class="prov">Official source: <a href={officialGuide} rel="noopener">IRCC current processing times</a>, <a href={officialVisitorGuide} rel="noopener">IRCC visitor-visa guidance</a> and <a href={rec.source_url} rel="noopener">IRCC data</a> · data date {fmtDate(rec.effective_date)}.</div>
 </EditorialFrame>

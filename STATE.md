@@ -1,6 +1,6 @@
 # STATE — Data Moat Engine
 
-_Last updated: 2026-09-06_
+_Last updated: 2026-09-07_
 
 ## Environment (verified)
 | Runtime | Version |
@@ -30,6 +30,7 @@ All dependencies install locally (`node_modules` inside project). No sudo or mac
 - [x] Norway production release: commit `a9100bb`, deployment run `33462368754`, Cloudflare artifact `74bd35d1.govwait.pages.dev`, all 22 Norway URLs publicly green, and a 642-URL IndexNow HTTP 200 receipt
 - [x] Phase 3 growth release: permanent Canada and New Zealand change issues, complete change tables, report RSS, a demand-proven New Zealand 2021 Resident Visa guide, honest editorial dates, and expanded crawler/IndexNow coverage; commit `d635236`, run `33934940206`, and both approved Google crawl requests are verified
 - [x] Phase 4 query-led growth release: commit `8a512aa`, deployment run `34073350458`, Cloudflare artifact `51f5121a.govwait.pages.dev`, 639/639 production sitemap audit, IndexNow HTTP 200, and the approved Google crawl request are verified
+- [x] Phase 4B Canadian near-win candidate: four demonstrated Search Console pages have tighter query-matching metadata, unique same-snapshot or route-stage context and official next-step links; IRCC's changed visitor biometrics boundary is corrected across that route family and two visitor guides; all local release gates pass
 
 ## Deployment status (verified through 2026-09-06)
 - Repo LIVE: https://github.com/artwisdom/govwait (public, main)
@@ -166,10 +167,11 @@ not proof of indexing, rankings, traffic, ad approval or revenue.
 
 ## Next step
 
-Build the next bounded editorial cohort around the demonstrated Canadian near-win
-pages; do not resubmit unchanged URLs merely to manufacture activity. Keep measuring
-the Phase 4 cohort for 28 days while continuing weekly improvements. Finland Migri
-remains the next source candidate and requires a 5-second crawl delay.
+Owner approval is required before committing, pushing and deploying the Phase 4B
+Canadian near-win candidate. After deployment, verify the exact Cloudflare artifact,
+public pages, sitemap dates and IndexNow receipt. Do not submit manual Google crawl
+requests for these already-discovered URLs. Keep measuring Phase 4 for 28 days;
+Finland Migri remains the next source candidate and requires a 5-second crawl delay.
 
 ## Open threads
 - US/AU/IE sources WAF-blocked to honest bots — owner-decision item (documented in DEPLOYMENT_GUIDE).

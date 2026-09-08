@@ -111,6 +111,14 @@ paths. Phase 4 also added unique route context to three high-opportunity New Zea
 service pages. Two permanent dated report issues add original historical analysis.
 The 40-page depth target and traffic-gated ad applications remain unfinished.
 
+**Status 2026-09-07 — local candidate:** a second query-led cohort improves four
+existing Canadian near-win pages already averaging positions 4.3–10.7, with no
+new URLs or changed official values. It also corrects stale visitor-visa biometrics
+copy after fresh IRCC primary-source review and applies honest lastmod only to the
+affected visitor family, two guides and the Pakistan page. Local build, audit,
+machine-interface and responsive checks pass; commit/push/deployment remain behind
+the owner's release gate.
+
 ## Phase R6 — Machine-skin distribution
 
 CSV downloads per dataset + per-page Dataset schema → Google Dataset Search; MCP directory submissions (PulseMCP, mcp.so, Glama, Smithery — owner forms); publish the MCP server to npm (public repo requirement met); data-license page (free personal/attribution; commercial licensed — the negotiation hook).

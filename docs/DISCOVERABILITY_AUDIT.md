@@ -2,15 +2,16 @@
 
 _Implemented and production-verified initially on 2026-08-23, expanded by the
 Phase 1 trust/growth release on 2026-08-25, the IRCC forward-looking release on
-2026-08-27, Norway UDI on 2026-08-31, and Phase 3 reports/RSS on 2026-09-04.
-Current production is commit `d635236`, deployed in GitHub Actions run
-`33934940206` to `dbdfa613.govwait.pages.dev`._
+2026-08-27, Norway UDI on 2026-08-31, Phase 3 reports/RSS on 2026-09-04, and
+Phase 4 query-led content on 2026-09-06. Current production is commit `8a512aa`,
+deployed in GitHub Actions run `34073350458` to
+`51f5121a.govwait.pages.dev`. Phase 4B remains a local candidate._
 
 ## Search-indexing policy
 
-- Production builds 2,107 HTML pages, including the 404 page.
-- 638 pages currently have enough distinct, useful content to request indexing:
-  74 general/country hubs, guides, policies, reports, and reviewed Canadian
+- Production builds 2,108 HTML pages, including the 404 page.
+- 639 pages currently have enough distinct, useful content to request indexing:
+  75 general/country hubs, guides, policies, reports, and reviewed Canadian
   service pages; 443 Canadian applicant-country pages with a numeric official
   value, 77 UK service pages, the first 25 curated New Zealand visa pages, and
   19 complete Norway UDI table routes. Each New Zealand page combines its official
@@ -46,10 +47,10 @@ index a large family of low-information query variants.
   description, one H1, a self-canonical, and working internal links. CI blocks a
   deployment if these guarantees, sitemap membership, honest child `lastmod`,
   crawler policy, or JSON-LD validity regress.
-- The IndexNow notifier submits the exact changed public pages only after the
-  corresponding production deployment succeeds. It can also submit the full
-  current 638-URL indexable set and respects the protocol's 10,000-URL request
-  limit.
+- The IndexNow notifier submits mapped changed public pages only after the
+  corresponding production deployment succeeds. For a shared-template change it
+  safely falls back to the full current 639-URL indexable set, and it respects the
+  protocol's 10,000-URL request limit.
 
 ## Cloudflare edge policy
 
@@ -72,19 +73,18 @@ it does not prove search indexing, citations, rankings, traffic, or revenue.
 ## Acceptance receipt
 
 ```text
-[seo-audit] 2107 HTML pages; 638 indexable; 638 sitemap URLs
+[seo-audit] 2108 HTML pages; 639 indexable; 639 sitemap URLs
 [seo-audit] PASS
 [conformance] checked 2611 API files
 [conformance] PASS
 MCP SMOKE TEST: ALL PASS, including Norway, New Zealand and IRCC semantic checks
-IndexNow full-set dry run: 638 indexable URLs
-Production deploy: commit d635236; GitHub Actions run 33934940206 succeeded
-Cloudflare Pages deployment: https://dbdfa613.govwait.pages.dev
-Public edge: all three new Phase 3 pages, RSS, APIs, OpenAPI, robots.txt, llms.txt,
+IndexNow full-set dry run: 639 indexable URLs
+Production deploy: commit 8a512aa; GitHub Actions run 34073350458 succeeded
+Cloudflare Pages deployment: https://51f5121a.govwait.pages.dev
+Public edge: all four Phase 4 pages, RSS, APIs, OpenAPI, robots.txt, llms.txt,
 canonical/artifact parity, www redirect, and root/five child sitemaps verified
-Live child sitemap counts: hubs 74 + CA 443 + GB 77 + NZ 25 + NO 19 = 638 URLs
+Live child sitemap counts: hubs 75 + CA 443 + GB 77 + NZ 25 + NO 19 = 639 URLs
 IndexNow change submission after deployment: 646 URLs, HTTP 200 receipt
-  (638 indexable pages + RSS + llms.txt + six sitemap documents)
 Existing Google sitemap index: https://govwait.com/sitemap.xml already registered;
 Google reports Sitemap index / Success; Bing reports Submitted / Processing
 Google priority crawl requests accepted for all owner-approved URLs, including
@@ -96,6 +96,7 @@ Google priority crawl requests accepted for all owner-approved URLs, including
   - https://govwait.com/guides/how-new-zealand-visa-processing-times-work/
   - https://govwait.com/reports/canada/2026-08-26/
   - https://govwait.com/guides/new-zealand-2021-resident-visa-processing-time/
+  - https://govwait.com/guides/new-zealand-critical-purpose-visitor-visa-processing-time/
 ```
 
 ## Phase 2 production expansion
@@ -156,3 +157,31 @@ Google priority crawl requests accepted for all owner-approved URLs, including
 - Google accepted the Canada report and New Zealand guide into its priority crawl
   queue. These are request receipts, not confirmed indexing, rankings, traffic,
   ad approval, or revenue.
+
+## Phase 4 query-led expansion
+
+- Added the source-backed Critical Purpose Visitor Visa closed-route guide and
+  unique route context to three existing New Zealand service pages selected from
+  actual Search Console demand.
+- Production build: 2,108 HTML pages; 639 intentionally indexable pages; exactly
+  639 sitemap URLs. Only the four substantively edited URLs received the September
+  6 editorial date.
+- Commit `8a512aa` deployed in run `34073350458` to
+  `51f5121a.govwait.pages.dev`; public-edge, crawler, canonical, sitemap and
+  artifact-parity checks passed. IndexNow returned HTTP 200 for 646 URLs, and
+  Google accepted the one approved new-guide crawl request. These are discovery
+  receipts, not confirmed indexing or traffic.
+
+## Phase 4B local candidate
+
+- Improves four existing Canadian near-win pages selected from Search Console
+  positions 4.3–10.7. It creates no new URL and changes no official value.
+- Fresh IRCC review found stale visitor-visa biometrics wording. The correction
+  applies to all 211 rendered visitor-country pages and two visitor guides; the
+  171 indexable visitor-country pages, the Pakistan near-win page and both guides
+  receive an honest September 7 `lastmod`.
+- Blocking checks enforce the four-page metadata/content additions, the visitor-
+  family correction, official links, sitemap dates and absence of the stale claim.
+- Local acceptance remains 2,108 HTML pages, 639 indexable pages and 639 sitemap
+  URLs. No commit, push, deployment, IndexNow request or Google crawl request has
+  occurred; production remains Phase 4 pending owner approval.

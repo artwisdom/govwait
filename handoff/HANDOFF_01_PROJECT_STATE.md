@@ -258,6 +258,12 @@ Local Node is 20.19.6 (Astro pinned to v4 for this reason; CI also pins Node 20)
 - Phase 4 adds a Search Console-led Critical Purpose closed-route guide and unique
   route context on three high-opportunity New Zealand service pages, protected by
   explicit sitemap/content assertions. Its Google request is a crawl hint only.
+- Phase 4B is a local candidate: it improves four already-ranking Canadian pages
+  without new URLs, adds transparent same-snapshot comparisons or refugee-stage
+  context, and corrects the current IRCC visitor-visa biometrics boundary across
+  that route family and two visitor guides. The correction and four-page cohort
+  have honest September 7 sitemap dates and blocking audit coverage. Production
+  remains Phase 4 until the owner approves deployment.
 
 ## 8. QA ritual before any push that touches pipeline or site
 
