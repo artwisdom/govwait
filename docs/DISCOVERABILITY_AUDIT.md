@@ -2,10 +2,10 @@
 
 _Implemented and production-verified initially on 2026-08-23, expanded by the
 Phase 1 trust/growth release on 2026-08-25, the IRCC forward-looking release on
-2026-08-27, Norway UDI on 2026-08-31, Phase 3 reports/RSS on 2026-09-04, and
-Phase 4 query-led content on 2026-09-06. Current production is commit `8a512aa`,
-deployed in GitHub Actions run `34073350458` to
-`51f5121a.govwait.pages.dev`. Phase 4B remains a local candidate._
+2026-08-27, Norway UDI on 2026-08-31, Phase 3 reports/RSS on 2026-09-04, Phase 4
+query-led content on 2026-09-06, and Phase 4B Canadian near-wins on 2026-09-07.
+Current production is commit `fa73c2f`, deployed in GitHub Actions run
+`34176619821` to `2e3649f8.govwait.pages.dev`._
 
 ## Search-indexing policy
 
@@ -172,7 +172,7 @@ Google priority crawl requests accepted for all owner-approved URLs, including
   Google accepted the one approved new-guide crawl request. These are discovery
   receipts, not confirmed indexing or traffic.
 
-## Phase 4B local candidate
+## Phase 4B Canadian near-win production verification
 
 - Improves four existing Canadian near-win pages selected from Search Console
   positions 4.3–10.7. It creates no new URL and changes no official value.
@@ -182,6 +182,15 @@ Google priority crawl requests accepted for all owner-approved URLs, including
   receive an honest September 7 `lastmod`.
 - Blocking checks enforce the four-page metadata/content additions, the visitor-
   family correction, official links, sitemap dates and absence of the stale claim.
-- Local acceptance remains 2,108 HTML pages, 639 indexable pages and 639 sitemap
-  URLs. No commit, push, deployment, IndexNow request or Google crawl request has
-  occurred; production remains Phase 4 pending owner approval.
+- Production acceptance remains 2,108 HTML pages, 639 indexable pages and 639
+  matching sitemap URLs. Commit `fa73c2f` passed run `34176619821` and deployed to
+  `2e3649f8.govwait.pages.dev`.
+- All four target pages and both corrected guides return HTTP 200 with their
+  intended canonicals and current copy. Representative visitor and refugee pages
+  match the deployment artifact byte-for-byte; the five child sitemaps contain
+  639 unique URLs, crawler files are available, and the path-preserving `www`
+  redirect remains correct.
+- IndexNow accepted 645 affected public/discovery URLs with HTTP 200. No manual
+  Google request was made because Search Console had already discovered the four
+  target URLs. These are discovery receipts, not confirmed indexing, ranking,
+  traffic, ad approval, or revenue.

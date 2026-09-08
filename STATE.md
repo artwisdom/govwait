@@ -30,15 +30,15 @@ All dependencies install locally (`node_modules` inside project). No sudo or mac
 - [x] Norway production release: commit `a9100bb`, deployment run `33462368754`, Cloudflare artifact `74bd35d1.govwait.pages.dev`, all 22 Norway URLs publicly green, and a 642-URL IndexNow HTTP 200 receipt
 - [x] Phase 3 growth release: permanent Canada and New Zealand change issues, complete change tables, report RSS, a demand-proven New Zealand 2021 Resident Visa guide, honest editorial dates, and expanded crawler/IndexNow coverage; commit `d635236`, run `33934940206`, and both approved Google crawl requests are verified
 - [x] Phase 4 query-led growth release: commit `8a512aa`, deployment run `34073350458`, Cloudflare artifact `51f5121a.govwait.pages.dev`, 639/639 production sitemap audit, IndexNow HTTP 200, and the approved Google crawl request are verified
-- [x] Phase 4B Canadian near-win candidate: four demonstrated Search Console pages have tighter query-matching metadata, unique same-snapshot or route-stage context and official next-step links; IRCC's changed visitor biometrics boundary is corrected across that route family and two visitor guides; all local release gates pass
+- [x] Phase 4B Canadian near-win production release: commit `fa73c2f`, deployment run `34176619821`, Cloudflare artifact `2e3649f8.govwait.pages.dev`, four demonstrated Search Console pages with stronger query-matching content, the IRCC visitor-biometrics correction, 639/639 production sitemap audit, public-edge verification, and a 645-URL IndexNow HTTP 200 receipt
 
-## Deployment status (verified through 2026-09-06)
+## Deployment status (verified through 2026-09-07)
 - Repo LIVE: https://github.com/artwisdom/govwait (public, main)
 - Domain: `govwait.com` registered in Cloudflare Registrar; auto-renew and registrar lock enabled
 - Cloudflare Pages: project `govwait` live; `govwait.com` and `www.govwait.com` active over HTTPS
 - Email: `contact@govwait.com` routing active through Cloudflare Email Routing
 - AI crawler policy: listed search/citation crawlers allowed; Managed robots.txt off (see `docs/CLOUDFLARE_CRAWL_POLICY.md`)
-- GitHub deployment: Phase 4 commit `8a512aa` deployed green in `deploy-site` run `34073350458` (`51f5121a.govwait.pages.dev`); the blocking 2,108-page production build and 639/639 SEO-sitemap audit passed before Cloudflare publication
+- GitHub deployment: Phase 4B commit `fa73c2f` deployed green in `deploy-site` run `34176619821` (`2e3649f8.govwait.pages.dev`); the blocking 2,108-page production build and 639/639 SEO-sitemap audit passed before Cloudflare publication
 - GitHub Pages: disabled; Cloudflare Pages is the sole production host
 - refresh-data workflow: ACTIVE; cron Tue+Fri 14:00 UTC. The 2026-09-04 run failed
   closed on UDI `robots.txt` HTTP 403 and exported nothing; production still serves
@@ -79,11 +79,12 @@ All dependencies install locally (`node_modules` inside project). No sudo or mac
 - Current discovery notifications: the root sitemap already registered with Google
   and Bing advertises five child sitemaps containing 75 hub/editorial/report/Canada-service
   URLs, 443 Canada applicant-country URLs, 77 UK URLs, 25 New Zealand URLs, and
-  19 Norway URLs. Phase 4 production run `34073350458` notified IndexNow of 646
-  affected public/discovery URLs and received HTTP 200. Google also accepted the
-  owner-approved priority-crawl request for the new Critical Purpose Visitor Visa
-  guide, in addition to the earlier Canada issue and New Zealand 2021 Resident
-  Visa guide requests. These
+  19 Norway URLs. Phase 4B production run `34176619821` notified IndexNow of 645
+  affected public/discovery URLs and received HTTP 200. No manual Google request
+  was made for Phase 4B because its four target URLs were already discovered in
+  Search Console. Google previously accepted the owner-approved Critical Purpose
+  Visitor Visa guide, Canada issue and New Zealand 2021 Resident Visa guide crawl
+  requests. These
   are discovery/submission receipts, not proof of indexing, ranking, traffic,
   or revenue.
 
@@ -165,13 +166,44 @@ accepted 646 affected public/discovery URLs with HTTP 200. Google added the new
 guide to its priority crawl queue. These are deployment and submission receipts,
 not proof of indexing, rankings, traffic, ad approval or revenue.
 
+## Phase 4B Canadian near-win release (production-verified 2026-09-07)
+
+Search Console already showed impressions and average positions 4.3–10.7 for
+Private Refugee from Pakistan and Visitor Visa from Qatar, Colombia and Nepal.
+Those four existing URLs now have query-matching titles, descriptions and H1s,
+plus either a transparent same-snapshot comparison or source-backed refugee-stage
+context and direct official next-step links. No URL or official value changed.
+
+A fresh IRCC primary-source review also found that the current visitor-visa guide
+says the displayed processing time excludes the time needed to give biometrics.
+The factual correction applies to all 211 rendered visitor-country pages and the
+India and Philippines visitor guides. The 171 indexable visitor-country pages,
+the Pakistan near-win page and both guides receive an honest September 7
+`lastmod`; unrelated URLs retain their existing dates.
+
+Release receipt: **2,318 active entities / 9 sources / 4 governments; 2,108 HTML
+pages; 639 intentionally indexable pages and 639 matching sitemap URLs; 2,611
+API files.** Parser tests 12/12, validation, static build, SEO and XML checks, API
+conformance, MCP build/smoke, 639-URL IndexNow dry run, `git diff --check`, and
+desktop/mobile rendered checks passed.
+
+Commit `fa73c2f` passed GitHub Actions run `34176619821` and deployed to
+`2e3649f8.govwait.pages.dev`. The apex and artifact matched byte-for-byte on a
+representative visitor page and the refugee page; all four target pages, both
+corrected guides, crawler files, five child sitemaps with 639 unique URLs,
+canonicals and the path-preserving `www` redirect passed public checks. IndexNow
+accepted 645 affected public/discovery URLs with HTTP 200. No manual Google crawl
+request was made. These are deployment and discovery receipts, not proof of
+indexing, rankings, traffic, ad approval or revenue.
+
 ## Next step
 
-Owner approval is required before committing, pushing and deploying the Phase 4B
-Canadian near-win candidate. After deployment, verify the exact Cloudflare artifact,
-public pages, sitemap dates and IndexNow receipt. Do not submit manual Google crawl
-requests for these already-discovered URLs. Keep measuring Phase 4 for 28 days;
-Finland Migri remains the next source candidate and requires a 5-second crawl delay.
+Phase 4B is live and needs no owner action. Recheck its four target URLs after 28
+days rather than resubmitting already-discovered URLs to Google. The next optional
+growth gate is Phase 5 authority/distribution using the existing reports, API and
+dataset; any external directory submission or outreach requires separate owner
+approval. Finland Migri remains the next source candidate and requires a 5-second
+crawl delay.
 
 ## Open threads
 - US/AU/IE sources WAF-blocked to honest bots — owner-decision item (documented in DEPLOYMENT_GUIDE).

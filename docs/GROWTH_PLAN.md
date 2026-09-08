@@ -113,7 +113,7 @@ priority-crawl request for the new guide. These receipts are not indexing proof.
 
 ### Phase 4B — Canadian near-win cohort
 
-Status: local release candidate on 2026-09-07; not committed, pushed or deployed.
+Status: production-verified on 2026-09-07 at commit `fa73c2f`.
 
 This second bounded cohort improves four existing Canadian pages that already have
 Search Console impressions and average positions between 4.3 and 10.7:
@@ -137,13 +137,19 @@ a factual correction, not a scaled SEO cohort. The 171 indexable visitor-country
 pages, the Pakistan near-win page and two corrected guides receive an honest
 September 7 editorial `lastmod`; unrelated URLs do not.
 
-Local acceptance: 2,108 HTML pages, 639 indexable pages, 639 matching sitemap URLs,
+Release acceptance: 2,108 HTML pages, 639 indexable pages, 639 matching sitemap URLs,
 2,611 API files, parser tests 12/12, static build, SEO and XML checks, API
 conformance, MCP build/smoke, 639-URL conservative IndexNow dry run, `git diff
---check`, and responsive rendered checks are green. Production remains Phase 4
-commit `8a512aa` until the owner approves this release.
+--check`, and responsive rendered checks are green. Commit `fa73c2f` passed
+deployment run `34176619821` and published to `2e3649f8.govwait.pages.dev`. The
+apex matched the artifact byte-for-byte on representative visitor and refugee
+pages; all four target pages, both corrected guides, crawler files, five child
+sitemaps with 639 unique URLs, canonicals and the path-preserving `www` redirect
+passed public checks. IndexNow accepted 645 affected public/discovery URLs with
+HTTP 200. No manual Google crawl request was made because the four target URLs
+were already discovered. These receipts are not indexing or traffic proof.
 
-After deployment, recheck the four-page cohort after 28 days. Measurement takes
+Recheck the four-page cohort after 28 days. Measurement takes
 time even when implementation does not; keep shipping bounded cohorts instead of
 waiting idle. Google already knows these URLs from Search Console impressions, so
 manual priority-crawl requests would add no useful evidence.

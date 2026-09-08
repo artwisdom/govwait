@@ -111,13 +111,15 @@ paths. Phase 4 also added unique route context to three high-opportunity New Zea
 service pages. Two permanent dated report issues add original historical analysis.
 The 40-page depth target and traffic-gated ad applications remain unfinished.
 
-**Status 2026-09-07 — local candidate:** a second query-led cohort improves four
+**Status 2026-09-07 — production-verified:** a second query-led cohort improves four
 existing Canadian near-win pages already averaging positions 4.3–10.7, with no
 new URLs or changed official values. It also corrects stale visitor-visa biometrics
 copy after fresh IRCC primary-source review and applies honest lastmod only to the
 affected visitor family, two guides and the Pakistan page. Local build, audit,
-machine-interface and responsive checks pass; commit/push/deployment remain behind
-the owner's release gate.
+machine-interface and responsive checks pass. Commit `fa73c2f` deployed in run
+`34176619821` to `2e3649f8.govwait.pages.dev`; public artifact/canonical/sitemap/
+crawler checks passed and IndexNow accepted 645 URLs with HTTP 200. No manual
+Google request was made for the already-discovered target URLs.
 
 ## Phase R6 — Machine-skin distribution
 

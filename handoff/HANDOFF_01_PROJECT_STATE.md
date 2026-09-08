@@ -208,6 +208,24 @@ Local Node is 20.19.6 (Astro pinned to v4 for this reason; CI also pins Node 20)
   affected URLs with HTTP 200, and Google added the new guide to its priority crawl
   queue. These receipts do not prove indexing, rankings, traffic or revenue.
 
+### Phase 4B Canadian near-win production proof
+
+- Improves four existing Canadian URLs with demonstrated Search Console demand:
+  Private Refugee from Pakistan and Visitor Visa from Qatar, Colombia and Nepal.
+  No URL or official value changed.
+- Corrects IRCC's current visitor-visa biometrics boundary across all 211 rendered
+  visitor-country pages and the India/Philippines guides. The 171 indexable visitor
+  pages, Pakistan near-win and both guides receive an honest September 7 lastmod.
+- Acceptance: 12 parser tests; validation; 2,108 HTML / 639 indexable / 639 sitemap
+  URLs; 2,611-file API conformance; MCP build/smoke; valid RSS/sitemaps; 639-URL
+  IndexNow dry run; diff check; desktop/mobile rendered QA.
+- Commit `fa73c2f` passed run `34176619821` and deployed to
+  `2e3649f8.govwait.pages.dev`. Representative visitor and refugee pages matched
+  the apex byte-for-byte; all four target pages, both guides, crawler files, 639
+  unique sitemap URLs, canonicals and the path-preserving `www` redirect passed
+  public checks. IndexNow accepted 645 URLs with HTTP 200. No manual Google crawl
+  request was made; these receipts do not prove indexing, rankings or traffic.
+
 ## 6. Traps and constraints (learned the hard way — do not relearn)
 
 1. **WAF-blocked governments** (403 to honest bots; NEVER UA-spoof): travel.state.gov,
@@ -258,12 +276,13 @@ Local Node is 20.19.6 (Astro pinned to v4 for this reason; CI also pins Node 20)
 - Phase 4 adds a Search Console-led Critical Purpose closed-route guide and unique
   route context on three high-opportunity New Zealand service pages, protected by
   explicit sitemap/content assertions. Its Google request is a crawl hint only.
-- Phase 4B is a local candidate: it improves four already-ranking Canadian pages
+- Phase 4B is production-verified: it improves four already-ranking Canadian pages
   without new URLs, adds transparent same-snapshot comparisons or refugee-stage
   context, and corrects the current IRCC visitor-visa biometrics boundary across
   that route family and two visitor guides. The correction and four-page cohort
-  have honest September 7 sitemap dates and blocking audit coverage. Production
-  remains Phase 4 until the owner approves deployment.
+  have honest September 7 sitemap dates and blocking audit coverage. Commit
+  `fa73c2f`, run `34176619821`, artifact `2e3649f8.govwait.pages.dev`, public-edge
+  checks and the 645-URL IndexNow HTTP 200 receipt are recorded above.
 
 ## 8. QA ritual before any push that touches pipeline or site
 
