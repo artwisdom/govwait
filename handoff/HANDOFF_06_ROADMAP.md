@@ -123,17 +123,20 @@ Google request was made for the already-discovered target URLs.
 
 ## Phase R6 — Machine-skin distribution
 
-CSV downloads per dataset + per-page Dataset schema → Google Dataset Search; MCP directory submissions (PulseMCP, mcp.so, Glama, Smithery — owner forms); publish the MCP server to npm (public repo requirement met); data-license page (free personal/attribution; commercial licensed — the negotiation hook).
+CSV downloads plus canonical Dataset schema for machine discovery; MCP directory submissions (PulseMCP, mcp.so, Glama, Smithery — owner forms); publish a self-contained MCP server to npm; maintain source-specific data-reuse guidance and monetize GovWait-owned delivery, formatting or support rather than claiming exclusive rights in government facts.
 **Accept:** CSVs linked from hubs; Dataset Search shows the site; ≥2 directory listings live.
 
-**Status 2026-09-08 — Phase 5A local candidate:** the canonical dataset hub,
+**Status 2026-09-08 — Phase 5A production-verified:** the canonical dataset hub,
 Dataset structured data, current/history/forward/source CSVs, metadata endpoint,
 root README, OpenAPI/`llms.txt` integration and source-specific reuse notice are
-built and locally verified. The candidate has 2,110 HTML pages, 641 matching
-indexable/sitemap URLs and 2,616 checked API/download files. Google Dataset
-Search appearance is not claimed or guaranteed. MCP packaging is not yet
-self-contained; npm publication, official MCP Registry publication and all other
-directory submissions remain separate owner/account gates.
+live at commit `fd7ba67`, deployed by run `34300806761` to
+`ca3bad6a.govwait.pages.dev`. The release passed 2,110 HTML pages, 641 matching
+indexable/sitemap URLs, 2,616 checked API/download files, artifact/apex checks and
+a 656-URL IndexNow HTTP 200 receipt. Google Dataset Search appearance is not
+claimed or guaranteed, and no Google crawl request has been made for `/data/`.
+MCP packaging is not yet self-contained; npm publication, official MCP Registry
+publication and all other directory submissions remain separate owner/account
+gates.
 
 ## Phase R7 — Scale sources (Norway → Finland → Sweden → Denmark → Netherlands)
 

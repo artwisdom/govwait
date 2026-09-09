@@ -48,8 +48,22 @@ Cloudflare deployment, IndexNow submission or Google crawl request has occurred.
 | IndexNow release set | ✅ DRY RUN | Full-site mode selected 641 public human URLs. No request was sent. Machine endpoints are included by the commit-diff path used after an approved release. |
 | Reuse risk gate | 🟡 YELLOW / medium | Severity 3 × likelihood 2 = 6. UK and New Zealand publish explicit open terms; Canada requires resource-specific checking for commercial redistribution, and no explicit UDI waiting-page reuse licence was identified. See `docs/DATA_REUSE_RISK_ASSESSMENT.md`; this is not legal advice. |
 
-### Release decision
+### Release decision at the local gate
 
 Phase 5A is locally ready for the owner's explicit deployment approval. A
 successful deployment would prove publication and crawlability, not indexing,
 rankings, traffic, advertising approval, demand or revenue.
+
+### Production verification
+
+The owner approved the release. Commit `fd7ba67` passed GitHub Actions run
+`34300806761` and deployed to `ca3bad6a.govwait.pages.dev`. The
+production-configured local build matched the artifact byte-for-byte on the two
+new pages and dataset metadata. The apex matched the artifact, after normalizing
+Cloudflare's expected email-address obfuscation on `/data-license/`. Public checks
+confirmed HTTP 200 and correct content types for the pages, JSON, CSV and OpenAPI;
+the four CSV row counts; Dataset markup and canonicals; `llms.txt`, `robots.txt`,
+five child sitemaps with 641 unique URLs; the public README; and the
+path/query-preserving `www` redirect. IndexNow accepted 656 affected URLs with
+HTTP 200. No Google crawl request was made. None of these receipts proves
+indexing, ranking, traffic, advertising approval, demand or revenue.

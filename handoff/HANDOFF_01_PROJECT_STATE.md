@@ -1,7 +1,7 @@
 # HANDOFF 01 — Project State & Technical Deep Dive
 
 _Everything a coding agent needs to operate GovWait. Current as of 2026-09-08;
-Phase 4B is production-verified and Phase 5A is a local release candidate._
+Phase 5A is production-verified._
 
 ## 1. The one-sentence architecture
 
@@ -291,8 +291,10 @@ Local Node is 20.19.6 (Astro pinned to v4 for this reason; CI also pins Node 20)
   checks and the 645-URL IndexNow HTTP 200 receipt are recorded above.
 - Phase 5A adds a canonical dataset landing page, four CSV distributions, dataset
   metadata, a root README, source-specific reuse guidance and expanded blocking
-  checks. The local receipt is 2,110 HTML / 641 indexable / 641 sitemap URLs and
-  2,616 checked API/download files. It is not yet committed or deployed.
+  checks. Commit `fd7ba67`, run `34300806761`, artifact
+  `ca3bad6a.govwait.pages.dev`, the 2,110 HTML / 641 indexable / 641 sitemap gate,
+  2,616 checked API/download files, public-edge checks and the 656-URL IndexNow
+  HTTP 200 receipt are verified. No Google crawl request was made for `/data/`.
 
 ## 8. QA ritual before any push that touches pipeline or site
 

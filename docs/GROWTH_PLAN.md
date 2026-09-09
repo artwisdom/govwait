@@ -158,7 +158,7 @@ Gate: no mass page generation. Google explicitly recommends people-first, origin
 
 ## Phase 5 — authority and distribution
 
-Status: **Phase 5A local release candidate; publication pending owner approval**.
+Status: **Phase 5A production-verified on 2026-09-08 at commit `fd7ba67`**.
 
 The first authority slice makes the existing data easier for researchers, search
 engines and AI tools to understand and cite without generating thin pages:
@@ -175,10 +175,18 @@ engines and AI tools to understand and cite without generating thin pages:
 - blocking checks for CSV counts/columns, dataset metadata, structured data,
   sitemap membership, honest September 8 editorial dates and `llms.txt` links.
 
-The local candidate contains 2,110 HTML pages, 641 intentionally indexable pages
-and 641 matching sitemap URLs. API conformance checks 2,616 files, including four
-CSV distributions and their metadata. These are local build receipts, not public
-deployment, indexing, traffic or revenue evidence.
+Release acceptance: the local and GitHub gates passed 14 parser/history tests, a
+2,110-page build, 641/641 SEO-to-sitemap audit, 2,616-file API/download
+conformance, valid XML, MCP build with all 15 smoke assertions, an IndexNow dry
+run and responsive rendered checks. Commit `fd7ba67` passed deployment run
+`34300806761` and published to `ca3bad6a.govwait.pages.dev`. The
+production-configured build matched the artifact byte-for-byte; the apex passed
+checks for the dataset and licence pages, four CSVs, dataset metadata, OpenAPI,
+`llms.txt`, `robots.txt`, 641 unique sitemap URLs, canonical links and the
+path-preserving `www` redirect. The public GitHub README matched the release, and
+IndexNow accepted 656 affected URLs with HTTP 200. No Google crawl request has
+been made for `/data/`. These are publication and discovery receipts, not
+indexing, traffic or revenue evidence.
 
 Phase 5B remains separate: make the MCP package self-contained, choose a software
 licence, publish it to npm with owner account approval, and only then publish

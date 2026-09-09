@@ -31,15 +31,15 @@ All dependencies install locally (`node_modules` inside project). No sudo or mac
 - [x] Phase 3 growth release: permanent Canada and New Zealand change issues, complete change tables, report RSS, a demand-proven New Zealand 2021 Resident Visa guide, honest editorial dates, and expanded crawler/IndexNow coverage; commit `d635236`, run `33934940206`, and both approved Google crawl requests are verified
 - [x] Phase 4 query-led growth release: commit `8a512aa`, deployment run `34073350458`, Cloudflare artifact `51f5121a.govwait.pages.dev`, 639/639 production sitemap audit, IndexNow HTTP 200, and the approved Google crawl request are verified
 - [x] Phase 4B Canadian near-win production release: commit `fa73c2f`, deployment run `34176619821`, Cloudflare artifact `2e3649f8.govwait.pages.dev`, four demonstrated Search Console pages with stronger query-matching content, the IRCC visitor-biometrics correction, 639/639 production sitemap audit, public-edge verification, and a 645-URL IndexNow HTTP 200 receipt
-- [ ] Phase 5A dataset authority release: local candidate adds a canonical dataset hub, four generated CSV distributions, dataset metadata, fuller OpenAPI/AI discovery, a public-repository README, and source-specific reuse guidance; 2,110 HTML / 641 indexable / 641 sitemap URLs and 2,616-file API conformance pass locally, while commit, push, Cloudflare deployment and IndexNow remain owner-gated
+- [x] Phase 5A dataset authority release: commit `fd7ba67`, deployment run `34300806761`, Cloudflare artifact `ca3bad6a.govwait.pages.dev`, canonical dataset hub, four generated CSV distributions, dataset metadata, fuller OpenAPI/AI discovery, public-repository README, source-specific reuse guidance, 641/641 public sitemap verification, and a 656-URL IndexNow HTTP 200 receipt
 
-## Deployment status (verified through 2026-09-07)
+## Deployment status (verified through 2026-09-08)
 - Repo LIVE: https://github.com/artwisdom/govwait (public, main)
 - Domain: `govwait.com` registered in Cloudflare Registrar; auto-renew and registrar lock enabled
 - Cloudflare Pages: project `govwait` live; `govwait.com` and `www.govwait.com` active over HTTPS
 - Email: `contact@govwait.com` routing active through Cloudflare Email Routing
 - AI crawler policy: listed search/citation crawlers allowed; Managed robots.txt off (see `docs/CLOUDFLARE_CRAWL_POLICY.md`)
-- GitHub deployment: Phase 4B commit `fa73c2f` deployed green in `deploy-site` run `34176619821` (`2e3649f8.govwait.pages.dev`); the blocking 2,108-page production build and 639/639 SEO-sitemap audit passed before Cloudflare publication
+- GitHub deployment: Phase 5A commit `fd7ba67` deployed green in `deploy-site` run `34300806761` (`ca3bad6a.govwait.pages.dev`); the blocking 2,110-page production build and 641/641 SEO-sitemap audit passed before Cloudflare publication
 - GitHub Pages: disabled; Cloudflare Pages is the sole production host
 - refresh-data workflow: ACTIVE; cron Tue+Fri 14:00 UTC. The 2026-09-04 run failed
   closed on UDI `robots.txt` HTTP 403 and exported nothing; production still serves
@@ -197,29 +197,34 @@ accepted 645 affected public/discovery URLs with HTTP 200. No manual Google craw
 request was made. These are deployment and discovery receipts, not proof of
 indexing, rankings, traffic, ad approval or revenue.
 
-## Phase 5A dataset authority candidate (local, 2026-09-08)
+## Phase 5A dataset authority release (production-verified, 2026-09-08)
 
-The next bounded release turns the existing machine layer into a citable public
+This bounded release turns the existing machine layer into a citable public
 dataset without adding programmatic SEO pages. It generates current, append-only
 history, forward-looking and source-register CSVs from the same validated exports
 as the JSON API; publishes a metadata endpoint and canonical `/data/` page with
 Dataset structured data; adds source-specific reuse terms; and gives the public
 repository a complete root README.
 
-Current local receipt: **2,318 routes / 4,346 observations / 3,629 projection rows
+Production receipt: **2,318 routes / 4,346 observations / 3,629 projection rows
 / 9 sources; 2,110 HTML pages; 641 intentionally indexable pages and 641 matching
-sitemap URLs; 2,616 API/download files checked.** The static build, blocking SEO
-audit and expanded API conformance pass. Deployment, public-edge verification and
-IndexNow have not happened and remain behind explicit owner approval.
+sitemap URLs; 2,616 API/download files checked.** Commit `fd7ba67` passed run
+`34300806761` and deployed to `ca3bad6a.govwait.pages.dev`. The production-configured
+local build matched the artifact byte-for-byte for `/data/`, `/data-license/` and
+dataset metadata; the apex matched the artifact, allowing for Cloudflare's email
+address obfuscation on the licensing page. All four CSVs, metadata, OpenAPI,
+crawler files, 641 unique sitemap URLs, canonical links and the path-preserving
+`www` redirect passed public checks. IndexNow accepted 656 affected URLs with HTTP
+200. No Google priority-crawl request has been made for `/data/`.
 
 ## Next step
 
-Approve the Phase 5A commit, push and Cloudflare deployment. After the public edge
-passes, record IndexNow as a discovery receipt and separately decide whether to
-request Google priority crawling for the new `/data/` URL. MCP/npm/registry
-publication and any external directory submission remain separate account and
-publication gates. Finland Migri remains the next source candidate and requires a
-5-second crawl delay.
+The next smallest discovery action is one owner-approved Google priority-crawl
+request for the new `/data/` URL. After that, Phase 5B can make the MCP package
+self-contained locally; choosing a software licence, publishing to npm, publishing
+to the official MCP Registry and submitting to other directories remain separate
+account/publication gates. Finland Migri remains the next source candidate and
+requires a 5-second crawl delay.
 
 ## Open threads
 - US/AU/IE sources WAF-blocked to honest bots — owner-decision item (documented in DEPLOYMENT_GUIDE).

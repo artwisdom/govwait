@@ -3,7 +3,7 @@
 _Prepared 2026-08-21/22 by Claude (Fable 5) for transfer of day-to-day development to
 Codex. The owner (Michael) manages his web projects there; this package is written so
 a coding agent with zero context can operate this project safely and grow it. Operational
-status refreshed 2026-09-08 after the Phase 4B release and Phase 5A local build._
+status refreshed 2026-09-08 after the production-verified Phase 5A release._
 
 ## What GovWait is, in one paragraph
 
@@ -137,8 +137,9 @@ style preferences.
   indexable/sitemap URLs at commit `fa73c2f`; run `34176619821` passed, Cloudflare
   artifact `2e3649f8.govwait.pages.dev` matched the apex, and IndexNow accepted
   645 affected URLs. No manual Google request was made for already-discovered URLs.
-- Phase 5A is a **local candidate only**: `/data/`, four generated CSV downloads,
-  dataset metadata, a root README and source-specific reuse notice bring the
-  candidate to 2,110 HTML pages, 641 indexable/sitemap URLs and 2,616 checked
-  API/download files. No commit, deployment, IndexNow receipt, indexing, traffic
-  or revenue is claimed.
+- Phase 5A is **production-verified**: commit `fd7ba67` passed run `34300806761`
+  and deployed `/data/`, four generated CSV downloads, dataset metadata, a root
+  README and source-specific reuse guidance to `ca3bad6a.govwait.pages.dev`.
+  The 2,110-page build, 641/641 sitemap gate, 2,616-file API/download check,
+  artifact/apex checks and 656-URL IndexNow HTTP 200 receipt passed. No Google
+  crawl request, indexing, traffic, ad approval or revenue is claimed.

@@ -7,7 +7,7 @@ directory submission and actual discovery. None proves the next stage.
 
 ## Phase 5A — citable dataset surface
 
-Status: **local release candidate; deployment not yet authorized**.
+Status: **production-verified on 2026-09-08 at commit `fd7ba67`**.
 
 - [x] Add a canonical `/data/` landing page with Dataset structured data.
 - [x] Generate current, history, forward-looking and source-register CSV files
@@ -18,11 +18,18 @@ Status: **local release candidate; deployment not yet authorized**.
 - [x] Replace the blanket data-licence claim with source-specific guidance.
 - [x] Add blocking SEO checks for the landing page, structured data, downloads,
   sitemap dates and AI-discovery file.
-- [ ] Obtain owner approval to commit, push and deploy.
-- [ ] Verify the exact Cloudflare artifact and public apex.
-- [ ] Record the IndexNow response as a discovery receipt only.
+- [x] Obtain owner approval to commit, push and deploy.
+- [x] Verify Cloudflare artifact `ca3bad6a.govwait.pages.dev` and the public apex.
+- [x] Record the 656-URL IndexNow HTTP 200 response as a discovery receipt only.
 - [ ] Request Google priority crawling for `/data/` only after it is public and
   only with owner approval.
+
+Production receipt: GitHub run `34300806761` passed its 2,110-page build and
+641/641 SEO-sitemap gate. The production-configured local build matched the
+artifact; all four public CSVs, dataset metadata, OpenAPI, crawler files, 641
+unique sitemap URLs, canonicals and the path-preserving `www` redirect passed.
+This does not establish Google indexing, rankings, traffic, a directory listing
+or revenue.
 
 ## Phase 5B — self-contained MCP package
 
