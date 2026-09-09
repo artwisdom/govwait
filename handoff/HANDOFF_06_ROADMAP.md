@@ -126,6 +126,15 @@ Google request was made for the already-discovered target URLs.
 CSV downloads per dataset + per-page Dataset schema → Google Dataset Search; MCP directory submissions (PulseMCP, mcp.so, Glama, Smithery — owner forms); publish the MCP server to npm (public repo requirement met); data-license page (free personal/attribution; commercial licensed — the negotiation hook).
 **Accept:** CSVs linked from hubs; Dataset Search shows the site; ≥2 directory listings live.
 
+**Status 2026-09-08 — Phase 5A local candidate:** the canonical dataset hub,
+Dataset structured data, current/history/forward/source CSVs, metadata endpoint,
+root README, OpenAPI/`llms.txt` integration and source-specific reuse notice are
+built and locally verified. The candidate has 2,110 HTML pages, 641 matching
+indexable/sitemap URLs and 2,616 checked API/download files. Google Dataset
+Search appearance is not claimed or guaranteed. MCP packaging is not yet
+self-contained; npm publication, official MCP Registry publication and all other
+directory submissions remain separate owner/account gates.
+
 ## Phase R7 — Scale sources (Norway → Finland → Sweden → Denmark → Netherlands)
 
 One per 2–4 weeks per HANDOFF_05 build order, each with the Sweden-citizenship-style PR hook where one exists. Per-host crawl-delay override (Migri needs 5s) — small fetcher change.

@@ -171,6 +171,76 @@ const sitemapSet = new Set(sitemapUrls);
 for (const canonical of canonicalSet) if (!sitemapSet.has(canonical)) errors.push(`indexable URL missing from sitemaps: ${canonical}`);
 for (const sitemapUrl of sitemapSet) if (!canonicalSet.has(sitemapUrl)) errors.push(`sitemap URL is not indexable HTML: ${sitemapUrl}`);
 
+// Phase 5A turns the API into a citable dataset surface. Keep its canonical
+// landing page, truthful reuse notice, bulk files and Dataset markup together.
+const datasetEditorialModified = '2026-09-08';
+for (const url of ['/', '/about/', '/api-docs/', '/data/', '/data-license/']) {
+  const absoluteUrl = `${canonicalOrigin}${url}`;
+  if (sitemapLastmods.get(absoluteUrl) !== datasetEditorialModified) {
+    errors.push(`${url}: expected Phase 5A sitemap lastmod ${datasetEditorialModified}, found ${sitemapLastmods.get(absoluteUrl) || 'missing'}`);
+  }
+}
+
+let datasetHtml = '';
+try { datasetHtml = readFileSync(path.join(DIST, 'data', 'index.html'), 'utf8'); }
+catch { errors.push('/data/: Phase 5A dataset landing page missing'); }
+if (datasetHtml) {
+  for (const snippet of [
+    'Government processing-time dataset',
+    '/api/v1/downloads/latest.csv',
+    '/api/v1/downloads/history.csv',
+    '/api/v1/downloads/forward-looking.csv',
+    '/api/v1/downloads/sources.csv',
+    '/api/v1/dataset.json',
+    '/data-license/',
+    'History is append-only.',
+  ]) {
+    if (!datasetHtml.includes(snippet)) errors.push(`/data/: missing Phase 5A content: ${snippet}`);
+  }
+  const objects = [...datasetHtml.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/gi)]
+    .map(match => { try { return JSON.parse(match[1]); } catch { return null; } })
+    .filter(Boolean);
+  const dataset = objects.find(object => object['@type'] === 'Dataset');
+  if (!dataset) errors.push('/data/: Dataset JSON-LD missing');
+  else {
+    if (dataset.url !== `${canonicalOrigin}/data/`) errors.push(`/data/: Dataset URL is ${dataset.url}`);
+    if (dataset.license !== `${canonicalOrigin}/data-license/`) errors.push('/data/: Dataset license notice URL missing');
+    if (!Array.isArray(dataset.distribution) || dataset.distribution.length !== 4) errors.push('/data/: expected four Dataset distributions');
+    for (const distribution of dataset.distribution || []) {
+      if (distribution['@type'] !== 'DataDownload' || distribution.encodingFormat !== 'text/csv') errors.push('/data/: invalid DataDownload metadata');
+      if (!distribution.contentUrl?.startsWith(`${canonicalOrigin}/api/v1/downloads/`)) errors.push(`/data/: invalid distribution URL ${distribution.contentUrl}`);
+    }
+    if (!Array.isArray(dataset.isBasedOn) || dataset.isBasedOn.length < 4 || dataset.isBasedOn.some(url => !/^https:\/\//.test(url))) {
+      errors.push('/data/: source provenance URLs missing from Dataset isBasedOn');
+    }
+  }
+}
+
+let homeHtml = '';
+try { homeHtml = readFileSync(path.join(DIST, 'index.html'), 'utf8'); }
+catch { errors.push('/: homepage output missing'); }
+if (homeHtml.includes('"@type":"Dataset"')) errors.push('/: duplicate Dataset JSON-LD should live only on /data/');
+
+let licenseHtml = '';
+try { licenseHtml = readFileSync(path.join(DIST, 'data-license', 'index.html'), 'utf8'); }
+catch { errors.push('/data-license/: reuse notice missing'); }
+for (const snippet of [
+  'does not relicense',
+  'Open Government Licence v3.0',
+  'CC BY 3.0 New Zealand',
+  'Do not assume every IRCC page or file',
+  'has not identified an explicit reuse licence',
+]) {
+  if (licenseHtml && !licenseHtml.includes(snippet)) errors.push(`/data-license/: missing source-specific notice: ${snippet}`);
+}
+
+const metadata = JSON.parse(readFileSync(path.join(DIST, 'api', 'v1', 'dataset.json'), 'utf8'));
+if (metadata.stats?.current_routes !== LATEST.records.length) errors.push('dataset.json: current route count mismatch');
+if (metadata.distributions?.length !== 4) errors.push('dataset.json: expected four CSV distributions');
+for (const distribution of metadata.distributions || []) {
+  if (!localTargetExists(distribution.path)) errors.push(`dataset.json: missing distribution ${distribution.path}`);
+}
+
 // Phase 4's query-led cohort is intentionally small and hand-reviewed. Pin its
 // discoverability and content invariants so a later template refactor cannot
 // silently erase the source-backed additions or publish a dishonest lastmod.
@@ -329,7 +399,16 @@ for (const agent of ['Googlebot', 'Bingbot', 'OAI-SearchBot', 'Claude-SearchBot'
 }
 
 const llmsText = readFileSync(path.join(DIST, 'llms.txt'), 'utf8');
-for (const required of [`Canonical site: ${canonicalOrigin}/`, `${canonicalOrigin}/sitemap.xml`, `${canonicalOrigin}/api/v1/index.json`, `${canonicalOrigin}/reports/feed.xml`]) {
+for (const required of [
+  `Canonical site: ${canonicalOrigin}/`,
+  `${canonicalOrigin}/sitemap.xml`,
+  `${canonicalOrigin}/api/v1/index.json`,
+  `${canonicalOrigin}/api/v1/dataset.json`,
+  `${canonicalOrigin}/api/v1/downloads/latest.csv`,
+  `${canonicalOrigin}/api/v1/downloads/history.csv`,
+  `${canonicalOrigin}/data-license/`,
+  `${canonicalOrigin}/reports/feed.xml`,
+]) {
   if (!llmsText.includes(required)) errors.push(`llms.txt: missing ${required}`);
 }
 

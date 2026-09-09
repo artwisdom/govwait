@@ -1,6 +1,6 @@
 # GovWait growth plan
 
-Last reviewed: 2026-09-07 (America/New_York)
+Last reviewed: 2026-09-08 (America/New_York)
 
 This plan separates technical discovery, crawling, indexing, traffic, audience retention, ad approval and revenue. None proves the next. Growth work must preserve GovWait's official-source boundaries, append-only history, polite collection rules, honest dates and no-hype language.
 
@@ -158,15 +158,37 @@ Gate: no mass page generation. Google explicitly recommends people-first, origin
 
 ## Phase 5 — authority and distribution
 
-Use the permanent change reports as the linkable asset. After a separate owner approval for external posting:
+Status: **Phase 5A local release candidate; publication pending owner approval**.
 
-- add the report feed and examples to the GitHub README;
-- submit the open dataset/API to suitable no-cost public data and AI-tool directories after source-license review;
-- prepare a concise weekly change summary that links to the full evidence page;
-- contact a small, relevant set of journalists, immigration researchers and community moderators with the data, not promotional claims; and
-- never pose as a user, mass-message communities or offer immigration advice.
+The first authority slice makes the existing data easier for researchers, search
+engines and AI tools to understand and cite without generating thin pages:
 
-Measure earned links, referral visitors and returning users. A sent message is not a backlink or traffic result.
+- a canonical `/data/` landing page with complete Dataset structured data and
+  source URLs in `isBasedOn`;
+- four generated CSVs for current routes, append-only history, IRCC projections
+  and the source register, plus a machine-readable dataset metadata endpoint;
+- a root GitHub README linking the live dataset, API, reports, RSS, method and MCP
+  source package;
+- source-specific data reuse guidance that licenses only GovWait-owned
+  organization and metadata under CC BY 4.0, rather than incorrectly applying
+  one blanket licence to four governments; and
+- blocking checks for CSV counts/columns, dataset metadata, structured data,
+  sitemap membership, honest September 8 editorial dates and `llms.txt` links.
+
+The local candidate contains 2,110 HTML pages, 641 intentionally indexable pages
+and 641 matching sitemap URLs. API conformance checks 2,616 files, including four
+CSV distributions and their metadata. These are local build receipts, not public
+deployment, indexing, traffic or revenue evidence.
+
+Phase 5B remains separate: make the MCP package self-contained, choose a software
+licence, publish it to npm with owner account approval, and only then publish
+matching metadata to the official MCP Registry. Other no-cost directories and a
+small earned-link outreach cohort follow only after fresh workflow checks and
+separate owner authorization. See `docs/DISTRIBUTION_CHECKLIST.md`.
+
+Measure accepted listings, earned links, referral visitors and returning users
+separately. A submitted URL, directory form or sent message is not indexing, a
+backlink, traffic or revenue.
 
 ## Phase 6 — retention and monetization readiness
 

@@ -89,6 +89,8 @@ const DIRECT_SITE_PATHS = new Map([
   ['site/src/pages/index.astro', ['/']],
   ['site/src/pages/about.astro', ['/about/']],
   ['site/src/pages/api-docs.astro', ['/api-docs/']],
+  ['site/src/pages/data.astro', ['/data/']],
+  ['site/src/pages/data-license.astro', ['/data-license/']],
   ['site/src/pages/llms.txt.js', ['/llms.txt']],
   ['site/src/pages/reports/feed.xml.js', ['/reports/feed.xml']],
   ['site/src/pages/sitemap.xml.js', ['/sitemap.xml']],
@@ -98,7 +100,12 @@ const DIRECT_SITE_PATHS = new Map([
   ['site/src/pages/sitemap-nz.xml.js', ['/sitemap-nz.xml']],
   ['site/src/pages/sitemap-no.xml.js', ['/sitemap-no.xml']],
   ['site/src/lib/sitemap.js', ['/sitemap.xml', '/sitemap-hubs.xml', '/sitemap-ca.xml', '/sitemap-gb.xml', '/sitemap-nz.xml', '/sitemap-no.xml']],
-  ['machine/openapi.yaml', ['/api-docs/']],
+  ['machine/openapi.yaml', ['/api-docs/', '/api/v1/openapi.yaml']],
+  ['pipeline/build-api.js', [
+    '/data/', '/api-docs/', '/api/v1/index.json', '/api/v1/dataset.json',
+    '/api/v1/downloads/latest.csv', '/api/v1/downloads/history.csv',
+    '/api/v1/downloads/forward-looking.csv', '/api/v1/downloads/sources.csv',
+  ]],
 ]);
 
 function addRepositoryChangePaths(urls, files, currentRecords, previousRecords) {
@@ -168,7 +175,12 @@ if (!previous) {
   }
 
   if (changed.size || changedSourceIds.size) {
-    for (const p of ['/', '/about/', '/api-docs/', '/guides/', '/reports/', '/reports/feed.xml']) urls.add(p);
+    for (const p of [
+      '/', '/about/', '/api-docs/', '/data/', '/data-license/', '/api/v1/index.json',
+      '/api/v1/dataset.json', '/api/v1/downloads/latest.csv',
+      '/api/v1/downloads/history.csv', '/api/v1/downloads/forward-looking.csv',
+      '/api/v1/downloads/sources.csv', '/guides/', '/reports/', '/reports/feed.xml',
+    ]) urls.add(p);
     for (const { path: publicPath } of hubUrls()) {
       if (publicPath.startsWith('/reports/')) urls.add(publicPath);
     }

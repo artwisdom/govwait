@@ -6,6 +6,25 @@ import { queryJson } from './lib/db.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const EXPORTS = path.join(ROOT, 'data', 'exports');
+const UNSTAMPED_SOURCES = new Set(['ircc-passport', 'inz-processing-times']);
+
+// A legacy SQLite/WAL packaging inconsistency left a small set of no-change
+// observations in the committed database even though unstamped sources are
+// supposed to record only value changes. Preserve the append-only database,
+// but never expose consecutive no-op rows as public history. A value that later
+// returns after a real intervening change is retained.
+export function publicHistoryRows(rows) {
+  const previousByEntity = new Map();
+  return rows.filter(row => {
+    const previous = previousByEntity.get(row.entity_id);
+    previousByEntity.set(row.entity_id, row);
+    return !(
+      UNSTAMPED_SOURCES.has(row.source_id) &&
+      previous &&
+      previous.value_raw === row.value_raw
+    );
+  });
+}
 
 export function exportAll() {
   mkdirSync(EXPORTS, { recursive: true });
@@ -21,10 +40,11 @@ export function exportAll() {
     WHERE e.active=1
     ORDER BY e.id`);
 
-  const historyRows = queryJson(`
-    SELECT o.entity_id, o.value_raw, o.value_days, o.unit_original, o.status, o.effective_date, o.retrieved_at, o.source_url
+  const rawHistoryRows = queryJson(`
+    SELECT o.entity_id, e.source_id, o.value_raw, o.value_days, o.unit_original, o.status, o.effective_date, o.retrieved_at, o.source_url
     FROM observations o JOIN entities e ON e.id=o.entity_id
     WHERE e.active=1 ORDER BY o.entity_id, o.effective_date`);
+  const historyRows = publicHistoryRows(rawHistoryRows);
   const history = {};
   for (const r of historyRows) {
     (history[r.entity_id] ||= []).push({

@@ -3,7 +3,7 @@
 _Prepared 2026-08-21/22 by Claude (Fable 5) for transfer of day-to-day development to
 Codex. The owner (Michael) manages his web projects there; this package is written so
 a coding agent with zero context can operate this project safely and grow it. Operational
-status refreshed 2026-09-04 after the Phase 3 growth release._
+status refreshed 2026-09-08 after the Phase 4B release and Phase 5A local build._
 
 ## What GovWait is, in one paragraph
 
@@ -12,7 +12,7 @@ tracks **officially published government processing times** (visas, permits,
 sponsorships) with provenance and append-only history. Governments overwrite these
 numbers over time and often keep no archive; our recorded history is the compounding,
 non-backfillable asset. One dataset, three skins: a static Astro site (2,107 HTML pages),
-a free static JSON API (2,611 files + OpenAPI 3.1), and an MCP server for AI
+a free static JSON API (2,611 production files + OpenAPI 3.1), and an MCP server for AI
 agents. A GitHub Actions cron refreshes data Tue+Fri; a failed validation publishes
 nothing. Revenue plan: display ads (engine), machine access (optionality), dataset
 licensing (lottery ticket). Honest base rates live in `RISK_REGISTER.md` — most
@@ -78,8 +78,8 @@ style preferences.
 
 - Repo public and live; Cloudflare Pages project `govwait` serves `govwait.com` and
   redirects `www.govwait.com` permanently to the canonical apex over HTTPS.
-  GitHub Pages is disabled; Phase 3 commit `d635236` is live from green deployment
-  run `33934940206` (`dbdfa613.govwait.pages.dev`).
+  GitHub Pages is disabled; Phase 4B commit `fa73c2f` is live from green deployment
+  run `34176619821` (`2e3649f8.govwait.pages.dev`).
 - refresh-data cron ACTIVE (Tue+Fri 14:00 UTC). The 2026-09-04 run failed closed
   because UDI's `robots.txt` returned HTTP 403 to the GitHub runner; nothing was
   exported, and the last verified committed data remains live.
@@ -97,7 +97,7 @@ style preferences.
   a report hub, editorial/research-desk identity, and trust/policy pages. Consent-gated
   GA4 and a verified Grow script are live;
   GA4 is linked to the `govwait.com` Search Console property. All release gates are green.
-- Discoverability hardening is production green: 638 data-backed pages are
+- Discoverability hardening is production green: 639 data-backed pages are
   indexable and exactly match the five child sitemaps; 1,464 official
   unavailable/insufficient country pages remain live with `noindex, follow`
   until an official numeric value appears. Search/AI crawler access, dynamic
@@ -133,3 +133,12 @@ style preferences.
   646 URLs. Google accepted the two owner-approved priority-crawl requests. These
   are deployment and discovery receipts, not proof of indexing, traffic, ad
   approval, or revenue.
+- Phase 4B is **production-verified**: 2,108 HTML pages and 639 matching
+  indexable/sitemap URLs at commit `fa73c2f`; run `34176619821` passed, Cloudflare
+  artifact `2e3649f8.govwait.pages.dev` matched the apex, and IndexNow accepted
+  645 affected URLs. No manual Google request was made for already-discovered URLs.
+- Phase 5A is a **local candidate only**: `/data/`, four generated CSV downloads,
+  dataset metadata, a root README and source-specific reuse notice bring the
+  candidate to 2,110 HTML pages, 641 indexable/sitemap URLs and 2,616 checked
+  API/download files. No commit, deployment, IndexNow receipt, indexing, traffic
+  or revenue is claimed.

@@ -1,0 +1,198 @@
+{
+ "name": "GovWait government processing-time dataset",
+ "description": "Officially published government processing and wait times with source URLs, honest dates and append-only history.",
+ "version": "1",
+ "date_published": "2026-08-21",
+ "date_modified": "2026-09-01",
+ "generated_at": "2026-09-01T17:38:38.773Z",
+ "landing_page": "https://govwait.com/data/",
+ "stats": {
+  "current_routes": 2318,
+  "historical_observations": 4346,
+  "forward_looking_rows": 3629,
+  "sources": 9,
+  "jurisdictions": 4,
+  "services": 287
+ },
+ "distributions": [
+  {
+   "title": "latest.csv",
+   "description": "One row per currently active metric route.",
+   "path": "/api/v1/downloads/latest.csv",
+   "format": "CSV",
+   "media_type": "text/csv",
+   "row_count": 2318,
+   "columns": [
+    "entity_id",
+    "source_id",
+    "jurisdiction",
+    "service_category",
+    "metric_type",
+    "service_key",
+    "service_name",
+    "applicant_country",
+    "applicant_country_name",
+    "value_raw",
+    "value_days",
+    "unit_original",
+    "status",
+    "effective_date",
+    "retrieved_at",
+    "source_url",
+    "confidence"
+   ]
+  },
+  {
+   "title": "history.csv",
+   "description": "Append-only distinct public observations with route context.",
+   "path": "/api/v1/downloads/history.csv",
+   "format": "CSV",
+   "media_type": "text/csv",
+   "row_count": 4346,
+   "columns": [
+    "entity_id",
+    "source_id",
+    "jurisdiction",
+    "service_category",
+    "metric_type",
+    "service_key",
+    "service_name",
+    "applicant_country",
+    "applicant_country_name",
+    "observation_number",
+    "value_raw",
+    "value_days",
+    "unit_original",
+    "status",
+    "effective_date",
+    "retrieved_at",
+    "source_url"
+   ]
+  },
+  {
+   "title": "forward-looking.csv",
+   "description": "IRCC current projections and application-month cohort rows.",
+   "path": "/api/v1/downloads/forward-looking.csv",
+   "format": "CSV",
+   "media_type": "text/csv",
+   "row_count": 3629,
+   "columns": [
+    "entity_id",
+    "source_id",
+    "jurisdiction",
+    "service_category",
+    "metric_type",
+    "service_key",
+    "service_name",
+    "row_type",
+    "snapshot_date",
+    "cohort_month",
+    "wait_raw",
+    "wait_days",
+    "unit_original",
+    "status",
+    "queue_raw",
+    "queue_people",
+    "confidence",
+    "retrieved_at",
+    "source_url"
+   ]
+  },
+  {
+   "title": "sources.csv",
+   "description": "Primary-source provenance and source-specific reuse notes.",
+   "path": "/api/v1/downloads/sources.csv",
+   "format": "CSV",
+   "media_type": "text/csv",
+   "row_count": 9,
+   "columns": [
+    "source_id",
+    "name",
+    "jurisdiction",
+    "agency",
+    "source_url",
+    "license_note",
+    "robots_status",
+    "robots_checked_at"
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "id": "govuk-inuk-times",
+   "name": "UK visa processing times (inside UK)",
+   "agency": "UK Visas and Immigration (Home Office)",
+   "jurisdiction": "GB",
+   "url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
+   "license_note": "Open Government Licence v3.0 — reuse permitted with attribution."
+  },
+  {
+   "id": "govuk-passport",
+   "name": "UK passport processing time (HM Passport Office service statement)",
+   "agency": "HM Passport Office",
+   "jurisdiction": "GB",
+   "url": "https://www.gov.uk/government/organisations/hm-passport-office/about/about-our-services",
+   "license_note": "Open Government Licence v3.0 — reuse permitted with attribution."
+  },
+  {
+   "id": "govuk-visa-times",
+   "name": "UK visa processing times (outside UK)",
+   "agency": "UK Visas and Immigration (Home Office)",
+   "jurisdiction": "GB",
+   "url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
+   "license_note": "Open Government Licence v3.0 — reuse permitted with attribution."
+  },
+  {
+   "id": "inz-processing-times",
+   "name": "New Zealand visa application processing times",
+   "agency": "Immigration New Zealand (Ministry of Business, Innovation and Employment)",
+   "jurisdiction": "NZ",
+   "url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
+   "license_note": "New Zealand Crown copyright; website content licensed CC BY 3.0 New Zealand with written attribution to the Crown and Ministry."
+  },
+  {
+   "id": "ircc-forward-looking",
+   "name": "IRCC forward-looking processing times and in-queue estimates",
+   "agency": "Immigration, Refugees and Citizenship Canada",
+   "jurisdiction": "CA",
+   "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html",
+   "license_note": "Government of Canada publication. GovWait stores extracted factual values with source attribution and does not reproduce page copy. Canada.ca general reproduction terms apply unless the originating resource expressly uses the Open Government Licence – Canada; review the current source terms before commercial redistribution."
+  },
+  {
+   "id": "ircc-noncountry",
+   "name": "IRCC processing times (non-country categories)",
+   "agency": "Immigration, Refugees and Citizenship Canada",
+   "jurisdiction": "CA",
+   "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html",
+   "license_note": "Government of Canada publication. GovWait stores extracted factual values with source attribution and does not reproduce page copy. Canada.ca general reproduction terms apply unless the originating resource expressly uses the Open Government Licence – Canada; review the current source terms before commercial redistribution."
+  },
+  {
+   "id": "ircc-passport",
+   "name": "Canadian passport processing times",
+   "agency": "Immigration, Refugees and Citizenship Canada / Service Canada",
+   "jurisdiction": "CA",
+   "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-passports/processing-times.html",
+   "license_note": "Government of Canada publication. GovWait stores extracted factual values with source attribution and does not reproduce page copy. Canada.ca general reproduction terms apply unless the originating resource expressly uses the Open Government Licence – Canada; review the current source terms before commercial redistribution."
+  },
+  {
+   "id": "ircc-ptime",
+   "name": "IRCC Check Processing Times data",
+   "agency": "Immigration, Refugees and Citizenship Canada",
+   "jurisdiction": "CA",
+   "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html",
+   "license_note": "Government of Canada publication. GovWait stores extracted factual values with source attribution and does not reproduce page copy. Canada.ca general reproduction terms apply unless the originating resource expressly uses the Open Government Licence – Canada; review the current source terms before commercial redistribution."
+  },
+  {
+   "id": "udi-waiting-times",
+   "name": "Norway immigration waiting times",
+   "agency": "Norwegian Directorate of Immigration (UDI)",
+   "jurisdiction": "NO",
+   "url": "https://www.udi.no/en/waiting-time/",
+   "license_note": "Official public information; no explicit page-reuse license was identified as of 2026-08-30. GovWait stores only extracted factual values with attribution and source links, not UDI page copy."
+  }
+ ],
+ "reuse": {
+  "notice": "GovWait original organization, field definitions and explanatory metadata: CC BY 4.0 where GovWait owns the rights. Underlying government information is not relicensed by GovWait; attribute the originating agency and follow its source-specific terms. Details: https://govwait.com/data-license/.",
+  "details": "https://govwait.com/data-license/"
+ }
+}

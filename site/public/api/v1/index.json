@@ -102,7 +102,7 @@
    "agency": "Immigration, Refugees and Citizenship Canada",
    "jurisdiction": "CA",
    "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html",
-   "license_note": "Government of Canada factual publication. GovWait stores extracted estimates, queue figures and provenance with attribution; it does not reproduce IRCC page copy."
+   "license_note": "Government of Canada publication. GovWait stores extracted factual values with source attribution and does not reproduce page copy. Canada.ca general reproduction terms apply unless the originating resource expressly uses the Open Government Licence – Canada; review the current source terms before commercial redistribution."
   },
   {
    "id": "ircc-noncountry",
@@ -110,7 +110,7 @@
    "agency": "Immigration, Refugees and Citizenship Canada",
    "jurisdiction": "CA",
    "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html",
-   "license_note": "Government of Canada publication; extracted values with attribution (see ircc-ptime)."
+   "license_note": "Government of Canada publication. GovWait stores extracted factual values with source attribution and does not reproduce page copy. Canada.ca general reproduction terms apply unless the originating resource expressly uses the Open Government Licence – Canada; review the current source terms before commercial redistribution."
   },
   {
    "id": "ircc-passport",
@@ -118,7 +118,7 @@
    "agency": "Immigration, Refugees and Citizenship Canada / Service Canada",
    "jurisdiction": "CA",
    "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-passports/processing-times.html",
-   "license_note": "Government of Canada publication; extracted values with attribution (see ircc-ptime)."
+   "license_note": "Government of Canada publication. GovWait stores extracted factual values with source attribution and does not reproduce page copy. Canada.ca general reproduction terms apply unless the originating resource expressly uses the Open Government Licence – Canada; review the current source terms before commercial redistribution."
   },
   {
    "id": "ircc-ptime",
@@ -126,7 +126,7 @@
    "agency": "Immigration, Refugees and Citizenship Canada",
    "jurisdiction": "CA",
    "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html",
-   "license_note": "Government of Canada publication; facts/values extracted under fair-dealing-style factual reuse. Non-commercial reproduction terms noted; we store extracted values with attribution, not page content. Owner review recommended before commercial launch."
+   "license_note": "Government of Canada publication. GovWait stores extracted factual values with source attribution and does not reproduce page copy. Canada.ca general reproduction terms apply unless the originating resource expressly uses the Open Government Licence – Canada; review the current source terms before commercial redistribution."
   },
   {
    "id": "udi-waiting-times",
@@ -435,7 +435,14 @@
   ],
   "entity_pattern": "/api/v1/entities/{entity_id}.json",
   "ircc_forward_looking": "/api/v1/ircc-forward-looking.json",
+  "dataset_metadata": "/api/v1/dataset.json",
+  "downloads": [
+   "/api/v1/downloads/latest.csv",
+   "/api/v1/downloads/history.csv",
+   "/api/v1/downloads/forward-looking.csv",
+   "/api/v1/downloads/sources.csv"
+  ],
   "openapi": "/api/v1/openapi.yaml"
  },
- "license": "GovWait extracted-value compilation: CC BY 4.0 — attribute GovWait and the originating government agency. Underlying source terms vary; consult each source license_note in /api/v1/index.json."
+ "license": "GovWait original organization, field definitions and explanatory metadata: CC BY 4.0 where GovWait owns the rights. Underlying government information is not relicensed by GovWait; attribute the originating agency and follow its source-specific terms. Details: https://govwait.com/data-license/."
 }

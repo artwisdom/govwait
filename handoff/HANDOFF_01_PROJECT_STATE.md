@@ -1,7 +1,7 @@
 # HANDOFF 01 — Project State & Technical Deep Dive
 
-_Everything a coding agent needs to operate GovWait. Current as of 2026-09-06;
-Phase 4's first query-led editorial cohort is production-verified._
+_Everything a coding agent needs to operate GovWait. Current as of 2026-09-08;
+Phase 4B is production-verified and Phase 5A is a local release candidate._
 
 ## 1. The one-sentence architecture
 
@@ -253,6 +253,12 @@ Local Node is 20.19.6 (Astro pinned to v4 for this reason; CI also pins Node 20)
    the mitigation is per-page information gain (deltas/ranks/history — partially
    shipped) and NOT bulk-launching future governments (25–30 pages/week rollout).
 9. Politeness cap is 150 fetches/host/run — a full IRCC+gov.uk refresh uses ~4.
+10. **Checkpoint SQLite before committing.** A historical WAL packaging mismatch
+    left 102 September 1 INZ observations in exports but not `db.sqlite`. Phase 5A
+    repairs the missing database rows append-only, filters legacy consecutive
+    no-change artifacts from public history, and forces `wal_checkpoint(TRUNCATE)`
+    before validation/export. Do not remove that checkpoint or commit newer
+    exports with an older main database file.
 
 ## 7. What was shipped in the final session (post-launch upgrades)
 
@@ -283,6 +289,10 @@ Local Node is 20.19.6 (Astro pinned to v4 for this reason; CI also pins Node 20)
   have honest September 7 sitemap dates and blocking audit coverage. Commit
   `fa73c2f`, run `34176619821`, artifact `2e3649f8.govwait.pages.dev`, public-edge
   checks and the 645-URL IndexNow HTTP 200 receipt are recorded above.
+- Phase 5A adds a canonical dataset landing page, four CSV distributions, dataset
+  metadata, a root README, source-specific reuse guidance and expanded blocking
+  checks. The local receipt is 2,110 HTML / 641 indexable / 641 sitemap URLs and
+  2,616 checked API/download files. It is not yet committed or deployed.
 
 ## 8. QA ritual before any push that touches pipeline or site
 

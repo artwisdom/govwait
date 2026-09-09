@@ -13,7 +13,7 @@ export const source = {
   jurisdiction: 'CA',
   agency: 'Immigration, Refugees and Citizenship Canada / Service Canada',
   url: HUMAN_PAGE,
-  license_note: 'Government of Canada publication; extracted values with attribution (see ircc-ptime).',
+  license_note: 'Government of Canada publication. GovWait stores extracted factual values with source attribution and does not reproduce page copy. Canada.ca general reproduction terms apply unless the originating resource expressly uses the Open Government Licence – Canada; review the current source terms before commercial redistribution.',
 };
 
 const MAP = {

@@ -47,7 +47,7 @@
    "jurisdiction": "CA",
    "agency": "Immigration, Refugees and Citizenship Canada",
    "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html",
-   "license_note": "Government of Canada factual publication. GovWait stores extracted estimates, queue figures and provenance with attribution; it does not reproduce IRCC page copy.",
+   "license_note": "Government of Canada publication. GovWait stores extracted factual values with source attribution and does not reproduce page copy. Canada.ca general reproduction terms apply unless the originating resource expressly uses the Open Government Licence – Canada; review the current source terms before commercial redistribution.",
    "robots_status": "allowed",
    "robots_checked_at": "2026-09-01T17:31:23.222Z"
   },
@@ -57,7 +57,7 @@
    "jurisdiction": "CA",
    "agency": "Immigration, Refugees and Citizenship Canada",
    "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html",
-   "license_note": "Government of Canada publication; extracted values with attribution (see ircc-ptime).",
+   "license_note": "Government of Canada publication. GovWait stores extracted factual values with source attribution and does not reproduce page copy. Canada.ca general reproduction terms apply unless the originating resource expressly uses the Open Government Licence – Canada; review the current source terms before commercial redistribution.",
    "robots_status": "allowed",
    "robots_checked_at": "2026-09-01T17:31:25.207Z"
   },
@@ -67,7 +67,7 @@
    "jurisdiction": "CA",
    "agency": "Immigration, Refugees and Citizenship Canada / Service Canada",
    "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-passports/processing-times.html",
-   "license_note": "Government of Canada publication; extracted values with attribution (see ircc-ptime).",
+   "license_note": "Government of Canada publication. GovWait stores extracted factual values with source attribution and does not reproduce page copy. Canada.ca general reproduction terms apply unless the originating resource expressly uses the Open Government Licence – Canada; review the current source terms before commercial redistribution.",
    "robots_status": "allowed",
    "robots_checked_at": "2026-09-01T17:31:30.218Z"
   },
@@ -77,7 +77,7 @@
    "jurisdiction": "CA",
    "agency": "Immigration, Refugees and Citizenship Canada",
    "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html",
-   "license_note": "Government of Canada publication; facts/values extracted under fair-dealing-style factual reuse. Non-commercial reproduction terms noted; we store extracted values with attribution, not page content. Owner review recommended before commercial launch.",
+   "license_note": "Government of Canada publication. GovWait stores extracted factual values with source attribution and does not reproduce page copy. Canada.ca general reproduction terms apply unless the originating resource expressly uses the Open Government Licence – Canada; review the current source terms before commercial redistribution.",
    "robots_status": "allowed",
    "robots_checked_at": "2026-09-01T17:31:20.955Z"
   },

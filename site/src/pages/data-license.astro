@@ -1,0 +1,47 @@
+---
+import Base from '../layouts/Base.astro';
+import { sources } from '../lib/data.js';
+---
+<Base title="Data reuse and licensing notice | GovWait"
+      description="Understand which GovWait dataset elements use CC BY 4.0 and which government source terms apply to Canada, the UK, New Zealand and Norway data.">
+  <nav class="crumbs"><a href="/">Home</a> › <a href="/data/">Data</a> › Reuse and licensing</nav>
+  <h1>Data reuse and licensing notice</h1>
+  <p class="lede">GovWait combines factual government processing-time values with its own organization, field definitions and explanatory metadata. This page keeps those layers—and their terms—separate.</p>
+  <p class="small muted">Last reviewed September 8, 2026. This is a practical reuse notice, not legal advice.</p>
+
+  <h2>GovWait-created material</h2>
+  <p>To the extent GovWait owns copyright in its original selection, organization, field definitions and explanatory metadata, that material is available under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license noopener">Creative Commons Attribution 4.0 International (CC BY 4.0)</a>. Attribute GovWait, link to <a href="/data/">the dataset page</a>, identify changes you make and do not imply that GovWait or a government endorses your use.</p>
+  <p>This permission does not relicense an originating government's information, logos, trademarks or third-party material. Source-specific terms still apply.</p>
+
+  <h2>Underlying government information</h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Source group</th><th>Reuse position</th></tr></thead>
+    <tbody>
+      <tr><td>United Kingdom</td><td><a href="https://www.gov.uk/help/terms-conditions" rel="noopener">GOV.UK's terms</a> state that most content is available under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="noopener">Open Government Licence v3.0</a>, subject to its conditions and listed exceptions.</td></tr>
+      <tr><td>New Zealand</td><td><a href="https://www.immigration.govt.nz/formshelp/site-information/copyright" rel="noopener">Immigration New Zealand's copyright notice</a> states that covered website content is licensed under <a href="https://creativecommons.org/licenses/by/3.0/nz/" rel="noopener">CC BY 3.0 New Zealand</a>, subject to its attribution instructions and exceptions for items such as logos and third-party material.</td></tr>
+      <tr><td>Canada</td><td>Canada.ca's general terms distinguish non-commercial and commercial reproduction. The <a href="https://open.canada.ca/en/open-government-licence-canada" rel="noopener">Open Government Licence – Canada</a> permits broad reuse only for information expressly distributed under that licence. Do not assume every IRCC page or file carries the open-data licence; check the originating resource and <a href="https://www.canada.ca/en/transparency/terms.html" rel="noopener">Canada.ca terms</a> for the intended use.</td></tr>
+      <tr><td>Norway</td><td>GovWait has not identified an explicit reuse licence on the tracked UDI waiting-time pages. GovWait therefore publishes attributed factual values and source links, not copied UDI explanatory prose. Confirm the intended use with UDI or qualified counsel when rights are important.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Source-by-source register</h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Agency and source</th><th>Recorded note</th></tr></thead>
+    <tbody>
+      {sources.map(source => (
+        <tr>
+          <td><a href={source.url} rel="noopener">{source.name}</a><br/><span class="small muted">{source.agency}</span></td>
+          <td class="small">{source.license_note}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table></div>
+
+  <h2>Attribution example</h2>
+  <pre class="code"><code>Source: [originating agency and official URL]. Data organization and metadata: GovWait, https://govwait.com/data/.</code></pre>
+  <p>Keep each row's <code>source_url</code>, preserve important qualifiers such as ranges and unavailable states, and state when you modified or normalized the material.</p>
+
+  <h2>Commercial and higher-risk reuse</h2>
+  <p>Commercial delivery, custom formats, support and GovWait-owned enhancements do not create exclusive rights in underlying government facts. If your product depends on large-scale redistribution, resale, branding, or a particular source licence, review the current source terms and obtain qualified legal advice before launch.</p>
+  <p>Questions about GovWait-created material can be sent to <a href="mailto:contact@govwait.com">contact@govwait.com</a>.</p>
+</Base>

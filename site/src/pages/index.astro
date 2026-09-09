@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import AdSlot from '../components/AdSlot.astro';
 import config from '../../site.config.json';
-import { stats, services, records, JURISDICTIONS, publishedServices, fmtDate, dataLastmod } from '../lib/data.js';
+import { stats, services, records, JURISDICTIONS, publishedServices, fmtDate } from '../lib/data.js';
 
 const origin = config.SITE_URL.replace(/\/$/, '');
 const orgId = `${origin}/#organization`;
@@ -27,23 +27,6 @@ const jsonld = [
     logo: { '@type': 'ImageObject', url: `${origin}/favicon.svg` },
     publishingPrinciples: `${origin}/about/editorial-policy/`,
     sameAs: ['https://github.com/artwisdom/govwait'],
-  },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'Dataset',
-    name: `${config.SITE_NAME}: official government processing times`,
-    description: 'Tracked dataset of officially published government processing and wait times for visas, permits, sponsorships and resettlement, with per-value provenance and history.',
-    url: origin,
-    datePublished: '2026-08-21',
-    dateModified: dataLastmod,
-    license: 'https://creativecommons.org/licenses/by/4.0/',
-    creator: { '@id': orgId },
-    temporalCoverage: '2026-08-21/..',
-    distribution: [
-      { '@type': 'DataDownload', encodingFormat: 'application/json', contentUrl: `${origin}/api/v1/index.json` },
-      { '@type': 'DataDownload', encodingFormat: 'application/json', contentUrl: `${origin}/api/v1/ircc-forward-looking.json` },
-    ],
-    isBasedOn: Object.values(stats.per_source).map(s => s.name),
   },
 ];
 
@@ -107,6 +90,6 @@ const govCount = stats.jurisdictions.length;
   <p class="lede small">Because they aren't ours. Every figure is the government's own published statistic — we just refuse to let it disappear. Each value links its official source, carries the agency's update date when supplied (or a clearly labeled first-observed date when not), includes our verification date, and joins a permanent history. Read the <a href="/about/">methodology</a>, <a href="/about/editorial-policy/">editorial policy</a> and <a href="/about/research-desk/">Research Desk byline</a>.</p>
 
   <h2>For machines</h2>
-  <p class="small">The same dataset is a <a href="/api-docs/">free JSON API</a>, a <a href="https://github.com/artwisdom/govwait/tree/main/machine/mcp-server" rel="noopener">public MCP server for AI agents</a>, and is described in <a href="/llms.txt">llms.txt</a>. Attribution required (CC BY 4.0).</p>
+  <p class="small">The same records are available through <a href="/data/">free CSV downloads and dataset metadata</a>, a <a href="/api-docs/">free JSON API</a>, a <a href="https://github.com/artwisdom/govwait/tree/main/machine/mcp-server" rel="noopener">public MCP server for AI agents</a>, and <a href="/llms.txt">llms.txt</a>. Reuse must preserve government attribution and the <a href="/data-license/">source-specific terms</a>.</p>
   <AdSlot position="home-bottom" />
 </Base>

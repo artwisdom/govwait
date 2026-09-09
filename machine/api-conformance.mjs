@@ -17,6 +17,28 @@ const METRIC = new Set(['published', 'backward', 'forward', 'service_standard', 
 const UNITS = new Set(['minutes', 'hours', 'days', 'weeks', 'months', 'years', 'working days', null]);
 const ENTITY_ID = /^[a-z0-9-]+(--(?:[a-z]{2}|p(?:50|80)))?$/;
 
+function parseCsv(text) {
+  const rows = [];
+  let row = [];
+  let field = '';
+  let quoted = false;
+  for (let index = 0; index < text.length; index++) {
+    const char = text[index];
+    if (quoted) {
+      if (char === '"' && text[index + 1] === '"') { field += '"'; index++; }
+      else if (char === '"') quoted = false;
+      else field += char;
+    } else if (char === '"') quoted = true;
+    else if (char === ',') { row.push(field); field = ''; }
+    else if (char === '\n') {
+      row.push(field); rows.push(row); row = []; field = '';
+    } else if (char !== '\r') field += char;
+  }
+  if (quoted) throw new Error('unterminated quoted CSV field');
+  if (field || row.length) { row.push(field); rows.push(row); }
+  return rows;
+}
+
 function checkObs(f, o, label) {
   for (const k of ['value_raw', 'status', 'effective_date', 'retrieved_at', 'source_url']) {
     if (o[k] === undefined || o[k] === null || o[k] === '') err(f, `${label}.${k} missing`);
@@ -72,6 +94,61 @@ function checkForwardDetail(f, detail, label = 'forward_looking') {
   for (const ep of [...d.endpoints.jurisdictions, ...d.endpoints.services]) {
     if (!/^\/api\/v1\/(jurisdictions|services)\/[a-z0-9-]+\.json$/.test(ep)) err(f, `malformed endpoint path ${ep}`);
   }
+  if (d.endpoints.dataset_metadata !== '/api/v1/dataset.json') err(f, 'dataset_metadata endpoint missing');
+  if (!Array.isArray(d.endpoints.downloads) || d.endpoints.downloads.length !== 4) err(f, 'expected four CSV download endpoints');
+}
+// Dataset metadata and bulk CSV distributions
+{
+  const f = 'dataset.json';
+  const d = JSON.parse(readFileSync(path.join(API, f), 'utf8')); checked++;
+  for (const k of ['name', 'description', 'version', 'date_published', 'date_modified', 'generated_at', 'landing_page', 'stats', 'distributions', 'sources', 'reuse']) {
+    if (!d[k]) err(f, `${k} missing`);
+  }
+  if (d.landing_page !== 'https://govwait.com/data/') err(f, `unexpected landing_page ${d.landing_page}`);
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(d.date_published || '')) err(f, 'date_published invalid');
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(d.date_modified || '')) err(f, 'date_modified invalid');
+  if (!Array.isArray(d.distributions) || d.distributions.length !== 4) err(f, 'expected four distributions');
+  if (!Array.isArray(d.sources) || d.sources.length !== d.stats.sources) err(f, 'source count mismatch');
+  if (d.reuse?.details !== 'https://govwait.com/data-license/') err(f, 'reuse details URL missing');
+
+  const expected = new Map([
+    ['latest.csv', {
+      rows: d.stats.current_routes,
+      columns: ['entity_id', 'source_id', 'jurisdiction', 'service_category', 'metric_type', 'service_key', 'service_name', 'applicant_country', 'applicant_country_name', 'value_raw', 'value_days', 'unit_original', 'status', 'effective_date', 'retrieved_at', 'source_url', 'confidence'],
+    }],
+    ['history.csv', {
+      rows: d.stats.historical_observations,
+      columns: ['entity_id', 'source_id', 'jurisdiction', 'service_category', 'metric_type', 'service_key', 'service_name', 'applicant_country', 'applicant_country_name', 'observation_number', 'value_raw', 'value_days', 'unit_original', 'status', 'effective_date', 'retrieved_at', 'source_url'],
+    }],
+    ['forward-looking.csv', {
+      rows: d.stats.forward_looking_rows,
+      columns: ['entity_id', 'source_id', 'jurisdiction', 'service_category', 'metric_type', 'service_key', 'service_name', 'row_type', 'snapshot_date', 'cohort_month', 'wait_raw', 'wait_days', 'unit_original', 'status', 'queue_raw', 'queue_people', 'confidence', 'retrieved_at', 'source_url'],
+    }],
+    ['sources.csv', {
+      rows: d.stats.sources,
+      columns: ['source_id', 'name', 'jurisdiction', 'agency', 'source_url', 'license_note', 'robots_status', 'robots_checked_at'],
+    }],
+  ]);
+
+  for (const distribution of d.distributions || []) {
+    const filename = distribution.title;
+    const expectation = expected.get(filename);
+    if (!expectation) { err(f, `unexpected distribution ${filename}`); continue; }
+    const csvFile = `downloads/${filename}`;
+    let rows = [];
+    try { rows = parseCsv(readFileSync(path.join(API, 'downloads', filename), 'utf8')); checked++; }
+    catch (error) { err(csvFile, `could not parse: ${error.message}`); continue; }
+    const header = rows.shift() || [];
+    if (header.join(',') !== expectation.columns.join(',')) err(csvFile, 'header mismatch');
+    if (rows.length !== expectation.rows || distribution.row_count !== expectation.rows) {
+      err(csvFile, `row count ${rows.length}/${distribution.row_count} != ${expectation.rows}`);
+    }
+    rows.forEach((row, index) => {
+      if (row.length !== header.length) err(csvFile, `row ${index + 2} has ${row.length} columns; expected ${header.length}`);
+    });
+    expected.delete(filename);
+  }
+  for (const filename of expected.keys()) err(f, `missing distribution ${filename}`);
 }
 // IRCC forward-looking bulk collection
 {

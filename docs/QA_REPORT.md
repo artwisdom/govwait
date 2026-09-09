@@ -27,3 +27,29 @@ _Run 2026-08-21. Every gate executed, not assumed._
 - History depth is 1 observation per entity today — the moat starts compounding with the first CI refresh after the owner pushes.
 - US/AU/IE sources hard-block honest bots; excluded rather than worked around (see DEPLOYMENT_GUIDE for the owner's options).
 - JSON-LD validated structurally (parse + required keys), not against Google's Rich Results tester (needs a live URL — owner step, listed in DEPLOYMENT_GUIDE).
+
+## Phase 5A dataset-authority local gate
+
+_Run September 8, 2026. This is a local candidate only: no commit, push,
+Cloudflare deployment, IndexNow submission or Google crawl request has occurred._
+
+| Gate | Result | Evidence |
+|---|---|---|
+| SQLite history authority | ✅ PASS | `PRAGMA integrity_check` returned `ok`; 2,318 active entities, 4,448 raw append-only observations and 3,629 forward-looking rows. The repaired database contains all 102 valid September 1 INZ change observations. Public export remains 4,346 distinct observations after filtering only consecutive no-change artifacts from undated sources. |
+| Parser and history unit tests | ✅ PASS | 14/14 tests passed, including consecutive-no-op filtering, return-to-prior-value retention, INZ percentiles, IRCC forward projections and UDI schema drift. |
+| Static production build | ✅ PASS | Astro generated 2,110 pages with zero build errors. |
+| Blocking SEO and sitemap audit | ✅ PASS | 2,110 HTML pages; 641 intentionally indexable pages; 641 unique matching sitemap URLs. Existing length findings remain non-blocking warnings, not hidden failures. |
+| Dataset distributions | ✅ PASS | Four generated CSVs: 2,318 current rows, 4,346 public history rows, 3,629 forward-looking rows and 9 source rows. Dataset metadata reports the same counts and links every distribution. |
+| Static API conformance | ✅ PASS | 2,616 JSON, CSV and OpenAPI files checked; all required fields, shapes, counts and filenames passed. |
+| MCP build and smoke test | ✅ PASS | TypeScript build passed; all 15 assertions passed across initialization, four tools, provenance, Canadian, UK, New Zealand and Norway results, sorting and forward-looking labels. |
+| XML | ✅ PASS | Sitemap index, all five child sitemaps and the report feed parse as valid XML. |
+| Dataset discovery markup | ✅ PASS | `/data/` has one canonical Dataset JSON-LD object with all four `DataDownload` distributions, official-source `isBasedOn` URLs, dates and a source-specific licence URL; the homepage duplicate was removed. |
+| Responsive visual QA | ✅ PASS | `/data/` and `/data-license/` reviewed at desktop and 390×844 mobile sizes. No document overflow, trapped tables or browser console warnings/errors were found. |
+| IndexNow release set | ✅ DRY RUN | Full-site mode selected 641 public human URLs. No request was sent. Machine endpoints are included by the commit-diff path used after an approved release. |
+| Reuse risk gate | 🟡 YELLOW / medium | Severity 3 × likelihood 2 = 6. UK and New Zealand publish explicit open terms; Canada requires resource-specific checking for commercial redistribution, and no explicit UDI waiting-page reuse licence was identified. See `docs/DATA_REUSE_RISK_ASSESSMENT.md`; this is not legal advice. |
+
+### Release decision
+
+Phase 5A is locally ready for the owner's explicit deployment approval. A
+successful deployment would prove publication and crawlability, not indexing,
+rankings, traffic, advertising approval, demand or revenue.

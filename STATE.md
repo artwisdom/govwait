@@ -1,6 +1,6 @@
 # STATE — Data Moat Engine
 
-_Last updated: 2026-09-07_
+_Last updated: 2026-09-08_
 
 ## Environment (verified)
 | Runtime | Version |
@@ -31,6 +31,7 @@ All dependencies install locally (`node_modules` inside project). No sudo or mac
 - [x] Phase 3 growth release: permanent Canada and New Zealand change issues, complete change tables, report RSS, a demand-proven New Zealand 2021 Resident Visa guide, honest editorial dates, and expanded crawler/IndexNow coverage; commit `d635236`, run `33934940206`, and both approved Google crawl requests are verified
 - [x] Phase 4 query-led growth release: commit `8a512aa`, deployment run `34073350458`, Cloudflare artifact `51f5121a.govwait.pages.dev`, 639/639 production sitemap audit, IndexNow HTTP 200, and the approved Google crawl request are verified
 - [x] Phase 4B Canadian near-win production release: commit `fa73c2f`, deployment run `34176619821`, Cloudflare artifact `2e3649f8.govwait.pages.dev`, four demonstrated Search Console pages with stronger query-matching content, the IRCC visitor-biometrics correction, 639/639 production sitemap audit, public-edge verification, and a 645-URL IndexNow HTTP 200 receipt
+- [ ] Phase 5A dataset authority release: local candidate adds a canonical dataset hub, four generated CSV distributions, dataset metadata, fuller OpenAPI/AI discovery, a public-repository README, and source-specific reuse guidance; 2,110 HTML / 641 indexable / 641 sitemap URLs and 2,616-file API conformance pass locally, while commit, push, Cloudflare deployment and IndexNow remain owner-gated
 
 ## Deployment status (verified through 2026-09-07)
 - Repo LIVE: https://github.com/artwisdom/govwait (public, main)
@@ -196,14 +197,29 @@ accepted 645 affected public/discovery URLs with HTTP 200. No manual Google craw
 request was made. These are deployment and discovery receipts, not proof of
 indexing, rankings, traffic, ad approval or revenue.
 
+## Phase 5A dataset authority candidate (local, 2026-09-08)
+
+The next bounded release turns the existing machine layer into a citable public
+dataset without adding programmatic SEO pages. It generates current, append-only
+history, forward-looking and source-register CSVs from the same validated exports
+as the JSON API; publishes a metadata endpoint and canonical `/data/` page with
+Dataset structured data; adds source-specific reuse terms; and gives the public
+repository a complete root README.
+
+Current local receipt: **2,318 routes / 4,346 observations / 3,629 projection rows
+/ 9 sources; 2,110 HTML pages; 641 intentionally indexable pages and 641 matching
+sitemap URLs; 2,616 API/download files checked.** The static build, blocking SEO
+audit and expanded API conformance pass. Deployment, public-edge verification and
+IndexNow have not happened and remain behind explicit owner approval.
+
 ## Next step
 
-Phase 4B is live and needs no owner action. Recheck its four target URLs after 28
-days rather than resubmitting already-discovered URLs to Google. The next optional
-growth gate is Phase 5 authority/distribution using the existing reports, API and
-dataset; any external directory submission or outreach requires separate owner
-approval. Finland Migri remains the next source candidate and requires a 5-second
-crawl delay.
+Approve the Phase 5A commit, push and Cloudflare deployment. After the public edge
+passes, record IndexNow as a discovery receipt and separately decide whether to
+request Google priority crawling for the new `/data/` URL. MCP/npm/registry
+publication and any external directory submission remain separate account and
+publication gates. Finland Migri remains the next source candidate and requires a
+5-second crawl delay.
 
 ## Open threads
 - US/AU/IE sources WAF-blocked to honest bots — owner-decision item (documented in DEPLOYMENT_GUIDE).

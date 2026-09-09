@@ -4,15 +4,20 @@ import config from '../../site.config.json';
 import { stats } from '../lib/data.js';
 ---
 <Base title={`${config.SITE_NAME} API — free government processing-time data`}
-      description="Free, no-key JSON API for official government processing times, latest route values and history, plus an MCP server for AI agents.">
+      description="Free, no-key JSON API and CSV downloads for official government processing times, route history, provenance and IRCC projections.">
   <h1>JSON API (static, free, no key)</h1>
-  <p>The entire dataset is prebuilt as static JSON — fast, cacheable, and stable. Attribution (CC BY 4.0) required. Full schema: <a href="/api/v1/openapi.yaml">OpenAPI 3.1 spec</a>.</p>
+  <p>The dataset is prebuilt as static files—fast, cacheable and stable. Start with the <a href="/data/">dataset and CSV download page</a>. For JSON integrations, use the endpoints below and the <a href="/api/v1/openapi.yaml">OpenAPI 3.1 specification</a>.</p>
 
   <h2>Endpoints</h2>
   <div class="tablewrap"><table>
     <thead><tr><th>Path</th><th>Returns</th></tr></thead>
     <tbody>
       <tr><td><code>/api/v1/index.json</code></td><td>Dataset stats, sources, and links to all collections</td></tr>
+      <tr><td><code>/api/v1/dataset.json</code></td><td>Dataset metadata, counts, distributions and source register</td></tr>
+      <tr><td><code>/api/v1/downloads/latest.csv</code></td><td>All active processing-time metrics in one CSV</td></tr>
+      <tr><td><code>/api/v1/downloads/history.csv</code></td><td>Append-only observation history in one CSV</td></tr>
+      <tr><td><code>/api/v1/downloads/forward-looking.csv</code></td><td>IRCC current projections and application-month cohorts in one CSV</td></tr>
+      <tr><td><code>/api/v1/downloads/sources.csv</code></td><td>Primary-source URLs and source-specific reuse notes</td></tr>
       <tr><td><code>/api/v1/jurisdictions/ca.json</code></td><td>All Canadian routes with latest values</td></tr>
       <tr><td><code>/api/v1/jurisdictions/gb.json</code></td><td>All UK routes with latest values</td></tr>
       <tr><td><code>/api/v1/jurisdictions/nz.json</code></td><td>All New Zealand visa types with 50% and 80% working-day metrics</td></tr>
@@ -32,5 +37,8 @@ import { stats } from '../lib/data.js';
   <h2>For AI agents</h2>
   <p>An MCP (Model Context Protocol) server exposes <code>search_entities</code>, <code>get_entity</code>, <code>get_latest_value</code> and <code>compare_values</code> over this dataset — see the <a href="https://github.com/artwisdom/govwait/tree/main/machine/mcp-server" rel="noopener">public MCP server repository</a> for registration instructions, and <a href="/llms.txt">/llms.txt</a> for a machine-readable site description.</p>
 
-  <p class="small muted">{stats.entities.toLocaleString()} routes · {stats.forward_looking_estimates.toLocaleString()} forward-looking headline/cohort estimates · regenerated on every data refresh · values are official government publications, republished with provenance.</p>
+  <h2>Reuse</h2>
+  <p class="small">Preserve each record's government source attribution and qualifiers. GovWait's original organization, field definitions and explanatory metadata are available under CC BY 4.0 where GovWait owns the rights; underlying government information remains subject to the <a href="/data-license/">source-specific terms</a>.</p>
+
+  <p class="small muted">{stats.entities.toLocaleString()} routes · {stats.forward_looking_estimates.toLocaleString()} forward-looking headline/cohort estimates · regenerated on every validated data refresh · values are official government publications, republished with provenance.</p>
 </Base>

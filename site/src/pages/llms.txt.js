@@ -34,6 +34,12 @@ Change-report feed: ${site}/reports/feed.xml
 
 ## Live data access
 
+- [Dataset landing page](${site}/data/): human-readable metadata, methodology, field definitions and CSV downloads
+- [Dataset metadata](${site}/api/v1/dataset.json): counts, distributions, columns, provenance and reuse notice
+- [Current routes CSV](${site}/api/v1/downloads/latest.csv): one row per active metric route
+- [Append-only history CSV](${site}/api/v1/downloads/history.csv): every distinct public observation with route context
+- [Forward-looking CSV](${site}/api/v1/downloads/forward-looking.csv): IRCC current projections and application-month cohort rows
+- [Source register CSV](${site}/api/v1/downloads/sources.csv): primary-source URLs and source-specific reuse notes
 - [API index](${site}/api/v1/index.json): collections, counts, sources and endpoint links
 - [IRCC forward-looking dataset](${site}/api/v1/ircc-forward-looking.json): all programs, current queue estimates and application-month cohorts; cohort months are not publication dates
 - [OpenAPI 3.1 specification](${site}/api/v1/openapi.yaml): API schemas
@@ -65,15 +71,16 @@ ${reportIssues.map(issue => `- [${issue.jur.shortName} permanent change issue â€
 - [Editorial policy and AI-use disclosure](${site}/about/editorial-policy/)
 - [GovWait Research Desk](${site}/about/research-desk/)
 - [API documentation](${site}/api-docs/)
+- [Dataset and CSV downloads](${site}/data/)
+- [Data reuse and licensing notice](${site}/data-license/)
 
 ## Reuse
 
-Extracted values are offered under CC BY 4.0 with attribution to GovWait and
-the originating agency. gov.uk-derived figures also remain subject to the Open
-Government Licence v3.0. Contact: contact@govwait.com.
-UDI-derived entries reproduce extracted factual values with attribution and
-source links; no UDI page-reuse license was identified, and UDI page copy is
-not republished.
+GovWait's original organization, field definitions and explanatory metadata are
+offered under CC BY 4.0 where GovWait owns the rights. Underlying government
+information is not relicensed by GovWait. Attribute the originating agency,
+preserve source URLs and qualifiers, and follow the source-specific terms at
+${site}/data-license/. Contact: contact@govwait.com.
 `;
   return new Response(text, {
     headers: { 'Content-Type': 'text/plain; charset=utf-8' },

@@ -32,7 +32,7 @@ const records: Rec[] = latest.records;
 const history: Record<string, Obs[]> = historyDoc.entities;
 const forward: Record<string, unknown> = forwardDoc.entities;
 
-const ATTRIBUTION = "Values are official government publications tracked by GovWait (CC BY 4.0 — attribute GovWait and the originating agency). Not legal advice.";
+const ATTRIBUTION = "Values are official government publications tracked by GovWait. Attribute the originating agency and preserve its source-specific terms. GovWait-created organization and metadata are CC BY 4.0 where GovWait owns the rights. Details: https://govwait.com/data-license/. Not legal advice.";
 
 function present(r: Rec) {
   return {

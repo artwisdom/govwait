@@ -15,7 +15,7 @@ export const source = {
   jurisdiction: 'CA',
   agency: 'Immigration, Refugees and Citizenship Canada',
   url: TOOL_PAGE,
-  license_note: 'Government of Canada factual publication. GovWait stores extracted estimates, queue figures and provenance with attribution; it does not reproduce IRCC page copy.',
+  license_note: 'Government of Canada publication. GovWait stores extracted factual values with source attribution and does not reproduce page copy. Canada.ca general reproduction terms apply unless the originating resource expressly uses the Open Government Licence – Canada; review the current source terms before commercial redistribution.',
 };
 
 // Keys are the stable identifiers used in IRCC's official JSON. Names mirror

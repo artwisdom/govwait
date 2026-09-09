@@ -17,14 +17,17 @@ export function hubUrls() {
   const growthPhasePublished = '2026-09-04';
   const phaseFourPublished = '2026-09-06';
   const visitorGuidanceCorrected = '2026-09-07';
+  const datasetAuthorityPublished = '2026-09-08';
   const visitorIndiaDataLastmod = records.find(record => record.id === 'ca-visitor-visa--in')?.effective_date;
   const visitorPhilippinesDataLastmod = records.find(record => record.id === 'ca-visitor-visa--ph')?.effective_date;
   const urls = [
-    { path: '/', lastmod: phaseFourPublished },
-    { path: '/about/', lastmod: dataLastmod },
+    { path: '/', lastmod: datasetAuthorityPublished },
+    { path: '/about/', lastmod: datasetAuthorityPublished },
     { path: '/about/editorial-policy/', lastmod: phaseOnePublished },
     { path: '/about/research-desk/', lastmod: phaseOnePublished },
-    { path: '/api-docs/', lastmod: dataLastmod },
+    { path: '/api-docs/', lastmod: datasetAuthorityPublished },
+    { path: '/data/', lastmod: datasetAuthorityPublished },
+    { path: '/data-license/', lastmod: datasetAuthorityPublished },
     { path: '/guides/', lastmod: phaseFourPublished },
     { path: '/guides/how-canada-processing-times-work/', lastmod: dataLastmod },
     { path: '/guides/canada-visitor-visa-by-country/', lastmod: dataLastmod },

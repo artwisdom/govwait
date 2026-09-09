@@ -1,0 +1,136 @@
+---
+import Base from '../layouts/Base.astro';
+import config from '../../site.config.json';
+import { records, sources, stats, generatedAt, dataLastmod, fmtDate } from '../lib/data.js';
+
+const origin = config.SITE_URL.replace(/\/$/, '');
+const earliestObservation = records
+  .flatMap(record => record.history.map(observation => observation.effective_date))
+  .filter(Boolean)
+  .sort()
+  .at(0);
+const downloads = [
+  {
+    name: 'Current routes',
+    path: '/api/v1/downloads/latest.csv',
+    rows: stats.entities,
+    description: 'One row per active government processing-time metric.',
+  },
+  {
+    name: 'Append-only history',
+    path: '/api/v1/downloads/history.csv',
+    rows: stats.observations,
+    description: 'Every distinct public observation, with route context and source dates.',
+  },
+  {
+    name: 'Forward-looking projections',
+    path: '/api/v1/downloads/forward-looking.csv',
+    rows: stats.forward_looking_estimates,
+    description: 'IRCC current projections and application-month cohort rows.',
+  },
+  {
+    name: 'Source register',
+    path: '/api/v1/downloads/sources.csv',
+    rows: sources.length,
+    description: 'Primary-source URLs, agencies and source-specific reuse notes.',
+  },
+];
+const jsonld = [{
+  '@context': 'https://schema.org',
+  '@type': 'Dataset',
+  '@id': `${origin}/data/#dataset`,
+  name: 'GovWait government processing-time dataset',
+  description: 'Officially published government processing and wait times for visas, permits, sponsorships, resettlement and passports, with per-value provenance and append-only history.',
+  url: `${origin}/data/`,
+  identifier: `${origin}/data/#dataset`,
+  datePublished: '2026-08-21',
+  dateModified: dataLastmod,
+  temporalCoverage: `${earliestObservation}/..`,
+  spatialCoverage: ['Canada', 'United Kingdom', 'New Zealand', 'Norway'],
+  isAccessibleForFree: true,
+  creator: {
+    '@type': 'Organization',
+    '@id': `${origin}/#organization`,
+    name: config.SITE_NAME,
+    url: origin,
+  },
+  publisher: { '@id': `${origin}/#organization` },
+  license: `${origin}/data-license/`,
+  keywords: [
+    'government processing times', 'visa processing times', 'immigration data',
+    'permit wait times', 'IRCC', 'UKVI', 'Immigration New Zealand', 'UDI',
+  ],
+  variableMeasured: [
+    'official published wait value', 'normalized duration in days', 'publication or first-observed date',
+    'retrieval timestamp', 'source URL', 'availability status',
+  ],
+  isBasedOn: [...new Set(sources.map(source => source.url))],
+  distribution: downloads.map(download => ({
+    '@type': 'DataDownload',
+    name: `${download.name} CSV`,
+    description: download.description,
+    encodingFormat: 'text/csv',
+    contentUrl: `${origin}${download.path}`,
+  })),
+}];
+---
+<Base title="Government processing-time dataset — free CSV downloads | GovWait"
+      description="Download GovWait's source-backed government processing-time dataset as CSV, including current routes, append-only history, IRCC projections and provenance."
+      jsonld={jsonld}>
+  <nav class="crumbs"><a href="/">Home</a> › Data</nav>
+  <h1>Government processing-time dataset</h1>
+  <p class="lede">Free, source-backed data for {stats.entities.toLocaleString()} current processing-time routes across {stats.jurisdictions.length} governments. Download current values, append-only history, IRCC forward-looking projections and the complete source register—no account or API key required.</p>
+
+  <div class="stats">
+    <div><div class="n">{stats.entities.toLocaleString()}</div><div class="l">current routes</div></div>
+    <div><div class="n">{stats.observations.toLocaleString()}</div><div class="l">recorded observations</div></div>
+    <div><div class="n">{stats.forward_looking_estimates.toLocaleString()}</div><div class="l">projection rows</div></div>
+    <div><div class="n">{sources.length}</div><div class="l">official sources</div></div>
+  </div>
+
+  <h2>Download the data</h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th>File</th><th>Rows</th><th>What it contains</th></tr></thead>
+    <tbody>
+      {downloads.map(download => (
+        <tr>
+          <td><a href={download.path} download>{download.name} (.csv)</a></td>
+          <td class="num">{download.rows.toLocaleString()}</td>
+          <td>{download.description}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table></div>
+  <p class="small">Prefer JSON? Start with the <a href="/api/v1/index.json">API index</a> or <a href="/api-docs/">API documentation</a>. Machines can read the <a href="/api/v1/dataset.json">dataset metadata document</a>.</p>
+
+  <h2>Why this dataset is different</h2>
+  <ul>
+    <li><strong>Every value points to a primary government source.</strong> Route records preserve the official URL and retrieval timestamp.</li>
+    <li><strong>History is append-only.</strong> New observations are added; earlier published values are not silently replaced.</li>
+    <li><strong>Dates mean what they say.</strong> We use the agency's own update date when supplied. When a source has no date, a changed value receives a clearly described first-observed date.</li>
+    <li><strong>Different measures stay separate.</strong> Backward-looking times, forward projections, service standards and percentile measures carry distinct <code>metric_type</code> values.</li>
+    <li><strong>Missing answers remain honest.</strong> <code>unavailable</code> and <code>insufficient_data</code> are published states, not estimates.</li>
+  </ul>
+
+  <h2>Core fields</h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Field</th><th>Meaning</th></tr></thead>
+    <tbody>
+      <tr><td><code>entity_id</code></td><td>Stable route-and-metric identifier used by the JSON API.</td></tr>
+      <tr><td><code>value_raw</code></td><td>The official published wording, preserved as displayed by the source.</td></tr>
+      <tr><td><code>value_days</code></td><td>Normalized comparison value. The original unit remains in <code>unit_original</code>; range values use the upper end conservatively.</td></tr>
+      <tr><td><code>metric_type</code></td><td>Whether the figure is published, backward-looking, forward-looking, a service standard or a percentile.</td></tr>
+      <tr><td><code>effective_date</code></td><td>Agency update date when available; otherwise the first date GovWait observed that value.</td></tr>
+      <tr><td><code>retrieved_at</code></td><td>UTC timestamp when GovWait fetched the source.</td></tr>
+      <tr><td><code>source_url</code></td><td>Official government page or data file for the observation.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Freshness and method</h2>
+  <p>The current export was generated {fmtDate(generatedAt)}. The newest official update or first-observed date represented is {fmtDate(dataLastmod)}. GovWait checks sources on a regular schedule, but each agency publishes on its own cadence. A failed source or validation check stops publication rather than producing a guessed value.</p>
+  <p>Read the full <a href="/about/">collection method and source register</a>, the <a href="/about/editorial-policy/">editorial policy</a>, and the <a href="/data-license/">data reuse and licensing notice</a>.</p>
+
+  <h2>Suggested citation</h2>
+  <pre class="code"><code>GovWait. “GovWait government processing-time dataset.” Version 1, https://govwait.com/data/. Accessed [date].</code></pre>
+  <p class="small muted">GovWait is independent and is not affiliated with any government. The data is reference information, not legal or immigration advice, and no published time predicts an individual case.</p>
+</Base>

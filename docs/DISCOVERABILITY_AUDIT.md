@@ -5,7 +5,9 @@ Phase 1 trust/growth release on 2026-08-25, the IRCC forward-looking release on
 2026-08-27, Norway UDI on 2026-08-31, Phase 3 reports/RSS on 2026-09-04, Phase 4
 query-led content on 2026-09-06, and Phase 4B Canadian near-wins on 2026-09-07.
 Current production is commit `fa73c2f`, deployed in GitHub Actions run
-`34176619821` to `2e3649f8.govwait.pages.dev`._
+`34176619821` to `2e3649f8.govwait.pages.dev`. Phase 5A's dataset-authority
+additions were verified locally on 2026-09-08 and remain pending owner deployment
+approval._
 
 ## Search-indexing policy
 
@@ -194,3 +196,21 @@ Google priority crawl requests accepted for all owner-approved URLs, including
   Google request was made because Search Console had already discovered the four
   target URLs. These are discovery receipts, not confirmed indexing, ranking,
   traffic, ad approval, or revenue.
+
+## Phase 5A dataset authority candidate
+
+- Adds two indexable trust/utility pages: `/data/` and `/data-license/`. The
+  canonical dataset page contains one Dataset JSON-LD object with four
+  `DataDownload` distributions and official source URLs in `isBasedOn`; the
+  homepage no longer duplicates Dataset markup.
+- Generates four CSVs from the same validated exports as the JSON API: 2,318
+  current routes, 4,346 public history observations, 3,629 forward-looking rows
+  and 9 source records. `/api/v1/dataset.json` publishes the counts, columns,
+  provenance and reuse notice.
+- The blocking audit verifies both pages, all four downloads, metadata counts,
+  structured-data fields, internal links, `llms.txt` discovery and honest
+  September 8 editorial sitemap dates.
+- Local acceptance: 2,110 HTML pages, 641 intentionally indexable pages, exactly
+  641 sitemap URLs and 2,616 checked API/download files. Publication, public-edge
+  behavior, IndexNow response, indexing, Dataset Search appearance, traffic and
+  revenue remain unverified.

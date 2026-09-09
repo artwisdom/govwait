@@ -15,14 +15,35 @@ const history = JSON.parse(readFileSync(path.join(EXPORTS, 'history.json'), 'utf
 const forward = JSON.parse(readFileSync(path.join(EXPORTS, 'forward-looking.json'), 'utf8'));
 const stats = JSON.parse(readFileSync(path.join(EXPORTS, 'stats.json'), 'utf8'));
 
-const ATTribution = 'GovWait extracted-value compilation: CC BY 4.0 — attribute GovWait and the originating government agency. Underlying source terms vary; consult each source license_note in /api/v1/index.json.';
+const ATTRIBUTION = 'GovWait original organization, field definitions and explanatory metadata: CC BY 4.0 where GovWait owns the rights. Underlying government information is not relicensed by GovWait; attribute the originating agency and follow its source-specific terms. Details: https://govwait.com/data-license/.';
+const DATA_PUBLISHED = '2026-08-21';
+const dataModified = latest.records.map(record => record.effective_date).filter(Boolean).sort().at(-1);
 
 rmSync(API, { recursive: true, force: true });
 mkdirSync(path.join(API, 'jurisdictions'), { recursive: true });
 mkdirSync(path.join(API, 'services'), { recursive: true });
 mkdirSync(path.join(API, 'entities'), { recursive: true });
+mkdirSync(path.join(API, 'downloads'), { recursive: true });
 
 const j = (o) => JSON.stringify(o, null, 1);
+const csvCell = (value) => {
+  if (value === null || value === undefined) return '';
+  const text = String(value);
+  return /[\",\r\n]/.test(text) ? `\"${text.replaceAll('\"', '\"\"')}\"` : text;
+};
+const csv = (columns, rows) => `${columns.join(',')}\n${rows.map(row => columns.map(column => csvCell(row[column])).join(',')).join('\n')}\n`;
+const writeCsv = (filename, columns, rows, description) => {
+  writeFileSync(path.join(API, 'downloads', filename), csv(columns, rows));
+  return {
+    title: filename,
+    description,
+    path: `/api/v1/downloads/${filename}`,
+    format: 'CSV',
+    media_type: 'text/csv',
+    row_count: rows.length,
+    columns,
+  };
+};
 const recPublic = (r) => ({
   entity_id: r.id,
   jurisdiction: r.jurisdiction,
@@ -50,7 +71,7 @@ for (const r of latest.records) {
     ...recPublic(r),
     history: history.entities[r.id] || [],
     ...(forward.entities[r.id] ? { forward_looking: forward.entities[r.id] } : {}),
-    license: ATTribution,
+    license: ATTRIBUTION,
   }));
 }
 
@@ -67,7 +88,7 @@ writeFileSync(path.join(API, 'ircc-forward-looking.json'), j({
     ...recPublic(record),
     forward_looking: forward.entities[record.id],
   })),
-  license: ATTribution,
+  license: ATTRIBUTION,
 }));
 
 // services/{service_key}.json
@@ -81,7 +102,7 @@ for (const [key, recs] of Object.entries(byService)) {
     count: recs.length,
     generated_at: latest.generated_at,
     records: recs.map(recPublic),
-    license: ATTribution,
+    license: ATTRIBUTION,
   }));
 }
 
@@ -95,9 +116,121 @@ for (const [code, recs] of Object.entries(byJur)) {
     generated_at: latest.generated_at,
     services: Object.keys(byService).filter(k => byService[k][0].jurisdiction.toLowerCase() === code),
     records: recs.map(recPublic),
-    license: ATTribution,
+    license: ATTRIBUTION,
   }));
 }
+
+// Portable bulk downloads. These are rebuilt from the same validated exports
+// as the JSON API so the two formats cannot silently drift apart.
+const latestColumns = [
+  'entity_id', 'source_id', 'jurisdiction', 'service_category', 'metric_type',
+  'service_key', 'service_name', 'applicant_country', 'applicant_country_name',
+  'value_raw', 'value_days', 'unit_original', 'status', 'effective_date',
+  'retrieved_at', 'source_url', 'confidence',
+];
+const latestRows = latest.records.map(record => ({ ...record, entity_id: record.id }));
+
+const historyColumns = [
+  'entity_id', 'source_id', 'jurisdiction', 'service_category', 'metric_type',
+  'service_key', 'service_name', 'applicant_country', 'applicant_country_name',
+  'observation_number', 'value_raw', 'value_days', 'unit_original', 'status',
+  'effective_date', 'retrieved_at', 'source_url',
+];
+const recordById = new Map(latest.records.map(record => [record.id, record]));
+const historyRows = Object.entries(history.entities).flatMap(([entityId, observations]) => {
+  const record = recordById.get(entityId);
+  if (!record) throw new Error(`[build-api] history entity ${entityId} has no current record`);
+  return observations.map((observation, index) => ({
+    entity_id: entityId,
+    source_id: record.source_id,
+    jurisdiction: record.jurisdiction,
+    service_category: record.service_category,
+    metric_type: record.metric_type,
+    service_key: record.service_key,
+    service_name: record.service_name,
+    applicant_country: record.applicant_country,
+    applicant_country_name: record.applicant_country_name,
+    observation_number: index + 1,
+    ...observation,
+  }));
+});
+
+const forwardColumns = [
+  'entity_id', 'source_id', 'jurisdiction', 'service_category', 'metric_type',
+  'service_key', 'service_name', 'row_type', 'snapshot_date', 'cohort_month',
+  'wait_raw', 'wait_days', 'unit_original', 'status', 'queue_raw', 'queue_people',
+  'confidence', 'retrieved_at', 'source_url',
+];
+const forwardRows = Object.entries(forward.entities).flatMap(([entityId, detail]) => {
+  const record = recordById.get(entityId);
+  if (!record) throw new Error(`[build-api] forward-looking entity ${entityId} has no current record`);
+  return detail.snapshots.flatMap(snapshot => {
+    const shared = {
+      entity_id: entityId,
+      source_id: record.source_id,
+      jurisdiction: record.jurisdiction,
+      service_category: record.service_category,
+      metric_type: record.metric_type,
+      service_key: record.service_key,
+      service_name: record.service_name,
+      snapshot_date: snapshot.snapshot_date,
+      retrieved_at: snapshot.retrieved_at,
+      source_url: snapshot.source_url,
+    };
+    return [
+      { ...shared, row_type: 'current', cohort_month: null, ...snapshot.current },
+      ...snapshot.cohorts.map(cohort => ({ ...shared, row_type: 'cohort', ...cohort })),
+    ];
+  });
+});
+
+const sourceColumns = [
+  'source_id', 'name', 'jurisdiction', 'agency', 'source_url', 'license_note',
+  'robots_status', 'robots_checked_at',
+];
+const sourceRows = latest.sources.map(source => ({
+  ...source,
+  source_id: source.id,
+  source_url: source.url,
+}));
+
+const distributions = [
+  writeCsv('latest.csv', latestColumns, latestRows, 'One row per currently active metric route.'),
+  writeCsv('history.csv', historyColumns, historyRows, 'Append-only distinct public observations with route context.'),
+  writeCsv('forward-looking.csv', forwardColumns, forwardRows, 'IRCC current projections and application-month cohort rows.'),
+  writeCsv('sources.csv', sourceColumns, sourceRows, 'Primary-source provenance and source-specific reuse notes.'),
+];
+
+writeFileSync(path.join(API, 'dataset.json'), j({
+  name: 'GovWait government processing-time dataset',
+  description: 'Officially published government processing and wait times with source URLs, honest dates and append-only history.',
+  version: '1',
+  date_published: DATA_PUBLISHED,
+  date_modified: dataModified,
+  generated_at: latest.generated_at,
+  landing_page: 'https://govwait.com/data/',
+  stats: {
+    current_routes: latestRows.length,
+    historical_observations: historyRows.length,
+    forward_looking_rows: forwardRows.length,
+    sources: sourceRows.length,
+    jurisdictions: stats.jurisdictions.length,
+    services: stats.services,
+  },
+  distributions,
+  sources: latest.sources.map(source => ({
+    id: source.id,
+    name: source.name,
+    agency: source.agency,
+    jurisdiction: source.jurisdiction,
+    url: source.url,
+    license_note: source.license_note,
+  })),
+  reuse: {
+    notice: ATTRIBUTION,
+    details: 'https://govwait.com/data-license/',
+  },
+}));
 
 // index.json
 writeFileSync(path.join(API, 'index.json'), j({
@@ -111,9 +244,11 @@ writeFileSync(path.join(API, 'index.json'), j({
     services: Object.keys(byService).map(k => `/api/v1/services/${k}.json`),
     entity_pattern: '/api/v1/entities/{entity_id}.json',
     ircc_forward_looking: '/api/v1/ircc-forward-looking.json',
+    dataset_metadata: '/api/v1/dataset.json',
+    downloads: distributions.map(distribution => distribution.path),
     openapi: '/api/v1/openapi.yaml',
   },
-  license: ATTribution,
+  license: ATTRIBUTION,
 }));
 
-console.log(`[build-api] wrote ${latest.records.length} entity endpoints, ${Object.keys(byService).length} service endpoints, ${Object.keys(byJur).length} jurisdiction endpoints, ${forwardRecords.length} forward-looking programs`);
+console.log(`[build-api] wrote ${latest.records.length} entity endpoints, ${Object.keys(byService).length} service endpoints, ${Object.keys(byJur).length} jurisdiction endpoints, ${forwardRecords.length} forward-looking programs, and ${distributions.length} CSV downloads`);

@@ -31,8 +31,13 @@ function resolveUnstamped(observations) {
 
 function upsert(sourceMeta, entities, observations, forwardEstimates = []) {
   const stmts = ['BEGIN;'];
+  const priorSource = queryJson(`SELECT robots_checked_at FROM sources WHERE id=${sqlQuote(sourceMeta.id)} LIMIT 1`)[0];
+  // A cache-only local run never reads robots.txt, so it must not claim a new
+  // robots verification time. Production --refresh runs do evaluate the
+  // cached-or-live robots response through politeFetch before fetching data.
+  const robotsCheckedAt = forceRefresh ? new Date().toISOString() : (priorSource?.robots_checked_at ?? null);
   stmts.push(`INSERT INTO sources (id,name,jurisdiction,agency,url,license_note,robots_status,robots_checked_at) VALUES (${[
-    sourceMeta.id, sourceMeta.name, sourceMeta.jurisdiction, sourceMeta.agency, sourceMeta.url, sourceMeta.license_note, 'allowed', new Date().toISOString(),
+    sourceMeta.id, sourceMeta.name, sourceMeta.jurisdiction, sourceMeta.agency, sourceMeta.url, sourceMeta.license_note, 'allowed', robotsCheckedAt,
   ].map(sqlQuote).join(',')}) ON CONFLICT(id) DO UPDATE SET
     name=excluded.name, jurisdiction=excluded.jurisdiction, agency=excluded.agency,
     url=excluded.url, license_note=excluded.license_note,
@@ -95,6 +100,11 @@ async function main() {
     console.error('[pipeline] HARD FAIL — one or more sources errored. Nothing exported.');
     process.exit(1);
   }
+
+  // The committed main database file is the durable history authority. Force
+  // WAL contents into it before validation/export so GitHub Actions cannot
+  // commit exports that are newer than db.sqlite while ignoring WAL sidecars.
+  exec('PRAGMA wal_checkpoint(TRUNCATE);');
 
   const report = validate();
   if (!report.pass) {

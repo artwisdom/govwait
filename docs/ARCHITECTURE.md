@@ -13,13 +13,14 @@ sources (official pages/APIs) ──fetch──▶ data/cache/http/  (raw, never
                                    data/exports/*.json  (versioned snapshots)
                                       │           │            │
                                       ▼           ▼            ▼
-                                 /site (Astro)  /site/public/api/v1 (static JSON API)  /machine/mcp-server
+                                 /site (Astro)  /site/public/api/v1 (static JSON + CSV)  /machine/mcp-server
 ```
 
 ## Stack decisions
 - **Pipeline: Node 20, zero npm dependencies.** SQLite access via the system `sqlite3` CLI (v3.51, verified) using `-json` output — avoids native-module compile risk entirely. Built-in `fetch` for HTTP.
 - **SQLite is the source of truth**; JSON exports are the only thing the three skins read. The MCP server and site never touch the DB directly, so they stay dependency-light and the DB schema can evolve freely.
-- **History model**: one `observations` row per (entity, source-stated update date). Re-runs are idempotent (`INSERT OR IGNORE`); history accumulates only when the source republishes. This is the compounding moat — official pages show only current values.
+- **History model**: one `observations` row per (entity, source-stated update date). For sources without a date, a row is added only when the value changes and its date is the first observation of that change. Re-runs are idempotent (`INSERT OR IGNORE`). Legacy consecutive no-change artifacts remain in the append-only database but are filtered from public exports. This is the compounding moat — official pages show only current values.
+- **Commit durability**: the pipeline forces `wal_checkpoint(TRUNCATE)` before validation and export, ensuring the committed `db.sqlite` contains every row visible to the exported snapshots even though WAL sidecars are ignored.
 
 ## Schema (schema.sql)
 - `sources` — id, name, jurisdiction, agency, url, license_note, robots_status, robots_checked_at.
@@ -54,11 +55,12 @@ Report written to `data/exports/validation-report.json`; any FAIL ⇒ exit 1 ⇒
 ## Exports (pipeline/export.js → data/exports/)
 - `latest.json` — every entity + its most recent observation (the file all skins read).
 - `history.json` — all observations grouped by entity.
+- `forward-looking.json` — IRCC projection snapshots, keeping publication snapshot dates separate from application cohort months.
 - `stats.json` — counts, per-source freshness, generated_at.
 
 ## Skins
-- **Site** (`/site`, Astro, static): one page per entity (`/ca/visitor-visa/from-in/`), service hubs, jurisdiction hubs, About/Methodology. Freshness stamp + provenance on every value. JSON-LD Dataset + per-page structured data. <200KB/page.
-- **Static API** (`/site/public/api/v1/`): prebuilt JSON — collection indexes + per-entity endpoints mirroring `openapi.yaml`. Free-CDN "API" with zero runtime cost.
+- **Site** (`/site`, Astro, static): one page per published route, service hubs, jurisdiction hubs, reports, guides and trust pages. Freshness stamp + provenance on every value. The canonical `/data/` page owns Dataset JSON-LD; route/report pages carry their relevant structured data. <200KB/page.
+- **Static API and downloads** (`/site/public/api/v1/`): prebuilt JSON collection/per-entity endpoints plus generated current, history, forward-looking and source-register CSVs. `dataset.json` describes every distribution, and `openapi.yaml` defines the public contract. All are free-CDN files with zero runtime cost.
 - **MCP server** (`/machine/mcp-server`, TypeScript, stdio): tools `search_entities`, `get_entity`, `get_latest_value`, `compare_values` reading `data/exports/*.json`.
 
 ## Refresh and deployment loop

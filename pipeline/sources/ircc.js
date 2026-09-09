@@ -12,7 +12,7 @@ export const source = {
   jurisdiction: 'CA',
   agency: 'Immigration, Refugees and Citizenship Canada',
   url: TOOL_PAGE,
-  license_note: 'Government of Canada publication; facts/values extracted under fair-dealing-style factual reuse. Non-commercial reproduction terms noted; we store extracted values with attribution, not page content. Owner review recommended before commercial launch.',
+  license_note: 'Government of Canada publication. GovWait stores extracted factual values with source attribution and does not reproduce page copy. Canada.ca general reproduction terms apply unless the originating resource expressly uses the Open Government Licence – Canada; review the current source terms before commercial redistribution.',
 };
 
 const CATEGORIES = {
