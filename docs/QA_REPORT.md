@@ -65,5 +65,8 @@ confirmed HTTP 200 and correct content types for the pages, JSON, CSV and OpenAP
 the four CSV row counts; Dataset markup and canonicals; `llms.txt`, `robots.txt`,
 five child sitemaps with 641 unique URLs; the public README; and the
 path/query-preserving `www` redirect. IndexNow accepted 656 affected URLs with
-HTTP 200. No Google crawl request was made. None of these receipts proves
-indexing, ranking, traffic, advertising approval, demand or revenue.
+HTTP 200. No Google crawl request was made at deployment time. On 2026-09-13,
+Search Console accepted the owner-approved `/data/` indexing request and added
+it to a priority crawl queue; the inspected URL was not indexed then. None of
+these receipts proves indexing, ranking, traffic, advertising approval, demand
+or revenue.

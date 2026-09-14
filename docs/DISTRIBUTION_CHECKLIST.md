@@ -1,6 +1,6 @@
 # GovWait authority and distribution checklist
 
-Last reviewed: 2026-09-08 (America/New_York)
+Last reviewed: 2026-09-13 (America/New_York)
 
 This checklist separates a working local package, a public deployment, a
 directory submission and actual discovery. None proves the next stage.
@@ -21,8 +21,9 @@ Status: **production-verified on 2026-09-08 at commit `fd7ba67`**.
 - [x] Obtain owner approval to commit, push and deploy.
 - [x] Verify Cloudflare artifact `ca3bad6a.govwait.pages.dev` and the public apex.
 - [x] Record the 656-URL IndexNow HTTP 200 response as a discovery receipt only.
-- [ ] Request Google priority crawling for `/data/` only after it is public and
-  only with owner approval.
+- [x] Request Google priority crawling for `/data/` after publication and owner
+  approval. Search Console accepted it on 2026-09-13 and added the URL to a
+  priority crawl queue; the URL was not indexed at inspection time.
 
 Production receipt: GitHub run `34300806761` passed its 2,110-page build and
 641/641 SEO-sitemap gate. The production-configured local build matched the

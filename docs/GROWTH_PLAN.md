@@ -184,9 +184,11 @@ production-configured build matched the artifact byte-for-byte; the apex passed
 checks for the dataset and licence pages, four CSVs, dataset metadata, OpenAPI,
 `llms.txt`, `robots.txt`, 641 unique sitemap URLs, canonical links and the
 path-preserving `www` redirect. The public GitHub README matched the release, and
-IndexNow accepted 656 affected URLs with HTTP 200. No Google crawl request has
-been made for `/data/`. These are publication and discovery receipts, not
-indexing, traffic or revenue evidence.
+IndexNow accepted 656 affected URLs with HTTP 200. On 2026-09-13, after owner
+approval, Google Search Console accepted one indexing request for `/data/` and
+added it to a priority crawl queue; the URL was not indexed at inspection time.
+These are publication and discovery receipts, not indexing, traffic or revenue
+evidence.
 
 Phase 5B remains separate: make the MCP package self-contained, choose a software
 licence, publish it to npm with owner account approval, and only then publish

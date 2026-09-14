@@ -1,6 +1,6 @@
 # STATE — Data Moat Engine
 
-_Last updated: 2026-09-08_
+_Last updated: 2026-09-13_
 
 ## Environment (verified)
 | Runtime | Version |
@@ -215,16 +215,18 @@ dataset metadata; the apex matched the artifact, allowing for Cloudflare's email
 address obfuscation on the licensing page. All four CSVs, metadata, OpenAPI,
 crawler files, 641 unique sitemap URLs, canonical links and the path-preserving
 `www` redirect passed public checks. IndexNow accepted 656 affected URLs with HTTP
-200. No Google priority-crawl request has been made for `/data/`.
+200. On 2026-09-13, Google Search Console accepted the owner-approved indexing
+request for `https://govwait.com/data/` and reported that the URL was added to a
+priority crawl queue. At inspection time it was not indexed; the request does
+not establish indexing, rankings, traffic, ad approval or revenue.
 
 ## Next step
 
-The next smallest discovery action is one owner-approved Google priority-crawl
-request for the new `/data/` URL. After that, Phase 5B can make the MCP package
-self-contained locally; choosing a software licence, publishing to npm, publishing
-to the official MCP Registry and submitting to other directories remain separate
-account/publication gates. Finland Migri remains the next source candidate and
-requires a 5-second crawl delay.
+The next bounded growth step is to make the Phase 5B MCP package self-contained
+locally and verify its npm package contents. Choosing a software licence,
+publishing to npm, publishing to the official MCP Registry and submitting to
+other directories remain separate account/publication gates. Finland Migri
+remains the next source candidate and requires a 5-second crawl delay.
 
 ## Open threads
 - US/AU/IE sources WAF-blocked to honest bots — owner-decision item (documented in DEPLOYMENT_GUIDE).

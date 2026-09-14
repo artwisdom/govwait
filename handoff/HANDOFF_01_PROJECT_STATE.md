@@ -294,7 +294,9 @@ Local Node is 20.19.6 (Astro pinned to v4 for this reason; CI also pins Node 20)
   checks. Commit `fd7ba67`, run `34300806761`, artifact
   `ca3bad6a.govwait.pages.dev`, the 2,110 HTML / 641 indexable / 641 sitemap gate,
   2,616 checked API/download files, public-edge checks and the 656-URL IndexNow
-  HTTP 200 receipt are verified. No Google crawl request was made for `/data/`.
+  HTTP 200 receipt are verified. On 2026-09-13, Google Search Console accepted
+  the owner-approved indexing request for `/data/` into its priority crawl queue;
+  the URL was not indexed at inspection time.
 
 ## 8. QA ritual before any push that touches pipeline or site
 

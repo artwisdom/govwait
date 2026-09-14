@@ -132,8 +132,10 @@ root README, OpenAPI/`llms.txt` integration and source-specific reuse notice are
 live at commit `fd7ba67`, deployed by run `34300806761` to
 `ca3bad6a.govwait.pages.dev`. The release passed 2,110 HTML pages, 641 matching
 indexable/sitemap URLs, 2,616 checked API/download files, artifact/apex checks and
-a 656-URL IndexNow HTTP 200 receipt. Google Dataset Search appearance is not
-claimed or guaranteed, and no Google crawl request has been made for `/data/`.
+a 656-URL IndexNow HTTP 200 receipt. On 2026-09-13, Google Search Console
+accepted the owner-approved `/data/` indexing request into a priority crawl
+queue; the inspected URL was not indexed. Google Dataset Search appearance is
+not claimed or guaranteed.
 MCP packaging is not yet self-contained; npm publication, official MCP Registry
 publication and all other directory submissions remain separate owner/account
 gates.

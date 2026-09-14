@@ -141,5 +141,7 @@ style preferences.
   and deployed `/data/`, four generated CSV downloads, dataset metadata, a root
   README and source-specific reuse guidance to `ca3bad6a.govwait.pages.dev`.
   The 2,110-page build, 641/641 sitemap gate, 2,616-file API/download check,
-  artifact/apex checks and 656-URL IndexNow HTTP 200 receipt passed. No Google
-  crawl request, indexing, traffic, ad approval or revenue is claimed.
+  artifact/apex checks and 656-URL IndexNow HTTP 200 receipt passed. On
+  2026-09-13, Google accepted the owner-approved `/data/` indexing request into
+  its priority crawl queue. Indexing, traffic, ad approval and revenue are not
+  claimed.
