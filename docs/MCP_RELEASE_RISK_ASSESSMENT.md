@@ -1,6 +1,6 @@
 # GovWait MCP release risk assessment
 
-Last reviewed: 2026-09-16 (America/New_York)
+Last reviewed: 2026-09-17 (America/New_York)
 
 This is a practical release-risk assessment, not legal advice. It does not
 replace advice from a qualified lawyer for a specific commercial arrangement.
@@ -110,16 +110,16 @@ The retained private candidate is `govwait-mcp-0.1.0.tgz`: 118,606 bytes
 compressed / 4,239,539 bytes unpacked, with SHA-256
 `d27d372e8e14a421fe098234a53766049c055eb2e2bc2bc7bdc203d2f979d822`.
 
-No npm account or package was created or changed. No name was reserved. No
-external licence distribution, npm publication, MCP Registry submission,
-commit, push, deployment or directory submission occurred. The approved licence
-and release candidate exist only in the local working tree.
+No npm account or package was created or changed, and no name was reserved.
+Candidate source commit `ba830db` was pushed to the public GitHub repository on
+2026-09-17, making the scoped code licence public. The private tarball and its
+checksum remain local and ignored. No npm publication, MCP Registry submission,
+Cloudflare deployment, IndexNow notification or directory submission occurred.
 
 ## Next gate
 
-The next gate is a separate approval to commit and push this private release
-candidate to the public GitHub repository. Actual npm publication and actual MCP
-Registry publication remain later, separate account/publication gates.
-Immediately before either publication, recheck both names and the official
-registry schema because availability can change and the Registry is still a
-preview service.
+The next gate is npm account and publication preflight only; it must stop before
+`npm publish`. Actual npm publication and actual MCP Registry publication remain
+later, separate account/publication gates. Immediately before either
+publication, recheck both names and the official registry schema because
+availability can change and the Registry is still a preview service.

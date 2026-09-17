@@ -34,8 +34,8 @@ or revenue.
 
 ## Phase 5B — self-contained MCP package
 
-Status: **private 0.1.0 release candidate verified on 2026-09-16; every external
-publication remains a separate owner/account gate**.
+Status: **private 0.1.0 candidate source pushed to GitHub on 2026-09-17; npm and
+every directory publication remain separate owner/account gates**.
 
 1. [x] Research a repository/software licence. Apache 2.0 is recommended for
    GovWait-owned code only.
@@ -57,8 +57,9 @@ publication remains a separate owner/account gate**.
    it against the official `2025-12-11` schema plus local cross-file checks.
 7. [x] Build and retain the audited private `0.1.0` release candidate plus its
    SHA-256 sidecar in the git-ignored package `release/` directory.
-8. [ ] Owner approves committing and pushing the private release candidate to the
-   public GitHub repository.
+8. [x] After owner approval, push candidate source commit `ba830db` to public
+   GitHub `main`. No deploy-path file changed and GitHub returned no Actions run
+   for that commit; the local tarball remains ignored.
 9. [ ] Owner signs into npm, enables the required publishing security and approves
    the public package publication.
 10. [ ] After the npm package is publicly retrievable, revalidate `server.json`
@@ -74,7 +75,12 @@ hashes matched; the isolated server loaded 2,318 routes from its own package
 directory. SHA-256:
 `d27d372e8e14a421fe098234a53766049c055eb2e2bc2bc7bdc203d2f979d822`.
 The official Registry schema check passed separately. `private: true` remains
-active; nothing was published.
+active; no npm package or MCP Registry metadata was published.
+
+GitHub-only receipt: commit `ba830db9201b637539e84e57613f76fa45ac2b45`
+is present on `artwisdom/govwait` `main`. This published source code and licence
+to GitHub only; it did not publish the npm package, submit Registry metadata,
+deploy Cloudflare Pages or send IndexNow URLs.
 
 The official registry currently requires a package to be public before its
 registry metadata is published. GitHub-authenticated server names must match the

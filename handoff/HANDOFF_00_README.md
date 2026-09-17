@@ -145,7 +145,7 @@ style preferences.
   2026-09-13, Google accepted the owner-approved `/data/` indexing request into
   its priority crawl queue. Indexing, traffic, ad approval and revenue are not
   claimed.
-- Phase 5B private 0.1.0 release candidate is **local-only verified**: the MCP
+- Phase 5B private 0.1.0 release candidate is **GitHub-source verified**: the MCP
   server packages three validated exports plus deterministic SHA-256 provenance,
   uses an exact nine-file npm allow-list including a scoped software licence and
   separate data notice, and passed all 15 protocol assertions from an isolated
@@ -153,4 +153,5 @@ style preferences.
   `io.github.artwisdom/govwait` are prepared identities, and draft Registry
   metadata passed the official schema. The owner approved Apache 2.0 for
   GovWait-owned code only; bundled government data remains excluded and
-  `private: true` remains active. Nothing was published or registered.
+  `private: true` remains active. Candidate source commit `ba830db` was pushed to
+  GitHub only; no npm package, MCP Registry entry or deployment was published.

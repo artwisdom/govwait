@@ -107,5 +107,8 @@ or revenue.
   unpacked, and all three data hashes matched. The retained private candidate's
   SHA-256 is
   `d27d372e8e14a421fe098234a53766049c055eb2e2bc2bc7bdc203d2f979d822`.
-- External-change boundary: no npm or Registry account change, publication,
-  submission, commit, push, deployment or directory listing occurred.
+- GitHub-only release: candidate source commit `ba830db` was pushed to `main`
+  after owner approval. No deployment-trigger path changed, and GitHub returned
+  no Actions run for the commit.
+- External-change boundary: no npm or Registry account change or publication,
+  Cloudflare deployment, IndexNow notification or directory listing occurred.

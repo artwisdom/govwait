@@ -197,9 +197,10 @@ passed all 15 MCP assertions from an isolated temporary runtime. `govwait-mcp` a
 `io.github.artwisdom/govwait` are prepared identities, not reservations; draft
 official Registry metadata passed the current schema. The owner approved Apache
 2.0 for GovWait-owned code only, with government data excluded, while the package
-remains `private: true`. GitHub push, npm publication, official MCP Registry
-publication, other directories and outreach remain separate gates. See
-`docs/DISTRIBUTION_CHECKLIST.md`.
+remains `private: true`. Candidate source commit `ba830db` was pushed to GitHub
+only on 2026-09-17; no GitHub Actions or Cloudflare deployment ran. npm
+publication, official MCP Registry publication, other directories and outreach
+remain separate gates. See `docs/DISTRIBUTION_CHECKLIST.md`.
 
 Measure accepted listings, earned links, referral visitors and returning users
 separately. A submitted URL, directory form or sent message is not indexing, a

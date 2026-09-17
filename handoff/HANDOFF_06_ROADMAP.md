@@ -142,9 +142,10 @@ a scoped code licence and a separate data notice, and passed all 15 MCP
 assertions from an isolated temporary runtime. The recommended identities are `govwait-mcp` and
 `io.github.artwisdom/govwait`; draft Registry metadata passed the official
 schema. The owner approved Apache 2.0 for GovWait-owned code only, with bundled
-government data excluded. The package remains `private: true`; GitHub push, npm
-publication, official MCP Registry publication and all other directory
-submissions remain separate owner/account gates.
+government data excluded. Candidate source commit `ba830db` was pushed to GitHub
+only on 2026-09-17 and triggered no Actions/deployment run. The package remains
+`private: true`; npm publication, official MCP Registry publication and all
+other directory submissions remain separate owner/account gates.
 
 ## Phase R7 — Scale sources (Norway → Finland → Sweden → Denmark → Netherlands)
 

@@ -305,9 +305,10 @@ Local Node is 20.19.6 (Astro pinned to v4 for this reason; CI also pins Node 20)
   and licensing invariants. The recommended identities are
   `govwait-mcp` and `io.github.artwisdom/govwait`; draft `server.json` passed the
   official Registry schema. The owner approved Apache 2.0 for GovWait-owned code
-  only, with bundled government data excluded. The package remains
-  `private: true`; GitHub push, npm publication and MCP Registry publication are
-  separate approvals.
+  only, with bundled government data excluded. Candidate source commit `ba830db`
+  was pushed to GitHub only on 2026-09-17, with no Actions/deployment run. The
+  package remains `private: true`; npm publication and MCP Registry publication
+  are separate approvals.
 
 ## 8. QA ritual before any push that touches pipeline or site
 
