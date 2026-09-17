@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "dataset": "GovWait government processing-times dataset",
+  "dataset_url": "https://govwait.com/data/",
+  "methodology_url": "https://govwait.com/methodology/",
+  "data_reuse_url": "https://govwait.com/data-license/",
+  "dataset_generated_at": "2026-09-01T17:38:38.773Z",
+  "statistics": {
+    "current_routes": 2318,
+    "history_entities": 2318,
+    "history_observations": 4346,
+    "forward_entities": 28,
+    "forward_snapshots": 28,
+    "forward_cohorts": 3601
+  },
+  "files": {
+    "latest.json": {
+      "bytes": 1583643,
+      "sha256": "cbb39785fb0aa1919e823a4cd433a4cff6372661ec162ff08c7dc121bc92d29e"
+    },
+    "history.json": {
+      "bytes": 1465117,
+      "sha256": "025d0650f82655bf1de31b097a109a2e6594d08b81b80c15a97bc0aac78f0ac7"
+    },
+    "forward-looking.json": {
+      "bytes": 1162070,
+      "sha256": "fc0842bef6001feb1deae1c0e628e36a4a51aa76056d0c907e7f6e63cf81e62f"
+    }
+  }
+}

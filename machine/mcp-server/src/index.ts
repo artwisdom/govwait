@@ -1,18 +1,18 @@
 #!/usr/bin/env node
 /**
  * GovWait MCP server — official government processing times over stdio.
- * Reads the pipeline's JSON exports; no network, no database, no keys.
- * Data dir override: GOVWAIT_DATA_DIR (defaults to ../../data/exports).
+ * Reads package-owned JSON exports; no network, no database, no keys.
+ * Data dir override: GOVWAIT_DATA_DIR (defaults to ../data beside dist/).
  */
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
-const DATA_DIR = process.env.GOVWAIT_DATA_DIR || path.resolve(HERE, "..", "..", "..", "data", "exports");
+const DATA_DIR = process.env.GOVWAIT_DATA_DIR || path.resolve(HERE, "..", "data");
 
 type Obs = {
   value_raw: string; value_days: number | null; unit_original: string | null; status: string;
@@ -25,9 +25,27 @@ type Rec = {
   effective_date: string; retrieved_at: string; source_url: string;
 };
 
-const latest = JSON.parse(readFileSync(path.join(DATA_DIR, "latest.json"), "utf8"));
-const historyDoc = JSON.parse(readFileSync(path.join(DATA_DIR, "history.json"), "utf8"));
-const forwardDoc = JSON.parse(readFileSync(path.join(DATA_DIR, "forward-looking.json"), "utf8"));
+function readDataFile(name: string) {
+  try {
+    return JSON.parse(readFileSync(path.join(DATA_DIR, name), "utf8"));
+  } catch (error) {
+    const detail = error instanceof Error ? error.message : String(error);
+    throw new Error(`[govwait-mcp] unable to load ${name} from ${DATA_DIR}: ${detail}`);
+  }
+}
+
+const latest = readDataFile("latest.json");
+const historyDoc = readDataFile("history.json");
+const forwardDoc = readDataFile("forward-looking.json");
+const provenancePath = path.join(DATA_DIR, "provenance.json");
+const provenance = existsSync(provenancePath)
+  ? readDataFile("provenance.json")
+  : process.env.GOVWAIT_DATA_DIR
+    ? { dataset_generated_at: latest.generated_at }
+    : (() => { throw new Error(`[govwait-mcp] bundled provenance is missing from ${DATA_DIR}`); })();
+if (!latest.generated_at || provenance.dataset_generated_at !== latest.generated_at) {
+  throw new Error("[govwait-mcp] bundled dataset provenance does not match latest.json");
+}
 const records: Rec[] = latest.records;
 const history: Record<string, Obs[]> = historyDoc.entities;
 const forward: Record<string, unknown> = forwardDoc.entities;
@@ -129,4 +147,4 @@ server.registerTool("compare_values", {
 
 const transport = new StdioServerTransport();
 await server.connect(transport);
-console.error(`[govwait-mcp] ready — ${records.length} routes loaded from ${DATA_DIR}`);
+console.error(`[govwait-mcp] ready — ${records.length} routes from dataset ${provenance.dataset_generated_at}, loaded from ${DATA_DIR}`);

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.artwisdom/govwait",
+  "title": "GovWait",
+  "description": "Source-backed government processing times with current values, history, comparisons, and provenance.",
+  "repository": {
+    "url": "https://github.com/artwisdom/govwait",
+    "source": "github",
+    "id": "1342333561",
+    "subfolder": "machine/mcp-server"
+  },
+  "version": "0.1.0",
+  "websiteUrl": "https://govwait.com/",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "govwait-mcp",
+      "version": "0.1.0",
+      "runtimeHint": "npx",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}

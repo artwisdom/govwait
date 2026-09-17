@@ -136,9 +136,15 @@ a 656-URL IndexNow HTTP 200 receipt. On 2026-09-13, Google Search Console
 accepted the owner-approved `/data/` indexing request into a priority crawl
 queue; the inspected URL was not indexed. Google Dataset Search appearance is
 not claimed or guaranteed.
-MCP packaging is not yet self-contained; npm publication, official MCP Registry
-publication and all other directory submissions remain separate owner/account
-gates.
+Phase 5B private 0.1.0 release candidate is verified as of 2026-09-16: the exact
+nine-file tarball includes its own three validated exports, SHA-256 provenance,
+a scoped code licence and a separate data notice, and passed all 15 MCP
+assertions from an isolated temporary runtime. The recommended identities are `govwait-mcp` and
+`io.github.artwisdom/govwait`; draft Registry metadata passed the official
+schema. The owner approved Apache 2.0 for GovWait-owned code only, with bundled
+government data excluded. The package remains `private: true`; GitHub push, npm
+publication, official MCP Registry publication and all other directory
+submissions remain separate owner/account gates.
 
 ## Phase R7 — Scale sources (Norway → Finland → Sweden → Denmark → Netherlands)
 

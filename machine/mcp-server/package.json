@@ -1,16 +1,53 @@
 {
-  "name": "govwait-mcp-server",
+  "name": "govwait-mcp",
   "version": "0.1.0",
   "private": true,
+  "license": "SEE LICENSE IN LICENSE",
+  "mcpName": "io.github.artwisdom/govwait",
   "type": "module",
   "description": "MCP server exposing the GovWait government processing-times dataset (stdio)",
+  "homepage": "https://govwait.com/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/artwisdom/govwait.git",
+    "directory": "machine/mcp-server"
+  },
+  "bugs": {
+    "url": "https://github.com/artwisdom/govwait/issues"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "government-data",
+    "processing-times",
+    "immigration"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "files": [
+    "dist/index.js",
+    "data/latest.json",
+    "data/history.json",
+    "data/forward-looking.json",
+    "data/provenance.json",
+    "DATA-NOTICE.md",
+    "LICENSE",
+    "README.md"
+  ],
   "bin": {
     "govwait-mcp": "dist/index.js"
   },
   "scripts": {
-    "build": "tsc",
+    "sync:data": "node scripts/sync-data.mjs",
+    "build": "npm run sync:data && tsc",
+    "prepack": "npm run build",
     "start": "node dist/index.js",
-    "smoke": "node smoke-test.mjs"
+    "smoke": "node smoke-test.mjs",
+    "validate:metadata": "node scripts/validate-release-metadata.mjs",
+    "audit:package": "node scripts/audit-package.mjs",
+    "verify": "npm run build && npm run smoke && npm run validate:metadata && npm run audit:package",
+    "prepare:rc": "GOVWAIT_KEEP_RELEASE_ARTIFACT=1 npm run verify"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.30.0",

@@ -1,6 +1,6 @@
 # STATE — Data Moat Engine
 
-_Last updated: 2026-09-13_
+_Last updated: 2026-09-16_
 
 ## Environment (verified)
 | Runtime | Version |
@@ -32,6 +32,7 @@ All dependencies install locally (`node_modules` inside project). No sudo or mac
 - [x] Phase 4 query-led growth release: commit `8a512aa`, deployment run `34073350458`, Cloudflare artifact `51f5121a.govwait.pages.dev`, 639/639 production sitemap audit, IndexNow HTTP 200, and the approved Google crawl request are verified
 - [x] Phase 4B Canadian near-win production release: commit `fa73c2f`, deployment run `34176619821`, Cloudflare artifact `2e3649f8.govwait.pages.dev`, four demonstrated Search Console pages with stronger query-matching content, the IRCC visitor-biometrics correction, 639/639 production sitemap audit, public-edge verification, and a 645-URL IndexNow HTTP 200 receipt
 - [x] Phase 5A dataset authority release: commit `fd7ba67`, deployment run `34300806761`, Cloudflare artifact `ca3bad6a.govwait.pages.dev`, canonical dataset hub, four generated CSV distributions, dataset metadata, fuller OpenAPI/AI discovery, public-repository README, source-specific reuse guidance, 641/641 public sitemap verification, and a 656-URL IndexNow HTTP 200 receipt
+- [x] Phase 5B private 0.1.0 release candidate: self-contained MCP data bundle, deterministic provenance hashes, exact nine-file npm allow-list with a scoped Apache 2.0 code licence and separate data notice, `govwait-mcp` / `io.github.artwisdom/govwait` draft identities, official-schema-validated registry metadata, and an active `private: true` publication gate; no npm or registry publication
 
 ## Deployment status (verified through 2026-09-08)
 - Repo LIVE: https://github.com/artwisdom/govwait (public, main)
@@ -220,13 +221,40 @@ request for `https://govwait.com/data/` and reported that the URL was added to a
 priority crawl queue. At inspection time it was not indexed; the request does
 not establish indexing, rankings, traffic, ad approval or revenue.
 
+## Phase 5B MCP private release candidate (local-only verified, 2026-09-16)
+
+The MCP server now defaults to package-owned copies of `latest.json`,
+`history.json` and `forward-looking.json`, while preserving an explicit local
+`GOVWAIT_DATA_DIR` override. The build creates deterministic provenance metadata
+with dataset counts, byte sizes and SHA-256 hashes. The packed artifact has an
+exact nine-file allow-list, including a scoped Apache 2.0 software licence and a
+separate government-data notice, and rejects databases, caches, logs,
+credentials, source maps, source files and test files.
+
+Local verification passed: all 15 protocol assertions ran directly and from an
+isolated temporary copy of the tarball; the isolated server loaded 2,318 routes
+from its own data directory; all three data hashes matched. All 20 release
+metadata checks passed, and the draft `server.json` separately passed the
+official `2025-12-11` MCP Registry schema. The tarball measured 118,606 bytes
+packed and 4,239,539 bytes unpacked under Node 24.11.1. Its SHA-256 is
+`d27d372e8e14a421fe098234a53766049c055eb2e2bc2bc7bdc203d2f979d822`.
+
+The recommended identities are `govwait-mcp` on npm and
+`io.github.artwisdom/govwait` in the official Registry. Both returned not-found
+responses on September 16, but neither is reserved. The owner approved Apache
+2.0 for GovWait-owned code only; the scoped `LICENSE` excludes bundled data and
+other non-code material and matches the package copy. The package remains
+`private: true`. Nothing was published, submitted, deployed, registered,
+committed or pushed.
+
 ## Next step
 
-The next bounded growth step is to make the Phase 5B MCP package self-contained
-locally and verify its npm package contents. Choosing a software licence,
-publishing to npm, publishing to the official MCP Registry and submitting to
-other directories remain separate account/publication gates. Finland Migri
-remains the next source candidate and requires a 5-second crawl delay.
+The next bounded step is approval to commit and push this private release
+candidate to the public GitHub repository while keeping `private: true` and
+stopping before npm or MCP Registry publication. Those publications and all
+other directory submissions remain later, separate account/publication gates.
+Finland Migri remains the next source candidate and requires a 5-second crawl
+delay.
 
 ## Open threads
 - US/AU/IE sources WAF-blocked to honest bots — owner-decision item (documented in DEPLOYMENT_GUIDE).

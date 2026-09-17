@@ -190,11 +190,16 @@ added it to a priority crawl queue; the URL was not indexed at inspection time.
 These are publication and discovery receipts, not indexing, traffic or revenue
 evidence.
 
-Phase 5B remains separate: make the MCP package self-contained, choose a software
-licence, publish it to npm with owner account approval, and only then publish
-matching metadata to the official MCP Registry. Other no-cost directories and a
-small earned-link outreach cohort follow only after fresh workflow checks and
-separate owner authorization. See `docs/DISTRIBUTION_CHECKLIST.md`.
+Phase 5B private 0.1.0 release candidate was verified on 2026-09-16: the server
+carries its three validated exports and deterministic provenance, and the exact
+nine-file tarball, including its scoped code licence and separate data notice,
+passed all 15 MCP assertions from an isolated temporary runtime. `govwait-mcp` and
+`io.github.artwisdom/govwait` are prepared identities, not reservations; draft
+official Registry metadata passed the current schema. The owner approved Apache
+2.0 for GovWait-owned code only, with government data excluded, while the package
+remains `private: true`. GitHub push, npm publication, official MCP Registry
+publication, other directories and outreach remain separate gates. See
+`docs/DISTRIBUTION_CHECKLIST.md`.
 
 Measure accepted listings, earned links, referral visitors and returning users
 separately. A submitted URL, directory form or sent message is not indexing, a

@@ -7,7 +7,14 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
-const server = spawn('node', [path.join(HERE, 'dist', 'index.js')], { stdio: ['pipe', 'pipe', 'pipe'] });
+const serverEntry = process.env.GOVWAIT_SERVER_ENTRY
+  ? path.resolve(process.env.GOVWAIT_SERVER_ENTRY)
+  : path.join(HERE, 'dist', 'index.js');
+const server = spawn(process.execPath, [serverEntry], {
+  cwd: process.env.GOVWAIT_SERVER_CWD || HERE,
+  env: process.env,
+  stdio: ['pipe', 'pipe', 'pipe'],
+});
 
 let buf = '';
 const pending = new Map();
@@ -25,7 +32,11 @@ server.stdout.on('data', (d) => {
     }
   }
 });
-server.stderr.on('data', (d) => process.stderr.write(`[server] ${d}`));
+let serverLog = '';
+server.stderr.on('data', (d) => {
+  serverLog += d.toString();
+  process.stderr.write(`[server] ${d}`);
+});
 
 let nextId = 1;
 function rpc(method, params) {
@@ -51,6 +62,10 @@ try {
     clientInfo: { name: 'smoke-test', version: '0.0.1' },
   });
   assert(init.result?.serverInfo?.name === 'govwait', 'initialize returns serverInfo.name=govwait');
+  if (process.env.GOVWAIT_EXPECT_DATA_DIR) {
+    assert(serverLog.includes(path.resolve(process.env.GOVWAIT_EXPECT_DATA_DIR)),
+      'server loads its package-owned data directory');
+  }
   notify('notifications/initialized', {});
 
   const tools = await rpc('tools/list', {});

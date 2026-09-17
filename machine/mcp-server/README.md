@@ -8,22 +8,45 @@ Every response carries `source_url`, the agency's own update date when supplied
 (otherwise GovWait's first-observed date), our verification timestamp, the source
 unit, and the attribution requirement.
 
-## Build & test
+## Build and verify locally
 
 ```bash
 cd machine/mcp-server
-npm install
-npm run build     # tsc -> dist/index.js
-npm run smoke     # spawns the server, exercises the protocol, asserts outputs
+npm ci
+npm run verify
 ```
 
-Reads `data/exports/{latest,history}.json` produced by the pipeline. Override the
-location with `GOVWAIT_DATA_DIR=/path/to/exports`.
+To retain the exact audited private release candidate and its SHA-256 sidecar in
+the git-ignored `release/` directory, run `npm run prepare:rc`.
+
+`npm run build` copies the three validated pipeline exports into this package's
+own `data/` directory, writes deterministic SHA-256 provenance metadata, and
+compiles `dist/index.js`. The server defaults to those package-owned files, so it
+does not depend on the parent repository at runtime. Advanced local users can
+still override the location with `GOVWAIT_DATA_DIR=/path/to/exports`; that
+directory must contain the three exports. A matching `provenance.json` is used
+when present; the package-owned default always requires it.
+
+`npm run audit:package` creates a tarball in a temporary directory, enforces the
+exact nine-file package allow-list, rejects secret/database/cache/log/source/test
+artifacts, verifies every bundled data hash, unpacks the tarball into a clean
+temporary project with the already-locked `npm ci` dependency tree, and runs the
+complete MCP smoke test against that isolated copy. The temporary package is
+deleted afterward; no registry access is needed.
+
+The release-preparation identity is `govwait-mcp` on npm and
+`io.github.artwisdom/govwait` in the official MCP Registry. Both were unclaimed
+when checked on September 16, 2026, but neither name is reserved until an
+authorized publication succeeds. The package remains `private` and
+versioned `0.1.0`. Its `SEE LICENSE IN LICENSE` field points to Apache 2.0 terms
+limited to GovWait-owned software code. `DATA-NOTICE.md` and the licence scope
+expressly exclude the bundled government-source data. Nothing has been
+published.
 
 ## Register with Claude Code
 
 ```bash
-claude mcp add govwait -- node /ABSOLUTE/PATH/TO/data-moat-engine/machine/mcp-server/dist/index.js
+claude mcp add govwait -- node /ABSOLUTE/PATH/TO/govwait/machine/mcp-server/dist/index.js
 ```
 
 ## Register with Claude Desktop
@@ -35,7 +58,7 @@ Add to `claude_desktop_config.json` (Settings → Developer → Edit Config):
   "mcpServers": {
     "govwait": {
       "command": "node",
-      "args": ["/ABSOLUTE/PATH/TO/data-moat-engine/machine/mcp-server/dist/index.js"]
+      "args": ["/ABSOLUTE/PATH/TO/govwait/machine/mcp-server/dist/index.js"]
     }
   }
 }
@@ -53,7 +76,19 @@ For New Zealand, try *"What are the current Visitor Visa processing times?"* The
 For Norway, try *"What is UDI's current visitor-visa waiting time?"* The server
 returns the dated, table-backed UDI routes and their official source pages.
 
-## Distribution (owner steps — see DEPLOYMENT_GUIDE.md)
+## Data provenance and reuse
 
-Directory submissions (PulseMCP, mcp.so, Glama, Smithery) are prepared as a checklist
-in the deployment guide. Nothing is published from this repo automatically.
+Every response retains the official source URL, source date, verification time,
+unit, and GovWait attribution notice. `data/provenance.json` records the exact
+dataset generation time, row counts, byte sizes, and SHA-256 hashes. Underlying
+government information is not relicensed by GovWait; follow the source-specific
+terms at <https://govwait.com/data-license/> and the packaged
+[`DATA-NOTICE.md`](DATA-NOTICE.md).
+
+## Distribution (not yet authorized)
+
+The local
+[`server.json`](https://github.com/artwisdom/govwait/blob/main/machine/mcp-server/server.json)
+is draft MCP Registry metadata only. No npm or MCP Registry publication has
+occurred. Publication and directory submissions remain separate owner actions in the
+[distribution checklist](https://github.com/artwisdom/govwait/blob/main/docs/DISTRIBUTION_CHECKLIST.md).

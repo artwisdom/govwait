@@ -34,23 +34,47 @@ or revenue.
 
 ## Phase 5B — self-contained MCP package
 
-Status: **not started; separate publication and account gate**.
+Status: **private 0.1.0 release candidate verified on 2026-09-16; every external
+publication remains a separate owner/account gate**.
 
-1. Decide a repository/software licence. The data notice does not automatically
-   license the source code.
-2. Make the MCP package self-contained. It currently reads the parent
-   repository's `data/exports` files and cannot work as a standalone npm install.
-3. Add package allow-listing, provenance metadata, tests and an `npm pack`
-   contents audit. Never include the database, caches, logs or credentials.
-4. Select an available npm package name and add the official MCP package-name
-   linkage (`mcpName`) only after validating the final identity.
-5. Owner signs into npm, enables the required publishing security and approves
+1. [x] Research a repository/software licence. Apache 2.0 is recommended for
+   GovWait-owned code only.
+   The data notice does not license the source code or become covered by the
+   software licence.
+2. [x] Owner approved the Apache-2.0-for-code boundary. The local `LICENSE`
+   reproduces the canonical terms, excludes data and other non-code material,
+   and matches the package copy byte-for-byte.
+3. [x] Make the MCP package self-contained. The built server defaults to its own
+   three bundled exports and needs no parent-repository data at runtime.
+4. [x] Add exact package allow-listing, deterministic provenance metadata,
+   SHA-256 verification and an isolated `npm pack` smoke test. The verified
+   tarball contains nine files, including the scoped licence and data notice,
+   and no database, caches, logs, credentials, source files or tests.
+5. [x] Prepare the npm identity `govwait-mcp` and exact MCP ownership linkage
+   `io.github.artwisdom/govwait`. Both returned not-found responses on
+   2026-09-16; neither is reserved, so recheck immediately before publication.
+6. [x] Prepare `server.json`, pin GitHub repository ID `1342333561`, and validate
+   it against the official `2025-12-11` schema plus local cross-file checks.
+7. [x] Build and retain the audited private `0.1.0` release candidate plus its
+   SHA-256 sidecar in the git-ignored package `release/` directory.
+8. [ ] Owner approves committing and pushing the private release candidate to the
+   public GitHub repository.
+9. [ ] Owner signs into npm, enables the required publishing security and approves
    the public package publication.
-6. After the npm package is publicly retrievable, create and validate
-   `server.json`, then owner-authorize publication to the
+10. [ ] After the npm package is publicly retrievable, revalidate `server.json`
+   against the current schema, then owner-authorize publication to the
    [official MCP Registry](https://modelcontextprotocol.io/registry/quickstart).
-7. Verify installation from a clean temporary directory before claiming the
+11. [ ] Verify installation from a clean temporary directory before claiming the
    package or registry entry works.
+
+Private-candidate receipt: `npm run prepare:rc` passed both 15-assertion MCP smoke
+runs and all 20 metadata/licensing checks under Node 24.11.1. The exact nine-file
+artifact was 118,606 bytes compressed / 4,239,539 bytes unpacked; all three data
+hashes matched; the isolated server loaded 2,318 routes from its own package
+directory. SHA-256:
+`d27d372e8e14a421fe098234a53766049c055eb2e2bc2bc7bdc203d2f979d822`.
+The official Registry schema check passed separately. `private: true` remains
+active; nothing was published.
 
 The official registry currently requires a package to be public before its
 registry metadata is published. GitHub-authenticated server names must match the

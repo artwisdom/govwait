@@ -61,7 +61,7 @@ Report written to `data/exports/validation-report.json`; any FAIL ⇒ exit 1 ⇒
 ## Skins
 - **Site** (`/site`, Astro, static): one page per published route, service hubs, jurisdiction hubs, reports, guides and trust pages. Freshness stamp + provenance on every value. The canonical `/data/` page owns Dataset JSON-LD; route/report pages carry their relevant structured data. <200KB/page.
 - **Static API and downloads** (`/site/public/api/v1/`): prebuilt JSON collection/per-entity endpoints plus generated current, history, forward-looking and source-register CSVs. `dataset.json` describes every distribution, and `openapi.yaml` defines the public contract. All are free-CDN files with zero runtime cost.
-- **MCP server** (`/machine/mcp-server`, TypeScript, stdio): tools `search_entities`, `get_entity`, `get_latest_value`, `compare_values` reading `data/exports/*.json`.
+- **MCP server** (`/machine/mcp-server`, TypeScript, stdio): tools `search_entities`, `get_entity`, `get_latest_value`, `compare_values`. Its build deterministically copies the three validated `data/exports/*.json` inputs plus SHA-256 provenance into package-owned `data/`; the runtime defaults to those self-contained files and accepts `GOVWAIT_DATA_DIR` only as an explicit local override.
 
 ## Refresh and deployment loop
 GitHub Actions cron (2×/week) → run pipeline → validate → commit data diff → rebuild site → Cloudflare Pages deploy. Validation failure stops the data commit and therefore stops publication. Estimated usage remains far below the GitHub Actions free-tier allowance.

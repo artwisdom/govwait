@@ -1,6 +1,6 @@
 # GovWait data-reuse risk assessment
 
-Last reviewed: 2026-09-08 (America/New_York)
+Last reviewed: 2026-09-16 (America/New_York)
 
 This is an operational risk assessment, not legal advice. It does not replace
 review by qualified counsel for a specific commercial use.
@@ -20,6 +20,12 @@ Overall rating: **YELLOW / medium (6 of 25)**.
 The main risk is not the existence of the GovWait-created field model. It is
 overstating that one blanket licence covers government information obtained from
 sources with different reuse terms.
+
+The Phase 5B package-specific review recommends Apache 2.0 for GovWait-owned
+software code only, with the bundled data expressly excluded. See
+`docs/MCP_RELEASE_RISK_ASSESSMENT.md`. The owner approved that narrow scope on
+2026-09-16; the private package now points to the scoped `LICENSE`, while the
+government-source data remains outside the software licence.
 
 ## Source position
 

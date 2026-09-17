@@ -70,3 +70,42 @@ Search Console accepted the owner-approved `/data/` indexing request and added
 it to a priority crawl queue; the inspected URL was not indexed then. None of
 these receipts proves indexing, ranking, traffic, advertising approval, demand
 or revenue.
+
+## Phase 5B local MCP package verification — 2026-09-16
+
+- `npm run build`: passed; bundled 2,318 current routes and wrote three dataset
+  files plus deterministic provenance.
+- Direct MCP smoke: 15/15 assertions passed across initialization, tool listing,
+  Canada, New Zealand, Norway, forward-looking cohorts, comparisons and search.
+- Package contents: exact seven-file allow-list; 112,470 bytes packed and
+  4,224,525 bytes unpacked; no database, caches, logs, credentials, source files,
+  test files or source maps.
+- Data integrity: SHA-256 and byte-size checks passed for all three exports.
+- Isolation: the packed artifact passed the full smoke suite from a temporary
+  runtime with no parent-repository data and no `GOVWAIT_DATA_DIR` override.
+- Runtime coverage: the full sequence passed under Node 22.22.3 and 24.11.1.
+- Publication safety: `private: true` remains active. No npm publish, registry
+  submission, deployment, account change or package-name claim occurred.
+
+## Phase 5B private 0.1.0 release candidate — 2026-09-16
+
+- Licence scope: the owner approved Apache 2.0 for GovWait-owned software code
+  only. The canonical terms and explicit non-code/data exclusion appear in both
+  matching `LICENSE` files; the packaged `DATA-NOTICE.md` remains separate. This
+  is an operational risk assessment, not legal advice.
+- Publication gate: `private: true` remains active. The npm licence field is
+  `SEE LICENSE IN LICENSE`, avoiding a blanket Apache claim over packaged data.
+- Identity snapshot: `govwait-mcp` returned npm `E404`, and
+  `io.github.artwisdom/govwait` returned official Registry HTTP 404. Neither name
+  was reserved.
+- Registry metadata: `mcpName`, npm identifier, versions, GitHub repository ID
+  `1342333561`, subfolder, `npx`, `stdio`, licence scope and data exclusion passed
+  20/20 cross-file checks.
+  Draft `server.json` also passed the official `2025-12-11` Registry JSON schema.
+- Package verification: both 15-assertion smoke runs passed under Node 24.11.1.
+  The exact nine-file tarball measured 118,606 bytes packed / 4,239,539 bytes
+  unpacked, and all three data hashes matched. The retained private candidate's
+  SHA-256 is
+  `d27d372e8e14a421fe098234a53766049c055eb2e2bc2bc7bdc203d2f979d822`.
+- External-change boundary: no npm or Registry account change, publication,
+  submission, commit, push, deployment or directory listing occurred.

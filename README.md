@@ -72,8 +72,11 @@ npm run build
 npm run smoke
 ```
 
-The MCP package currently reads this repository's `data/exports` directory. It
-is a working source package, not yet a self-contained npm release.
+The MCP build deterministically bundles the three validated exports plus a
+SHA-256 provenance manifest into the package. `npm run verify` builds it, runs
+the protocol smoke suite, enforces the exact package allow-list, and exercises
+the packed artifact in a clean temporary runtime. The package remains private;
+it has not been published to npm or an MCP directory.
 
 ## Collection safeguards
 
@@ -98,7 +101,11 @@ information is not relicensed by GovWait; preserve the originating agency's
 attribution and follow its source-specific terms. Read the full
 [data reuse and licensing notice](https://govwait.com/data-license/).
 
-This repository does not yet grant a repository-wide software licence. That
-decision is intentionally separate from the data notice.
+GovWait-owned software code is licensed under the scoped Apache License 2.0 in
+[`LICENSE`](LICENSE). That software licence expressly excludes government-source
+data, generated datasets, editorial/research/handoff content, government marks
+and other third-party material. The separate data notice and any file-specific
+terms continue to control those materials; see
+[`docs/MCP_RELEASE_RISK_ASSESSMENT.md`](docs/MCP_RELEASE_RISK_ASSESSMENT.md).
 
 Questions and corrections: [contact@govwait.com](mailto:contact@govwait.com).

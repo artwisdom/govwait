@@ -17,6 +17,7 @@ site/dist/
 site/.astro/
 machine/mcp-server/dist/
 machine/mcp-server/build/
+machine/mcp-server/release/
 
 # OS noise
 .DS_Store

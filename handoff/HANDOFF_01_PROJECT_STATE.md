@@ -297,6 +297,17 @@ Local Node is 20.19.6 (Astro pinned to v4 for this reason; CI also pins Node 20)
   HTTP 200 receipt are verified. On 2026-09-13, Google Search Console accepted
   the owner-approved indexing request for `/data/` into its priority crawl queue;
   the URL was not indexed at inspection time.
+- Phase 5B private 0.1.0 release candidate is locally verified but unpublished:
+  `npm run prepare:rc` bundles the three JSON exports and deterministic
+  provenance, enforces the exact nine-file package allow-list including the
+  scoped `LICENSE` and `DATA-NOTICE.md`, validates three hashes, runs the
+  15-assertion smoke suite against an isolated tarball, and checks 20 metadata
+  and licensing invariants. The recommended identities are
+  `govwait-mcp` and `io.github.artwisdom/govwait`; draft `server.json` passed the
+  official Registry schema. The owner approved Apache 2.0 for GovWait-owned code
+  only, with bundled government data excluded. The package remains
+  `private: true`; GitHub push, npm publication and MCP Registry publication are
+  separate approvals.
 
 ## 8. QA ritual before any push that touches pipeline or site
 
