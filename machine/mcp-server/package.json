@@ -1,7 +1,6 @@
 {
   "name": "govwait-mcp",
   "version": "0.1.0",
-  "private": true,
   "license": "SEE LICENSE IN LICENSE",
   "mcpName": "io.github.artwisdom/govwait",
   "type": "module",

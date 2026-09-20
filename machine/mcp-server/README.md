@@ -16,8 +16,8 @@ npm ci
 npm run verify
 ```
 
-To retain the exact audited private release candidate and its SHA-256 sidecar in
-the git-ignored `release/` directory, run `npm run prepare:rc`.
+To retain the exact audited release candidate and its SHA-256 sidecar in the
+git-ignored `release/` directory, run `npm run prepare:rc`.
 
 `npm run build` copies the three validated pipeline exports into this package's
 own `data/` directory, writes deterministic SHA-256 provenance metadata, and
@@ -35,13 +35,13 @@ complete MCP smoke test against that isolated copy. The temporary package is
 deleted afterward; no registry access is needed.
 
 The release-preparation identity is `govwait-mcp` on npm and
-`io.github.artwisdom/govwait` in the official MCP Registry. Both were unclaimed
-when checked on September 16, 2026, but neither name is reserved until an
-authorized publication succeeds. The package remains `private` and
-versioned `0.1.0`. Its `SEE LICENSE IN LICENSE` field points to Apache 2.0 terms
-limited to GovWait-owned software code. `DATA-NOTICE.md` and the licence scope
-expressly exclude the bundled government-source data. Nothing has been
-published.
+`io.github.artwisdom/govwait` in the official MCP Registry. The npm name returned
+not found during the final preflight on September 20, 2026, but it is not reserved
+until an authorized publication succeeds. Version `0.1.0` uses a
+`SEE LICENSE IN LICENSE` field that points to Apache 2.0 terms limited to
+GovWait-owned software code. `DATA-NOTICE.md` and the licence scope expressly
+exclude the bundled government-source data. MCP Registry submission remains a
+separate owner-authorized action after npm publication is verified.
 
 ## Register with Claude Code
 
@@ -85,10 +85,10 @@ government information is not relicensed by GovWait; follow the source-specific
 terms at <https://govwait.com/data-license/> and the packaged
 [`DATA-NOTICE.md`](DATA-NOTICE.md).
 
-## Distribution (not yet authorized)
+## Distribution
 
 The local
 [`server.json`](https://github.com/artwisdom/govwait/blob/main/machine/mcp-server/server.json)
-is draft MCP Registry metadata only. No npm or MCP Registry publication has
-occurred. Publication and directory submissions remain separate owner actions in the
-[distribution checklist](https://github.com/artwisdom/govwait/blob/main/docs/DISTRIBUTION_CHECKLIST.md).
+is MCP Registry metadata. Publish it only after the npm package is publicly
+retrievable. npm publication and directory submissions remain separate owner
+actions in the [distribution checklist](https://github.com/artwisdom/govwait/blob/main/docs/DISTRIBUTION_CHECKLIST.md).

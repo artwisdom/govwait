@@ -15,7 +15,7 @@ const dataNotice = readFileSync(path.join(PACKAGE_ROOT, "DATA-NOTICE.md"), "utf8
 const registryPackage = serverJson.packages?.[0];
 
 const checks = [
-  ["private publication gate", () => assert.equal(packageJson.private, true)],
+  ["public publication gate", () => assert.equal(Object.hasOwn(packageJson, "private"), false)],
   ["approved scoped licence pointer", () => assert.equal(packageJson.license, "SEE LICENSE IN LICENSE")],
   ["release candidate version", () => assert.equal(packageJson.version, "0.1.0")],
   ["repository and package licence match", () => assert.equal(packageLicense, repositoryLicense)],
@@ -48,4 +48,4 @@ for (const [label, check] of checks) {
 }
 
 console.log(`\nRELEASE METADATA: ${checks.length}/${checks.length} PASS`);
-console.log("Preparation safety: private 0.1.0 + scoped Apache-2.0 code licence; validation does not publish or contact a registry");
+console.log("Publication readiness: public 0.1.0 candidate + scoped Apache-2.0 code licence; validation does not publish or contact a registry");

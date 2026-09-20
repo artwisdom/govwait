@@ -83,7 +83,7 @@ try {
   writeFileSync(path.join(installRoot, "package.json"), '{"name":"govwait-mcp-audit","private":true}\n');
   const installedRoot = realpathSync(path.join(installRoot, "node_modules", PACKAGE_NAME));
   const packageJson = JSON.parse(readFileSync(path.join(installedRoot, "package.json"), "utf8"));
-  if (packageJson.private !== true) throw new Error("Safety gate failed: package must remain private before publication approval");
+  if (Object.hasOwn(packageJson, "private")) throw new Error("Publication gate failed: packed package must omit the private field");
   if (packageJson.license !== "SEE LICENSE IN LICENSE") throw new Error("Licence gate failed: package must point to its scoped LICENSE file");
   const licenseText = readFileSync(path.join(installedRoot, "LICENSE"), "utf8");
   if (!/Apache License\n\s+Version 2\.0, January 2004/.test(licenseText)) {
@@ -140,8 +140,8 @@ try {
   console.log(`Integrity: ${Object.keys(provenance.files).length} bundled data hashes verified`);
   console.log("Licensing: Apache 2.0 applies only to GovWait-owned software code; bundled government-source data is excluded");
   console.log("Isolation: packed artifact ran in a clean temp project using the npm-ci dependency tree, without parent-repository data or GOVWAIT_DATA_DIR");
-  console.log("Publication safety: package remains private; nothing was published");
-  if (retainedArtifact) console.log(`Private release candidate: ${retainedArtifact}`);
+  console.log("Publication readiness: package manifest omits private; this audit did not publish or contact a registry");
+  if (retainedArtifact) console.log(`Audited release candidate: ${retainedArtifact}`);
 } finally {
   rmSync(tempRoot, { recursive: true, force: true });
 }
