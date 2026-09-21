@@ -34,8 +34,8 @@ or revenue.
 
 ## Phase 5B — self-contained MCP package
 
-Status: **public `govwait-mcp@0.1.0` verified on npm on 2026-09-20; official MCP
-Registry metadata revalidated but not submitted**.
+Status: **public `govwait-mcp@0.1.0` and official MCP Registry
+`io.github.artwisdom/govwait@0.1.0` are verified active**.
 
 1. [x] Research a repository/software licence. Apache 2.0 is recommended for
    GovWait-owned code only.
@@ -65,13 +65,13 @@ Registry metadata revalidated but not submitted**.
    automation/bypass tokens cannot publish. No publishing token or trusted
    publisher was created.
 10. [x] Revalidate `server.json` with official `mcp-publisher` 1.8.1 against the
-    live Registry service. It is valid; the exact Registry identity/version
-    remains HTTP 404 and therefore unlisted.
+    live Registry service. It was valid and the exact Registry identity/version
+    returned HTTP 404 immediately before publication.
 11. [x] Install from the public npm registry in a clean temporary directory and
     run the complete smoke suite before claiming the npm package works.
-12. [ ] Under a separate owner approval, submit to the
-    [official MCP Registry](https://modelcontextprotocol.io/registry/quickstart),
-    then verify the listing before claiming Registry discovery.
+12. [x] Under separate owner approval, submit to the
+    [official MCP Registry](https://modelcontextprotocol.io/registry/quickstart)
+    with interactive GitHub authentication, then verify the exact public listing.
 
 Public-release receipt: `npm run prepare:rc` passed both 15-assertion MCP smoke
 runs and all 20 metadata/licensing checks under Node 24.11.1. The exact nine-file
@@ -88,6 +88,14 @@ Authenticated npm 11.19.1 command
 The client maps that policy to `publish_requires_tfa=true` and
 `automation_token_overrides_tfa=false`.
 
+Official Registry receipt: `mcp-publisher` 1.8.1 reported successful publication
+of `io.github.artwisdom/govwait` version `0.1.0`. The
+[exact-version API](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.artwisdom%2Fgovwait/versions/0.1.0)
+and exact-name/version search both returned HTTP 200. Registry metadata reports
+`active`, `isLatest: true`, `publishedAt: 2026-09-21T00:59:17.656115Z`, and one
+exact search result. The temporary Registry login was logged out and the
+checksum-verified publisher files were deleted.
+
 GitHub-only receipt: commit `ba830db9201b637539e84e57613f76fa45ac2b45`
 is present on `artwisdom/govwait` `main`. This published source code and licence
 to GitHub only; it did not publish the npm package, submit Registry metadata,
@@ -96,8 +104,9 @@ deploy Cloudflare Pages or send IndexNow URLs.
 The official Registry currently requires a package to be public before its
 metadata is submitted, and npm ownership verification requires the package's
 `mcpName` to exactly match the Registry server name. Both conditions are now
-satisfied. Official `mcp-publisher` 1.8.1 reports `server.json` valid; submission
-still requires a separate owner approval because the Registry is a preview.
+satisfied. Official `mcp-publisher` 1.8.1 reports `server.json` valid, and the
+Registry now reports the published version active. The Registry remains a
+preview, so its status must still be monitored honestly.
 
 ## Phase 5C — no-cost discovery and earned links
 
@@ -106,7 +115,8 @@ owner approval**.
 
 Priority order after Phase 5B:
 
-1. Official MCP Registry — canonical machine-tool discovery.
+1. [x] Official MCP Registry — canonical machine-tool discovery is active for
+   `io.github.artwisdom/govwait@0.1.0`.
 2. [Glama](https://glama.ai/) — public GitHub-based MCP discovery and automated
    checks; confirm the current submission workflow before posting.
 3. [PulseMCP](https://www.pulsemcp.com/api) — confirm whether the official

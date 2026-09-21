@@ -195,11 +195,11 @@ exact nine-file artifact carries three validated exports, deterministic
 provenance, a scoped code licence and a separate data notice; a clean public-npm
 installation passed all 15 MCP assertions and loaded 2,318 package-owned routes.
 The public `mcpName` exactly matches `io.github.artwisdom/govwait`, and official
-`mcp-publisher` 1.8.1 reports the Registry metadata valid. The exact Registry
-identity/version remains HTTP 404 because it has not been submitted. Apache 2.0
-continues to cover GovWait-owned code only, not bundled government data.
-Registry publication, other directories, outreach and deployment remain
-separate gates. See `docs/DISTRIBUTION_CHECKLIST.md`.
+`mcp-publisher` 1.8.1 reports the Registry metadata valid. The exact official
+Registry version is now active and latest, and both the exact-version API and
+search endpoint return HTTP 200. Apache 2.0 continues to cover GovWait-owned
+code only, not bundled government data. Other directories, outreach and
+deployment remain separate gates. See `docs/DISTRIBUTION_CHECKLIST.md`.
 
 Measure accepted listings, earned links, referral visitors and returning users
 separately. A submitted URL, directory form or sent message is not indexing, a

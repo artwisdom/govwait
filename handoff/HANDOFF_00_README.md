@@ -150,9 +150,9 @@ style preferences.
   `govwait-mcp@0.1.0` artifact. A clean registry installation passed all 15 MCP
   assertions and loaded 2,318 package-owned routes. Public `mcpName` exactly
   matches `io.github.artwisdom/govwait`; official `mcp-publisher` 1.8.1 reports
-  `server.json` valid. The official Registry still returns HTTP 404 for the exact
-  identity/version because it has not been submitted. Apache 2.0 remains limited
-  to GovWait-owned code; bundled government data remains excluded. npm publishing
-  requires interactive 2FA and disallows automation/bypass tokens. No publishing
-  token, trusted publisher, Registry/directory submission or deployment was
-  created.
+  `server.json` valid. The official Registry listing is active and latest; its
+  exact-version API and search endpoint return HTTP 200. Apache 2.0 remains
+  limited to GovWait-owned code; bundled government data remains excluded. npm
+  publishing requires interactive 2FA and disallows automation/bypass tokens.
+  No publishing token, trusted publisher, other directory submission or
+  deployment was created.

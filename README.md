@@ -78,7 +78,8 @@ the protocol smoke suite, enforces the exact package allow-list, and exercises
 the packed artifact in a clean temporary runtime. The verified public release
 is [`govwait-mcp@0.1.0`](https://www.npmjs.com/package/govwait-mcp/v/0.1.0).
 Its package policy requires interactive 2FA and disallows token publishing. Its
-official MCP Registry metadata is valid but has not been submitted.
+[official MCP Registry listing](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.artwisdom%2Fgovwait/versions/0.1.0)
+is active for version `0.1.0`.
 
 ## Collection safeguards
 

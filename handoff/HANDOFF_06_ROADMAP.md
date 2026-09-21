@@ -142,10 +142,10 @@ SHA-256 provenance, a scoped code licence and a separate data notice. A clean
 registry installation passed all 15 MCP assertions and loaded 2,318
 package-owned routes. Public `mcpName` exactly matches
 `io.github.artwisdom/govwait`; official `mcp-publisher` 1.8.1 reports the Registry
-metadata valid. The exact Registry identity/version remains HTTP 404 because it
-has not been submitted. Apache 2.0 continues to cover GovWait-owned code only,
-not bundled government data. npm publishing requires interactive 2FA and
-disallows automation/bypass tokens. Registry publication, other directories,
+metadata valid. The official Registry listing is active and latest, with HTTP
+200 from both exact-version and search endpoints. Apache 2.0 continues to cover
+GovWait-owned code only, not bundled government data. npm publishing requires
+interactive 2FA and disallows automation/bypass tokens. Other directories,
 workflows and deployment remain separate owner gates.
 
 ## Phase R7 — Scale sources (Norway → Finland → Sweden → Denmark → Netherlands)

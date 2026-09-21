@@ -32,7 +32,7 @@ All dependencies install locally (`node_modules` inside project). No sudo or mac
 - [x] Phase 4 query-led growth release: commit `8a512aa`, deployment run `34073350458`, Cloudflare artifact `51f5121a.govwait.pages.dev`, 639/639 production sitemap audit, IndexNow HTTP 200, and the approved Google crawl request are verified
 - [x] Phase 4B Canadian near-win production release: commit `fa73c2f`, deployment run `34176619821`, Cloudflare artifact `2e3649f8.govwait.pages.dev`, four demonstrated Search Console pages with stronger query-matching content, the IRCC visitor-biometrics correction, 639/639 production sitemap audit, public-edge verification, and a 645-URL IndexNow HTTP 200 receipt
 - [x] Phase 5A dataset authority release: commit `fd7ba67`, deployment run `34300806761`, Cloudflare artifact `ca3bad6a.govwait.pages.dev`, canonical dataset hub, four generated CSV distributions, dataset metadata, fuller OpenAPI/AI discovery, public-repository README, source-specific reuse guidance, 641/641 public sitemap verification, and a 656-URL IndexNow HTTP 200 receipt
-- [x] Phase 5B npm 0.1.0 release: public-source commit `ec284ef`; self-contained MCP data bundle, deterministic provenance hashes, exact nine-file npm allow-list with a scoped Apache 2.0 code licence and separate data notice; verified public `govwait-mcp@0.1.0`; interactive 2FA required and token publishing disallowed; exact `io.github.artwisdom/govwait` ownership linkage; clean-install smoke verification; official Registry metadata valid but not submitted
+- [x] Phase 5B npm and MCP Registry 0.1.0 release: public-source commit `ec284ef`; self-contained MCP data bundle, deterministic provenance hashes, exact nine-file npm allow-list with a scoped Apache 2.0 code licence and separate data notice; verified public `govwait-mcp@0.1.0`; interactive 2FA required and token publishing disallowed; clean-install smoke verification; active official Registry listing `io.github.artwisdom/govwait` with exact npm ownership linkage
 
 ## Deployment status (verified through 2026-09-08)
 - Repo LIVE: https://github.com/artwisdom/govwait (public, main)
@@ -253,12 +253,18 @@ under npm owner `artwisdom` as
 
 A fresh temporary installation from the public npm registry passed the complete
 15-assertion smoke suite and loaded 2,318 routes from the installed package's own
-data. The current official `mcp-publisher` 1.8.1 validated `server.json` against
-the live Registry service. The exact Registry identity/version still returned
-HTTP 404, confirming that no Registry listing was created. Apache 2.0 remains
-limited to GovWait-owned software code; bundled government data remains excluded
-under `DATA-NOTICE.md`. No publishing token, trusted-publisher workflow, MCP
-Registry submission, other directory submission, Cloudflare deployment or
+data. Immediately before Registry publication, official `mcp-publisher` 1.8.1
+validated `server.json` against the live service and the exact identity/version
+returned HTTP 404. After explicit owner approval, GitHub-authenticated publication
+succeeded for `io.github.artwisdom/govwait` version `0.1.0`.
+
+The exact official Registry API and search endpoint both returned HTTP 200. The
+listing is `active`, `isLatest: true`, and the exact-name/version search count is
+one; `publishedAt` is `2026-09-21T00:59:17.656115Z`. The temporary Registry login
+was logged out and the checksum-verified publisher files were deleted afterward.
+Apache 2.0 remains limited to GovWait-owned software code; bundled government
+data remains excluded under `DATA-NOTICE.md`. No publishing token, trusted
+publisher, workflow, other directory submission, Cloudflare deployment or
 IndexNow notification was created or performed.
 
 Post-publication hardening is verified: authenticated npm 11.19.1 command
@@ -270,11 +276,11 @@ configured.
 
 ## Next step
 
-The next bounded release step is to commit and push these post-publication
-records, followed only under separate owner approval by an official MCP Registry
-submission. Registry publication, other directory submissions, workflows,
-another npm version and deployment remain separate gates. Finland Migri remains
-the next source candidate and requires a 5-second crawl delay.
+The next bounded release step is to commit and push this verified official
+Registry receipt. Phase 5C directory-discovery research may follow, but every
+other directory submission, outreach message, workflow, another npm version and
+deployment remains a separate gate. Finland Migri remains the next source
+candidate and requires a 5-second crawl delay.
 
 ## Open threads
 - US/AU/IE sources WAF-blocked to honest bots — owner-decision item (documented in DEPLOYMENT_GUIDE).

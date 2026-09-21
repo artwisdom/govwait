@@ -119,12 +119,15 @@ assertions and loaded 2,318 routes from the installed package's own data. No
 publishing token or trusted-publisher workflow was created. The package is set to
 npm's strict `mfa=publish` policy: interactive 2FA is required and
 automation/bypass tokens cannot publish. No MCP Registry submission, Cloudflare
-deployment, IndexNow notification or other directory submission occurred.
+deployment, IndexNow notification or other directory submission occurred during
+the npm release. Under a later explicit gate, the official MCP Registry accepted
+only `server.json` for version `0.1.0`; the listing is active and latest. The
+temporary Registry login was logged out after verification.
 
 ## Next gate
 
-The next release gate is a separately approved official MCP Registry submission.
-Immediately before that action, recheck the exact public npm identity and
-Registry metadata because the Registry remains a preview service. Another npm
-version, a publishing workflow, any other directory submission and deployment
-remain separate approvals.
+The next release gate is committing the verified Registry receipt. Phase 5C may
+then research whether the official listing is imported elsewhere before any
+manual directory submission. Another npm version, workflow, directory
+submission, outreach message and deployment remain separate approvals because
+the Registry remains a preview service.

@@ -43,8 +43,9 @@ points to Apache 2.0 terms limited to GovWait-owned software code.
 government-source data. A clean public-registry installation passed the full MCP
 smoke suite. npm publishing requires interactive 2FA and disallows
 automation/bypass tokens. Official `mcp-publisher` 1.8.1 validates `server.json`,
-but Registry submission remains a separate owner-authorized action and has not
-occurred.
+and the
+[official Registry listing](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.artwisdom%2Fgovwait/versions/0.1.0)
+is active and latest for version `0.1.0`.
 
 ## Register with Claude Code
 

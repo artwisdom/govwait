@@ -304,12 +304,12 @@ Local Node is 20.19.6 (Astro pinned to v4 for this reason; CI also pins Node 20)
   `412c5b6c4c0ada6c412c5f105b6118b20e6ccfd0`; the local tarball SHA-256 is
   `e881e02555f3133124262c69f48cf7706259595519f5ad25eb1c67338c15ebda`.
   Public `mcpName` exactly matches `io.github.artwisdom/govwait`, and official
-  `mcp-publisher` 1.8.1 reports `server.json` valid. The official Registry still
-  returns HTTP 404 for the exact identity/version because it has not been
-  submitted. Apache 2.0 remains limited to GovWait-owned code; bundled government
-  data remains excluded. npm publishing requires interactive 2FA and disallows
-  automation/bypass tokens. No publishing token, trusted publisher,
-  Registry/directory submission or deployment was created.
+  `mcp-publisher` 1.8.1 reports `server.json` valid. The official Registry listing
+  is active and latest; its exact-version API and search endpoint return HTTP
+  200. Apache 2.0 remains limited to GovWait-owned code; bundled government data
+  remains excluded. npm publishing requires interactive 2FA and disallows
+  automation/bypass tokens. No publishing token, trusted publisher, other
+  directory submission or deployment was created.
 
 ## 8. QA ritual before any push that touches pipeline or site
 

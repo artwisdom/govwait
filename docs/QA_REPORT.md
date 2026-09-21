@@ -113,7 +113,7 @@ or revenue.
 - External-change boundary: no npm or Registry account change or publication,
   Cloudflare deployment, IndexNow notification or directory listing occurred.
 
-## Phase 5B public npm release and Registry preflight — 2026-09-20
+## Phase 5B public npm and official Registry release — 2026-09-20
 
 - Public source: commit `ec284ef64c30afdcf45c1666178c473b86ac7c63` is on
   `origin/main`; it removes the npm publication block while preserving the
@@ -133,13 +133,20 @@ or revenue.
   own data.
 - Registry preflight: official `mcp-publisher` 1.8.1 validated `server.json`
   against the live service. The exact Registry identity/version returned HTTP
-  404, so it remains unsubmitted and unlisted.
+  404 immediately before publication.
+- Registry publication: after separate owner approval and interactive GitHub
+  authentication, `mcp-publisher` reported successful publication of
+  `io.github.artwisdom/govwait` version `0.1.0`. The exact-version and search
+  APIs both returned HTTP 200; status is `active`, `isLatest` is true, exact
+  search count is one, and `publishedAt` is
+  `2026-09-21T00:59:17.656115Z`.
 - Publishing hardening: authenticated npm 11.19.1 command
   `npm access set mfa=publish govwait-mcp` exited 0 after security-key approval.
   The client sends `publish_requires_tfa=true` and
   `automation_token_overrides_tfa=false`, requiring interactive 2FA and blocking
   automation/bypass-token publishing. No trusted publisher is configured.
-- Boundary: no publishing token, trusted-publisher workflow, Registry or other
-  directory submission, deployment or IndexNow notification was created or run.
-  npm publication and validation do not establish Registry discovery, traffic,
+- Boundary: no publishing token, trusted publisher, workflow, other directory
+  submission, deployment or IndexNow notification was created or run. The
+  temporary Registry login was logged out and publisher files deleted. Registry
+  publication does not establish downstream directory discovery, traffic,
   advertising approval, demand or revenue.
