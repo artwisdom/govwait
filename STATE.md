@@ -1,6 +1,6 @@
 # STATE — Data Moat Engine
 
-_Last updated: 2026-09-17_
+_Last updated: 2026-09-20_
 
 ## Environment (verified)
 | Runtime | Version |
@@ -32,7 +32,7 @@ All dependencies install locally (`node_modules` inside project). No sudo or mac
 - [x] Phase 4 query-led growth release: commit `8a512aa`, deployment run `34073350458`, Cloudflare artifact `51f5121a.govwait.pages.dev`, 639/639 production sitemap audit, IndexNow HTTP 200, and the approved Google crawl request are verified
 - [x] Phase 4B Canadian near-win production release: commit `fa73c2f`, deployment run `34176619821`, Cloudflare artifact `2e3649f8.govwait.pages.dev`, four demonstrated Search Console pages with stronger query-matching content, the IRCC visitor-biometrics correction, 639/639 production sitemap audit, public-edge verification, and a 645-URL IndexNow HTTP 200 receipt
 - [x] Phase 5A dataset authority release: commit `fd7ba67`, deployment run `34300806761`, Cloudflare artifact `ca3bad6a.govwait.pages.dev`, canonical dataset hub, four generated CSV distributions, dataset metadata, fuller OpenAPI/AI discovery, public-repository README, source-specific reuse guidance, 641/641 public sitemap verification, and a 656-URL IndexNow HTTP 200 receipt
-- [x] Phase 5B private 0.1.0 release candidate: GitHub source commit `ba830db`; self-contained MCP data bundle, deterministic provenance hashes, exact nine-file npm allow-list with a scoped Apache 2.0 code licence and separate data notice, `govwait-mcp` / `io.github.artwisdom/govwait` draft identities, official-schema-validated registry metadata, and an active `private: true` publication gate; no npm or registry publication
+- [x] Phase 5B npm 0.1.0 release: public-source commit `ec284ef`; self-contained MCP data bundle, deterministic provenance hashes, exact nine-file npm allow-list with a scoped Apache 2.0 code licence and separate data notice; verified public `govwait-mcp@0.1.0`; interactive 2FA required and token publishing disallowed; exact `io.github.artwisdom/govwait` ownership linkage; clean-install smoke verification; official Registry metadata valid but not submitted
 
 ## Deployment status (verified through 2026-09-08)
 - Repo LIVE: https://github.com/artwisdom/govwait (public, main)
@@ -221,7 +221,7 @@ request for `https://govwait.com/data/` and reported that the URL was added to a
 priority crawl queue. At inspection time it was not indexed; the request does
 not establish indexing, rankings, traffic, ad approval or revenue.
 
-## Phase 5B MCP private release candidate (GitHub source verified, 2026-09-17)
+## Phase 5B MCP public npm release (verified 2026-09-20)
 
 The MCP server now defaults to package-owned copies of `latest.json`,
 `history.json` and `forward-looking.json`, while preserving an explicit local
@@ -231,32 +231,50 @@ exact nine-file allow-list, including a scoped Apache 2.0 software licence and a
 separate government-data notice, and rejects databases, caches, logs,
 credentials, source maps, source files and test files.
 
-Local verification passed: all 15 protocol assertions ran directly and from an
-isolated temporary copy of the tarball; the isolated server loaded 2,318 routes
-from its own data directory; all three data hashes matched. All 20 release
-metadata checks passed, and the draft `server.json` separately passed the
-official `2025-12-11` MCP Registry schema. The tarball measured 118,606 bytes
-packed and 4,239,539 bytes unpacked under Node 24.11.1. Its SHA-256 is
-`d27d372e8e14a421fe098234a53766049c055eb2e2bc2bc7bdc203d2f979d822`.
+Local release verification passed: all 15 protocol assertions ran directly and
+from an isolated temporary copy of the tarball; the isolated server loaded
+2,318 routes from its own data directory; all three data hashes matched. All 20
+release metadata checks passed. The published artifact contains exactly nine
+files, measures 118,593 bytes packed and 4,239,563 bytes unpacked, and has local
+SHA-256
+`e881e02555f3133124262c69f48cf7706259595519f5ad25eb1c67338c15ebda`.
+The npm registry reports SHA-1
+`412c5b6c4c0ada6c412c5f105b6118b20e6ccfd0` and integrity
+`sha512-u0ksXNhTREZI0rvPfCZ27qTDupI4ZpFA2lopo9rhGMy6RgXcjb6ZQZZA6XgJ0OhoIVqBKJA12YRrBwMucrXeVg==`.
 
-The recommended identities are `govwait-mcp` on npm and
-`io.github.artwisdom/govwait` in the official Registry. Both returned not-found
-responses on September 16, but neither is reserved. The owner approved Apache
-2.0 for GovWait-owned code only; the scoped `LICENSE` excludes bundled data and
-other non-code material and matches the package copy. The package remains
-`private: true`. Candidate source commit `ba830db` was pushed to `origin/main`
-after explicit owner approval. GitHub returned no Actions run for that commit,
-consistent with the deployment workflow's path filters. The tarball and checksum
-remain local and git-ignored. No Cloudflare deployment, IndexNow notification,
-npm publication, MCP Registry submission or other directory submission occurred.
+Public-source commit `ec284ef64c30afdcf45c1666178c473b86ac7c63` is on
+`origin/main`. It removed the npm publication block and updated the transitive
+lockfile packages `fast-uri` 3.1.8, `hono` 4.13.8 and `qs` 6.16.0; the release
+audit reported zero vulnerabilities. The exact audited tarball was published
+under npm owner `artwisdom` as
+[`govwait-mcp@0.1.0`](https://www.npmjs.com/package/govwait-mcp/v/0.1.0), and
+`latest` resolves to `0.1.0`. The public package's `mcpName` exactly matches
+`io.github.artwisdom/govwait`.
+
+A fresh temporary installation from the public npm registry passed the complete
+15-assertion smoke suite and loaded 2,318 routes from the installed package's own
+data. The current official `mcp-publisher` 1.8.1 validated `server.json` against
+the live Registry service. The exact Registry identity/version still returned
+HTTP 404, confirming that no Registry listing was created. Apache 2.0 remains
+limited to GovWait-owned software code; bundled government data remains excluded
+under `DATA-NOTICE.md`. No publishing token, trusted-publisher workflow, MCP
+Registry submission, other directory submission, Cloudflare deployment or
+IndexNow notification was created or performed.
+
+Post-publication hardening is verified: authenticated npm 11.19.1 command
+`npm access set mfa=publish govwait-mcp` exited 0 after security-key approval.
+That command sends `publish_requires_tfa=true` and
+`automation_token_overrides_tfa=false`, requiring interactive 2FA and preventing
+automation/bypass tokens from publishing this package. No trusted publisher is
+configured.
 
 ## Next step
 
-The next bounded step is npm account/publication preflight only: recheck package
-name availability, authentication and required publishing security, then stop
-before `npm publish`. Actual npm publication, MCP Registry publication and all
-other directory submissions remain separate account/publication gates. Finland
-Migri remains the next source candidate and requires a 5-second crawl delay.
+The next bounded release step is to commit and push these post-publication
+records, followed only under separate owner approval by an official MCP Registry
+submission. Registry publication, other directory submissions, workflows,
+another npm version and deployment remain separate gates. Finland Migri remains
+the next source candidate and requires a 5-second crawl delay.
 
 ## Open threads
 - US/AU/IE sources WAF-blocked to honest bots — owner-decision item (documented in DEPLOYMENT_GUIDE).

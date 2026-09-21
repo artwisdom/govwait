@@ -1,6 +1,6 @@
 # GovWait MCP release risk assessment
 
-Last reviewed: 2026-09-17 (America/New_York)
+Last reviewed: 2026-09-20 (America/New_York)
 
 This is a practical release-risk assessment, not legal advice. It does not
 replace advice from a qualified lawyer for a specific commercial arrangement.
@@ -10,8 +10,8 @@ replace advice from a qualified lawyer for a specific commercial arrangement.
 The owner approved **Apache License 2.0 for GovWait-owned software code only** on
 2026-09-16. It does not apply to the bundled government-source data.
 
-The mixed-content npm package remains `private: true` and now uses npm's
-`SEE LICENSE IN LICENSE` form. The local `LICENSE` applies Apache 2.0 only to
+The mixed-content package is now public as `govwait-mcp@0.1.0` and uses npm's
+`SEE LICENSE IN LICENSE` form. The packaged `LICENSE` applies Apache 2.0 only to
 GovWait-owned code, reproduces the canonical Apache 2.0 text, and expressly
 excludes `data/` and other non-code material. `DATA-NOTICE.md` continues to
 govern the bundled-data explanation and source-specific terms.
@@ -42,8 +42,8 @@ software licence as a grant over all packaged government information.
 
 The package therefore keeps four separate controls:
 
-1. `private: true` remains active, while `SEE LICENSE IN LICENSE` prevents the
-   package metadata from implying that Apache 2.0 covers every packaged file.
+1. `SEE LICENSE IN LICENSE` prevents the package metadata from implying that
+   Apache 2.0 covers every packaged file.
 2. `DATA-NOTICE.md` says that no GovWait software licence relicenses underlying
    government information.
 3. Each data record retains its official `source_url` and source-specific
@@ -63,7 +63,7 @@ licence has been identified for the tracked UDI pages. See
 |---|---:|---:|---:|---|
 | Publish one blanket software licence over code and bundled data | 3 — Moderate | 3 — Possible | 9/25 | YELLOW |
 | Apache 2.0 limited to GovWait code, with explicit data exclusion and source notices | 3 — Moderate | 2 — Unlikely | 6/25 | YELLOW |
-| Current private, scoped-licence release candidate | 3 — Moderate | 1 — Remote | 3/25 | GREEN |
+| Current public package with scoped licence, data notice and provenance | 3 — Moderate | 2 — Unlikely | 6/25 | YELLOW |
 
 The residual 6/25 rating reflects the different source terms, not a known claim
 or dispute. Escalate to counsel before selling bulk redistribution rights,
@@ -72,22 +72,22 @@ to a rights-holder complaint, or adding a source whose terms are unclear.
 
 ## Release identities researched
 
-Recommended npm package: **`govwait-mcp`**.
+Published npm package: **[`govwait-mcp@0.1.0`](https://www.npmjs.com/package/govwait-mcp/v/0.1.0)**.
 
 - It is shorter and clearer than `govwait-mcp-server`.
 - It does not depend on creating or controlling an npm organization scope.
-- Live public npm lookups for `govwait-mcp`, `govwait-mcp-server`, and
-  `@artwisdom/govwait-mcp` returned `E404` on 2026-09-16. That is an availability
-  snapshot, not a reservation or guarantee.
+- npm owner `artwisdom` published the audited `0.1.0` artifact on 2026-09-20.
+- The public package exposes `mcpName: io.github.artwisdom/govwait`, and `latest`
+  resolves to `0.1.0`.
 
 Recommended official registry name: **`io.github.artwisdom/govwait`**.
 
 - It matches the public GitHub owner/repository identity.
 - The package's `mcpName` is an exact match, as required for npm ownership
   verification.
-- The official registry returned HTTP 404 for that exact identity on
-  2026-09-16. That is also an availability snapshot, not a reservation.
-- Draft metadata pins GitHub repository ID `1342333561` and subfolder
+- The official Registry still returned HTTP 404 for that exact identity/version
+  after publication on 2026-09-20, so no Registry listing exists yet.
+- Metadata pins GitHub repository ID `1342333561` and subfolder
   `machine/mcp-server` to make the source identity more robust.
 
 References:
@@ -96,30 +96,35 @@ References:
 - [Official package-type and npm ownership rules](https://github.com/modelcontextprotocol/registry/blob/main/docs/modelcontextprotocol-io/package-types.mdx)
 - [Official Registry API](https://github.com/modelcontextprotocol/registry/blob/main/docs/reference/api/official-registry-api.md)
 
-## Prepared but not executed
+## Verified npm release and unexecuted Registry action
 
-`machine/mcp-server/server.json` contains draft official-registry metadata
-for npm package version `0.1.0`, `npx`, and local `stdio`. It passed the official
-`2025-12-11` JSON schema. The private release candidate also passed a 20-check
-cross-file validator. The npm tarball has an exact nine-file allow-list and
-includes the scoped `LICENSE` while intentionally excluding
+`machine/mcp-server/server.json` contains official-registry metadata for npm
+package version `0.1.0`, `npx`, and local `stdio`. It passed the 20-check
+cross-file validator and official `mcp-publisher` 1.8.1 validation against the
+live Registry service on 2026-09-20. The npm tarball has an exact nine-file
+allow-list and includes the scoped `LICENSE` while intentionally excluding
 `server.json`; the publisher reads that local file during a later authorized
-registry submission.
+Registry submission.
 
-The retained private candidate is `govwait-mcp-0.1.0.tgz`: 118,606 bytes
-compressed / 4,239,539 bytes unpacked, with SHA-256
-`d27d372e8e14a421fe098234a53766049c055eb2e2bc2bc7bdc203d2f979d822`.
+The published audited artifact is `govwait-mcp-0.1.0.tgz`: 118,593 bytes
+compressed / 4,239,563 bytes unpacked, with local SHA-256
+`e881e02555f3133124262c69f48cf7706259595519f5ad25eb1c67338c15ebda`.
+The npm registry reports SHA-1
+`412c5b6c4c0ada6c412c5f105b6118b20e6ccfd0` and integrity
+`sha512-u0ksXNhTREZI0rvPfCZ27qTDupI4ZpFA2lopo9rhGMy6RgXcjb6ZQZZA6XgJ0OhoIVqBKJA12YRrBwMucrXeVg==`.
 
-No npm account or package was created or changed, and no name was reserved.
-Candidate source commit `ba830db` was pushed to the public GitHub repository on
-2026-09-17, making the scoped code licence public. The private tarball and its
-checksum remain local and ignored. No npm publication, MCP Registry submission,
-Cloudflare deployment, IndexNow notification or directory submission occurred.
+Public-release source commit `ec284ef` is on the public GitHub repository. A
+clean temporary installation from the public npm registry passed all 15 MCP
+assertions and loaded 2,318 routes from the installed package's own data. No
+publishing token or trusted-publisher workflow was created. The package is set to
+npm's strict `mfa=publish` policy: interactive 2FA is required and
+automation/bypass tokens cannot publish. No MCP Registry submission, Cloudflare
+deployment, IndexNow notification or other directory submission occurred.
 
 ## Next gate
 
-The next gate is npm account and publication preflight only; it must stop before
-`npm publish`. Actual npm publication and actual MCP Registry publication remain
-later, separate account/publication gates. Immediately before either
-publication, recheck both names and the official registry schema because
-availability can change and the Registry is still a preview service.
+The next release gate is a separately approved official MCP Registry submission.
+Immediately before that action, recheck the exact public npm identity and
+Registry metadata because the Registry remains a preview service. Another npm
+version, a publishing workflow, any other directory submission and deployment
+remain separate approvals.

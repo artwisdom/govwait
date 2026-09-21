@@ -34,14 +34,17 @@ temporary project with the already-locked `npm ci` dependency tree, and runs the
 complete MCP smoke test against that isolated copy. The temporary package is
 deleted afterward; no registry access is needed.
 
-The release-preparation identity is `govwait-mcp` on npm and
-`io.github.artwisdom/govwait` in the official MCP Registry. The npm name returned
-not found during the final preflight on September 20, 2026, but it is not reserved
-until an authorized publication succeeds. Version `0.1.0` uses a
-`SEE LICENSE IN LICENSE` field that points to Apache 2.0 terms limited to
-GovWait-owned software code. `DATA-NOTICE.md` and the licence scope expressly
-exclude the bundled government-source data. MCP Registry submission remains a
-separate owner-authorized action after npm publication is verified.
+The verified public release is
+[`govwait-mcp@0.1.0`](https://www.npmjs.com/package/govwait-mcp/v/0.1.0), and its
+`mcpName` exactly matches `io.github.artwisdom/govwait` in the official MCP
+Registry metadata. Version `0.1.0` uses a `SEE LICENSE IN LICENSE` field that
+points to Apache 2.0 terms limited to GovWait-owned software code.
+`DATA-NOTICE.md` and the licence scope expressly exclude the bundled
+government-source data. A clean public-registry installation passed the full MCP
+smoke suite. npm publishing requires interactive 2FA and disallows
+automation/bypass tokens. Official `mcp-publisher` 1.8.1 validates `server.json`,
+but Registry submission remains a separate owner-authorized action and has not
+occurred.
 
 ## Register with Claude Code
 
@@ -89,6 +92,6 @@ terms at <https://govwait.com/data-license/> and the packaged
 
 The local
 [`server.json`](https://github.com/artwisdom/govwait/blob/main/machine/mcp-server/server.json)
-is MCP Registry metadata. Publish it only after the npm package is publicly
-retrievable. npm publication and directory submissions remain separate owner
-actions in the [distribution checklist](https://github.com/artwisdom/govwait/blob/main/docs/DISTRIBUTION_CHECKLIST.md).
+is valid MCP Registry metadata for the public npm package. Registry and other
+directory submissions remain separate owner actions in the
+[distribution checklist](https://github.com/artwisdom/govwait/blob/main/docs/DISTRIBUTION_CHECKLIST.md).

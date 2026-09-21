@@ -75,8 +75,10 @@ npm run smoke
 The MCP build deterministically bundles the three validated exports plus a
 SHA-256 provenance manifest into the package. `npm run verify` builds it, runs
 the protocol smoke suite, enforces the exact package allow-list, and exercises
-the packed artifact in a clean temporary runtime. The package remains private;
-it has not been published to npm or an MCP directory.
+the packed artifact in a clean temporary runtime. The verified public release
+is [`govwait-mcp@0.1.0`](https://www.npmjs.com/package/govwait-mcp/v/0.1.0).
+Its package policy requires interactive 2FA and disallows token publishing. Its
+official MCP Registry metadata is valid but has not been submitted.
 
 ## Collection safeguards
 

@@ -112,3 +112,34 @@ or revenue.
   no Actions run for the commit.
 - External-change boundary: no npm or Registry account change or publication,
   Cloudflare deployment, IndexNow notification or directory listing occurred.
+
+## Phase 5B public npm release and Registry preflight — 2026-09-20
+
+- Public source: commit `ec284ef64c30afdcf45c1666178c473b86ac7c63` is on
+  `origin/main`; it removes the npm publication block while preserving the
+  scoped Apache 2.0 code-only licence and separate data notice.
+- Security updates: the release lockfile contains `fast-uri` 3.1.8, `hono`
+  4.13.8 and `qs` 6.16.0; the release audit reported zero vulnerabilities.
+- Published identity: npm serves `govwait-mcp@0.1.0`, `latest` resolves to
+  `0.1.0`, and public `mcpName` exactly matches
+  `io.github.artwisdom/govwait`.
+- Artifact identity: nine files, 118,593 packed bytes, 4,239,563 unpacked bytes,
+  local SHA-256
+  `e881e02555f3133124262c69f48cf7706259595519f5ad25eb1c67338c15ebda`,
+  registry SHA-1 `412c5b6c4c0ada6c412c5f105b6118b20e6ccfd0`, and registry integrity
+  `sha512-u0ksXNhTREZI0rvPfCZ27qTDupI4ZpFA2lopo9rhGMy6RgXcjb6ZQZZA6XgJ0OhoIVqBKJA12YRrBwMucrXeVg==`.
+- Clean install: a new temporary project installed the public registry artifact,
+  ran all 15 MCP assertions, and loaded 2,318 routes from the installed package's
+  own data.
+- Registry preflight: official `mcp-publisher` 1.8.1 validated `server.json`
+  against the live service. The exact Registry identity/version returned HTTP
+  404, so it remains unsubmitted and unlisted.
+- Publishing hardening: authenticated npm 11.19.1 command
+  `npm access set mfa=publish govwait-mcp` exited 0 after security-key approval.
+  The client sends `publish_requires_tfa=true` and
+  `automation_token_overrides_tfa=false`, requiring interactive 2FA and blocking
+  automation/bypass-token publishing. No trusted publisher is configured.
+- Boundary: no publishing token, trusted-publisher workflow, Registry or other
+  directory submission, deployment or IndexNow notification was created or run.
+  npm publication and validation do not establish Registry discovery, traffic,
+  advertising approval, demand or revenue.

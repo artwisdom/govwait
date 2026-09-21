@@ -34,8 +34,8 @@ or revenue.
 
 ## Phase 5B — self-contained MCP package
 
-Status: **private 0.1.0 candidate source pushed to GitHub on 2026-09-17; npm and
-every directory publication remain separate owner/account gates**.
+Status: **public `govwait-mcp@0.1.0` verified on npm on 2026-09-20; official MCP
+Registry metadata revalidated but not submitted**.
 
 1. [x] Research a repository/software licence. Apache 2.0 is recommended for
    GovWait-owned code only.
@@ -50,42 +50,54 @@ every directory publication remain separate owner/account gates**.
    SHA-256 verification and an isolated `npm pack` smoke test. The verified
    tarball contains nine files, including the scoped licence and data notice,
    and no database, caches, logs, credentials, source files or tests.
-5. [x] Prepare the npm identity `govwait-mcp` and exact MCP ownership linkage
-   `io.github.artwisdom/govwait`. Both returned not-found responses on
-   2026-09-16; neither is reserved, so recheck immediately before publication.
+5. [x] Establish the npm identity `govwait-mcp` and exact MCP ownership linkage
+   `io.github.artwisdom/govwait`. The public npm package now exposes the exact
+   matching `mcpName` required for ownership verification.
 6. [x] Prepare `server.json`, pin GitHub repository ID `1342333561`, and validate
    it against the official `2025-12-11` schema plus local cross-file checks.
-7. [x] Build and retain the audited private `0.1.0` release candidate plus its
-   SHA-256 sidecar in the git-ignored package `release/` directory.
-8. [x] After owner approval, push candidate source commit `ba830db` to public
-   GitHub `main`. No deploy-path file changed and GitHub returned no Actions run
-   for that commit; the local tarball remains ignored.
-9. [ ] Owner signs into npm, enables the required publishing security and approves
-   the public package publication.
-10. [ ] After the npm package is publicly retrievable, revalidate `server.json`
-   against the current schema, then owner-authorize publication to the
-   [official MCP Registry](https://modelcontextprotocol.io/registry/quickstart).
-11. [ ] Verify installation from a clean temporary directory before claiming the
-   package or registry entry works.
+7. [x] Build and retain the audited `0.1.0` release artifact plus its SHA-256
+   sidecar in the git-ignored package `release/` directory.
+8. [x] After owner approvals, push public-release source commit `ec284ef` to
+   GitHub `main`. No workflow or deployment was created or run.
+9. [x] Publish the exact audited `govwait-mcp@0.1.0` artifact under npm owner
+   `artwisdom` using interactive security-key authentication. Harden the package
+   with npm's strict `mfa=publish` policy: interactive 2FA is required and
+   automation/bypass tokens cannot publish. No publishing token or trusted
+   publisher was created.
+10. [x] Revalidate `server.json` with official `mcp-publisher` 1.8.1 against the
+    live Registry service. It is valid; the exact Registry identity/version
+    remains HTTP 404 and therefore unlisted.
+11. [x] Install from the public npm registry in a clean temporary directory and
+    run the complete smoke suite before claiming the npm package works.
+12. [ ] Under a separate owner approval, submit to the
+    [official MCP Registry](https://modelcontextprotocol.io/registry/quickstart),
+    then verify the listing before claiming Registry discovery.
 
-Private-candidate receipt: `npm run prepare:rc` passed both 15-assertion MCP smoke
+Public-release receipt: `npm run prepare:rc` passed both 15-assertion MCP smoke
 runs and all 20 metadata/licensing checks under Node 24.11.1. The exact nine-file
-artifact was 118,606 bytes compressed / 4,239,539 bytes unpacked; all three data
+artifact was 118,593 bytes compressed / 4,239,563 bytes unpacked; all three data
 hashes matched; the isolated server loaded 2,318 routes from its own package
-directory. SHA-256:
-`d27d372e8e14a421fe098234a53766049c055eb2e2bc2bc7bdc203d2f979d822`.
-The official Registry schema check passed separately. `private: true` remains
-active; no npm package or MCP Registry metadata was published.
+directory. Local SHA-256:
+`e881e02555f3133124262c69f48cf7706259595519f5ad25eb1c67338c15ebda`.
+The public registry reports SHA-1
+`412c5b6c4c0ada6c412c5f105b6118b20e6ccfd0` and integrity
+`sha512-u0ksXNhTREZI0rvPfCZ27qTDupI4ZpFA2lopo9rhGMy6RgXcjb6ZQZZA6XgJ0OhoIVqBKJA12YRrBwMucrXeVg==`.
+A clean public-registry install repeated all 15 assertions successfully.
+Authenticated npm 11.19.1 command
+`npm access set mfa=publish govwait-mcp` exited 0 after security-key approval.
+The client maps that policy to `publish_requires_tfa=true` and
+`automation_token_overrides_tfa=false`.
 
 GitHub-only receipt: commit `ba830db9201b637539e84e57613f76fa45ac2b45`
 is present on `artwisdom/govwait` `main`. This published source code and licence
 to GitHub only; it did not publish the npm package, submit Registry metadata,
 deploy Cloudflare Pages or send IndexNow URLs.
 
-The official registry currently requires a package to be public before its
-registry metadata is published. GitHub-authenticated server names must match the
-registry's documented namespace rules. Recheck those rules immediately before
-publication because the registry is still described as a preview.
+The official Registry currently requires a package to be public before its
+metadata is submitted, and npm ownership verification requires the package's
+`mcpName` to exactly match the Registry server name. Both conditions are now
+satisfied. Official `mcp-publisher` 1.8.1 reports `server.json` valid; submission
+still requires a separate owner approval because the Registry is a preview.
 
 ## Phase 5C — no-cost discovery and earned links
 

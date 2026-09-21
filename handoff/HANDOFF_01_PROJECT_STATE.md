@@ -297,18 +297,19 @@ Local Node is 20.19.6 (Astro pinned to v4 for this reason; CI also pins Node 20)
   HTTP 200 receipt are verified. On 2026-09-13, Google Search Console accepted
   the owner-approved indexing request for `/data/` into its priority crawl queue;
   the URL was not indexed at inspection time.
-- Phase 5B private 0.1.0 release candidate is locally verified but unpublished:
-  `npm run prepare:rc` bundles the three JSON exports and deterministic
-  provenance, enforces the exact nine-file package allow-list including the
-  scoped `LICENSE` and `DATA-NOTICE.md`, validates three hashes, runs the
-  15-assertion smoke suite against an isolated tarball, and checks 20 metadata
-  and licensing invariants. The recommended identities are
-  `govwait-mcp` and `io.github.artwisdom/govwait`; draft `server.json` passed the
-  official Registry schema. The owner approved Apache 2.0 for GovWait-owned code
-  only, with bundled government data excluded. Candidate source commit `ba830db`
-  was pushed to GitHub only on 2026-09-17, with no Actions/deployment run. The
-  package remains `private: true`; npm publication and MCP Registry publication
-  are separate approvals.
+- Phase 5B public 0.1.0 npm release is verified: public-source commit `ec284ef`
+  is on `main`; npm serves the exact audited nine-file `govwait-mcp@0.1.0`
+  artifact; and a clean registry installation passed all 15 MCP assertions while
+  loading 2,318 package-owned routes. Registry SHA-1 is
+  `412c5b6c4c0ada6c412c5f105b6118b20e6ccfd0`; the local tarball SHA-256 is
+  `e881e02555f3133124262c69f48cf7706259595519f5ad25eb1c67338c15ebda`.
+  Public `mcpName` exactly matches `io.github.artwisdom/govwait`, and official
+  `mcp-publisher` 1.8.1 reports `server.json` valid. The official Registry still
+  returns HTTP 404 for the exact identity/version because it has not been
+  submitted. Apache 2.0 remains limited to GovWait-owned code; bundled government
+  data remains excluded. npm publishing requires interactive 2FA and disallows
+  automation/bypass tokens. No publishing token, trusted publisher,
+  Registry/directory submission or deployment was created.
 
 ## 8. QA ritual before any push that touches pipeline or site
 
