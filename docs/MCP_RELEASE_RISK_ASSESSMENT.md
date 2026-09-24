@@ -51,6 +51,13 @@ The package therefore keeps four separate controls:
 4. The package contains extracted factual fields, not government logos, page
    design or copied explanatory prose.
 
+The repository uses the same boundary in a detector-friendly layout: the root
+`LICENSE` contains only the unmodified Apache 2.0 terms, while
+`SOFTWARE-SCOPE.md` identifies GovWait-owned software as the covered work and
+expressly excludes government data and other non-code material. The published
+package keeps its self-contained scoped `LICENSE`; the two files intentionally
+do not match byte-for-byte because the package must carry its scope with it.
+
 The source positions remain different: covered UK content generally uses OGL
 v3.0; covered New Zealand Crown website content uses CC BY 3.0 NZ; Canada.ca
 general terms and OGL-Canada are not interchangeable; and no explicit reuse

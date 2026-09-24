@@ -150,3 +150,33 @@ or revenue.
   temporary Registry login was logged out and publisher files deleted. Registry
   publication does not establish downstream directory discovery, traffic,
   advertising approval, demand or revenue.
+
+## Phase 5C Glama build and local readiness gate — 2026-09-22
+
+- Glama build-only test
+  [`01a0cc04-a9e8-7f71-9017-f1be4e441241`](https://glama.ai/mcp/servers/artwisdom/govwait/admin/dockerfile/tests/01a0cc04-a9e8-7f71-9017-f1be4e441241)
+  succeeded in 57.4 seconds against commit `64db085`. The container started,
+  negotiated MCP protocol `2025-11-25`, and exposed the four expected tools.
+  Auto-Release remained off and no release was created.
+- The public GitHub API still reports `NOASSERTION` for commit `64db085`. The
+  local candidate moves the unmodified Apache 2.0 terms to the root `LICENSE`
+  and preserves the approved GovWait-code-only boundary and every government
+  data exclusion in `SOFTWARE-SCOPE.md`. The published package's scoped
+  `LICENSE` and `DATA-NOTICE.md` are unchanged.
+- GitHub Licensee 10.1.0 identifies the local repository as `Apache-2.0` by an
+  exact matcher at 100% confidence. The expanded release validator passed
+  26/26 checks, including canonical-term equality, all data exclusions and the
+  separate package/repository licence layouts.
+- Minimal `glama.json` contains only Glama's schema URL and maintainer
+  `artwisdom`; Python jsonschema 4.25.1 validated it against Glama's live
+  Draft-07 schema.
+- Complete local ritual passed: 14 parser/history tests; cached pipeline 25/25
+  validation checks; 2,318 current routes and 4,346 append-only public history
+  observations; 2,110-page Astro build; 641/641 SEO-sitemap gate; 2,616-file API
+  conformance; direct and isolated 15-assertion MCP smoke suites; exact nine-file
+  package audit with three data hashes; and a 641-URL IndexNow dry run. The 1,584
+  existing title/description-length findings remain non-blocking warnings.
+- Generated timestamp noise from the cached full-pipeline run was removed; the
+  intended candidate contains only licensing, Glama metadata, validation and
+  project-record changes. No commit, push, repository sync, Glama build or
+  release, npm publication, IndexNow request, deployment or outreach occurred.

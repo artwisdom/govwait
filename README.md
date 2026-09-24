@@ -104,11 +104,12 @@ information is not relicensed by GovWait; preserve the originating agency's
 attribution and follow its source-specific terms. Read the full
 [data reuse and licensing notice](https://govwait.com/data-license/).
 
-GovWait-owned software code is licensed under the scoped Apache License 2.0 in
-[`LICENSE`](LICENSE). That software licence expressly excludes government-source
-data, generated datasets, editorial/research/handoff content, government marks
-and other third-party material. The separate data notice and any file-specific
-terms continue to control those materials; see
+GovWait-owned software code is licensed under the Apache License 2.0 terms in
+[`LICENSE`](LICENSE), subject to the explicit code-only boundary in
+[`SOFTWARE-SCOPE.md`](SOFTWARE-SCOPE.md). That scope expressly excludes
+government-source data, generated datasets, editorial/research/handoff content,
+government marks and other third-party material. The separate data notice and
+any file-specific terms continue to control those materials; see
 [`docs/MCP_RELEASE_RISK_ASSESSMENT.md`](docs/MCP_RELEASE_RISK_ASSESSMENT.md).
 
 Questions and corrections: [contact@govwait.com](mailto:contact@govwait.com).

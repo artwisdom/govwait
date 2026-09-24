@@ -41,9 +41,10 @@ Status: **public `govwait-mcp@0.1.0` and official MCP Registry
    GovWait-owned code only.
    The data notice does not license the source code or become covered by the
    software licence.
-2. [x] Owner approved the Apache-2.0-for-code boundary. The local `LICENSE`
-   reproduces the canonical terms, excludes data and other non-code material,
-   and matches the package copy byte-for-byte.
+2. [x] Owner approved the Apache-2.0-for-code boundary. The package's scoped
+   `LICENSE` travels with `DATA-NOTICE.md`. The repository keeps the unmodified
+   Apache terms in root `LICENSE` for machine detection and the controlling
+   code-only/data-exclusion boundary in `SOFTWARE-SCOPE.md`.
 3. [x] Make the MCP package self-contained. The built server defaults to its own
    three bundled exports and needs no parent-repository data at runtime.
 4. [x] Add exact package allow-listing, deterministic provenance metadata,
@@ -110,15 +111,22 @@ preview, so its status must still be monitored honestly.
 
 ## Phase 5C — no-cost discovery and earned links
 
-Status: **research only; every external submission or message needs separate
-owner approval**.
+Status: **official Registry active; Glama listing claimed and build-tested;
+repository-readiness fix remains local only**.
 
 Priority order after Phase 5B:
 
 1. [x] Official MCP Registry — canonical machine-tool discovery is active for
    `io.github.artwisdom/govwait@0.1.0`.
-2. [Glama](https://glama.ai/) — public GitHub-based MCP discovery and automated
-   checks; confirm the current submission workflow before posting.
+2. [x] [Glama](https://glama.ai/mcp/servers/artwisdom/govwait) — public listing
+   claimed by GitHub owner `artwisdom`. Auto-Release is off. Build-only test
+   `01a0cc04-a9e8-7f71-9017-f1be4e441241` succeeded in 57.4 seconds against
+   commit `64db085`, started the container, negotiated MCP and found all four
+   tools. No Glama release exists yet. The local repository-readiness candidate
+   adds `glama.json` and changes GitHub Licensee detection from `NOASSERTION` to
+   an exact Apache-2.0 match without changing the published package's scoped
+   licence. This revision contains that source change; Glama has not synced or
+   released it.
 3. [PulseMCP](https://www.pulsemcp.com/api) — confirm whether the official
    registry import already discovers GovWait before making a manual submission.
 4. Smithery — optional only if its current account/API and packaging requirements

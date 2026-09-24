@@ -1,6 +1,6 @@
 # STATE — Data Moat Engine
 
-_Last updated: 2026-09-20_
+_Last updated: 2026-09-23_
 
 ## Environment (verified)
 | Runtime | Version |
@@ -33,6 +33,8 @@ All dependencies install locally (`node_modules` inside project). No sudo or mac
 - [x] Phase 4B Canadian near-win production release: commit `fa73c2f`, deployment run `34176619821`, Cloudflare artifact `2e3649f8.govwait.pages.dev`, four demonstrated Search Console pages with stronger query-matching content, the IRCC visitor-biometrics correction, 639/639 production sitemap audit, public-edge verification, and a 645-URL IndexNow HTTP 200 receipt
 - [x] Phase 5A dataset authority release: commit `fd7ba67`, deployment run `34300806761`, Cloudflare artifact `ca3bad6a.govwait.pages.dev`, canonical dataset hub, four generated CSV distributions, dataset metadata, fuller OpenAPI/AI discovery, public-repository README, source-specific reuse guidance, 641/641 public sitemap verification, and a 656-URL IndexNow HTTP 200 receipt
 - [x] Phase 5B npm and MCP Registry 0.1.0 release: public-source commit `ec284ef`; self-contained MCP data bundle, deterministic provenance hashes, exact nine-file npm allow-list with a scoped Apache 2.0 code licence and separate data notice; verified public `govwait-mcp@0.1.0`; interactive 2FA required and token publishing disallowed; clean-install smoke verification; active official Registry listing `io.github.artwisdom/govwait` with exact npm ownership linkage
+- [x] Phase 5C Glama build preflight: the public GovWait listing is claimed by GitHub owner `artwisdom`; Auto-Release is off; build-only test `01a0cc04-a9e8-7f71-9017-f1be4e441241` succeeded against commit `64db085` and exposed all four MCP tools; no Glama release was created
+- [x] Phase 5C Glama repository-readiness candidate: this revision makes the root Apache 2.0 terms machine-detectable, preserves the code-only/data-exclusion boundary in `SOFTWARE-SCOPE.md`, and adds live-schema-valid `glama.json`; remote licence detection must be verified after GitHub publication, while Glama sync/build/release and deployment remain separate owner gates
 
 ## Deployment status (verified through 2026-09-08)
 - Repo LIVE: https://github.com/artwisdom/govwait (public, main)
@@ -276,11 +278,11 @@ configured.
 
 ## Next step
 
-The next bounded release step is to commit and push this verified official
-Registry receipt. Phase 5C directory-discovery research may follow, but every
-other directory submission, outreach message, workflow, another npm version and
-deployment remains a separate gate. Finland Migri remains the next source
-candidate and requires a 5-second crawl delay.
+Following the owner-approved GitHub-only publication and remote Apache-2.0
+detection check, the next bounded gate is a Glama repository sync and a fresh
+build-only test. Creating a Glama release or deployment remains a later,
+separate external gate. Finland Migri remains the next source candidate and
+requires a 5-second crawl delay.
 
 ## Open threads
 - US/AU/IE sources WAF-blocked to honest bots — owner-decision item (documented in DEPLOYMENT_GUIDE).
