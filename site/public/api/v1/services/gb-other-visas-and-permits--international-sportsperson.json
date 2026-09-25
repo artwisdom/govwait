@@ -3,7 +3,7 @@
  "service_name": "International Sportsperson (Other visas and permits)",
  "jurisdiction": "GB",
  "count": 1,
- "generated_at": "2026-09-25T00:52:27.787Z",
+ "generated_at": "2026-09-25T01:25:45.254Z",
  "records": [
   {
    "entity_id": "gb-other-visas-and-permits--international-sportsperson",
@@ -17,7 +17,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T00:45:40.267Z",
+   "source_last_verified_at": "2026-09-25T01:18:57.960Z",
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,

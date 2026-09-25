@@ -3,7 +3,7 @@
  "service_name": "Service Supplier (Work visas for an overseas employer, applying inside the UK)",
  "jurisdiction": "GB",
  "count": 1,
- "generated_at": "2026-09-25T00:52:27.787Z",
+ "generated_at": "2026-09-25T01:25:45.254Z",
  "records": [
   {
    "entity_id": "gb-in-uk-work-visas-for-an-overseas-employer--service-supplier",
@@ -17,7 +17,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T00:45:43.255Z",
+   "source_last_verified_at": "2026-09-25T01:19:00.960Z",
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,

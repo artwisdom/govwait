@@ -3,7 +3,7 @@
  "service_name": "Privately sponsored refugees — Quebec",
  "jurisdiction": "CA",
  "count": 1,
- "generated_at": "2026-09-25T00:52:27.787Z",
+ "generated_at": "2026-09-25T01:25:45.254Z",
  "records": [
   {
    "entity_id": "ca-privately-sponsored-refugees-quebec",
@@ -17,7 +17,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T00:45:28.736Z",
+   "source_last_verified_at": "2026-09-25T01:18:47.841Z",
    "latest": {
     "value_raw": "About 54 months",
     "value_days": 1643.76,

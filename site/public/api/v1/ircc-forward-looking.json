@@ -1,7 +1,7 @@
 {
  "name": "IRCC forward-looking processing times",
  "description": "Current new-application projections plus application-month cohort estimates. Cohort months are submission dates within each IRCC snapshot, not historical publication dates.",
- "generated_at": "2026-09-25T00:52:27.787Z",
+ "generated_at": "2026-09-25T01:25:45.254Z",
  "count": 28,
  "programs": [
   {
@@ -16,7 +16,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T00:45:28.736Z",
+   "source_last_verified_at": "2026-09-25T01:18:47.841Z",
    "latest": {
     "value_raw": "About 26 months",
     "value_days": 791.44,
@@ -2626,7 +2626,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T00:45:28.736Z",
+   "source_last_verified_at": "2026-09-25T01:18:47.841Z",
    "latest": {
     "value_raw": "About 6 months",
     "value_days": 182.64,
@@ -5236,7 +5236,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T00:45:28.736Z",
+   "source_last_verified_at": "2026-09-25T01:18:47.841Z",
    "latest": {
     "value_raw": "About 77 months",
     "value_days": 2343.88,
@@ -7846,7 +7846,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T00:45:28.736Z",
+   "source_last_verified_at": "2026-09-25T01:18:47.841Z",
    "latest": {
     "value_raw": "About 33 months",
     "value_days": 1004.52,
@@ -10536,7 +10536,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T00:45:28.736Z",
+   "source_last_verified_at": "2026-09-25T01:18:47.841Z",
    "latest": {
     "value_raw": "About 12 months",
     "value_days": 365.28,
@@ -13956,7 +13956,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T00:45:28.736Z",
+   "source_last_verified_at": "2026-09-25T01:18:47.841Z",
    "latest": {
     "value_raw": "About 7 months",
     "value_days": 213.08,
@@ -16566,7 +16566,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T00:45:28.736Z",
+   "source_last_verified_at": "2026-09-25T01:18:47.841Z",
    "latest": {
     "value_raw": "About 14 months",
     "value_days": 426.16,
@@ -19176,7 +19176,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T00:45:28.736Z",
+   "source_last_verified_at": "2026-09-25T01:18:47.841Z",
    "latest": {
     "value_raw": "About 9 months",
     "value_days": 273.96,
@@ -21786,7 +21786,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T00:45:28.736Z",
+   "source_last_verified_at": "2026-09-25T01:18:47.841Z",
    "latest": {
     "value_raw": "More than 10 years",
     "value_days": 3652.5,
@@ -24396,7 +24396,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T00:45:28.736Z",
+   "source_last_verified_at": "2026-09-25T01:18:47.841Z",
    "latest": {
     "value_raw": "More than 10 years",
     "value_days": 3652.5,
@@ -27006,7 +27006,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T00:45:28.736Z",
+   "source_last_verified_at": "2026-09-25T01:18:47.841Z",
    "latest": {
     "value_raw": "About 28 months",
     "value_days": 852.32,
@@ -29616,7 +29616,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T00:45:28.736Z",
+   "source_last_verified_at": "2026-09-25T01:18:47.841Z",
    "latest": {
     "value_raw": "About 63 months",
     "value_days": 1917.72,
@@ -32226,7 +32226,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T00:45:28.736Z",
+   "source_last_verified_at": "2026-09-25T01:18:47.841Z",
    "latest": {
     "value_raw": "About 40 months",
     "value_days": 1217.6,
@@ -34836,7 +34836,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T00:45:28.736Z",
+   "source_last_verified_at": "2026-09-25T01:18:47.841Z",
    "latest": {
     "value_raw": "About 54 months",
     "value_days": 1643.76,
@@ -37446,7 +37446,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T00:45:28.736Z",
+   "source_last_verified_at": "2026-09-25T01:18:47.841Z",
    "latest": {
     "value_raw": "About 41 months",
     "value_days": 1248.04,
@@ -40056,7 +40056,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T00:45:28.736Z",
+   "source_last_verified_at": "2026-09-25T01:18:47.841Z",
    "latest": {
     "value_raw": "More than 10 years",
     "value_days": 3652.5,
@@ -42666,7 +42666,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T00:45:28.736Z",
+   "source_last_verified_at": "2026-09-25T01:18:47.841Z",
    "latest": {
     "value_raw": "About 13 months",
     "value_days": 395.72,
@@ -45276,7 +45276,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T00:45:28.736Z",
+   "source_last_verified_at": "2026-09-25T01:18:47.841Z",
    "latest": {
     "value_raw": "More than 10 years",
     "value_days": 3652.5,
@@ -47886,7 +47886,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T00:45:28.736Z",
+   "source_last_verified_at": "2026-09-25T01:18:47.841Z",
    "latest": {
     "value_raw": "About 7 months",
     "value_days": 213.08,
@@ -50496,7 +50496,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T00:45:28.736Z",
+   "source_last_verified_at": "2026-09-25T01:18:47.841Z",
    "latest": {
     "value_raw": "About 13 months",
     "value_days": 395.72,
@@ -53106,7 +53106,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T00:45:28.736Z",
+   "source_last_verified_at": "2026-09-25T01:18:47.841Z",
    "latest": {
     "value_raw": "About 75 months",
     "value_days": 2283,
@@ -55716,7 +55716,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T00:45:28.736Z",
+   "source_last_verified_at": "2026-09-25T01:18:47.841Z",
    "latest": {
     "value_raw": "11 months",
     "value_days": 334.84,
@@ -58326,7 +58326,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T00:45:28.736Z",
+   "source_last_verified_at": "2026-09-25T01:18:47.841Z",
    "latest": {
     "value_raw": "More than 10 years",
     "value_days": 3652.5,
@@ -60936,7 +60936,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T00:45:28.736Z",
+   "source_last_verified_at": "2026-09-25T01:18:47.841Z",
    "latest": {
     "value_raw": "About 26 months",
     "value_days": 791.44,
@@ -63546,7 +63546,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T00:45:28.736Z",
+   "source_last_verified_at": "2026-09-25T01:18:47.841Z",
    "latest": {
     "value_raw": "About 32 months",
     "value_days": 974.08,
@@ -66156,7 +66156,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T00:45:28.736Z",
+   "source_last_verified_at": "2026-09-25T01:18:47.841Z",
    "latest": {
     "value_raw": "About 18 months",
     "value_days": 547.92,
@@ -68766,7 +68766,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T00:45:28.736Z",
+   "source_last_verified_at": "2026-09-25T01:18:47.841Z",
    "latest": {
     "value_raw": "About 33 months",
     "value_days": 1004.52,
@@ -71376,7 +71376,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T00:45:28.736Z",
+   "source_last_verified_at": "2026-09-25T01:18:47.841Z",
    "latest": {
     "value_raw": "More than 10 years",
     "value_days": 3652.5,
