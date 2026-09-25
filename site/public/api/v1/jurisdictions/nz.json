@@ -1,7 +1,7 @@
 {
  "jurisdiction": "NZ",
  "count": 264,
- "generated_at": "2026-09-25T01:25:45.254Z",
+ "generated_at": "2026-09-25T18:16:41.266Z",
  "services": [
   "nz-academic-visitor-visa",
   "nz-accredited-employer-work-visa",
@@ -149,7 +149,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -173,7 +173,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "24 working days",
     "value_days": 24,
@@ -197,7 +197,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "16 working days",
     "value_days": 16,
@@ -221,7 +221,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "42 working days",
     "value_days": 42,
@@ -245,7 +245,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "45 working days",
     "value_days": 45,
@@ -269,7 +269,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "106 working days",
     "value_days": 106,
@@ -293,7 +293,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -317,7 +317,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "24 working days",
     "value_days": 24,
@@ -341,7 +341,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -365,7 +365,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "24 working days",
     "value_days": 24,
@@ -389,7 +389,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -413,7 +413,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "24 working days",
     "value_days": 24,
@@ -437,7 +437,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -461,7 +461,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -485,7 +485,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -509,7 +509,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "24 working days",
     "value_days": 24,
@@ -533,7 +533,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -557,7 +557,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -581,7 +581,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -605,7 +605,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -629,7 +629,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -653,7 +653,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -677,7 +677,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "3 working days",
     "value_days": 3,
@@ -701,7 +701,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -725,7 +725,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -749,7 +749,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -773,7 +773,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -797,7 +797,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "24 working days",
     "value_days": 24,
@@ -821,7 +821,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "35 working days",
     "value_days": 35,
@@ -845,7 +845,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "72 working days",
     "value_days": 72,
@@ -869,7 +869,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "35 working days",
     "value_days": 35,
@@ -893,7 +893,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "72 working days",
     "value_days": 72,
@@ -917,7 +917,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "35 working days",
     "value_days": 35,
@@ -941,7 +941,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "72 working days",
     "value_days": 72,
@@ -965,7 +965,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -989,7 +989,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -1013,7 +1013,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "22 working days",
     "value_days": 22,
@@ -1037,7 +1037,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "49 working days",
     "value_days": 49,
@@ -1061,7 +1061,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "22 working days",
     "value_days": 22,
@@ -1085,7 +1085,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "49 working days",
     "value_days": 49,
@@ -1109,7 +1109,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -1133,7 +1133,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -1157,7 +1157,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -1181,7 +1181,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "24 working days",
     "value_days": 24,
@@ -1205,7 +1205,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -1229,7 +1229,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -1253,7 +1253,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "16 working days",
     "value_days": 16,
@@ -1277,7 +1277,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "28 working days",
     "value_days": 28,
@@ -1301,7 +1301,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -1325,7 +1325,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -1349,7 +1349,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -1373,7 +1373,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -1397,7 +1397,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "162 working days",
     "value_days": 162,
@@ -1421,7 +1421,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "189 working days",
     "value_days": 189,
@@ -1445,7 +1445,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "32 working days",
     "value_days": 32,
@@ -1469,7 +1469,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "65 working days",
     "value_days": 65,
@@ -1493,7 +1493,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -1517,7 +1517,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "24 working days",
     "value_days": 24,
@@ -1541,7 +1541,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "22 working days",
     "value_days": 22,
@@ -1565,7 +1565,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "49 working days",
     "value_days": 49,
@@ -1589,7 +1589,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "23 working days",
     "value_days": 23,
@@ -1613,7 +1613,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "53 working days",
     "value_days": 53,
@@ -1637,7 +1637,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "9 working days",
     "value_days": 9,
@@ -1661,7 +1661,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "11 working days",
     "value_days": 11,
@@ -1685,7 +1685,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "392 working days",
     "value_days": 392,
@@ -1709,7 +1709,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "428 working days",
     "value_days": 428,
@@ -1733,7 +1733,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -1757,7 +1757,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "24 working days",
     "value_days": 24,
@@ -1781,7 +1781,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -1805,7 +1805,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -1829,7 +1829,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -1853,7 +1853,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "9 working days",
     "value_days": 9,
@@ -1877,7 +1877,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "23 working days",
     "value_days": 23,
@@ -1901,7 +1901,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "53 working days",
     "value_days": 53,
@@ -1925,7 +1925,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -1949,7 +1949,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -1973,7 +1973,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "50 working days",
     "value_days": 50,
@@ -1997,7 +1997,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "107 working days",
     "value_days": 107,
@@ -2021,7 +2021,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "21 working days",
     "value_days": 21,
@@ -2045,7 +2045,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "21 working days",
     "value_days": 21,
@@ -2069,7 +2069,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -2093,7 +2093,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -2117,7 +2117,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -2141,7 +2141,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "24 working days",
     "value_days": 24,
@@ -2165,7 +2165,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -2189,7 +2189,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -2213,7 +2213,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "22 working days",
     "value_days": 22,
@@ -2237,7 +2237,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "49 working days",
     "value_days": 49,
@@ -2261,7 +2261,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -2285,7 +2285,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "11 working days",
     "value_days": 11,
@@ -2309,7 +2309,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "32 working days",
     "value_days": 32,
@@ -2333,7 +2333,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "46 working days",
     "value_days": 46,
@@ -2357,7 +2357,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -2381,7 +2381,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -2405,7 +2405,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -2429,7 +2429,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -2453,7 +2453,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "22 working days",
     "value_days": 22,
@@ -2477,7 +2477,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "49 working days",
     "value_days": 49,
@@ -2501,7 +2501,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -2525,7 +2525,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -2549,7 +2549,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -2573,7 +2573,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -2597,7 +2597,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -2621,7 +2621,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -2645,7 +2645,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -2669,7 +2669,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -2693,7 +2693,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "22 working days",
     "value_days": 22,
@@ -2717,7 +2717,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "49 working days",
     "value_days": 49,
@@ -2741,7 +2741,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -2765,7 +2765,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -2789,7 +2789,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -2813,7 +2813,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -2837,7 +2837,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -2861,7 +2861,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -2885,7 +2885,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "25 working days",
     "value_days": 25,
@@ -2909,7 +2909,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "25 working days",
     "value_days": 25,
@@ -2933,7 +2933,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -2957,7 +2957,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -2981,7 +2981,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -3005,7 +3005,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -3029,7 +3029,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -3053,7 +3053,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -3077,7 +3077,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -3101,7 +3101,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "24 working days",
     "value_days": 24,
@@ -3125,7 +3125,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -3149,7 +3149,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -3173,7 +3173,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -3197,7 +3197,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -3221,7 +3221,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -3245,7 +3245,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -3269,7 +3269,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "21 working days",
     "value_days": 21,
@@ -3293,7 +3293,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "21 working days",
     "value_days": 21,
@@ -3317,7 +3317,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -3341,7 +3341,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "24 working days",
     "value_days": 24,
@@ -3365,7 +3365,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "471 working days",
     "value_days": 471,
@@ -3389,7 +3389,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "472 working days",
     "value_days": 472,
@@ -3413,7 +3413,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "53 working days",
     "value_days": 53,
@@ -3437,7 +3437,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "85 working days",
     "value_days": 85,
@@ -3461,7 +3461,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "205 working days",
     "value_days": 205,
@@ -3485,7 +3485,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "312 working days",
     "value_days": 312,
@@ -3509,7 +3509,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "427 working days",
     "value_days": 427,
@@ -3533,7 +3533,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "815 working days",
     "value_days": 815,
@@ -3557,7 +3557,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "172 working days",
     "value_days": 172,
@@ -3581,7 +3581,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "199 working days",
     "value_days": 199,
@@ -3605,14 +3605,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
-    "value_raw": "38 working days",
-    "value_days": 38,
+    "value_raw": "37 working days",
+    "value_days": 37,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-08-23",
-    "retrieved_at": "2026-08-23T21:02:51.878Z",
+    "effective_date": "2026-09-25",
+    "retrieved_at": "2026-09-25T18:10:22.298Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -3629,7 +3629,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "51 working days",
     "value_days": 51,
@@ -3653,7 +3653,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "39 working days",
     "value_days": 39,
@@ -3677,7 +3677,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "51 working days",
     "value_days": 51,
@@ -3701,7 +3701,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "38 working days",
     "value_days": 38,
@@ -3725,7 +3725,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "73 working days",
     "value_days": 73,
@@ -3749,7 +3749,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -3773,7 +3773,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "35 working days",
     "value_days": 35,
@@ -3797,7 +3797,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "38 working days",
     "value_days": 38,
@@ -3821,7 +3821,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "73 working days",
     "value_days": 73,
@@ -3845,7 +3845,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "31 working days",
     "value_days": 31,
@@ -3869,7 +3869,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "42 working days",
     "value_days": 42,
@@ -3893,7 +3893,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -3917,7 +3917,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "35 working days",
     "value_days": 35,
@@ -3941,7 +3941,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "38 working days",
     "value_days": 38,
@@ -3965,7 +3965,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "73 working days",
     "value_days": 73,
@@ -3989,7 +3989,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "22 working days",
     "value_days": 22,
@@ -4013,7 +4013,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "49 working days",
     "value_days": 49,
@@ -4037,7 +4037,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "23 working days",
     "value_days": 23,
@@ -4061,7 +4061,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "53 working days",
     "value_days": 53,
@@ -4085,7 +4085,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "9 working days",
     "value_days": 9,
@@ -4109,7 +4109,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "14 working days",
     "value_days": 14,
@@ -4133,7 +4133,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -4157,7 +4157,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -4181,7 +4181,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "22 working days",
     "value_days": 22,
@@ -4205,7 +4205,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "49 working days",
     "value_days": 49,
@@ -4229,7 +4229,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -4253,7 +4253,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -4277,7 +4277,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -4301,7 +4301,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "24 working days",
     "value_days": 24,
@@ -4325,7 +4325,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -4349,7 +4349,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -4373,7 +4373,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -4397,7 +4397,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -4421,7 +4421,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "22 working days",
     "value_days": 22,
@@ -4445,7 +4445,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "49 working days",
     "value_days": 49,
@@ -4469,7 +4469,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -4493,7 +4493,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "24 working days",
     "value_days": 24,
@@ -4517,7 +4517,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "2 working days",
     "value_days": 2,
@@ -4541,7 +4541,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "2 working days",
     "value_days": 2,
@@ -4565,7 +4565,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -4589,7 +4589,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "24 working days",
     "value_days": 24,
@@ -4613,7 +4613,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "122 working days",
     "value_days": 122,
@@ -4637,7 +4637,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "183 working days",
     "value_days": 183,
@@ -4661,7 +4661,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "11 working days",
     "value_days": 11,
@@ -4685,7 +4685,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "22 working days",
     "value_days": 22,
@@ -4709,7 +4709,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "22 working days",
     "value_days": 22,
@@ -4733,7 +4733,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "49 working days",
     "value_days": 49,
@@ -4757,7 +4757,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "490 working days",
     "value_days": 490,
@@ -4781,7 +4781,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "514 working days",
     "value_days": 514,
@@ -4805,7 +4805,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "16 working days",
     "value_days": 16,
@@ -4829,7 +4829,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "29 working days",
     "value_days": 29,
@@ -4853,7 +4853,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -4877,7 +4877,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "24 working days",
     "value_days": 24,
@@ -4901,7 +4901,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -4925,7 +4925,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -4949,7 +4949,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "67 working days",
     "value_days": 67,
@@ -4973,7 +4973,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "102 working days",
     "value_days": 102,
@@ -4997,7 +4997,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -5021,7 +5021,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -5045,7 +5045,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -5069,7 +5069,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -5093,7 +5093,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "22 working days",
     "value_days": 22,
@@ -5117,7 +5117,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "49 working days",
     "value_days": 49,
@@ -5141,7 +5141,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -5165,7 +5165,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -5189,7 +5189,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "11 working days",
     "value_days": 11,
@@ -5213,7 +5213,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "21 working days",
     "value_days": 21,
@@ -5237,7 +5237,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -5261,7 +5261,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "24 working days",
     "value_days": 24,
@@ -5285,7 +5285,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "56 working days",
     "value_days": 56,
@@ -5309,7 +5309,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "95 working days",
     "value_days": 95,
@@ -5333,7 +5333,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "22 working days",
     "value_days": 22,
@@ -5357,7 +5357,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "49 working days",
     "value_days": 49,
@@ -5381,7 +5381,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -5405,7 +5405,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "24 working days",
     "value_days": 24,
@@ -5429,7 +5429,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -5453,7 +5453,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -5477,7 +5477,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -5501,7 +5501,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -5525,7 +5525,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "25 working days",
     "value_days": 25,
@@ -5549,7 +5549,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "28 working days",
     "value_days": 28,
@@ -5573,7 +5573,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "16 working days",
     "value_days": 16,
@@ -5597,7 +5597,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "16 working days",
     "value_days": 16,
@@ -5621,7 +5621,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -5645,7 +5645,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "24 working days",
     "value_days": 24,
@@ -5669,7 +5669,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "22 working days",
     "value_days": 22,
@@ -5693,7 +5693,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "49 working days",
     "value_days": 49,
@@ -5717,7 +5717,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -5741,7 +5741,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -5765,7 +5765,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "4 working days",
     "value_days": 4,
@@ -5789,7 +5789,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "9 working days",
     "value_days": 9,
@@ -5813,7 +5813,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "3 working days",
     "value_days": 3,
@@ -5837,7 +5837,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -5861,7 +5861,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -5885,7 +5885,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -5909,7 +5909,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -5933,7 +5933,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -5957,7 +5957,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -5981,7 +5981,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -6005,7 +6005,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -6029,7 +6029,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -6053,7 +6053,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "86 working days",
     "value_days": 86,
@@ -6077,7 +6077,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "182 working days",
     "value_days": 182,
@@ -6101,7 +6101,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "9 working days",
     "value_days": 9,
@@ -6125,7 +6125,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "17 working days",
     "value_days": 17,
@@ -6149,7 +6149,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "22 working days",
     "value_days": 22,
@@ -6173,7 +6173,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "49 working days",
     "value_days": 49,
@@ -6197,7 +6197,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -6221,7 +6221,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -6245,7 +6245,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -6269,7 +6269,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "24 working days",
     "value_days": 24,
@@ -6293,7 +6293,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -6317,7 +6317,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "11 working days",
     "value_days": 11,
@@ -6341,7 +6341,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "21 working days",
     "value_days": 21,
@@ -6365,7 +6365,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "21 working days",
     "value_days": 21,
@@ -6389,7 +6389,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "11 working days",
     "value_days": 11,
@@ -6413,7 +6413,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "16 working days",
     "value_days": 16,
@@ -6437,7 +6437,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "56 working days",
     "value_days": 56,
@@ -6461,7 +6461,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "85 working days",
     "value_days": 85,

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-25T01:25:45.254Z",
+ "generated_at": "2026-09-25T18:16:41.266Z",
  "entities": {
   "ca-amend-immigration-record": [
    {
@@ -61569,6 +61569,15 @@
     "status": "ok",
     "effective_date": "2026-08-23",
     "retrieved_at": "2026-08-23T21:02:51.878Z",
+    "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/"
+   },
+   {
+    "value_raw": "37 working days",
+    "value_days": 37,
+    "unit_original": "working days",
+    "status": "ok",
+    "effective_date": "2026-09-25",
+    "retrieved_at": "2026-09-25T18:10:22.298Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/"
    }
   ],

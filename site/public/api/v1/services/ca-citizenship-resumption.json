@@ -3,7 +3,7 @@
  "service_name": "Citizenship: resumption",
  "jurisdiction": "CA",
  "count": 1,
- "generated_at": "2026-09-25T01:25:45.254Z",
+ "generated_at": "2026-09-25T18:16:41.266Z",
  "records": [
   {
    "entity_id": "ca-citizenship-resumption",
@@ -17,7 +17,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:18:50.817Z",
+   "source_last_verified_at": "2026-09-25T18:09:50.195Z",
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,

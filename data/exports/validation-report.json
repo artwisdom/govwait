@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25T01:25:45.112Z",
+  "generated_at": "2026-09-25T18:16:41.116Z",
   "pass": true,
   "checks": [
     {
@@ -115,7 +115,7 @@
     {
       "name": "coverage-inz-processing-times",
       "pass": true,
-      "detail": "711 observations (floor 240)"
+      "detail": "712 observations (floor 240)"
     },
     {
       "name": "collection-active-inz-processing-times",
@@ -140,7 +140,7 @@
     {
       "name": "coverage-total",
       "pass": true,
-      "detail": "6719 total observations (floor 300)"
+      "detail": "6720 total observations (floor 300)"
     },
     {
       "name": "staleness-ircc-ptime",

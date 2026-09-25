@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-25T01:25:45.254Z",
+  "generated_at": "2026-09-25T18:16:41.266Z",
   "entities": 2316,
-  "observations": 6617,
+  "observations": 6618,
   "forward_looking_estimates": 7285,
   "forward_looking_snapshots": 2,
   "jurisdictions": [
@@ -37,7 +37,7 @@
       "name": "New Zealand visa application processing times",
       "collection_status": "active",
       "collection_status_since": null,
-      "observations": 609,
+      "observations": 610,
       "latest_effective_date": "2026-09-25"
     },
     "ircc-forward-looking": {

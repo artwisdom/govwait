@@ -3,7 +3,7 @@
  "service_name": "Partner of a New Zealander Visitor Visa — 50% processed",
  "jurisdiction": "NZ",
  "count": 2,
- "generated_at": "2026-09-25T01:25:45.254Z",
+ "generated_at": "2026-09-25T18:16:41.266Z",
  "records": [
   {
    "entity_id": "nz-partner-of-a-new-zealander-visitor-visa--p50",
@@ -17,14 +17,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
-    "value_raw": "38 working days",
-    "value_days": 38,
+    "value_raw": "37 working days",
+    "value_days": 37,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-08-23",
-    "retrieved_at": "2026-08-23T21:02:51.878Z",
+    "effective_date": "2026-09-25",
+    "retrieved_at": "2026-09-25T18:10:22.298Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -41,7 +41,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-25T01:25:44.963Z",
+   "source_last_verified_at": "2026-09-25T18:16:40.957Z",
    "latest": {
     "value_raw": "51 working days",
     "value_days": 51,
