@@ -7,6 +7,10 @@
  "metric_type": "service_standard",
  "applicant_country": null,
  "applicant_country_name": null,
+ "source_collection_status": "active",
+ "source_collection_status_since": null,
+ "source_collection_status_note": null,
+ "source_last_verified_at": "2026-09-25T00:45:36.781Z",
  "latest": {
   "value_raw": "up to 17 weeks, plus mail time",
   "value_days": 119,

@@ -33,8 +33,13 @@ export function exportAll() {
   const latest = queryJson(`
     SELECT e.id, e.source_id, e.jurisdiction, e.service_category, e.metric_type, e.service_key, e.service_name,
            e.applicant_country, e.applicant_country_name,
-           o.value_raw, o.value_days, o.unit_original, o.status, o.effective_date, o.retrieved_at, o.source_url, o.confidence
+           o.value_raw, o.value_days, o.unit_original, o.status, o.effective_date, o.retrieved_at, o.source_url, o.confidence,
+           s.collection_status AS source_collection_status,
+           s.collection_status_since AS source_collection_status_since,
+           s.collection_status_note AS source_collection_status_note,
+           s.robots_checked_at AS source_last_verified_at
     FROM entities e
+    JOIN sources s ON s.id=e.source_id
     JOIN observations o ON o.entity_id = e.id
       AND o.effective_date = (SELECT MAX(o2.effective_date) FROM observations o2 WHERE o2.entity_id = e.id)
     WHERE e.active=1
@@ -101,6 +106,8 @@ export function exportAll() {
     services: [...new Set(latest.map(r => r.service_key))].length,
     per_source: Object.fromEntries(sources.map(s => [s.id, {
       name: s.name,
+      collection_status: s.collection_status,
+      collection_status_since: s.collection_status_since,
       observations: historyRows.filter(r => latest.find(l => l.id === r.entity_id)?.source_id === s.id).length,
       latest_effective_date: latest.filter(l => l.source_id === s.id).map(l => l.effective_date).sort().at(-1) ?? null,
     }])),

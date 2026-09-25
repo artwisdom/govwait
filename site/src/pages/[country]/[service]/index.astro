@@ -3,6 +3,7 @@ import Base from '../../../layouts/Base.astro';
 import AdSlot from '../../../components/AdSlot.astro';
 import Freshness from '../../../components/Freshness.astro';
 import ForwardLookingPanel from '../../../components/ForwardLookingPanel.astro';
+import SourceAvailabilityNotice from '../../../components/SourceAvailabilityNotice.astro';
 import { services, JURISDICTIONS, fmtDate, fmtMonthYear, fmtMonthYearShort, humanValue } from '../../../lib/data.js';
 import { SERVICE_EDITORIAL } from '../../../lib/service-editorial.js';
 
@@ -25,6 +26,7 @@ const rec = percentile ? svc.percent80 : svc.records[0];
 const serviceEditorial = SERVICE_EDITORIAL[rec.service_key];
 const forward = rec.metric_type === 'forward';
 const norway = rec.jurisdiction === 'NO';
+const sourceUnavailable = rec.sourceUnavailable;
 const publishedRange = norway && /\d\s*[–—-]\s*\d/.test(rec.value_raw);
 const ok = svc.records.filter(r => r.status === 'ok');
 
@@ -52,6 +54,7 @@ const scopeDetail = svc.scope
   : null;
 const monthTok = fmtMonthYear(rec.effective_date);
 const monthShort = fmtMonthYearShort(rec.effective_date);
+const verifiedMonthShort = fmtMonthYearShort(rec.verified_at);
 const forwardTitleNames = {
   'ca-atlantic-immigration-program': 'Canada Atlantic immigration wait',
   'ca-canadian-experience-class': 'Canada CEC processing time',
@@ -67,7 +70,9 @@ const forwardTitleNames = {
   'ca-spouse-partner-outside-canada-outside-quebec': 'Overseas spouse outside-Quebec wait',
 };
 const forwardTitleName = forwardTitleNames[rec.service_key] || `${jur.shortName} ${svc.seoName} wait`;
-const title = forward
+const title = sourceUnavailable
+  ? `${jur.shortName} ${topic}: ${humanValue(rec)} (last verified ${verifiedMonthShort})`
+  : forward
   ? `${forwardTitleName}: projected ${humanValue(rec)}`
   : percentile
   ? serviceEditorial?.title?.(svc.percent50, svc.percent80)
@@ -77,7 +82,9 @@ const title = forward
     ? `${jur.shortName} ${topic}: ${humanValue(rec)}`
     : `${jur.shortName} ${topic}${scopeDetail ? ` (${scopeDetail})` : ''}: ${humanValue(rec)} (${monthShort})`
   : `${jur.shortName} ${topic} by country (${monthShort})`;
-const desc = forward
+const desc = sourceUnavailable
+  ? `Last successfully verified UDI figure for ${svc.seoName}: ${humanValue(rec)}. Source dated ${monthTok}; automated access is unavailable, so confirm with UDI.`
+  : forward
   ? `IRCC's ${forwardTitleName.toLowerCase()} is projected at ${humanValue(rec)}. See the current queue and application-month estimates, updated ${monthShort}.`
   : percentile
   ? serviceEditorial?.description?.(svc.percent50, svc.percent80)
@@ -88,7 +95,9 @@ const desc = forward
 ---
 <Base title={title} description={desc} jsonld={[crumbs, govService]}>
   <nav class="crumbs"><a href="/">Home</a> › <a href={`/${jur.slug}/`}>{jur.name}</a> › {svc.name}</nav>
-  <h1>{forward
+  <h1>{sourceUnavailable
+    ? `${svc.name} (${jur.name}): last verified processing time`
+    : forward
     ? `${svc.name}: current projected processing time`
     : percentile
     ? `${svc.name} processing time: current New Zealand figures`
@@ -129,8 +138,11 @@ const desc = forward
     <>
       <div class="value-hero"><span class={`v ${rec.status === 'ok' ? '' : 'na'}`}>{humanValue(rec)}</span></div>
       <Freshness record={rec} />
+      <SourceAvailabilityNotice source={rec.sourceMeta} />
       <AdSlot position="service-top" />
-      <p>This is the current figure {jur.agency} publishes for <strong>{rec.service_name}</strong>. It reflects {svc.blurb}. The figure is a published statistic or service standard, not a guarantee for any individual application.</p>
+      <p>{sourceUnavailable
+        ? `This is the last figure GovWait successfully verified from ${jur.agency} for ${rec.service_name}. It is preserved with its original source date and must not be treated as a newly checked current value while collection is unavailable.`
+        : `This is the current figure ${jur.agency} publishes for ${rec.service_name}. It reflects ${svc.blurb}. The figure is a published statistic or service standard, not a guarantee for any individual application.`}</p>
       {norway && <>
         <h2>How to read this UDI waiting time</h2>
         <p>UDI describes its waiting times as guides that can change while an application is being processed. The official source page explains which authority handles this route and when its clock begins. GovWait preserves UDI’s exact wording and update date; it does not infer a personal case status or completion date.</p>
@@ -144,7 +156,9 @@ const desc = forward
           <tr><td>{h.value_raw}</td><td class="num">{fmtDate(h.effective_date)}</td><td class="num">{fmtDate(h.retrieved_at)}</td></tr>
         ))}</tbody>
       </table></div>
-      <p class="small muted">Tracking began August 2026. History grows automatically with each official update.{rec.unstamped ? ' This source has no update stamp, so unchanged checks do not create duplicate history rows.' : ''}</p>
+      <p class="small muted">{sourceUnavailable
+        ? 'Tracking began August 2026. The stored history remains append-only; no new row or verification date is created while source access is unavailable.'
+        : `Tracking began August 2026. History grows automatically with each official update.${rec.unstamped ? ' This source has no update stamp, so unchanged checks do not create duplicate history rows.' : ''}`}</p>
     </>
   ) : (
     <>

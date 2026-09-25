@@ -78,6 +78,7 @@ try {
   assert(oneBody.entity_id === 'ca-visitor-visa--in', 'get_latest_value resolves ca-visitor-visa + IN to the right entity');
   assert(/^\d+ days?$/.test(oneBody.current_value), `get_latest_value returns a duration (got "${oneBody.current_value}")`);
   assert(!!oneBody.source_url && !!oneBody.official_last_updated, 'get_latest_value carries provenance (source_url + official date)');
+  assert(oneBody.source_collection_status === 'active' && oneBody.value_context === 'latest_source_record', 'active source values are explicitly labeled current-source records');
 
   const nz = await rpc('tools/call', { name: 'get_latest_value', arguments: { service_key: 'nz-visitor-visa' } });
   const nzBody = JSON.parse(nz.result.content[0].text);
@@ -87,7 +88,10 @@ try {
   const no = await rpc('tools/call', { name: 'get_latest_value', arguments: { service_key: 'no-visitor-visa-udi' } });
   const noBody = JSON.parse(no.result.content[0].text);
   assert(noBody.entity_id === 'no-visitor-visa-udi', 'Norway service lookup resolves the UDI visitor-visa route');
-  assert(noBody.current_value === '45 days' && noBody.jurisdiction === 'NO', 'Norway result preserves the current official value and jurisdiction');
+  assert(noBody.current_value === null && noBody.value_days === null, 'Norway result does not expose a current value while collection is unavailable');
+  assert(noBody.last_verified_value === '45 days' && noBody.last_verified_value_days === 45, 'Norway result preserves the dated last-verified value separately');
+  assert(noBody.source_collection_status === 'source_unavailable' && noBody.source_collection_status_since === '2026-09-04', 'Norway result carries the closed-source state and start date');
+  assert(noBody.value_context === 'last_verified_source_snapshot' && !!noBody.source_collection_status_note, 'Norway result labels the value context and explains the source closure');
 
   const flpt = await rpc('tools/call', { name: 'get_entity', arguments: { entity_id: 'ca-canadian-experience-class' } });
   const flptBody = JSON.parse(flpt.result.content[0].text);
@@ -107,6 +111,8 @@ try {
   const noSearch = await rpc('tools/call', { name: 'search_entities', arguments: { query: 'norway udi visitor visa' } });
   const noSearchBody = JSON.parse(noSearch.result.content[0].text);
   assert(noSearchBody.matches.some(m => m.entity_id === 'no-visitor-visa-udi'), 'search_entities finds the Norway UDI visitor-visa route');
+  const noSearchMatch = noSearchBody.matches.find(m => m.entity_id === 'no-visitor-visa-udi');
+  assert(noSearchMatch.current_value === null && noSearchMatch.last_verified_value === '45 days', 'search results cannot mislabel the Norway snapshot as current');
 
   console.log('\nSMOKE TEST: ALL PASS');
   server.kill();

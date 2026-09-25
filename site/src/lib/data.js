@@ -15,6 +15,7 @@ const forwardFile = JSON.parse(readFileSync(path.join(EXPORTS, 'forward-looking.
 export const stats = JSON.parse(readFileSync(path.join(EXPORTS, 'stats.json'), 'utf8'));
 export const sources = latest.sources;
 export const generatedAt = latest.generated_at;
+export const unavailableSources = sources.filter(source => source.collection_status === 'source_unavailable');
 
 export const JURISDICTIONS = {
   CA: { slug: 'canada', name: 'Canada', shortName: 'Canada', shortAgency: 'IRCC', agency: 'Immigration, Refugees and Citizenship Canada (IRCC)' },
@@ -133,7 +134,9 @@ export const records = latest.records.map(r => ({
   history: historyFile.entities[r.id] || [],
   forwardLooking: (forwardFile.entities[r.id]?.snapshots || []).at(-1) || null,
   unstamped: UNSTAMPED_SOURCES.has(r.source_id),
-  verified_at: SOURCE_BY_ID.get(r.source_id)?.robots_checked_at || r.retrieved_at,
+  sourceMeta: SOURCE_BY_ID.get(r.source_id),
+  verified_at: r.source_last_verified_at || SOURCE_BY_ID.get(r.source_id)?.robots_checked_at || r.retrieved_at,
+  sourceUnavailable: r.source_collection_status === 'source_unavailable',
 }));
 
 const slugSeen = new Map();
@@ -169,6 +172,8 @@ for (const r of records) {
       published: isServicePublished(j, r.service_key),
       records: [],
       forwardLooking: r.forwardLooking,
+      sourceMeta: r.sourceMeta,
+      sourceUnavailable: r.sourceUnavailable,
     });
   }
   services[j].get(r.serviceSlug).records.push(r);
@@ -184,6 +189,7 @@ for (const j of Object.keys(services)) {
     svc.percent50 = svc.records.find(r => r.id.endsWith('--p50')) || null;
     svc.percent80 = svc.records.find(r => r.id.endsWith('--p80')) || null;
     svc.isPercentileService = Boolean(svc.percent50 && svc.percent80);
+    svc.lastSuccessfulVerification = svc.records.map(r => r.verified_at).filter(Boolean).sort().at(-1) || null;
   }
 }
 for (const code of Object.keys(JURISDICTIONS)) services[code] ||= new Map();

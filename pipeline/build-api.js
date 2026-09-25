@@ -17,7 +17,8 @@ const stats = JSON.parse(readFileSync(path.join(EXPORTS, 'stats.json'), 'utf8'))
 
 const ATTRIBUTION = 'GovWait original organization, field definitions and explanatory metadata: CC BY 4.0 where GovWait owns the rights. Underlying government information is not relicensed by GovWait; attribute the originating agency and follow its source-specific terms. Details: https://govwait.com/data-license/.';
 const DATA_PUBLISHED = '2026-08-21';
-const dataModified = latest.records.map(record => record.effective_date).filter(Boolean).sort().at(-1);
+const DATASET_EDITORIAL_MODIFIED = '2026-09-24';
+const dataModified = [DATASET_EDITORIAL_MODIFIED, ...latest.records.map(record => record.effective_date)].filter(Boolean).sort().at(-1);
 
 rmSync(API, { recursive: true, force: true });
 mkdirSync(path.join(API, 'jurisdictions'), { recursive: true });
@@ -53,6 +54,10 @@ const recPublic = (r) => ({
   metric_type: r.metric_type,
   applicant_country: r.applicant_country,
   applicant_country_name: r.applicant_country_name,
+  source_collection_status: r.source_collection_status,
+  source_collection_status_since: r.source_collection_status_since,
+  source_collection_status_note: r.source_collection_status_note,
+  source_last_verified_at: r.source_last_verified_at,
   latest: {
     value_raw: r.value_raw,
     value_days: r.value_days,
@@ -126,7 +131,8 @@ const latestColumns = [
   'entity_id', 'source_id', 'jurisdiction', 'service_category', 'metric_type',
   'service_key', 'service_name', 'applicant_country', 'applicant_country_name',
   'value_raw', 'value_days', 'unit_original', 'status', 'effective_date',
-  'retrieved_at', 'source_url', 'confidence',
+  'retrieved_at', 'source_url', 'confidence', 'source_collection_status',
+  'source_collection_status_since', 'source_collection_status_note', 'source_last_verified_at',
 ];
 const latestRows = latest.records.map(record => ({ ...record, entity_id: record.id }));
 
@@ -186,7 +192,8 @@ const forwardRows = Object.entries(forward.entities).flatMap(([entityId, detail]
 
 const sourceColumns = [
   'source_id', 'name', 'jurisdiction', 'agency', 'source_url', 'license_note',
-  'robots_status', 'robots_checked_at',
+  'robots_status', 'robots_checked_at', 'collection_status',
+  'collection_status_since', 'collection_status_note',
 ];
 const sourceRows = latest.sources.map(source => ({
   ...source,
@@ -225,6 +232,10 @@ writeFileSync(path.join(API, 'dataset.json'), j({
     jurisdiction: source.jurisdiction,
     url: source.url,
     license_note: source.license_note,
+    collection_status: source.collection_status,
+    collection_status_since: source.collection_status_since,
+    collection_status_note: source.collection_status_note,
+    last_successful_verification_at: source.robots_checked_at,
   })),
   reuse: {
     notice: ATTRIBUTION,
@@ -238,7 +249,18 @@ writeFileSync(path.join(API, 'index.json'), j({
   description: 'Officially published government processing times, tracked with provenance and history. Static JSON; no key required.',
   generated_at: latest.generated_at,
   stats,
-  sources: latest.sources.map(s => ({ id: s.id, name: s.name, agency: s.agency, jurisdiction: s.jurisdiction, url: s.url, license_note: s.license_note })),
+  sources: latest.sources.map(s => ({
+    id: s.id,
+    name: s.name,
+    agency: s.agency,
+    jurisdiction: s.jurisdiction,
+    url: s.url,
+    license_note: s.license_note,
+    collection_status: s.collection_status,
+    collection_status_since: s.collection_status_since,
+    collection_status_note: s.collection_status_note,
+    last_successful_verification_at: s.robots_checked_at,
+  })),
   endpoints: {
     jurisdictions: Object.keys(byJur).map(c => `/api/v1/jurisdictions/${c}.json`),
     services: Object.keys(byService).map(k => `/api/v1/services/${k}.json`),

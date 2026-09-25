@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import AdSlot from '../../components/AdSlot.astro';
+import SourceAvailabilityNotice from '../../components/SourceAvailabilityNotice.astro';
 import { services, JURISDICTIONS, publishedServices, fmtDate, fmtMonthYear } from '../../lib/data.js';
 
 export function getStaticPaths() {
@@ -13,6 +14,14 @@ const allServiceCount = services[code].size;
 const allForwardCount = [...services[code].values()].filter(service => service.metricType === 'forward').length;
 const publishedForwardCount = svcs.filter(service => service.metricType === 'forward').length;
 const latest = svcs.map(s => s.latestEffective).sort().at(-1);
+const source = svcs.find(service => service.sourceMeta)?.sourceMeta;
+const sourceUnavailable = source?.collection_status === 'source_unavailable';
+const pageTitle = sourceUnavailable
+  ? `${jur.shortName} UDI waiting times — last verified ${fmtMonthYear(source.robots_checked_at)}`
+  : `${jur.shortName} official visa and government processing times (${fmtMonthYear(latest)})`;
+const pageDescription = sourceUnavailable
+  ? `Preserved UDI waiting-time snapshot last successfully verified ${fmtDate(source.robots_checked_at)}. Automated source access is unavailable; confirm current values with UDI.`
+  : `Current ${jur.shortAgency} processing times for visas, permits, sponsorship and more. Official ${fmtMonthYear(latest)} figures with sources and recorded history.`;
 const jsonld = [{
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
@@ -22,24 +31,27 @@ const jsonld = [{
   ],
 }];
 ---
-<Base title={`${jur.shortName} official visa and government processing times (${fmtMonthYear(latest)})`}
-      description={`Current ${jur.shortAgency} processing times for visas, permits, sponsorship and more. Official ${fmtMonthYear(latest)} figures with sources and recorded history.`}
+<Base title={pageTitle}
+      description={pageDescription}
       jsonld={jsonld}>
   <nav class="crumbs"><a href="/">Home</a> › {jur.name}</nav>
-  <h1>{jur.name}: official processing times</h1>
-  <p class="lede">All figures below are published by {jur.agency} and re-checked by us on a weekly schedule. Source update cadences range from weekly to monthly. Click a service for the full breakdown{svcs.some(s=>s.hasApplicantPages) ? ' by applicant country' : ''}.</p>
+  <h1>{sourceUnavailable ? `${jur.name}: last verified official waiting times` : `${jur.name}: official processing times`}</h1>
+  <p class="lede">{sourceUnavailable
+    ? `The figures below are the last successfully verified values published by ${jur.agency}. GovWait preserves their source dates and history but is not calling them current while automated access is unavailable.`
+    : `All figures below are published by ${jur.agency} and re-checked by us on a weekly schedule. Source update cadences range from weekly to monthly. Click a service for the full breakdown${svcs.some(s=>s.hasApplicantPages) ? ' by applicant country' : ''}.`}</p>
+  <SourceAvailabilityNotice source={source} />
   {code === 'CA' && allForwardCount > 0 && <p class="small muted">The API tracks all {allForwardCount} current IRCC forward-looking programs and {allForwardCount === publishedForwardCount ? 'all have reviewed human pages' : `${publishedForwardCount} high-interest programs have reviewed human pages in this release`}. These projections are labeled separately from IRCC’s backward-looking recent-case figures.</p>}
   {code === 'NZ' && <p class="small muted">This first reviewed release covers {svcs.length} high-interest visas. The free API already includes all {allServiceCount} visa types in INZ’s current tool; additional human pages are released in quality-checked batches.</p>}
   {code === 'NZ' && <div class="callout"><strong>Looking for the 2021 Resident Visa?</strong> It is a separate, closed one-off route and has no current universal wait figure in INZ’s processing-time tool. Read the <a href="/guides/new-zealand-2021-resident-visa-processing-time/">official-source status guide</a> instead of substituting a current resident-visa time.</div>}
-  {code === 'NO' && <p class="small muted">UDI dates these table-backed waiting times and normally refreshes them monthly. The figures are planning guides rather than promises for individual applications; GovWait does not probe UDI’s personalised questionnaire routes.</p>}
+  {code === 'NO' && <p class="small muted">UDI dates these table-backed waiting times and historically refreshed them monthly. The figures are planning guides rather than promises for individual applications; GovWait does not probe UDI’s personalised questionnaire routes.</p>}
   <AdSlot position="hub-top" />
   <div class="tablewrap"><table>
-    <thead><tr><th>Service</th><th>Coverage</th><th>Official value</th><th>Last updated</th></tr></thead>
+    <thead><tr><th>Service</th><th>Coverage</th><th>Official value</th><th>{sourceUnavailable ? 'Recorded source date' : 'Last updated'}</th></tr></thead>
     <tbody>
       {svcs.map(svc => (
         <tr>
           <td><a href={`/${jur.slug}/${svc.slug}/`}>{svc.name}</a></td>
-          <td class="small muted">{svc.hasApplicantPages ? `${svc.records.length} countries (${svc.okCount} with published times)` : svc.isPercentileService ? 'current INZ percentiles' : svc.metricType === 'forward' ? 'monthly forward-looking projection' : svc.metricType === 'service_standard' ? 'service standard' : 'current published wait'}</td>
+          <td class="small muted">{svc.sourceUnavailable ? 'preserved official wait' : svc.hasApplicantPages ? `${svc.records.length} countries (${svc.okCount} with published times)` : svc.isPercentileService ? 'current INZ percentiles' : svc.metricType === 'forward' ? 'monthly forward-looking projection' : svc.metricType === 'service_standard' ? 'service standard' : 'current published wait'}</td>
           <td class="num">{svc.hasApplicantPages
             ? `${svc.records.find(r=>r.status==='ok')?.value_raw ?? '—'} (fastest)`
             : svc.isPercentileService

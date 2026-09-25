@@ -1,7 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
+import SourceAvailabilityNotice from '../components/SourceAvailabilityNotice.astro';
 import config from '../../site.config.json';
-import { sources, stats, fmtDate } from '../lib/data.js';
+import { sources, unavailableSources, stats, fmtDate } from '../lib/data.js';
 ---
 <Base title={`How ${config.SITE_NAME} collects its data — methodology, sources, terms`}
       description="Every value on this site is an officially published government figure, fetched politely from primary sources, stored with URL and timestamp, and never edited.">
@@ -11,18 +12,19 @@ import { sources, stats, fmtDate } from '../lib/data.js';
   <h2>Method</h2>
   <ul>
     <li><strong>Primary sources only.</strong> We read the official pages and data files of the agencies listed below — never third-party summaries.</li>
-    <li><strong>Polite, honest collection.</strong> Our collector identifies itself with a bot User-Agent, obeys every robots.txt, waits at least 3 seconds between requests to the same host, enforces a hard per-host request cap, and checks on a weekly schedule. Source publication cadences range from weekly to monthly.</li>
+    <li><strong>Polite, honest collection.</strong> Our collector identifies itself with a bot User-Agent, obeys every robots.txt, waits at least 3 seconds between requests to the same host, enforces a hard per-host request cap, and checks active sources on a weekly schedule. If access closes, collection stops without disguising the bot or inventing a fresh timestamp.</li>
     <li><strong>Values, not copied pages.</strong> We extract the published figure (e.g. “31 days”), the agency's own “last updated” date when one exists, the URL, and our retrieval timestamp. For an unstamped source, we clearly use the date a changed value was first observed. Explanatory text follows our <a href="/about/editorial-policy/">editorial and AI-use policy</a>.</li>
     <li><strong>History is never edited.</strong> When an agency changes a figure, we add a new dated record; old records are kept verbatim. If a value looks wrong, the validation suite blocks publication rather than guessing.</li>
     <li><strong>Absence is data.</strong> Where an agency publishes “no processing time available”, we say exactly that, dated.</li>
   </ul>
 
-  <h2>Sources currently tracked</h2>
+  <h2>Active and retained sources</h2>
+  {unavailableSources.map(source => <SourceAvailabilityNotice source={source} />)}
   <div class="tablewrap"><table>
-    <thead><tr><th>Agency</th><th>What we read</th><th>License/terms</th></tr></thead>
+    <thead><tr><th>Agency</th><th>What we read</th><th>Collection status</th><th>License/terms</th></tr></thead>
     <tbody>
       {sources.map(s => (
-        <tr><td>{s.agency}</td><td><a href={s.url} rel="noopener">{s.name}</a></td><td class="small muted">{s.license_note}</td></tr>
+        <tr><td>{s.agency}</td><td><a href={s.url} rel="noopener">{s.name}</a></td><td>{s.collection_status === 'active' ? 'Active' : `Unavailable since ${fmtDate(s.collection_status_since)}; last verified ${fmtDate(s.robots_checked_at)}`}</td><td class="small muted">{s.license_note}</td></tr>
       ))}
     </tbody>
   </table></div>

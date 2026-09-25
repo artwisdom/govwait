@@ -3,7 +3,7 @@
  "service_name": "Partner or spouse - private life (minimum income and English language not required) (Family visas, applying inside the UK)",
  "jurisdiction": "GB",
  "count": 1,
- "generated_at": "2026-09-01T17:38:38.773Z",
+ "generated_at": "2026-09-25T00:52:27.787Z",
  "records": [
   {
    "entity_id": "gb-in-uk-family-visas--partner-or-spouse-private-life-minimum-income-and-english",
@@ -14,13 +14,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:43.255Z",
    "latest": {
     "value_raw": "12 months*",
     "value_days": 365.28,
     "unit_original": "months",
     "status": "ok",
-    "effective_date": "2025-07-21",
-    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:43.243Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
     "confidence": "official"
    }

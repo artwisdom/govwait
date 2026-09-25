@@ -1,63 +1,81 @@
 {
  "name": "GovWait API v1",
  "description": "Officially published government processing times, tracked with provenance and history. Static JSON; no key required.",
- "generated_at": "2026-09-01T17:38:38.773Z",
+ "generated_at": "2026-09-25T00:52:27.787Z",
  "stats": {
-  "generated_at": "2026-09-01T17:38:38.773Z",
-  "entities": 2318,
-  "observations": 4346,
-  "forward_looking_estimates": 3629,
-  "forward_looking_snapshots": 1,
+  "generated_at": "2026-09-25T00:52:27.787Z",
+  "entities": 2316,
+  "observations": 6617,
+  "forward_looking_estimates": 7285,
+  "forward_looking_snapshots": 2,
   "jurisdictions": [
    "CA",
    "GB",
    "NO",
    "NZ"
   ],
-  "services": 287,
+  "services": 286,
   "per_source": {
    "govuk-inuk-times": {
     "name": "UK visa processing times (inside UK)",
-    "observations": 37,
-    "latest_effective_date": "2025-07-21"
+    "collection_status": "active",
+    "collection_status_since": null,
+    "observations": 74,
+    "latest_effective_date": "2026-09-09"
    },
    "govuk-passport": {
     "name": "UK passport processing time (HM Passport Office service statement)",
+    "collection_status": "active",
+    "collection_status_since": null,
     "observations": 1,
     "latest_effective_date": "2024-01-15"
    },
    "govuk-visa-times": {
     "name": "UK visa processing times (outside UK)",
-    "observations": 39,
-    "latest_effective_date": "2026-06-26"
+    "collection_status": "active",
+    "collection_status_since": null,
+    "observations": 78,
+    "latest_effective_date": "2026-09-09"
    },
    "inz-processing-times": {
     "name": "New Zealand visa application processing times",
-    "observations": 368,
-    "latest_effective_date": "2026-09-01"
+    "collection_status": "active",
+    "collection_status_since": null,
+    "observations": 609,
+    "latest_effective_date": "2026-09-25"
    },
    "ircc-forward-looking": {
     "name": "IRCC forward-looking processing times and in-queue estimates",
-    "observations": 28,
-    "latest_effective_date": "2026-08-10"
+    "collection_status": "active",
+    "collection_status_since": null,
+    "observations": 56,
+    "latest_effective_date": "2026-09-03"
    },
    "ircc-noncountry": {
     "name": "IRCC processing times (non-country categories)",
-    "observations": 38,
-    "latest_effective_date": "2026-08-26"
+    "collection_status": "active",
+    "collection_status_since": null,
+    "observations": 57,
+    "latest_effective_date": "2026-09-22"
    },
    "ircc-passport": {
     "name": "Canadian passport processing times",
+    "collection_status": "active",
+    "collection_status_since": null,
     "observations": 2,
     "latest_effective_date": "2026-08-22"
    },
    "ircc-ptime": {
     "name": "IRCC Check Processing Times data",
-    "observations": 3814,
-    "latest_effective_date": "2026-08-26"
+    "collection_status": "active",
+    "collection_status_since": null,
+    "observations": 5721,
+    "latest_effective_date": "2026-09-22"
    },
    "udi-waiting-times": {
     "name": "Norway immigration waiting times",
+    "collection_status": "source_unavailable",
+    "collection_status_since": "2026-09-04",
     "observations": 19,
     "latest_effective_date": "2026-08-27"
    }
@@ -70,7 +88,11 @@
    "agency": "UK Visas and Immigration (Home Office)",
    "jurisdiction": "GB",
    "url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
-   "license_note": "Open Government Licence v3.0 — reuse permitted with attribution."
+   "license_note": "Open Government Licence v3.0 — reuse permitted with attribution.",
+   "collection_status": "active",
+   "collection_status_since": null,
+   "collection_status_note": null,
+   "last_successful_verification_at": "2026-09-25T00:45:43.255Z"
   },
   {
    "id": "govuk-passport",
@@ -78,7 +100,11 @@
    "agency": "HM Passport Office",
    "jurisdiction": "GB",
    "url": "https://www.gov.uk/government/organisations/hm-passport-office/about/about-our-services",
-   "license_note": "Open Government Licence v3.0 — reuse permitted with attribution."
+   "license_note": "Open Government Licence v3.0 — reuse permitted with attribution.",
+   "collection_status": "active",
+   "collection_status_since": null,
+   "collection_status_note": null,
+   "last_successful_verification_at": "2026-09-25T00:45:46.204Z"
   },
   {
    "id": "govuk-visa-times",
@@ -86,7 +112,11 @@
    "agency": "UK Visas and Immigration (Home Office)",
    "jurisdiction": "GB",
    "url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
-   "license_note": "Open Government Licence v3.0 — reuse permitted with attribution."
+   "license_note": "Open Government Licence v3.0 — reuse permitted with attribution.",
+   "collection_status": "active",
+   "collection_status_since": null,
+   "collection_status_note": null,
+   "last_successful_verification_at": "2026-09-25T00:45:40.267Z"
   },
   {
    "id": "inz-processing-times",
@@ -94,7 +124,11 @@
    "agency": "Immigration New Zealand (Ministry of Business, Innovation and Employment)",
    "jurisdiction": "NZ",
    "url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
-   "license_note": "New Zealand Crown copyright; website content licensed CC BY 3.0 New Zealand with written attribution to the Crown and Ministry."
+   "license_note": "New Zealand Crown copyright; website content licensed CC BY 3.0 New Zealand with written attribution to the Crown and Ministry.",
+   "collection_status": "active",
+   "collection_status_since": null,
+   "collection_status_note": null,
+   "last_successful_verification_at": "2026-09-25T00:52:27.506Z"
   },
   {
    "id": "ircc-forward-looking",
@@ -102,7 +136,11 @@
    "agency": "Immigration, Refugees and Citizenship Canada",
    "jurisdiction": "CA",
    "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html",
-   "license_note": "Government of Canada publication. GovWait stores extracted factual values with source attribution and does not reproduce page copy. Canada.ca general reproduction terms apply unless the originating resource expressly uses the Open Government Licence – Canada; review the current source terms before commercial redistribution."
+   "license_note": "Government of Canada publication. GovWait stores extracted factual values with source attribution and does not reproduce page copy. Canada.ca general reproduction terms apply unless the originating resource expressly uses the Open Government Licence – Canada; review the current source terms before commercial redistribution.",
+   "collection_status": "active",
+   "collection_status_since": null,
+   "collection_status_note": null,
+   "last_successful_verification_at": "2026-09-25T00:45:28.736Z"
   },
   {
    "id": "ircc-noncountry",
@@ -110,7 +148,11 @@
    "agency": "Immigration, Refugees and Citizenship Canada",
    "jurisdiction": "CA",
    "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html",
-   "license_note": "Government of Canada publication. GovWait stores extracted factual values with source attribution and does not reproduce page copy. Canada.ca general reproduction terms apply unless the originating resource expressly uses the Open Government Licence – Canada; review the current source terms before commercial redistribution."
+   "license_note": "Government of Canada publication. GovWait stores extracted factual values with source attribution and does not reproduce page copy. Canada.ca general reproduction terms apply unless the originating resource expressly uses the Open Government Licence – Canada; review the current source terms before commercial redistribution.",
+   "collection_status": "active",
+   "collection_status_since": null,
+   "collection_status_note": null,
+   "last_successful_verification_at": "2026-09-25T00:45:33.683Z"
   },
   {
    "id": "ircc-passport",
@@ -118,7 +160,11 @@
    "agency": "Immigration, Refugees and Citizenship Canada / Service Canada",
    "jurisdiction": "CA",
    "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-passports/processing-times.html",
-   "license_note": "Government of Canada publication. GovWait stores extracted factual values with source attribution and does not reproduce page copy. Canada.ca general reproduction terms apply unless the originating resource expressly uses the Open Government Licence – Canada; review the current source terms before commercial redistribution."
+   "license_note": "Government of Canada publication. GovWait stores extracted factual values with source attribution and does not reproduce page copy. Canada.ca general reproduction terms apply unless the originating resource expressly uses the Open Government Licence – Canada; review the current source terms before commercial redistribution.",
+   "collection_status": "active",
+   "collection_status_since": null,
+   "collection_status_note": null,
+   "last_successful_verification_at": "2026-09-25T00:45:36.781Z"
   },
   {
    "id": "ircc-ptime",
@@ -126,7 +172,11 @@
    "agency": "Immigration, Refugees and Citizenship Canada",
    "jurisdiction": "CA",
    "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html",
-   "license_note": "Government of Canada publication. GovWait stores extracted factual values with source attribution and does not reproduce page copy. Canada.ca general reproduction terms apply unless the originating resource expressly uses the Open Government Licence – Canada; review the current source terms before commercial redistribution."
+   "license_note": "Government of Canada publication. GovWait stores extracted factual values with source attribution and does not reproduce page copy. Canada.ca general reproduction terms apply unless the originating resource expressly uses the Open Government Licence – Canada; review the current source terms before commercial redistribution.",
+   "collection_status": "active",
+   "collection_status_since": null,
+   "collection_status_note": null,
+   "last_successful_verification_at": "2026-09-25T00:45:26.805Z"
   },
   {
    "id": "udi-waiting-times",
@@ -134,7 +184,11 @@
    "agency": "Norwegian Directorate of Immigration (UDI)",
    "jurisdiction": "NO",
    "url": "https://www.udi.no/en/waiting-time/",
-   "license_note": "Official public information; no explicit page-reuse license was identified as of 2026-08-30. GovWait stores only extracted factual values with attribution and source links, not UDI page copy."
+   "license_note": "Official public information; no explicit page-reuse license was identified as of 2026-08-30. GovWait stores only extracted factual values with attribution and source links, not UDI page copy.",
+   "collection_status": "source_unavailable",
+   "collection_status_since": "2026-09-04",
+   "collection_status_note": "Automated collection paused after UDI robots.txt began returning HTTP 403. GovWait does not bypass access controls; preserved values remain labeled with their last successful verification.",
+   "last_successful_verification_at": "2026-09-01T17:38:38.623Z"
   }
  ],
  "endpoints": {
@@ -388,7 +442,6 @@
    "/api/v1/services/nz-pitcairn-islander-visitor-visa.json",
    "/api/v1/services/nz-poland-working-holiday-visa.json",
    "/api/v1/services/nz-portugal-working-holiday-visa.json",
-   "/api/v1/services/nz-post-study-work-visa.json",
    "/api/v1/services/nz-primary-sector-trainees-work-visa.json",
    "/api/v1/services/nz-private-yacht-or-plane-visitor-visa.json",
    "/api/v1/services/nz-recognised-seasonal-employer-limited-visa.json",

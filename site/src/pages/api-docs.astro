@@ -14,14 +14,14 @@ import { stats } from '../lib/data.js';
     <tbody>
       <tr><td><code>/api/v1/index.json</code></td><td>Dataset stats, sources, and links to all collections</td></tr>
       <tr><td><code>/api/v1/dataset.json</code></td><td>Dataset metadata, counts, distributions and source register</td></tr>
-      <tr><td><code>/api/v1/downloads/latest.csv</code></td><td>All active processing-time metrics in one CSV</td></tr>
+      <tr><td><code>/api/v1/downloads/latest.csv</code></td><td>Latest retained processing-time metrics plus source collection status in one CSV</td></tr>
       <tr><td><code>/api/v1/downloads/history.csv</code></td><td>Append-only observation history in one CSV</td></tr>
       <tr><td><code>/api/v1/downloads/forward-looking.csv</code></td><td>IRCC current projections and application-month cohorts in one CSV</td></tr>
-      <tr><td><code>/api/v1/downloads/sources.csv</code></td><td>Primary-source URLs and source-specific reuse notes</td></tr>
+      <tr><td><code>/api/v1/downloads/sources.csv</code></td><td>Primary-source URLs, collection status, last verification and source-specific reuse notes</td></tr>
       <tr><td><code>/api/v1/jurisdictions/ca.json</code></td><td>All Canadian routes with latest values</td></tr>
       <tr><td><code>/api/v1/jurisdictions/gb.json</code></td><td>All UK routes with latest values</td></tr>
       <tr><td><code>/api/v1/jurisdictions/nz.json</code></td><td>All New Zealand visa types with 50% and 80% working-day metrics</td></tr>
-      <tr><td><code>/api/v1/jurisdictions/no.json</code></td><td>All table-backed Norway UDI waiting-time routes with official update dates</td></tr>
+      <tr><td><code>/api/v1/jurisdictions/no.json</code></td><td>Preserved table-backed Norway UDI routes with official dates and an explicit <code>source_unavailable</code> state</td></tr>
       <tr><td><code>/api/v1/ircc-forward-looking.json</code></td><td>All IRCC forward-looking programs, current queue estimates and application-month cohorts</td></tr>
       <tr><td><code>/api/v1/services/&#123;service_key&#125;.json</code></td><td>One service, all applicant countries (e.g. <code>ca-visitor-visa</code>)</td></tr>
       <tr><td><code>/api/v1/entities/&#123;entity_id&#125;.json</code></td><td>One route: latest value + full recorded history (e.g. <code>ca-visitor-visa--in</code>)</td></tr>
@@ -32,6 +32,7 @@ import { stats } from '../lib/data.js';
   <pre class="fresh" style="overflow-x:auto"><code>curl {config.SITE_URL}/api/v1/entities/ca-visitor-visa--in.json</code></pre>
   <p class="small muted">For New Zealand, each visa service has separate <code>--p50</code> and <code>--p80</code> entities. The numeric value remains a working-day count and is labeled <code>unit_original: "working days"</code>.</p>
   <p class="small muted">For a published range such as UDI’s <code>15–29 days</code>, <code>value_raw</code> keeps the full official range and <code>value_days</code> uses its upper end for conservative comparison.</p>
+  <p class="small muted">Every current-record object includes <code>source_collection_status</code> and <code>source_last_verified_at</code>. A <code>source_unavailable</code> record is a preserved last-verified snapshot, not a claim that GovWait recently rechecked the value.</p>
   <p class="small muted">IRCC forward-looking records use <code>metric_type: "forward"</code>. Their <code>cohort_month</code> is when an application was submitted within a current IRCC snapshot—not the date IRCC published that value. Snapshot dates remain separate so the two timelines cannot be silently mixed.</p>
 
   <h2>For AI agents</h2>

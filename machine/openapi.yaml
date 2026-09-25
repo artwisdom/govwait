@@ -190,7 +190,7 @@ components:
         confidence: { type: string, enum: [official] }
     RecordCore:
       type: object
-      required: [entity_id, jurisdiction, service_key, service_name, metric_type, latest]
+      required: [entity_id, jurisdiction, service_key, service_name, metric_type, source_collection_status, source_collection_status_since, source_collection_status_note, source_last_verified_at, latest]
       properties:
         entity_id: { type: string }
         jurisdiction: { type: string, description: "ISO 3166-1 alpha-2 of the government" }
@@ -200,6 +200,10 @@ components:
         metric_type: { type: string, enum: [published, backward, forward, service_standard, percentile], description: "How to interpret the published measure. Forward projections must not be mixed with backward-looking recent-case statistics." }
         applicant_country: { type: [string, "null"], description: "ISO 3166-1 alpha-2; null for global service standards" }
         applicant_country_name: { type: [string, "null"] }
+        source_collection_status: { type: string, enum: [active, source_unavailable], description: "Whether GovWait can currently run its polite automated collector for the originating source" }
+        source_collection_status_since: { type: [string, "null"], format: date, description: "Date the non-active collection state began; null for active sources" }
+        source_collection_status_note: { type: [string, "null"], description: "Human-readable collection-state explanation; null for active sources" }
+        source_last_verified_at: { type: [string, "null"], description: "Last successful source verification by GovWait. This does not advance while collection is unavailable." }
         latest: { $ref: "#/components/schemas/Observation" }
     Entity:
       allOf:
@@ -307,6 +311,10 @@ components:
               jurisdiction: { type: string }
               url: { type: string, format: uri }
               license_note: { type: string }
+              collection_status: { type: string, enum: [active, source_unavailable] }
+              collection_status_since: { type: [string, "null"], format: date }
+              collection_status_note: { type: [string, "null"] }
+              last_successful_verification_at: { type: [string, "null"] }
         endpoints:
           type: object
           properties:

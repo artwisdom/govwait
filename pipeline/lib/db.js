@@ -34,6 +34,16 @@ export function queryJson(sql) {
 export function initSchema() {
   const schema = readFileSync(path.join(ROOT, 'pipeline', 'schema.sql'), 'utf8');
   exec(schema);
+  const sourceColumns = queryJson(`PRAGMA table_info(sources)`);
+  if (!sourceColumns.some(column => column.name === 'collection_status')) {
+    exec(`ALTER TABLE sources ADD COLUMN collection_status TEXT NOT NULL DEFAULT 'active' CHECK (collection_status IN ('active','source_unavailable'));`);
+  }
+  if (!sourceColumns.some(column => column.name === 'collection_status_since')) {
+    exec(`ALTER TABLE sources ADD COLUMN collection_status_since TEXT;`);
+  }
+  if (!sourceColumns.some(column => column.name === 'collection_status_note')) {
+    exec(`ALTER TABLE sources ADD COLUMN collection_status_note TEXT;`);
+  }
   // Forward-compatible migration for databases created before sources could
   // retire entities. History remains in SQLite; exports include active rows.
   const columns = queryJson(`PRAGMA table_info(entities)`);

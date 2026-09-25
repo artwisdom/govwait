@@ -4,17 +4,8 @@
 import { initSchema, exec, sqlQuote, queryJson } from './lib/db.js';
 import { validate } from './validate.js';
 import { exportAll } from './export.js';
-import * as ircc from './sources/ircc.js';
-import * as irccFlpt from './sources/ircc-flpt.js';
-import * as govuk from './sources/govuk.js';
-import * as irccNonCountry from './sources/ircc-noncountry.js';
-import * as irccPassport from './sources/ircc-passport.js';
-import * as govukInUk from './sources/govuk-inuk.js';
-import * as govukPassport from './sources/govuk-passport.js';
-import * as inz from './sources/inz.js';
-import * as udi from './sources/udi.js';
-
-const SOURCES = [ircc, irccFlpt, irccNonCountry, irccPassport, govuk, govukInUk, govukPassport, inz, udi];
+import { ACTIVE_SOURCES } from './sources/index.js';
+import { UNAVAILABLE_SOURCE_POLICIES } from './source-policy.js';
 const forceRefresh = process.argv.includes('--refresh');
 
 // Unstamped observations (source publishes no update date): insert only when
@@ -36,12 +27,13 @@ function upsert(sourceMeta, entities, observations, forwardEstimates = []) {
   // robots verification time. Production --refresh runs do evaluate the
   // cached-or-live robots response through politeFetch before fetching data.
   const robotsCheckedAt = forceRefresh ? new Date().toISOString() : (priorSource?.robots_checked_at ?? null);
-  stmts.push(`INSERT INTO sources (id,name,jurisdiction,agency,url,license_note,robots_status,robots_checked_at) VALUES (${[
-    sourceMeta.id, sourceMeta.name, sourceMeta.jurisdiction, sourceMeta.agency, sourceMeta.url, sourceMeta.license_note, 'allowed', robotsCheckedAt,
+  stmts.push(`INSERT INTO sources (id,name,jurisdiction,agency,url,license_note,robots_status,robots_checked_at,collection_status,collection_status_since,collection_status_note) VALUES (${[
+    sourceMeta.id, sourceMeta.name, sourceMeta.jurisdiction, sourceMeta.agency, sourceMeta.url, sourceMeta.license_note, 'allowed', robotsCheckedAt, 'active', null, null,
   ].map(sqlQuote).join(',')}) ON CONFLICT(id) DO UPDATE SET
     name=excluded.name, jurisdiction=excluded.jurisdiction, agency=excluded.agency,
     url=excluded.url, license_note=excluded.license_note,
-    robots_status=excluded.robots_status, robots_checked_at=excluded.robots_checked_at;`);
+    robots_status=excluded.robots_status, robots_checked_at=excluded.robots_checked_at,
+    collection_status=excluded.collection_status, collection_status_since=NULL, collection_status_note=NULL;`);
   // A disappearing route must not remain presented as current. Deactivate the
   // source's previous entity set, then reactivate every entity seen now. Old
   // observations remain append-only in SQLite for audit/history purposes.
@@ -73,12 +65,28 @@ function upsert(sourceMeta, entities, observations, forwardEstimates = []) {
   exec(stmts.join('\n'));
 }
 
+function applyUnavailableSourcePolicies() {
+  for (const policy of UNAVAILABLE_SOURCE_POLICIES) {
+    const source = queryJson(`SELECT id FROM sources WHERE id=${sqlQuote(policy.id)} LIMIT 1`)[0];
+    if (!source) {
+      throw new Error(`retained source ${policy.id} is missing from the durable database`);
+    }
+    exec(`UPDATE sources SET
+      collection_status=${sqlQuote(policy.collectionStatus)},
+      collection_status_since=${sqlQuote(policy.statusSince)},
+      collection_status_note=${sqlQuote(policy.statusNote)}
+      WHERE id=${sqlQuote(policy.id)};`);
+    console.log(`[${policy.id}] COLLECTION PAUSED — prior records retained; no fetch attempted`);
+  }
+}
+
 async function main() {
   console.log(`[pipeline] start ${new Date().toISOString()} (forceRefresh=${forceRefresh})`);
   initSchema();
+  applyUnavailableSourcePolicies();
   let hardFail = false;
 
-  for (const mod of SOURCES) {
+  for (const mod of ACTIVE_SOURCES) {
     const label = mod.source.id;
     try {
       const { entities, observations, forwardEstimates = [], errors } = await mod.collect({ forceRefresh });

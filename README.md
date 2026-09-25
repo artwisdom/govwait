@@ -11,7 +11,7 @@ create case-specific estimates or provide legal or immigration advice.
 ## Use the public dataset
 
 - [Dataset hub and CSV downloads](https://govwait.com/data/)
-- [Current routes CSV](https://govwait.com/api/v1/downloads/latest.csv)
+- [Latest retained routes CSV](https://govwait.com/api/v1/downloads/latest.csv)
 - [Append-only history CSV](https://govwait.com/api/v1/downloads/history.csv)
 - [IRCC forward-looking CSV](https://govwait.com/api/v1/downloads/forward-looking.csv)
 - [Source register CSV](https://govwait.com/api/v1/downloads/sources.csv)
@@ -38,6 +38,11 @@ percentiles—explicitly separate.
 Current publication status, source dates and retrieval timestamps remain
 distinct. A successful build or search-engine submission is not presented as
 proof of indexing, traffic, demand or revenue.
+
+Norway UDI collection is explicitly marked `source_unavailable` from
+2026-09-04 after its robots endpoint began returning HTTP 403. The 19 prior UDI
+records remain append-only and carry their last successful verification; GovWait
+does not bypass the restriction or advance their freshness timestamps.
 
 ## Repository map
 
@@ -81,6 +86,11 @@ Its package policy requires interactive 2FA and disallows token publishing. Its
 [official MCP Registry listing](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.artwisdom%2Fgovwait/versions/0.1.0)
 is active for version `0.1.0`.
 
+This checkout contains an unpublished `0.1.1` recovery candidate. It adds source
+collection state to every MCP result and returns Norway's retained UDI values only
+as dated `last_verified_value` fields, never as a current value. Local verification
+does not publish that candidate or update the Registry.
+
 ## Collection safeguards
 
 - Official primary sources only; values and provenance, not copied pages.
@@ -90,6 +100,8 @@ is active for version `0.1.0`.
   per-host caps.
 - No browser impersonation or WAF bypass.
 - Append-only history and blocking validation floors.
+- Explicit retained-source states when a collector must close, with no fabricated
+  retrieval or verification dates.
 - No personal application data.
 
 See [the methodology](https://govwait.com/about/) and

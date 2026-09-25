@@ -14,6 +14,7 @@ const err = (f, msg) => errors.push(`${f}: ${msg}`);
 const STATUS = new Set(['ok', 'unavailable', 'insufficient_data']);
 const CATEGORY = new Set(['visa', 'permit', 'sponsorship', 'refugee', 'settlement', 'passport']);
 const METRIC = new Set(['published', 'backward', 'forward', 'service_standard', 'percentile']);
+const COLLECTION_STATUS = new Set(['active', 'source_unavailable']);
 const UNITS = new Set(['minutes', 'hours', 'days', 'weeks', 'months', 'years', 'working days', null]);
 const ENTITY_ID = /^[a-z0-9-]+(--(?:[a-z]{2}|p(?:50|80)))?$/;
 
@@ -51,7 +52,7 @@ function checkObs(f, o, label) {
   if (!/^https:\/\//.test(o.source_url)) err(f, `${label}.source_url not https`);
 }
 function checkCore(f, r) {
-  for (const k of ['entity_id', 'jurisdiction', 'service_key', 'service_name', 'metric_type', 'latest']) {
+  for (const k of ['entity_id', 'jurisdiction', 'service_key', 'service_name', 'metric_type', 'source_collection_status', 'source_collection_status_since', 'source_collection_status_note', 'source_last_verified_at', 'latest']) {
     if (r[k] === undefined) err(f, `record.${k} missing`);
   }
   if (!ENTITY_ID.test(r.entity_id)) err(f, `bad entity_id ${r.entity_id}`);
@@ -59,6 +60,15 @@ function checkCore(f, r) {
   if (r.service_category && !CATEGORY.has(r.service_category)) err(f, `bad category ${r.service_category}`);
   if (!METRIC.has(r.metric_type)) err(f, `bad metric_type ${r.metric_type}`);
   if (r.applicant_country !== null && !/^[A-Z]{2}$/.test(r.applicant_country)) err(f, `bad applicant_country ${r.applicant_country}`);
+  if (!COLLECTION_STATUS.has(r.source_collection_status)) err(f, `bad source_collection_status ${r.source_collection_status}`);
+  if (r.source_collection_status === 'active' && (r.source_collection_status_since !== null || r.source_collection_status_note !== null)) {
+    err(f, 'active source carries unavailable-state metadata');
+  }
+  if (r.source_collection_status === 'source_unavailable') {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(r.source_collection_status_since || '')) err(f, 'unavailable source missing status date');
+    if (!r.source_collection_status_note) err(f, 'unavailable source missing status note');
+    if (!r.source_last_verified_at) err(f, 'unavailable source missing last successful verification');
+  }
   if (r.latest) checkObs(f, r.latest, 'latest');
 }
 function checkForwardValue(f, value, label, cohort = false) {
@@ -114,7 +124,7 @@ function checkForwardDetail(f, detail, label = 'forward_looking') {
   const expected = new Map([
     ['latest.csv', {
       rows: d.stats.current_routes,
-      columns: ['entity_id', 'source_id', 'jurisdiction', 'service_category', 'metric_type', 'service_key', 'service_name', 'applicant_country', 'applicant_country_name', 'value_raw', 'value_days', 'unit_original', 'status', 'effective_date', 'retrieved_at', 'source_url', 'confidence'],
+      columns: ['entity_id', 'source_id', 'jurisdiction', 'service_category', 'metric_type', 'service_key', 'service_name', 'applicant_country', 'applicant_country_name', 'value_raw', 'value_days', 'unit_original', 'status', 'effective_date', 'retrieved_at', 'source_url', 'confidence', 'source_collection_status', 'source_collection_status_since', 'source_collection_status_note', 'source_last_verified_at'],
     }],
     ['history.csv', {
       rows: d.stats.historical_observations,
@@ -126,7 +136,7 @@ function checkForwardDetail(f, detail, label = 'forward_looking') {
     }],
     ['sources.csv', {
       rows: d.stats.sources,
-      columns: ['source_id', 'name', 'jurisdiction', 'agency', 'source_url', 'license_note', 'robots_status', 'robots_checked_at'],
+      columns: ['source_id', 'name', 'jurisdiction', 'agency', 'source_url', 'license_note', 'robots_status', 'robots_checked_at', 'collection_status', 'collection_status_since', 'collection_status_note'],
     }],
   ]);
 

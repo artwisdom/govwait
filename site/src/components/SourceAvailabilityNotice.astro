@@ -1,0 +1,12 @@
+---
+import { fmtDate } from '../lib/data.js';
+
+const { source } = Astro.props;
+const unavailable = source?.collection_status === 'source_unavailable';
+---
+{unavailable && (
+  <div class="callout warn" data-source-collection-status="source_unavailable">
+    <strong>Automated source updates are unavailable.</strong>{' '}
+    GovWait paused UDI collection on {fmtDate(source.collection_status_since)} after the source’s robots file began returning HTTP 403. We did not bypass that restriction. The Norway figures remain as a preserved, last-successfully-verified snapshot from {fmtDate(source.robots_checked_at)}; confirm current information on the linked UDI source before relying on it.
+  </div>
+)}

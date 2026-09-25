@@ -1,30 +1,47 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "dataset": "GovWait government processing-times dataset",
   "dataset_url": "https://govwait.com/data/",
-  "methodology_url": "https://govwait.com/methodology/",
+  "methodology_url": "https://govwait.com/about/",
   "data_reuse_url": "https://govwait.com/data-license/",
-  "dataset_generated_at": "2026-09-01T17:38:38.773Z",
+  "dataset_generated_at": "2026-09-25T00:52:27.787Z",
   "statistics": {
-    "current_routes": 2318,
-    "history_entities": 2318,
-    "history_observations": 4346,
+    "retained_routes": 2316,
+    "active_source_routes": 2297,
+    "source_unavailable_routes": 19,
+    "history_entities": 2316,
+    "history_observations": 6617,
     "forward_entities": 28,
-    "forward_snapshots": 28,
-    "forward_cohorts": 3601
+    "forward_snapshots": 56,
+    "forward_cohorts": 7229
+  },
+  "sources": {
+    "count": 9,
+    "collection_statuses": {
+      "active": 8,
+      "source_unavailable": 1
+    },
+    "source_unavailable": [
+      {
+        "source_id": "udi-waiting-times",
+        "collection_status": "source_unavailable",
+        "collection_status_since": "2026-09-04",
+        "last_verified_at": "2026-09-01T17:38:38.623Z"
+      }
+    ]
   },
   "files": {
     "latest.json": {
-      "bytes": 1583643,
-      "sha256": "cbb39785fb0aa1919e823a4cd433a4cff6372661ec162ff08c7dc121bc92d29e"
+      "bytes": 2013570,
+      "sha256": "3ccc81c162d8e1b1eb1a3b55c7c595f22dfafd1461aa37ad0c228edb810ce76c"
     },
     "history.json": {
-      "bytes": 1465117,
-      "sha256": "025d0650f82655bf1de31b097a109a2e6594d08b81b80c15a97bc0aac78f0ac7"
+      "bytes": 2187246,
+      "sha256": "1c454049cd47965b9f8bc866a5228b6d5b16bbc10a9e6070b50ae5277ecebdb1"
     },
     "forward-looking.json": {
-      "bytes": 1162070,
-      "sha256": "fc0842bef6001feb1deae1c0e628e36a4a51aa76056d0c907e7f6e63cf81e62f"
+      "bytes": 2330531,
+      "sha256": "c4aafe8e5ea67fefb23080ab44829ac7c5445bd93101b3e6bfb1b71272cf3191"
     }
   }
 }

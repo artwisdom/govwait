@@ -23,6 +23,10 @@ type Rec = {
   service_category: string; metric_type: string; applicant_country: string | null; applicant_country_name: string | null;
   value_raw: string; value_days: number | null; unit_original: string | null; status: string;
   effective_date: string; retrieved_at: string; source_url: string;
+  source_collection_status: "active" | "source_unavailable";
+  source_collection_status_since: string | null;
+  source_collection_status_note: string | null;
+  source_last_verified_at: string | null;
 };
 
 function readDataFile(name: string) {
@@ -50,9 +54,11 @@ const records: Rec[] = latest.records;
 const history: Record<string, Obs[]> = historyDoc.entities;
 const forward: Record<string, unknown> = forwardDoc.entities;
 
-const ATTRIBUTION = "Values are official government publications tracked by GovWait. Attribute the originating agency and preserve its source-specific terms. GovWait-created organization and metadata are CC BY 4.0 where GovWait owns the rights. Details: https://govwait.com/data-license/. Not legal advice.";
+const ATTRIBUTION = "Values are official government publications tracked by GovWait. Check source_collection_status before describing a value as current: source_unavailable means only a dated last-verified snapshot is available. Attribute the originating agency and preserve its source-specific terms. GovWait-created organization and metadata are CC BY 4.0 where GovWait owns the rights. Details: https://govwait.com/data-license/. Not legal advice.";
 
 function present(r: Rec) {
+  const sourceIsActive = r.source_collection_status === "active";
+  const publishedValue = r.status === "ok" ? r.value_raw : `no published time (${r.status})`;
   return {
     entity_id: r.id,
     jurisdiction: r.jurisdiction,
@@ -60,19 +66,25 @@ function present(r: Rec) {
     service_key: r.service_key,
     metric_type: r.metric_type,
     applicant_country: r.applicant_country_name ?? null,
-    current_value: r.status === "ok" ? r.value_raw : `no published time (${r.status})`,
-    value_days: r.value_days,
+    current_value: sourceIsActive ? publishedValue : null,
+    value_days: sourceIsActive ? r.value_days : null,
+    last_verified_value: sourceIsActive ? null : publishedValue,
+    last_verified_value_days: sourceIsActive ? null : r.value_days,
+    value_context: sourceIsActive ? "latest_source_record" : "last_verified_source_snapshot",
     unit_original: r.unit_original,
     official_last_updated: r.effective_date,
-    verified_at: r.retrieved_at,
+    verified_at: r.source_last_verified_at ?? r.retrieved_at,
+    source_collection_status: r.source_collection_status,
+    source_collection_status_since: r.source_collection_status_since,
+    source_collection_status_note: r.source_collection_status_note,
     source_url: r.source_url,
   };
 }
 
-const server = new McpServer({ name: "govwait", version: "0.1.0" });
+const server = new McpServer({ name: "govwait", version: "0.1.1" });
 
 server.registerTool("search_entities", {
-  description: "Search tracked government processing-time routes by free text (service and/or country, e.g. 'canada study permit pakistan'). Returns matching entity_ids with current values.",
+  description: "Search tracked government processing-time routes by free text (service and/or country, e.g. 'canada study permit pakistan'). Returns matching entity_ids with latest source-backed values and collection status.",
   inputSchema: {
     query: z.string().describe("Free-text query; terms are matched against jurisdiction, service name and applicant country"),
     jurisdiction: z.string().length(2).optional().describe("Optional ISO country filter for the government, e.g. CA, GB, NZ or NO"),
@@ -98,7 +110,7 @@ server.registerTool("search_entities", {
 });
 
 server.registerTool("get_entity", {
-  description: "Get one route by entity_id (e.g. 'ca-visitor-visa--in'): current value plus full recorded history. Forward-looking IRCC routes also include application-month cohort estimates.",
+  description: "Get one route by entity_id (e.g. 'ca-visitor-visa--in'): latest retained value, collection status, and full recorded history. Forward-looking IRCC routes also include application-month cohort estimates.",
   inputSchema: { entity_id: z.string() },
 }, async ({ entity_id }) => {
   const r = records.find(x => x.id === entity_id);
@@ -112,7 +124,7 @@ server.registerTool("get_entity", {
 });
 
 server.registerTool("get_latest_value", {
-  description: "Get the current official processing time for a service, optionally for a specific applicant country. New Zealand services return both 50% and 80% records.",
+  description: "Get the latest retained official processing-time record for a service, optionally for a specific applicant country. Check source_collection_status before treating it as current. New Zealand services return both 50% and 80% records.",
   inputSchema: {
     service_key: z.string().describe("e.g. ca-visitor-visa, nz-visitor-visa, or any key from search results"),
     applicant_country: z.string().length(2).optional().describe("ISO 3166-1 alpha-2 of the applicant's country (omit for global service metrics)"),
@@ -131,7 +143,7 @@ server.registerTool("get_latest_value", {
 });
 
 server.registerTool("compare_values", {
-  description: "Compare current official processing times for one service across several applicant countries, sorted fastest first.",
+  description: "Compare latest source-backed processing-time records for one service across several applicant countries, sorted fastest first and labeled with collection status.",
   inputSchema: {
     service_key: z.string(),
     applicant_countries: z.array(z.string().length(2)).min(2).max(30).describe("ISO alpha-2 codes, e.g. ['IN','NG','PH']"),

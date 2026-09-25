@@ -13,22 +13,22 @@ export function urlset(site, urls) {
 
 export function hubUrls() {
   const phaseOnePublished = '2026-08-23';
-  const norwayPublished = '2026-08-30';
   const growthPhasePublished = '2026-09-04';
   const phaseFourPublished = '2026-09-06';
   const visitorGuidanceCorrected = '2026-09-07';
   const datasetAuthorityPublished = '2026-09-08';
+  const refreshRecoveryPublished = '2026-09-24';
   const visitorIndiaDataLastmod = records.find(record => record.id === 'ca-visitor-visa--in')?.effective_date;
   const visitorPhilippinesDataLastmod = records.find(record => record.id === 'ca-visitor-visa--ph')?.effective_date;
   const urls = [
-    { path: '/', lastmod: datasetAuthorityPublished },
-    { path: '/about/', lastmod: datasetAuthorityPublished },
+    { path: '/', lastmod: refreshRecoveryPublished },
+    { path: '/about/', lastmod: refreshRecoveryPublished },
     { path: '/about/editorial-policy/', lastmod: phaseOnePublished },
     { path: '/about/research-desk/', lastmod: phaseOnePublished },
-    { path: '/api-docs/', lastmod: datasetAuthorityPublished },
-    { path: '/data/', lastmod: datasetAuthorityPublished },
+    { path: '/api-docs/', lastmod: refreshRecoveryPublished },
+    { path: '/data/', lastmod: refreshRecoveryPublished },
     { path: '/data-license/', lastmod: datasetAuthorityPublished },
-    { path: '/guides/', lastmod: phaseFourPublished },
+    { path: '/guides/', lastmod: refreshRecoveryPublished },
     { path: '/guides/how-canada-processing-times-work/', lastmod: dataLastmod },
     { path: '/guides/canada-visitor-visa-by-country/', lastmod: dataLastmod },
     { path: '/guides/canada-study-permit-from-india/', lastmod: growthPhasePublished },
@@ -44,17 +44,19 @@ export function hubUrls() {
     { path: '/guides/new-zealand-critical-purpose-visitor-visa-processing-time/', lastmod: phaseFourPublished },
     { path: '/guides/new-zealand-aewv-processing-time/', lastmod: dataLastmod },
     { path: '/guides/new-zealand-student-visa-processing-time/', lastmod: dataLastmod },
-    { path: '/guides/how-norway-udi-waiting-times-work/', lastmod: norwayPublished },
-    { path: '/reports/', lastmod: reportIssues.map(issue => issue.published).sort().at(-1) || phaseOnePublished },
+    { path: '/guides/how-norway-udi-waiting-times-work/', lastmod: refreshRecoveryPublished },
+    { path: '/reports/', lastmod: refreshRecoveryPublished },
     { path: '/reports/canada-processing-time-changes/', lastmod: growthPhasePublished },
     { path: '/reports/uk-visa-processing-time-changes/', lastmod: dataLastmod },
     { path: '/reports/new-zealand-visa-processing-time-changes/', lastmod: dataLastmod },
-    { path: '/reports/norway-processing-time-changes/', lastmod: norwayPublished },
+    { path: '/reports/norway-processing-time-changes/', lastmod: refreshRecoveryPublished },
   ];
   for (const issue of reportIssues) urls.push({ path: issue.path, lastmod: issue.published });
   for (const [code, jur] of Object.entries(JURISDICTIONS)) {
     const svcMap = services[code];
-    const jurisdictionLastmod = code === 'NZ'
+    const jurisdictionLastmod = code === 'NO'
+      ? [refreshRecoveryPublished, ...[...svcMap.values()].map(s => s.latestEffective)].sort().at(-1)
+      : code === 'NZ'
       ? [growthPhasePublished, ...[...svcMap.values()].map(s => s.latestEffective)].sort().at(-1)
       : [...svcMap.values()].map(s => s.latestEffective).sort().at(-1);
     urls.push({ path: `/${jur.slug}/`, lastmod: jurisdictionLastmod });
@@ -71,11 +73,15 @@ export function hubUrls() {
 
 export function serviceUrls(jurCode) {
   const jur = JURISDICTIONS[jurCode];
+  const refreshRecoveryPublished = '2026-09-24';
   return [...services[jurCode].values()]
     .filter(svc => svc.published)
     .map(svc => ({
       path: `/${jur.slug}/${svc.slug}/`,
-      lastmod: serviceEditorialLastmod(svc.key, svc.latestEffective),
+      lastmod: [
+        serviceEditorialLastmod(svc.key, svc.latestEffective),
+        svc.sourceUnavailable ? refreshRecoveryPublished : null,
+      ].filter(Boolean).sort().at(-1),
     }));
 }
 

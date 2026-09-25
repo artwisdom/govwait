@@ -1,9 +1,11 @@
 ---
 import Base from '../layouts/Base.astro';
+import SourceAvailabilityNotice from '../components/SourceAvailabilityNotice.astro';
 import config from '../../site.config.json';
-import { records, sources, stats, generatedAt, dataLastmod, fmtDate } from '../lib/data.js';
+import { records, sources, unavailableSources, stats, generatedAt, dataLastmod, fmtDate } from '../lib/data.js';
 
 const origin = config.SITE_URL.replace(/\/$/, '');
+const datasetModified = ['2026-09-24', dataLastmod].filter(Boolean).sort().at(-1);
 const earliestObservation = records
   .flatMap(record => record.history.map(observation => observation.effective_date))
   .filter(Boolean)
@@ -14,7 +16,7 @@ const downloads = [
     name: 'Current routes',
     path: '/api/v1/downloads/latest.csv',
     rows: stats.entities,
-    description: 'One row per active government processing-time metric.',
+    description: 'One row per retained route, including source collection status and last successful verification.',
   },
   {
     name: 'Append-only history',
@@ -44,7 +46,7 @@ const jsonld = [{
   url: `${origin}/data/`,
   identifier: `${origin}/data/#dataset`,
   datePublished: '2026-08-21',
-  dateModified: dataLastmod,
+  dateModified: datasetModified,
   temporalCoverage: `${earliestObservation}/..`,
   spatialCoverage: ['Canada', 'United Kingdom', 'New Zealand', 'Norway'],
   isAccessibleForFree: true,
@@ -75,14 +77,14 @@ const jsonld = [{
 }];
 ---
 <Base title="Government processing-time dataset — free CSV downloads | GovWait"
-      description="Download GovWait's source-backed government processing-time dataset as CSV, including current routes, append-only history, IRCC projections and provenance."
+      description="Download GovWait's source-backed government processing-time dataset as CSV, including latest retained routes, source status, append-only history, IRCC projections and provenance."
       jsonld={jsonld}>
   <nav class="crumbs"><a href="/">Home</a> › Data</nav>
   <h1>Government processing-time dataset</h1>
-  <p class="lede">Free, source-backed data for {stats.entities.toLocaleString()} current processing-time routes across {stats.jurisdictions.length} governments. Download current values, append-only history, IRCC forward-looking projections and the complete source register—no account or API key required.</p>
+  <p class="lede">Free, source-backed data for {stats.entities.toLocaleString()} processing-time routes across {stats.jurisdictions.length} governments. Download latest retained values, append-only history, IRCC forward-looking projections and the complete source register—no account or API key required.</p>
 
   <div class="stats">
-    <div><div class="n">{stats.entities.toLocaleString()}</div><div class="l">current routes</div></div>
+    <div><div class="n">{stats.entities.toLocaleString()}</div><div class="l">routes retained</div></div>
     <div><div class="n">{stats.observations.toLocaleString()}</div><div class="l">recorded observations</div></div>
     <div><div class="n">{stats.forward_looking_estimates.toLocaleString()}</div><div class="l">projection rows</div></div>
     <div><div class="n">{sources.length}</div><div class="l">official sources</div></div>
@@ -123,11 +125,14 @@ const jsonld = [{
       <tr><td><code>effective_date</code></td><td>Agency update date when available; otherwise the first date GovWait observed that value.</td></tr>
       <tr><td><code>retrieved_at</code></td><td>UTC timestamp when GovWait fetched the source.</td></tr>
       <tr><td><code>source_url</code></td><td>Official government page or data file for the observation.</td></tr>
+      <tr><td><code>source_collection_status</code></td><td><code>active</code> when scheduled collection is available, or <code>source_unavailable</code> when GovWait has stopped fetching and is preserving the last verified snapshot.</td></tr>
+      <tr><td><code>source_last_verified_at</code></td><td>The last successful GovWait source verification. It does not advance during a source outage or access closure.</td></tr>
     </tbody>
   </table></div>
 
   <h2>Freshness and method</h2>
-  <p>The current export was generated {fmtDate(generatedAt)}. The newest official update or first-observed date represented is {fmtDate(dataLastmod)}. GovWait checks sources on a regular schedule, but each agency publishes on its own cadence. A failed source or validation check stops publication rather than producing a guessed value.</p>
+  <p>The current export was generated {fmtDate(generatedAt)}. The newest official update or first-observed date represented is {fmtDate(dataLastmod)}. GovWait checks active sources on a regular schedule, but each agency publishes on its own cadence. A failed active source or validation check stops publication rather than producing a guessed value; a source formally removed from collection remains clearly labeled with its last successful verification.</p>
+  {unavailableSources.map(source => <SourceAvailabilityNotice source={source} />)}
   <p>Read the full <a href="/about/">collection method and source register</a>, the <a href="/about/editorial-policy/">editorial policy</a>, and the <a href="/data-license/">data reuse and licensing notice</a>.</p>
 
   <h2>Suggested citation</h2>

@@ -1,4 +1,4 @@
-import { stats, services, dataLastmod } from '../lib/data.js';
+import { stats, services, sources, dataLastmod, fmtDate } from '../lib/data.js';
 import { reportIssues } from '../lib/reports.js';
 
 export async function GET(context) {
@@ -9,9 +9,10 @@ export async function GET(context) {
   const nzServices = [...services.NZ.values()];
   const nzPublished = nzServices.filter(s => s.published).length;
   const noServices = [...services.NO.values()];
+  const udi = sources.find(source => source.id === 'udi-waiting-times');
   const text = `# GovWait
 
-> Current, source-backed government processing times for visas, permits,
+> Source-backed government processing-time records for visas, permits,
 > sponsorships, resettlement and related services. Every value carries its
 > source URL and either the agency's update date or, when none is published,
 > GovWait's first-observed date. Our retrieval timestamp is also preserved.
@@ -21,7 +22,7 @@ export async function GET(context) {
 Canonical site: ${site}/
 Sitemap index: ${site}/sitemap.xml
 Latest effective or first-observed data date represented: ${dataLastmod}
-Current coverage: ${stats.entities.toLocaleString('en-US')} routes and ${stats.observations.toLocaleString('en-US')} recorded observations.
+Coverage: ${stats.entities.toLocaleString('en-US')} retained routes and ${stats.observations.toLocaleString('en-US')} recorded observations.
 Change-report feed: ${site}/reports/feed.xml
 
 ## Coverage
@@ -29,17 +30,17 @@ Change-report feed: ${site}/reports/feed.xml
 - Canada: ${caServices.length} IRCC service types; ${caCountryServices} include applicant-country breakdowns and ${caForwardServices} carry IRCC's monthly forward-looking projections.
 - United Kingdom: ${services.GB.size} UKVI and passport service categories.
 - New Zealand: ${nzServices.length} INZ visa types with 50% and 80% working-day metrics; ${nzPublished} reviewed human service pages in the current release.
-- Norway: ${noServices.length} table-backed UDI waiting-time routes with official monthly update dates.
+- Norway: ${noServices.length} preserved table-backed UDI waiting-time routes. Automated source access is unavailable since ${fmtDate(udi?.collection_status_since)}; last successful GovWait verification was ${fmtDate(udi?.robots_checked_at)}. Treat these as last-verified records and confirm current values with UDI.
 - Values marked unavailable or insufficient are official source states, not estimates.
 
 ## Live data access
 
 - [Dataset landing page](${site}/data/): human-readable metadata, methodology, field definitions and CSV downloads
 - [Dataset metadata](${site}/api/v1/dataset.json): counts, distributions, columns, provenance and reuse notice
-- [Current routes CSV](${site}/api/v1/downloads/latest.csv): one row per active metric route
+- [Latest retained routes CSV](${site}/api/v1/downloads/latest.csv): one row per route, including source collection status and last successful verification
 - [Append-only history CSV](${site}/api/v1/downloads/history.csv): every distinct public observation with route context
 - [Forward-looking CSV](${site}/api/v1/downloads/forward-looking.csv): IRCC current projections and application-month cohort rows
-- [Source register CSV](${site}/api/v1/downloads/sources.csv): primary-source URLs and source-specific reuse notes
+- [Source register CSV](${site}/api/v1/downloads/sources.csv): primary-source URLs, collection status, last verification and source-specific reuse notes
 - [API index](${site}/api/v1/index.json): collections, counts, sources and endpoint links
 - [IRCC forward-looking dataset](${site}/api/v1/ircc-forward-looking.json): all programs, current queue estimates and application-month cohorts; cohort months are not publication dates
 - [OpenAPI 3.1 specification](${site}/api/v1/openapi.yaml): API schemas

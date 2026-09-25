@@ -3,7 +3,7 @@
  "service_name": "Parent Retirement Resident Visa — 50% processed",
  "jurisdiction": "NZ",
  "count": 2,
- "generated_at": "2026-09-01T17:38:38.773Z",
+ "generated_at": "2026-09-25T00:52:27.787Z",
  "records": [
   {
    "entity_id": "nz-parent-retirement-resident-visa--p50",
@@ -14,13 +14,17 @@
    "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:52:27.506Z",
    "latest": {
-    "value_raw": "455 working days",
-    "value_days": 455,
+    "value_raw": "427 working days",
+    "value_days": 427,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-08-23",
-    "retrieved_at": "2026-08-23T21:06:33.987Z",
+    "effective_date": "2026-09-25",
+    "retrieved_at": "2026-09-25T00:49:46.771Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -34,13 +38,17 @@
    "metric_type": "percentile",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:52:27.506Z",
    "latest": {
-    "value_raw": "954 working days",
-    "value_days": 954,
+    "value_raw": "815 working days",
+    "value_days": 815,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-08-23",
-    "retrieved_at": "2026-08-23T21:06:33.987Z",
+    "effective_date": "2026-09-25",
+    "retrieved_at": "2026-09-25T00:49:46.771Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }

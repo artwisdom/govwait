@@ -2,12 +2,13 @@
 import { fmtDate } from '../lib/data.js';
 const { record } = Astro.props;
 const agency = { CA: 'IRCC', GB: 'the Home Office', NZ: 'INZ', NO: 'UDI' }[record.jurisdiction] || 'the source agency';
+const unavailable = record.source_collection_status === 'source_unavailable';
 ---
 <div class="fresh">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M8.5 12.5l2.4 2.4 4.8-5.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
   <div>
-    <b>{record.unstamped ? 'Current value first observed by us:' : `Last updated by ${agency}:`}</b> {fmtDate(record.effective_date)}
-    <span class="muted"> · verified by us {fmtDate(record.verified_at || record.retrieved_at)}</span>
+    <b>{unavailable ? `Last source update recorded from ${agency}:` : record.unstamped ? 'Current value first observed by us:' : `Last updated by ${agency}:`}</b> {fmtDate(record.effective_date)}
+    <span class="muted"> · {unavailable ? 'last successfully verified by us' : 'verified by us'} {fmtDate(record.verified_at || record.retrieved_at)}</span>
     · <a href={record.source_url} rel="noopener nofollow">official source ↗</a>
   </div>
 </div>

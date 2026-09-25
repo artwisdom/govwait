@@ -9,6 +9,8 @@ import { fileURLToPath } from "node:url";
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const PACKAGE_ROOT = path.resolve(HERE, "..");
 const PACKAGE_NAME = "govwait-mcp";
+const MAX_PACKED_BYTES = 2 * 1024 * 1024;
+const MAX_UNPACKED_BYTES = 8 * 1024 * 1024;
 const EXPECTED_FILES = [
   "DATA-NOTICE.md",
   "LICENSE",
@@ -66,7 +68,7 @@ try {
   }
   const forbidden = actualFiles.filter((name) => FORBIDDEN_PATH.test(name));
   if (forbidden.length) throw new Error(`Forbidden package paths: ${forbidden.join(", ")}`);
-  if (artifact.size > 2 * 1024 * 1024 || artifact.unpackedSize > 6 * 1024 * 1024) {
+  if (artifact.size > MAX_PACKED_BYTES || artifact.unpackedSize > MAX_UNPACKED_BYTES) {
     throw new Error(`Package exceeds size budget (${artifact.size} packed, ${artifact.unpackedSize} unpacked)`);
   }
 

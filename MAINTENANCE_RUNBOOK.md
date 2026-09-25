@@ -41,21 +41,26 @@ gov.uk restructured the guidance page. Fetch `https://www.gov.uk/api/content/gui
 - If INZ legitimately grows beyond 145 visas, redesign the refresh into bounded cohorts before raising any cap. Do not guess IDs or lower the 240-observation coverage floor.
 - The endpoint has no update stamp. Keep first-observed/change-detection semantics and preserve `working days` as the source unit.
 
-### `[udi-waiting-times] FETCH/PARSE FAILURE` / table or date mismatch
-- Check UDI's official [waiting-time hub](https://www.udi.no/en/waiting-time/) and
-  `robots.txt` first. Never spoof a browser User-Agent or probe personalised guide
-  combinations.
-- The collector follows five fixed server-rendered table pages and requires exactly
-  19 mapped rows. An unknown, missing, or duplicate row is schema drift to review;
-  do not lower the 19-route coverage floor.
-- Every selected page must carry UDI's own update date. The source normally updates
-  monthly and becomes stale at 45 days.
-- Preserve an exact published range in `value_raw`; use the upper endpoint only for
-  conservative normalized comparison. Do not present it as a single official wait.
+### `[udi-waiting-times]` retained source — current state
+- Automated UDI collection is closed as of 2026-09-04 because `robots.txt`
+  returns HTTP 403 to the honest collector. UDI is not in `ACTIVE_SOURCES`; do
+  not invoke its collector, spoof a browser User-Agent, rotate infrastructure,
+  or probe personalised guide combinations.
+- The 19 prior entities and observations remain append-only. The source register,
+  records, pages, CSV and JSON API must stay `source_unavailable`, show the last
+  successful verification, and never receive a new retrieval or verification
+  timestamp merely because the rest of the pipeline ran.
+- `validate.js` deliberately checks the retained 19-route floor and rejects any
+  post-closure UDI retrieval timestamp. Do not remove those gates to make a run
+  green.
+- Reactivation requires a separate reviewed change: verify that robots access is
+  genuinely permitted again, run the existing strict 19-row/date parser locally,
+  and remove the unavailable policy only after the full source succeeds. A page
+  loading in an ordinary browser is not enough.
 
 ### `FAIL: staleness-<source>`
-The source hasn't republished within its window (45d IRCC processing-time files and
-UDI / 62d IRCC forward-looking file / 120d gov.uk). Check the official page by hand: if
+The source hasn't republished within its window (45d IRCC processing-time files /
+62d IRCC forward-looking file / 120d gov.uk). Check the official page by hand: if
 the agency genuinely paused updates, raise the window in `pipeline/validate.js`
 with a dated comment; if they moved the data, treat as relocation (see above).
 
@@ -63,12 +68,17 @@ with a dated comment; if they moved the data, treat as relocation (see above).
 Fewer records than the floor — usually a partial parse after a page change. Never lower the floor to make it pass; fix the parser.
 
 ### `robots.txt DISALLOWS ...` / `robots.txt unreachable ... failing closed`
-The source closed its doors. The source is dead to us (hard rule). Remove it from `SOURCES` in `pipeline/run.js`, adjust coverage floors, and start a replacement from the expansion list below.
+The source closed its doors. The source is dead to active collection (hard rule).
+Remove it from `ACTIVE_SOURCES` in `pipeline/sources/index.js`, add an explicit
+entry to `pipeline/source-policy.js`, replace active freshness/coverage checks
+with retained-history and no-fabricated-freshness checks, and start a replacement
+from the expansion list below. Do not delete its history or silently make it
+optional.
 
 ## Adding a source (the growth loop — ~2-4 hours each)
 
-1. Norway UDI is implemented in the current deployment candidate. Pick the next
-   source from the verified robots-permitted list: **migri.fi (Finland),
+1. Norway UDI is retained but closed to active collection. Pick the next source
+   from the verified robots-permitted list: **migri.fi (Finland),
    migrationsverket.se (Sweden), ind.nl (Netherlands), nyidanmark.dk (Denmark)**.
    NZ passports remain blocked and are not a candidate.
 2. Find the structured data: prefer a JSON/API endpoint (dev tools → Network tab on
@@ -78,7 +88,7 @@ The source closed its doors. The source is dead to us (hard rule). Remove it fro
    `{entities, observations, errors}`. A semantically distinct projection source
    may also return `forwardEstimates`, but only with its own schema, validation,
    export, API, and presentation labels.
-4. Register it in `SOURCES` in `pipeline/run.js`; add coverage floor + staleness
+4. Register it in `ACTIVE_SOURCES` in `pipeline/sources/index.js`; add coverage floor + staleness
    window in `validate.js`; add the jurisdiction to `JURISDICTIONS` in
    `site/src/lib/data.js` (slug + agency name).
 5. Run `node pipeline/run.js --refresh`, then `node pipeline/build-api.js`, then

@@ -5,8 +5,11 @@ provenance and history) to AI agents over the Model Context Protocol (stdio).
 
 **Tools**: `search_entities`, `get_entity`, `get_latest_value`, `compare_values`.
 Every response carries `source_url`, the agency's own update date when supplied
-(otherwise GovWait's first-observed date), our verification timestamp, the source
-unit, and the attribution requirement.
+(otherwise GovWait's first-observed date), our verification timestamp, source
+collection status, the source unit, and the attribution requirement. When a source
+is unavailable, `current_value` and `value_days` are `null`; its retained value is
+returned only as `last_verified_value` with `value_context` set to
+`last_verified_source_snapshot`.
 
 ## Build and verify locally
 
@@ -34,7 +37,7 @@ temporary project with the already-locked `npm ci` dependency tree, and runs the
 complete MCP smoke test against that isolated copy. The temporary package is
 deleted afterward; no registry access is needed.
 
-The verified public release is
+The verified public release remains
 [`govwait-mcp@0.1.0`](https://www.npmjs.com/package/govwait-mcp/v/0.1.0), and its
 `mcpName` exactly matches `io.github.artwisdom/govwait` in the official MCP
 Registry metadata. Version `0.1.0` uses a `SEE LICENSE IN LICENSE` field that
@@ -46,6 +49,11 @@ automation/bypass tokens. Official `mcp-publisher` 1.8.1 validates `server.json`
 and the
 [official Registry listing](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.artwisdom%2Fgovwait/versions/0.1.0)
 is active and latest for version `0.1.0`.
+
+The files in this checkout are an unpublished `0.1.1` recovery candidate. They add
+explicit source-collection state and prevent retained Norway snapshots from being
+described as current. Building or verifying this candidate does not publish it to
+npm or update the MCP Registry.
 
 ## Register with Claude Code
 
@@ -77,8 +85,10 @@ now, and how does that compare to Nigeria and the Philippines?"* — it should c
 For New Zealand, try *"What are the current Visitor Visa processing times?"* The
 `nz-visitor-visa` service returns both INZ's 50% and 80% working-day metrics.
 
-For Norway, try *"What is UDI's current visitor-visa waiting time?"* The server
-returns the dated, table-backed UDI routes and their official source pages.
+For Norway, try *"What was UDI's last verified visitor-visa waiting time, and is
+the source still available to GovWait?"* The server returns the dated,
+table-backed snapshot, its official source page, and the `source_unavailable`
+state without presenting that snapshot as current.
 
 ## Data provenance and reuse
 

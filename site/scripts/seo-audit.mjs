@@ -2,6 +2,7 @@
 import { readFileSync, readdirSync, statSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { NZ_ROLLOUT_SERVICE_KEYS } from '../src/lib/publication.js';
 
 const SITE_DIR = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DIST = path.join(SITE_DIR, 'dist');
@@ -174,7 +175,10 @@ for (const sitemapUrl of sitemapSet) if (!canonicalSet.has(sitemapUrl)) errors.p
 // Phase 5A turns the API into a citable dataset surface. Keep its canonical
 // landing page, truthful reuse notice, bulk files and Dataset markup together.
 const datasetEditorialModified = '2026-09-08';
-for (const url of ['/', '/about/', '/api-docs/', '/data/', '/data-license/']) {
+// Phase 6A substantively updates the other Phase 5A authority pages with
+// source-availability semantics; the unchanged licensing page keeps its
+// original editorial date.
+for (const url of ['/data-license/']) {
   const absoluteUrl = `${canonicalOrigin}${url}`;
   if (sitemapLastmods.get(absoluteUrl) !== datasetEditorialModified) {
     errors.push(`${url}: expected Phase 5A sitemap lastmod ${datasetEditorialModified}, found ${sitemapLastmods.get(absoluteUrl) || 'missing'}`);
@@ -253,23 +257,30 @@ const phaseFourPages = [
   {
     url: '/new-zealand/skilled-migrant-category-resident-visa/',
     lastmod: '2026-09-06',
+    serviceKey: 'nz-skilled-migrant-category-resident-visa',
     required: ['Where this wait fits in the Skilled Migrant route', 'https://www.immigration.govt.nz/visas/skilled-migrant-category-resident-visa/'],
   },
   {
     url: '/new-zealand/specific-purpose-work-visa/',
     lastmod: '2026-09-06',
+    serviceKey: 'nz-specific-purpose-work-visa',
     required: ['What the Specific Purpose Work Visa clock covers', 'href="/guides/new-zealand-critical-purpose-visitor-visa-processing-time/"'],
   },
   {
     url: '/new-zealand/dependent-child-resident-visa/',
     lastmod: '2026-09-06',
+    serviceKey: 'nz-dependent-child-resident-visa',
     required: ['Which dependent-child route this time describes', 'https://www.immigration.govt.nz/visas/dependent-child-resident-visa/'],
   },
 ];
 for (const page of phaseFourPages) {
   const absoluteUrl = `${canonicalOrigin}${page.url}`;
-  if (sitemapLastmods.get(absoluteUrl) !== page.lastmod) {
-    errors.push(`${page.url}: expected sitemap lastmod ${page.lastmod}, found ${sitemapLastmods.get(absoluteUrl) || 'missing'}`);
+  const serviceLastmod = page.serviceKey
+    ? LATEST.records.filter(record => record.service_key === page.serviceKey).map(record => record.effective_date).sort().at(-1)
+    : null;
+  const expectedLastmod = [page.lastmod, serviceLastmod].filter(Boolean).sort().at(-1);
+  if (sitemapLastmods.get(absoluteUrl) !== expectedLastmod) {
+    errors.push(`${page.url}: expected sitemap lastmod ${expectedLastmod}, found ${sitemapLastmods.get(absoluteUrl) || 'missing'}`);
   }
   const outputPath = path.join(DIST, page.url.replace(/^\/+|\/+$/g, ''), 'index.html');
   let html = '';
@@ -391,6 +402,51 @@ for (const [url, recordId] of [
   }
 }
 
+// Phase 6A keeps Norway's append-only evidence public without presenting a
+// blocked collector as fresh. Pin the machine state, visible warnings and the
+// real editorial lastmod together so a later refactor cannot erase the caveat.
+const refreshRecoveryModified = '2026-09-24';
+const udiSource = LATEST.sources.find(source => source.id === 'udi-waiting-times');
+if (udiSource?.collection_status !== 'source_unavailable') errors.push('UDI source must be collection_status=source_unavailable');
+if (udiSource?.collection_status_since !== '2026-09-04') errors.push('UDI source closure date must remain 2026-09-04');
+if (!udiSource?.collection_status_note?.includes('does not bypass access controls')) errors.push('UDI source policy note missing access-control boundary');
+const norwayRecords = LATEST.records.filter(record => record.source_id === 'udi-waiting-times');
+if (norwayRecords.length !== 19) errors.push(`UDI preserved record count ${norwayRecords.length} != 19`);
+for (const record of norwayRecords) {
+  if (record.source_collection_status !== 'source_unavailable') errors.push(`${record.id}: UDI record missing unavailable state`);
+  if (record.source_last_verified_at !== udiSource?.robots_checked_at) errors.push(`${record.id}: UDI last verification does not match source register`);
+  if (record.retrieved_at >= '2026-09-04T00:00:00Z') errors.push(`${record.id}: post-closure retrieval timestamp must not be published`);
+}
+const norwayWarningPages = [
+  '/norway/',
+  '/guides/how-norway-udi-waiting-times-work/',
+  '/reports/norway-processing-time-changes/',
+  ...norwayRecords.map(record => `/norway/${serviceSlug(record)}/`),
+];
+for (const url of norwayWarningPages) {
+  const outputPath = path.join(DIST, url.replace(/^\/+|\/+$/g, ''), 'index.html');
+  let html = '';
+  try { html = readFileSync(outputPath, 'utf8'); }
+  catch { errors.push(`${url}: Norway recovery output missing`); }
+  if (html && !html.includes('data-source-collection-status="source_unavailable"')) errors.push(`${url}: source-unavailable warning missing`);
+  if (sitemapLastmods.get(`${canonicalOrigin}${url}`) !== refreshRecoveryModified) {
+    errors.push(`${url}: expected refresh-recovery lastmod ${refreshRecoveryModified}, found ${sitemapLastmods.get(`${canonicalOrigin}${url}`) || 'missing'}`);
+  }
+}
+for (const url of ['/', '/about/', '/api-docs/', '/data/', '/guides/', '/reports/']) {
+  if (sitemapLastmods.get(`${canonicalOrigin}${url}`) !== refreshRecoveryModified) {
+    errors.push(`${url}: expected refresh-recovery editorial lastmod ${refreshRecoveryModified}`);
+  }
+}
+
+// Curated search pages must never disappear merely because a source selector
+// shrank. A reviewed removal updates the cohort list in the same change; any
+// unreviewed disappearance blocks the release here.
+const activeServiceKeys = new Set(LATEST.records.map(record => record.service_key));
+for (const serviceKey of NZ_ROLLOUT_SERVICE_KEYS) {
+  if (!activeServiceKeys.has(serviceKey)) errors.push(`reviewed NZ publication route disappeared without cohort update: ${serviceKey}`);
+}
+
 const robotsText = readFileSync(path.join(DIST, 'robots.txt'), 'utf8');
 if (!robotsText.includes(`Sitemap: ${canonicalOrigin}/sitemap.xml`)) errors.push('robots.txt: canonical sitemap declaration missing');
 if (/Disallow:\s*\//i.test(robotsText)) errors.push('robots.txt: whole-site disallow found');
@@ -408,6 +464,8 @@ for (const required of [
   `${canonicalOrigin}/api/v1/downloads/history.csv`,
   `${canonicalOrigin}/data-license/`,
   `${canonicalOrigin}/reports/feed.xml`,
+  'Automated source access is unavailable since September 4, 2026',
+  'last successful GovWait verification was September 1, 2026',
 ]) {
   if (!llmsText.includes(required)) errors.push(`llms.txt: missing ${required}`);
 }

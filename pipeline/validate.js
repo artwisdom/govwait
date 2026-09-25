@@ -3,7 +3,8 @@
 import { writeFileSync, mkdirSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { queryJson } from './lib/db.js';
+import { queryJson, sqlQuote } from './lib/db.js';
+import { UNAVAILABLE_SOURCE_POLICIES } from './source-policy.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const EXPORTS = path.join(ROOT, 'data', 'exports');
@@ -13,11 +14,10 @@ const COVERAGE_FLOORS = {
   'ircc-forward-looking': 28,
   'ircc-noncountry': 15, 'ircc-passport': 2, 'govuk-inuk-times': 8, 'govuk-passport': 1,
   'inz-processing-times': 240,
-  'udi-waiting-times': 19,
 };
 // No staleness entry for ircc-passport (unstamped: effective_date = first
 // observed, ages legitimately) or govuk-passport (stable statement, years old).
-const STALENESS_DAYS = { 'ircc-ptime': 45, 'ircc-forward-looking': 62, 'govuk-visa-times': 120, 'ircc-noncountry': 45, 'govuk-inuk-times': 500, 'udi-waiting-times': 45 };
+const STALENESS_DAYS = { 'ircc-ptime': 45, 'ircc-forward-looking': 62, 'govuk-visa-times': 120, 'ircc-noncountry': 45, 'govuk-inuk-times': 500 };
 const TOTAL_FLOOR = 300;
 // Refugee-resettlement categories legitimately reach ~5 years ("58 months",
 // gov-assisted from TZ, observed 2026-08), and IRCC's forward-looking file
@@ -52,6 +52,16 @@ export function validate() {
   const orphans = queryJson(`SELECT COUNT(*) n FROM observations o LEFT JOIN entities e ON e.id=o.entity_id WHERE e.id IS NULL`)[0].n;
   check('referential-integrity', orphans === 0, `${orphans} orphaned observations`);
 
+  const badSourceStates = queryJson(`
+    SELECT COUNT(*) n FROM sources
+    WHERE collection_status NOT IN ('active','source_unavailable')
+       OR (collection_status='active' AND (collection_status_since IS NOT NULL OR collection_status_note IS NOT NULL))
+       OR (collection_status='source_unavailable' AND (
+         collection_status_since NOT GLOB '[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]'
+         OR collection_status_note IS NULL OR collection_status_note=''
+       ))`)[0].n;
+  check('source-collection-state', badSourceStates === 0, `${badSourceStates} sources have inconsistent collection-state metadata`);
+
   const badForward = queryJson(`
     SELECT COUNT(*) n FROM forward_estimates f LEFT JOIN entities e ON e.id=f.entity_id
     WHERE e.id IS NULL
@@ -84,6 +94,28 @@ export function validate() {
   for (const [sid, floor] of Object.entries(COVERAGE_FLOORS)) {
     const n = perSource.find(r => r.source_id === sid)?.n || 0;
     check(`coverage-${sid}`, n >= floor, `${n} observations (floor ${floor})`);
+    const state = queryJson(`SELECT collection_status FROM sources WHERE id=${sqlQuote(sid)} LIMIT 1`)[0]?.collection_status;
+    check(`collection-active-${sid}`, state === 'active', `collection_status is ${state ?? 'missing'} (expected active)`);
+  }
+  for (const policy of UNAVAILABLE_SOURCE_POLICIES) {
+    const source = queryJson(`SELECT collection_status, collection_status_since, collection_status_note, robots_checked_at FROM sources WHERE id=${sqlQuote(policy.id)} LIMIT 1`)[0];
+    check(`collection-unavailable-${policy.id}`,
+      source?.collection_status === policy.collectionStatus
+        && source?.collection_status_since === policy.statusSince
+        && source?.collection_status_note === policy.statusNote,
+      `status=${source?.collection_status ?? 'missing'}, since=${source?.collection_status_since ?? 'missing'}`);
+    const retained = queryJson(`
+      SELECT COUNT(DISTINCT e.id) entities, COUNT(o.id) observations, MAX(o.retrieved_at) last_retrieved
+      FROM entities e JOIN observations o ON o.entity_id=e.id
+      WHERE e.source_id=${sqlQuote(policy.id)} AND e.active=1`)[0];
+    check(`retained-history-${policy.id}`,
+      retained.entities === policy.expectedActiveEntities && retained.observations === policy.expectedObservations,
+      `${retained.entities} active entities and ${retained.observations} observations retained (expected exactly ${policy.expectedActiveEntities}/${policy.expectedObservations})`);
+    const postClosure = queryJson(`
+      SELECT COUNT(*) n FROM observations o JOIN entities e ON e.id=o.entity_id
+      WHERE e.source_id=${sqlQuote(policy.id)} AND o.retrieved_at>=${sqlQuote(`${policy.statusSince}T00:00:00Z`)}`)[0].n;
+    check(`no-fabricated-freshness-${policy.id}`, postClosure === 0,
+      `${postClosure} observations have retrieval timestamps on or after ${policy.statusSince}`);
   }
   const total = perSource.reduce((a, r) => a + r.n, 0);
   check('coverage-total', total >= TOTAL_FLOOR, `${total} total observations (floor ${TOTAL_FLOOR})`);

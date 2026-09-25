@@ -11,7 +11,9 @@ export const NZ_ROLLOUT_SERVICE_KEYS = Object.freeze([
   'nz-partner-of-a-new-zealander-visitor-visa',
   'nz-partner-of-a-worker-work-visa',
   'nz-fee-paying-student-visa',
-  'nz-post-study-work-visa',
+  // Post Study Work Visa left INZ's complete official processing-time selector
+  // by the 2026-09-25 refresh. Its two prior observations remain append-only in
+  // SQLite, but no page may keep presenting that old value as current.
   'nz-permanent-resident-visa',
   'nz-skilled-migrant-category-resident-visa',
   'nz-straight-to-residence-visa',

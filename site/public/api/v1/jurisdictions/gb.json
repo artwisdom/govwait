@@ -1,7 +1,7 @@
 {
  "jurisdiction": "GB",
  "count": 77,
- "generated_at": "2026-09-01T17:38:38.773Z",
+ "generated_at": "2026-09-25T00:52:27.787Z",
  "services": [
   "gb-family-visas--adult-coming-to-be-cared-for-by-a-relative",
   "gb-family-visas--child",
@@ -91,13 +91,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:40.267Z",
    "latest": {
     "value_raw": "12 weeks",
     "value_days": 84,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2026-06-26",
-    "retrieved_at": "2026-08-21T11:37:11.785Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:40.257Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
     "confidence": "official"
    }
@@ -111,13 +115,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:40.267Z",
    "latest": {
     "value_raw": "12 weeks",
     "value_days": 84,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2026-06-26",
-    "retrieved_at": "2026-08-21T11:37:11.785Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:40.257Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
     "confidence": "official"
    }
@@ -131,13 +139,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:40.267Z",
    "latest": {
     "value_raw": "12 weeks",
     "value_days": 84,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2026-06-26",
-    "retrieved_at": "2026-08-21T11:37:11.785Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:40.257Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
     "confidence": "official"
    }
@@ -151,13 +163,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:40.267Z",
    "latest": {
     "value_raw": "12 weeks",
     "value_days": 84,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2026-06-26",
-    "retrieved_at": "2026-08-21T11:37:11.785Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:40.257Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
     "confidence": "official"
    }
@@ -171,13 +187,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:43.255Z",
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2025-07-21",
-    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:43.243Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
     "confidence": "official"
    }
@@ -191,13 +211,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:43.255Z",
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2025-07-21",
-    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:43.243Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
     "confidence": "official"
    }
@@ -211,13 +235,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:43.255Z",
    "latest": {
     "value_raw": "12 months*",
     "value_days": 365.28,
     "unit_original": "months",
     "status": "ok",
-    "effective_date": "2025-07-21",
-    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:43.243Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
     "confidence": "official"
    }
@@ -231,13 +259,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:43.255Z",
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2025-07-21",
-    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:43.243Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
     "confidence": "official"
    }
@@ -251,13 +283,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:43.255Z",
    "latest": {
     "value_raw": "12 months*",
     "value_days": 365.28,
     "unit_original": "months",
     "status": "ok",
-    "effective_date": "2025-07-21",
-    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:43.243Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
     "confidence": "official"
    }
@@ -271,13 +307,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:43.255Z",
    "latest": {
     "value_raw": "12 weeks",
     "value_days": 84,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2025-07-21",
-    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:43.243Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
     "confidence": "official"
    }
@@ -291,13 +331,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:43.255Z",
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2025-07-21",
-    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:43.243Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
     "confidence": "official"
    }
@@ -311,13 +355,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:43.255Z",
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2025-07-21",
-    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:43.243Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
     "confidence": "official"
    }
@@ -331,13 +379,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:43.255Z",
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2025-07-21",
-    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:43.243Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
     "confidence": "official"
    }
@@ -351,13 +403,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:43.255Z",
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2025-07-21",
-    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:43.243Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
     "confidence": "official"
    }
@@ -371,13 +427,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:43.255Z",
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2025-07-21",
-    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:43.243Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
     "confidence": "official"
    }
@@ -391,13 +451,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:43.255Z",
    "latest": {
     "value_raw": "6 months",
     "value_days": 182.64,
     "unit_original": "months",
     "status": "ok",
-    "effective_date": "2025-07-21",
-    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:43.243Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
     "confidence": "official"
    }
@@ -411,13 +475,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:43.255Z",
    "latest": {
     "value_raw": "6 months",
     "value_days": 182.64,
     "unit_original": "months",
     "status": "ok",
-    "effective_date": "2025-07-21",
-    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:43.243Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
     "confidence": "official"
    }
@@ -431,13 +499,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:43.255Z",
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2025-07-21",
-    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:43.243Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
     "confidence": "official"
    }
@@ -451,13 +523,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:43.255Z",
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2025-07-21",
-    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:43.243Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
     "confidence": "official"
    }
@@ -471,13 +547,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:43.255Z",
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2025-07-21",
-    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:43.243Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
     "confidence": "official"
    }
@@ -491,13 +571,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:43.255Z",
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2025-07-21",
-    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:43.243Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
     "confidence": "official"
    }
@@ -511,13 +595,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:43.255Z",
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2025-07-21",
-    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:43.243Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
     "confidence": "official"
    }
@@ -531,13 +619,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:43.255Z",
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2025-07-21",
-    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:43.243Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
     "confidence": "official"
    }
@@ -551,13 +643,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:43.255Z",
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2025-07-21",
-    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:43.243Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
     "confidence": "official"
    }
@@ -571,13 +667,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:43.255Z",
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2025-07-21",
-    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:43.243Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
     "confidence": "official"
    }
@@ -591,13 +691,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:43.255Z",
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2025-07-21",
-    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:43.243Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
     "confidence": "official"
    }
@@ -611,13 +715,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:43.255Z",
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2025-07-21",
-    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:43.243Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
     "confidence": "official"
    }
@@ -631,13 +739,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:43.255Z",
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2025-07-21",
-    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:43.243Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
     "confidence": "official"
    }
@@ -651,13 +763,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:43.255Z",
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2025-07-21",
-    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:43.243Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
     "confidence": "official"
    }
@@ -671,13 +787,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:43.255Z",
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2025-07-21",
-    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:43.243Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
     "confidence": "official"
    }
@@ -691,13 +811,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:43.255Z",
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2025-07-21",
-    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:43.243Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
     "confidence": "official"
    }
@@ -711,13 +835,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:43.255Z",
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2025-07-21",
-    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:43.243Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
     "confidence": "official"
    }
@@ -731,13 +859,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:43.255Z",
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2025-07-21",
-    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:43.243Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
     "confidence": "official"
    }
@@ -751,13 +883,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:43.255Z",
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2025-07-21",
-    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:43.243Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
     "confidence": "official"
    }
@@ -771,13 +907,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:43.255Z",
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2025-07-21",
-    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:43.243Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
     "confidence": "official"
    }
@@ -791,13 +931,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:43.255Z",
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2025-07-21",
-    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:43.243Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
     "confidence": "official"
    }
@@ -811,13 +955,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:43.255Z",
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2025-07-21",
-    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:43.243Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
     "confidence": "official"
    }
@@ -831,13 +979,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:43.255Z",
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2025-07-21",
-    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:43.243Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
     "confidence": "official"
    }
@@ -851,13 +1003,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:43.255Z",
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2025-07-21",
-    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:43.243Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
     "confidence": "official"
    }
@@ -871,13 +1027,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:43.255Z",
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2025-07-21",
-    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:43.243Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
     "confidence": "official"
    }
@@ -891,13 +1051,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:43.255Z",
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2025-07-21",
-    "retrieved_at": "2026-08-22T01:17:34.729Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:43.243Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-inside-the-uk",
     "confidence": "official"
    }
@@ -911,13 +1075,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:40.267Z",
    "latest": {
     "value_raw": "12 weeks",
     "value_days": 84,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2026-06-26",
-    "retrieved_at": "2026-08-21T11:37:11.785Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:40.257Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
     "confidence": "official"
    }
@@ -931,13 +1099,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:40.267Z",
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2026-06-26",
-    "retrieved_at": "2026-08-21T11:37:11.785Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:40.257Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
     "confidence": "official"
    }
@@ -951,13 +1123,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:40.267Z",
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2026-06-26",
-    "retrieved_at": "2026-08-21T11:37:11.785Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:40.257Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
     "confidence": "official"
    }
@@ -971,13 +1147,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:40.267Z",
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2026-06-26",
-    "retrieved_at": "2026-08-21T11:37:11.785Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:40.257Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
     "confidence": "official"
    }
@@ -991,13 +1171,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:40.267Z",
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2026-06-26",
-    "retrieved_at": "2026-08-21T11:37:11.785Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:40.257Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
     "confidence": "official"
    }
@@ -1011,6 +1195,10 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:46.204Z",
    "latest": {
     "value_raw": "within 3 weeks",
     "value_days": 21,
@@ -1031,13 +1219,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:40.267Z",
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2026-06-26",
-    "retrieved_at": "2026-08-21T11:37:11.785Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:40.257Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
     "confidence": "official"
    }
@@ -1051,13 +1243,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:40.267Z",
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2026-06-26",
-    "retrieved_at": "2026-08-21T11:37:11.785Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:40.257Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
     "confidence": "official"
    }
@@ -1071,13 +1267,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:40.267Z",
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2026-06-26",
-    "retrieved_at": "2026-08-21T11:37:11.785Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:40.257Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
     "confidence": "official"
    }
@@ -1091,13 +1291,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:40.267Z",
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2026-06-26",
-    "retrieved_at": "2026-08-21T11:37:11.785Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:40.257Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
     "confidence": "official"
    }
@@ -1111,13 +1315,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:40.267Z",
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2026-06-26",
-    "retrieved_at": "2026-08-21T11:37:11.785Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:40.257Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
     "confidence": "official"
    }
@@ -1131,13 +1339,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:40.267Z",
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2026-06-26",
-    "retrieved_at": "2026-08-21T11:37:11.785Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:40.257Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
     "confidence": "official"
    }
@@ -1151,13 +1363,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:40.267Z",
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2026-06-26",
-    "retrieved_at": "2026-08-21T11:37:11.785Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:40.257Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
     "confidence": "official"
    }
@@ -1171,13 +1387,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:40.267Z",
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2026-06-26",
-    "retrieved_at": "2026-08-21T11:37:11.785Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:40.257Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
     "confidence": "official"
    }
@@ -1191,13 +1411,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:40.267Z",
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2026-06-26",
-    "retrieved_at": "2026-08-21T11:37:11.785Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:40.257Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
     "confidence": "official"
    }
@@ -1211,13 +1435,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:40.267Z",
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2026-06-26",
-    "retrieved_at": "2026-08-21T11:37:11.785Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:40.257Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
     "confidence": "official"
    }
@@ -1231,13 +1459,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:40.267Z",
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2026-06-26",
-    "retrieved_at": "2026-08-21T11:37:11.785Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:40.257Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
     "confidence": "official"
    }
@@ -1251,13 +1483,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:40.267Z",
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2026-06-26",
-    "retrieved_at": "2026-08-21T11:37:11.785Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:40.257Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
     "confidence": "official"
    }
@@ -1271,13 +1507,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:40.267Z",
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2026-06-26",
-    "retrieved_at": "2026-08-21T11:37:11.785Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:40.257Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
     "confidence": "official"
    }
@@ -1291,13 +1531,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:40.267Z",
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2026-06-26",
-    "retrieved_at": "2026-08-21T11:37:11.785Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:40.257Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
     "confidence": "official"
    }
@@ -1311,13 +1555,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:40.267Z",
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2026-06-26",
-    "retrieved_at": "2026-08-21T11:37:11.785Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:40.257Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
     "confidence": "official"
    }
@@ -1331,13 +1579,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:40.267Z",
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2026-06-26",
-    "retrieved_at": "2026-08-21T11:37:11.785Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:40.257Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
     "confidence": "official"
    }
@@ -1351,13 +1603,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:40.267Z",
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2026-06-26",
-    "retrieved_at": "2026-08-21T11:37:11.785Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:40.257Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
     "confidence": "official"
    }
@@ -1371,13 +1627,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:40.267Z",
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2026-06-26",
-    "retrieved_at": "2026-08-21T11:37:11.785Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:40.257Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
     "confidence": "official"
    }
@@ -1391,13 +1651,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:40.267Z",
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2026-06-26",
-    "retrieved_at": "2026-08-21T11:37:11.785Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:40.257Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
     "confidence": "official"
    }
@@ -1411,13 +1675,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:40.267Z",
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2026-06-26",
-    "retrieved_at": "2026-08-21T11:37:11.785Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:40.257Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
     "confidence": "official"
    }
@@ -1431,13 +1699,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:40.267Z",
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2026-06-26",
-    "retrieved_at": "2026-08-21T11:37:11.785Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:40.257Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
     "confidence": "official"
    }
@@ -1451,13 +1723,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:40.267Z",
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2026-06-26",
-    "retrieved_at": "2026-08-21T11:37:11.785Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:40.257Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
     "confidence": "official"
    }
@@ -1471,13 +1747,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:40.267Z",
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2026-06-26",
-    "retrieved_at": "2026-08-21T11:37:11.785Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:40.257Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
     "confidence": "official"
    }
@@ -1491,13 +1771,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:40.267Z",
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2026-06-26",
-    "retrieved_at": "2026-08-21T11:37:11.785Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:40.257Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
     "confidence": "official"
    }
@@ -1511,13 +1795,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:40.267Z",
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2026-06-26",
-    "retrieved_at": "2026-08-21T11:37:11.785Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:40.257Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
     "confidence": "official"
    }
@@ -1531,13 +1819,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:40.267Z",
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2026-06-26",
-    "retrieved_at": "2026-08-21T11:37:11.785Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:40.257Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
     "confidence": "official"
    }
@@ -1551,13 +1843,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:40.267Z",
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2026-06-26",
-    "retrieved_at": "2026-08-21T11:37:11.785Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:40.257Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
     "confidence": "official"
    }
@@ -1571,13 +1867,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:40.267Z",
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2026-06-26",
-    "retrieved_at": "2026-08-21T11:37:11.785Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:40.257Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
     "confidence": "official"
    }
@@ -1591,13 +1891,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:40.267Z",
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2026-06-26",
-    "retrieved_at": "2026-08-21T11:37:11.785Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:40.257Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
     "confidence": "official"
    }
@@ -1611,13 +1915,17 @@
    "metric_type": "service_standard",
    "applicant_country": null,
    "applicant_country_name": null,
+   "source_collection_status": "active",
+   "source_collection_status_since": null,
+   "source_collection_status_note": null,
+   "source_last_verified_at": "2026-09-25T00:45:40.267Z",
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
     "unit_original": "weeks",
     "status": "ok",
-    "effective_date": "2026-06-26",
-    "retrieved_at": "2026-08-21T11:37:11.785Z",
+    "effective_date": "2026-09-09",
+    "retrieved_at": "2026-09-25T00:45:40.257Z",
     "source_url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
     "confidence": "official"
    }

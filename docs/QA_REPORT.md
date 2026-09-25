@@ -180,3 +180,37 @@ or revenue.
   intended candidate contains only licensing, Glama metadata, validation and
   project-record changes. No commit, push, repository sync, Glama build or
   release, npm publication, IndexNow request, deployment or outreach occurred.
+
+## Phase 6A refresh-recovery candidate — 2026-09-24
+
+- Live-source proof: one owner-approved local refresh completed all eight active
+  Canada, UK and New Zealand sources. UDI was labeled collection-paused and no
+  UDI request was attempted.
+- Closed-source integrity: UDI remains exactly 19 active entities and 19
+  observations; a database `EXCEPT` comparison against the pre-refresh backup
+  found zero additions and zero missing rows. No UDI observation is dated on or
+  after the 2026-09-04 closure and its last successful verification remains
+  `2026-09-01T17:38:38.623Z`.
+- Official removal handling: INZ's complete selector returned 132 visas and no
+  Post Study Work Visa. Only that route's two current p50/p80 entities were
+  deactivated; their durable history remains in SQLite.
+- Pipeline: 35/35 blocking validation checks and 15/15 parser/history/policy tests
+  pass. The candidate exports 2,316 retained routes, 6,617 public history
+  observations and 7,285 forward-looking estimates.
+- Site and machine API: Astro built 2,112 HTML pages; the SEO audit passed with
+  exactly 634 indexable pages and 634 sitemap URLs; OpenAPI conformance passed
+  for 2,613 static API files. The 1,627 title/description-length findings remain
+  non-blocking warnings.
+- MCP: unpublished version 0.1.1 passed direct and isolated package smoke suites,
+  26/26 metadata checks, the exact nine-file allow-list and all three data hashes.
+  The packed candidate measured 162,482 bytes / 6,562,302 unpacked bytes but was
+  deleted after audit. Norway returns `current_value: null` and exposes its stored
+  45 days only as `last_verified_value` with source state and dates.
+- Visual and discovery safety: the Norway warning, active Canada entity and
+  homepage rendered correctly; Norway was checked in explicit light and dark
+  color schemes. The homepage overclaim found during QA was corrected from
+  “current official” to “latest source-backed.” IndexNow selected 634 URLs in
+  dry-run mode and sent no request.
+- Boundary: `git diff --check` is clean; no WAL/SHM file or 0.1.1 tarball remains.
+  No commit, push, Actions run, deployment, IndexNow/Google submission, npm/MCP
+  publication, directory action, outreach, spend or account change occurred.

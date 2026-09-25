@@ -59,15 +59,38 @@ if (!Array.isArray(latestRecords) || !historyEntities || !forwardEntities) {
   throw new Error("Required dataset collections are missing");
 }
 
+const sourceStates = new Map();
+for (const record of latestRecords) {
+  const previous = sourceStates.get(record.source_id);
+  const next = {
+    source_id: record.source_id,
+    collection_status: record.source_collection_status,
+    collection_status_since: record.source_collection_status_since,
+    last_verified_at: record.source_last_verified_at,
+  };
+  if (previous && JSON.stringify(previous) !== JSON.stringify(next)) {
+    throw new Error(`Inconsistent source collection state for ${record.source_id}`);
+  }
+  sourceStates.set(record.source_id, next);
+}
+const sources = [...sourceStates.values()].sort((a, b) => a.source_id.localeCompare(b.source_id));
+const collectionStatuses = Object.fromEntries(
+  [...new Set(sources.map((source) => source.collection_status))]
+    .sort()
+    .map((status) => [status, sources.filter((source) => source.collection_status === status).length]),
+);
+
 const provenance = {
-  schema_version: 1,
+  schema_version: 2,
   dataset: "GovWait government processing-times dataset",
   dataset_url: "https://govwait.com/data/",
-  methodology_url: "https://govwait.com/methodology/",
+  methodology_url: "https://govwait.com/about/",
   data_reuse_url: "https://govwait.com/data-license/",
   dataset_generated_at: generatedAt,
   statistics: {
-    current_routes: latestRecords.length,
+    retained_routes: latestRecords.length,
+    active_source_routes: latestRecords.filter((record) => record.source_collection_status === "active").length,
+    source_unavailable_routes: latestRecords.filter((record) => record.source_collection_status === "source_unavailable").length,
     history_entities: Object.keys(historyEntities).length,
     history_observations: Object.values(historyEntities).reduce((sum, rows) => sum + rows.length, 0),
     forward_entities: Object.keys(forwardEntities).length,
@@ -77,9 +100,14 @@ const provenance = {
       0,
     ),
   },
+  sources: {
+    count: sources.length,
+    collection_statuses: collectionStatuses,
+    source_unavailable: sources.filter((source) => source.collection_status === "source_unavailable"),
+  },
   files,
 };
 
 writeFileSync(path.join(TARGET_DIR, "provenance.json"), `${JSON.stringify(provenance, null, 2)}\n`);
-console.log(`Bundled ${latestRecords.length} current routes from dataset ${generatedAt}`);
+console.log(`Bundled ${latestRecords.length} retained routes from dataset ${generatedAt}`);
 console.log(`Wrote ${DATA_FILES.length + 1} package data files to ${TARGET_DIR}`);

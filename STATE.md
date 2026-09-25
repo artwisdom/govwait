@@ -1,6 +1,6 @@
 # STATE — Data Moat Engine
 
-_Last updated: 2026-09-23_
+_Last updated: 2026-09-24_
 
 ## Environment (verified)
 | Runtime | Version |
@@ -35,6 +35,7 @@ All dependencies install locally (`node_modules` inside project). No sudo or mac
 - [x] Phase 5B npm and MCP Registry 0.1.0 release: public-source commit `ec284ef`; self-contained MCP data bundle, deterministic provenance hashes, exact nine-file npm allow-list with a scoped Apache 2.0 code licence and separate data notice; verified public `govwait-mcp@0.1.0`; interactive 2FA required and token publishing disallowed; clean-install smoke verification; active official Registry listing `io.github.artwisdom/govwait` with exact npm ownership linkage
 - [x] Phase 5C Glama build preflight: the public GovWait listing is claimed by GitHub owner `artwisdom`; Auto-Release is off; build-only test `01a0cc04-a9e8-7f71-9017-f1be4e441241` succeeded against commit `64db085` and exposed all four MCP tools; no Glama release was created
 - [x] Phase 5C Glama repository-readiness candidate: this revision makes the root Apache 2.0 terms machine-detectable, preserves the code-only/data-exclusion boundary in `SOFTWARE-SCOPE.md`, and adds live-schema-valid `glama.json`; remote licence detection must be verified after GitHub publication, while Glama sync/build/release and deployment remain separate owner gates
+- [x] Phase 6A refresh-recovery candidate (local only): UDI is retained as `source_unavailable` and excluded from active collection; one live local refresh completed the eight healthy Canada/UK/New Zealand sources; all 19 UDI records remained byte-for-byte append-only; official removal of Post Study Work Visa deactivated only its two current INZ metrics; full pipeline/site/API/MCP verification passed. Commit, push, Actions, deployment and discovery remain unapproved.
 
 ## Deployment status (verified through 2026-09-08)
 - Repo LIVE: https://github.com/artwisdom/govwait (public, main)
@@ -276,19 +277,40 @@ That command sends `publish_requires_tfa=true` and
 automation/bypass tokens from publishing this package. No trusted publisher is
 configured.
 
+## Phase 6A local recovery candidate (verified 2026-09-24)
+
+The UDI source is closed to automated collection from 2026-09-04 under the
+existing no-bypass policy. The candidate introduces an explicit eight-source
+active registry and retains UDI's 19 routes under `source_unavailable`, with its
+last successful verification frozen. A live local refresh completed Canada, UK
+and New Zealand without requesting UDI. The final local dataset contains 2,316
+retained routes, 6,617 public history observations and 7,285 forward estimates.
+
+All 19 UDI entities and observations match the pre-refresh database exactly.
+The source's robots check and verification evidence did not advance. The current
+INZ selector legitimately removed Post Study Work Visa, so its two current
+percentile entities were deactivated while append-only history remained intact.
+
+Local acceptance is green: 35 pipeline checks, 15 tests, 2,112 HTML pages,
+634/634 SEO-sitemap parity, 2,613 conforming API files, and the unpublished MCP
+0.1.1 direct/isolated package suite. No commit, push, workflow, deployment,
+IndexNow/Google request, npm/MCP publication, directory submission, outreach,
+paid action or account change occurred.
+
 ## Next step
 
-Following the owner-approved GitHub-only publication and remote Apache-2.0
-detection check, the next bounded gate is a Glama repository sync and a fresh
-build-only test. Creating a Glama release or deployment remains a later,
-separate external gate. Finland Migri remains the next source candidate and
-requires a 5-second crawl delay.
+The next bounded gate is the Phase 6A production recovery release: commit and
+push the exact candidate, let the existing deploy/IndexNow workflow run, then
+manually run `refresh-data` once to prove recovery on GitHub's runner and verify
+the public source-state receipts. Publishing MCP 0.1.1, adding another source and
+all other directory/discovery actions remain separate approvals.
 
 ## Open threads
 - US/AU/IE sources WAF-blocked to honest bots — owner-decision item (documented in DEPLOYMENT_GUIDE).
 - The 2026-09-04 scheduled refresh failed closed because `www.udi.no/robots.txt`
   returned HTTP 403 to the GitHub runner. Nothing was exported or published; the
-  last verified UDI values remain live. Do not spoof a browser UA or weaken the
-  fail-closed rule. Recheck the official robots response on the next scheduled run.
+  last verified UDI values remain live. The local recovery is verified, but the
+  production workflow stays blocked until an approved push. Do not spoof a browser
+  UA, weaken the fail-closed rule or manually advance Norway's freshness.
 - `npm audit` reports four Astro 4 build-toolchain advisories (1 moderate, 3 high). Production is pre-rendered static HTML/JSON on Cloudflare Pages—no Astro/Vite development or server runtime is exposed. Plan and test the major Astro 7/Node runtime upgrade before adding any dynamic server rendering; do not apply `npm audit fix --force` blindly.
 - IRCC forward-looking estimates and Norway UDI are production-verified. Finland/Sweden/Netherlands/Denmark follow. NZ passports remain blocked.

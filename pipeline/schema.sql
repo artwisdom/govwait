@@ -8,7 +8,10 @@ CREATE TABLE IF NOT EXISTS sources (
   url TEXT NOT NULL,
   license_note TEXT,
   robots_status TEXT,
-  robots_checked_at TEXT
+  robots_checked_at TEXT,
+  collection_status TEXT NOT NULL DEFAULT 'active' CHECK (collection_status IN ('active','source_unavailable')),
+  collection_status_since TEXT,
+  collection_status_note TEXT
 );
 
 CREATE TABLE IF NOT EXISTS entities (

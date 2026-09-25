@@ -1,6 +1,6 @@
 {
   "SITE_NAME": "GovWait",
   "SITE_URL": "https://govwait.com",
-  "TAGLINE": "Official government processing times, tracked weekly",
+  "TAGLINE": "Official government processing times, with source status",
   "NOTE": "Production origin. CI overrides via SITE_URL repo variable if set."
 }

@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import AdSlot from '../components/AdSlot.astro';
+import SourceAvailabilityNotice from '../components/SourceAvailabilityNotice.astro';
 import config from '../../site.config.json';
 import { stats, services, records, JURISDICTIONS, publishedServices, fmtDate } from '../lib/data.js';
 
@@ -36,10 +37,10 @@ const examples = ['ca-visitor-visa--in', 'ca-study-permit--pk', 'ca-work-permit-
 const govCount = stats.jurisdictions.length;
 ---
 <Base title={`${config.SITE_NAME} — official visa and government processing times`}
-      description={`Current official processing times for ${stats.entities.toLocaleString()} visa, permit and sponsorship routes across ${govCount} governments. Every value is sourced, dated and tracked.`}
+      description={`Official processing-time records for ${stats.entities.toLocaleString()} visa, permit and sponsorship routes across ${govCount} governments, with source freshness shown explicitly.`}
       jsonld={jsonld}>
-  <h1>How long will it take?<br/>The current official answer, tracked.</h1>
-  <p class="lede">Governments publish how long applications are taking, but their current pages often replace the earlier number. We record each verified value with its source and date, so you can see today’s official figure and, when it changes, the history the source page no longer shows.</p>
+  <h1>How long will it take?<br/>The latest source-backed answer, tracked.</h1>
+  <p class="lede">Governments publish how long applications are taking, but source pages often replace the earlier number. We record each verified value with its source, date and collection status, so you can see the latest source-backed figure—or a clearly labeled last-verified snapshot when collection closes—plus the history the source page no longer shows.</p>
 
   <div class="related" style="margin-top:16px">
     {examples.map(r => (
@@ -65,12 +66,13 @@ const govCount = stats.jurisdictions.length;
     <li><a class="t" href="/guides/canada-study-permit-from-india/">Canada study permit from India</a><p class="small muted">Current official time, major-route comparisons and clean clock boundaries.</p></li>
     <li><a class="t" href="/guides/uk-spouse-visa-processing-time/">UK spouse and partner visas</a><p class="small muted">Outside, inside and private-life figures without blending different routes.</p></li>
     <li><a class="t" href="/guides/new-zealand-aewv-processing-time/">New Zealand AEWV timeline</a><p class="small muted">The visa’s 50% and 80% measures inside the employer-led sequence.</p></li>
-    <li><a class="t" href="/guides/how-norway-udi-waiting-times-work/">Norway UDI waiting times</a><p class="small muted">Nineteen dated, table-backed routes with monthly source history and no personalised-form guessing.</p></li>
+    <li><a class="t" href="/guides/how-norway-udi-waiting-times-work/">Norway UDI waiting times</a><p class="small muted">Nineteen preserved, dated routes with an explicit source-access warning and no personalised-form guessing.</p></li>
   </ul>
 
   {Object.entries(JURISDICTIONS).map(([code, jur]) => (
     <section>
       <h2><a href={`/${jur.slug}/`}>{jur.name}</a> <span class="muted small">— {jur.agency}</span></h2>
+      <SourceAvailabilityNotice source={[...services[code].values()][0]?.sourceMeta} />
       <ul class="grid">
         {publishedServices(code).map(svc => (
           <li>
@@ -79,7 +81,7 @@ const govCount = stats.jurisdictions.length;
               ? `${svc.records.length} applicant countries`
               : svc.isPercentileService
                 ? `50%: ${svc.percent50.value_raw} · 80%: ${svc.percent80.value_raw}`
-                : svc.records[0].value_raw} · data date {fmtDate(svc.latestEffective)}</span>
+                : svc.records[0].value_raw} · {svc.sourceUnavailable ? 'last recorded source date' : 'data date'} {fmtDate(svc.latestEffective)}</span>
           </li>
         ))}
       </ul>
