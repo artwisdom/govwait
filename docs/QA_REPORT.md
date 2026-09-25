@@ -252,3 +252,46 @@ or revenue.
 - Boundary: no additional government-source refresh, Cloudflare deployment,
   IndexNow/Google request, npm/MCP publication, Registry/directory action,
   outreach, spend or account-setting change was used for Phase 6B validation.
+
+## Phase 6C MCP 0.1.1 final-data preflight — 2026-09-24 EDT
+
+- Data sync: package-owned `latest.json`, `history.json` and
+  `forward-looking.json` are byte-identical to the production exports generated
+  at `2026-09-25T01:25:45.254Z`. SHA-256 values are respectively
+  `840e3e4c21a977fe11699041218d2f63c9f2e2fb7f46ecaaeca317050f1c7bce`,
+  `d72cb0c363711e68c7ee3b4989a3273e56ae3cc251c7dec5bf31aead2635ed3a`
+  and `17038d17227416defc4b99daccca66f8bbf6f6555077c3ffc2a162a0dd83bbdf`.
+- Dataset receipt: 2,316 retained routes, 2,297 active-source routes, 19
+  source-unavailable routes, 6,617 history observations and 7,229 forward
+  cohorts. UDI remains unavailable from 2026-09-04, last verified on
+  `2026-09-01T17:38:38.623Z`, and its retained 45 days cannot be returned as a
+  current value.
+- Package gate: Node 24.11.1 ran the 20-assertion direct smoke suite, 27/27 local
+  release checks, exact nine-file allow-list audit and 21-assertion isolated
+  smoke suite. The artifact contains no database, cache, log, source, test,
+  credential or parent-repository dependency; all three embedded hashes match.
+- Independent install: a new temporary project installed the exact local tarball
+  through npm, found zero vulnerabilities, loaded its package-owned data and
+  passed all 21 smoke assertions.
+- Artifact receipt: `govwait-mcp-0.1.1.tgz` is 162,492 bytes packed and
+  6,562,302 bytes unpacked. SHA-256 is
+  `2a76788354551b12c50f452b03e39de454cb21119b9baee990863d890ebcbe28`;
+  its sidecar matches.
+- Licensing: `SEE LICENSE IN LICENSE` points to Apache 2.0 terms restricted to
+  GovWait-owned software code. `DATA-NOTICE.md` continues to exclude bundled
+  government-source data and grants no additional rights.
+- Registry preflight: checksum-verified official `mcp-publisher` 1.8.1 initially
+  rejected the draft description for exceeding the current 100-character limit.
+  The description was reduced to 94 characters without changing the package,
+  the limit was added to the local regression checks, and the live official
+  validator then reported `server.json` valid.
+- External state at preflight: npm lists only `0.1.0` and `latest=0.1.0`; the
+  official MCP Registry returns HTTP 200 for active/latest `0.1.0`, HTTP 404 for `0.1.1`, and
+  one exact-name search result. No commit, push, npm publication, Registry or
+  Glama update, token/workflow, directory submission, deployment, indexing
+  request, outreach, spend or account change occurred.
+- GitHub-only handoff: under a later explicit gate, this exact verified source
+  candidate and its receipts were committed and pushed to `main`. The release
+  tarball stayed ignored and local. The changed paths are outside the
+  `deploy-site` push filter; npm, Registry, Glama and production remain separate
+  gates.

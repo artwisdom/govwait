@@ -4,7 +4,7 @@
   "dataset_url": "https://govwait.com/data/",
   "methodology_url": "https://govwait.com/about/",
   "data_reuse_url": "https://govwait.com/data-license/",
-  "dataset_generated_at": "2026-09-25T00:52:27.787Z",
+  "dataset_generated_at": "2026-09-25T01:25:45.254Z",
   "statistics": {
     "retained_routes": 2316,
     "active_source_routes": 2297,
@@ -33,15 +33,15 @@
   "files": {
     "latest.json": {
       "bytes": 2013570,
-      "sha256": "3ccc81c162d8e1b1eb1a3b55c7c595f22dfafd1461aa37ad0c228edb810ce76c"
+      "sha256": "840e3e4c21a977fe11699041218d2f63c9f2e2fb7f46ecaaeca317050f1c7bce"
     },
     "history.json": {
       "bytes": 2187246,
-      "sha256": "1c454049cd47965b9f8bc866a5228b6d5b16bbc10a9e6070b50ae5277ecebdb1"
+      "sha256": "d72cb0c363711e68c7ee3b4989a3273e56ae3cc251c7dec5bf31aead2635ed3a"
     },
     "forward-looking.json": {
       "bytes": 2330531,
-      "sha256": "c4aafe8e5ea67fefb23080ab44829ac7c5445bd93101b3e6bfb1b71272cf3191"
+      "sha256": "17038d17227416defc4b99daccca66f8bbf6f6555077c3ffc2a162a0dd83bbdf"
     }
   }
 }

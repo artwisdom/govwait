@@ -308,13 +308,46 @@ has advanced, and any deployment failure fails the parent refresh. actionlint
 1.7.12, 17/17 workflow assertions and current/stale exact-SHA execution tests pass.
 No additional source refresh was used to test this hardening.
 
+## Phase 6C MCP 0.1.1 release candidate (local preflight, 2026-09-24 EDT)
+
+The self-contained package now matches the exact production exports generated at
+`2026-09-25T01:25:45.254Z`: 2,316 retained routes (2,297 active-source and 19
+source-unavailable), 6,617 history observations and 7,229 forward cohorts. The
+three package-owned export hashes exactly match `data/exports/`; UDI remains
+frozen at 19 routes with `current_value: null` and its 45-day value exposed only
+as a dated `last_verified_value`.
+
+`npm run prepare:rc` passed the 20-assertion direct smoke suite, 27/27 local
+metadata/licensing checks and a 21-assertion isolated package smoke suite. A
+separate real temporary `npm install` of the retained tarball passed the same 21
+assertions and reported zero vulnerabilities. The exact nine-file artifact is
+162,492 bytes packed / 6,562,302 bytes unpacked with SHA-256
+`2a76788354551b12c50f452b03e39de454cb21119b9baee990863d890ebcbe28`.
+
+The live official Registry validator exposed and then accepted a shortened
+94-character description; checksum-pinned `mcp-publisher` 1.8.1 now reports
+`server.json` valid, and the live limit is now a local regression check. npm
+still lists only `0.1.0` and `latest=0.1.0`; the official Registry returns HTTP
+200 for active/latest `0.1.0`, HTTP 404 for `0.1.1`, and one exact search result.
+Therefore 0.1.1 remains available and entirely unpublished.
+At that preflight checkpoint, no commit, push, npm publication,
+Registry/Glama/directory update, token/workflow, deployment, indexing request,
+outreach, spend or account change had occurred.
+
+The separately approved GitHub-only source gate then committed and pushed this
+verified 0.1.1 candidate and its audit records to `main`. The exact tarball and
+sidecar remained ignored and local. None of the changed paths match the
+`deploy-site` push filter, so this source handoff does not authorize or require a
+site deployment. npm, the official MCP Registry and Glama remain unchanged.
+
 ## Next step
 
 Do not run another source refresh merely to exercise the workflow: the next
 data-changing scheduled refresh will provide the first natural chained-deployment
-receipt. The next independent release gate is publishing the already-audited MCP
-0.1.1 source-state correction and then updating the official MCP Registry/Glama;
-npm publication and every directory update remain separately approved actions.
+receipt. The next independent release gate is publishing only the exact audited
+MCP 0.1.1 tarball to npm with interactive 2FA and verifying a clean public
+installation. The official MCP Registry and Glama updates remain later,
+separately approved actions.
 
 ## Open threads
 - US/AU/IE sources WAF-blocked to honest bots — owner-decision item (documented in DEPLOYMENT_GUIDE).

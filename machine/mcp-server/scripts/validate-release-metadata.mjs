@@ -37,6 +37,10 @@ const checks = [
   ["official registry ownership link", () => assert.equal(packageJson.mcpName, "io.github.artwisdom/govwait")],
   ["registry name matches package ownership link", () => assert.equal(serverJson.name, packageJson.mcpName)],
   ["registry version matches package", () => assert.equal(serverJson.version, packageJson.version)],
+  ["registry description fits live limit", () => {
+    assert.equal(typeof serverJson.description, "string");
+    assert.ok(serverJson.description.length > 0 && serverJson.description.length <= 100);
+  }],
   ["one package distribution", () => assert.equal(serverJson.packages?.length, 1)],
   ["npm identifier matches package", () => assert.equal(registryPackage?.identifier, packageJson.name)],
   ["npm version matches package", () => assert.equal(registryPackage?.version, packageJson.version)],

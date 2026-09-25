@@ -83,7 +83,8 @@ cd machine/mcp-server && npm ci && npm run verify
 node machine/api-conformance.mjs  # after a site build
 ```
 
-Local Node is 20.19.6 (Astro pinned to v4 for this reason; CI also pins Node 20).
+The Phase 6C MCP gate ran under local Node 24.11.1. The site remains deliberately
+on Astro 4 and CI continues to pin Node 20 until a separate runtime-upgrade phase.
 `sqlite3` CLI ≥3.35 required (dev machine has 3.51; ubuntu-latest runners have it).
 
 ## 5. Deployment state (production, live today)
@@ -345,6 +346,33 @@ Local Node is 20.19.6 (Astro pinned to v4 for this reason; CI also pins Node 20)
 - Public npm/MCP Registry remain on `govwait-mcp@0.1.0`; 0.1.1 publication,
   registry/directory updates, Google requests, outreach, spend and account changes
   remain separately gated. See `docs/INCIDENT_2026-09-04_UDI_SOURCE_CLOSURE.md`.
+
+### Phase 6C MCP 0.1.1 local release preflight (2026-09-24 EDT)
+
+- Synced the package to the exact production dataset generated at
+  `2026-09-25T01:25:45.254Z`: 2,316 retained routes, 6,617 history observations
+  and 7,229 forward cohorts. The three package data files are byte-identical to
+  the production exports, and UDI remains 19 unavailable routes with no current
+  value.
+- Direct, isolated and separate real-install MCP smoke suites passed (20, 21 and
+  21 assertions), as did 27/27 metadata/licensing checks, the exact nine-file
+  audit and a zero-vulnerability npm audit.
+- Retained local artifact:
+  `machine/mcp-server/release/govwait-mcp-0.1.1.tgz`, 162,492 bytes packed /
+  6,562,302 bytes unpacked, SHA-256
+  `2a76788354551b12c50f452b03e39de454cb21119b9baee990863d890ebcbe28`.
+- Checksum-verified official `mcp-publisher` 1.8.1 reports the corrected
+  94-character `server.json` description valid against the live service, and the
+  limit is now a local regression check. npm and the official Registry still
+  expose only active/latest 0.1.0; the exact 0.1.1 Registry endpoint returns HTTP
+  404.
+- At the preflight checkpoint this was a local candidate only. No commit, push,
+  npm publication, Registry/Glama/directory update, token or workflow,
+  deployment, indexing request, outreach, spending or account change occurred.
+- Under a later explicit owner gate, the same verified source candidate and
+  audit records were committed and pushed to `main`; the tarball and sidecar
+  remained ignored and local. These paths do not match the site's deployment
+  trigger. npm, Registry, Glama and production were not changed.
 
 ## 8. QA ritual before any push that touches pipeline or site
 
