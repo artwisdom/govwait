@@ -23,6 +23,9 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest # sqlite3 CLI preinstalled
+    outputs:
+      data_changed: ${{ steps.commit.outputs.data_changed }}
+      commit_sha: ${{ steps.commit.outputs.commit_sha }}
     steps:
       - uses: actions/checkout@v4
 
@@ -51,12 +54,15 @@ jobs:
           git add data/db.sqlite data/exports site/public/api
           if git diff --cached --quiet; then
             echo "data_changed=false" >> "$GITHUB_OUTPUT"
-            echo "No data changes this run." >> "$GITHUB_STEP_SUMMARY"
+            echo "commit_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+            echo "No data changes this run; deployment skipped." >> "$GITHUB_STEP_SUMMARY"
           else
             git commit -m "data: refresh $(date -u +%F)"
             git push
+            commit_sha="$(git rev-parse HEAD)"
             echo "data_changed=true" >> "$GITHUB_OUTPUT"
-            echo "Data refreshed and committed — deploy workflow will publish." >> "$GITHUB_STEP_SUMMARY"
+            echo "commit_sha=$commit_sha" >> "$GITHUB_OUTPUT"
+            echo "Data refreshed and committed as \`$commit_sha\`; the guarded deploy job will publish that exact revision." >> "$GITHUB_STEP_SUMMARY"
           fi
 
       - name: Diagnose failure into job summary
@@ -69,3 +75,15 @@ jobs:
             echo '```'
             echo "Failing line above names the source and the exact check/selector."
           } >> "$GITHUB_STEP_SUMMARY"
+
+  # A push made with GITHUB_TOKEN does not trigger another push workflow.
+  # Call the existing deployment workflow directly so a data-changing refresh
+  # cannot finish green unless its exact committed revision also deploys green.
+  deploy:
+    name: Deploy validated data commit
+    needs: refresh
+    if: ${{ needs.refresh.outputs.data_changed == 'true' }}
+    uses: ./.github/workflows/deploy.yml
+    with:
+      commit_sha: ${{ needs.refresh.outputs.commit_sha }}
+    secrets: inherit

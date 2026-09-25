@@ -181,7 +181,7 @@ or revenue.
   project-record changes. No commit, push, repository sync, Glama build or
   release, npm publication, IndexNow request, deployment or outreach occurred.
 
-## Phase 6A refresh-recovery candidate — 2026-09-24
+## Phase 6A pre-release recovery candidate — 2026-09-24
 
 - Live-source proof: one owner-approved local refresh completed all eight active
   Canada, UK and New Zealand sources. UDI was labeled collection-paused and no
@@ -211,6 +211,44 @@ or revenue.
   color schemes. The homepage overclaim found during QA was corrected from
   “current official” to “latest source-backed.” IndexNow selected 634 URLs in
   dry-run mode and sent no request.
-- Boundary: `git diff --check` is clean; no WAL/SHM file or 0.1.1 tarball remains.
+- Pre-release boundary at this checkpoint: `git diff --check` is clean; no
+  WAL/SHM file or 0.1.1 tarball remains.
   No commit, push, Actions run, deployment, IndexNow/Google submission, npm/MCP
   publication, directory action, outreach, spend or account change occurred.
+
+## Phase 6A production recovery and Phase 6B automation hardening — 2026-09-24 EDT
+
+- Release receipt: recovery commit `d31ee85c667360eb1c3ccc6702723399a951b1c0`
+  passed `deploy-site` run `36081326233` and deployed to
+  `01dac9d5.govwait.pages.dev`. The build and 634/634 SEO-sitemap gate passed;
+  IndexNow accepted 665 changed URLs with HTTP 200.
+- GitHub live-source proof: owner-approved `refresh-data` run `36081437732`
+  completed all eight active collectors, explicitly logged that UDI collection
+  was paused with prior records retained and no fetch attempted, passed 35 checks,
+  exported 2,316 routes / 6,617 observations / 7,285 forward estimates and created
+  bot commit `5a99df2904c493e79254e8af921ca5bef1980aec`.
+- Final release receipt: exact bot commit `5a99df2` passed manually dispatched
+  `deploy-site` run `36082052053` and deployed to
+  `81c691b0.govwait.pages.dev`. The final SEO audit passed at 2,112 HTML / 634
+  indexable / 634 sitemap URLs; IndexNow accepted 603 changed URLs with HTTP 200.
+- Public-edge proof: apex and immutable artifact hashes matched for representative
+  homepage and JSON files. Required pages returned HTTP 200, the removed Post
+  Study Work Visa page/API returned 404, `www` preserved the path in its 301,
+  all 634 sitemap URLs were unique, and the removed route was absent.
+- Preservation proof: public JSON/CSV exposed eight active sources and UDI as the
+  one `source_unavailable` source since 2026-09-04. UDI remained exactly 19 latest
+  rows and 19 history rows with zero post-closure rows and its last successful
+  verification frozen at `2026-09-01T17:38:38.623Z`. The active Canada example
+  showed a fresh 2026-09-25 GovWait verification.
+- Workflow root cause: GitHub suppresses push-triggered workflow chaining for
+  commits made by its built-in token. Phase 6B makes `deploy-site` reusable and
+  calls it only when `refresh` emits `data_changed=true`, passing the exact commit
+  SHA. The deploy job verifies both checkout and current `main`, rejects stale
+  revisions, ignores a duplicate bot-push event, and propagates deployment failure
+  to the parent refresh.
+- Workflow QA: actionlint 1.7.12 passed both workflows; YAML parsing and 17/17
+  semantic assertions passed; the exact revision script accepted current `main`
+  and refused the stale Phase 6A pre-refresh commit; `git diff --check` passed.
+- Boundary: no additional government-source refresh, Cloudflare deployment,
+  IndexNow/Google request, npm/MCP publication, Registry/directory action,
+  outreach, spend or account-setting change was used for Phase 6B validation.

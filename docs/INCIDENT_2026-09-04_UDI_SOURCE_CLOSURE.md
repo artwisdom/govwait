@@ -3,7 +3,10 @@
 **Incident start:** 2026-09-04
 
 **Recovery candidate verified locally:** 2026-09-24
-**Production status:** Not yet released; the last verified production snapshot remains live
+
+**Production recovery released:** 2026-09-24 EDT (2026-09-25 UTC)
+
+**Production status:** Resolved; refresh and final public deployment verified
 
 ## Summary
 
@@ -33,9 +36,16 @@ treated as actively fetchable, so one permanently closed source prevented all
 healthy sources from refreshing. The data model also lacked an explicit retained
 source state.
 
+A second internal issue appeared during the production proof. The refresh workflow
+committed data with GitHub's built-in `GITHUB_TOKEN` and assumed that push would
+start `deploy-site`. GitHub suppresses ordinary workflow chaining from that token,
+so the data commit succeeded but no push-triggered deployment began. The Phase 6A
+operator noticed the missing run and dispatched the exact commit manually; no
+stale data was mislabeled as deployed.
+
 ## Containment and recovery
 
-The recovery candidate:
+The released recovery:
 
 1. Adds an explicit `ACTIVE_SOURCES` registry containing only the eight currently
    collectable sources.
@@ -48,6 +58,11 @@ The recovery candidate:
    JSON, CSV, OpenAPI, pages and the MCP server.
 6. Keeps active-source coverage and freshness failures blocking; the change does
    not make healthy sources optional.
+7. Calls the existing deployment workflow directly after a data-changing refresh,
+   pins it to the exact bot commit, refuses a stale commit if `main` has moved,
+   skips deployment on no-change runs, guards against a duplicate bot-push run,
+   and propagates deployment failure to the parent refresh. It requires no personal
+   token, new secret or broader account permission.
 
 ## Local verification evidence
 
@@ -70,14 +85,35 @@ The live INZ selector now lists 132 visas and no longer lists Post Study Work Vi
 The two corresponding percentile entities were deactivated without deleting their
 history or inventing a replacement route.
 
-## Remaining release boundary
+## Production recovery evidence
 
-This document records a local candidate only. No commit, push, GitHub Actions run,
-Cloudflare deployment, IndexNow request, Google indexing request, npm publication,
-MCP Registry update, directory submission, outreach, paid action or account change
-is part of the recovery verification.
+- Recovery commit `d31ee85c667360eb1c3ccc6702723399a951b1c0` deployed green in
+  `deploy-site` run `36081326233` to `01dac9d5.govwait.pages.dev`; its blocking
+  build/SEO gate passed and IndexNow accepted 665 changed URLs with HTTP 200.
+- Manual proof run `36081437732` completed all eight active sources, logged
+  `COLLECTION PAUSED — prior records retained; no fetch attempted` for UDI, passed
+  all 35 checks, exported the verified counts above and created data commit
+  `5a99df2904c493e79254e8af921ca5bef1980aec`.
+- Because the built-in token suppressed the expected push-triggered run, the exact
+  bot commit was deployed manually in run `36082052053` to
+  `81c691b0.govwait.pages.dev`. The final SEO audit passed at 2,112 HTML / 634
+  indexable / 634 sitemap URLs, and IndexNow accepted 603 changed URLs with HTTP
+  200.
+- `govwait.com` matched that immutable artifact byte-for-byte for representative
+  HTML and JSON. Homepage, Norway, retained UDI, and active Canada pages returned
+  HTTP 200; the removed Post Study Work Visa page/API returned 404; the sitemap
+  contained 634 unique URLs; and the path-preserving `www` redirect returned 301.
+- Public API/CSV verification found eight active sources, one unavailable source,
+  exactly 19 retained UDI current/history rows, no post-closure UDI history, and an
+  unchanged UDI last-successful-verification timestamp.
+- Phase 6B workflow hardening passed actionlint 1.7.12, 17/17 structural assertions,
+  and an executable revision-gate test that accepted current `main` and refused the
+  stale pre-refresh commit.
 
-Before production release, push the exact verified candidate, allow the normal
-deployment gates to pass, and run one manual `refresh-data` workflow to prove the
-same behavior on GitHub's runner. Publishing MCP `0.1.1` remains a later, separate
-approval.
+## Current boundary
+
+The site/API recovery and refresh-to-deploy hardening are released. Public npm and
+MCP Registry consumers remain on the previously verified `govwait-mcp@0.1.0`;
+publishing the already-audited `0.1.1` source-state behavior remains a later,
+separate approval. No Google indexing request, directory update, outreach, paid
+action or account-setting change was part of this recovery.

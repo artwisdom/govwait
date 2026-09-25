@@ -1,8 +1,8 @@
 # HANDOFF 01 — Project State & Technical Deep Dive
 
-_Everything a coding agent needs to operate GovWait. Current as of 2026-09-24;
-production remains on commit `562ee32`, while Phase 6A refresh recovery is a
-locally verified, uncommitted candidate._
+_Everything a coding agent needs to operate GovWait. Current as of 2026-09-24 EDT;
+production serves data commit `5a99df2`, Phase 6A recovery is publicly verified,
+and Phase 6B hardens the validated refresh-to-deploy chain._
 
 ## 1. The one-sentence architecture
 
@@ -13,9 +13,9 @@ rebuilt by GitHub Actions on a Tue+Fri cron; validation failures stop publicatio
 ```
 pipeline/run.js ──▶ data/db.sqlite ──▶ data/exports/{latest,history,forward-looking,stats}.json
                                             │
-                    pipeline/build-api.js ──▶ site/public/api/v1/** (2,613 candidate files)
+                    pipeline/build-api.js ──▶ site/public/api/v1/** (2,613 files)
                                             │
-                    site/ (Astro 4) ───────▶ site/dist (2,112 candidate HTML pages)
+                    site/ (Astro 4) ───────▶ site/dist (2,112 HTML pages)
                                             │
                     machine/mcp-server ─────▶ stdio MCP for AI agents (reads exports)
 ```
@@ -46,8 +46,8 @@ pipeline/run.js ──▶ data/db.sqlite ──▶ data/exports/{latest,history,
 | `machine/openapi.yaml` | OpenAPI 3.1, copied into the API at build | Keep in sync with build-api.js |
 | `machine/api-conformance.mjs` | Checks every built API file against the spec's shapes | Run in QA |
 | `machine/mcp-server/` | TypeScript stdio MCP server, 4 tools, reads exports. Unpublished 0.1.1 candidate explicitly separates Norway's last-verified snapshot from active-source current values | `npm run verify` performs isolated package QA; publication is separate |
-| `.github/workflows/refresh.yml` | Cron Tue+Fri 14:00 UTC: pipeline → build-api → commit data diff. Failure diagnosis into job summary | |
-| `.github/workflows/deploy.yml` | On push (site/data/openapi/IndexNow paths): build → SEO audit → Cloudflare Pages → IndexNow notification after successful production deploy | Requires scoped Cloudflare token in GitHub |
+| `.github/workflows/refresh.yml` | Cron Tue+Fri 14:00 UTC: pipeline → build-api → guarded data commit. No change skips deployment; a change calls the reusable deploy workflow with the exact commit SHA, and deploy failure fails the parent refresh | Never add a personal token; keep exact-SHA output and `data_changed` guard |
+| `.github/workflows/deploy.yml` | Push/manual/reusable entry points: exact-refresh-SHA/still-main guard → build → SEO audit → Cloudflare Pages → IndexNow after successful production deploy. Bot push events are ignored as a duplicate safeguard | Requires scoped Cloudflare token in GitHub |
 | `site/scripts/seo-audit.mjs` | CI gate for unique metadata, canonicals, H1, JSON-LD, internal links, intentional noindex, exact sitemap membership, honest child lastmod, robots and llms.txt | Run after every site build |
 | `handoff/` | This package | |
 
@@ -65,17 +65,12 @@ recipe), `RISK_REGISTER.md`, `DECISIONS.md` (51 numbered judgment calls), `STATE
 Normalization: days×1, weeks×7, months×30.44; INZ working-day counts are preserved as working days and labeled in `unit_original`; `value_raw` is always preserved.
 Statuses: `ok` (numeric), `unavailable` ("No processing time available"),
 `insufficient_data` ("Not enough data") — nulls are displayed honestly as official facts.
-Production has 2,318 routes / 9 sources / 4 governments and includes
-`ircc-forward-looking` (28 entities; 28 headline + 3,601 cohort rows in the
-current snapshot). INZ and Canadian passports use unstamped-source change
+Production has 2,316 retained routes / 9 registered sources / 4 governments,
+6,617 public history observations and 7,285 forward-estimate rows. Eight sources
+are active. Norway contributes 19 preserved UDI entities and observations under
+`source_unavailable`; its last successful verification is frozen at
+`2026-09-01T17:38:38.623Z`. INZ and Canadian passports use unstamped-source change
 detection; IRCC forward-looking uses the source's monthly publication date.
-Norway contributes 19 UDI entities; the full production dataset has 4,346
-observations. UDI supplies its own page update date.
-
-The uncommitted Phase 6A candidate has 2,316 retained routes and 6,617 public
-history observations. Eight sources are active; UDI is retained as
-`source_unavailable` with 19 unchanged routes and observations. These candidate
-counts are not production evidence.
 
 ## 4. Commands (all verified working)
 
@@ -83,7 +78,7 @@ counts are not production evidence.
 node pipeline/run.js              # uses cache — safe offline
 node pipeline/run.js --refresh    # live fetch (polite; INZ makes 133 listed lookups, ~7 min total)
 node pipeline/build-api.js        # exports -> static API files
-cd site && npm ci && npm run build && npm run audit:seo  # candidate: 2,112 HTML; 634 indexable/sitemap
+cd site && npm ci && npm run build && npm run audit:seo  # 2,112 HTML; 634 indexable/sitemap
 cd machine/mcp-server && npm ci && npm run verify
 node machine/api-conformance.mjs  # after a site build
 ```
@@ -104,11 +99,12 @@ Local Node is 20.19.6 (Astro pinned to v4 for this reason; CI also pins Node 20)
   `CONTACT_EMAIL=contact@govwait.com`, `PUBLIC_GA4_MEASUREMENT_ID=G-6ZJ7J3526N`,
   and `CLOUDFLARE_ACCOUNT_ID`. The encrypted
   `CLOUDFLARE_API_TOKEN` secret has Pages write permission only.
-- refresh-data cron remains configured, but production refreshes beginning
-  2026-09-04 fail closed when UDI's robots endpoint returns HTTP 403. They export
-  nothing and do not alter production. The Phase 6A local candidate removes UDI
-  from active collection while retaining its evidence; a manual GitHub workflow
-  proof remains required after an approved push. deploy-site remains green.
+- refresh-data cron is active Tue+Fri 14:00 UTC. Phase 6A proof run `36081437732`
+  refreshed all eight active Canada/UK/New Zealand sources, skipped UDI without a
+  request, passed 35 checks and created `5a99df2`. Phase 6B calls the existing
+  reusable deploy job only after a validated data change, pins that exact commit,
+  refuses stale `main`, and propagates deploy failures. No-change runs do not
+  deploy and no personal token/new secret is used.
 - Cloudflare migration: production cutover, explicit allow-crawler policy, and
   GitHub-driven deployment are complete. GitHub Pages is disabled and the unused
   original token is deleted. Phase 4 commit `8a512aa` deployed in green run
@@ -319,26 +315,36 @@ Local Node is 20.19.6 (Astro pinned to v4 for this reason; CI also pins Node 20)
   automation/bypass tokens. No publishing token, trusted publisher, other
   directory submission or deployment was created.
 
-### Phase 6A refresh-recovery candidate (local only, 2026-09-24)
+### Phase 6A production recovery and Phase 6B hardening (2026-09-24 EDT)
 
 - UDI is absent from `ACTIVE_SOURCES` and retained under a dated
   `source_unavailable` policy. The orchestrator never calls its collector.
-- One approved live local refresh completed all eight active Canada, UK and New
-  Zealand sources. A before/after database comparison found all 19 UDI entities
-  and observations unchanged, zero new or missing rows, and no advanced UDI
-  robots/verification timestamp.
+- Local verification and GitHub proof run `36081437732` completed all eight active
+  Canada, UK and New Zealand sources. The GitHub log explicitly recorded UDI as
+  collection-paused with prior records retained and no fetch attempted. All 19
+  UDI entities and observations remain unchanged, with no post-closure history or
+  advanced robots/verification timestamp.
 - The official INZ selector returned 132 visas and no Post Study Work Visa. Its
   two p50/p80 current entities were deactivated; their history was not deleted.
-- Candidate output: 2,316 retained routes; 6,617 public history observations;
+- Production output: 2,316 retained routes; 6,617 public history observations;
   7,285 forward estimates; 2,112 HTML pages; 634 indexable/sitemap URLs; and
   2,613 conforming API files.
 - Acceptance: 35/35 pipeline checks; 15/15 tests; site/SEO and API conformance;
   unpublished MCP 0.1.1 direct and isolated smoke tests; exact package allow-list
   and data hashes. The MCP returns Norway's 45 days only as
   `last_verified_value`, with `current_value: null`.
-- No commit, push, Actions run, deployment, IndexNow/Google request, npm/MCP
-  publication, directory submission, outreach, paid action or account change has
-  occurred. See `docs/INCIDENT_2026-09-04_UDI_SOURCE_CLOSURE.md`.
+- Recovery commit `d31ee85` deployed green in run `36081326233`. The live proof
+  created bot commit `5a99df2`, which final run `36082052053` deployed to
+  `81c691b0.govwait.pages.dev`; the 634/634 SEO audit passed and IndexNow accepted
+  603 changed URLs with HTTP 200. Apex/artifact parity, source-state JSON/CSV,
+  sitemaps, removed-route 404s and the path-preserving redirect passed publicly.
+- The proof exposed GitHub's built-in-token workflow-chain suppression. Phase 6B
+  makes `deploy-site` reusable and conditionally calls it from `refresh-data` with
+  the exact bot SHA. actionlint 1.7.12, 17/17 structural assertions, current-main
+  acceptance and stale-SHA refusal all pass. No second source refresh was run.
+- Public npm/MCP Registry remain on `govwait-mcp@0.1.0`; 0.1.1 publication,
+  registry/directory updates, Google requests, outreach, spend and account changes
+  remain separately gated. See `docs/INCIDENT_2026-09-04_UDI_SOURCE_CLOSURE.md`.
 
 ## 8. QA ritual before any push that touches pipeline or site
 

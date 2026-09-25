@@ -35,19 +35,22 @@ All dependencies install locally (`node_modules` inside project). No sudo or mac
 - [x] Phase 5B npm and MCP Registry 0.1.0 release: public-source commit `ec284ef`; self-contained MCP data bundle, deterministic provenance hashes, exact nine-file npm allow-list with a scoped Apache 2.0 code licence and separate data notice; verified public `govwait-mcp@0.1.0`; interactive 2FA required and token publishing disallowed; clean-install smoke verification; active official Registry listing `io.github.artwisdom/govwait` with exact npm ownership linkage
 - [x] Phase 5C Glama build preflight: the public GovWait listing is claimed by GitHub owner `artwisdom`; Auto-Release is off; build-only test `01a0cc04-a9e8-7f71-9017-f1be4e441241` succeeded against commit `64db085` and exposed all four MCP tools; no Glama release was created
 - [x] Phase 5C Glama repository-readiness candidate: this revision makes the root Apache 2.0 terms machine-detectable, preserves the code-only/data-exclusion boundary in `SOFTWARE-SCOPE.md`, and adds live-schema-valid `glama.json`; remote licence detection must be verified after GitHub publication, while Glama sync/build/release and deployment remain separate owner gates
-- [x] Phase 6A refresh-recovery candidate (local only): UDI is retained as `source_unavailable` and excluded from active collection; one live local refresh completed the eight healthy Canada/UK/New Zealand sources; all 19 UDI records remained byte-for-byte append-only; official removal of Post Study Work Visa deactivated only its two current INZ metrics; full pipeline/site/API/MCP verification passed. Commit, push, Actions, deployment and discovery remain unapproved.
+- [x] Phase 6A production recovery: UDI is retained as `source_unavailable` and excluded from active collection; the GitHub proof refreshed all eight healthy Canada/UK/New Zealand sources without requesting UDI, preserved all 19 UDI records append-only, and deployed final data commit `5a99df2` in run `36082052053` to `81c691b0.govwait.pages.dev` with 603-URL IndexNow HTTP 200 and public-edge parity.
+- [x] Phase 6B refresh-to-deploy hardening: a data-changing refresh calls the existing deploy workflow exactly once as a reusable job, pins the exact bot commit, refuses stale-main deployment, skips no-change runs, guards against duplicate bot-push deployment and propagates deployment failure without adding a personal token or secret.
 
-## Deployment status (verified through 2026-09-08)
+## Deployment status (verified through 2026-09-24 EDT)
 - Repo LIVE: https://github.com/artwisdom/govwait (public, main)
 - Domain: `govwait.com` registered in Cloudflare Registrar; auto-renew and registrar lock enabled
 - Cloudflare Pages: project `govwait` live; `govwait.com` and `www.govwait.com` active over HTTPS
 - Email: `contact@govwait.com` routing active through Cloudflare Email Routing
 - AI crawler policy: listed search/citation crawlers allowed; Managed robots.txt off (see `docs/CLOUDFLARE_CRAWL_POLICY.md`)
-- GitHub deployment: Phase 5A commit `fd7ba67` deployed green in `deploy-site` run `34300806761` (`ca3bad6a.govwait.pages.dev`); the blocking 2,110-page production build and 641/641 SEO-sitemap audit passed before Cloudflare publication
+- GitHub deployment: current production data commit `5a99df2` deployed green in `deploy-site` run `36082052053` (`81c691b0.govwait.pages.dev`); the blocking 2,112-page build and 634/634 SEO-sitemap audit passed before Cloudflare publication, and the apex matched the artifact byte-for-byte on representative HTML/JSON
 - GitHub Pages: disabled; Cloudflare Pages is the sole production host
-- refresh-data workflow: ACTIVE; cron Tue+Fri 14:00 UTC. The 2026-09-04 run failed
-  closed on UDI `robots.txt` HTTP 403 and exported nothing; production still serves
-  the last verified committed snapshot.
+- refresh-data workflow: ACTIVE; cron Tue+Fri 14:00 UTC. Phase 6A proof run
+  `36081437732` refreshed all eight active Canada/UK/New Zealand sources, skipped
+  UDI without a request, passed 35 checks and created `5a99df2`. Phase 6B directly
+  calls the reusable deploy workflow only after a validated data change, with an
+  exact-SHA/still-main gate and parent-run failure propagation.
 - SITE_URL repo variable = https://govwait.com
 - Repository variables: `SITE_URL`, `CONTACT_EMAIL`, `PUBLIC_GA4_MEASUREMENT_ID`, and `CLOUDFLARE_ACCOUNT_ID` set
 - Repository secret: scoped `CLOUDFLARE_API_TOKEN` set (Pages write only)
@@ -72,8 +75,8 @@ All dependencies install locally (`node_modules` inside project). No sudo or mac
   engines on 2026-08-23. Google re-read it as a **Sitemap index / Success**; Bing
   accepted it and currently reports **Submitted / Processing**. The public sitemap
   independently returns HTTP 200 with `application/xml`.
-- Discoverability audit: the site now has 639 intentionally indexable pages and
-  639 matching sitemap URLs across separate hubs/Canada/UK/New Zealand/Norway children. Another
+- Discoverability audit: the site now has 634 intentionally indexable pages and
+  634 matching sitemap URLs across separate hubs/Canada/UK/New Zealand/Norway children. Another
   1,464 official no-value applicant pages stay live and crawlable with
   `noindex, follow` until they gain a numeric value. A blocking CI audit protects
   metadata, canonicals, internal links, structured data, robots/llms policy,
@@ -82,12 +85,10 @@ All dependencies install locally (`node_modules` inside project). No sudo or mac
 - Canonical host: a live Cloudflare 301 sends `www` paths and queries to the
   matching apex URL.
 - Current discovery notifications: the root sitemap already registered with Google
-  and Bing advertises five child sitemaps containing 75 hub/editorial/report/Canada-service
-  URLs, 443 Canada applicant-country URLs, 77 UK URLs, 25 New Zealand URLs, and
-  19 Norway URLs. Phase 4B production run `34176619821` notified IndexNow of 645
-  affected public/discovery URLs and received HTTP 200. No manual Google request
-  was made for Phase 4B because its four target URLs were already discovered in
-  Search Console. Google previously accepted the owner-approved Critical Purpose
+  and Bing advertises five child sitemaps containing 634 unique current URLs. The
+  final Phase 6A production run `36082052053` notified IndexNow of 603 changed
+  public/discovery URLs and received HTTP 200. No manual Google request was made
+  for Phase 6A. Google previously accepted the owner-approved Critical Purpose
   Visitor Visa guide, Canada issue and New Zealand 2021 Resident Visa guide crawl
   requests. These
   are discovery/submission receipts, not proof of indexing, ranking, traffic,
@@ -277,13 +278,13 @@ That command sends `publish_requires_tfa=true` and
 automation/bypass tokens from publishing this package. No trusted publisher is
 configured.
 
-## Phase 6A local recovery candidate (verified 2026-09-24)
+## Phase 6A production recovery (verified 2026-09-24 EDT / 2026-09-25 UTC)
 
 The UDI source is closed to automated collection from 2026-09-04 under the
-existing no-bypass policy. The candidate introduces an explicit eight-source
+existing no-bypass policy. The release introduces an explicit eight-source
 active registry and retains UDI's 19 routes under `source_unavailable`, with its
-last successful verification frozen. A live local refresh completed Canada, UK
-and New Zealand without requesting UDI. The final local dataset contains 2,316
+last successful verification frozen. GitHub proof run `36081437732` completed
+Canada, UK and New Zealand without requesting UDI. The production dataset contains 2,316
 retained routes, 6,617 public history observations and 7,285 forward estimates.
 
 All 19 UDI entities and observations match the pre-refresh database exactly.
@@ -291,26 +292,35 @@ The source's robots check and verification evidence did not advance. The current
 INZ selector legitimately removed Post Study Work Visa, so its two current
 percentile entities were deactivated while append-only history remained intact.
 
-Local acceptance is green: 35 pipeline checks, 15 tests, 2,112 HTML pages,
+Acceptance is green: 35 pipeline checks, 15 tests, 2,112 HTML pages,
 634/634 SEO-sitemap parity, 2,613 conforming API files, and the unpublished MCP
-0.1.1 direct/isolated package suite. No commit, push, workflow, deployment,
-IndexNow/Google request, npm/MCP publication, directory submission, outreach,
-paid action or account change occurred.
+0.1.1 direct/isolated package suite. Recovery commit `d31ee85` deployed in run
+`36081326233`; the proof created data commit `5a99df2`, which deployed in final
+run `36082052053` to `81c691b0.govwait.pages.dev`. IndexNow accepted 603 changed
+URLs with HTTP 200, and public-edge HTML/JSON, source-state, sitemap, redirect and
+removed-route checks passed.
+
+The proof also exposed a GitHub automation gap: a bot push made with
+`GITHUB_TOKEN` does not start a second push workflow. Phase 6B makes `deploy-site`
+reusable and calls it only when the refresh job reports a data change. The call
+passes the exact commit SHA; deployment refuses it if checkout differs or `main`
+has advanced, and any deployment failure fails the parent refresh. actionlint
+1.7.12, 17/17 workflow assertions and current/stale exact-SHA execution tests pass.
+No additional source refresh was used to test this hardening.
 
 ## Next step
 
-The next bounded gate is the Phase 6A production recovery release: commit and
-push the exact candidate, let the existing deploy/IndexNow workflow run, then
-manually run `refresh-data` once to prove recovery on GitHub's runner and verify
-the public source-state receipts. Publishing MCP 0.1.1, adding another source and
-all other directory/discovery actions remain separate approvals.
+Do not run another source refresh merely to exercise the workflow: the next
+data-changing scheduled refresh will provide the first natural chained-deployment
+receipt. The next independent release gate is publishing the already-audited MCP
+0.1.1 source-state correction and then updating the official MCP Registry/Glama;
+npm publication and every directory update remain separately approved actions.
 
 ## Open threads
 - US/AU/IE sources WAF-blocked to honest bots — owner-decision item (documented in DEPLOYMENT_GUIDE).
-- The 2026-09-04 scheduled refresh failed closed because `www.udi.no/robots.txt`
-  returned HTTP 403 to the GitHub runner. Nothing was exported or published; the
-  last verified UDI values remain live. The local recovery is verified, but the
-  production workflow stays blocked until an approved push. Do not spoof a browser
-  UA, weaken the fail-closed rule or manually advance Norway's freshness.
+- UDI remains unavailable to automated collection after its 2026-09-04 robots
+  closure. Phase 6A resolved the shared-refresh blockage without bypassing access;
+  do not spoof a browser UA, re-add UDI to active sources, weaken the fail-closed
+  rule or manually advance Norway's freshness.
 - `npm audit` reports four Astro 4 build-toolchain advisories (1 moderate, 3 high). Production is pre-rendered static HTML/JSON on Cloudflare Pages—no Astro/Vite development or server runtime is exposed. Plan and test the major Astro 7/Node runtime upgrade before adding any dynamic server rendering; do not apply `npm audit fix --force` blindly.
 - IRCC forward-looking estimates and Norway UDI are production-verified. Finland/Sweden/Netherlands/Denmark follow. NZ passports remain blocked.
