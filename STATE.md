@@ -401,19 +401,21 @@ passed 27/27 and the direct smoke suite passed all 20 assertions.
 Glama Auto-Release remains off and the public Glama release remains `0.1.0`.
 The successful test now offers `Create Release`, but that action was not used.
 The preflight found that the root README still described 0.1.1 as unpublished;
-this checkout contains a local-only accuracy correction before any Glama 0.1.1
-release. No commit, push, Glama release, npm/Registry/directory publication,
-workflow, deployment, indexing request, outreach, spending or account change
-was made.
+under a later GitHub-only approval, commit
+`15224dbc37cf5eccca2b28719ca01746d3cd4a7e` pushed that accuracy correction,
+validator wording and preflight records to `origin/main`. GitHub confirmed the
+commit and returned no Actions runs for it. No Glama re-sync, build, release,
+npm/Registry/directory publication, workflow, deployment, indexing request,
+outreach, spending or account change was included in that push.
 
 ## Next step
 
 Do not run another source refresh merely to exercise the workflow: the next
 data-changing scheduled refresh will provide the first natural chained-deployment
-receipt. Before publishing Glama 0.1.1, commit and push the local README/record
-accuracy correction under a separate GitHub-only gate, then sync and repeat the
-same build-only test against that exact commit. Creating the Glama release remains
-a later, separate approval.
+receipt. Before publishing Glama 0.1.1, sync Glama from `origin/main`, confirm
+the synced commit contains correction commit `15224dbc`, repeat the corrected
+build-only test, and verify the updated public README in a separate non-release
+gate. Creating the Glama release remains a later, separate approval.
 
 ## Open threads
 - US/AU/IE sources WAF-blocked to honest bots — owner-decision item (documented in DEPLOYMENT_GUIDE).

@@ -370,10 +370,13 @@ or revenue.
   `compare_values`, `get_entity`, `get_latest_value` and `search_entities`.
 - Independent local check: metadata validation passed 27/27 and the direct MCP
   smoke suite passed all 20 assertions against the package-owned data.
-- Accuracy finding: Glama's public 0.1.0 release still renders the root README's
-  obsolete 0.1.0/unpublished-0.1.1 wording. A local-only README and validator
-  wording correction is prepared before any 0.1.1 Glama release.
+- Accuracy finding and correction: Glama's public 0.1.0 release still renders
+  the root README's obsolete 0.1.0/unpublished-0.1.1 wording. Under a later
+  GitHub-only approval, commit `15224dbc` pushed the corrected README, neutral
+  validator wording and these preflight records. GitHub confirmed the commit and
+  returned no Actions runs; Glama has not yet re-synced to it.
 - Boundary: Auto-Release remains off; the successful test offers `Create Release`
   but it was not used. The public Glama release remains 0.1.0. No commit, push,
   Glama release, npm/Registry/other-directory publication, workflow, deployment,
-  indexing request, outreach, spend or account change occurred.
+  indexing request, outreach, spend or account change occurred during the
+  preflight. The later GitHub-only push changed source records only.

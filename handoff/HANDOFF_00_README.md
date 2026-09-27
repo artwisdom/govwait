@@ -164,5 +164,6 @@ style preferences.
   `01a0e41a-3a3b-7107-b30a-e20beadfd22f` succeeded in 10.1 seconds with the
   audited 2,316-route dataset, protocol `2025-11-25`, version 0.1.1 and all four
   tools. Auto-Release remains off and public Glama release 0.1.0 remains
-  unchanged. A local README accuracy correction must be pushed, re-synced and
-  retested before a separately approved Glama 0.1.1 release.
+  unchanged. GitHub-only commit `15224dbc` pushed the README accuracy correction
+  without creating an Actions run. Glama must still be re-synced and retested
+  before a separately approved 0.1.1 release.

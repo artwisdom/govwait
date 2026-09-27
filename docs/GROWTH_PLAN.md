@@ -208,8 +208,9 @@ first build exposed and avoided a package-data parity flaw. The corrected
 Glama-only compile step preserves the audited npm 0.1.1 data, and build-only test
 `01a0e41a-3a3b-7107-b30a-e20beadfd22f` passed in 10.1 seconds with 2,316 routes,
 protocol `2025-11-25` and all four tools. Auto-Release remains off and Glama's
-public release remains 0.1.0. A local root-README accuracy correction must be
-pushed, re-synced and retested before a separately approved 0.1.1 Glama release.
+public release remains 0.1.0. The root-README accuracy correction was pushed in
+GitHub-only commit `15224dbc`, and GitHub created no Actions runs. Glama must
+still be re-synced and retested before a separately approved 0.1.1 release.
 
 Measure accepted listings, earned links, referral visitors and returning users
 separately. A submitted URL, directory form or sent message is not indexing, a

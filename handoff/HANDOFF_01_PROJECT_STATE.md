@@ -424,9 +424,9 @@ on Astro 4 and CI continues to pin Node 20 until a separate runtime-upgrade phas
   version 0.1.1 and exposed all four expected tools.
 - Auto-Release remains off. The public Glama release remains 0.1.0 and the
   offered `Create Release` action was not used.
-- The root README still called 0.1.1 unpublished, so this checkout includes a
-  local-only accuracy correction. Commit/push, Glama re-sync/retest and release
-  remain separate approval gates.
+- GitHub-only commit `15224dbc` pushed the root-README accuracy correction and
+  supporting preflight records; GitHub created no Actions runs. Glama
+  re-sync/retest and release remain separate approval gates.
 
 ## 8. QA ritual before any push that touches pipeline or site
 

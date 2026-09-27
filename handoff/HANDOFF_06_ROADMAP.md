@@ -155,8 +155,9 @@ parity flaw. With the Glama-only compile step narrowed to `npm exec -- tsc`,
 final build-only test `01a0e41a-3a3b-7107-b30a-e20beadfd22f` succeeded in 10.1
 seconds with the exact audited 2,316-route dataset, version 0.1.1, protocol
 `2025-11-25` and all four tools. Auto-Release is off and the public Glama release
-remains 0.1.0. The root README accuracy fix is local only; push, re-sync/retest
-and release remain separate gates.
+remains 0.1.0. GitHub-only commit `15224dbc` pushed the root-README accuracy fix
+without creating an Actions run; Glama re-sync/retest and release remain
+separate gates.
 
 ## Phase R7 — Scale sources (Norway → Finland → Sweden → Denmark → Netherlands)
 
