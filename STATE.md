@@ -369,10 +369,10 @@ official Registry still returns active/latest 0.1.0 and HTTP 404 for exact 0.1.1
 
 Do not run another source refresh merely to exercise the workflow: the next
 data-changing scheduled refresh will provide the first natural chained-deployment
-receipt. The next independent release gate is committing and pushing only this
-verified npm publication receipt. Updating the official MCP Registry from 0.1.0
-to 0.1.1 remains a later, separately approved action; Glama remains another
-separate gate after that.
+receipt. The verified npm publication receipt is committed and pushed in
+`6d205cfa`; its documentation-only paths started no GitHub Actions runs. The next
+independent release gate is updating the official MCP Registry from 0.1.0 to
+0.1.1 under separate approval; Glama remains another separate gate after that.
 
 ## Open threads
 - US/AU/IE sources WAF-blocked to honest bots — owner-decision item (documented in DEPLOYMENT_GUIDE).
