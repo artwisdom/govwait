@@ -157,13 +157,11 @@ style preferences.
   publishing requires interactive 2FA and disallows automation/bypass tokens.
   No long-lived publishing token, trusted publisher, other directory submission
   or deployment was created.
-- Glama 0.1.1 is **build-preflight verified but not released**: the claimed
-  listing synced to exact commit `90e2d45`. The first test exposed and avoided a
-  data-parity flaw; the Glama-only build now compiles with `npm exec -- tsc` so
-  package data stays byte-aligned with npm 0.1.1. Final build-only test
-  `01a0e41a-3a3b-7107-b30a-e20beadfd22f` succeeded in 10.1 seconds with the
+- Glama 0.1.1 is **public/latest and verified**: after the first test exposed and
+  avoided a data-parity flaw, the Glama-only build was narrowed to
+  `npm exec -- tsc`. GitHub-only commits pushed the README correction without an
+  Actions run, and Glama re-synced to exact commit `c09342e9`. Final build-only
+  test `01a0e42d-b3cd-7f6c-b47e-ba64cf1fc293` succeeded in 12.5 seconds with the
   audited 2,316-route dataset, protocol `2025-11-25`, version 0.1.1 and all four
-  tools. Auto-Release remains off and public Glama release 0.1.0 remains
-  unchanged. GitHub-only commit `15224dbc` pushed the README accuracy correction
-  without creating an Actions run. Glama must still be re-synced and retested
-  before a separately approved 0.1.1 release.
+  tools. A separately confirmed action published that exact test as Glama 0.1.1;
+  0.1.0 remains in history and Auto-Release remains off.

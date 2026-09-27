@@ -412,7 +412,7 @@ on Astro 4 and CI continues to pin Node 20 until a separate runtime-upgrade phas
   update, source change, commit, push, deployment, indexing request, outreach,
   spending or account-setting change was included in this Registry-only gate.
 
-### Phase 6C Glama 0.1.1 release preflight (2026-09-27 EDT)
+### Phase 6C Glama 0.1.1 release (2026-09-27 EDT)
 
 - The claimed Glama listing synced to exact GitHub commit `90e2d45`.
 - The first build revealed that `npm run build` re-bundled newer site exports,
@@ -422,11 +422,14 @@ on Astro 4 and CI continues to pin Node 20 until a separate runtime-upgrade phas
   succeeded in 10.1 seconds, loaded 2,316 routes from dataset
   `2026-09-25T01:25:45.254Z`, negotiated MCP protocol `2025-11-25`, identified
   version 0.1.1 and exposed all four expected tools.
-- Auto-Release remains off. The public Glama release remains 0.1.0 and the
-  offered `Create Release` action was not used.
-- GitHub-only commit `15224dbc` pushed the root-README accuracy correction and
-  supporting preflight records; GitHub created no Actions runs. Glama
-  re-sync/retest and release remain separate approval gates.
+- GitHub-only commits `15224dbc` and `c09342e9` pushed the root-README accuracy
+  correction and records without creating an Actions run. Glama re-synced to
+  exact commit `c09342e9`; corrected build-only test
+  `01a0e42d-b3cd-7f6c-b47e-ba64cf1fc293` succeeded in 12.5 seconds with the same
+  audited dataset, version, protocol and all four tools.
+- Under a separate final confirmation, Glama published that exact test as
+  version 0.1.1 at `2026-09-27 15:29` EDT. It is marked latest, 0.1.0 remains in
+  history, the corrected README is public and Auto-Release remains off.
 
 ## 8. QA ritual before any push that touches pipeline or site
 

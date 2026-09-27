@@ -112,8 +112,7 @@ preview, so its status must still be monitored honestly.
 ### Phase 6C — 0.1.1 npm publication
 
 Status: **exact candidate verified, source pushed, and public npm package verified;
-official MCP Registry 0.1.1 is active/latest; Glama 0.1.1 build preflight passed
-but release remains separately gated**.
+official MCP Registry and Glama releases both expose 0.1.1 as active/latest**.
 
 - [x] Synchronize all three bundled files to production export generation
   `2026-09-25T01:25:45.254Z` and verify byte-for-byte SHA-256 equality.
@@ -155,11 +154,13 @@ but release remains separately gated**.
 - [x] Commit and push the root-README accuracy correction, neutral validator
   wording and preflight records as GitHub-only commit `15224dbc`. GitHub
   confirms the commit and no Actions runs were created.
-- [ ] Re-sync Glama from `origin/main`, confirm the synced commit contains
-  correction commit `15224dbc`, repeat the corrected build-only test and verify
-  the updated README before creating a Glama 0.1.1 release.
-- [ ] Create and publish the Glama 0.1.1 release only after another explicit
-  owner gate.
+- [x] Re-sync Glama to exact GitHub commit `c09342e9`, confirm it contains the
+  README correction, and pass corrected build-only test
+  `01a0e42d-b3cd-7f6c-b47e-ba64cf1fc293` in 12.5 seconds with the exact audited
+  2,316-route dataset, version 0.1.1, protocol `2025-11-25` and all four tools.
+- [x] Under a separate final owner confirmation, create and publish Glama 0.1.1
+  from that exact test. Glama marks it latest, retains 0.1.0 in history and
+  keeps Auto-Release off.
 
 Registry receipt: official 0.1.1 is active/latest with published timestamp
 `2026-09-27T16:37:58.861649Z`; search count is one and 0.1.0 history remains
@@ -170,24 +171,21 @@ spend or account-setting change occurred in this Registry-only gate.
 
 ## Phase 5C — no-cost discovery and earned links
 
-Status: **official Registry 0.1.1 active/latest; Glama listing claimed, public
-release 0.1.0, and 0.1.1 build preflight green; README accuracy fix is on GitHub
-and awaits Glama re-sync/retest**.
+Status: **official Registry 0.1.1 active/latest; Glama 0.1.1 public/latest from
+the corrected, byte-parity-safe build; Auto-Release remains off**.
 
 Priority order after Phase 5B:
 
 1. [x] Official MCP Registry — canonical machine-tool discovery is active/latest
    for `io.github.artwisdom/govwait@0.1.1`; version history preserves 0.1.0.
 2. [x] [Glama](https://glama.ai/mcp/servers/artwisdom/govwait) — public listing
-   claimed by GitHub owner `artwisdom`; Auto-Release is off and release 0.1.0 is
-   public. After syncing to exact commit `90e2d45`, the first test exposed a
-   data-parity flaw in `npm run build`; it was not released. The Glama-only step
-   now uses `npm exec -- tsc`, and final build-only test
-   `01a0e41a-3a3b-7107-b30a-e20beadfd22f` succeeded in 10.1 seconds with exact
-   audited 0.1.1 data, 2,316 routes, MCP `2025-11-25` and all four tools.
-   `Create Release` was not used. The preflight also found stale public README
-   wording; GitHub-only commit `15224dbc` pushed its correction without an
-   Actions run. Glama re-sync/retest and release remain separate gates.
+   claimed by GitHub owner `artwisdom`. The first 0.1.1 test exposed a
+   data-parity flaw in `npm run build` and was not released. After narrowing the
+   Glama-only step to `npm exec -- tsc`, pushing the README correction and
+   re-syncing to exact commit `c09342e9`, build-only test
+   `01a0e42d-b3cd-7f6c-b47e-ba64cf1fc293` passed in 12.5 seconds with the exact
+   audited 2,316-route data, MCP `2025-11-25` and all four tools. Glama 0.1.1 is
+   now public/latest, 0.1.0 remains in history and Auto-Release is off.
 3. [PulseMCP](https://www.pulsemcp.com/api) — confirm whether the official
    registry import already discovers GovWait before making a manual submission.
 4. Smithery — optional only if its current account/API and packaging requirements

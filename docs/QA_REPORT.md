@@ -344,7 +344,7 @@ or revenue.
   directory update, source change, commit, push, deployment, indexing request,
   outreach, spend or account-setting change was part of this Registry-only gate.
 
-## Phase 6C Glama 0.1.1 release preflight — 2026-09-27 EDT
+## Phase 6C Glama 0.1.1 release verification — 2026-09-27 EDT
 
 - Repository sync: the claimed Glama listing moved from last-known commit
   `8a368e6` to exact GitHub `main` commit
@@ -370,13 +370,15 @@ or revenue.
   `compare_values`, `get_entity`, `get_latest_value` and `search_entities`.
 - Independent local check: metadata validation passed 27/27 and the direct MCP
   smoke suite passed all 20 assertions against the package-owned data.
-- Accuracy finding and correction: Glama's public 0.1.0 release still renders
-  the root README's obsolete 0.1.0/unpublished-0.1.1 wording. Under a later
-  GitHub-only approval, commit `15224dbc` pushed the corrected README, neutral
-  validator wording and these preflight records. GitHub confirmed the commit and
-  returned no Actions runs; Glama has not yet re-synced to it.
-- Boundary: Auto-Release remains off; the successful test offers `Create Release`
-  but it was not used. The public Glama release remains 0.1.0. No commit, push,
-  Glama release, npm/Registry/other-directory publication, workflow, deployment,
-  indexing request, outreach, spend or account change occurred during the
-  preflight. The later GitHub-only push changed source records only.
+- Accuracy correction and final test: GitHub-only commits `15224dbc` and
+  `c09342e9` pushed the corrected README and records without creating an Actions
+  run. Glama re-synced to exact commit `c09342e9`; build-only test
+  [`01a0e42d-b3cd-7f6c-b47e-ba64cf1fc293`](https://glama.ai/mcp/servers/artwisdom/govwait/admin/dockerfile/tests/01a0e42d-b3cd-7f6c-b47e-ba64cf1fc293)
+  succeeded in 12.5 seconds with the same audited dataset, version, protocol and
+  four tools. The public listing renders the corrected 0.1.1 README.
+- Publication proof: after a separate final owner confirmation, Glama published
+  version 0.1.1 from that exact test at `2026-09-27 15:29` EDT. The Releases page
+  marks 0.1.1 latest, retains 0.1.0 in history and shows Auto-Release off.
+- Boundary: no npm or official Registry change, other-directory publication,
+  source change, commit, push, workflow, site deployment, indexing request,
+  outreach, spend or account-setting change occurred in the Glama-only gate.
