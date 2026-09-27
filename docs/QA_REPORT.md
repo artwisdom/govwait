@@ -314,8 +314,32 @@ or revenue.
   zero vulnerabilities, and the installed package loaded all 2,316 routes from
   its own data directory. All 21 MCP assertions passed, including active-source,
   source-unavailable, forward-looking, comparison, search and provenance checks.
-- Release boundary: exact official MCP Registry 0.1.0 remains HTTP 200,
-  active/latest; exact 0.1.1 remains HTTP 404. No Registry, Glama or other
-  directory update, source change, commit, push, token/workflow creation,
-  deployment, indexing request, outreach, spend or account-setting change was
-  part of this npm-only gate.
+- Release boundary: at that npm-only checkpoint, exact official MCP Registry
+  0.1.0 remained HTTP 200 and active/latest; exact 0.1.1 remained HTTP 404. No
+  Registry, Glama or other directory update, source change, commit, push,
+  token/workflow creation, deployment, indexing request, outreach, spend or
+  account-setting change was part of that gate.
+
+## Phase 6C official MCP Registry 0.1.1 verification — 2026-09-27 EDT
+
+- Publisher integrity: the official GitHub release remains
+  `mcp-publisher` 1.8.1, commit
+  `f52dc8525a441a3abf5fedc9912152d95af5aab1`. The downloaded Darwin arm64
+  archive matched its published SHA-256
+  `e45e520892460732a4bdf37255576415d4a53ec171f8b913faf15bb1aef7cb77`.
+- Preflight: the local validator passed 27/27 metadata checks; npm publicly
+  returned `govwait-mcp@0.1.1`, matching `mcpName`
+  `io.github.artwisdom/govwait`; the official live validator returned
+  `server.json is valid`. Exact Registry 0.1.1 was HTTP 404 before submission.
+- Publication: after interactive GitHub authentication, the official publisher
+  returned `Successfully published` for server
+  `io.github.artwisdom/govwait` version `0.1.1`.
+- Public proof: exact-version and `latest` endpoints return HTTP 200 with status
+  `active`, `isLatest: true`, and timestamps
+  `2026-09-27T16:37:58.861649Z`. Exact-name/latest search returns one result.
+  Version history returns both 0.1.1 and 0.1.0; the retained 0.1.0 record is
+  active with `isLatest: false`.
+- Cleanup and boundary: official publisher logout succeeded after verification.
+  No npm version, long-lived publishing token, workflow, Glama or other
+  directory update, source change, commit, push, deployment, indexing request,
+  outreach, spend or account-setting change was part of this Registry-only gate.

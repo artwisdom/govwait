@@ -1,9 +1,9 @@
 # HANDOFF 01 — Project State & Technical Deep Dive
 
-_Everything a coding agent needs to operate GovWait. Current as of 2026-09-25 EDT;
+_Everything a coding agent needs to operate GovWait. Current as of 2026-09-27 EDT;
 production serves data commit `5a99df2`, Phase 6A recovery is publicly verified,
 Phase 6B hardens the validated refresh-to-deploy chain, and the exact audited
-MCP 0.1.1 package is public on npm._
+MCP 0.1.1 package is public on npm and active/latest in the official Registry._
 
 ## 1. The one-sentence architecture
 
@@ -46,7 +46,7 @@ pipeline/run.js ──▶ data/db.sqlite ──▶ data/exports/{latest,history,
 | `site/src/pages/` | `index`, `[country]/index`, `[country]/[service]/index` (hub/forward page for CA; entity page for GB/NO; combined p50/p80 page for NZ), `[country]/[service]/[applicant]` (CA entity pages), `guides/*` (16 analyses), `reports/*` (4 jurisdiction baselines plus hub), trust/policy pages, `about`, `api-docs`, `404` | |
 | `machine/openapi.yaml` | OpenAPI 3.1, copied into the API at build | Keep in sync with build-api.js |
 | `machine/api-conformance.mjs` | Checks every built API file against the spec's shapes | Run in QA |
-| `machine/mcp-server/` | TypeScript stdio MCP server, 4 tools, reads exports. Public npm 0.1.1 explicitly separates Norway's last-verified snapshot from active-source current values | `npm run verify` performs isolated package QA; Registry and Glama updates remain separate |
+| `machine/mcp-server/` | TypeScript stdio MCP server, 4 tools, reads exports. Public npm 0.1.1 explicitly separates Norway's last-verified snapshot from active-source current values | `npm run verify` performs isolated package QA; official Registry 0.1.1 is active/latest; Glama remains separate |
 | `.github/workflows/refresh.yml` | Cron Tue+Fri 14:00 UTC: pipeline → build-api → guarded data commit. No change skips deployment; a change calls the reusable deploy workflow with the exact commit SHA, and deploy failure fails the parent refresh | Never add a personal token; keep exact-SHA output and `data_changed` guard |
 | `.github/workflows/deploy.yml` | Push/manual/reusable entry points: exact-refresh-SHA/still-main guard → build → SEO audit → Cloudflare Pages → IndexNow after successful production deploy. Bot push events are ignored as a duplicate safeguard | Requires scoped Cloudflare token in GitHub |
 | `site/scripts/seo-audit.mjs` | CI gate for unique metadata, canonicals, H1, JSON-LD, internal links, intentional noindex, exact sitemap membership, honest child lastmod, robots and llms.txt | Run after every site build |
@@ -392,10 +392,25 @@ on Astro 4 and CI continues to pin Node 20 until a separate runtime-upgrade phas
   A clean public-registry installation audited 96 packages with zero
   vulnerabilities, loaded 2,316 package-owned routes and passed all 21 smoke
   assertions.
-- The official MCP Registry remains active/latest at 0.1.0 and still returns
-  HTTP 404 for exact 0.1.1. No Registry/Glama/directory update, source change,
-  commit, push, workflow/token creation, deployment, indexing request, outreach,
-  spending or account-setting change was included in this npm-only release.
+- At the npm-only checkpoint, the official MCP Registry remained active/latest
+  at 0.1.0 and returned HTTP 404 for exact 0.1.1. No Registry/Glama/directory
+  update, source change, commit, push, workflow/token creation, deployment,
+  indexing request, outreach, spending or account-setting change was included in
+  that npm-only release.
+
+### Phase 6C official MCP Registry 0.1.1 receipt (2026-09-27 EDT)
+
+- Checksum-verified official `mcp-publisher` 1.8.1 revalidated and published only
+  `machine/mcp-server/server.json` for
+  `io.github.artwisdom/govwait@0.1.1` after interactive GitHub authentication.
+- Exact-version and `latest` endpoints return HTTP 200 with status `active`,
+  `isLatest: true`, and `publishedAt` `2026-09-27T16:37:58.861649Z`.
+  Exact-name/latest search returns one result.
+- Version history preserves both 0.1.1 and 0.1.0; 0.1.0 remains active with
+  `isLatest: false`. The publisher session was logged out after verification.
+- No npm version, long-lived publishing token, workflow, Glama/other-directory
+  update, source change, commit, push, deployment, indexing request, outreach,
+  spending or account-setting change was included in this Registry-only gate.
 
 ## 8. QA ritual before any push that touches pipeline or site
 

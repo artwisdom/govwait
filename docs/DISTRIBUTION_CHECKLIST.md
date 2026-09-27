@@ -112,7 +112,7 @@ preview, so its status must still be monitored honestly.
 ### Phase 6C — 0.1.1 npm publication
 
 Status: **exact candidate verified, source pushed, and public npm package verified;
-official MCP Registry and Glama updates remain separately gated**.
+official MCP Registry 0.1.1 is active/latest; Glama remains separately gated**.
 
 - [x] Synchronize all three bundled files to production export generation
   `2026-09-25T01:25:45.254Z` and verify byte-for-byte SHA-256 equality.
@@ -142,24 +142,28 @@ official MCP Registry and Glama updates remain separately gated**.
 - [x] Install `govwait-mcp@0.1.1` from the public registry in a clean temporary
   project. All 21 MCP assertions passed against 2,316 package-owned routes and
   npm audited 96 packages with zero vulnerabilities.
-- [ ] Update the official MCP Registry only after npm 0.1.1 is public and under a
-  later separate owner gate; update Glama only after another explicit gate.
+- [x] Under a later separate owner gate, publish only the validated 0.1.1
+  `server.json` with checksum-verified official `mcp-publisher` 1.8.1. Exact and
+  latest endpoints return active/latest 0.1.1, exact-name/latest search returns
+  one result, and version history preserves active 0.1.0 as non-latest.
+- [ ] Update Glama only after another explicit owner gate.
 
-Publication boundary: npm 0.1.1 is the only external change in this gate. The
-official Registry remains active/latest at 0.1.0 and exact 0.1.1 remains HTTP
-404. No Registry/Glama/directory update, source change, commit, push,
-token/workflow creation, deployment, indexing request, outreach, spend or
-account-setting change occurred.
+Registry receipt: official 0.1.1 is active/latest with published timestamp
+`2026-09-27T16:37:58.861649Z`; search count is one and 0.1.0 history remains
+active/non-latest. The publisher session was logged out after verification. No
+npm version, long-lived publishing token, workflow, Glama/other-directory
+update, source change, commit, push, deployment, indexing request, outreach,
+spend or account-setting change occurred in this Registry-only gate.
 
 ## Phase 5C — no-cost discovery and earned links
 
-Status: **official Registry active; Glama listing claimed and build-tested;
+Status: **official Registry 0.1.1 active/latest; Glama listing claimed and build-tested;
 repository-readiness fix remains local only**.
 
 Priority order after Phase 5B:
 
-1. [x] Official MCP Registry — canonical machine-tool discovery is active for
-   `io.github.artwisdom/govwait@0.1.0`.
+1. [x] Official MCP Registry — canonical machine-tool discovery is active/latest
+   for `io.github.artwisdom/govwait@0.1.1`; version history preserves 0.1.0.
 2. [x] [Glama](https://glama.ai/mcp/servers/artwisdom/govwait) — public listing
    claimed by GitHub owner `artwisdom`. Auto-Release is off. Build-only test
    `01a0cc04-a9e8-7f71-9017-f1be4e441241` succeeded in 57.4 seconds against

@@ -103,38 +103,40 @@ References:
 - [Official package-type and npm ownership rules](https://github.com/modelcontextprotocol/registry/blob/main/docs/modelcontextprotocol-io/package-types.mdx)
 - [Official Registry API](https://github.com/modelcontextprotocol/registry/blob/main/docs/reference/api/official-registry-api.md)
 
-## Verified npm release and unexecuted Registry action
+## Verified npm and official Registry 0.1.1 release
 
 `machine/mcp-server/server.json` contains official-registry metadata for npm
-package version `0.1.0`, `npx`, and local `stdio`. It passed the 20-check
-cross-file validator and official `mcp-publisher` 1.8.1 validation against the
-live Registry service on 2026-09-20. The npm tarball has an exact nine-file
-allow-list and includes the scoped `LICENSE` while intentionally excluding
-`server.json`; the publisher reads that local file during a later authorized
-Registry submission.
+package version `0.1.1`, `npx`, and local `stdio`. It passed 27/27 cross-file
+metadata checks and official `mcp-publisher` 1.8.1 validation against the live
+Registry service. The npm tarball has an exact nine-file allow-list and includes
+the scoped `LICENSE` while intentionally excluding `server.json`; the publisher
+read that local file during the separately authorized Registry submission.
 
-The published audited artifact is `govwait-mcp-0.1.0.tgz`: 118,593 bytes
-compressed / 4,239,563 bytes unpacked, with local SHA-256
-`e881e02555f3133124262c69f48cf7706259595519f5ad25eb1c67338c15ebda`.
+The published audited artifact is `govwait-mcp-0.1.1.tgz`: 162,492 bytes
+compressed / 6,562,302 bytes unpacked, with local/public SHA-256
+`2a76788354551b12c50f452b03e39de454cb21119b9baee990863d890ebcbe28`.
 The npm registry reports SHA-1
-`412c5b6c4c0ada6c412c5f105b6118b20e6ccfd0` and integrity
-`sha512-u0ksXNhTREZI0rvPfCZ27qTDupI4ZpFA2lopo9rhGMy6RgXcjb6ZQZZA6XgJ0OhoIVqBKJA12YRrBwMucrXeVg==`.
+`10372162f345ed260ba050dc75d5e6b09e4dc7d3` and integrity
+`sha512-2hjbVOIYGprfPLiZ3iSxa2Q4lgKZxOFjZbEuFgrKhaoztQ+GlEzJAWviT/hQ1esYyO6a7AhOzSinzTEIwoNnlQ==`.
 
-Public-release source commit `ec284ef` is on the public GitHub repository. A
-clean temporary installation from the public npm registry passed all 15 MCP
-assertions and loaded 2,318 routes from the installed package's own data. No
-publishing token or trusted-publisher workflow was created. The package is set to
-npm's strict `mfa=publish` policy: interactive 2FA is required and
-automation/bypass tokens cannot publish. No MCP Registry submission, Cloudflare
-deployment, IndexNow notification or other directory submission occurred during
-the npm release. Under a later explicit gate, the official MCP Registry accepted
-only `server.json` for version `0.1.0`; the listing is active and latest. The
-temporary Registry login was logged out after verification.
+Public-release source commit `32aec30` is on the public GitHub repository. A
+clean temporary installation from the public npm registry passed all 21 MCP
+assertions and loaded 2,316 routes from the installed package's own data. No
+long-lived publishing token or trusted-publisher workflow was created. The
+package is set to npm's strict `mfa=publish` policy: interactive 2FA is required
+and automation/bypass tokens cannot publish.
+
+Under a later explicit Registry-only gate, the official MCP Registry accepted
+only `server.json` for version `0.1.1`. Exact-version and latest endpoints return
+HTTP 200 with status `active`, `isLatest: true`, and published timestamp
+`2026-09-27T16:37:58.861649Z`; exact-name/latest search returns one result.
+Version 0.1.0 remains active in history with `isLatest: false`. The temporary
+Registry session was logged out after verification. No Glama/other-directory
+update, Cloudflare deployment or IndexNow notification occurred.
 
 ## Next gate
 
-The next release gate is committing the verified Registry receipt. Phase 5C may
-then research whether the official listing is imported elsewhere before any
-manual directory submission. Another npm version, workflow, directory
-submission, outreach message and deployment remain separate approvals because
-the Registry remains a preview service.
+After this verified Registry 0.1.1 receipt is preserved on GitHub, the next
+release gate is a separately approved Glama sync/release. Another npm version,
+workflow, other directory submission, outreach message and deployment remain
+separate approvals because the Registry remains a preview service.

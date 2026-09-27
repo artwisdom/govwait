@@ -145,14 +145,15 @@ style preferences.
   2026-09-13, Google accepted the owner-approved `/data/` indexing request into
   its priority crawl queue. Indexing, traffic, ad approval and revenue are not
   claimed.
-- Phase 5B public 0.1.0 npm release is **verified**: public-source commit
-  `ec284ef` is on `main`, and npm serves the exact audited nine-file
-  `govwait-mcp@0.1.0` artifact. A clean registry installation passed all 15 MCP
-  assertions and loaded 2,318 package-owned routes. Public `mcpName` exactly
+- Phase 6C public 0.1.1 npm and official Registry release is **verified**:
+  public-source commit `32aec30` is on `main`, and npm serves the exact audited
+  nine-file `govwait-mcp@0.1.1` artifact. A clean registry installation passed
+  all 21 MCP assertions and loaded 2,316 package-owned routes. Public `mcpName` exactly
   matches `io.github.artwisdom/govwait`; official `mcp-publisher` 1.8.1 reports
-  `server.json` valid. The official Registry listing is active and latest; its
-  exact-version API and search endpoint return HTTP 200. Apache 2.0 remains
+  `server.json` valid. The official 0.1.1 Registry listing is active/latest; its
+  exact-version, latest and search endpoints return HTTP 200, and 0.1.0 remains
+  active/non-latest in history. Apache 2.0 remains
   limited to GovWait-owned code; bundled government data remains excluded. npm
   publishing requires interactive 2FA and disallows automation/bypass tokens.
-  No publishing token, trusted publisher, other directory submission or
-  deployment was created.
+  No long-lived publishing token, trusted publisher, other directory submission
+  or deployment was created.

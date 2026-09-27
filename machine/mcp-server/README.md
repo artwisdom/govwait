@@ -37,23 +37,24 @@ temporary project with the already-locked `npm ci` dependency tree, and runs the
 complete MCP smoke test against that isolated copy. The temporary package is
 deleted afterward; no registry access is needed.
 
-The verified public release remains
-[`govwait-mcp@0.1.0`](https://www.npmjs.com/package/govwait-mcp/v/0.1.0), and its
+The verified public release is
+[`govwait-mcp@0.1.1`](https://www.npmjs.com/package/govwait-mcp/v/0.1.1), and its
 `mcpName` exactly matches `io.github.artwisdom/govwait` in the official MCP
-Registry metadata. Version `0.1.0` uses a `SEE LICENSE IN LICENSE` field that
+Registry metadata. Version `0.1.1` uses a `SEE LICENSE IN LICENSE` field that
 points to Apache 2.0 terms limited to GovWait-owned software code.
 `DATA-NOTICE.md` and the licence scope expressly exclude the bundled
 government-source data. A clean public-registry installation passed the full MCP
 smoke suite. npm publishing requires interactive 2FA and disallows
 automation/bypass tokens. Official `mcp-publisher` 1.8.1 validates `server.json`,
 and the
-[official Registry listing](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.artwisdom%2Fgovwait/versions/0.1.0)
-is active and latest for version `0.1.0`.
+[official Registry listing](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.artwisdom%2Fgovwait/versions/0.1.1)
+is active and latest for version `0.1.1`; version 0.1.0 remains in Registry
+history as active/non-latest.
 
-The files in this checkout are an unpublished `0.1.1` recovery candidate. They add
-explicit source-collection state and prevent retained Norway snapshots from being
-described as current. Building or verifying this candidate does not publish it to
-npm or update the MCP Registry.
+The files in this checkout correspond to the published `0.1.1` recovery release.
+They add explicit source-collection state and prevent retained Norway snapshots
+from being described as current. Building or verifying the package remains a
+local action and does not publish another npm or Registry version.
 
 ## Register with Claude Code
 
