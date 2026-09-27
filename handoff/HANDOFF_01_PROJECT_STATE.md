@@ -1,8 +1,9 @@
 # HANDOFF 01 — Project State & Technical Deep Dive
 
-_Everything a coding agent needs to operate GovWait. Current as of 2026-09-24 EDT;
+_Everything a coding agent needs to operate GovWait. Current as of 2026-09-25 EDT;
 production serves data commit `5a99df2`, Phase 6A recovery is publicly verified,
-and Phase 6B hardens the validated refresh-to-deploy chain._
+Phase 6B hardens the validated refresh-to-deploy chain, and the exact audited
+MCP 0.1.1 package is public on npm._
 
 ## 1. The one-sentence architecture
 
@@ -45,7 +46,7 @@ pipeline/run.js ──▶ data/db.sqlite ──▶ data/exports/{latest,history,
 | `site/src/pages/` | `index`, `[country]/index`, `[country]/[service]/index` (hub/forward page for CA; entity page for GB/NO; combined p50/p80 page for NZ), `[country]/[service]/[applicant]` (CA entity pages), `guides/*` (16 analyses), `reports/*` (4 jurisdiction baselines plus hub), trust/policy pages, `about`, `api-docs`, `404` | |
 | `machine/openapi.yaml` | OpenAPI 3.1, copied into the API at build | Keep in sync with build-api.js |
 | `machine/api-conformance.mjs` | Checks every built API file against the spec's shapes | Run in QA |
-| `machine/mcp-server/` | TypeScript stdio MCP server, 4 tools, reads exports. Unpublished 0.1.1 candidate explicitly separates Norway's last-verified snapshot from active-source current values | `npm run verify` performs isolated package QA; publication is separate |
+| `machine/mcp-server/` | TypeScript stdio MCP server, 4 tools, reads exports. Public npm 0.1.1 explicitly separates Norway's last-verified snapshot from active-source current values | `npm run verify` performs isolated package QA; Registry and Glama updates remain separate |
 | `.github/workflows/refresh.yml` | Cron Tue+Fri 14:00 UTC: pipeline → build-api → guarded data commit. No change skips deployment; a change calls the reusable deploy workflow with the exact commit SHA, and deploy failure fails the parent refresh | Never add a personal token; keep exact-SHA output and `data_changed` guard |
 | `.github/workflows/deploy.yml` | Push/manual/reusable entry points: exact-refresh-SHA/still-main guard → build → SEO audit → Cloudflare Pages → IndexNow after successful production deploy. Bot push events are ignored as a duplicate safeguard | Requires scoped Cloudflare token in GitHub |
 | `site/scripts/seo-audit.mjs` | CI gate for unique metadata, canonicals, H1, JSON-LD, internal links, intentional noindex, exact sitemap membership, honest child lastmod, robots and llms.txt | Run after every site build |
@@ -343,9 +344,9 @@ on Astro 4 and CI continues to pin Node 20 until a separate runtime-upgrade phas
   makes `deploy-site` reusable and conditionally calls it from `refresh-data` with
   the exact bot SHA. actionlint 1.7.12, 17/17 structural assertions, current-main
   acceptance and stale-SHA refusal all pass. No second source refresh was run.
-- Public npm/MCP Registry remain on `govwait-mcp@0.1.0`; 0.1.1 publication,
-  registry/directory updates, Google requests, outreach, spend and account changes
-  remain separately gated. See `docs/INCIDENT_2026-09-04_UDI_SOURCE_CLOSURE.md`.
+- At the Phase 6A checkpoint, public npm/MCP Registry remained on
+  `govwait-mcp@0.1.0`; each later release action remained separately gated. See
+  `docs/INCIDENT_2026-09-04_UDI_SOURCE_CLOSURE.md`.
 
 ### Phase 6C MCP 0.1.1 local release preflight (2026-09-24 EDT)
 
@@ -372,7 +373,29 @@ on Astro 4 and CI continues to pin Node 20 until a separate runtime-upgrade phas
 - Under a later explicit owner gate, the same verified source candidate and
   audit records were committed and pushed to `main`; the tarball and sidecar
   remained ignored and local. These paths do not match the site's deployment
-  trigger. npm, Registry, Glama and production were not changed.
+  trigger. At that checkpoint, npm, Registry, Glama and production were not
+  changed.
+
+### Phase 6C MCP 0.1.1 public npm receipt (2026-09-25 EDT)
+
+- Under a separate exact-publication gate, interactive security-key approval
+  published only the retained tarball as public `govwait-mcp@0.1.1` under npm
+  owner `artwisdom`. npm recorded `2026-09-26T02:06:09.064Z`; `latest=0.1.1`.
+- Public metadata matches the candidate: `mcpName` is
+  `io.github.artwisdom/govwait`, there are exactly nine files and unpacked size
+  is 6,562,302 bytes. Registry SHA-1 is
+  `10372162f345ed260ba050dc75d5e6b09e4dc7d3`; integrity is
+  `sha512-2hjbVOIYGprfPLiZ3iSxa2Q4lgKZxOFjZbEuFgrKhaoztQ+GlEzJAWviT/hQ1esYyO6a7AhOzSinzTEIwoNnlQ==`.
+- A fresh download is byte-for-byte identical to the retained audited artifact;
+  both have SHA-256
+  `2a76788354551b12c50f452b03e39de454cb21119b9baee990863d890ebcbe28`.
+  A clean public-registry installation audited 96 packages with zero
+  vulnerabilities, loaded 2,316 package-owned routes and passed all 21 smoke
+  assertions.
+- The official MCP Registry remains active/latest at 0.1.0 and still returns
+  HTTP 404 for exact 0.1.1. No Registry/Glama/directory update, source change,
+  commit, push, workflow/token creation, deployment, indexing request, outreach,
+  spending or account-setting change was included in this npm-only release.
 
 ## 8. QA ritual before any push that touches pipeline or site
 

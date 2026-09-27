@@ -1,6 +1,6 @@
 # STATE — Data Moat Engine
 
-_Last updated: 2026-09-24_
+_Last updated: 2026-09-25_
 
 ## Environment (verified)
 | Runtime | Version |
@@ -37,6 +37,7 @@ All dependencies install locally (`node_modules` inside project). No sudo or mac
 - [x] Phase 5C Glama repository-readiness candidate: this revision makes the root Apache 2.0 terms machine-detectable, preserves the code-only/data-exclusion boundary in `SOFTWARE-SCOPE.md`, and adds live-schema-valid `glama.json`; remote licence detection must be verified after GitHub publication, while Glama sync/build/release and deployment remain separate owner gates
 - [x] Phase 6A production recovery: UDI is retained as `source_unavailable` and excluded from active collection; the GitHub proof refreshed all eight healthy Canada/UK/New Zealand sources without requesting UDI, preserved all 19 UDI records append-only, and deployed final data commit `5a99df2` in run `36082052053` to `81c691b0.govwait.pages.dev` with 603-URL IndexNow HTTP 200 and public-edge parity.
 - [x] Phase 6B refresh-to-deploy hardening: a data-changing refresh calls the existing deploy workflow exactly once as a reusable job, pins the exact bot commit, refuses stale-main deployment, skips no-change runs, guards against duplicate bot-push deployment and propagates deployment failure without adding a personal token or secret.
+- [x] Phase 6C MCP 0.1.1 npm release: source commit `32aec30`; exact audited nine-file tarball published publicly as `govwait-mcp@0.1.1` under owner `artwisdom`; `latest=0.1.1`; registry bytes match the retained artifact; clean public installation passed all 21 MCP assertions with zero vulnerabilities. The official MCP Registry remains on 0.1.0, and no Glama update was made; both remain separate approval gates.
 
 ## Deployment status (verified through 2026-09-24 EDT)
 - Repo LIVE: https://github.com/artwisdom/govwait (public, main)
@@ -326,10 +327,10 @@ assertions and reported zero vulnerabilities. The exact nine-file artifact is
 
 The live official Registry validator exposed and then accepted a shortened
 94-character description; checksum-pinned `mcp-publisher` 1.8.1 now reports
-`server.json` valid, and the live limit is now a local regression check. npm
-still lists only `0.1.0` and `latest=0.1.0`; the official Registry returns HTTP
-200 for active/latest `0.1.0`, HTTP 404 for `0.1.1`, and one exact search result.
-Therefore 0.1.1 remains available and entirely unpublished.
+`server.json` valid, and the live limit is now a local regression check. At that
+preflight, npm listed only `0.1.0` and `latest=0.1.0`; the official Registry
+returned HTTP 200 for active/latest `0.1.0`, HTTP 404 for `0.1.1`, and one exact
+search result. Therefore 0.1.1 was available and entirely unpublished.
 At that preflight checkpoint, no commit, push, npm publication,
 Registry/Glama/directory update, token/workflow, deployment, indexing request,
 outreach, spend or account change had occurred.
@@ -338,16 +339,40 @@ The separately approved GitHub-only source gate then committed and pushed this
 verified 0.1.1 candidate and its audit records to `main`. The exact tarball and
 sidecar remained ignored and local. None of the changed paths match the
 `deploy-site` push filter, so this source handoff does not authorize or require a
-site deployment. npm, the official MCP Registry and Glama remain unchanged.
+site deployment. At that GitHub-only checkpoint, npm, the official MCP Registry
+and Glama remained unchanged.
+
+### Phase 6C MCP 0.1.1 public npm release (verified 2026-09-25 EDT)
+
+Under a later exact-publication approval, interactive security-key authentication
+published only the retained audited tarball as
+[`govwait-mcp@0.1.1`](https://www.npmjs.com/package/govwait-mcp/v/0.1.1) under
+npm owner `artwisdom`. npm recorded publication at
+`2026-09-26T02:06:09.064Z`; both `latest` and the public package version resolve
+to `0.1.1`.
+
+The public registry reports the expected nine files, 6,562,302 unpacked bytes,
+SHA-1 `10372162f345ed260ba050dc75d5e6b09e4dc7d3` and integrity
+`sha512-2hjbVOIYGprfPLiZ3iSxa2Q4lgKZxOFjZbEuFgrKhaoztQ+GlEzJAWviT/hQ1esYyO6a7AhOzSinzTEIwoNnlQ==`.
+The downloaded public tarball is byte-for-byte identical to the retained audited
+artifact; both have SHA-256
+`2a76788354551b12c50f452b03e39de454cb21119b9baee990863d890ebcbe28`.
+A fresh temporary public-registry installation added 95 packages, audited 96 with
+zero vulnerabilities, loaded all 2,316 routes from its package-owned data and
+passed all 21 MCP smoke assertions.
+
+The npm-only release did not change source, create a token or workflow, trigger a
+deployment, or update the official MCP Registry, Glama or another directory. The
+official Registry still returns active/latest 0.1.0 and HTTP 404 for exact 0.1.1.
 
 ## Next step
 
 Do not run another source refresh merely to exercise the workflow: the next
 data-changing scheduled refresh will provide the first natural chained-deployment
-receipt. The next independent release gate is publishing only the exact audited
-MCP 0.1.1 tarball to npm with interactive 2FA and verifying a clean public
-installation. The official MCP Registry and Glama updates remain later,
-separately approved actions.
+receipt. The next independent release gate is committing and pushing only this
+verified npm publication receipt. Updating the official MCP Registry from 0.1.0
+to 0.1.1 remains a later, separately approved action; Glama remains another
+separate gate after that.
 
 ## Open threads
 - US/AU/IE sources WAF-blocked to honest bots — owner-decision item (documented in DEPLOYMENT_GUIDE).

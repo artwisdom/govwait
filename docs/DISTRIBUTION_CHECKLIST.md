@@ -109,9 +109,10 @@ satisfied. Official `mcp-publisher` 1.8.1 reports `server.json` valid, and the
 Registry now reports the published version active. The Registry remains a
 preview, so its status must still be monitored honestly.
 
-### Phase 6C — 0.1.1 local publication preflight
+### Phase 6C — 0.1.1 npm publication
 
-Status: **exact candidate verified and source pushed; package remains unpublished**.
+Status: **exact candidate verified, source pushed, and public npm package verified;
+official MCP Registry and Glama updates remain separately gated**.
 
 - [x] Synchronize all three bundled files to production export generation
   `2026-09-25T01:25:45.254Z` and verify byte-for-byte SHA-256 equality.
@@ -125,20 +126,30 @@ Status: **exact candidate verified and source pushed; package remains unpublishe
 - [x] Correct the Registry description to its live 100-character limit and pass
   checksum-verified official `mcp-publisher` 1.8.1 validation; enforce the limit
   in the local release validator.
-- [x] Confirm npm exposes only `0.1.0` with `latest=0.1.0`, Registry 0.1.0 remains
-  active/latest, and exact Registry 0.1.1 returns HTTP 404.
+- [x] At preflight, confirm npm exposed only `0.1.0` with `latest=0.1.0`, Registry
+  0.1.0 remained active/latest, and exact Registry 0.1.1 returned HTTP 404.
 - [x] Under a separate owner gate, commit and push the verified 0.1.1 source
   candidate and receipts to GitHub only. The tarball remains ignored and local;
   the changed paths do not match the production deployment workflow's push
   filter.
-- [ ] Publish the exact audited tarball to npm only after a separate owner gate
-  and interactive 2FA, then verify a new clean public-registry installation.
+- [x] Under a separate owner gate and interactive security-key approval, publish
+  only the exact audited tarball as `govwait-mcp@0.1.1`. npm records
+  `latest=0.1.1`, nine files, 6,562,302 unpacked bytes, SHA-1
+  `10372162f345ed260ba050dc75d5e6b09e4dc7d3` and integrity
+  `sha512-2hjbVOIYGprfPLiZ3iSxa2Q4lgKZxOFjZbEuFgrKhaoztQ+GlEzJAWviT/hQ1esYyO6a7AhOzSinzTEIwoNnlQ==`.
+  A new public download matches the retained artifact byte-for-byte at SHA-256
+  `2a76788354551b12c50f452b03e39de454cb21119b9baee990863d890ebcbe28`.
+- [x] Install `govwait-mcp@0.1.1` from the public registry in a clean temporary
+  project. All 21 MCP assertions passed against 2,316 package-owned routes and
+  npm audited 96 packages with zero vulnerabilities.
 - [ ] Update the official MCP Registry only after npm 0.1.1 is public and under a
   later separate owner gate; update Glama only after another explicit gate.
 
-Preflight boundary: the subsequent GitHub-only source push is the only external
-change. No npm publication, Registry/Glama/directory update, token/workflow,
-deployment, indexing request, outreach, spend or account change occurred.
+Publication boundary: npm 0.1.1 is the only external change in this gate. The
+official Registry remains active/latest at 0.1.0 and exact 0.1.1 remains HTTP
+404. No Registry/Glama/directory update, source change, commit, push,
+token/workflow creation, deployment, indexing request, outreach, spend or
+account-setting change occurred.
 
 ## Phase 5C — no-cost discovery and earned links
 

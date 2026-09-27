@@ -295,3 +295,27 @@ or revenue.
   tarball stayed ignored and local. The changed paths are outside the
   `deploy-site` push filter; npm, Registry, Glama and production remain separate
   gates.
+
+## Phase 6C MCP 0.1.1 public npm verification — 2026-09-25 EDT
+
+- Publication receipt: after interactive security-key authorization, npm exited
+  successfully with `+ govwait-mcp@0.1.1`. npm records the version at
+  `2026-09-26T02:06:09.064Z`; public versions are `0.1.0` and `0.1.1`, with
+  `latest=0.1.1`.
+- Public metadata: name `govwait-mcp`, version `0.1.1`, `mcpName`
+  `io.github.artwisdom/govwait`, exactly nine files and 6,562,302 unpacked bytes.
+  Registry SHA-1 is `10372162f345ed260ba050dc75d5e6b09e4dc7d3`; integrity is
+  `sha512-2hjbVOIYGprfPLiZ3iSxa2Q4lgKZxOFjZbEuFgrKhaoztQ+GlEzJAWviT/hQ1esYyO6a7AhOzSinzTEIwoNnlQ==`.
+- Byte-parity proof: a new registry download and the retained audited tarball
+  compare byte-for-byte equal. Both SHA-256 values are
+  `2a76788354551b12c50f452b03e39de454cb21119b9baee990863d890ebcbe28`.
+- Consumer proof: a new temporary project installed `govwait-mcp@0.1.1` from the
+  public registry with scripts disabled. npm added 95 packages, audited 96 with
+  zero vulnerabilities, and the installed package loaded all 2,316 routes from
+  its own data directory. All 21 MCP assertions passed, including active-source,
+  source-unavailable, forward-looking, comparison, search and provenance checks.
+- Release boundary: exact official MCP Registry 0.1.0 remains HTTP 200,
+  active/latest; exact 0.1.1 remains HTTP 404. No Registry, Glama or other
+  directory update, source change, commit, push, token/workflow creation,
+  deployment, indexing request, outreach, spend or account-setting change was
+  part of this npm-only gate.
