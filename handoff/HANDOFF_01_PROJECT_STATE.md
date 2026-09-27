@@ -412,6 +412,22 @@ on Astro 4 and CI continues to pin Node 20 until a separate runtime-upgrade phas
   update, source change, commit, push, deployment, indexing request, outreach,
   spending or account-setting change was included in this Registry-only gate.
 
+### Phase 6C Glama 0.1.1 release preflight (2026-09-27 EDT)
+
+- The claimed Glama listing synced to exact GitHub commit `90e2d45`.
+- The first build revealed that `npm run build` re-bundled newer site exports,
+  so it was not released. The Glama-only compile step now uses `npm exec -- tsc`
+  to preserve the exact audited package data. Final build-only test
+  [`01a0e41a-3a3b-7107-b30a-e20beadfd22f`](https://glama.ai/mcp/servers/artwisdom/govwait/admin/dockerfile/tests/01a0e41a-3a3b-7107-b30a-e20beadfd22f)
+  succeeded in 10.1 seconds, loaded 2,316 routes from dataset
+  `2026-09-25T01:25:45.254Z`, negotiated MCP protocol `2025-11-25`, identified
+  version 0.1.1 and exposed all four expected tools.
+- Auto-Release remains off. The public Glama release remains 0.1.0 and the
+  offered `Create Release` action was not used.
+- The root README still called 0.1.1 unpublished, so this checkout includes a
+  local-only accuracy correction. Commit/push, Glama re-sync/retest and release
+  remain separate approval gates.
+
 ## 8. QA ritual before any push that touches pipeline or site
 
 ```bash

@@ -382,14 +382,38 @@ version, long-lived publishing token, workflow, Glama or other directory update,
 source change, commit, push, deployment, indexing request, outreach, spending or
 account-setting change was included.
 
+### Phase 6C Glama 0.1.1 release preflight (verified 2026-09-27 EDT)
+
+Under a separate Glama-preflight approval, the claimed listing synced from
+commit `8a368e6` to GitHub `main` commit `90e2d45223733055931552ebd405aa6e20048896`.
+The first build test exposed that `npm run build` re-bundled the newer site
+exports rather than preserving the exact audited npm 0.1.1 package data. It was
+not released. The Glama-only build step was narrowed to `npm exec -- tsc`, which
+compiles the server without rewriting its committed package-owned data. Final
+build-only test
+[`01a0e41a-3a3b-7107-b30a-e20beadfd22f`](https://glama.ai/mcp/servers/artwisdom/govwait/admin/dockerfile/tests/01a0e41a-3a3b-7107-b30a-e20beadfd22f)
+succeeded in 10.1 seconds against that exact commit. The container loaded 2,316
+routes from audited dataset `2026-09-25T01:25:45.254Z`, negotiated MCP protocol
+`2025-11-25`, identified server version `0.1.1`, and exposed `compare_values`,
+`get_entity`, `get_latest_value` and `search_entities`. Local metadata validation
+passed 27/27 and the direct smoke suite passed all 20 assertions.
+
+Glama Auto-Release remains off and the public Glama release remains `0.1.0`.
+The successful test now offers `Create Release`, but that action was not used.
+The preflight found that the root README still described 0.1.1 as unpublished;
+this checkout contains a local-only accuracy correction before any Glama 0.1.1
+release. No commit, push, Glama release, npm/Registry/directory publication,
+workflow, deployment, indexing request, outreach, spending or account change
+was made.
+
 ## Next step
 
 Do not run another source refresh merely to exercise the workflow: the next
 data-changing scheduled refresh will provide the first natural chained-deployment
-receipt. The verified npm publication receipt is committed and pushed in
-`6d205cfa`; its documentation-only paths started no GitHub Actions runs. After
-this official Registry receipt is preserved on GitHub, the next independent
-release gate is a Glama 0.1.1 sync/release under separate approval.
+receipt. Before publishing Glama 0.1.1, commit and push the local README/record
+accuracy correction under a separate GitHub-only gate, then sync and repeat the
+same build-only test against that exact commit. Creating the Glama release remains
+a later, separate approval.
 
 ## Open threads
 - US/AU/IE sources WAF-blocked to honest bots — owner-decision item (documented in DEPLOYMENT_GUIDE).

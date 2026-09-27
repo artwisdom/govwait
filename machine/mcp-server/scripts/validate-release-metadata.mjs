@@ -22,7 +22,7 @@ const canonicalApacheLicense = packageLicense.slice(canonicalApacheStart);
 const checks = [
   ["public publication gate", () => assert.equal(Object.hasOwn(packageJson, "private"), false)],
   ["approved scoped licence pointer", () => assert.equal(packageJson.license, "SEE LICENSE IN LICENSE")],
-  ["release candidate version", () => assert.equal(packageJson.version, "0.1.1")],
+  ["release metadata version", () => assert.equal(packageJson.version, "0.1.1")],
   ["repository licence is canonical Apache 2.0 text", () => assert.equal(repositoryLicense, canonicalApacheLicense)],
   ["canonical Apache 2.0 text", () => assert.match(packageLicense, /Apache License\n\s+Version 2\.0, January 2004/)],
   ["government data excluded from software licence", () => assert.match(packageLicense, /files under any `data\/` directory/)],
@@ -63,4 +63,4 @@ for (const [label, check] of checks) {
 }
 
 console.log(`\nRELEASE METADATA: ${checks.length}/${checks.length} PASS`);
-console.log("Candidate readiness: local, unpublished 0.1.1 package + scoped Apache-2.0 code licence + matching Registry metadata; validation does not publish, sync, build, release, deploy, or contact a registry");
+console.log("Metadata readiness: 0.1.1 package + scoped Apache-2.0 code licence + matching Registry metadata; validation is local and does not publish, sync, build, release, deploy, or contact a registry");

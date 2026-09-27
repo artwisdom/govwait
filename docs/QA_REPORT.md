@@ -343,3 +343,37 @@ or revenue.
   No npm version, long-lived publishing token, workflow, Glama or other
   directory update, source change, commit, push, deployment, indexing request,
   outreach, spend or account-setting change was part of this Registry-only gate.
+
+## Phase 6C Glama 0.1.1 release preflight — 2026-09-27 EDT
+
+- Repository sync: the claimed Glama listing moved from last-known commit
+  `8a368e6` to exact GitHub `main` commit
+  `90e2d45223733055931552ebd405aa6e20048896`.
+- Parity finding: initial build-only test
+  [`01a0e413-6057-7656-8cc1-a56e2a79fedb`](https://glama.ai/mcp/servers/artwisdom/govwait/admin/dockerfile/tests/01a0e413-6057-7656-8cc1-a56e2a79fedb)
+  succeeded technically, but `npm run build` re-bundled newer site exports from
+  dataset `2026-09-25T18:16:41.266Z` instead of preserving the exact audited npm
+  0.1.1 package data. The test was not released.
+- Corrected build proof: the Glama-only compile step now uses `npm exec -- tsc`,
+  so it cannot overwrite the committed package-owned data. Final build-only test
+  [`01a0e41a-3a3b-7107-b30a-e20beadfd22f`](https://glama.ai/mcp/servers/artwisdom/govwait/admin/dockerfile/tests/01a0e41a-3a3b-7107-b30a-e20beadfd22f)
+  succeeded in 10.1 seconds. It checked out the exact pinned commit under Node 22
+  and loaded 2,316 retained routes from the audited npm 0.1.1 dataset
+  `2026-09-25T01:25:45.254Z`.
+- Byte-parity proof: streaming each data file directly from retained artifact
+  `govwait-mcp-0.1.1.tgz` produced the same SHA-256 as the committed package
+  copy: `840e3e4c…` (`latest.json`), `d72cb0c3…` (`history.json`) and
+  `17038d17…` (`forward-looking.json`). The artifact itself remains
+  `2a76788354551b12c50f452b03e39de454cb21119b9baee990863d890ebcbe28`.
+- Runtime proof: the container started, negotiated MCP protocol `2025-11-25`,
+  returned `serverInfo` name `govwait` and version `0.1.1`, and exposed exactly
+  `compare_values`, `get_entity`, `get_latest_value` and `search_entities`.
+- Independent local check: metadata validation passed 27/27 and the direct MCP
+  smoke suite passed all 20 assertions against the package-owned data.
+- Accuracy finding: Glama's public 0.1.0 release still renders the root README's
+  obsolete 0.1.0/unpublished-0.1.1 wording. A local-only README and validator
+  wording correction is prepared before any 0.1.1 Glama release.
+- Boundary: Auto-Release remains off; the successful test offers `Create Release`
+  but it was not used. The public Glama release remains 0.1.0. No commit, push,
+  Glama release, npm/Registry/other-directory publication, workflow, deployment,
+  indexing request, outreach, spend or account change occurred.

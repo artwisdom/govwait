@@ -157,3 +157,12 @@ style preferences.
   publishing requires interactive 2FA and disallows automation/bypass tokens.
   No long-lived publishing token, trusted publisher, other directory submission
   or deployment was created.
+- Glama 0.1.1 is **build-preflight verified but not released**: the claimed
+  listing synced to exact commit `90e2d45`. The first test exposed and avoided a
+  data-parity flaw; the Glama-only build now compiles with `npm exec -- tsc` so
+  package data stays byte-aligned with npm 0.1.1. Final build-only test
+  `01a0e41a-3a3b-7107-b30a-e20beadfd22f` succeeded in 10.1 seconds with the
+  audited 2,316-route dataset, protocol `2025-11-25`, version 0.1.1 and all four
+  tools. Auto-Release remains off and public Glama release 0.1.0 remains
+  unchanged. A local README accuracy correction must be pushed, re-synced and
+  retested before a separately approved Glama 0.1.1 release.

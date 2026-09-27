@@ -81,15 +81,16 @@ The MCP build deterministically bundles the three validated exports plus a
 SHA-256 provenance manifest into the package. `npm run verify` builds it, runs
 the protocol smoke suite, enforces the exact package allow-list, and exercises
 the packed artifact in a clean temporary runtime. The verified public release
-is [`govwait-mcp@0.1.0`](https://www.npmjs.com/package/govwait-mcp/v/0.1.0).
+is [`govwait-mcp@0.1.1`](https://www.npmjs.com/package/govwait-mcp/v/0.1.1).
 Its package policy requires interactive 2FA and disallows token publishing. Its
-[official MCP Registry listing](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.artwisdom%2Fgovwait/versions/0.1.0)
-is active for version `0.1.0`.
+[official MCP Registry listing](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.artwisdom%2Fgovwait/versions/0.1.1)
+is active and latest for version `0.1.1`; version `0.1.0` remains available in
+Registry history.
 
-This checkout contains an unpublished `0.1.1` recovery candidate. It adds source
-collection state to every MCP result and returns Norway's retained UDI values only
-as dated `last_verified_value` fields, never as a current value. Local verification
-does not publish that candidate or update the Registry.
+Version `0.1.1` adds source-collection state to every MCP result and returns
+Norway's retained UDI values only as dated `last_verified_value` fields, never
+as a current value. Building or verifying the package locally does not publish
+another npm, MCP Registry or directory release.
 
 ## Collection safeguards
 
