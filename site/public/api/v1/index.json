@@ -1,11 +1,11 @@
 {
  "name": "GovWait API v1",
  "description": "Officially published government processing times, tracked with provenance and history. Static JSON; no key required.",
- "generated_at": "2026-09-25T18:16:41.266Z",
+ "generated_at": "2026-09-29T19:09:07.464Z",
  "stats": {
-  "generated_at": "2026-09-25T18:16:41.266Z",
+  "generated_at": "2026-09-29T19:09:07.464Z",
   "entities": 2316,
-  "observations": 6618,
+  "observations": 6629,
   "forward_looking_estimates": 7285,
   "forward_looking_snapshots": 2,
   "jurisdictions": [
@@ -41,8 +41,8 @@
     "name": "New Zealand visa application processing times",
     "collection_status": "active",
     "collection_status_since": null,
-    "observations": 610,
-    "latest_effective_date": "2026-09-25"
+    "observations": 621,
+    "latest_effective_date": "2026-09-29"
    },
    "ircc-forward-looking": {
     "name": "IRCC forward-looking processing times and in-queue estimates",
@@ -92,7 +92,7 @@
    "collection_status": "active",
    "collection_status_since": null,
    "collection_status_note": null,
-   "last_successful_verification_at": "2026-09-25T18:09:57.429Z"
+   "last_successful_verification_at": "2026-09-29T19:02:23.953Z"
   },
   {
    "id": "govuk-passport",
@@ -104,7 +104,7 @@
    "collection_status": "active",
    "collection_status_since": null,
    "collection_status_note": null,
-   "last_successful_verification_at": "2026-09-25T18:10:00.417Z"
+   "last_successful_verification_at": "2026-09-29T19:02:26.673Z"
   },
   {
    "id": "govuk-visa-times",
@@ -116,7 +116,7 @@
    "collection_status": "active",
    "collection_status_since": null,
    "collection_status_note": null,
-   "last_successful_verification_at": "2026-09-25T18:09:54.761Z"
+   "last_successful_verification_at": "2026-09-29T19:02:20.817Z"
   },
   {
    "id": "inz-processing-times",
@@ -128,7 +128,7 @@
    "collection_status": "active",
    "collection_status_since": null,
    "collection_status_note": null,
-   "last_successful_verification_at": "2026-09-25T18:16:40.957Z"
+   "last_successful_verification_at": "2026-09-29T19:09:07.265Z"
   },
   {
    "id": "ircc-forward-looking",
@@ -140,7 +140,7 @@
    "collection_status": "active",
    "collection_status_since": null,
    "collection_status_note": null,
-   "last_successful_verification_at": "2026-09-25T18:09:47.116Z"
+   "last_successful_verification_at": "2026-09-29T19:02:11.178Z"
   },
   {
    "id": "ircc-noncountry",
@@ -152,7 +152,7 @@
    "collection_status": "active",
    "collection_status_since": null,
    "collection_status_note": null,
-   "last_successful_verification_at": "2026-09-25T18:09:50.195Z"
+   "last_successful_verification_at": "2026-09-29T19:02:15.175Z"
   },
   {
    "id": "ircc-passport",
@@ -164,7 +164,7 @@
    "collection_status": "active",
    "collection_status_since": null,
    "collection_status_note": null,
-   "last_successful_verification_at": "2026-09-25T18:09:51.293Z"
+   "last_successful_verification_at": "2026-09-29T19:02:17.203Z"
   },
   {
    "id": "ircc-ptime",
@@ -176,7 +176,7 @@
    "collection_status": "active",
    "collection_status_since": null,
    "collection_status_note": null,
-   "last_successful_verification_at": "2026-09-25T18:09:43.063Z"
+   "last_successful_verification_at": "2026-09-29T19:02:10.043Z"
   },
   {
    "id": "udi-waiting-times",
