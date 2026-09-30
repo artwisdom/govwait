@@ -383,7 +383,7 @@ or revenue.
   source change, commit, push, workflow, site deployment, indexing request,
   outreach, spend or account-setting change occurred in the Glama-only gate.
 
-## Phase 6D MCP 0.1.2 documentation-only candidate — 2026-09-29 EDT
+## Phase 6D MCP 0.1.2 documentation-only release — 2026-09-29 EDT
 
 - Scope: version 0.1.2 corrects the packaged README, leads with the public
   `npx -y govwait-mcp` install command and records 0.1.1 as the verified npm and
@@ -406,8 +406,29 @@ or revenue.
   nine files, is 162,819 bytes packed / 6,563,251 bytes unpacked, and has
   SHA-256 `04837a57cb2d6d804e7e0b323e4ab9888988f5c4fd43c995f29f5def50ee8bf6`;
   its sidecar matches.
-- External preflight: npm still exposes only 0.1.0 and 0.1.1 with
-  `latest=0.1.1`; the official Registry exact 0.1.2 endpoint returns HTTP 404.
-- Boundary: no commit, push, npm publication, Registry/Glama/directory update,
-  workflow, deployment, indexing request, outreach, spend or account-setting
-  change occurred.
+- External preflight: before publication, npm exposed only 0.1.0 and 0.1.1 with
+  `latest=0.1.1`; the official Registry exact 0.1.2 endpoint returned HTTP 404.
+- Source receipt: the verified source candidate is commit
+  `efc90490438f05de4a802951315a4b828f09ecf5` on `origin/main`; the ignored
+  release tarball remained local.
+- npm publication receipt: interactive security-key 2FA published
+  `govwait-mcp@0.1.2` at `2026-09-30T02:19:29.728Z`. npm exposes 0.1.2 as
+  `latest`, with public `mcpName` `io.github.artwisdom/govwait`, nine files,
+  162,819 packed bytes, 6,563,251 unpacked bytes, SHA-1
+  `7d286f793030b97d943ba63c31a05c04ce1aa9ae`, and SHA-512 integrity
+  `sha512-/l7/Qk9g8pXSgR8fz9EQ2QviNGnbJyLAsRHPLgw7QrclqPudD8gLMsdhWClEJ3wGTldSl5Hk2/9S03rjRj49KA==`.
+- Independent public-artifact proof: a fresh `npm pack govwait-mcp@0.1.2`
+  download had the exact audited SHA-256
+  `04837a57cb2d6d804e7e0b323e4ab9888988f5c4fd43c995f29f5def50ee8bf6`
+  and was byte-for-byte identical to the local candidate. Its README leads with
+  `npx -y govwait-mcp`, records the 0.1.1 baseline, and describes 0.1.2 as the
+  documentation/version-metadata correction.
+- Clean-install proof: a new temporary npm project installed the public 0.1.2
+  package, passed all 21 MCP assertions from package-owned data, preserved all
+  four approved data/provenance hashes, and reported zero vulnerabilities
+  across 95 installed dependencies.
+- Boundary: the official Registry exact 0.1.2 endpoint still returns HTTP 404.
+  No Registry, Glama or other-directory update, GitHub tag/release, publishing
+  token/workflow, deployment, indexing request, outreach, spend or account-setting
+  change occurred in this npm-only gate. These local receipt edits remain
+  uncommitted and unpushed.

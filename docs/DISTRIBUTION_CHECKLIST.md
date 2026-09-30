@@ -171,8 +171,9 @@ spend or account-setting change occurred in this Registry-only gate.
 
 ### Phase 6D — 0.1.2 packaged-README correction
 
-Status: **local documentation-only candidate verified; not committed, pushed or
-published anywhere**.
+Status: **documentation-only source pushed and the exact audited candidate
+published and independently verified on npm; no 0.1.2 Registry, Glama or other
+directory update has been made**.
 
 - [x] Bump package, lockfile, runtime and draft Registry metadata consistently to
   0.1.2 without changing MCP tool logic.
@@ -189,12 +190,19 @@ published anywhere**.
   packed / 6,563,251 bytes unpacked, SHA-256
   `04837a57cb2d6d804e7e0b323e4ab9888988f5c4fd43c995f29f5def50ee8bf6`,
   with a matching sidecar.
-- [x] Confirm npm still has only 0.1.0 and 0.1.1 with `latest=0.1.1`, while the
-  official Registry exact 0.1.2 endpoint remains HTTP 404.
-- [ ] Commit and push this verified source candidate only under a separate owner
-  approval. The ignored tarball must remain local.
-- [ ] Publish the exact audited tarball only under a later, separate owner
-  approval with interactive npm 2FA.
+- [x] At preflight, confirm npm still had only 0.1.0 and 0.1.1 with
+  `latest=0.1.1`, while the official Registry exact 0.1.2 endpoint remained
+  HTTP 404.
+- [x] Commit and push the verified source candidate as
+  `efc90490438f05de4a802951315a4b828f09ecf5`; keep the ignored tarball local.
+- [x] Publish the exact audited tarball with interactive npm security-key 2FA.
+  npm now exposes 0.1.2 as `latest`, with nine files, 162,819 packed bytes,
+  6,563,251 unpacked bytes, SHA-1
+  `7d286f793030b97d943ba63c31a05c04ce1aa9ae`, and SHA-512 integrity
+  `sha512-/l7/Qk9g8pXSgR8fz9EQ2QviNGnbJyLAsRHPLgw7QrclqPudD8gLMsdhWClEJ3wGTldSl5Hk2/9S03rjRj49KA==`.
+- [x] Download npm's public tarball and confirm it is byte-for-byte identical to
+  the audited local candidate, then pass all 21 MCP assertions from a fresh
+  temporary installation with zero known vulnerabilities.
 - [ ] Treat official Registry, Glama and other-directory updates as independent
   later approvals after npm publication is verified.
 
