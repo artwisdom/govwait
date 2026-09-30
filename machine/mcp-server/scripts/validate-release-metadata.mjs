@@ -13,6 +13,7 @@ const packageLicense = readFileSync(path.join(PACKAGE_ROOT, "LICENSE"), "utf8");
 const repositoryLicense = readFileSync(path.join(REPO_ROOT, "LICENSE"), "utf8");
 const repositoryLicenseScope = readFileSync(path.join(REPO_ROOT, "SOFTWARE-SCOPE.md"), "utf8");
 const dataNotice = readFileSync(path.join(PACKAGE_ROOT, "DATA-NOTICE.md"), "utf8");
+const packageReadme = readFileSync(path.join(PACKAGE_ROOT, "README.md"), "utf8");
 const glamaJson = JSON.parse(readFileSync(path.join(REPO_ROOT, "glama.json"), "utf8"));
 const registryPackage = serverJson.packages?.[0];
 const canonicalApacheStart = packageLicense.indexOf("Apache License\n");
@@ -22,7 +23,7 @@ const canonicalApacheLicense = packageLicense.slice(canonicalApacheStart);
 const checks = [
   ["public publication gate", () => assert.equal(Object.hasOwn(packageJson, "private"), false)],
   ["approved scoped licence pointer", () => assert.equal(packageJson.license, "SEE LICENSE IN LICENSE")],
-  ["release metadata version", () => assert.equal(packageJson.version, "0.1.1")],
+  ["release metadata version", () => assert.equal(packageJson.version, "0.1.2")],
   ["repository licence is canonical Apache 2.0 text", () => assert.equal(repositoryLicense, canonicalApacheLicense)],
   ["canonical Apache 2.0 text", () => assert.match(packageLicense, /Apache License\n\s+Version 2\.0, January 2004/)],
   ["government data excluded from software licence", () => assert.match(packageLicense, /files under any `data\/` directory/)],
@@ -49,6 +50,19 @@ const checks = [
   ["local stdio transport", () => assert.deepEqual(registryPackage?.transport, { type: "stdio" })],
   ["no runtime credentials", () => assert.equal(registryPackage?.environmentVariables, undefined)],
   ["no remote endpoint claim", () => assert.equal(serverJson.remotes, undefined)],
+  ["README public install command", () => assert.match(packageReadme, /```bash\nnpx -y govwait-mcp\n```/)],
+  ["README verified 0.1.1 public baseline", () => {
+    assert.match(packageReadme, /govwait-mcp@0\.1\.1/);
+    assert.match(packageReadme, /published to npm and accepted as active in the official\s+MCP Registry/);
+  }],
+  ["README 0.1.2 documentation-only scope", () => assert.match(
+    packageReadme,
+    /Version `0\.1\.2` changes package documentation and release metadata only\./,
+  )],
+  ["README rejects the stale 0.1.0 latest claim", () => assert.doesNotMatch(
+    packageReadme,
+    /verified public release remains[\s\S]{0,160}govwait-mcp@0\.1\.0/,
+  )],
   ["stable public repository identity", () => assert.deepEqual(serverJson.repository, {
     url: "https://github.com/artwisdom/govwait",
     source: "github",
@@ -63,4 +77,4 @@ for (const [label, check] of checks) {
 }
 
 console.log(`\nRELEASE METADATA: ${checks.length}/${checks.length} PASS`);
-console.log("Metadata readiness: 0.1.1 package + scoped Apache-2.0 code licence + matching Registry metadata; validation is local and does not publish, sync, build, release, deploy, or contact a registry");
+console.log("Metadata readiness: 0.1.2 documentation-only package candidate + scoped Apache-2.0 code licence + matching Registry metadata + corrected packaged README; validation is local and does not publish, sync, build, release, deploy, or contact a registry");

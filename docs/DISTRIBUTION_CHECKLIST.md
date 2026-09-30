@@ -169,6 +169,35 @@ npm version, long-lived publishing token, workflow, Glama/other-directory
 update, source change, commit, push, deployment, indexing request, outreach,
 spend or account-setting change occurred in this Registry-only gate.
 
+### Phase 6D — 0.1.2 packaged-README correction
+
+Status: **local documentation-only candidate verified; not committed, pushed or
+published anywhere**.
+
+- [x] Bump package, lockfile, runtime and draft Registry metadata consistently to
+  0.1.2 without changing MCP tool logic.
+- [x] Put `npx -y govwait-mcp` near the top of the packaged README, preserve the
+  verified 0.1.1 publication baseline and remove the stale 0.1.0/latest wording.
+- [x] Add a documentation-only release gate that refuses any drift from the
+  exact public 0.1.1 bundled-data and provenance hashes.
+- [x] Pass 21 direct MCP assertions, 31/31 metadata/licensing/README checks, the
+  exact nine-file package audit and 22 isolated-tarball assertions.
+- [x] Move only the affected transitive lockfile resolution from
+  `ip-address@10.5.0` to patched 10.7.2, then pass a clean install and a
+  zero-vulnerability npm audit across 117 dependencies.
+- [x] Retain ignored local candidate `govwait-mcp-0.1.2.tgz`, 162,819 bytes
+  packed / 6,563,251 bytes unpacked, SHA-256
+  `04837a57cb2d6d804e7e0b323e4ab9888988f5c4fd43c995f29f5def50ee8bf6`,
+  with a matching sidecar.
+- [x] Confirm npm still has only 0.1.0 and 0.1.1 with `latest=0.1.1`, while the
+  official Registry exact 0.1.2 endpoint remains HTTP 404.
+- [ ] Commit and push this verified source candidate only under a separate owner
+  approval. The ignored tarball must remain local.
+- [ ] Publish the exact audited tarball only under a later, separate owner
+  approval with interactive npm 2FA.
+- [ ] Treat official Registry, Glama and other-directory updates as independent
+  later approvals after npm publication is verified.
+
 ## Phase 5C — no-cost discovery and earned links
 
 Status: **official Registry 0.1.1 active/latest; Glama 0.1.1 public/latest from

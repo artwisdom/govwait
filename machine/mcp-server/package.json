@@ -1,6 +1,6 @@
 {
   "name": "govwait-mcp",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "SEE LICENSE IN LICENSE",
   "mcpName": "io.github.artwisdom/govwait",
   "type": "module",
@@ -39,6 +39,7 @@
   },
   "scripts": {
     "sync:data": "node scripts/sync-data.mjs",
+    "build:code": "tsc",
     "build": "npm run sync:data && tsc",
     "prepack": "npm run build",
     "start": "node dist/index.js",
@@ -46,7 +47,9 @@
     "validate:metadata": "node scripts/validate-release-metadata.mjs",
     "audit:package": "node scripts/audit-package.mjs",
     "verify": "npm run build && npm run smoke && npm run validate:metadata && npm run audit:package",
-    "prepare:rc": "GOVWAIT_KEEP_RELEASE_ARTIFACT=1 npm run verify"
+    "prepare:rc": "GOVWAIT_KEEP_RELEASE_ARTIFACT=1 npm run verify",
+    "verify:docs-only": "npm run build:code && npm run smoke && npm run validate:metadata && GOVWAIT_PRESERVE_BUNDLED_DATA=1 npm run audit:package",
+    "prepare:docs-rc": "GOVWAIT_KEEP_RELEASE_ARTIFACT=1 npm run verify:docs-only"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.30.0",

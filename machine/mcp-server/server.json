@@ -9,13 +9,13 @@
     "id": "1342333561",
     "subfolder": "machine/mcp-server"
   },
-  "version": "0.1.1",
+  "version": "0.1.2",
   "websiteUrl": "https://govwait.com/",
   "packages": [
     {
       "registryType": "npm",
       "identifier": "govwait-mcp",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "runtimeHint": "npx",
       "transport": {
         "type": "stdio"

@@ -382,3 +382,32 @@ or revenue.
 - Boundary: no npm or official Registry change, other-directory publication,
   source change, commit, push, workflow, site deployment, indexing request,
   outreach, spend or account-setting change occurred in the Glama-only gate.
+
+## Phase 6D MCP 0.1.2 documentation-only candidate — 2026-09-29 EDT
+
+- Scope: version 0.1.2 corrects the packaged README, leads with the public
+  `npx -y govwait-mcp` install command and records 0.1.1 as the verified npm and
+  official-Registry baseline. Beyond documentation, its packaged runtime change
+  is version metadata only; the dataset and four MCP tool implementations are
+  unchanged.
+- Data-parity gate: the new `prepare:docs-rc` path compiles without running
+  `sync:data` and blocks unless all three data files plus `provenance.json` match
+  the exact public 0.1.1 SHA-256 baseline. The candidate retained generation
+  `2026-09-25T01:25:45.254Z`, 2,316 routes and all four expected hashes.
+- Release gate: Node 24.11.1 passed 21 direct MCP assertions, 31/31 metadata,
+  licensing and packaged-README checks, the exact nine-file allow-list, and 22
+  isolated-tarball assertions from the package-owned data directory.
+- Security audit: the first live audit found a newly disclosed moderate issue in
+  transitive `ip-address@10.5.0`. The lockfile alone moved it to allowed patched
+  version 10.7.2; direct dependencies did not change. After a clean `npm ci`,
+  the complete release gate passed again and npm reported zero vulnerabilities
+  across 117 dependencies.
+- Artifact receipt: ignored local candidate `govwait-mcp-0.1.2.tgz` contains
+  nine files, is 162,819 bytes packed / 6,563,251 bytes unpacked, and has
+  SHA-256 `04837a57cb2d6d804e7e0b323e4ab9888988f5c4fd43c995f29f5def50ee8bf6`;
+  its sidecar matches.
+- External preflight: npm still exposes only 0.1.0 and 0.1.1 with
+  `latest=0.1.1`; the official Registry exact 0.1.2 endpoint returns HTTP 404.
+- Boundary: no commit, push, npm publication, Registry/Glama/directory update,
+  workflow, deployment, indexing request, outreach, spend or account-setting
+  change occurred.

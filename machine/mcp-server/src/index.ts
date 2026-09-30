@@ -81,7 +81,7 @@ function present(r: Rec) {
   };
 }
 
-const server = new McpServer({ name: "govwait", version: "0.1.1" });
+const server = new McpServer({ name: "govwait", version: "0.1.2" });
 
 server.registerTool("search_entities", {
   description: "Search tracked government processing-time routes by free text (service and/or country, e.g. 'canada study permit pakistan'). Returns matching entity_ids with latest source-backed values and collection status.",

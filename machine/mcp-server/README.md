@@ -11,7 +11,21 @@ is unavailable, `current_value` and `value_days` are `null`; its retained value 
 returned only as `last_verified_value` with `value_context` set to
 `last_verified_source_snapshot`.
 
-## Build and verify locally
+## Install from npm
+
+Run the current public package directly:
+
+```bash
+npx -y govwait-mcp
+```
+
+For Claude Code, register that same public package with:
+
+```bash
+claude mcp add --scope user govwait-mcp -- npx -y govwait-mcp
+```
+
+## Build and verify the source locally
 
 ```bash
 cd machine/mcp-server
@@ -19,8 +33,10 @@ npm ci
 npm run verify
 ```
 
-To retain the exact audited release candidate and its SHA-256 sidecar in the
-git-ignored `release/` directory, run `npm run prepare:rc`.
+To retain a normal data-bearing release candidate and its SHA-256 sidecar in the
+git-ignored `release/` directory, run `npm run prepare:rc`. For a
+documentation-only candidate that must preserve the existing bundled data
+byte-for-byte, run `npm run prepare:docs-rc` instead.
 
 `npm run build` copies the three validated pipeline exports into this package's
 own `data/` directory, writes deterministic SHA-256 provenance metadata, and
@@ -37,32 +53,34 @@ temporary project with the already-locked `npm ci` dependency tree, and runs the
 complete MCP smoke test against that isolated copy. The temporary package is
 deleted afterward; no registry access is needed.
 
-The verified public release is
+The verified public baseline is
 [`govwait-mcp@0.1.1`](https://www.npmjs.com/package/govwait-mcp/v/0.1.1), and its
 `mcpName` exactly matches `io.github.artwisdom/govwait` in the official MCP
-Registry metadata. Version `0.1.1` uses a `SEE LICENSE IN LICENSE` field that
+Registry metadata. It was published to npm and accepted as active in the official
+MCP Registry. Version `0.1.1` uses a `SEE LICENSE IN LICENSE` field that
 points to Apache 2.0 terms limited to GovWait-owned software code.
 `DATA-NOTICE.md` and the licence scope expressly exclude the bundled
 government-source data. A clean public-registry installation passed the full MCP
 smoke suite. npm publishing requires interactive 2FA and disallows
 automation/bypass tokens. Official `mcp-publisher` 1.8.1 validates `server.json`,
 and the
-[official Registry listing](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.artwisdom%2Fgovwait/versions/0.1.1)
-is active and latest for version `0.1.1`; version 0.1.0 remains in Registry
-history as active/non-latest.
+[official Registry listing for 0.1.1](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.artwisdom%2Fgovwait/versions/0.1.1)
+records that release; use npm's `latest` tag and the Registry's latest endpoint
+for the current public version rather than treating a local build as proof.
 
-The files in this checkout correspond to the published `0.1.1` recovery release.
-They add explicit source-collection state and prevent retained Norway snapshots
-from being described as current. Building or verifying the package remains a
-local action and does not publish another npm or Registry version.
+Version `0.1.2` changes package documentation and release metadata only. It
+preserves the exact bundled dataset and four MCP tool behaviors verified for
+`0.1.1`, while adding the public install command above and removing stale
+pre-publication wording. Building or verifying the package remains a local
+action and does not publish another npm or Registry version.
 
-## Register with Claude Code
+## Register a local checkout with Claude Code
 
 ```bash
 claude mcp add govwait -- node /ABSOLUTE/PATH/TO/govwait/machine/mcp-server/dist/index.js
 ```
 
-## Register with Claude Desktop
+## Register a local checkout with Claude Desktop
 
 Add to `claude_desktop_config.json` (Settings → Developer → Edit Config):
 

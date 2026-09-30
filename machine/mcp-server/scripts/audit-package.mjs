@@ -9,8 +9,15 @@ import { fileURLToPath } from "node:url";
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const PACKAGE_ROOT = path.resolve(HERE, "..");
 const PACKAGE_NAME = "govwait-mcp";
+const PRESERVE_BUNDLED_DATA = process.env.GOVWAIT_PRESERVE_BUNDLED_DATA === "1";
 const MAX_PACKED_BYTES = 2 * 1024 * 1024;
 const MAX_UNPACKED_BYTES = 8 * 1024 * 1024;
+const DOCS_ONLY_BASELINE = {
+  "latest.json": "840e3e4c21a977fe11699041218d2f63c9f2e2fb7f46ecaaeca317050f1c7bce",
+  "history.json": "d72cb0c363711e68c7ee3b4989a3273e56ae3cc251c7dec5bf31aead2635ed3a",
+  "forward-looking.json": "17038d17227416defc4b99daccca66f8bbf6f6555077c3ffc2a162a0dd83bbdf",
+  "provenance.json": "74148a39558e158055f5164191e3154b073fcf55d0435cb0d4eb1cc9091420e0",
+};
 const EXPECTED_FILES = [
   "DATA-NOTICE.md",
   "LICENSE",
@@ -49,7 +56,17 @@ function sha256(filePath) {
 
 const tempRoot = mkdtempSync(path.join(tmpdir(), "govwait-mcp-audit-"));
 try {
-  run("npm", ["run", "build"]);
+  if (PRESERVE_BUNDLED_DATA) {
+    run("npm", ["run", "build:code"]);
+    for (const [name, expectedHash] of Object.entries(DOCS_ONLY_BASELINE)) {
+      const dataPath = path.join(PACKAGE_ROOT, "data", name);
+      if (sha256(dataPath) !== expectedHash) {
+        throw new Error(`Documentation-only release changed the 0.1.1 bundled-data baseline: ${name}`);
+      }
+    }
+  } else {
+    run("npm", ["run", "build"]);
+  }
   const npmEnv = {
     ...process.env,
     npm_config_cache: path.join(tempRoot, "npm-cache"),
@@ -93,6 +110,17 @@ try {
   }
   if (!/files under any `data\/` directory/.test(licenseText)) {
     throw new Error("Licence gate failed: government-source data exclusion is missing");
+  }
+  const readmeText = readFileSync(path.join(installedRoot, "README.md"), "utf8");
+  if (!/```bash\nnpx -y govwait-mcp\n```/.test(readmeText)) {
+    throw new Error("README gate failed: public npx install command is missing");
+  }
+  if (!/govwait-mcp@0\.1\.1/.test(readmeText)
+      || !/published to npm and accepted as active in the official\s+MCP Registry/.test(readmeText)) {
+    throw new Error("README gate failed: verified public 0.1.1 baseline is missing");
+  }
+  if (/verified public release remains[\s\S]{0,160}govwait-mcp@0\.1\.0/.test(readmeText)) {
+    throw new Error("README gate failed: stale 0.1.0 latest-release claim is present");
   }
 
   const provenancePath = path.join(installedRoot, "data", "provenance.json");
@@ -140,6 +168,8 @@ try {
   console.log(`Files: ${actualFiles.length} exact allow-listed files`);
   console.log(`Size: ${artifact.size} bytes packed / ${artifact.unpackedSize} bytes unpacked`);
   console.log(`Integrity: ${Object.keys(provenance.files).length} bundled data hashes verified`);
+  if (PRESERVE_BUNDLED_DATA) console.log("Data scope: exact public 0.1.1 bundled-data baseline preserved for the documentation-only candidate");
+  console.log("Documentation: packed README contains the public npx command and verified 0.1.1 publication baseline");
   console.log("Licensing: Apache 2.0 applies only to GovWait-owned software code; bundled government-source data is excluded");
   console.log("Isolation: packed artifact ran in a clean temp project using the npm-ci dependency tree, without parent-repository data or GOVWAIT_DATA_DIR");
   console.log("Publication readiness: package manifest omits private; this audit did not publish or contact a registry");

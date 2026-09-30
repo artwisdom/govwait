@@ -3,10 +3,13 @@
 // stdio — initialize, tools/list, and two real tool calls with assertions.
 // Exit 0 = pass; anything else = fail loudly.
 import { spawn } from 'node:child_process';
+import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
+const expectedVersion = process.env.GOVWAIT_EXPECT_VERSION
+  ?? JSON.parse(readFileSync(path.join(HERE, 'package.json'), 'utf8')).version;
 const serverEntry = process.env.GOVWAIT_SERVER_ENTRY
   ? path.resolve(process.env.GOVWAIT_SERVER_ENTRY)
   : path.join(HERE, 'dist', 'index.js');
@@ -62,6 +65,8 @@ try {
     clientInfo: { name: 'smoke-test', version: '0.0.1' },
   });
   assert(init.result?.serverInfo?.name === 'govwait', 'initialize returns serverInfo.name=govwait');
+  assert(init.result?.serverInfo?.version === expectedVersion,
+    `initialize returns serverInfo.version=${expectedVersion}`);
   if (process.env.GOVWAIT_EXPECT_DATA_DIR) {
     assert(serverLog.includes(path.resolve(process.env.GOVWAIT_EXPECT_DATA_DIR)),
       'server loads its package-owned data directory');
