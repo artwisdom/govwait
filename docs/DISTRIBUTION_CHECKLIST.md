@@ -111,8 +111,9 @@ preview, so its status must still be monitored honestly.
 
 ### Phase 6C — 0.1.1 npm publication
 
-Status: **exact candidate verified, source pushed, and public npm package verified;
-official MCP Registry and Glama releases both expose 0.1.1 as active/latest**.
+Status: **exact candidate verified, source pushed, and public npm package
+verified; official MCP Registry and Glama both exposed 0.1.1 as active/latest at
+this checkpoint. Registry has since advanced to 0.1.2; Glama remains 0.1.1**.
 
 - [x] Synchronize all three bundled files to production export generation
   `2026-09-25T01:25:45.254Z` and verify byte-for-byte SHA-256 equality.
@@ -171,9 +172,9 @@ spend or account-setting change occurred in this Registry-only gate.
 
 ### Phase 6D — 0.1.2 packaged-README correction
 
-Status: **documentation-only source pushed and the exact audited candidate
-published and independently verified on npm; no 0.1.2 Registry, Glama or other
-directory update has been made**.
+Status: **documentation-only source pushed, exact audited candidate published
+and independently verified on npm, and official Registry 0.1.2 active/latest;
+Glama and other directories remain separately gated**.
 
 - [x] Bump package, lockfile, runtime and draft Registry metadata consistently to
   0.1.2 without changing MCP tool logic.
@@ -203,12 +204,17 @@ directory update has been made**.
 - [x] Download npm's public tarball and confirm it is byte-for-byte identical to
   the audited local candidate, then pass all 21 MCP assertions from a fresh
   temporary installation with zero known vulnerabilities.
-- [ ] Treat official Registry, Glama and other-directory updates as independent
-  later approvals after npm publication is verified.
+- [x] Under a separate Registry-only approval, revalidate and publish only the
+  0.1.2 `server.json` with checksum-verified official `mcp-publisher` 1.8.1.
+  Exact-version, latest and exact-name search return active/latest 0.1.2; version
+  history preserves active 0.1.1 and 0.1.0 as non-latest. Published timestamp:
+  `2026-09-30T02:41:54.111089Z`.
+- [ ] Keep Glama and every other directory update as independent later
+  approvals; no listing outside the official Registry changed in this gate.
 
 ## Phase 5C — no-cost discovery and earned links
 
-Status: **official Registry 0.1.1 active/latest; Glama 0.1.1 public/latest from
+Status: **official Registry 0.1.2 active/latest; Glama 0.1.1 public/latest from
 the corrected, byte-parity-safe build; Auto-Release remains off**.
 
 Priority order after Phase 5B:

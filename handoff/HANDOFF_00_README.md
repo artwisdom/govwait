@@ -145,18 +145,20 @@ style preferences.
   2026-09-13, Google accepted the owner-approved `/data/` indexing request into
   its priority crawl queue. Indexing, traffic, ad approval and revenue are not
   claimed.
-- Phase 6C public 0.1.1 npm and official Registry release is **verified**:
-  public-source commit `32aec30` is on `main`, and npm serves the exact audited
-  nine-file `govwait-mcp@0.1.1` artifact. A clean registry installation passed
-  all 21 MCP assertions and loaded 2,316 package-owned routes. Public `mcpName` exactly
-  matches `io.github.artwisdom/govwait`; official `mcp-publisher` 1.8.1 reports
-  `server.json` valid. The official 0.1.1 Registry listing is active/latest; its
-  exact-version, latest and search endpoints return HTTP 200, and 0.1.0 remains
-  active/non-latest in history. Apache 2.0 remains
+- Phase 6D public 0.1.2 npm and official Registry release is **verified**:
+  source commit `efc90490` and npm receipt commit `b36f6c47` are on `main`, and
+  npm serves the exact audited nine-file `govwait-mcp@0.1.2` artifact. A clean
+  registry installation passed all 21 MCP assertions and loaded 2,316
+  package-owned routes. Public `mcpName` exactly matches
+  `io.github.artwisdom/govwait`; checksum-verified official `mcp-publisher`
+  1.8.1 reports `server.json` valid. The official 0.1.2 Registry listing is
+  active/latest; its exact-version, latest and search endpoints return HTTP 200,
+  and 0.1.1 plus 0.1.0 remain active/non-latest in history. Apache 2.0 remains
   limited to GovWait-owned code; bundled government data remains excluded. npm
   publishing requires interactive 2FA and disallows automation/bypass tokens.
-  No long-lived publishing token, trusted publisher, other directory submission
-  or deployment was created.
+  No new GitHub PAT, long-lived publishing token, trusted publisher, other
+  directory submission or deployment was created. Glama remains separately
+  verified at public/latest 0.1.1.
 - Glama 0.1.1 is **public/latest and verified**: after the first test exposed and
   avoided a data-parity flaw, the Glama-only build was narrowed to
   `npm exec -- tsc`. GitHub-only commits pushed the README correction without an

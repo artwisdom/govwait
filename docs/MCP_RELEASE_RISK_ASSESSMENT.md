@@ -127,16 +127,37 @@ package is set to npm's strict `mfa=publish` policy: interactive 2FA is required
 and automation/bypass tokens cannot publish.
 
 Under a later explicit Registry-only gate, the official MCP Registry accepted
-only `server.json` for version `0.1.1`. Exact-version and latest endpoints return
-HTTP 200 with status `active`, `isLatest: true`, and published timestamp
+only `server.json` for version `0.1.1`. At that release checkpoint, exact-version
+and latest endpoints returned HTTP 200 with status `active`, `isLatest: true`,
+and published timestamp
 `2026-09-27T16:37:58.861649Z`; exact-name/latest search returns one result.
-Version 0.1.0 remains active in history with `isLatest: false`. The temporary
+Version 0.1.0 remained active in history with `isLatest: false`. The temporary
 Registry session was logged out after verification. No Glama/other-directory
 update, Cloudflare deployment or IndexNow notification occurred.
 
+## Verified npm and official Registry 0.1.2 release
+
+Version 0.1.2 is a documentation and release-metadata correction that preserves
+the exact 0.1.1 bundled data and MCP behavior. npm serves the audited nine-file
+artifact as `latest`; its public tarball is byte-for-byte identical to the local
+candidate at SHA-256
+`04837a57cb2d6d804e7e0b323e4ab9888988f5c4fd43c995f29f5def50ee8bf6`.
+A clean installation passed all 21 MCP assertions with zero known
+vulnerabilities.
+
+Checksum-verified official `mcp-publisher` 1.8.1 accepted only the matching
+0.1.2 `server.json`. Exact-version, latest and exact-name/latest search endpoints
+return HTTP 200 with status `active`, `isLatest: true`, one search result and
+published timestamp `2026-09-30T02:41:54.111089Z`. Version history preserves
+active 0.1.1 and 0.1.0 as non-latest. The temporary Registry session was logged
+out and its credential file removed after verification. No new GitHub PAT,
+publishing token, trusted-publisher workflow, Glama/other-directory update,
+deployment or IndexNow request was created.
+
 ## Next gate
 
-After this verified Registry 0.1.1 receipt is preserved on GitHub, the next
-release gate is a separately approved Glama sync/release. Another npm version,
-workflow, other directory submission, outreach message and deployment remain
-separate approvals because the Registry remains a preview service.
+After this verified Registry 0.1.2 receipt is preserved on GitHub, the next
+release gate is a separately approved Glama 0.1.2 sync, build-only test and
+release preflight. Another npm version, workflow, other directory submission,
+outreach message and deployment remain separate approvals because the Registry
+remains a preview service.

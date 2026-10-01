@@ -1,6 +1,6 @@
 # STATE — Data Moat Engine
 
-_Last updated: 2026-09-27_
+_Last updated: 2026-09-29_
 
 ## Environment (verified)
 | Runtime | Version |
@@ -37,7 +37,8 @@ All dependencies install locally (`node_modules` inside project). No sudo or mac
 - [x] Phase 5C Glama repository-readiness candidate: this revision makes the root Apache 2.0 terms machine-detectable, preserves the code-only/data-exclusion boundary in `SOFTWARE-SCOPE.md`, and adds live-schema-valid `glama.json`; remote licence detection must be verified after GitHub publication, while Glama sync/build/release and deployment remain separate owner gates
 - [x] Phase 6A production recovery: UDI is retained as `source_unavailable` and excluded from active collection; the GitHub proof refreshed all eight healthy Canada/UK/New Zealand sources without requesting UDI, preserved all 19 UDI records append-only, and deployed final data commit `5a99df2` in run `36082052053` to `81c691b0.govwait.pages.dev` with 603-URL IndexNow HTTP 200 and public-edge parity.
 - [x] Phase 6B refresh-to-deploy hardening: a data-changing refresh calls the existing deploy workflow exactly once as a reusable job, pins the exact bot commit, refuses stale-main deployment, skips no-change runs, guards against duplicate bot-push deployment and propagates deployment failure without adding a personal token or secret.
-- [x] Phase 6C MCP 0.1.1 release: source commit `32aec30`; exact audited nine-file tarball published publicly as `govwait-mcp@0.1.1` under owner `artwisdom`; `latest=0.1.1`; registry bytes match the retained artifact; clean public installation passed all 21 MCP assertions with zero vulnerabilities. The official MCP Registry exposes active/latest 0.1.1 while preserving 0.1.0 history, and Glama release 0.1.1 is public/latest from verified test `01a0e42d-b3cd-7f6c-b47e-ba64cf1fc293` with Auto-Release off.
+- [x] Phase 6C MCP 0.1.1 release: source commit `32aec30`; exact audited nine-file tarball published publicly as `govwait-mcp@0.1.1` under owner `artwisdom`; `latest=0.1.1` at that checkpoint; registry bytes matched the retained artifact; clean public installation passed all 21 MCP assertions with zero vulnerabilities. The official MCP Registry exposed active/latest 0.1.1 while preserving 0.1.0 history, and Glama release 0.1.1 remains public/latest from verified test `01a0e42d-b3cd-7f6c-b47e-ba64cf1fc293` with Auto-Release off.
+- [x] Phase 6D MCP 0.1.2 documentation-correction release: source commit `efc90490` and npm receipt commit `b36f6c47` are on `main`; npm exposes the exact audited nine-file `govwait-mcp@0.1.2` artifact as `latest`; a clean public installation passed all 21 MCP assertions with zero vulnerabilities; and the official MCP Registry exposes active/latest 0.1.2 while preserving active 0.1.1 and 0.1.0 history. Glama remains separately gated at verified public/latest 0.1.1 with Auto-Release off.
 
 ## Deployment status (verified through 2026-09-24 EDT)
 - Repo LIVE: https://github.com/artwisdom/govwait (public, main)
@@ -413,13 +414,41 @@ official Registry change, other-directory submission, source change, commit,
 push, workflow, site deployment, indexing request, outreach, spending or
 account-setting change was included in the Glama-only publication.
 
+### Phase 6D MCP 0.1.2 npm and official Registry release (verified 2026-09-29 EDT)
+
+Version 0.1.2 corrects packaged install documentation and release metadata while
+preserving the exact public 0.1.1 dataset and four MCP tool behaviors. Source
+commit `efc90490438f05de4a802951315a4b828f09ecf5` and npm receipt commit
+`b36f6c4790787a83539b010f615cae08401d7459` are on `main`.
+
+Interactive npm security-key authentication published the exact audited
+nine-file tarball. npm now resolves `latest` to 0.1.2; a fresh public download is
+byte-for-byte identical to the retained candidate at SHA-256
+`04837a57cb2d6d804e7e0b323e4ab9888988f5c4fd43c995f29f5def50ee8bf6`.
+A new temporary installation loaded all 2,316 package-owned routes, passed all
+21 MCP assertions and reported zero vulnerabilities.
+
+Under a later Registry-only approval, checksum-verified official
+`mcp-publisher` 1.8.1 revalidated and published only
+`machine/mcp-server/server.json` for `io.github.artwisdom/govwait@0.1.2`.
+Exact-version, latest and exact-name/latest search endpoints return HTTP 200;
+status is `active`, `isLatest` is true, search count is one, and `publishedAt` is
+`2026-09-30T02:41:54.111089Z`. Version history retains active 0.1.1 and 0.1.0 as
+non-latest. The temporary Registry session was logged out and its credential
+file removed. No new GitHub PAT or publishing token was created.
+
+This Registry-only gate did not publish npm, create a GitHub tag, release,
+token or workflow, update Glama/another directory, change source on GitHub,
+deploy, request indexing, send outreach, spend money or change account settings.
+The Registry receipt records remain local pending a separate GitHub-only gate.
+
 ## Next step
 
-Do not run another source refresh merely to exercise the workflow: the next
-data-changing scheduled refresh will provide the first natural chained-deployment
-receipt. For no-cost MCP discovery growth, next verify whether PulseMCP and the
-other reputable directories have imported the now-public official Registry and
-Glama 0.1.1 records before preparing any additional manual submission.
+Preserve the verified Registry 0.1.2 receipt on GitHub under a separate
+GitHub-only approval. After that, preflight Glama 0.1.2 against the exact source,
+audited package data and corrected build-only path before any sync or release.
+Do not run another source refresh merely to exercise the deployment workflow;
+the next natural data change will provide that receipt.
 
 ## Open threads
 - US/AU/IE sources WAF-blocked to honest bots — owner-decision item (documented in DEPLOYMENT_GUIDE).

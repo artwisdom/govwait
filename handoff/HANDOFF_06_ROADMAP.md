@@ -136,15 +136,15 @@ a 656-URL IndexNow HTTP 200 receipt. On 2026-09-13, Google Search Console
 accepted the owner-approved `/data/` indexing request into a priority crawl
 queue; the inspected URL was not indexed. Google Dataset Search appearance is
 not claimed or guaranteed.
-Phase 6C public 0.1.1 npm and official Registry release is verified as of
-2026-09-27: the exact nine-file `govwait-mcp@0.1.1` artifact includes its own three validated exports,
+Phase 6D public 0.1.2 npm and official Registry release is verified as of
+2026-09-29 EDT: the exact nine-file `govwait-mcp@0.1.2` artifact includes its own three validated exports,
 SHA-256 provenance, a scoped code licence and a separate data notice. A clean
 registry installation passed all 21 MCP assertions and loaded 2,316
 package-owned routes. Public `mcpName` exactly matches
 `io.github.artwisdom/govwait`; official `mcp-publisher` 1.8.1 reports the Registry
-metadata valid. The official 0.1.1 Registry listing is active/latest, with HTTP
-200 from exact-version, latest and search endpoints; 0.1.0 remains active in
-version history but is no longer latest. Apache 2.0 continues to cover
+metadata valid. The official 0.1.2 Registry listing is active/latest, with HTTP
+200 from exact-version, latest and search endpoints; 0.1.1 and 0.1.0 remain
+active in version history but are no longer latest. Apache 2.0 continues to cover
 GovWait-owned code only, not bundled government data. npm publishing requires
 interactive 2FA and disallows automation/bypass tokens. Other directories,
 workflows and deployment remain separate owner gates.

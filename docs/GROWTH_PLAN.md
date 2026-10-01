@@ -190,15 +190,16 @@ added it to a priority crawl queue; the URL was not indexed at inspection time.
 These are publication and discovery receipts, not indexing, traffic or revenue
 evidence.
 
-Phase 6C published and verified `govwait-mcp@0.1.1` on npm and the official MCP
-Registry by 2026-09-27. The
+Phase 6D published and verified `govwait-mcp@0.1.2` on npm and the official MCP
+Registry by 2026-09-29 EDT. The
 exact nine-file artifact carries three validated exports, deterministic
 provenance, a scoped code licence and a separate data notice; a clean public-npm
 installation passed all 21 MCP assertions and loaded 2,316 package-owned routes.
 The public `mcpName` exactly matches `io.github.artwisdom/govwait`, and official
 `mcp-publisher` 1.8.1 reports the Registry metadata valid. The exact official
-Registry 0.1.1 version is active/latest; exact-version, latest and search
-endpoints return HTTP 200, while 0.1.0 remains active/non-latest in history.
+Registry 0.1.2 version is active/latest; exact-version, latest and search
+endpoints return HTTP 200, while 0.1.1 and 0.1.0 remain active/non-latest in
+history.
 Apache 2.0 continues to cover GovWait-owned
 code only, not bundled government data. Other directories, outreach and
 deployment remain separate gates. See `docs/DISTRIBUTION_CHECKLIST.md`.

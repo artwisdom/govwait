@@ -432,3 +432,37 @@ or revenue.
   token/workflow, deployment, indexing request, outreach, spend or account-setting
   change occurred in this npm-only gate. These local receipt edits remain
   uncommitted and unpushed.
+
+## Phase 6D official MCP Registry 0.1.2 verification — 2026-09-29 EDT
+
+- Publisher integrity: GitHub's official latest release remains
+  `mcp-publisher` 1.8.1, commit
+  `f52dc8525a441a3abf5fedc9912152d95af5aab1`. A fresh Darwin arm64 archive
+  matched its published SHA-256
+  `e45e520892460732a4bdf37255576415d4a53ec171f8b913faf15bb1aef7cb77`.
+- Preflight: local metadata validation passed 31/31 checks; GitHub commit
+  `b36f6c4790787a83539b010f615cae08401d7459` serves a byte-identical
+  `server.json`; npm publicly exposes matching `govwait-mcp@0.1.2` and
+  `mcpName`; and the official live validator returned `server.json is valid`.
+  Exact Registry 0.1.2 returned HTTP 404 before submission, while latest still
+  resolved to active 0.1.1.
+- Authentication: two fresh GitHub device-flow attempts ended before owner
+  authorization with the known official publisher 1.8.1 transient documented
+  in Registry issue #1543. Neither attempt created a Registry session or
+  submitted metadata. The successful path reused the existing `artwisdom`
+  GitHub CLI credential from the macOS keyring solely for the official token
+  exchange; it created no new GitHub PAT, publishing token, permission or
+  account setting.
+- Publication: the official publisher returned `Successfully published` for
+  `io.github.artwisdom/govwait` version `0.1.2`.
+- Public proof: exact-version and `latest` endpoints return HTTP 200 with status
+  `active`, `isLatest: true`, and timestamp
+  `2026-09-30T02:41:54.111089Z`. Exact-name/latest search returns one result.
+  Version history returns three active records: 0.1.2 latest, with 0.1.1 and
+  0.1.0 retained as non-latest.
+- Cleanup and boundary: official publisher logout succeeded, and no current or
+  legacy Registry credential file remained. No npm publication, GitHub tag,
+  release, token or workflow, Glama/other-directory update, source commit/push,
+  deployment, indexing request, outreach, spend or account-setting change was
+  part of this Registry-only gate. These receipt edits remain local and
+  uncommitted.

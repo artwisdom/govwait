@@ -1,9 +1,9 @@
 # HANDOFF 01 — Project State & Technical Deep Dive
 
-_Everything a coding agent needs to operate GovWait. Current as of 2026-09-27 EDT;
+_Everything a coding agent needs to operate GovWait. Current as of 2026-09-29 EDT;
 production serves data commit `5a99df2`, Phase 6A recovery is publicly verified,
 Phase 6B hardens the validated refresh-to-deploy chain, and the exact audited
-MCP 0.1.1 package is public on npm and active/latest in the official Registry._
+MCP 0.1.2 package is public on npm and active/latest in the official Registry._
 
 ## 1. The one-sentence architecture
 
@@ -46,7 +46,7 @@ pipeline/run.js ──▶ data/db.sqlite ──▶ data/exports/{latest,history,
 | `site/src/pages/` | `index`, `[country]/index`, `[country]/[service]/index` (hub/forward page for CA; entity page for GB/NO; combined p50/p80 page for NZ), `[country]/[service]/[applicant]` (CA entity pages), `guides/*` (16 analyses), `reports/*` (4 jurisdiction baselines plus hub), trust/policy pages, `about`, `api-docs`, `404` | |
 | `machine/openapi.yaml` | OpenAPI 3.1, copied into the API at build | Keep in sync with build-api.js |
 | `machine/api-conformance.mjs` | Checks every built API file against the spec's shapes | Run in QA |
-| `machine/mcp-server/` | TypeScript stdio MCP server, 4 tools, reads exports. Public npm 0.1.1 explicitly separates Norway's last-verified snapshot from active-source current values | `npm run verify` performs isolated package QA; official Registry 0.1.1 is active/latest; Glama remains separate |
+| `machine/mcp-server/` | TypeScript stdio MCP server, 4 tools, reads exports. Public npm 0.1.2 preserves the audited 0.1.1 data/behavior and corrects packaged install documentation | `npm run verify` performs isolated package QA; official Registry 0.1.2 is active/latest; Glama remains at separately verified 0.1.1 |
 | `.github/workflows/refresh.yml` | Cron Tue+Fri 14:00 UTC: pipeline → build-api → guarded data commit. No change skips deployment; a change calls the reusable deploy workflow with the exact commit SHA, and deploy failure fails the parent refresh | Never add a personal token; keep exact-SHA output and `data_changed` guard |
 | `.github/workflows/deploy.yml` | Push/manual/reusable entry points: exact-refresh-SHA/still-main guard → build → SEO audit → Cloudflare Pages → IndexNow after successful production deploy. Bot push events are ignored as a duplicate safeguard | Requires scoped Cloudflare token in GitHub |
 | `site/scripts/seo-audit.mjs` | CI gate for unique metadata, canonicals, H1, JSON-LD, internal links, intentional noindex, exact sitemap membership, honest child lastmod, robots and llms.txt | Run after every site build |
@@ -430,6 +430,27 @@ on Astro 4 and CI continues to pin Node 20 until a separate runtime-upgrade phas
 - Under a separate final confirmation, Glama published that exact test as
   version 0.1.1 at `2026-09-27 15:29` EDT. It is marked latest, 0.1.0 remains in
   history, the corrected README is public and Auto-Release remains off.
+
+### Phase 6D MCP 0.1.2 npm and official Registry receipt (2026-09-29 EDT)
+
+- Documentation-only 0.1.2 preserves the exact audited 0.1.1 dataset and MCP
+  behavior. Source commit `efc90490` and npm receipt commit `b36f6c47` are on
+  `main`.
+- npm exposes the exact nine-file `govwait-mcp@0.1.2` artifact as `latest`. Its
+  public tarball matches the retained candidate byte-for-byte at SHA-256
+  `04837a57cb2d6d804e7e0b323e4ab9888988f5c4fd43c995f29f5def50ee8bf6`;
+  a clean installation passed all 21 MCP assertions with zero vulnerabilities.
+- Checksum-verified official `mcp-publisher` 1.8.1 revalidated and published
+  only `server.json` for `io.github.artwisdom/govwait@0.1.2`. Exact-version,
+  latest and exact-name/latest search endpoints return HTTP 200, active/latest
+  0.1.2 and one result at timestamp `2026-09-30T02:41:54.111089Z`.
+- Version history preserves active non-latest 0.1.1 and 0.1.0. The temporary
+  Registry session was logged out and its credential files were absent after
+  verification. No new GitHub PAT, publishing token or workflow was created.
+- Glama and every other directory remain unchanged under separate gates. This
+  Registry-only phase did not publish npm, create a GitHub tag/release, commit
+  or push source, deploy, request indexing, send outreach, spend money or change
+  account settings.
 
 ## 8. QA ritual before any push that touches pipeline or site
 
