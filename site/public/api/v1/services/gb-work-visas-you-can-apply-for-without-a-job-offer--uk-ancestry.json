@@ -3,7 +3,7 @@
  "service_name": "UK Ancestry (Work visas you can apply for without a job offer)",
  "jurisdiction": "GB",
  "count": 1,
- "generated_at": "2026-09-29T19:09:07.464Z",
+ "generated_at": "2026-10-02T18:57:58.359Z",
  "records": [
   {
    "entity_id": "gb-work-visas-you-can-apply-for-without-a-job-offer--uk-ancestry",
@@ -17,7 +17,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:02:20.817Z",
+   "source_last_verified_at": "2026-10-02T18:51:11.286Z",
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,

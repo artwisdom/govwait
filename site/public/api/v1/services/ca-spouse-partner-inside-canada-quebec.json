@@ -3,7 +3,7 @@
  "service_name": "Spouse or partner sponsorship — inside Canada, Quebec",
  "jurisdiction": "CA",
  "count": 1,
- "generated_at": "2026-09-29T19:09:07.464Z",
+ "generated_at": "2026-10-02T18:57:58.359Z",
  "records": [
   {
    "entity_id": "ca-spouse-partner-inside-canada-quebec",
@@ -17,7 +17,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:02:11.178Z",
+   "source_last_verified_at": "2026-10-02T18:51:02.946Z",
    "latest": {
     "value_raw": "About 32 months",
     "value_days": 974.08,

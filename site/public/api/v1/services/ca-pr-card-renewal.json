@@ -3,7 +3,7 @@
  "service_name": "PR card (renewal or replacement)",
  "jurisdiction": "CA",
  "count": 1,
- "generated_at": "2026-09-29T19:09:07.464Z",
+ "generated_at": "2026-10-02T18:57:58.359Z",
  "records": [
   {
    "entity_id": "ca-pr-card-renewal",
@@ -17,14 +17,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:02:15.175Z",
+   "source_last_verified_at": "2026-10-02T18:51:06.922Z",
    "latest": {
-    "value_raw": "38 days",
-    "value_days": 38,
+    "value_raw": "37 days",
+    "value_days": 37,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-09-22",
-    "retrieved_at": "2026-09-25T00:45:33.675Z",
+    "effective_date": "2026-10-01",
+    "retrieved_at": "2026-10-02T18:51:06.917Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json",
     "confidence": "official"
    }
