@@ -156,14 +156,14 @@ style preferences.
   and 0.1.1 plus 0.1.0 remain active/non-latest in history. Apache 2.0 remains
   limited to GovWait-owned code; bundled government data remains excluded. npm
   publishing requires interactive 2FA and disallows automation/bypass tokens.
-  No new GitHub PAT, long-lived publishing token, trusted publisher, other
-  directory submission or deployment was created. Glama remains separately
-  verified at public/latest 0.1.1.
-- Glama 0.1.1 is **public/latest and verified**: after the first test exposed and
-  avoided a data-parity flaw, the Glama-only build was narrowed to
-  `npm exec -- tsc`. GitHub-only commits pushed the README correction without an
-  Actions run, and Glama re-synced to exact commit `c09342e9`. Final build-only
-  test `01a0e42d-b3cd-7f6c-b47e-ba64cf1fc293` succeeded in 12.5 seconds with the
-  audited 2,316-route dataset, protocol `2025-11-25`, version 0.1.1 and all four
-  tools. A separately confirmed action published that exact test as Glama 0.1.1;
-  0.1.0 remains in history and Auto-Release remains off.
+  No new GitHub PAT, long-lived publishing token, trusted publisher,
+  other-directory submission or deployment was created. Glama now also exposes
+  verified public/latest 0.1.2.
+- Glama 0.1.2 is **public/latest and verified**: the Glama-only build retains the
+  parity-safe `npm exec -- tsc` path, Auto-Release stayed off, and the listing
+  synced to exact commit `fa8fcbee979d259d41f5927c217106ed6bb6a233`.
+  Build-only test `01a0f8a3-fc04-7e06-abb9-7b412f95d5dc` succeeded in 49.8
+  seconds with the audited 2,316-route dataset, protocol `2025-11-25`, version
+  0.1.2, all four tools and the corrected public README. A separately confirmed
+  action published that exact test as Glama 0.1.2; 0.1.1 and 0.1.0 remain in
+  history and Auto-Release remains off.

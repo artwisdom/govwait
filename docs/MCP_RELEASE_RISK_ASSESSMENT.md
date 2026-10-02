@@ -154,10 +154,26 @@ out and its credential file removed after verification. No new GitHub PAT,
 publishing token, trusted-publisher workflow, Glama/other-directory update,
 deployment or IndexNow request was created.
 
+## Verified Glama 0.1.2 release
+
+Under later, separately approved Glama gates, the claimed listing synced to
+exact GitHub commit `fa8fcbee979d259d41f5927c217106ed6bb6a233` and kept
+Auto-Release off. The retained Debian Bookworm and Node 22 build configuration
+used the parity-safe `npm exec -- tsc` compile path. Build-only test
+[`01a0f8a3-fc04-7e06-abb9-7b412f95d5dc`](https://glama.ai/mcp/servers/artwisdom/govwait/admin/dockerfile/tests/01a0f8a3-fc04-7e06-abb9-7b412f95d5dc)
+succeeded in 49.8 seconds with the audited 2,316-route dataset, MCP protocol
+`2025-11-25`, server version 0.1.2, all four tools and the corrected public
+README.
+
+After a separate final confirmation, Glama published only that exact successful
+test as release 0.1.2. Glama marks 0.1.2 latest, retains 0.1.1 and 0.1.0 in
+history and keeps Auto-Release off. No npm or official Registry change,
+other-directory submission, workflow, deployment, IndexNow request, outreach,
+spend or account-setting change occurred in the Glama-only publication.
+
 ## Next gate
 
-After this verified Registry 0.1.2 receipt is preserved on GitHub, the next
-release gate is a separately approved Glama 0.1.2 sync, build-only test and
-release preflight. Another npm version, workflow, other directory submission,
-outreach message and deployment remain separate approvals because the Registry
-remains a preview service.
+Continue read-only directory-propagation and discovery-traffic monitoring.
+Another npm version, workflow, listing correction, other-directory submission,
+outreach message or deployment remains a separate approval because publication
+receipts do not prove discovery traffic, demand or revenue.

@@ -149,14 +149,14 @@ GovWait-owned code only, not bundled government data. npm publishing requires
 interactive 2FA and disallows automation/bypass tokens. Other directories,
 workflows and deployment remain separate owner gates.
 
-Glama 0.1.1 was published and verified on 2026-09-27. The first build exposed
-and avoided a package-data parity flaw, so the Glama-only compile step was
-narrowed to `npm exec -- tsc`. After the README correction was pushed without an
-Actions run, Glama re-synced to exact commit `c09342e9`; final build-only test
-`01a0e42d-b3cd-7f6c-b47e-ba64cf1fc293` succeeded in 12.5 seconds with the exact
-audited 2,316-route dataset, version 0.1.1, protocol `2025-11-25` and all four
-tools. Glama 0.1.1 is public/latest, 0.1.0 remains in history and Auto-Release is
-off.
+Glama 0.1.2 was published and verified on 2026-10-01 EDT. The parity-safe
+Glama-only compile step remains `npm exec -- tsc`, and Auto-Release remained off.
+Glama synced to exact commit `fa8fcbee979d259d41f5927c217106ed6bb6a233`;
+build-only test `01a0f8a3-fc04-7e06-abb9-7b412f95d5dc` succeeded in 49.8 seconds
+with the exact audited 2,316-route dataset, version 0.1.2, protocol `2025-11-25`,
+all four tools and the corrected public README. A separately confirmed action
+published only that exact test. Glama 0.1.2 is public/latest, 0.1.1 and 0.1.0
+remain in history, and Auto-Release is off.
 
 ## Phase R7 — Scale sources (Norway → Finland → Sweden → Denmark → Netherlands)
 

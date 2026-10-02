@@ -1,9 +1,10 @@
 # HANDOFF 01 — Project State & Technical Deep Dive
 
-_Everything a coding agent needs to operate GovWait. Current as of 2026-09-29 EDT;
+_Everything a coding agent needs to operate GovWait. Current as of 2026-10-01 EDT;
 production serves data commit `5a99df2`, Phase 6A recovery is publicly verified,
 Phase 6B hardens the validated refresh-to-deploy chain, and the exact audited
-MCP 0.1.2 package is public on npm and active/latest in the official Registry._
+MCP 0.1.2 package is public on npm and active/latest in the official Registry
+and Glama._
 
 ## 1. The one-sentence architecture
 
@@ -46,7 +47,7 @@ pipeline/run.js ──▶ data/db.sqlite ──▶ data/exports/{latest,history,
 | `site/src/pages/` | `index`, `[country]/index`, `[country]/[service]/index` (hub/forward page for CA; entity page for GB/NO; combined p50/p80 page for NZ), `[country]/[service]/[applicant]` (CA entity pages), `guides/*` (16 analyses), `reports/*` (4 jurisdiction baselines plus hub), trust/policy pages, `about`, `api-docs`, `404` | |
 | `machine/openapi.yaml` | OpenAPI 3.1, copied into the API at build | Keep in sync with build-api.js |
 | `machine/api-conformance.mjs` | Checks every built API file against the spec's shapes | Run in QA |
-| `machine/mcp-server/` | TypeScript stdio MCP server, 4 tools, reads exports. Public npm 0.1.2 preserves the audited 0.1.1 data/behavior and corrects packaged install documentation | `npm run verify` performs isolated package QA; official Registry 0.1.2 is active/latest; Glama remains at separately verified 0.1.1 |
+| `machine/mcp-server/` | TypeScript stdio MCP server, 4 tools, reads exports. Public npm 0.1.2 preserves the audited 0.1.1 data/behavior and corrects packaged install documentation | `npm run verify` performs isolated package QA; official Registry and Glama 0.1.2 are active/latest; Glama Auto-Release is off |
 | `.github/workflows/refresh.yml` | Cron Tue+Fri 14:00 UTC: pipeline → build-api → guarded data commit. No change skips deployment; a change calls the reusable deploy workflow with the exact commit SHA, and deploy failure fails the parent refresh | Never add a personal token; keep exact-SHA output and `data_changed` guard |
 | `.github/workflows/deploy.yml` | Push/manual/reusable entry points: exact-refresh-SHA/still-main guard → build → SEO audit → Cloudflare Pages → IndexNow after successful production deploy. Bot push events are ignored as a duplicate safeguard | Requires scoped Cloudflare token in GitHub |
 | `site/scripts/seo-audit.mjs` | CI gate for unique metadata, canonicals, H1, JSON-LD, internal links, intentional noindex, exact sitemap membership, honest child lastmod, robots and llms.txt | Run after every site build |
@@ -447,10 +448,29 @@ on Astro 4 and CI continues to pin Node 20 until a separate runtime-upgrade phas
 - Version history preserves active non-latest 0.1.1 and 0.1.0. The temporary
   Registry session was logged out and its credential files were absent after
   verification. No new GitHub PAT, publishing token or workflow was created.
-- Glama and every other directory remain unchanged under separate gates. This
-  Registry-only phase did not publish npm, create a GitHub tag/release, commit
-  or push source, deploy, request indexing, send outreach, spend money or change
-  account settings.
+- At this Registry-only checkpoint, Glama and every other directory remained
+  unchanged under separate gates. The phase did not publish npm, create a GitHub
+  tag/release, commit or push source, deploy, request indexing, send outreach,
+  spend money or change account settings.
+
+### Phase 6D Glama 0.1.2 release (2026-10-01 EDT)
+
+- Glama synced the claimed listing to exact GitHub commit
+  `fa8fcbee979d259d41f5927c217106ed6bb6a233`; Auto-Release was confirmed off and
+  remained off.
+- The retained Glama configuration used Debian Bookworm, Node 22 and the
+  parity-safe `npm exec -- tsc` compile path. Build-only test
+  [`01a0f8a3-fc04-7e06-abb9-7b412f95d5dc`](https://glama.ai/mcp/servers/artwisdom/govwait/admin/dockerfile/tests/01a0f8a3-fc04-7e06-abb9-7b412f95d5dc)
+  succeeded in 49.8 seconds, loaded all 2,316 routes from dataset
+  `2026-09-25T01:25:45.254Z`, negotiated MCP protocol `2025-11-25`, identified
+  server version 0.1.2 and exposed all four expected tools.
+- The public listing rendered the corrected 0.1.2 README. Under a separate final
+  confirmation, Glama published that exact test as release 0.1.2 at
+  `2026-10-01 22:09` EDT (`2026-10-02 02:09` UTC). It is marked latest; 0.1.1
+  and 0.1.0 remain in history, and Auto-Release remains off.
+- No npm or official Registry change, other-directory submission, source-code
+  change, workflow, deployment, indexing request, outreach, spending or account
+  setting change was included in the Glama-only publication.
 
 ## 8. QA ritual before any push that touches pipeline or site
 

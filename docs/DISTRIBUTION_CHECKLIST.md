@@ -113,7 +113,7 @@ preview, so its status must still be monitored honestly.
 
 Status: **exact candidate verified, source pushed, and public npm package
 verified; official MCP Registry and Glama both exposed 0.1.1 as active/latest at
-this checkpoint. Registry has since advanced to 0.1.2; Glama remains 0.1.1**.
+this checkpoint. Both have since advanced to verified 0.1.2 releases**.
 
 - [x] Synchronize all three bundled files to production export generation
   `2026-09-25T01:25:45.254Z` and verify byte-for-byte SHA-256 equality.
@@ -173,8 +173,8 @@ spend or account-setting change occurred in this Registry-only gate.
 ### Phase 6D — 0.1.2 packaged-README correction
 
 Status: **documentation-only source pushed, exact audited candidate published
-and independently verified on npm, and official Registry 0.1.2 active/latest;
-Glama and other directories remain separately gated**.
+and independently verified on npm, with official Registry and Glama 0.1.2 both
+active/latest; other directories remain separately gated**.
 
 - [x] Bump package, lockfile, runtime and draft Registry metadata consistently to
   0.1.2 without changing MCP tool logic.
@@ -209,26 +209,38 @@ Glama and other directories remain separately gated**.
   Exact-version, latest and exact-name search return active/latest 0.1.2; version
   history preserves active 0.1.1 and 0.1.0 as non-latest. Published timestamp:
   `2026-09-30T02:41:54.111089Z`.
-- [ ] Keep Glama and every other directory update as independent later
-  approvals; no listing outside the official Registry changed in this gate.
+- [x] Under separate Glama approvals, sync the claimed listing to exact GitHub
+  commit `fa8fcbee979d259d41f5927c217106ed6bb6a233`, keep Auto-Release off and
+  pass build-only test `01a0f8a3-fc04-7e06-abb9-7b412f95d5dc` in 49.8 seconds
+  with Debian Bookworm, Node 22, the parity-safe `npm exec -- tsc` path, 2,316
+  audited routes, version 0.1.2, protocol `2025-11-25` and all four tools.
+- [x] Under a separate final confirmation, publish only that verified test as
+  Glama 0.1.2. Glama marks it latest, retains 0.1.1 and 0.1.0 in history, renders
+  the corrected public README and keeps Auto-Release off.
+- [ ] Keep every other directory update as an independent later approval.
 
 ## Phase 5C — no-cost discovery and earned links
 
-Status: **official Registry 0.1.2 active/latest; Glama 0.1.1 public/latest from
-the corrected, byte-parity-safe build; Auto-Release remains off**.
+Status: **official Registry and Glama 0.1.2 active/latest; Glama uses the
+corrected, byte-parity-safe build path and Auto-Release remains off**.
 
 Priority order after Phase 5B:
 
 1. [x] Official MCP Registry — canonical machine-tool discovery is active/latest
-   for `io.github.artwisdom/govwait@0.1.1`; version history preserves 0.1.0.
+   for `io.github.artwisdom/govwait@0.1.2`; version history preserves active
+   non-latest 0.1.1 and 0.1.0.
 2. [x] [Glama](https://glama.ai/mcp/servers/artwisdom/govwait) — public listing
    claimed by GitHub owner `artwisdom`. The first 0.1.1 test exposed a
    data-parity flaw in `npm run build` and was not released. After narrowing the
    Glama-only step to `npm exec -- tsc`, pushing the README correction and
    re-syncing to exact commit `c09342e9`, build-only test
    `01a0e42d-b3cd-7f6c-b47e-ba64cf1fc293` passed in 12.5 seconds with the exact
-   audited 2,316-route data, MCP `2025-11-25` and all four tools. Glama 0.1.1 is
-   now public/latest, 0.1.0 remains in history and Auto-Release is off.
+   audited 2,316-route data, MCP `2025-11-25` and all four tools. For 0.1.2,
+   Glama synced to exact commit `fa8fcbee979d259d41f5927c217106ed6bb6a233`;
+   build-only test `01a0f8a3-fc04-7e06-abb9-7b412f95d5dc` passed in 49.8
+   seconds with the same dataset, protocol and four tools, plus server version
+   0.1.2 and the corrected public README. That exact test is now public/latest
+   as Glama 0.1.2; 0.1.1 and 0.1.0 remain in history and Auto-Release is off.
 3. [PulseMCP](https://www.pulsemcp.com/api) — confirm whether the official
    registry import already discovers GovWait before making a manual submission.
 4. Smithery — optional only if its current account/API and packaging requirements

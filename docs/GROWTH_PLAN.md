@@ -204,15 +204,16 @@ Apache 2.0 continues to cover GovWait-owned
 code only, not bundled government data. Other directories, outreach and
 deployment remain separate gates. See `docs/DISTRIBUTION_CHECKLIST.md`.
 
-Glama's claimed listing has now synced to exact commit `90e2d45`, and its
-first build exposed and avoided a package-data parity flaw. The corrected
-Glama-only compile step preserves the audited npm 0.1.1 data, and build-only test
-`01a0e41a-3a3b-7107-b30a-e20beadfd22f` passed in 10.1 seconds with 2,316 routes,
-protocol `2025-11-25` and all four tools. The root-README accuracy correction was
-pushed without an Actions run. After re-syncing to exact commit `c09342e9`,
-corrected build-only test `01a0e42d-b3cd-7f6c-b47e-ba64cf1fc293` passed in 12.5
-seconds with the same audited data and public README. Glama 0.1.1 is now
-public/latest, 0.1.0 remains in history and Auto-Release remains off.
+Glama's first 0.1.1 build exposed and avoided a package-data parity flaw. The
+corrected Glama-only compile step uses `npm exec -- tsc`, preserving the audited
+package data; 0.1.1 was published only after the corrected build and README
+passed. For 0.1.2, Glama kept that safe path and Auto-Release off, synced to
+exact commit `fa8fcbee979d259d41f5927c217106ed6bb6a233`, and passed build-only
+test `01a0f8a3-fc04-7e06-abb9-7b412f95d5dc` in 49.8 seconds. The test loaded
+the same audited 2,316-route dataset, negotiated protocol `2025-11-25`, reported
+server version 0.1.2, exposed all four tools and rendered the corrected public
+README. A separately confirmed action published that exact test as Glama 0.1.2;
+it is public/latest, 0.1.1 and 0.1.0 remain in history, and Auto-Release is off.
 
 Measure accepted listings, earned links, referral visitors and returning users
 separately. A submitted URL, directory form or sent message is not indexing, a

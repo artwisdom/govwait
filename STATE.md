@@ -37,8 +37,8 @@ All dependencies install locally (`node_modules` inside project). No sudo or mac
 - [x] Phase 5C Glama repository-readiness candidate: this revision makes the root Apache 2.0 terms machine-detectable, preserves the code-only/data-exclusion boundary in `SOFTWARE-SCOPE.md`, and adds live-schema-valid `glama.json`; remote licence detection must be verified after GitHub publication, while Glama sync/build/release and deployment remain separate owner gates
 - [x] Phase 6A production recovery: UDI is retained as `source_unavailable` and excluded from active collection; the GitHub proof refreshed all eight healthy Canada/UK/New Zealand sources without requesting UDI, preserved all 19 UDI records append-only, and deployed final data commit `5a99df2` in run `36082052053` to `81c691b0.govwait.pages.dev` with 603-URL IndexNow HTTP 200 and public-edge parity.
 - [x] Phase 6B refresh-to-deploy hardening: a data-changing refresh calls the existing deploy workflow exactly once as a reusable job, pins the exact bot commit, refuses stale-main deployment, skips no-change runs, guards against duplicate bot-push deployment and propagates deployment failure without adding a personal token or secret.
-- [x] Phase 6C MCP 0.1.1 release: source commit `32aec30`; exact audited nine-file tarball published publicly as `govwait-mcp@0.1.1` under owner `artwisdom`; `latest=0.1.1` at that checkpoint; registry bytes matched the retained artifact; clean public installation passed all 21 MCP assertions with zero vulnerabilities. The official MCP Registry exposed active/latest 0.1.1 while preserving 0.1.0 history, and Glama release 0.1.1 remains public/latest from verified test `01a0e42d-b3cd-7f6c-b47e-ba64cf1fc293` with Auto-Release off.
-- [x] Phase 6D MCP 0.1.2 documentation-correction release: source commit `efc90490` and npm receipt commit `b36f6c47` are on `main`; npm exposes the exact audited nine-file `govwait-mcp@0.1.2` artifact as `latest`; a clean public installation passed all 21 MCP assertions with zero vulnerabilities; and the official MCP Registry exposes active/latest 0.1.2 while preserving active 0.1.1 and 0.1.0 history. Glama remains separately gated at verified public/latest 0.1.1 with Auto-Release off.
+- [x] Phase 6C MCP 0.1.1 release: source commit `32aec30`; exact audited nine-file tarball published publicly as `govwait-mcp@0.1.1` under owner `artwisdom`; `latest=0.1.1` at that checkpoint; registry bytes matched the retained artifact; clean public installation passed all 21 MCP assertions with zero vulnerabilities. The official MCP Registry and Glama both exposed active/latest 0.1.1 at that checkpoint while preserving 0.1.0 history; Glama's verified test was `01a0e42d-b3cd-7f6c-b47e-ba64cf1fc293` and Auto-Release stayed off.
+- [x] Phase 6D MCP 0.1.2 documentation-correction release: source commit `efc90490` and npm receipt commit `b36f6c47` are on `main`; npm exposes the exact audited nine-file `govwait-mcp@0.1.2` artifact as `latest`; a clean public installation passed all 21 MCP assertions with zero vulnerabilities; and the official MCP Registry exposes active/latest 0.1.2 while preserving active 0.1.1 and 0.1.0 history. Glama also exposes verified public/latest 0.1.2 from build test `01a0f8a3-fc04-7e06-abb9-7b412f95d5dc`, retains 0.1.1 and 0.1.0 in history, and keeps Auto-Release off.
 
 ## Deployment status (verified through 2026-09-24 EDT)
 - Repo LIVE: https://github.com/artwisdom/govwait (public, main)
@@ -440,15 +440,33 @@ file removed. No new GitHub PAT or publishing token was created.
 This Registry-only gate did not publish npm, create a GitHub tag, release,
 token or workflow, update Glama/another directory, change source on GitHub,
 deploy, request indexing, send outreach, spend money or change account settings.
-The Registry receipt records remain local pending a separate GitHub-only gate.
+GitHub-only commit `fa8fcbee979d259d41f5927c217106ed6bb6a233`
+subsequently preserved the Registry receipt and current-version documentation.
+
+Under later, separately approved Glama gates, the claimed listing synced to
+that exact commit while Auto-Release remained off. Build-only test
+[`01a0f8a3-fc04-7e06-abb9-7b412f95d5dc`](https://glama.ai/mcp/servers/artwisdom/govwait/admin/dockerfile/tests/01a0f8a3-fc04-7e06-abb9-7b412f95d5dc)
+succeeded in 49.8 seconds using Debian Bookworm, Node 22 and the parity-safe
+`npm exec -- tsc` compile path. It loaded all 2,316 routes from dataset
+`2026-09-25T01:25:45.254Z`, negotiated MCP protocol `2025-11-25`, identified
+server version `0.1.2` and exposed all four tools. The public listing rendered
+the corrected 0.1.2 README.
+
+After a separate final owner confirmation, Glama published release `0.1.2` from
+that exact test at `2026-10-01 22:09` EDT (`2026-10-02 02:09` UTC). The Releases
+page marks 0.1.2 `Latest`, retains 0.1.1 and 0.1.0 in history, and shows
+Auto-Release off. No npm or official Registry change, other-directory
+submission, source change, workflow, site deployment, indexing request,
+outreach, spending or account-setting change was included in the Glama-only
+publication.
 
 ## Next step
 
-Preserve the verified Registry 0.1.2 receipt on GitHub under a separate
-GitHub-only approval. After that, preflight Glama 0.1.2 against the exact source,
-audited package data and corrected build-only path before any sync or release.
-Do not run another source refresh merely to exercise the deployment workflow;
-the next natural data change will provide that receipt.
+Continue the existing read-only directory-propagation and discovery-traffic
+checks. Keep any listing correction, directory submission, outreach, package
+publication or deployment behind its own owner approval. Do not run another
+source refresh merely to exercise the deployment workflow; the next natural
+data change will provide that receipt.
 
 ## Open threads
 - US/AU/IE sources WAF-blocked to honest bots — owner-decision item (documented in DEPLOYMENT_GUIDE).

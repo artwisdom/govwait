@@ -464,5 +464,34 @@ or revenue.
   legacy Registry credential file remained. No npm publication, GitHub tag,
   release, token or workflow, Glama/other-directory update, source commit/push,
   deployment, indexing request, outreach, spend or account-setting change was
-  part of this Registry-only gate. These receipt edits remain local and
-  uncommitted.
+  part of this Registry-only gate. GitHub-only commit
+  `fa8fcbee979d259d41f5927c217106ed6bb6a233` later preserved these Registry
+  receipt and current-version records.
+
+## Phase 6D Glama 0.1.2 release verification — 2026-10-01 EDT
+
+- Repository sync: the claimed Glama listing synced to exact GitHub commit
+  `fa8fcbee979d259d41f5927c217106ed6bb6a233`, which contains the audited npm and
+  official Registry 0.1.2 records. Auto-Release was confirmed off and remained
+  off throughout the sync, test and release.
+- Build configuration: the retained Glama-only configuration used
+  `debian:bookworm-slim`, Node 22 and the parity-safe
+  `cd machine/mcp-server && npm exec -- tsc` compile step between clean install
+  and production-dependency pruning. The pinned commit was the full exact SHA.
+- Build proof: build-only test
+  [`01a0f8a3-fc04-7e06-abb9-7b412f95d5dc`](https://glama.ai/mcp/servers/artwisdom/govwait/admin/dockerfile/tests/01a0f8a3-fc04-7e06-abb9-7b412f95d5dc)
+  succeeded in 49.8 seconds. Its logs checked out the exact pinned commit, loaded
+  all 2,316 routes from dataset `2026-09-25T01:25:45.254Z`, negotiated MCP
+  protocol `2025-11-25`, returned server version `0.1.2`, and exposed exactly
+  `compare_values`, `get_entity`, `get_latest_value` and `search_entities`.
+- Public-accuracy proof: the [public Glama listing](https://glama.ai/mcp/servers/artwisdom/govwait)
+  renders the corrected 0.1.2 README, links the verified npm 0.1.2 package and
+  official Registry 0.1.2 record, and displays all four tools.
+- Publication proof: after a separate final owner confirmation, Glama published
+  release 0.1.2 from that exact successful test at `2026-10-01 22:09` EDT
+  (`2026-10-02 02:09` UTC). The Releases page marks 0.1.2 latest and retains
+  0.1.1 and 0.1.0 in history.
+- Boundary: Auto-Release remains off. No npm or official Registry change,
+  other-directory submission, source-code change, workflow, site deployment,
+  indexing request, outreach, spend or account-setting change occurred in the
+  Glama-only publication.
