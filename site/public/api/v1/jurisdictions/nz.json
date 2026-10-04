@@ -1,7 +1,7 @@
 {
  "jurisdiction": "NZ",
  "count": 264,
- "generated_at": "2026-09-29T19:09:07.464Z",
+ "generated_at": "2026-10-02T18:57:58.359Z",
  "services": [
   "nz-academic-visitor-visa",
   "nz-accredited-employer-work-visa",
@@ -149,7 +149,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -173,7 +173,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "24 working days",
     "value_days": 24,
@@ -197,14 +197,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "16 working days",
+    "value_days": 16,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-29",
-    "retrieved_at": "2026-09-29T19:02:36.396Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:51:26.535Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -221,7 +221,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "37 working days",
     "value_days": 37,
@@ -245,7 +245,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "45 working days",
     "value_days": 45,
@@ -269,7 +269,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "106 working days",
     "value_days": 106,
@@ -293,7 +293,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -317,7 +317,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "24 working days",
     "value_days": 24,
@@ -341,7 +341,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -365,7 +365,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "24 working days",
     "value_days": 24,
@@ -389,7 +389,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -413,7 +413,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "24 working days",
     "value_days": 24,
@@ -437,14 +437,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "7 working days",
-    "value_days": 7,
+    "value_raw": "4 working days",
+    "value_days": 4,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:46:43.609Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:52:15.051Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -461,14 +461,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:46:43.609Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:52:15.051Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -485,7 +485,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -509,7 +509,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "24 working days",
     "value_days": 24,
@@ -533,14 +533,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "7 working days",
-    "value_days": 7,
+    "value_raw": "4 working days",
+    "value_days": 4,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:46:50.096Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:52:21.003Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -557,14 +557,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:46:50.096Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:52:21.003Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -581,14 +581,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "7 working days",
-    "value_days": 7,
+    "value_raw": "4 working days",
+    "value_days": 4,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:46:53.055Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:52:23.998Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -605,14 +605,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:46:53.055Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:52:23.998Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -629,14 +629,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "7 working days",
-    "value_days": 7,
+    "value_raw": "4 working days",
+    "value_days": 4,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:46:56.128Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:52:26.561Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -653,14 +653,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:46:56.128Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:52:26.561Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -677,7 +677,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "3 working days",
     "value_days": 3,
@@ -701,14 +701,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "8 working days",
-    "value_days": 8,
+    "value_raw": "9 working days",
+    "value_days": 9,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-29",
-    "retrieved_at": "2026-09-29T19:02:39.404Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:51:30.031Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -725,14 +725,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "7 working days",
-    "value_days": 7,
+    "value_raw": "4 working days",
+    "value_days": 4,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:46:59.070Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:52:30.024Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -749,14 +749,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:46:59.070Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:52:30.024Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -773,7 +773,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -797,7 +797,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "24 working days",
     "value_days": 24,
@@ -821,7 +821,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "35 working days",
     "value_days": 35,
@@ -845,7 +845,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "72 working days",
     "value_days": 72,
@@ -869,7 +869,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "35 working days",
     "value_days": 35,
@@ -893,7 +893,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "72 working days",
     "value_days": 72,
@@ -917,7 +917,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "35 working days",
     "value_days": 35,
@@ -941,7 +941,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "72 working days",
     "value_days": 72,
@@ -965,14 +965,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "7 working days",
-    "value_days": 7,
+    "value_raw": "4 working days",
+    "value_days": 4,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:47:13.659Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:52:45.033Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -989,14 +989,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:47:13.659Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:52:45.033Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -1013,7 +1013,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "22 working days",
     "value_days": 22,
@@ -1037,7 +1037,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "49 working days",
     "value_days": 49,
@@ -1061,7 +1061,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "22 working days",
     "value_days": 22,
@@ -1085,7 +1085,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "49 working days",
     "value_days": 49,
@@ -1109,14 +1109,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "7 working days",
-    "value_days": 7,
+    "value_raw": "4 working days",
+    "value_days": 4,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:47:23.115Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:52:54.033Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -1133,14 +1133,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:47:23.115Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:52:54.033Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -1157,7 +1157,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -1181,7 +1181,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "24 working days",
     "value_days": 24,
@@ -1205,14 +1205,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "7 working days",
-    "value_days": 7,
+    "value_raw": "4 working days",
+    "value_days": 4,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:47:29.104Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:53:00.433Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -1229,14 +1229,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:47:29.104Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:53:00.433Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -1253,7 +1253,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "16 working days",
     "value_days": 16,
@@ -1277,7 +1277,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "28 working days",
     "value_days": 28,
@@ -1301,14 +1301,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "7 working days",
-    "value_days": 7,
+    "value_raw": "4 working days",
+    "value_days": 4,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:47:34.665Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:53:05.997Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -1325,14 +1325,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:47:34.665Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:53:05.997Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -1349,14 +1349,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "7 working days",
-    "value_days": 7,
+    "value_raw": "4 working days",
+    "value_days": 4,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:47:38.153Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:53:08.555Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -1373,14 +1373,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:47:38.153Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:53:08.555Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -1397,7 +1397,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "162 working days",
     "value_days": 162,
@@ -1421,7 +1421,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "189 working days",
     "value_days": 189,
@@ -1445,7 +1445,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "32 working days",
     "value_days": 32,
@@ -1469,7 +1469,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "65 working days",
     "value_days": 65,
@@ -1493,7 +1493,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -1517,7 +1517,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "24 working days",
     "value_days": 24,
@@ -1541,7 +1541,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "22 working days",
     "value_days": 22,
@@ -1565,7 +1565,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "49 working days",
     "value_days": 49,
@@ -1589,7 +1589,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "23 working days",
     "value_days": 23,
@@ -1613,7 +1613,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "53 working days",
     "value_days": 53,
@@ -1637,7 +1637,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "9 working days",
     "value_days": 9,
@@ -1661,7 +1661,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "11 working days",
     "value_days": 11,
@@ -1685,7 +1685,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "392 working days",
     "value_days": 392,
@@ -1709,7 +1709,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "428 working days",
     "value_days": 428,
@@ -1733,7 +1733,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -1757,7 +1757,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "24 working days",
     "value_days": 24,
@@ -1781,14 +1781,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "7 working days",
-    "value_days": 7,
+    "value_raw": "4 working days",
+    "value_days": 4,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:48:04.725Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:53:36.073Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -1805,14 +1805,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:48:04.725Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:53:36.073Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -1829,7 +1829,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -1853,7 +1853,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "9 working days",
     "value_days": 9,
@@ -1877,7 +1877,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "23 working days",
     "value_days": 23,
@@ -1901,7 +1901,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "53 working days",
     "value_days": 53,
@@ -1925,14 +1925,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "7 working days",
-    "value_days": 7,
+    "value_raw": "4 working days",
+    "value_days": 4,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:48:11.169Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:53:41.569Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -1949,14 +1949,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:48:11.169Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:53:41.569Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -1973,7 +1973,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "50 working days",
     "value_days": 50,
@@ -1997,7 +1997,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "107 working days",
     "value_days": 107,
@@ -2021,7 +2021,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "21 working days",
     "value_days": 21,
@@ -2045,7 +2045,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "21 working days",
     "value_days": 21,
@@ -2069,14 +2069,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "7 working days",
-    "value_days": 7,
+    "value_raw": "4 working days",
+    "value_days": 4,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:48:19.742Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:53:51.092Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -2093,14 +2093,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:48:19.742Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:53:51.092Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -2117,7 +2117,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -2141,7 +2141,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "24 working days",
     "value_days": 24,
@@ -2165,14 +2165,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "7 working days",
-    "value_days": 7,
+    "value_raw": "4 working days",
+    "value_days": 4,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:48:26.191Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:53:57.037Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -2189,14 +2189,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:48:26.191Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:53:57.037Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -2213,7 +2213,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "22 working days",
     "value_days": 22,
@@ -2237,7 +2237,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "49 working days",
     "value_days": 49,
@@ -2261,7 +2261,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -2285,7 +2285,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "11 working days",
     "value_days": 11,
@@ -2309,7 +2309,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "32 working days",
     "value_days": 32,
@@ -2333,7 +2333,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "46 working days",
     "value_days": 46,
@@ -2357,14 +2357,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "7 working days",
-    "value_days": 7,
+    "value_raw": "4 working days",
+    "value_days": 4,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:48:38.207Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:54:09.057Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -2381,14 +2381,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:48:38.207Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:54:09.057Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -2405,14 +2405,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "7 working days",
-    "value_days": 7,
+    "value_raw": "4 working days",
+    "value_days": 4,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:48:41.208Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:54:11.589Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -2429,14 +2429,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:48:41.208Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:54:11.589Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -2453,7 +2453,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "22 working days",
     "value_days": 22,
@@ -2477,7 +2477,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "49 working days",
     "value_days": 49,
@@ -2501,14 +2501,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "7 working days",
-    "value_days": 7,
+    "value_raw": "4 working days",
+    "value_days": 4,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:48:47.221Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:54:18.052Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -2525,14 +2525,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:48:47.221Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:54:18.052Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -2549,14 +2549,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "7 working days",
-    "value_days": 7,
+    "value_raw": "4 working days",
+    "value_days": 4,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:48:49.722Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:54:21.093Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -2573,14 +2573,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:48:49.722Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:54:21.093Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -2597,14 +2597,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "7 working days",
-    "value_days": 7,
+    "value_raw": "4 working days",
+    "value_days": 4,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:48:52.715Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:54:24.054Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -2621,14 +2621,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:48:52.715Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:54:24.054Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -2645,14 +2645,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "7 working days",
-    "value_days": 7,
+    "value_raw": "4 working days",
+    "value_days": 4,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:48:56.203Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:54:27.289Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -2669,14 +2669,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:48:56.203Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:54:27.289Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -2693,7 +2693,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "22 working days",
     "value_days": 22,
@@ -2717,7 +2717,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "49 working days",
     "value_days": 49,
@@ -2741,14 +2741,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "7 working days",
-    "value_days": 7,
+    "value_raw": "4 working days",
+    "value_days": 4,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:49:02.216Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:54:33.059Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -2765,14 +2765,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:49:02.216Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:54:33.059Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -2789,14 +2789,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "7 working days",
-    "value_days": 7,
+    "value_raw": "4 working days",
+    "value_days": 4,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:49:04.743Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:54:36.047Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -2813,14 +2813,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:49:04.743Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:54:36.047Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -2837,14 +2837,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "7 working days",
-    "value_days": 7,
+    "value_raw": "4 working days",
+    "value_days": 4,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:49:07.768Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:54:39.059Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -2861,14 +2861,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:49:07.768Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:54:39.059Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -2885,7 +2885,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "25 working days",
     "value_days": 25,
@@ -2909,7 +2909,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "25 working days",
     "value_days": 25,
@@ -2933,14 +2933,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "7 working days",
-    "value_days": 7,
+    "value_raw": "4 working days",
+    "value_days": 4,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:49:14.193Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:54:45.090Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -2957,14 +2957,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:49:14.193Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:54:45.090Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -2981,14 +2981,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "7 working days",
-    "value_days": 7,
+    "value_raw": "4 working days",
+    "value_days": 4,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:49:17.238Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:54:48.044Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -3005,14 +3005,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:49:17.238Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:54:48.044Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -3029,14 +3029,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "7 working days",
-    "value_days": 7,
+    "value_raw": "4 working days",
+    "value_days": 4,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:49:20.168Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:54:51.030Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -3053,14 +3053,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:49:20.168Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:54:51.030Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -3077,7 +3077,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -3101,7 +3101,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "24 working days",
     "value_days": 24,
@@ -3125,14 +3125,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "7 working days",
-    "value_days": 7,
+    "value_raw": "4 working days",
+    "value_days": 4,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:49:26.236Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:54:57.088Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -3149,14 +3149,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:49:26.236Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:54:57.088Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -3173,14 +3173,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "7 working days",
-    "value_days": 7,
+    "value_raw": "4 working days",
+    "value_days": 4,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:49:29.208Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:55:00.061Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -3197,14 +3197,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:49:29.208Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:55:00.061Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -3221,14 +3221,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "7 working days",
-    "value_days": 7,
+    "value_raw": "4 working days",
+    "value_days": 4,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:49:32.193Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:55:03.092Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -3245,14 +3245,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:49:32.193Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:55:03.092Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -3269,7 +3269,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "21 working days",
     "value_days": 21,
@@ -3293,7 +3293,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "21 working days",
     "value_days": 21,
@@ -3317,7 +3317,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -3341,7 +3341,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "24 working days",
     "value_days": 24,
@@ -3365,7 +3365,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "471 working days",
     "value_days": 471,
@@ -3389,7 +3389,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "472 working days",
     "value_days": 472,
@@ -3413,7 +3413,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "53 working days",
     "value_days": 53,
@@ -3437,7 +3437,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "85 working days",
     "value_days": 85,
@@ -3461,14 +3461,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "207 working days",
-    "value_days": 207,
+    "value_raw": "204 working days",
+    "value_days": 204,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-29",
-    "retrieved_at": "2026-09-29T19:02:42.384Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:51:32.553Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -3485,14 +3485,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "298 working days",
-    "value_days": 298,
+    "value_raw": "324 working days",
+    "value_days": 324,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-29",
-    "retrieved_at": "2026-09-29T19:02:42.384Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:51:32.553Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -3509,7 +3509,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "427 working days",
     "value_days": 427,
@@ -3533,7 +3533,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "815 working days",
     "value_days": 815,
@@ -3557,14 +3557,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "175 working days",
-    "value_days": 175,
+    "value_raw": "172 working days",
+    "value_days": 172,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-29",
-    "retrieved_at": "2026-09-29T19:02:44.994Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:51:35.555Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -3581,14 +3581,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "199 working days",
-    "value_days": 199,
+    "value_raw": "197 working days",
+    "value_days": 197,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:46:04.655Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:51:35.555Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -3605,14 +3605,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "37 working days",
-    "value_days": 37,
+    "value_raw": "32 working days",
+    "value_days": 32,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T18:10:22.298Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:51:38.996Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -3629,7 +3629,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "49 working days",
     "value_days": 49,
@@ -3653,7 +3653,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "39 working days",
     "value_days": 39,
@@ -3677,7 +3677,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "51 working days",
     "value_days": 51,
@@ -3701,7 +3701,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "38 working days",
     "value_days": 38,
@@ -3725,7 +3725,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "73 working days",
     "value_days": 73,
@@ -3749,7 +3749,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -3773,7 +3773,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "35 working days",
     "value_days": 35,
@@ -3797,7 +3797,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "38 working days",
     "value_days": 38,
@@ -3821,7 +3821,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "73 working days",
     "value_days": 73,
@@ -3845,14 +3845,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "29 working days",
-    "value_days": 29,
+    "value_raw": "25 working days",
+    "value_days": 25,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-29",
-    "retrieved_at": "2026-09-29T19:02:50.996Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:51:41.523Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -3869,7 +3869,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "42 working days",
     "value_days": 42,
@@ -3893,7 +3893,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,
@@ -3917,7 +3917,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "35 working days",
     "value_days": 35,
@@ -3941,7 +3941,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "38 working days",
     "value_days": 38,
@@ -3965,7 +3965,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "73 working days",
     "value_days": 73,
@@ -3989,7 +3989,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "22 working days",
     "value_days": 22,
@@ -4013,7 +4013,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "49 working days",
     "value_days": 49,
@@ -4037,7 +4037,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "23 working days",
     "value_days": 23,
@@ -4061,7 +4061,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "53 working days",
     "value_days": 53,
@@ -4085,14 +4085,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "9 working days",
-    "value_days": 9,
+    "value_raw": "10 working days",
+    "value_days": 10,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-08-23",
-    "retrieved_at": "2026-08-23T21:03:04.133Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:51:48.028Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -4109,7 +4109,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "14 working days",
     "value_days": 14,
@@ -4133,14 +4133,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "7 working days",
-    "value_days": 7,
+    "value_raw": "4 working days",
+    "value_days": 4,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:50:14.238Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:55:45.099Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -4157,14 +4157,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:50:14.238Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:55:45.099Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -4181,7 +4181,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "22 working days",
     "value_days": 22,
@@ -4205,7 +4205,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "49 working days",
     "value_days": 49,
@@ -4229,14 +4229,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "7 working days",
-    "value_days": 7,
+    "value_raw": "4 working days",
+    "value_days": 4,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:50:19.914Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:55:51.087Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -4253,14 +4253,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:50:19.914Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:55:51.087Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -4277,7 +4277,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -4301,7 +4301,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "24 working days",
     "value_days": 24,
@@ -4325,14 +4325,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "7 working days",
-    "value_days": 7,
+    "value_raw": "4 working days",
+    "value_days": 4,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:50:26.306Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:55:57.070Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -4349,14 +4349,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:50:26.306Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:55:57.070Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -4373,14 +4373,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "7 working days",
-    "value_days": 7,
+    "value_raw": "4 working days",
+    "value_days": 4,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:50:29.282Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:56:00.098Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -4397,14 +4397,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:50:29.282Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:56:00.098Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -4421,7 +4421,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "22 working days",
     "value_days": 22,
@@ -4445,7 +4445,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "49 working days",
     "value_days": 49,
@@ -4469,7 +4469,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -4493,7 +4493,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "24 working days",
     "value_days": 24,
@@ -4517,7 +4517,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "2 working days",
     "value_days": 2,
@@ -4541,7 +4541,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "2 working days",
     "value_days": 2,
@@ -4565,7 +4565,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -4589,7 +4589,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "24 working days",
     "value_days": 24,
@@ -4613,7 +4613,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "122 working days",
     "value_days": 122,
@@ -4637,7 +4637,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "183 working days",
     "value_days": 183,
@@ -4661,7 +4661,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "11 working days",
     "value_days": 11,
@@ -4685,7 +4685,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "22 working days",
     "value_days": 22,
@@ -4709,7 +4709,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "22 working days",
     "value_days": 22,
@@ -4733,7 +4733,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "49 working days",
     "value_days": 49,
@@ -4757,7 +4757,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "490 working days",
     "value_days": 490,
@@ -4781,7 +4781,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "514 working days",
     "value_days": 514,
@@ -4805,7 +4805,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "16 working days",
     "value_days": 16,
@@ -4829,7 +4829,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "29 working days",
     "value_days": 29,
@@ -4853,7 +4853,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -4877,7 +4877,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "24 working days",
     "value_days": 24,
@@ -4901,14 +4901,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "7 working days",
-    "value_days": 7,
+    "value_raw": "4 working days",
+    "value_days": 4,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:51:02.300Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:56:32.631Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -4925,14 +4925,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:51:02.300Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:56:32.631Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -4949,14 +4949,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "67 working days",
-    "value_days": 67,
+    "value_raw": "71 working days",
+    "value_days": 71,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:46:19.702Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:51:50.544Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -4973,14 +4973,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "105 working days",
-    "value_days": 105,
+    "value_raw": "106 working days",
+    "value_days": 106,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-29",
-    "retrieved_at": "2026-09-29T19:03:00.435Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:51:50.544Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -4997,14 +4997,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "7 working days",
-    "value_days": 7,
+    "value_raw": "4 working days",
+    "value_days": 4,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:51:04.805Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:56:36.129Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -5021,14 +5021,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:51:04.805Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:56:36.129Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -5045,14 +5045,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "7 working days",
-    "value_days": 7,
+    "value_raw": "4 working days",
+    "value_days": 4,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:51:07.805Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:56:39.080Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -5069,14 +5069,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:51:07.805Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:56:39.080Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -5093,7 +5093,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "22 working days",
     "value_days": 22,
@@ -5117,7 +5117,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "49 working days",
     "value_days": 49,
@@ -5141,14 +5141,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "7 working days",
-    "value_days": 7,
+    "value_raw": "4 working days",
+    "value_days": 4,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:51:14.315Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:56:45.108Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -5165,14 +5165,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:51:14.315Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:56:45.108Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -5189,7 +5189,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "11 working days",
     "value_days": 11,
@@ -5213,7 +5213,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "21 working days",
     "value_days": 21,
@@ -5237,7 +5237,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -5261,7 +5261,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "24 working days",
     "value_days": 24,
@@ -5285,14 +5285,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "56 working days",
-    "value_days": 56,
+    "value_raw": "53 working days",
+    "value_days": 53,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:46:23.085Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:51:53.988Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -5309,14 +5309,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "95 working days",
-    "value_days": 95,
+    "value_raw": "94 working days",
+    "value_days": 94,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:46:23.085Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:51:53.988Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -5333,7 +5333,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "22 working days",
     "value_days": 22,
@@ -5357,7 +5357,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "49 working days",
     "value_days": 49,
@@ -5381,7 +5381,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -5405,7 +5405,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "24 working days",
     "value_days": 24,
@@ -5429,14 +5429,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "7 working days",
-    "value_days": 7,
+    "value_raw": "4 working days",
+    "value_days": 4,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:51:29.301Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:56:59.643Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -5453,14 +5453,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:51:29.301Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:56:59.643Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -5477,14 +5477,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "7 working days",
-    "value_days": 7,
+    "value_raw": "4 working days",
+    "value_days": 4,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:51:32.223Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:57:03.118Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -5501,14 +5501,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:51:32.223Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:57:03.118Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -5525,7 +5525,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "25 working days",
     "value_days": 25,
@@ -5549,7 +5549,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "28 working days",
     "value_days": 28,
@@ -5573,7 +5573,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "16 working days",
     "value_days": 16,
@@ -5597,7 +5597,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "16 working days",
     "value_days": 16,
@@ -5621,7 +5621,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -5645,7 +5645,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "24 working days",
     "value_days": 24,
@@ -5669,7 +5669,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "22 working days",
     "value_days": 22,
@@ -5693,7 +5693,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "49 working days",
     "value_days": 49,
@@ -5717,14 +5717,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "7 working days",
-    "value_days": 7,
+    "value_raw": "4 working days",
+    "value_days": 4,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:51:47.269Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:57:18.130Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -5741,14 +5741,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:51:47.269Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:57:18.130Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -5765,7 +5765,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "4 working days",
     "value_days": 4,
@@ -5789,7 +5789,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "9 working days",
     "value_days": 9,
@@ -5813,7 +5813,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "3 working days",
     "value_days": 3,
@@ -5837,7 +5837,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -5861,14 +5861,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "7 working days",
-    "value_days": 7,
+    "value_raw": "4 working days",
+    "value_days": 4,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:51:56.259Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:57:27.116Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -5885,14 +5885,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:51:56.259Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:57:27.116Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -5909,14 +5909,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "7 working days",
-    "value_days": 7,
+    "value_raw": "4 working days",
+    "value_days": 4,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:51:59.244Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:57:30.124Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -5933,14 +5933,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:51:59.244Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:57:30.124Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -5957,14 +5957,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "7 working days",
-    "value_days": 7,
+    "value_raw": "4 working days",
+    "value_days": 4,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:52:02.360Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:57:33.120Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -5981,14 +5981,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:52:02.360Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:57:33.120Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -6005,14 +6005,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "7 working days",
-    "value_days": 7,
+    "value_raw": "4 working days",
+    "value_days": 4,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:52:05.279Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:57:36.114Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -6029,14 +6029,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:52:05.279Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:57:36.114Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -6053,7 +6053,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "86 working days",
     "value_days": 86,
@@ -6077,7 +6077,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "182 working days",
     "value_days": 182,
@@ -6101,7 +6101,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "9 working days",
     "value_days": 9,
@@ -6125,7 +6125,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "17 working days",
     "value_days": 17,
@@ -6149,7 +6149,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "22 working days",
     "value_days": 22,
@@ -6173,7 +6173,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "49 working days",
     "value_days": 49,
@@ -6197,14 +6197,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "7 working days",
-    "value_days": 7,
+    "value_raw": "4 working days",
+    "value_days": 4,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:52:16.854Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:57:48.122Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -6221,14 +6221,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "15 working days",
-    "value_days": 15,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:52:16.854Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:57:48.122Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -6245,7 +6245,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -6269,7 +6269,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "24 working days",
     "value_days": 24,
@@ -6293,7 +6293,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "7 working days",
     "value_days": 7,
@@ -6317,14 +6317,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "11 working days",
-    "value_days": 11,
+    "value_raw": "14 working days",
+    "value_days": 14,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-08-23",
-    "retrieved_at": "2026-08-23T21:02:36.894Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:51:23.528Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -6341,7 +6341,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "21 working days",
     "value_days": 21,
@@ -6365,7 +6365,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "21 working days",
     "value_days": 21,
@@ -6389,7 +6389,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "11 working days",
     "value_days": 11,
@@ -6413,7 +6413,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "16 working days",
     "value_days": 16,
@@ -6437,7 +6437,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
     "value_raw": "52 working days",
     "value_days": 52,
@@ -6461,14 +6461,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "80 working days",
-    "value_days": 80,
+    "value_raw": "86 working days",
+    "value_days": 86,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-29",
-    "retrieved_at": "2026-09-29T19:03:06.030Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:51:57.032Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }

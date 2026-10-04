@@ -3,7 +3,7 @@
  "service_name": "Child (Family visas, applying inside the UK)",
  "jurisdiction": "GB",
  "count": 1,
- "generated_at": "2026-09-29T19:09:07.464Z",
+ "generated_at": "2026-10-02T18:57:58.359Z",
  "records": [
   {
    "entity_id": "gb-in-uk-family-visas--child",
@@ -17,7 +17,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:02:23.953Z",
+   "source_last_verified_at": "2026-10-02T18:51:14.147Z",
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,

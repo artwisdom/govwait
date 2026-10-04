@@ -3,7 +3,7 @@
  "service_name": "Parent Resident Visa — 50% processed",
  "jurisdiction": "NZ",
  "count": 2,
- "generated_at": "2026-09-29T19:09:07.464Z",
+ "generated_at": "2026-10-02T18:57:58.359Z",
  "records": [
   {
    "entity_id": "nz-parent-resident-visa--p50",
@@ -17,14 +17,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "207 working days",
-    "value_days": 207,
+    "value_raw": "204 working days",
+    "value_days": 204,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-29",
-    "retrieved_at": "2026-09-29T19:02:42.384Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:51:32.553Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -41,14 +41,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-09-29T19:09:07.265Z",
+   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
    "latest": {
-    "value_raw": "298 working days",
-    "value_days": 298,
+    "value_raw": "324 working days",
+    "value_days": 324,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-29",
-    "retrieved_at": "2026-09-29T19:02:42.384Z",
+    "effective_date": "2026-10-02",
+    "retrieved_at": "2026-10-02T18:51:32.553Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
