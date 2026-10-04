@@ -23,6 +23,20 @@ function longMonthYear(iso) {
   });
 }
 
+function fullDate(iso) {
+  return new Date(`${iso.slice(0, 10)}T00:00:00Z`).toLocaleDateString('en-US', {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+    timeZone: 'UTC',
+  });
+}
+
+function titleDuration(value) {
+  return value.replace(/\b(days?|weeks?|months?|years?)\b/gi, unit =>
+    `${unit[0].toUpperCase()}${unit.slice(1).toLowerCase()}`);
+}
+
 function durationAdjective(value) {
   return value.replace(/^(\d+(?:\.\d+)?)\s+([a-z]+)s$/i, '$1-$2');
 }
@@ -56,6 +70,21 @@ function visitorEditorial(country) {
   };
 }
 
+function visitorCtrEditorial(country, {
+  titleCountry = country,
+  descriptionCountry = country,
+  h1Country = country,
+  countCountries = false,
+} = {}) {
+  return {
+    ...visitorEditorial(country),
+    modified: '2026-10-02',
+    title: record => `Canada Visitor Visa Processing Time from ${titleCountry}: ${titleDuration(record.value_raw)}`,
+    description: (record, service) => `IRCC currently reports ${record.value_raw} for visitor visa applications from ${descriptionCountry}, updated ${fullDate(record.effective_date)}. ${countCountries ? `Compare ${service.okCount} countries` : 'Compare countries'} and view source-backed history.`,
+    h1: `Canada visitor visa processing time from ${h1Country}`,
+  };
+}
+
 const pakistanPrivateRefugee = {
   modified: '2026-09-07',
   title: record => `Canada Private Refugee from Pakistan: ${record.value_raw} (${shortMonthYear(record.effective_date)})`,
@@ -84,18 +113,53 @@ const pakistanPrivateRefugee = {
   ],
 };
 
-// Search Console, August 21-September 4, 2026: these four URLs already had
-// impressions and average positions between 4.3 and 10.7. This list improves
-// those existing URLs; it does not generate duplicate or speculative pages.
+// Search Console identified this small set of existing URLs as CTR/relevance
+// opportunities. This list improves those URLs; it does not generate duplicate
+// or speculative country pages.
 export const APPLICANT_EDITORIAL = Object.freeze({
   'ca-refugee-private-refugee-side--pk': pakistanPrivateRefugee,
-  'ca-visitor-visa--co': visitorEditorial('Colombia'),
+  'ca-visitor-visa--co': visitorCtrEditorial('Colombia', { countCountries: true }),
+  'ca-visitor-visa--gb': visitorCtrEditorial('United Kingdom', {
+    titleCountry: 'UK',
+    descriptionCountry: 'the UK',
+  }),
+  'ca-visitor-visa--jm': visitorCtrEditorial('Jamaica'),
   'ca-visitor-visa--np': visitorEditorial('Nepal'),
-  'ca-visitor-visa--qa': visitorEditorial('Qatar'),
+  'ca-visitor-visa--ph': visitorCtrEditorial('Philippines', {
+    descriptionCountry: 'the Philippines',
+    h1Country: 'the Philippines',
+  }),
+  'ca-visitor-visa--qa': visitorCtrEditorial('Qatar', { countCountries: true }),
+});
+
+const visitorComparisonGuide = {
+  path: '/guides/canada-visitor-visa-by-country/',
+  label: 'Compare Canada visitor visa processing times by country',
+};
+
+export const APPLICANT_GUIDE_LINKS = Object.freeze({
+  'ca-visitor-visa--co': { modified: '2026-10-02', links: [visitorComparisonGuide] },
+  'ca-visitor-visa--gb': { modified: '2026-10-02', links: [visitorComparisonGuide] },
+  'ca-visitor-visa--jm': { modified: '2026-10-02', links: [visitorComparisonGuide] },
+  'ca-visitor-visa--ph': {
+    modified: '2026-10-02',
+    links: [
+      visitorComparisonGuide,
+      { path: '/guides/canada-visitor-visa-from-philippines/', label: 'Philippines visitor visa planning guide and regional comparison' },
+    ],
+  },
+  'ca-visitor-visa--qa': { modified: '2026-10-02', links: [visitorComparisonGuide] },
+  'ca-study-permit--ng': {
+    modified: '2026-10-02',
+    links: [
+      { path: '/guides/canada-study-permit-from-nigeria/', label: 'Canada study permit processing time from Nigeria — planning guide' },
+    ],
+  },
 });
 
 export function applicantEditorialLastmod(recordId, dataLastmod) {
   const editorialDate = APPLICANT_EDITORIAL[recordId]?.modified;
+  const guideLinkDate = APPLICANT_GUIDE_LINKS[recordId]?.modified;
   // IRCC's current visitor-visa page now says the displayed time excludes the
   // time needed to give biometrics. The route-family FAQ was corrected on this
   // date, so every affected indexable visitor-country URL receives that honest
@@ -103,5 +167,5 @@ export function applicantEditorialLastmod(recordId, dataLastmod) {
   const visitorGuidanceCorrection = recordId.startsWith('ca-visitor-visa--')
     ? '2026-09-07'
     : null;
-  return [dataLastmod, editorialDate, visitorGuidanceCorrection].filter(Boolean).sort().at(-1);
+  return [dataLastmod, editorialDate, guideLinkDate, visitorGuidanceCorrection].filter(Boolean).sort().at(-1);
 }

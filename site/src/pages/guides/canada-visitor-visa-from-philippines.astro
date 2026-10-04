@@ -15,11 +15,11 @@ const officialVisitorGuide = 'https://www.canada.ca/en/immigration-refugees-citi
   sectionName="Guides"
   sectionPath="/guides/"
   slug="canada-visitor-visa-from-philippines"
-  title={`Canada visitor visa processing time from the Philippines: ${rec.value_raw}`}
-  description={`Current IRCC visitor-visa time from the Philippines, compared with nearby application countries and separated from preparation and travel time.`}
-  h1="Canada visitor visa processing time from the Philippines"
+  title="Canada Visitor Visa from Philippines: Planning Guide"
+  description="Use IRCC’s current Philippines visitor-visa time with Southeast Asian comparisons, biometrics boundaries and source-backed planning guidance."
+  h1="Canada visitor visa from the Philippines: planning guide"
   lede={`IRCC currently reports ${rec.value_raw} for a visitor-visa application submitted from the Philippines. That is ${Math.abs(Math.round(service.medianDays - rec.value_days))} days ${rec.value_days <= service.medianDays ? 'below' : 'above'} the current median across countries with a published value.`}
-  modified={newestDate('2026-09-07', rec.effective_date)}
+  modified={newestDate('2026-10-02', rec.effective_date)}
   checked={rec.effective_date}
   about={['Canada visitor visa', 'Philippines', 'IRCC processing times']}
   citations={[officialGuide, officialVisitorGuide, rec.source_url]}
@@ -36,7 +36,7 @@ const officialVisitorGuide = 'https://www.canada.ca/en/immigration-refugees-citi
 
   <h2>Use two dates, not one</h2>
   <p>A useful check records both the <strong>official data date</strong> and the <strong>date you looked</strong>. The current value is dated {fmtDate(rec.effective_date)}. GovWait also stores its retrieval time. This prevents an old screenshot from being passed around as if it were current.</p>
-  <p>Visit the <a href="/canada/visitor-visa/from-philippines/">Philippines route history</a> to see every differing value GovWait records. Tracking began in August 2026, so the first row is a baseline.</p>
+  <p>Visit the <a href="/canada/visitor-visa/from-philippines/">current Philippines visitor visa processing time and history</a> to see every differing value GovWait records. Tracking began in August 2026, so the first row is a baseline.</p>
 
   <h2>When an individual wait runs longer</h2>
   <p>IRCC says an application can take longer when it is incomplete or complex, information is difficult to verify, more material is requested, or volumes and processing capacity change. The aggregate figure cannot identify which factor applies to a specific file.</p>

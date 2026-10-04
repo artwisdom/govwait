@@ -119,7 +119,7 @@ const desc = sourceUnavailable
         <h2>{serviceEditorial.heading}</h2>
         {serviceEditorial.paragraphs.map(paragraph => <p>{paragraph}</p>)}
         {serviceEditorial.callout && <div class="callout"><strong>{serviceEditorial.callout.lead}</strong> {serviceEditorial.callout.body} <a href={serviceEditorial.callout.path}>{serviceEditorial.callout.label} →</a></div>}
-        <p class="small muted">Route facts checked September 6, 2026 against <a href={serviceEditorial.sourceUrl} rel="noopener nofollow">{serviceEditorial.sourceLabel}</a>. Eligibility and visa conditions can change; the official page controls.</p>
+        <p class="small muted">Route facts checked {serviceEditorial.checked || 'September 6, 2026'} against <a href={serviceEditorial.sourceUrl} rel="noopener nofollow">{serviceEditorial.sourceLabel}</a>. Eligibility and visa conditions can change; the official page controls.</p>
       </>}
       <h2>History we have recorded</h2>
       <div class="tablewrap"><table>

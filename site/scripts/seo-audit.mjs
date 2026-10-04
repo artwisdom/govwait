@@ -3,12 +3,14 @@ import { readFileSync, readdirSync, statSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { NZ_ROLLOUT_SERVICE_KEYS } from '../src/lib/publication.js';
+import { applicantEditorialLastmod } from '../src/lib/applicant-editorial.js';
 
 const SITE_DIR = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DIST = path.join(SITE_DIR, 'dist');
 const LATEST = JSON.parse(readFileSync(path.join(SITE_DIR, '..', 'data', 'exports', 'latest.json'), 'utf8'));
 const errors = [];
 const warnings = [];
+const ctrGrowthModified = '2026-10-02';
 
 function slugify(value) {
   return String(value)
@@ -25,6 +27,17 @@ function serviceSlug(record) {
   if (record.jurisdiction === 'NO') return record.service_key.replace(/^no-/, '');
   const segment = record.service_key.split('--').pop().replace(/^gb-/, '');
   return record.service_key.startsWith('gb-in-uk-') ? `in-uk-${segment}` : segment;
+}
+
+function fullDate(iso) {
+  return new Date(`${iso.slice(0, 10)}T00:00:00Z`).toLocaleDateString('en-US', {
+    month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC',
+  });
+}
+
+function titleDuration(value) {
+  return value.replace(/\b(days?|weeks?|months?|years?)\b/gi, unit =>
+    `${unit[0].toUpperCase()}${unit.slice(1).toLowerCase()}`);
 }
 
 const expectedNoindex = new Set(['/404/', '/contact/', '/corrections/', '/privacy/', '/terms/']);
@@ -251,18 +264,18 @@ for (const distribution of metadata.distributions || []) {
 const phaseFourPages = [
   {
     url: '/guides/new-zealand-critical-purpose-visitor-visa-processing-time/',
-    lastmod: '2026-09-06',
-    required: ['No current GovWait estimate.', 'July 31, 2022', 'href="/new-zealand/specific-purpose-work-visa/"'],
+    lastmod: ctrGrowthModified,
+    required: ['No current GovWait estimate.', 'July 31, 2022', 'href="/new-zealand/specific-purpose-work-visa/"', 'href="/new-zealand/visitor-visa/"'],
   },
   {
     url: '/new-zealand/skilled-migrant-category-resident-visa/',
-    lastmod: '2026-09-06',
+    lastmod: ctrGrowthModified,
     serviceKey: 'nz-skilled-migrant-category-resident-visa',
     required: ['Where this wait fits in the Skilled Migrant route', 'https://www.immigration.govt.nz/visas/skilled-migrant-category-resident-visa/'],
   },
   {
     url: '/new-zealand/specific-purpose-work-visa/',
-    lastmod: '2026-09-06',
+    lastmod: ctrGrowthModified,
     serviceKey: 'nz-specific-purpose-work-visa',
     required: ['What the Specific Purpose Work Visa clock covers', 'href="/guides/new-zealand-critical-purpose-visitor-visa-processing-time/"'],
   },
@@ -291,12 +304,10 @@ for (const page of phaseFourPages) {
   }
 }
 
-// Phase 4B improves only four Canadian URLs that already have Search Console
-// impressions. Assert their query-matching metadata, source-backed additions
-// and honest editorial/data lastmod without freezing a value that should change
-// on the next official source update.
+// Keep the original Phase 4B editorial cohort stable while Phase 7A gives the
+// current Search Console near-wins their own concise, value-driven snippets.
 const canadianEditorialModified = '2026-09-07';
-const canadianNearWinPages = [
+const phaseFourBCanadianPages = [
   {
     id: 'ca-refugee-private-refugee-side--pk',
     url: '/canada/refugee-private-refugee-side/from-pakistan/',
@@ -309,24 +320,20 @@ const canadianNearWinPages = [
       'https://www.canada.ca/en/immigration-refugees-citizenship/services/refugees/sponsor-refugee/private-sponsorship-program/how-we-process-applications.html',
     ],
   },
-  ...[
-    ['co', 'colombia', 'Colombia'],
-    ['np', 'nepal', 'Nepal'],
-    ['qa', 'qatar', 'Qatar'],
-  ].map(([countryCode, slug, country]) => ({
-    id: `ca-visitor-visa--${countryCode}`,
-    url: `/canada/visitor-visa/from-${slug}/`,
-    titlePrefix: `Canada Visitor Visa from ${country}`,
-    h1: `Canada visitor visa processing time from ${country}`,
+  {
+    id: 'ca-visitor-visa--np',
+    url: '/canada/visitor-visa/from-nepal/',
+    titlePrefix: 'Canada Visitor Visa from Nepal',
+    h1: 'Canada visitor visa processing time from Nepal',
     required: [
-      `data-applicant-editorial="ca-visitor-visa--${countryCode}"`,
-      `What the ${country} result covers`,
+      'data-applicant-editorial="ca-visitor-visa--np"',
+      'What the Nepal result covers',
       'It is not an inside-Canada visitor-visa time',
       'https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/visitor-visa.html',
     ],
-  })),
+  },
 ];
-for (const page of canadianNearWinPages) {
+for (const page of phaseFourBCanadianPages) {
   const record = LATEST.records.find(item => item.id === page.id);
   if (!record) {
     errors.push(`${page.url}: Phase 4B source record missing`);
@@ -355,6 +362,52 @@ for (const page of canadianNearWinPages) {
   }
 }
 
+const visitorPublishedCount = LATEST.records.filter(record => record.service_key === 'ca-visitor-visa' && record.status === 'ok').length;
+const phaseSevenCanadianPages = [
+  { code: 'co', slug: 'colombia', country: 'Colombia', titleCountry: 'Colombia', descriptionCountry: 'Colombia', h1Country: 'Colombia', countCountries: true },
+  { code: 'gb', slug: 'united-kingdom', country: 'United Kingdom', titleCountry: 'UK', descriptionCountry: 'the UK', h1Country: 'United Kingdom' },
+  { code: 'jm', slug: 'jamaica', country: 'Jamaica', titleCountry: 'Jamaica', descriptionCountry: 'Jamaica', h1Country: 'Jamaica' },
+  { code: 'ph', slug: 'philippines', country: 'Philippines', titleCountry: 'Philippines', descriptionCountry: 'the Philippines', h1Country: 'the Philippines' },
+  { code: 'qa', slug: 'qatar', country: 'Qatar', titleCountry: 'Qatar', descriptionCountry: 'Qatar', h1Country: 'Qatar', countCountries: true },
+];
+for (const page of phaseSevenCanadianPages) {
+  const id = `ca-visitor-visa--${page.code}`;
+  const url = `/canada/visitor-visa/from-${page.slug}/`;
+  const record = LATEST.records.find(item => item.id === id);
+  if (!record || record.status !== 'ok') {
+    errors.push(`${url}: Phase 7A published source record missing`);
+    continue;
+  }
+  const absoluteUrl = `${canonicalOrigin}${url}`;
+  const expectedLastmod = applicantEditorialLastmod(id, record.effective_date);
+  if (sitemapLastmods.get(absoluteUrl) !== expectedLastmod) {
+    errors.push(`${url}: expected Phase 7A lastmod ${expectedLastmod}, found ${sitemapLastmods.get(absoluteUrl) || 'missing'}`);
+  }
+  const builtPage = pages.find(item => item.url === url);
+  const expectedTitle = `Canada Visitor Visa Processing Time from ${page.titleCountry}: ${titleDuration(record.value_raw)}`;
+  const comparison = page.countCountries ? `Compare ${visitorPublishedCount} countries` : 'Compare countries';
+  const expectedDescription = `IRCC currently reports ${record.value_raw} for visitor visa applications from ${page.descriptionCountry}, updated ${fullDate(record.effective_date)}. ${comparison} and view source-backed history.`;
+  if (builtPage?.title !== expectedTitle) errors.push(`${url}: expected Phase 7A title ${expectedTitle}, found ${builtPage?.title || 'missing'}`);
+  if (builtPage?.description !== expectedDescription) errors.push(`${url}: expected Phase 7A description ${expectedDescription}, found ${builtPage?.description || 'missing'}`);
+  if (builtPage && (builtPage.title.length < 50 || builtPage.title.length > 65)) errors.push(`${url}: Phase 7A title length ${builtPage.title.length} is outside 50-65`);
+  if (builtPage && (builtPage.description.length < 140 || builtPage.description.length > 165)) errors.push(`${url}: Phase 7A description length ${builtPage.description.length} is outside 140-165`);
+  const outputPath = path.join(DIST, url.replace(/^\/+|\/+$/g, ''), 'index.html');
+  let html = '';
+  try { html = readFileSync(outputPath, 'utf8'); }
+  catch { errors.push(`${url}: Phase 7A output missing`); }
+  for (const snippet of [
+    `data-applicant-editorial="${id}"`,
+    `What the ${page.country} result covers`,
+    `<h1>Canada visitor visa processing time from ${page.h1Country}</h1>`,
+    'href="/guides/canada-visitor-visa-by-country/"',
+  ]) {
+    if (html && !html.includes(snippet)) errors.push(`${url}: missing Phase 7A content: ${snippet}`);
+  }
+  if (page.code === 'ph' && html && !html.includes('href="/guides/canada-visitor-visa-from-philippines/"')) {
+    errors.push(`${url}: Philippines planning-guide link missing`);
+  }
+}
+
 // IRCC's visitor-specific page changed the biometrics boundary. This is a
 // route-family factual correction, not a ranking experiment: all rendered
 // visitor-country pages must carry the current wording, and every indexable one
@@ -373,7 +426,7 @@ for (const record of LATEST.records.filter(item => item.service_key === 'ca-visi
   if (html && !currentVisitorBiometricsCopy.some(snippet => html.includes(snippet))) errors.push(`${url}: current visitor-visa biometrics boundary missing`);
   if (html && html.includes(staleVisitorBiometricsCopy)) errors.push(`${url}: stale visitor-visa biometrics claim remains`);
   if (record.status === 'ok') {
-    const expectedLastmod = [record.effective_date, canadianEditorialModified].sort().at(-1);
+    const expectedLastmod = applicantEditorialLastmod(record.id, record.effective_date);
     const absoluteUrl = `${canonicalOrigin}${url}`;
     if (sitemapLastmods.get(absoluteUrl) !== expectedLastmod) {
       errors.push(`${url}: expected visitor-guidance lastmod ${expectedLastmod}, found ${sitemapLastmods.get(absoluteUrl) || 'missing'}`);
@@ -381,12 +434,12 @@ for (const record of LATEST.records.filter(item => item.service_key === 'ca-visi
   }
 }
 
-for (const [url, recordId] of [
-  ['/guides/canada-visitor-visa-from-india/', 'ca-visitor-visa--in'],
-  ['/guides/canada-visitor-visa-from-philippines/', 'ca-visitor-visa--ph'],
+for (const [url, recordId, editorialModified] of [
+  ['/guides/canada-visitor-visa-from-india/', 'ca-visitor-visa--in', canadianEditorialModified],
+  ['/guides/canada-visitor-visa-from-philippines/', 'ca-visitor-visa--ph', ctrGrowthModified],
 ]) {
   const record = LATEST.records.find(item => item.id === recordId);
-  const expectedLastmod = [record?.effective_date, canadianEditorialModified].filter(Boolean).sort().at(-1);
+  const expectedLastmod = [record?.effective_date, editorialModified].filter(Boolean).sort().at(-1);
   const absoluteUrl = `${canonicalOrigin}${url}`;
   if (sitemapLastmods.get(absoluteUrl) !== expectedLastmod) {
     errors.push(`${url}: expected corrected-guide lastmod ${expectedLastmod}, found ${sitemapLastmods.get(absoluteUrl) || 'missing'}`);
@@ -400,6 +453,130 @@ for (const [url, recordId] of [
   if (html && !html.includes('https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/visitor-visa.html')) {
     errors.push(`${url}: current IRCC visitor-visa source missing`);
   }
+}
+
+// Phase 7A turns demonstrated Search Console demand into concise snippets and
+// explicit intent clusters. Pin the local release candidate so a future
+// template refactor cannot recreate the Canada or New Zealand cannibalization.
+const nigeriaRecord = LATEST.records.find(record => record.id === 'ca-study-permit--ng');
+const phaseSevenStaticPages = [
+  {
+    url: '/guides/canada-visitor-visa-by-country/',
+    required: phaseSevenCanadianPages.map(page => `Canada visitor visa processing time from ${page.country}`),
+  },
+  {
+    url: '/guides/canada-study-permit-from-nigeria/',
+    title: `Canada Study Permit Processing Time from Nigeria: ${titleDuration(nigeriaRecord?.value_raw || '')}`,
+    required: ['regional comparisons', 'href="/canada/study-permit/from-nigeria/"'],
+  },
+  {
+    url: '/guides/canada-visitor-visa-from-philippines/',
+    title: 'Canada Visitor Visa from Philippines: Planning Guide',
+    required: ['href="/canada/visitor-visa/from-philippines/"', 'Southeast Asian application-country comparison'],
+  },
+  {
+    url: '/guides/new-zealand-critical-purpose-visitor-visa-processing-time/',
+    title: 'NZ Critical Purpose Visa Processing Time: Route Closed',
+    required: ['href="/new-zealand/specific-purpose-work-visa/"', 'href="/new-zealand/visitor-visa/"'],
+  },
+  {
+    url: '/guides/new-zealand-2021-resident-visa-processing-time/',
+    title: 'NZ 2021 Resident Visa Processing Time: Route Closed',
+    required: [
+      'href="/new-zealand/permanent-resident-visa/"',
+      'href="/new-zealand/skilled-migrant-category-resident-visa/"',
+      'href="/new-zealand/straight-to-residence-visa/"',
+      'href="/new-zealand/work-to-residence-visa/"',
+    ],
+  },
+  {
+    url: '/guides/new-zealand-student-visa-processing-time/',
+    title: 'New Zealand Student Visa Processing Times: Current INZ Data',
+    required: ['href="/new-zealand/fee-paying-student-visa/"', 'href="/new-zealand/pathway-student-visa/"', 'Current reviewed student-visa comparison'],
+  },
+  {
+    url: '/new-zealand/post-study-work-visa/',
+    title: 'NZ Post Study Work Visa Processing Time: 5.5 Weeks',
+    required: [
+      'current INZ route-page 80% figure',
+      'last selector 50% observation',
+      'The 15- and 24-working-day values are historical observations',
+      'https://www.immigration.govt.nz/visas/post-study-work-visa/',
+      'href="/guides/new-zealand-student-visa-processing-time/"',
+    ],
+  },
+];
+for (const page of phaseSevenStaticPages) {
+  const builtPage = pages.find(item => item.url === page.url);
+  if (page.title && builtPage?.title !== page.title) errors.push(`${page.url}: expected Phase 7A title ${page.title}, found ${builtPage?.title || 'missing'}`);
+  if (sitemapLastmods.get(`${canonicalOrigin}${page.url}`) !== ctrGrowthModified) {
+    errors.push(`${page.url}: expected Phase 7A sitemap lastmod ${ctrGrowthModified}`);
+  }
+  const outputPath = path.join(DIST, page.url.replace(/^\/+|\/+$/g, ''), 'index.html');
+  let html = '';
+  try { html = readFileSync(outputPath, 'utf8'); }
+  catch { errors.push(`${page.url}: Phase 7A output missing`); }
+  for (const snippet of page.required) {
+    if (html && !html.includes(snippet)) errors.push(`${page.url}: missing Phase 7A content: ${snippet}`);
+  }
+}
+
+const phaseSevenNzServices = [
+  {
+    key: 'nz-specific-purpose-work-visa', slug: 'specific-purpose-work-visa',
+    title: (p50, p80) => `NZ Specific Purpose Processing: 50% in ${Math.round(p50.value_days)}, 80% in ${Math.round(p80.value_days)} Workdays`,
+    link: '/guides/new-zealand-critical-purpose-visitor-visa-processing-time/',
+  },
+  {
+    key: 'nz-skilled-migrant-category-resident-visa', slug: 'skilled-migrant-category-resident-visa',
+    title: (p50, p80) => `NZ Skilled Migrant Processing: 50% in ${Math.round(p50.value_days)}, 80% in ${Math.round(p80.value_days)} Workdays`,
+    link: '/guides/new-zealand-2021-resident-visa-processing-time/',
+  },
+  {
+    key: 'nz-straight-to-residence-visa', slug: 'straight-to-residence-visa',
+    title: (p50, p80) => `NZ Straight to Residence: 50% in ${Math.round(p50.value_days)}, 80% in ${Math.round(p80.value_days)} Workdays`,
+    link: '/guides/new-zealand-2021-resident-visa-processing-time/',
+  },
+  {
+    key: 'nz-work-to-residence-visa', slug: 'work-to-residence-visa',
+    title: (p50, p80) => `NZ Work to Residence: 50% in ${Math.round(p50.value_days)}, 80% in ${Math.round(p80.value_days)} Workdays`,
+    link: '/guides/new-zealand-2021-resident-visa-processing-time/',
+  },
+  {
+    key: 'nz-visitor-visa', slug: 'visitor-visa',
+    title: (p50, p80) => `NZ Visitor Visa Processing: 50% in ${Math.round(p50.value_days)}, 80% in ${Math.round(p80.value_days)} Workdays`,
+    link: '/guides/new-zealand-critical-purpose-visitor-visa-processing-time/',
+  },
+  {
+    key: 'nz-permanent-resident-visa', slug: 'permanent-resident-visa',
+    title: (p50, p80) => `NZ Permanent Resident: 50% in ${Math.round(p50.value_days)}, 80% in ${Math.round(p80.value_days)} Workdays`,
+    link: '/guides/new-zealand-2021-resident-visa-processing-time/',
+  },
+  {
+    key: 'nz-pathway-student-visa', slug: 'pathway-student-visa',
+    title: (p50, p80) => `NZ Pathway Student Visa: 50% in ${Math.round(p50.value_days)}, 80% in ${Math.round(p80.value_days)} Workdays`,
+    link: '/guides/new-zealand-student-visa-processing-time/',
+  },
+];
+for (const service of phaseSevenNzServices) {
+  const p50 = LATEST.records.find(record => record.id === `${service.key}--p50`);
+  const p80 = LATEST.records.find(record => record.id === `${service.key}--p80`);
+  const url = `/new-zealand/${service.slug}/`;
+  const builtPage = pages.find(item => item.url === url);
+  const expectedTitle = p50 && p80 ? service.title(p50, p80) : '';
+  if (!p50 || !p80) errors.push(`${url}: Phase 7A percentile records missing`);
+  else if (builtPage?.title !== expectedTitle) errors.push(`${url}: expected Phase 7A title ${expectedTitle}, found ${builtPage?.title || 'missing'}`);
+  if (sitemapLastmods.get(`${canonicalOrigin}${url}`) !== ctrGrowthModified) errors.push(`${url}: expected Phase 7A sitemap lastmod ${ctrGrowthModified}`);
+  const outputPath = path.join(DIST, url.replace(/^\/+|\/+$/g, ''), 'index.html');
+  let html = '';
+  try { html = readFileSync(outputPath, 'utf8'); }
+  catch { errors.push(`${url}: Phase 7A service output missing`); }
+  if (html && !html.includes(`href="${service.link}"`)) errors.push(`${url}: Phase 7A intent-cluster link missing`);
+  if (html && !html.includes('Route facts checked October 2, 2026')) errors.push(`${url}: Phase 7A editorial check date missing`);
+}
+
+for (const url of ['/guides/', '/new-zealand/']) {
+  if (sitemapLastmods.get(`${canonicalOrigin}${url}`) !== ctrGrowthModified) errors.push(`${url}: expected Phase 7A hub lastmod ${ctrGrowthModified}`);
 }
 
 // Phase 6A keeps Norway's append-only evidence public without presenting a
@@ -433,7 +610,7 @@ for (const url of norwayWarningPages) {
     errors.push(`${url}: expected refresh-recovery lastmod ${refreshRecoveryModified}, found ${sitemapLastmods.get(`${canonicalOrigin}${url}`) || 'missing'}`);
   }
 }
-for (const url of ['/', '/about/', '/api-docs/', '/data/', '/guides/', '/reports/']) {
+for (const url of ['/', '/about/', '/api-docs/', '/data/', '/reports/']) {
   if (sitemapLastmods.get(`${canonicalOrigin}${url}`) !== refreshRecoveryModified) {
     errors.push(`${url}: expected refresh-recovery editorial lastmod ${refreshRecoveryModified}`);
   }

@@ -1,0 +1,48 @@
+---
+import EditorialFrame from '../../components/EditorialFrame.astro';
+
+const officialVisa = 'https://www.immigration.govt.nz/visas/post-study-work-visa/';
+const selector = 'https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/';
+---
+<EditorialFrame
+  sectionName="New Zealand"
+  sectionPath="/new-zealand/"
+  slug="post-study-work-visa"
+  title="NZ Post Study Work Visa Processing Time: 5.5 Weeks"
+  description="INZ’s current Post Study Work Visa page reports 80% processed within 5.5 weeks. See the selector mismatch and GovWait’s clearly dated historical observations."
+  h1="New Zealand Post Study Work Visa processing time"
+  lede="Immigration New Zealand’s current Post Study Work Visa page reports 80% of applications processed within 5.5 weeks. The route is no longer present in INZ’s central processing-time selector, so GovWait keeps that current route-page figure separate from its older selector observations."
+  published="2026-10-02"
+  modified="2026-10-02"
+  checked="2026-10-02"
+  about={['New Zealand Post Study Work Visa', 'Post Study Work Visa processing time', 'Immigration New Zealand']}
+  citations={[officialVisa, selector]}
+  adPrefix="nz-post-study-work"
+>
+  <div class="stats">
+    <div><div class="n">5.5 weeks</div><div class="l">current INZ route-page 80% figure</div></div>
+    <div><div class="n">15 working days</div><div class="l">last selector 50% observation</div></div>
+    <div><div class="n">24 working days</div><div class="l">last selector 80% observation</div></div>
+    <div><div class="n">August 23, 2026</div><div class="l">date of those historical observations</div></div>
+  </div>
+
+  <div class="callout warn"><strong>Do not combine the figures.</strong> The 5.5-week value is the current 80% figure displayed on the official visa page. The 15- and 24-working-day values are historical observations from the separate selector and are not presented as current.</div>
+
+  <h2>Why GovWait shows a source mismatch</h2>
+  <p>GovWait’s automated New Zealand series follows INZ’s central processing-time selector. That selector included Post Study Work Visa when GovWait recorded the two working-day percentiles on August 23, 2026, but no longer lists the route. GovWait therefore deactivated those current-series entities without deleting their history.</p>
+  <p>INZ’s individual Post Study Work Visa page still exists and currently displays a single 80% processing figure of 5.5 weeks. This page identifies the source of each number instead of pretending the route-page figure is a continuation of the older two-percentile selector series.</p>
+
+  <h2>Which figure should a reader use?</h2>
+  <p>For a current general planning figure, verify the 5.5-week value directly on the official visa page. Do not use GovWait’s August selector observations as today’s wait, and do not convert either source into a guaranteed decision date for an individual application.</p>
+  <p>INZ controls the visa requirements and may change the displayed figure. GovWait cannot see an application, determine eligibility or estimate a personal completion date.</p>
+
+  <h2>Related New Zealand processing-time pages</h2>
+  <div class="related">
+    <a href="/guides/new-zealand-student-visa-processing-time/">New Zealand student visa processing times</a>
+    <a href="/new-zealand/accredited-employer-work-visa/">Accredited Employer Work Visa processing time</a>
+    <a href="/guides/how-new-zealand-visa-processing-times-work/">How INZ processing times work</a>
+    <a href="/new-zealand/">New Zealand processing-time index</a>
+  </div>
+
+  <div class="prov">Official sources: <a href={officialVisa} rel="noopener">INZ Post Study Work Visa</a> and the <a href={selector} rel="noopener">INZ central processing-time selector</a> · checked October 2, 2026 · historical GovWait observations remain append-only · not immigration or legal advice.</div>
+</EditorialFrame>

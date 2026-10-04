@@ -18,6 +18,7 @@ export function hubUrls() {
   const visitorGuidanceCorrected = '2026-09-07';
   const datasetAuthorityPublished = '2026-09-08';
   const refreshRecoveryPublished = '2026-09-24';
+  const ctrGrowthPublished = '2026-10-02';
   const visitorIndiaDataLastmod = records.find(record => record.id === 'ca-visitor-visa--in')?.effective_date;
   const visitorPhilippinesDataLastmod = records.find(record => record.id === 'ca-visitor-visa--ph')?.effective_date;
   const urls = [
@@ -28,22 +29,23 @@ export function hubUrls() {
     { path: '/api-docs/', lastmod: refreshRecoveryPublished },
     { path: '/data/', lastmod: refreshRecoveryPublished },
     { path: '/data-license/', lastmod: datasetAuthorityPublished },
-    { path: '/guides/', lastmod: refreshRecoveryPublished },
+    { path: '/guides/', lastmod: ctrGrowthPublished },
     { path: '/guides/how-canada-processing-times-work/', lastmod: dataLastmod },
-    { path: '/guides/canada-visitor-visa-by-country/', lastmod: dataLastmod },
+    { path: '/guides/canada-visitor-visa-by-country/', lastmod: [dataLastmod, ctrGrowthPublished].sort().at(-1) },
     { path: '/guides/canada-study-permit-from-india/', lastmod: growthPhasePublished },
-    { path: '/guides/canada-study-permit-from-nigeria/', lastmod: dataLastmod },
+    { path: '/guides/canada-study-permit-from-nigeria/', lastmod: [dataLastmod, ctrGrowthPublished].sort().at(-1) },
     { path: '/guides/canada-visitor-visa-from-india/', lastmod: [visitorIndiaDataLastmod, visitorGuidanceCorrected].filter(Boolean).sort().at(-1) },
-    { path: '/guides/canada-visitor-visa-from-philippines/', lastmod: [visitorPhilippinesDataLastmod, visitorGuidanceCorrected].filter(Boolean).sort().at(-1) },
+    { path: '/guides/canada-visitor-visa-from-philippines/', lastmod: [visitorPhilippinesDataLastmod, visitorGuidanceCorrected, ctrGrowthPublished].filter(Boolean).sort().at(-1) },
     { path: '/guides/canada-work-permit-from-mexico/', lastmod: dataLastmod },
     { path: '/guides/uk-visa-processing-standards/', lastmod: dataLastmod },
     { path: '/guides/uk-spouse-visa-processing-time/', lastmod: dataLastmod },
     { path: '/guides/uk-standard-visitor-processing-time/', lastmod: growthPhasePublished },
     { path: '/guides/how-new-zealand-visa-processing-times-work/', lastmod: dataLastmod },
-    { path: '/guides/new-zealand-2021-resident-visa-processing-time/', lastmod: growthPhasePublished },
-    { path: '/guides/new-zealand-critical-purpose-visitor-visa-processing-time/', lastmod: phaseFourPublished },
+    { path: '/guides/new-zealand-2021-resident-visa-processing-time/', lastmod: ctrGrowthPublished },
+    { path: '/guides/new-zealand-critical-purpose-visitor-visa-processing-time/', lastmod: ctrGrowthPublished },
     { path: '/guides/new-zealand-aewv-processing-time/', lastmod: dataLastmod },
-    { path: '/guides/new-zealand-student-visa-processing-time/', lastmod: dataLastmod },
+    { path: '/guides/new-zealand-student-visa-processing-time/', lastmod: [dataLastmod, ctrGrowthPublished].sort().at(-1) },
+    { path: '/new-zealand/post-study-work-visa/', lastmod: ctrGrowthPublished },
     { path: '/guides/how-norway-udi-waiting-times-work/', lastmod: refreshRecoveryPublished },
     { path: '/reports/', lastmod: refreshRecoveryPublished },
     { path: '/reports/canada-processing-time-changes/', lastmod: growthPhasePublished },
@@ -57,7 +59,7 @@ export function hubUrls() {
     const jurisdictionLastmod = code === 'NO'
       ? [refreshRecoveryPublished, ...[...svcMap.values()].map(s => s.latestEffective)].sort().at(-1)
       : code === 'NZ'
-      ? [growthPhasePublished, ...[...svcMap.values()].map(s => s.latestEffective)].sort().at(-1)
+      ? [growthPhasePublished, ctrGrowthPublished, ...[...svcMap.values()].map(s => s.latestEffective)].sort().at(-1)
       : [...svcMap.values()].map(s => s.latestEffective).sort().at(-1);
     urls.push({ path: `/${jur.slug}/`, lastmod: jurisdictionLastmod });
     // UK service pages are their own template family and sitemap so Search

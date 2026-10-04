@@ -3,7 +3,7 @@ import Base from '../../../layouts/Base.astro';
 import AdSlot from '../../../components/AdSlot.astro';
 import Freshness from '../../../components/Freshness.astro';
 import { records, services, relatedRoutes, JURISDICTIONS, fmtDate, fmtMonthYear, fmtMonthYearShort, humanValue } from '../../../lib/data.js';
-import { APPLICANT_EDITORIAL } from '../../../lib/applicant-editorial.js';
+import { APPLICANT_EDITORIAL, APPLICANT_GUIDE_LINKS } from '../../../lib/applicant-editorial.js';
 
 export function getStaticPaths() {
   return records.filter(r => r.applicantSlug).map(r => ({
@@ -16,6 +16,7 @@ const rec = records.find(r => r.id === id);
 const jur = rec.jur;
 const svc = services[rec.jurisdiction].get(rec.serviceSlug);
 const applicantEditorial = APPLICANT_EDITORIAL[rec.id];
+const guideLinks = APPLICANT_GUIDE_LINKS[rec.id]?.links || [];
 const siblings = svc.records.filter(r => r.status === 'ok' && r.id !== rec.id);
 const rank = rec.status === 'ok' ? siblings.filter(s => s.value_days < rec.value_days).length + 1 : null;
 const related = relatedRoutes(rec);
@@ -101,6 +102,7 @@ const deltaText = rec.delta
 
   <h2>Compare</h2>
   <p class="small">See <a href={`/${jur.slug}/${rec.serviceSlug}/`}>all {svc.records.length} applicant countries for {svc.name.toLowerCase()}</a>{siblings.length ? `, currently ranging from ${siblings[0].value_raw} (${siblings[0].applicant_country_name}) to ${siblings.at(-1).value_raw} (${siblings.at(-1).applicant_country_name})` : ''}.</p>
+  {guideLinks.length > 0 && <p class="small">Related: {guideLinks.map((link, index) => <>{index > 0 && ' · '}<a href={link.path}>{link.label}</a></>)}</p>}
 
   {related.length > 0 && (
     <>

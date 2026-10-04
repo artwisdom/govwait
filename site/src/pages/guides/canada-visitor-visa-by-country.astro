@@ -11,6 +11,8 @@ const slowest = ok.slice(-10).reverse();
 const median = Math.round(svc.medianDays);
 const big = ['IN', 'NG', 'PH', 'PK', 'CN', 'BR', 'MX', 'BD', 'VN', 'CO']
   .map(cc => ok.find(r => r.applicant_country === cc)).filter(Boolean);
+const nearWins = ['CO', 'QA', 'GB', 'PH', 'JM']
+  .map(cc => ok.find(r => r.applicant_country === cc)).filter(Boolean);
 const citations = [...new Set(svc.records.map(record => record.source_url))];
 ---
 <EditorialFrame sectionName="Guides" sectionPath="/guides/" slug="canada-visitor-visa-by-country"
@@ -18,7 +20,7 @@ const citations = [...new Set(svc.records.map(record => record.source_url))];
   description={`Compare current IRCC visitor-visa times by country: ${median}-day median, fastest and slowest routes, major corridors, official sources and history.`}
   h1="Canada visitor visa times, analyzed by country"
   lede={`IRCC currently publishes visitor-visa processing times for ${ok.length} applicant countries (of ${svc.records.length} tracked). The median is ${median} days, while current published values run from ${fastest[0].value_raw} to ${slowest[0].value_raw}. Data as of ${fmtDate(svc.latestEffective)}.`}
-  published="2026-08-22" modified={newestDate('2026-08-23', svc.latestEffective)} checked={svc.latestEffective}
+  published="2026-08-22" modified={newestDate('2026-10-02', svc.latestEffective)} checked={svc.latestEffective}
   about={['Canada visitor visa', 'IRCC processing times']} citations={citations} adPrefix="guide-ca-visitor-compare">
   <AdSlot position="guide-top" />
 
@@ -35,6 +37,12 @@ const citations = [...new Set(svc.records.map(record => record.source_url))];
       ))}
     </tbody>
   </table></div>
+
+  <h2>Popular country processing-time pages</h2>
+  <div class="related">
+    {nearWins.map(r => <a href={`/canada/visitor-visa/${r.applicantSlug}/`}>Canada visitor visa processing time from {r.applicant_country_name}</a>)}
+  </div>
+  <p class="small muted">Each page keeps that country’s official value, source date and differing history together. Country comparisons describe published processing statistics, not approval odds.</p>
 
   <h2>The ten shortest currently published times</h2>
   <div class="related">
