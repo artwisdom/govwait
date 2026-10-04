@@ -86,4 +86,5 @@ jobs:
     uses: ./.github/workflows/deploy.yml
     with:
       commit_sha: ${{ needs.refresh.outputs.commit_sha }}
+      notify_indexnow: true
     secrets: inherit

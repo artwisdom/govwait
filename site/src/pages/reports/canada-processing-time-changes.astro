@@ -16,7 +16,10 @@ const rows = countryServices.map(service => {
     range: ok.length ? ok.at(-1).value_days - ok[0].value_days : 0,
   };
 }).sort((a, b) => b.range - a.range);
-const changes = records.filter(record => record.jurisdiction === 'CA' && record.delta && record.delta.dir !== 'flat')
+const changes = records.filter(record => record.jurisdiction === 'CA'
+  && services.CA.get(record.serviceSlug)?.published
+  && record.delta
+  && record.delta.dir !== 'flat')
   .sort((a, b) => b.delta.pct - a.delta.pct || a.service_name.localeCompare(b.service_name));
 const tracked = records.filter(record => record.jurisdiction === 'CA' && record.applicant_country);
 const published = tracked.filter(record => record.status === 'ok');

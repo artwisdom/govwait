@@ -12,12 +12,22 @@ on:
         description: "Optional full main-branch commit SHA to deploy"
         required: false
         type: string
+      notify_indexnow:
+        description: "Notify IndexNow participants after a successful deploy"
+        required: false
+        default: false
+        type: boolean
   workflow_call:
     inputs:
       commit_sha:
         description: "Full validated refresh commit SHA"
         required: false
         type: string
+      notify_indexnow:
+        description: "Notify IndexNow participants after a successful deploy"
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: read
@@ -80,8 +90,8 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy site/dist --project-name=govwait --branch=main
-      - name: Notify IndexNow participants after production deploy
-        if: ${{ vars.SITE_URL != '' }}
+      - name: Notify IndexNow participants after approved production deploy
+        if: ${{ vars.SITE_URL != '' && github.event_name != 'push' && inputs.notify_indexnow }}
         env:
           SITE_URL: ${{ vars.SITE_URL }}
         run: node pipeline/indexnow.js || echo "IndexNow notification failed (non-fatal)"
