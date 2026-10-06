@@ -3,7 +3,7 @@
  "service_name": "Accredited Employer Work Visa — 50% processed",
  "jurisdiction": "NZ",
  "count": 2,
- "generated_at": "2026-10-02T18:57:58.359Z",
+ "generated_at": "2026-10-06T19:22:45.811Z",
  "records": [
   {
    "entity_id": "nz-accredited-employer-work-visa--p50",
@@ -17,7 +17,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
+   "source_last_verified_at": "2026-10-06T19:22:45.494Z",
    "latest": {
     "value_raw": "16 working days",
     "value_days": 16,
@@ -41,7 +41,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-10-02T18:57:58.031Z",
+   "source_last_verified_at": "2026-10-06T19:22:45.494Z",
    "latest": {
     "value_raw": "37 working days",
     "value_days": 37,
