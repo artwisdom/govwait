@@ -3,7 +3,7 @@
  "service_name": "PR card (first card)",
  "jurisdiction": "CA",
  "count": 1,
- "generated_at": "2026-10-06T19:22:45.811Z",
+ "generated_at": "2026-10-09T19:17:30.159Z",
  "records": [
   {
    "entity_id": "ca-pr-card-new",
@@ -17,14 +17,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-10-06T19:15:52.775Z",
+   "source_last_verified_at": "2026-10-09T19:10:40.180Z",
    "latest": {
-    "value_raw": "34 days",
-    "value_days": 34,
+    "value_raw": "33 days",
+    "value_days": 33,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-10-01",
-    "retrieved_at": "2026-10-02T18:51:06.917Z",
+    "effective_date": "2026-10-07",
+    "retrieved_at": "2026-10-09T19:10:40.176Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json",
     "confidence": "official"
    }

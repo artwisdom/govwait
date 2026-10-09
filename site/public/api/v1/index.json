@@ -1,11 +1,11 @@
 {
  "name": "GovWait API v1",
  "description": "Officially published government processing times, tracked with provenance and history. Static JSON; no key required.",
- "generated_at": "2026-10-06T19:22:45.811Z",
+ "generated_at": "2026-10-09T19:17:30.159Z",
  "stats": {
-  "generated_at": "2026-10-06T19:22:45.811Z",
-  "entities": 2316,
-  "observations": 8660,
+  "generated_at": "2026-10-09T19:17:30.159Z",
+  "entities": 2314,
+  "observations": 10775,
   "forward_looking_estimates": 7285,
   "forward_looking_snapshots": 2,
   "jurisdictions": [
@@ -14,7 +14,7 @@
    "NO",
    "NZ"
   ],
-  "services": 286,
+  "services": 285,
   "per_source": {
    "govuk-inuk-times": {
     "name": "UK visa processing times (inside UK)",
@@ -41,8 +41,8 @@
     "name": "New Zealand visa application processing times",
     "collection_status": "active",
     "collection_status_since": null,
-    "observations": 726,
-    "latest_effective_date": "2026-10-02"
+    "observations": 915,
+    "latest_effective_date": "2026-10-09"
    },
    "ircc-forward-looking": {
     "name": "IRCC forward-looking processing times and in-queue estimates",
@@ -55,8 +55,8 @@
     "name": "IRCC processing times (non-country categories)",
     "collection_status": "active",
     "collection_status_since": null,
-    "observations": 76,
-    "latest_effective_date": "2026-10-01"
+    "observations": 95,
+    "latest_effective_date": "2026-10-07"
    },
    "ircc-passport": {
     "name": "Canadian passport processing times",
@@ -69,8 +69,8 @@
     "name": "IRCC Check Processing Times data",
     "collection_status": "active",
     "collection_status_since": null,
-    "observations": 7628,
-    "latest_effective_date": "2026-10-01"
+    "observations": 9535,
+    "latest_effective_date": "2026-10-07"
    },
    "udi-waiting-times": {
     "name": "Norway immigration waiting times",
@@ -92,7 +92,7 @@
    "collection_status": "active",
    "collection_status_since": null,
    "collection_status_note": null,
-   "last_successful_verification_at": "2026-10-06T19:16:02.093Z"
+   "last_successful_verification_at": "2026-10-09T19:10:49.374Z"
   },
   {
    "id": "govuk-passport",
@@ -104,7 +104,7 @@
    "collection_status": "active",
    "collection_status_since": null,
    "collection_status_note": null,
-   "last_successful_verification_at": "2026-10-06T19:16:05.087Z"
+   "last_successful_verification_at": "2026-10-09T19:10:52.372Z"
   },
   {
    "id": "govuk-visa-times",
@@ -116,7 +116,7 @@
    "collection_status": "active",
    "collection_status_since": null,
    "collection_status_note": null,
-   "last_successful_verification_at": "2026-10-06T19:15:59.517Z"
+   "last_successful_verification_at": "2026-10-09T19:10:46.376Z"
   },
   {
    "id": "inz-processing-times",
@@ -128,7 +128,7 @@
    "collection_status": "active",
    "collection_status_since": null,
    "collection_status_note": null,
-   "last_successful_verification_at": "2026-10-06T19:22:45.494Z"
+   "last_successful_verification_at": "2026-10-09T19:17:29.872Z"
   },
   {
    "id": "ircc-forward-looking",
@@ -140,7 +140,7 @@
    "collection_status": "active",
    "collection_status_since": null,
    "collection_status_note": null,
-   "last_successful_verification_at": "2026-10-06T19:15:49.676Z"
+   "last_successful_verification_at": "2026-10-09T19:10:38.100Z"
   },
   {
    "id": "ircc-noncountry",
@@ -152,7 +152,7 @@
    "collection_status": "active",
    "collection_status_since": null,
    "collection_status_note": null,
-   "last_successful_verification_at": "2026-10-06T19:15:52.775Z"
+   "last_successful_verification_at": "2026-10-09T19:10:40.180Z"
   },
   {
    "id": "ircc-passport",
@@ -164,7 +164,7 @@
    "collection_status": "active",
    "collection_status_since": null,
    "collection_status_note": null,
-   "last_successful_verification_at": "2026-10-06T19:15:55.908Z"
+   "last_successful_verification_at": "2026-10-09T19:10:43.184Z"
   },
   {
    "id": "ircc-ptime",
@@ -176,7 +176,7 @@
    "collection_status": "active",
    "collection_status_since": null,
    "collection_status_note": null,
-   "last_successful_verification_at": "2026-10-06T19:15:45.638Z"
+   "last_successful_verification_at": "2026-10-09T19:10:33.097Z"
   },
   {
    "id": "udi-waiting-times",
@@ -465,7 +465,6 @@
    "/api/v1/services/nz-super-yachts-visitor-visa.json",
    "/api/v1/services/nz-sweden-working-holiday-visa.json",
    "/api/v1/services/nz-taiwan-working-holiday-visa.json",
-   "/api/v1/services/nz-talent-accredited-employer-resident-visa.json",
    "/api/v1/services/nz-talent-accredited-employer-work-visa.json",
    "/api/v1/services/nz-temporary-retirement-visitor-visa.json",
    "/api/v1/services/nz-thai-chefs-work-visa.json",

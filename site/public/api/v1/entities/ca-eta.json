@@ -10,14 +10,14 @@
  "source_collection_status": "active",
  "source_collection_status_since": null,
  "source_collection_status_note": null,
- "source_last_verified_at": "2026-10-06T19:15:52.775Z",
+ "source_last_verified_at": "2026-10-09T19:10:40.180Z",
  "latest": {
   "value_raw": "5 minutes",
   "value_days": 0.0035,
   "unit_original": "minutes",
   "status": "ok",
-  "effective_date": "2026-10-01",
-  "retrieved_at": "2026-10-02T18:51:06.917Z",
+  "effective_date": "2026-10-07",
+  "retrieved_at": "2026-10-09T19:10:40.176Z",
   "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json",
   "confidence": "official"
  },
@@ -56,6 +56,15 @@
    "status": "ok",
    "effective_date": "2026-10-01",
    "retrieved_at": "2026-10-02T18:51:06.917Z",
+   "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json"
+  },
+  {
+   "value_raw": "5 minutes",
+   "value_days": 0.0035,
+   "unit_original": "minutes",
+   "status": "ok",
+   "effective_date": "2026-10-07",
+   "retrieved_at": "2026-10-09T19:10:40.176Z",
    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json"
   }
  ],

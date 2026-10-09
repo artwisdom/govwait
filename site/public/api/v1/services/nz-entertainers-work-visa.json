@@ -3,7 +3,7 @@
  "service_name": "Entertainers Work Visa — 50% processed",
  "jurisdiction": "NZ",
  "count": 2,
- "generated_at": "2026-10-06T19:22:45.811Z",
+ "generated_at": "2026-10-09T19:17:30.159Z",
  "records": [
   {
    "entity_id": "nz-entertainers-work-visa--p50",
@@ -17,14 +17,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-10-06T19:22:45.494Z",
+   "source_last_verified_at": "2026-10-09T19:17:29.872Z",
    "latest": {
-    "value_raw": "9 working days",
-    "value_days": 9,
+    "value_raw": "8 working days",
+    "value_days": 8,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:47:56.132Z",
+    "effective_date": "2026-10-09",
+    "retrieved_at": "2026-10-09T19:13:02.206Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -41,14 +41,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-10-06T19:22:45.494Z",
+   "source_last_verified_at": "2026-10-09T19:17:29.872Z",
    "latest": {
-    "value_raw": "11 working days",
-    "value_days": 11,
+    "value_raw": "9 working days",
+    "value_days": 9,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-09-25",
-    "retrieved_at": "2026-09-25T00:47:56.132Z",
+    "effective_date": "2026-10-09",
+    "retrieved_at": "2026-10-09T19:13:02.206Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }

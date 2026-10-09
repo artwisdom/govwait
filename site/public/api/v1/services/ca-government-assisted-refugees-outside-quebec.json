@@ -3,7 +3,7 @@
  "service_name": "Government-assisted refugees — outside Quebec",
  "jurisdiction": "CA",
  "count": 1,
- "generated_at": "2026-10-06T19:22:45.811Z",
+ "generated_at": "2026-10-09T19:17:30.159Z",
  "records": [
   {
    "entity_id": "ca-government-assisted-refugees-outside-quebec",
@@ -17,7 +17,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-10-06T19:15:49.676Z",
+   "source_last_verified_at": "2026-10-09T19:10:38.100Z",
    "latest": {
     "value_raw": "About 14 months",
     "value_days": 426.16,

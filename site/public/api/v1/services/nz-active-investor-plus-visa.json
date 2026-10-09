@@ -3,7 +3,7 @@
  "service_name": "Active Investor Plus Visa — 50% processed",
  "jurisdiction": "NZ",
  "count": 2,
- "generated_at": "2026-10-06T19:22:45.811Z",
+ "generated_at": "2026-10-09T19:17:30.159Z",
  "records": [
   {
    "entity_id": "nz-active-investor-plus-visa--p50",
@@ -17,7 +17,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-10-06T19:22:45.494Z",
+   "source_last_verified_at": "2026-10-09T19:17:29.872Z",
    "latest": {
     "value_raw": "45 working days",
     "value_days": 45,
@@ -41,7 +41,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-10-06T19:22:45.494Z",
+   "source_last_verified_at": "2026-10-09T19:17:29.872Z",
    "latest": {
     "value_raw": "106 working days",
     "value_days": 106,

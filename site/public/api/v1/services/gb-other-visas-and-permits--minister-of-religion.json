@@ -3,7 +3,7 @@
  "service_name": "Minister of Religion (Other visas and permits)",
  "jurisdiction": "GB",
  "count": 1,
- "generated_at": "2026-10-06T19:22:45.811Z",
+ "generated_at": "2026-10-09T19:17:30.159Z",
  "records": [
   {
    "entity_id": "gb-other-visas-and-permits--minister-of-religion",
@@ -17,7 +17,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-10-06T19:15:59.517Z",
+   "source_last_verified_at": "2026-10-09T19:10:46.376Z",
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
