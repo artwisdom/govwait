@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-09T19:17:30.159Z",
+ "generated_at": "2026-10-13T20:07:14.847Z",
  "entities": {
   "ca-amend-immigration-record": [
    {
@@ -113,6 +113,15 @@
     "effective_date": "2026-09-03",
     "retrieved_at": "2026-09-25T00:45:28.713Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
+   },
+   {
+    "value_raw": "About 26 months",
+    "value_days": 791.44,
+    "unit_original": "months",
+    "status": "ok",
+    "effective_date": "2026-10-09",
+    "retrieved_at": "2026-10-13T20:00:23.345Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
    }
   ],
   "ca-canadian-experience-class": [
@@ -133,6 +142,15 @@
     "effective_date": "2026-09-03",
     "retrieved_at": "2026-09-25T00:45:28.713Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
+   },
+   {
+    "value_raw": "About 6 months",
+    "value_days": 182.64,
+    "unit_original": "months",
+    "status": "ok",
+    "effective_date": "2026-10-09",
+    "retrieved_at": "2026-10-13T20:00:23.345Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
    }
   ],
   "ca-caregivers": [
@@ -152,6 +170,15 @@
     "status": "ok",
     "effective_date": "2026-09-03",
     "retrieved_at": "2026-09-25T00:45:28.713Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
+   },
+   {
+    "value_raw": "About 77 months",
+    "value_days": 2343.88,
+    "unit_original": "months",
+    "status": "ok",
+    "effective_date": "2026-10-09",
+    "retrieved_at": "2026-10-13T20:00:23.345Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
    }
   ],
@@ -220,6 +247,15 @@
     "effective_date": "2026-09-03",
     "retrieved_at": "2026-09-25T00:45:28.713Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
+   },
+   {
+    "value_raw": "About 34 months",
+    "value_days": 1034.96,
+    "unit_original": "months",
+    "status": "ok",
+    "effective_date": "2026-10-09",
+    "retrieved_at": "2026-10-13T20:00:23.345Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
    }
   ],
   "ca-citizenship-grant": [
@@ -239,6 +275,15 @@
     "status": "ok",
     "effective_date": "2026-09-03",
     "retrieved_at": "2026-09-25T00:45:28.713Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
+   },
+   {
+    "value_raw": "About 12 months",
+    "value_days": 365.28,
+    "unit_original": "months",
+    "status": "ok",
+    "effective_date": "2026-10-09",
+    "retrieved_at": "2026-10-13T20:00:23.345Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
    }
   ],
@@ -495,6 +540,15 @@
     "effective_date": "2026-09-03",
     "retrieved_at": "2026-09-25T00:45:28.713Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
+   },
+   {
+    "value_raw": "About 7 months",
+    "value_days": 213.08,
+    "unit_original": "months",
+    "status": "ok",
+    "effective_date": "2026-10-09",
+    "retrieved_at": "2026-10-13T20:00:23.345Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
    }
   ],
   "ca-government-assisted-refugees-outside-quebec": [
@@ -514,6 +568,15 @@
     "status": "ok",
     "effective_date": "2026-09-03",
     "retrieved_at": "2026-09-25T00:45:28.713Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
+   },
+   {
+    "value_raw": "About 14 months",
+    "value_days": 426.16,
+    "unit_original": "months",
+    "status": "ok",
+    "effective_date": "2026-10-09",
+    "retrieved_at": "2026-10-13T20:00:23.345Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
    }
   ],
@@ -535,6 +598,15 @@
     "effective_date": "2026-09-03",
     "retrieved_at": "2026-09-25T00:45:28.713Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
+   },
+   {
+    "value_raw": "About 9 months",
+    "value_days": 273.96,
+    "unit_original": "months",
+    "status": "ok",
+    "effective_date": "2026-10-09",
+    "retrieved_at": "2026-10-13T20:00:23.345Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
    }
   ],
   "ca-humanitarian-compassionate-outside-quebec": [
@@ -555,6 +627,15 @@
     "effective_date": "2026-09-03",
     "retrieved_at": "2026-09-25T00:45:28.713Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
+   },
+   {
+    "value_raw": "More than 10 years",
+    "value_days": 3652.5,
+    "unit_original": "years",
+    "status": "ok",
+    "effective_date": "2026-10-09",
+    "retrieved_at": "2026-10-13T20:00:23.345Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
    }
   ],
   "ca-humanitarian-compassionate-quebec": [
@@ -574,6 +655,15 @@
     "status": "ok",
     "effective_date": "2026-09-03",
     "retrieved_at": "2026-09-25T00:45:28.713Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
+   },
+   {
+    "value_raw": "More than 10 years",
+    "value_days": 3652.5,
+    "unit_original": "years",
+    "status": "ok",
+    "effective_date": "2026-10-09",
+    "retrieved_at": "2026-10-13T20:00:23.345Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
    }
   ],
@@ -689,6 +779,15 @@
     "effective_date": "2026-09-03",
     "retrieved_at": "2026-09-25T00:45:28.713Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
+   },
+   {
+    "value_raw": "About 28 months",
+    "value_days": 852.32,
+    "unit_original": "months",
+    "status": "ok",
+    "effective_date": "2026-10-09",
+    "retrieved_at": "2026-10-13T20:00:23.345Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
    }
   ],
   "ca-parents-grandparents-sponsorship-quebec": [
@@ -708,6 +807,15 @@
     "status": "ok",
     "effective_date": "2026-09-03",
     "retrieved_at": "2026-09-25T00:45:28.713Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
+   },
+   {
+    "value_raw": "About 63 months",
+    "value_days": 1917.72,
+    "unit_original": "months",
+    "status": "ok",
+    "effective_date": "2026-10-09",
+    "retrieved_at": "2026-10-13T20:00:23.345Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
    }
   ],
@@ -845,6 +953,15 @@
     "effective_date": "2026-09-03",
     "retrieved_at": "2026-09-25T00:45:28.713Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
+   },
+   {
+    "value_raw": "About 40 months",
+    "value_days": 1217.6,
+    "unit_original": "months",
+    "status": "ok",
+    "effective_date": "2026-10-09",
+    "retrieved_at": "2026-10-13T20:00:23.345Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
    }
   ],
   "ca-privately-sponsored-refugees-quebec": [
@@ -864,6 +981,15 @@
     "status": "ok",
     "effective_date": "2026-09-03",
     "retrieved_at": "2026-09-25T00:45:28.713Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
+   },
+   {
+    "value_raw": "About 54 months",
+    "value_days": 1643.76,
+    "unit_original": "months",
+    "status": "ok",
+    "effective_date": "2026-10-09",
+    "retrieved_at": "2026-10-13T20:00:23.345Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
    }
   ],
@@ -885,6 +1011,15 @@
     "effective_date": "2026-09-03",
     "retrieved_at": "2026-09-25T00:45:28.713Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
+   },
+   {
+    "value_raw": "About 41 months",
+    "value_days": 1248.04,
+    "unit_original": "months",
+    "status": "ok",
+    "effective_date": "2026-10-09",
+    "retrieved_at": "2026-10-13T20:00:23.345Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
    }
   ],
   "ca-protected-person-dependants-abroad-quebec": [
@@ -904,6 +1039,15 @@
     "status": "ok",
     "effective_date": "2026-09-03",
     "retrieved_at": "2026-09-25T00:45:28.713Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
+   },
+   {
+    "value_raw": "More than 10 years",
+    "value_days": 3652.5,
+    "unit_original": "years",
+    "status": "ok",
+    "effective_date": "2026-10-09",
+    "retrieved_at": "2026-10-13T20:00:23.345Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
    }
   ],
@@ -925,6 +1069,15 @@
     "effective_date": "2026-09-03",
     "retrieved_at": "2026-09-25T00:45:28.713Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
+   },
+   {
+    "value_raw": "About 13 months",
+    "value_days": 395.72,
+    "unit_original": "months",
+    "status": "ok",
+    "effective_date": "2026-10-09",
+    "retrieved_at": "2026-10-13T20:00:23.345Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
    }
   ],
   "ca-protected-persons-in-canada-quebec": [
@@ -944,6 +1097,15 @@
     "status": "ok",
     "effective_date": "2026-09-03",
     "retrieved_at": "2026-09-25T00:45:28.713Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
+   },
+   {
+    "value_raw": "More than 10 years",
+    "value_days": 3652.5,
+    "unit_original": "years",
+    "status": "ok",
+    "effective_date": "2026-10-09",
+    "retrieved_at": "2026-10-13T20:00:23.345Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
    }
   ],
@@ -965,6 +1127,15 @@
     "effective_date": "2026-09-03",
     "retrieved_at": "2026-09-25T00:45:28.713Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
+   },
+   {
+    "value_raw": "About 7 months",
+    "value_days": 213.08,
+    "unit_original": "months",
+    "status": "ok",
+    "effective_date": "2026-10-09",
+    "retrieved_at": "2026-10-13T20:00:23.345Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
    }
   ],
   "ca-provincial-nominee-non-express-entry": [
@@ -984,6 +1155,15 @@
     "status": "ok",
     "effective_date": "2026-09-03",
     "retrieved_at": "2026-09-25T00:45:28.713Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
+   },
+   {
+    "value_raw": "About 13 months",
+    "value_days": 395.72,
+    "unit_original": "months",
+    "status": "ok",
+    "effective_date": "2026-10-09",
+    "retrieved_at": "2026-10-13T20:00:23.345Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
    }
   ],
@@ -1005,6 +1185,15 @@
     "effective_date": "2026-09-03",
     "retrieved_at": "2026-09-25T00:45:28.713Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
+   },
+   {
+    "value_raw": "About 75 months",
+    "value_days": 2283,
+    "unit_original": "months",
+    "status": "ok",
+    "effective_date": "2026-10-09",
+    "retrieved_at": "2026-10-13T20:00:23.345Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
    }
   ],
   "ca-quebec-skilled-worker": [
@@ -1024,6 +1213,15 @@
     "status": "ok",
     "effective_date": "2026-09-03",
     "retrieved_at": "2026-09-25T00:45:28.713Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
+   },
+   {
+    "value_raw": "11 months",
+    "value_days": 334.84,
+    "unit_original": "months",
+    "status": "ok",
+    "effective_date": "2026-10-09",
+    "retrieved_at": "2026-10-13T20:00:23.345Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
    }
   ],
@@ -31031,6 +31229,15 @@
     "effective_date": "2026-09-03",
     "retrieved_at": "2026-09-25T00:45:28.713Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
+   },
+   {
+    "value_raw": "More than 10 years",
+    "value_days": 3652.5,
+    "unit_original": "years",
+    "status": "ok",
+    "effective_date": "2026-10-09",
+    "retrieved_at": "2026-10-13T20:00:23.345Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
    }
   ],
   "ca-sponsor-adopted-child--ad": [
@@ -50979,6 +51186,15 @@
     "effective_date": "2026-09-03",
     "retrieved_at": "2026-09-25T00:45:28.713Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
+   },
+   {
+    "value_raw": "About 26 months",
+    "value_days": 791.44,
+    "unit_original": "months",
+    "status": "ok",
+    "effective_date": "2026-10-09",
+    "retrieved_at": "2026-10-13T20:00:23.345Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
    }
   ],
   "ca-spouse-partner-inside-canada-quebec": [
@@ -50998,6 +51214,15 @@
     "status": "ok",
     "effective_date": "2026-09-03",
     "retrieved_at": "2026-09-25T00:45:28.713Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
+   },
+   {
+    "value_raw": "About 32 months",
+    "value_days": 974.08,
+    "unit_original": "months",
+    "status": "ok",
+    "effective_date": "2026-10-09",
+    "retrieved_at": "2026-10-13T20:00:23.345Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
    }
   ],
@@ -51019,6 +51244,15 @@
     "effective_date": "2026-09-03",
     "retrieved_at": "2026-09-25T00:45:28.713Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
+   },
+   {
+    "value_raw": "About 18 months",
+    "value_days": 547.92,
+    "unit_original": "months",
+    "status": "ok",
+    "effective_date": "2026-10-09",
+    "retrieved_at": "2026-10-13T20:00:23.345Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
    }
   ],
   "ca-spouse-partner-outside-canada-quebec": [
@@ -51039,6 +51273,15 @@
     "effective_date": "2026-09-03",
     "retrieved_at": "2026-09-25T00:45:28.713Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
+   },
+   {
+    "value_raw": "About 33 months",
+    "value_days": 1004.52,
+    "unit_original": "months",
+    "status": "ok",
+    "effective_date": "2026-10-09",
+    "retrieved_at": "2026-10-13T20:00:23.345Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
    }
   ],
   "ca-start-up-visa": [
@@ -51058,6 +51301,15 @@
     "status": "ok",
     "effective_date": "2026-09-03",
     "retrieved_at": "2026-09-25T00:45:28.713Z",
+    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
+   },
+   {
+    "value_raw": "More than 10 years",
+    "value_days": 3652.5,
+    "unit_original": "years",
+    "status": "ok",
+    "effective_date": "2026-10-09",
+    "retrieved_at": "2026-10-13T20:00:23.345Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/flpt-en.json"
    }
   ],
@@ -92957,6 +93209,15 @@
     "effective_date": "2026-10-09",
     "retrieved_at": "2026-10-09T19:11:02.107Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/"
+   },
+   {
+    "value_raw": "15 working days",
+    "value_days": 15,
+    "unit_original": "working days",
+    "status": "ok",
+    "effective_date": "2026-10-13",
+    "retrieved_at": "2026-10-13T20:00:46.189Z",
+    "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/"
    }
   ],
   "nz-accredited-employer-work-visa--p80": [
@@ -92994,6 +93255,15 @@
     "status": "ok",
     "effective_date": "2026-10-09",
     "retrieved_at": "2026-10-09T19:11:02.107Z",
+    "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/"
+   },
+   {
+    "value_raw": "36 working days",
+    "value_days": 36,
+    "unit_original": "working days",
+    "status": "ok",
+    "effective_date": "2026-10-13",
+    "retrieved_at": "2026-10-13T20:00:46.189Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/"
    }
   ],
@@ -97558,6 +97828,15 @@
     "effective_date": "2026-10-09",
     "retrieved_at": "2026-10-09T19:11:07.724Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/"
+   },
+   {
+    "value_raw": "196 working days",
+    "value_days": 196,
+    "unit_original": "working days",
+    "status": "ok",
+    "effective_date": "2026-10-13",
+    "retrieved_at": "2026-10-13T20:00:52.022Z",
+    "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/"
    }
   ],
   "nz-parent-resident-visa--p80": [
@@ -97613,6 +97892,15 @@
     "status": "ok",
     "effective_date": "2026-10-09",
     "retrieved_at": "2026-10-09T19:11:07.724Z",
+    "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/"
+   },
+   {
+    "value_raw": "309 working days",
+    "value_days": 309,
+    "unit_original": "working days",
+    "status": "ok",
+    "effective_date": "2026-10-13",
+    "retrieved_at": "2026-10-13T20:00:52.022Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/"
    }
   ],
@@ -97728,6 +98016,15 @@
     "effective_date": "2026-10-09",
     "retrieved_at": "2026-10-09T19:11:11.095Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/"
+   },
+   {
+    "value_raw": "172 working days",
+    "value_days": 172,
+    "unit_original": "working days",
+    "status": "ok",
+    "effective_date": "2026-10-13",
+    "retrieved_at": "2026-10-13T20:00:55.203Z",
+    "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/"
    }
   ],
   "nz-partner-of-a-new-zealander-resident-visa--p80": [
@@ -97774,6 +98071,15 @@
     "status": "ok",
     "effective_date": "2026-10-09",
     "retrieved_at": "2026-10-09T19:11:11.095Z",
+    "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/"
+   },
+   {
+    "value_raw": "196 working days",
+    "value_days": 196,
+    "unit_original": "working days",
+    "status": "ok",
+    "effective_date": "2026-10-13",
+    "retrieved_at": "2026-10-13T20:00:55.203Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/"
    }
   ],
@@ -98139,6 +98445,15 @@
     "effective_date": "2026-10-09",
     "retrieved_at": "2026-10-09T19:11:17.051Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/"
+   },
+   {
+    "value_raw": "25 working days",
+    "value_days": 25,
+    "unit_original": "working days",
+    "status": "ok",
+    "effective_date": "2026-10-13",
+    "retrieved_at": "2026-10-13T20:01:01.548Z",
+    "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/"
    }
   ],
   "nz-partner-of-a-worker-work-visa--p80": [
@@ -98176,6 +98491,15 @@
     "status": "ok",
     "effective_date": "2026-10-09",
     "retrieved_at": "2026-10-09T19:11:17.051Z",
+    "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/"
+   },
+   {
+    "value_raw": "45 working days",
+    "value_days": 45,
+    "unit_original": "working days",
+    "status": "ok",
+    "effective_date": "2026-10-13",
+    "retrieved_at": "2026-10-13T20:01:01.548Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/"
    }
   ],
@@ -98429,6 +98753,15 @@
     "effective_date": "2026-10-09",
     "retrieved_at": "2026-10-09T19:11:23.133Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/"
+   },
+   {
+    "value_raw": "10 working days",
+    "value_days": 10,
+    "unit_original": "working days",
+    "status": "ok",
+    "effective_date": "2026-10-13",
+    "retrieved_at": "2026-10-13T20:01:07.524Z",
+    "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/"
    }
   ],
   "nz-permanent-resident-visa--p80": [
@@ -98448,6 +98781,15 @@
     "status": "ok",
     "effective_date": "2026-10-09",
     "retrieved_at": "2026-10-09T19:11:23.133Z",
+    "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/"
+   },
+   {
+    "value_raw": "14 working days",
+    "value_days": 14,
+    "unit_original": "working days",
+    "status": "ok",
+    "effective_date": "2026-10-13",
+    "retrieved_at": "2026-10-13T20:01:07.524Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/"
    }
   ],
@@ -99563,6 +99905,15 @@
     "effective_date": "2026-10-09",
     "retrieved_at": "2026-10-09T19:11:26.089Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/"
+   },
+   {
+    "value_raw": "65 working days",
+    "value_days": 65,
+    "unit_original": "working days",
+    "status": "ok",
+    "effective_date": "2026-10-13",
+    "retrieved_at": "2026-10-13T20:01:10.474Z",
+    "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/"
    }
   ],
   "nz-skilled-migrant-category-resident-visa--p80": [
@@ -99618,6 +99969,15 @@
     "status": "ok",
     "effective_date": "2026-10-09",
     "retrieved_at": "2026-10-09T19:11:26.089Z",
+    "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/"
+   },
+   {
+    "value_raw": "98 working days",
+    "value_days": 98,
+    "unit_original": "working days",
+    "status": "ok",
+    "effective_date": "2026-10-13",
+    "retrieved_at": "2026-10-13T20:01:10.474Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/"
    }
   ],
@@ -100095,6 +100455,15 @@
     "effective_date": "2026-10-09",
     "retrieved_at": "2026-10-09T19:11:29.102Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/"
+   },
+   {
+    "value_raw": "52 working days",
+    "value_days": 52,
+    "unit_original": "working days",
+    "status": "ok",
+    "effective_date": "2026-10-13",
+    "retrieved_at": "2026-10-13T20:01:13.488Z",
+    "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/"
    }
   ],
   "nz-straight-to-residence-visa--p80": [
@@ -100132,6 +100501,15 @@
     "status": "ok",
     "effective_date": "2026-10-09",
     "retrieved_at": "2026-10-09T19:11:29.102Z",
+    "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/"
+   },
+   {
+    "value_raw": "91 working days",
+    "value_days": 91,
+    "unit_original": "working days",
+    "status": "ok",
+    "effective_date": "2026-10-13",
+    "retrieved_at": "2026-10-13T20:01:13.488Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/"
    }
   ],
@@ -101546,6 +101924,15 @@
     "effective_date": "2026-10-09",
     "retrieved_at": "2026-10-09T19:11:32.129Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/"
+   },
+   {
+    "value_raw": "53 working days",
+    "value_days": 53,
+    "unit_original": "working days",
+    "status": "ok",
+    "effective_date": "2026-10-13",
+    "retrieved_at": "2026-10-13T20:01:16.773Z",
+    "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/"
    }
   ],
   "nz-work-to-residence-visa--p80": [
@@ -101601,6 +101988,15 @@
     "status": "ok",
     "effective_date": "2026-10-09",
     "retrieved_at": "2026-10-09T19:11:32.129Z",
+    "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/"
+   },
+   {
+    "value_raw": "88 working days",
+    "value_days": 88,
+    "unit_original": "working days",
+    "status": "ok",
+    "effective_date": "2026-10-13",
+    "retrieved_at": "2026-10-13T20:01:16.773Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/"
    }
   ]

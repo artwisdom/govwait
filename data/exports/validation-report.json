@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-09T19:17:30.002Z",
+  "generated_at": "2026-10-13T20:07:14.648Z",
   "pass": true,
   "checks": [
     {
@@ -30,12 +30,12 @@
     {
       "name": "forward-current-coverage",
       "pass": true,
-      "detail": "56 headline forward-looking estimates (floor 28)"
+      "detail": "84 headline forward-looking estimates (floor 28)"
     },
     {
       "name": "forward-cohort-coverage",
       "pass": true,
-      "detail": "7229 application-month estimates (floor 3500)"
+      "detail": "10885 application-month estimates (floor 3500)"
     },
     {
       "name": "value-range",
@@ -65,7 +65,7 @@
     {
       "name": "coverage-ircc-forward-looking",
       "pass": true,
-      "detail": "56 observations (floor 28)"
+      "detail": "84 observations (floor 28)"
     },
     {
       "name": "collection-active-ircc-forward-looking",
@@ -115,7 +115,7 @@
     {
       "name": "coverage-inz-processing-times",
       "pass": true,
-      "detail": "1017 observations (floor 240)"
+      "detail": "1033 observations (floor 240)"
     },
     {
       "name": "collection-active-inz-processing-times",
@@ -140,37 +140,37 @@
     {
       "name": "coverage-total",
       "pass": true,
-      "detail": "10877 total observations (floor 300)"
+      "detail": "10921 total observations (floor 300)"
     },
     {
       "name": "staleness-ircc-ptime",
       "pass": true,
-      "detail": "latest effective_date 2026-10-07 is 2d old (max 45)"
+      "detail": "latest effective_date 2026-10-07 is 6d old (max 45)"
     },
     {
       "name": "staleness-ircc-forward-looking",
       "pass": true,
-      "detail": "latest effective_date 2026-09-03 is 36d old (max 62)"
+      "detail": "latest effective_date 2026-10-09 is 4d old (max 62)"
     },
     {
       "name": "staleness-govuk-visa-times",
       "pass": true,
-      "detail": "latest effective_date 2026-09-09 is 30d old (max 120)"
+      "detail": "latest effective_date 2026-09-09 is 34d old (max 120)"
     },
     {
       "name": "staleness-ircc-noncountry",
       "pass": true,
-      "detail": "latest effective_date 2026-10-07 is 2d old (max 45)"
+      "detail": "latest effective_date 2026-10-07 is 6d old (max 45)"
     },
     {
       "name": "staleness-govuk-inuk-times",
       "pass": true,
-      "detail": "latest effective_date 2026-09-09 is 30d old (max 500)"
+      "detail": "latest effective_date 2026-09-09 is 34d old (max 500)"
     },
     {
       "name": "volatility-guard",
       "pass": true,
-      "detail": "6 >10x jumps flagged for review",
+      "detail": "9 >10x jumps flagged for review",
       "flagged": [
         {
           "entity_id": "nz-permanent-resident-visa--p80",
@@ -201,6 +201,21 @@
           "entity_id": "nz-permanent-resident-visa--p50",
           "v1": 10,
           "v2": 196
+        },
+        {
+          "entity_id": "nz-permanent-resident-visa--p50",
+          "v1": 196,
+          "v2": 10
+        },
+        {
+          "entity_id": "nz-permanent-resident-visa--p80",
+          "v1": 309,
+          "v2": 14
+        },
+        {
+          "entity_id": "nz-work-to-residence-visa--p50",
+          "v1": 4,
+          "v2": 53
         }
       ]
     },

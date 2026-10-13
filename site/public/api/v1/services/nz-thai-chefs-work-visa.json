@@ -3,7 +3,7 @@
  "service_name": "Thai Chefs Work Visa — 50% processed",
  "jurisdiction": "NZ",
  "count": 2,
- "generated_at": "2026-10-09T19:17:30.159Z",
+ "generated_at": "2026-10-13T20:07:14.847Z",
  "records": [
   {
    "entity_id": "nz-thai-chefs-work-visa--p50",
@@ -17,7 +17,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-10-09T19:17:29.872Z",
+   "source_last_verified_at": "2026-10-13T20:07:14.489Z",
    "latest": {
     "value_raw": "17 working days",
     "value_days": 17,
@@ -41,7 +41,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-10-09T19:17:29.872Z",
+   "source_last_verified_at": "2026-10-13T20:07:14.489Z",
    "latest": {
     "value_raw": "45 working days",
     "value_days": 45,
