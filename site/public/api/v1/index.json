@@ -1,11 +1,11 @@
 {
  "name": "GovWait API v1",
  "description": "Officially published government processing times, tracked with provenance and history. Static JSON; no key required.",
- "generated_at": "2026-10-13T20:07:14.847Z",
+ "generated_at": "2026-10-16T17:52:58.557Z",
  "stats": {
-  "generated_at": "2026-10-13T20:07:14.847Z",
+  "generated_at": "2026-10-16T17:52:58.557Z",
   "entities": 2314,
-  "observations": 10819,
+  "observations": 12847,
   "forward_looking_estimates": 10969,
   "forward_looking_snapshots": 3,
   "jurisdictions": [
@@ -41,8 +41,8 @@
     "name": "New Zealand visa application processing times",
     "collection_status": "active",
     "collection_status_since": null,
-    "observations": 931,
-    "latest_effective_date": "2026-10-13"
+    "observations": 1033,
+    "latest_effective_date": "2026-10-16"
    },
    "ircc-forward-looking": {
     "name": "IRCC forward-looking processing times and in-queue estimates",
@@ -55,8 +55,8 @@
     "name": "IRCC processing times (non-country categories)",
     "collection_status": "active",
     "collection_status_since": null,
-    "observations": 95,
-    "latest_effective_date": "2026-10-07"
+    "observations": 114,
+    "latest_effective_date": "2026-10-14"
    },
    "ircc-passport": {
     "name": "Canadian passport processing times",
@@ -69,8 +69,8 @@
     "name": "IRCC Check Processing Times data",
     "collection_status": "active",
     "collection_status_since": null,
-    "observations": 9535,
-    "latest_effective_date": "2026-10-07"
+    "observations": 11442,
+    "latest_effective_date": "2026-10-14"
    },
    "udi-waiting-times": {
     "name": "Norway immigration waiting times",
@@ -92,7 +92,7 @@
    "collection_status": "active",
    "collection_status_since": null,
    "collection_status_note": null,
-   "last_successful_verification_at": "2026-10-13T20:00:33.630Z"
+   "last_successful_verification_at": "2026-10-16T17:46:18.018Z"
   },
   {
    "id": "govuk-passport",
@@ -104,7 +104,7 @@
    "collection_status": "active",
    "collection_status_since": null,
    "collection_status_note": null,
-   "last_successful_verification_at": "2026-10-13T20:00:36.634Z"
+   "last_successful_verification_at": "2026-10-16T17:46:21.012Z"
   },
   {
    "id": "govuk-visa-times",
@@ -116,7 +116,7 @@
    "collection_status": "active",
    "collection_status_since": null,
    "collection_status_note": null,
-   "last_successful_verification_at": "2026-10-13T20:00:30.984Z"
+   "last_successful_verification_at": "2026-10-16T17:46:15.005Z"
   },
   {
    "id": "inz-processing-times",
@@ -128,7 +128,7 @@
    "collection_status": "active",
    "collection_status_since": null,
    "collection_status_note": null,
-   "last_successful_verification_at": "2026-10-13T20:07:14.489Z"
+   "last_successful_verification_at": "2026-10-16T17:52:58.253Z"
   },
   {
    "id": "ircc-forward-looking",
@@ -140,7 +140,7 @@
    "collection_status": "active",
    "collection_status_since": null,
    "collection_status_note": null,
-   "last_successful_verification_at": "2026-10-13T20:00:23.370Z"
+   "last_successful_verification_at": "2026-10-16T17:46:05.839Z"
   },
   {
    "id": "ircc-noncountry",
@@ -152,7 +152,7 @@
    "collection_status": "active",
    "collection_status_since": null,
    "collection_status_note": null,
-   "last_successful_verification_at": "2026-10-13T20:00:26.474Z"
+   "last_successful_verification_at": "2026-10-16T17:46:10.768Z"
   },
   {
    "id": "ircc-passport",
@@ -164,7 +164,7 @@
    "collection_status": "active",
    "collection_status_since": null,
    "collection_status_note": null,
-   "last_successful_verification_at": "2026-10-13T20:00:27.514Z"
+   "last_successful_verification_at": "2026-10-16T17:46:11.843Z"
   },
   {
    "id": "ircc-ptime",
@@ -176,7 +176,7 @@
    "collection_status": "active",
    "collection_status_since": null,
    "collection_status_note": null,
-   "last_successful_verification_at": "2026-10-13T20:00:19.560Z"
+   "last_successful_verification_at": "2026-10-16T17:46:02.772Z"
   },
   {
    "id": "udi-waiting-times",

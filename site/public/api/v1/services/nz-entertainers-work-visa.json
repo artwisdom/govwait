@@ -3,7 +3,7 @@
  "service_name": "Entertainers Work Visa — 50% processed",
  "jurisdiction": "NZ",
  "count": 2,
- "generated_at": "2026-10-13T20:07:14.847Z",
+ "generated_at": "2026-10-16T17:52:58.557Z",
  "records": [
   {
    "entity_id": "nz-entertainers-work-visa--p50",
@@ -17,7 +17,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-10-13T20:07:14.489Z",
+   "source_last_verified_at": "2026-10-16T17:52:58.253Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -41,7 +41,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-10-13T20:07:14.489Z",
+   "source_last_verified_at": "2026-10-16T17:52:58.253Z",
    "latest": {
     "value_raw": "9 working days",
     "value_days": 9,

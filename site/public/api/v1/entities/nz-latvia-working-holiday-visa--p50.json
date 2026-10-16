@@ -10,14 +10,14 @@
  "source_collection_status": "active",
  "source_collection_status_since": null,
  "source_collection_status_note": null,
- "source_last_verified_at": "2026-10-13T20:07:14.489Z",
+ "source_last_verified_at": "2026-10-16T17:52:58.253Z",
  "latest": {
-  "value_raw": "4 working days",
-  "value_days": 4,
+  "value_raw": "7 working days",
+  "value_days": 7,
   "unit_original": "working days",
   "status": "ok",
-  "effective_date": "2026-10-02",
-  "retrieved_at": "2026-10-02T18:54:36.047Z",
+  "effective_date": "2026-10-16",
+  "retrieved_at": "2026-10-16T17:49:39.866Z",
   "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
   "confidence": "official"
  },
@@ -56,6 +56,15 @@
    "status": "ok",
    "effective_date": "2026-10-02",
    "retrieved_at": "2026-10-02T18:54:36.047Z",
+   "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/"
+  },
+  {
+   "value_raw": "7 working days",
+   "value_days": 7,
+   "unit_original": "working days",
+   "status": "ok",
+   "effective_date": "2026-10-16",
+   "retrieved_at": "2026-10-16T17:49:39.866Z",
    "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/"
   }
  ],

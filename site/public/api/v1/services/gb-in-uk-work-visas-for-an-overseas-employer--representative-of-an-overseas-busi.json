@@ -3,7 +3,7 @@
  "service_name": "Representative of an Overseas Business (Work visas for an overseas employer, applying inside the UK)",
  "jurisdiction": "GB",
  "count": 1,
- "generated_at": "2026-10-13T20:07:14.847Z",
+ "generated_at": "2026-10-16T17:52:58.557Z",
  "records": [
   {
    "entity_id": "gb-in-uk-work-visas-for-an-overseas-employer--representative-of-an-overseas-busi",
@@ -17,7 +17,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-10-13T20:00:33.630Z",
+   "source_last_verified_at": "2026-10-16T17:46:18.018Z",
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
