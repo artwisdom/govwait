@@ -10,14 +10,14 @@
  "source_collection_status": "active",
  "source_collection_status_since": null,
  "source_collection_status_note": null,
- "source_last_verified_at": "2026-10-20T18:13:08.553Z",
+ "source_last_verified_at": "2026-10-23T18:02:38.281Z",
  "latest": {
-  "value_raw": "16 weeks",
-  "value_days": 112,
+  "value_raw": "9 weeks",
+  "value_days": 63,
   "unit_original": "weeks",
   "status": "ok",
-  "effective_date": "2026-10-14",
-  "retrieved_at": "2026-10-16T17:46:02.759Z",
+  "effective_date": "2026-10-21",
+  "retrieved_at": "2026-10-23T18:02:38.271Z",
   "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json",
   "confidence": "official"
  },
@@ -74,6 +74,15 @@
    "status": "ok",
    "effective_date": "2026-10-14",
    "retrieved_at": "2026-10-16T17:46:02.759Z",
+   "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json"
+  },
+  {
+   "value_raw": "9 weeks",
+   "value_days": 63,
+   "unit_original": "weeks",
+   "status": "ok",
+   "effective_date": "2026-10-21",
+   "retrieved_at": "2026-10-23T18:02:38.271Z",
    "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-en.json"
   }
  ],

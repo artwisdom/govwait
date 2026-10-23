@@ -3,7 +3,7 @@
  "service_name": "Partner or spouse (Family visas)",
  "jurisdiction": "GB",
  "count": 1,
- "generated_at": "2026-10-20T18:20:03.883Z",
+ "generated_at": "2026-10-23T18:09:33.620Z",
  "records": [
   {
    "entity_id": "gb-family-visas--partner-or-spouse",
@@ -17,7 +17,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-10-20T18:13:19.708Z",
+   "source_last_verified_at": "2026-10-23T18:02:49.974Z",
    "latest": {
     "value_raw": "12 weeks",
     "value_days": 84,

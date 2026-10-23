@@ -3,7 +3,7 @@
  "service_name": "Work permit extension",
  "jurisdiction": "CA",
  "count": 1,
- "generated_at": "2026-10-20T18:20:03.883Z",
+ "generated_at": "2026-10-23T18:09:33.620Z",
  "records": [
   {
    "entity_id": "ca-work-permit-extension",
@@ -17,14 +17,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-10-20T18:13:15.549Z",
+   "source_last_verified_at": "2026-10-23T18:02:45.335Z",
    "latest": {
-    "value_raw": "118 days",
-    "value_days": 118,
+    "value_raw": "121 days",
+    "value_days": 121,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-10-14",
-    "retrieved_at": "2026-10-16T17:46:10.764Z",
+    "effective_date": "2026-10-21",
+    "retrieved_at": "2026-10-23T18:02:45.331Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json",
     "confidence": "official"
    }

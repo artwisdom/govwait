@@ -3,7 +3,7 @@
  "service_name": "Partner of a New Zealander Resident Visa — 50% processed",
  "jurisdiction": "NZ",
  "count": 2,
- "generated_at": "2026-10-20T18:20:03.883Z",
+ "generated_at": "2026-10-23T18:09:33.620Z",
  "records": [
   {
    "entity_id": "nz-partner-of-a-new-zealander-resident-visa--p50",
@@ -17,7 +17,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-10-20T18:20:03.549Z",
+   "source_last_verified_at": "2026-10-23T18:09:33.386Z",
    "latest": {
     "value_raw": "171 working days",
     "value_days": 171,
@@ -41,14 +41,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-10-20T18:20:03.549Z",
+   "source_last_verified_at": "2026-10-23T18:09:33.386Z",
    "latest": {
-    "value_raw": "192 working days",
-    "value_days": 192,
+    "value_raw": "191 working days",
+    "value_days": 191,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-10-16",
-    "retrieved_at": "2026-10-16T17:46:39.812Z",
+    "effective_date": "2026-10-23",
+    "retrieved_at": "2026-10-23T18:03:14.296Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }

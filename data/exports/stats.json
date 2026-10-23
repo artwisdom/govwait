@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-20T18:20:03.883Z",
+  "generated_at": "2026-10-23T18:09:33.620Z",
   "entities": 2314,
-  "observations": 12847,
+  "observations": 14785,
   "forward_looking_estimates": 10969,
   "forward_looking_snapshots": 3,
   "jurisdictions": [
@@ -37,8 +37,8 @@
       "name": "New Zealand visa application processing times",
       "collection_status": "active",
       "collection_status_since": null,
-      "observations": 1033,
-      "latest_effective_date": "2026-10-16"
+      "observations": 1045,
+      "latest_effective_date": "2026-10-23"
     },
     "ircc-forward-looking": {
       "name": "IRCC forward-looking processing times and in-queue estimates",
@@ -51,8 +51,8 @@
       "name": "IRCC processing times (non-country categories)",
       "collection_status": "active",
       "collection_status_since": null,
-      "observations": 114,
-      "latest_effective_date": "2026-10-14"
+      "observations": 133,
+      "latest_effective_date": "2026-10-21"
     },
     "ircc-passport": {
       "name": "Canadian passport processing times",
@@ -65,8 +65,8 @@
       "name": "IRCC Check Processing Times data",
       "collection_status": "active",
       "collection_status_since": null,
-      "observations": 11442,
-      "latest_effective_date": "2026-10-14"
+      "observations": 13349,
+      "latest_effective_date": "2026-10-21"
     },
     "udi-waiting-times": {
       "name": "Norway immigration waiting times",
