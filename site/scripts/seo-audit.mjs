@@ -4,6 +4,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { NZ_ROLLOUT_SERVICE_KEYS } from '../src/lib/publication.js';
 import { applicantEditorialLastmod } from '../src/lib/applicant-editorial.js';
+import { phase7aLastmod } from './phase7a-lastmod.mjs';
 
 const SITE_DIR = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DIST = path.join(SITE_DIR, 'dist');
@@ -509,8 +510,9 @@ const phaseSevenStaticPages = [
 for (const page of phaseSevenStaticPages) {
   const builtPage = pages.find(item => item.url === page.url);
   if (page.title && builtPage?.title !== page.title) errors.push(`${page.url}: expected Phase 7A title ${page.title}, found ${builtPage?.title || 'missing'}`);
-  if (sitemapLastmods.get(`${canonicalOrigin}${page.url}`) !== ctrGrowthModified) {
-    errors.push(`${page.url}: expected Phase 7A sitemap lastmod ${ctrGrowthModified}`);
+  const expectedLastmod = phase7aLastmod(page.url, LATEST.records, ctrGrowthModified);
+  if (sitemapLastmods.get(`${canonicalOrigin}${page.url}`) !== expectedLastmod) {
+    errors.push(`${page.url}: expected Phase 7A sitemap lastmod ${expectedLastmod}, found ${sitemapLastmods.get(`${canonicalOrigin}${page.url}`) || 'missing'}`);
   }
   const outputPath = path.join(DIST, page.url.replace(/^\/+|\/+$/g, ''), 'index.html');
   let html = '';
@@ -566,7 +568,8 @@ for (const service of phaseSevenNzServices) {
   const expectedTitle = p50 && p80 ? service.title(p50, p80) : '';
   if (!p50 || !p80) errors.push(`${url}: Phase 7A percentile records missing`);
   else if (builtPage?.title !== expectedTitle) errors.push(`${url}: expected Phase 7A title ${expectedTitle}, found ${builtPage?.title || 'missing'}`);
-  if (sitemapLastmods.get(`${canonicalOrigin}${url}`) !== ctrGrowthModified) errors.push(`${url}: expected Phase 7A sitemap lastmod ${ctrGrowthModified}`);
+  const expectedLastmod = phase7aLastmod(url, LATEST.records, ctrGrowthModified);
+  if (sitemapLastmods.get(`${canonicalOrigin}${url}`) !== expectedLastmod) errors.push(`${url}: expected Phase 7A sitemap lastmod ${expectedLastmod}, found ${sitemapLastmods.get(`${canonicalOrigin}${url}`) || 'missing'}`);
   const outputPath = path.join(DIST, url.replace(/^\/+|\/+$/g, ''), 'index.html');
   let html = '';
   try { html = readFileSync(outputPath, 'utf8'); }
@@ -576,7 +579,8 @@ for (const service of phaseSevenNzServices) {
 }
 
 for (const url of ['/guides/', '/new-zealand/']) {
-  if (sitemapLastmods.get(`${canonicalOrigin}${url}`) !== ctrGrowthModified) errors.push(`${url}: expected Phase 7A hub lastmod ${ctrGrowthModified}`);
+  const expectedLastmod = phase7aLastmod(url, LATEST.records, ctrGrowthModified);
+  if (sitemapLastmods.get(`${canonicalOrigin}${url}`) !== expectedLastmod) errors.push(`${url}: expected Phase 7A hub lastmod ${expectedLastmod}, found ${sitemapLastmods.get(`${canonicalOrigin}${url}`) || 'missing'}`);
 }
 
 // Phase 6A keeps Norway's append-only evidence public without presenting a

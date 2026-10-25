@@ -7,7 +7,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "audit:seo": "node scripts/seo-audit.mjs"
+    "test:seo": "node --test scripts/phase7a-lastmod.test.mjs",
+    "audit:seo": "npm run test:seo && node scripts/seo-audit.mjs"
   },
   "dependencies": {
     "astro": "^4.16.19"
