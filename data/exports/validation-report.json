@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-27T19:16:05.932Z",
+  "generated_at": "2026-10-30T14:11:59.149Z",
   "pass": true,
   "checks": [
     {
@@ -45,7 +45,7 @@
     {
       "name": "coverage-ircc-ptime",
       "pass": true,
-      "detail": "13349 observations (floor 1200)"
+      "detail": "15256 observations (floor 1200)"
     },
     {
       "name": "collection-active-ircc-ptime",
@@ -75,7 +75,7 @@
     {
       "name": "coverage-ircc-noncountry",
       "pass": true,
-      "detail": "133 observations (floor 15)"
+      "detail": "152 observations (floor 15)"
     },
     {
       "name": "collection-active-ircc-noncountry",
@@ -115,7 +115,7 @@
     {
       "name": "coverage-inz-processing-times",
       "pass": true,
-      "detail": "1147 observations (floor 240)"
+      "detail": "1248 observations (floor 240)"
     },
     {
       "name": "collection-active-inz-processing-times",
@@ -140,32 +140,32 @@
     {
       "name": "coverage-total",
       "pass": true,
-      "detail": "14887 total observations (floor 300)"
+      "detail": "16914 total observations (floor 300)"
     },
     {
       "name": "staleness-ircc-ptime",
       "pass": true,
-      "detail": "latest effective_date 2026-10-21 is 6d old (max 45)"
+      "detail": "latest effective_date 2026-10-29 is 1d old (max 45)"
     },
     {
       "name": "staleness-ircc-forward-looking",
       "pass": true,
-      "detail": "latest effective_date 2026-10-09 is 18d old (max 62)"
+      "detail": "latest effective_date 2026-10-09 is 21d old (max 62)"
     },
     {
       "name": "staleness-govuk-visa-times",
       "pass": true,
-      "detail": "latest effective_date 2026-09-09 is 48d old (max 120)"
+      "detail": "latest effective_date 2026-09-09 is 51d old (max 120)"
     },
     {
       "name": "staleness-ircc-noncountry",
       "pass": true,
-      "detail": "latest effective_date 2026-10-21 is 6d old (max 45)"
+      "detail": "latest effective_date 2026-10-29 is 1d old (max 45)"
     },
     {
       "name": "staleness-govuk-inuk-times",
       "pass": true,
-      "detail": "latest effective_date 2026-09-09 is 48d old (max 500)"
+      "detail": "latest effective_date 2026-09-09 is 51d old (max 500)"
     },
     {
       "name": "volatility-guard",

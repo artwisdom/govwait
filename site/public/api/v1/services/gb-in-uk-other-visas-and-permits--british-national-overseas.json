@@ -3,7 +3,7 @@
  "service_name": "British National (Overseas) (Other visas and permits, applying inside the UK)",
  "jurisdiction": "GB",
  "count": 1,
- "generated_at": "2026-10-27T19:16:06.156Z",
+ "generated_at": "2026-10-30T14:11:59.331Z",
  "records": [
   {
    "entity_id": "gb-in-uk-other-visas-and-permits--british-national-overseas",
@@ -17,7 +17,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-10-27T19:09:25.822Z",
+   "source_last_verified_at": "2026-10-30T14:05:19.096Z",
    "latest": {
     "value_raw": "12 weeks",
     "value_days": 84,

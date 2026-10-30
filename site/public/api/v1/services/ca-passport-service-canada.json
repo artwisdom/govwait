@@ -3,7 +3,7 @@
  "service_name": "Passport (Service Canada Centre or by mail)",
  "jurisdiction": "CA",
  "count": 1,
- "generated_at": "2026-10-27T19:16:06.156Z",
+ "generated_at": "2026-10-30T14:11:59.331Z",
  "records": [
   {
    "entity_id": "ca-passport-service-canada",
@@ -17,7 +17,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-10-27T19:09:19.206Z",
+   "source_last_verified_at": "2026-10-30T14:05:12.407Z",
    "latest": {
     "value_raw": "up to 17 weeks, plus mail time",
     "value_days": 119,

@@ -3,7 +3,7 @@
  "service_name": "Creative Worker (Temporary work visas)",
  "jurisdiction": "GB",
  "count": 1,
- "generated_at": "2026-10-27T19:16:06.156Z",
+ "generated_at": "2026-10-30T14:11:59.331Z",
  "records": [
   {
    "entity_id": "gb-temporary-work-visas--creative-worker",
@@ -17,7 +17,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-10-27T19:09:22.384Z",
+   "source_last_verified_at": "2026-10-30T14:05:15.693Z",
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,

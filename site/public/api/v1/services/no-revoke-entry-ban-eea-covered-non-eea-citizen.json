@@ -3,7 +3,7 @@
  "service_name": "Revoking an entry ban for a non-EU/EEA citizen covered by EEA regulations",
  "jurisdiction": "NO",
  "count": 1,
- "generated_at": "2026-10-27T19:16:06.156Z",
+ "generated_at": "2026-10-30T14:11:59.331Z",
  "records": [
   {
    "entity_id": "no-revoke-entry-ban-eea-covered-non-eea-citizen",

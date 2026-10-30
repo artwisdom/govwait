@@ -3,7 +3,7 @@
  "service_name": "Canadian Experience Class",
  "jurisdiction": "CA",
  "count": 1,
- "generated_at": "2026-10-27T19:16:06.156Z",
+ "generated_at": "2026-10-30T14:11:59.331Z",
  "records": [
   {
    "entity_id": "ca-canadian-experience-class",
@@ -17,7 +17,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-10-27T19:09:12.213Z",
+   "source_last_verified_at": "2026-10-30T14:05:07.248Z",
    "latest": {
     "value_raw": "About 6 months",
     "value_days": 182.64,
