@@ -3,7 +3,7 @@
  "service_name": "United Kingdom Working Holiday Visa — 50% processed",
  "jurisdiction": "NZ",
  "count": 2,
- "generated_at": "2026-10-30T14:11:59.331Z",
+ "generated_at": "2026-11-03T14:11:00.549Z",
  "records": [
   {
    "entity_id": "nz-united-kingdom-working-holiday-visa--p50",
@@ -17,7 +17,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-10-30T14:11:59.024Z",
+   "source_last_verified_at": "2026-11-03T14:11:00.173Z",
    "latest": {
     "value_raw": "8 working days",
     "value_days": 8,
@@ -41,7 +41,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-10-30T14:11:59.024Z",
+   "source_last_verified_at": "2026-11-03T14:11:00.173Z",
    "latest": {
     "value_raw": "15 working days",
     "value_days": 15,

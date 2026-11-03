@@ -3,7 +3,7 @@
  "service_name": "Protected persons and Convention refugees in Canada — Quebec",
  "jurisdiction": "CA",
  "count": 1,
- "generated_at": "2026-10-30T14:11:59.331Z",
+ "generated_at": "2026-11-03T14:11:00.549Z",
  "records": [
   {
    "entity_id": "ca-protected-persons-in-canada-quebec",
@@ -17,7 +17,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-10-30T14:05:07.248Z",
+   "source_last_verified_at": "2026-11-03T14:04:07.007Z",
    "latest": {
     "value_raw": "More than 10 years",
     "value_days": 3652.5,

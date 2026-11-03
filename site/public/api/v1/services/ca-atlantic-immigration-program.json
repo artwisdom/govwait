@@ -3,7 +3,7 @@
  "service_name": "Atlantic Immigration Program",
  "jurisdiction": "CA",
  "count": 1,
- "generated_at": "2026-10-30T14:11:59.331Z",
+ "generated_at": "2026-11-03T14:11:00.549Z",
  "records": [
   {
    "entity_id": "ca-atlantic-immigration-program",
@@ -17,7 +17,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-10-30T14:05:07.248Z",
+   "source_last_verified_at": "2026-11-03T14:04:07.007Z",
    "latest": {
     "value_raw": "About 26 months",
     "value_days": 791.44,

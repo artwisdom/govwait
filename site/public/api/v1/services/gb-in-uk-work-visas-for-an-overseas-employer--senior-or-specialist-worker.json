@@ -3,7 +3,7 @@
  "service_name": "Senior or Specialist Worker (Work visas for an overseas employer, applying inside the UK)",
  "jurisdiction": "GB",
  "count": 1,
- "generated_at": "2026-10-30T14:11:59.331Z",
+ "generated_at": "2026-11-03T14:11:00.549Z",
  "records": [
   {
    "entity_id": "gb-in-uk-work-visas-for-an-overseas-employer--senior-or-specialist-worker",
@@ -17,7 +17,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-10-30T14:05:19.096Z",
+   "source_last_verified_at": "2026-11-03T14:04:19.705Z",
    "latest": {
     "value_raw": "8 weeks",
     "value_days": 56,
