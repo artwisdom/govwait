@@ -1,11 +1,11 @@
 {
  "name": "GovWait API v1",
  "description": "Officially published government processing times, tracked with provenance and history. Static JSON; no key required.",
- "generated_at": "2026-11-03T14:11:00.549Z",
+ "generated_at": "2026-11-06T14:11:30.851Z",
  "stats": {
-  "generated_at": "2026-11-03T14:11:00.549Z",
+  "generated_at": "2026-11-06T14:11:30.851Z",
   "entities": 2314,
-  "observations": 16812,
+  "observations": 18929,
   "forward_looking_estimates": 10969,
   "forward_looking_snapshots": 3,
   "jurisdictions": [
@@ -41,8 +41,8 @@
     "name": "New Zealand visa application processing times",
     "collection_status": "active",
     "collection_status_since": null,
-    "observations": 1146,
-    "latest_effective_date": "2026-10-30"
+    "observations": 1337,
+    "latest_effective_date": "2026-11-06"
    },
    "ircc-forward-looking": {
     "name": "IRCC forward-looking processing times and in-queue estimates",
@@ -55,8 +55,8 @@
     "name": "IRCC processing times (non-country categories)",
     "collection_status": "active",
     "collection_status_since": null,
-    "observations": 152,
-    "latest_effective_date": "2026-10-29"
+    "observations": 171,
+    "latest_effective_date": "2026-11-04"
    },
    "ircc-passport": {
     "name": "Canadian passport processing times",
@@ -69,8 +69,8 @@
     "name": "IRCC Check Processing Times data",
     "collection_status": "active",
     "collection_status_since": null,
-    "observations": 15256,
-    "latest_effective_date": "2026-10-29"
+    "observations": 17163,
+    "latest_effective_date": "2026-11-04"
    },
    "udi-waiting-times": {
     "name": "Norway immigration waiting times",
@@ -92,7 +92,7 @@
    "collection_status": "active",
    "collection_status_since": null,
    "collection_status_note": null,
-   "last_successful_verification_at": "2026-11-03T14:04:19.705Z"
+   "last_successful_verification_at": "2026-11-06T14:04:49.164Z"
   },
   {
    "id": "govuk-passport",
@@ -104,7 +104,7 @@
    "collection_status": "active",
    "collection_status_since": null,
    "collection_status_note": null,
-   "last_successful_verification_at": "2026-11-03T14:04:22.579Z"
+   "last_successful_verification_at": "2026-11-06T14:04:52.403Z"
   },
   {
    "id": "govuk-visa-times",
@@ -116,7 +116,7 @@
    "collection_status": "active",
    "collection_status_since": null,
    "collection_status_note": null,
-   "last_successful_verification_at": "2026-11-03T14:04:16.687Z"
+   "last_successful_verification_at": "2026-11-06T14:04:46.482Z"
   },
   {
    "id": "inz-processing-times",
@@ -128,7 +128,7 @@
    "collection_status": "active",
    "collection_status_since": null,
    "collection_status_note": null,
-   "last_successful_verification_at": "2026-11-03T14:11:00.173Z"
+   "last_successful_verification_at": "2026-11-06T14:11:30.372Z"
   },
   {
    "id": "ircc-forward-looking",
@@ -140,7 +140,7 @@
    "collection_status": "active",
    "collection_status_since": null,
    "collection_status_note": null,
-   "last_successful_verification_at": "2026-11-03T14:04:07.007Z"
+   "last_successful_verification_at": "2026-11-06T14:04:34.844Z"
   },
   {
    "id": "ircc-noncountry",
@@ -152,7 +152,7 @@
    "collection_status": "active",
    "collection_status_since": null,
    "collection_status_note": null,
-   "last_successful_verification_at": "2026-11-03T14:04:10.977Z"
+   "last_successful_verification_at": "2026-11-06T14:04:39.797Z"
   },
   {
    "id": "ircc-passport",
@@ -164,7 +164,7 @@
    "collection_status": "active",
    "collection_status_since": null,
    "collection_status_note": null,
-   "last_successful_verification_at": "2026-11-03T14:04:13.034Z"
+   "last_successful_verification_at": "2026-11-06T14:04:42.850Z"
   },
   {
    "id": "ircc-ptime",
@@ -176,7 +176,7 @@
    "collection_status": "active",
    "collection_status_since": null,
    "collection_status_note": null,
-   "last_successful_verification_at": "2026-11-03T14:04:03.986Z"
+   "last_successful_verification_at": "2026-11-06T14:04:32.807Z"
   },
   {
    "id": "udi-waiting-times",
