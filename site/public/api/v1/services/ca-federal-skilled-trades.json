@@ -3,7 +3,7 @@
  "service_name": "Federal Skilled Trades (Express Entry)",
  "jurisdiction": "CA",
  "count": 1,
- "generated_at": "2026-11-06T14:11:30.851Z",
+ "generated_at": "2026-11-10T14:10:59.400Z",
  "records": [
   {
    "entity_id": "ca-federal-skilled-trades",
@@ -17,7 +17,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-11-06T14:04:39.797Z",
+   "source_last_verified_at": "2026-11-10T14:04:09.621Z",
    "latest": {
     "value_raw": "Not enough data",
     "value_days": null,

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-06T14:11:30.588Z",
+  "generated_at": "2026-11-10T14:10:59.161Z",
   "pass": true,
   "checks": [
     {
@@ -145,27 +145,27 @@
     {
       "name": "staleness-ircc-ptime",
       "pass": true,
-      "detail": "latest effective_date 2026-11-04 is 2d old (max 45)"
+      "detail": "latest effective_date 2026-11-04 is 6d old (max 45)"
     },
     {
       "name": "staleness-ircc-forward-looking",
       "pass": true,
-      "detail": "latest effective_date 2026-10-09 is 28d old (max 62)"
+      "detail": "latest effective_date 2026-10-09 is 32d old (max 62)"
     },
     {
       "name": "staleness-govuk-visa-times",
       "pass": true,
-      "detail": "latest effective_date 2026-09-09 is 58d old (max 120)"
+      "detail": "latest effective_date 2026-09-09 is 62d old (max 120)"
     },
     {
       "name": "staleness-ircc-noncountry",
       "pass": true,
-      "detail": "latest effective_date 2026-11-04 is 2d old (max 45)"
+      "detail": "latest effective_date 2026-11-04 is 6d old (max 45)"
     },
     {
       "name": "staleness-govuk-inuk-times",
       "pass": true,
-      "detail": "latest effective_date 2026-09-09 is 58d old (max 500)"
+      "detail": "latest effective_date 2026-09-09 is 62d old (max 500)"
     },
     {
       "name": "volatility-guard",
