@@ -3,7 +3,7 @@
  "service_name": "Standard Visitor (Visit visas)",
  "jurisdiction": "GB",
  "count": 1,
- "generated_at": "2026-11-13T14:11:05.220Z",
+ "generated_at": "2026-11-17T14:11:01.237Z",
  "records": [
   {
    "entity_id": "gb-visit-visas--standard-visitor",
@@ -17,7 +17,7 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-11-13T14:04:20.850Z",
+   "source_last_verified_at": "2026-11-17T14:04:17.302Z",
    "latest": {
     "value_raw": "3 weeks",
     "value_days": 21,
