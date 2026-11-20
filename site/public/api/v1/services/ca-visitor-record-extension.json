@@ -3,7 +3,7 @@
  "service_name": "Visitor record (extend your stay in Canada)",
  "jurisdiction": "CA",
  "count": 1,
- "generated_at": "2026-11-17T14:11:01.237Z",
+ "generated_at": "2026-11-20T14:10:56.475Z",
  "records": [
   {
    "entity_id": "ca-visitor-record-extension",
@@ -17,14 +17,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-11-17T14:04:13.115Z",
+   "source_last_verified_at": "2026-11-20T14:04:07.942Z",
    "latest": {
-    "value_raw": "304 days",
-    "value_days": 304,
+    "value_raw": "296 days",
+    "value_days": 296,
     "unit_original": "days",
     "status": "ok",
-    "effective_date": "2026-11-12",
-    "retrieved_at": "2026-11-17T14:04:13.111Z",
+    "effective_date": "2026-11-18",
+    "retrieved_at": "2026-11-20T14:04:07.939Z",
     "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/data-ptime-non-country-en.json",
     "confidence": "official"
    }

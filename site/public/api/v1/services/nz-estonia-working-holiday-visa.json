@@ -3,7 +3,7 @@
  "service_name": "Estonia Working Holiday Visa — 50% processed",
  "jurisdiction": "NZ",
  "count": 2,
- "generated_at": "2026-11-17T14:11:01.237Z",
+ "generated_at": "2026-11-20T14:10:56.475Z",
  "records": [
   {
    "entity_id": "nz-estonia-working-holiday-visa--p50",
@@ -17,14 +17,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-11-17T14:11:00.849Z",
+   "source_last_verified_at": "2026-11-20T14:10:56.162Z",
    "latest": {
-    "value_raw": "8 working days",
-    "value_days": 8,
+    "value_raw": "10 working days",
+    "value_days": 10,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-10-30",
-    "retrieved_at": "2026-10-30T14:07:40.377Z",
+    "effective_date": "2026-11-20",
+    "retrieved_at": "2026-11-20T14:06:37.540Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }
@@ -41,14 +41,14 @@
    "source_collection_status": "active",
    "source_collection_status_since": null,
    "source_collection_status_note": null,
-   "source_last_verified_at": "2026-11-17T14:11:00.849Z",
+   "source_last_verified_at": "2026-11-20T14:10:56.162Z",
    "latest": {
-    "value_raw": "16 working days",
-    "value_days": 16,
+    "value_raw": "21 working days",
+    "value_days": 21,
     "unit_original": "working days",
     "status": "ok",
-    "effective_date": "2026-11-06",
-    "retrieved_at": "2026-11-06T14:07:11.253Z",
+    "effective_date": "2026-11-20",
+    "retrieved_at": "2026-11-20T14:06:37.540Z",
     "source_url": "https://www.immigration.govt.nz/process-to-apply/waiting-for-a-visa/processing-a-visa-application/how-long-it-takes-to-process-an-application/check-visa-application-processing-time/",
     "confidence": "official"
    }

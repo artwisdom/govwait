@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T14:11:01.001Z",
+  "generated_at": "2026-11-20T14:10:56.287Z",
   "pass": true,
   "checks": [
     {
@@ -30,12 +30,12 @@
     {
       "name": "forward-current-coverage",
       "pass": true,
-      "detail": "84 headline forward-looking estimates (floor 28)"
+      "detail": "112 headline forward-looking estimates (floor 28)"
     },
     {
       "name": "forward-cohort-coverage",
       "pass": true,
-      "detail": "10885 application-month estimates (floor 3500)"
+      "detail": "14568 application-month estimates (floor 3500)"
     },
     {
       "name": "value-range",
@@ -45,7 +45,7 @@
     {
       "name": "coverage-ircc-ptime",
       "pass": true,
-      "detail": "19070 observations (floor 1200)"
+      "detail": "20977 observations (floor 1200)"
     },
     {
       "name": "collection-active-ircc-ptime",
@@ -65,7 +65,7 @@
     {
       "name": "coverage-ircc-forward-looking",
       "pass": true,
-      "detail": "84 observations (floor 28)"
+      "detail": "112 observations (floor 28)"
     },
     {
       "name": "collection-active-ircc-forward-looking",
@@ -75,7 +75,7 @@
     {
       "name": "coverage-ircc-noncountry",
       "pass": true,
-      "detail": "190 observations (floor 15)"
+      "detail": "209 observations (floor 15)"
     },
     {
       "name": "collection-active-ircc-noncountry",
@@ -115,7 +115,7 @@
     {
       "name": "coverage-inz-processing-times",
       "pass": true,
-      "detail": "1439 observations (floor 240)"
+      "detail": "1546 observations (floor 240)"
     },
     {
       "name": "collection-active-inz-processing-times",
@@ -140,37 +140,37 @@
     {
       "name": "coverage-total",
       "pass": true,
-      "detail": "20957 total observations (floor 300)"
+      "detail": "23018 total observations (floor 300)"
     },
     {
       "name": "staleness-ircc-ptime",
       "pass": true,
-      "detail": "latest effective_date 2026-11-12 is 5d old (max 45)"
+      "detail": "latest effective_date 2026-11-18 is 2d old (max 45)"
     },
     {
       "name": "staleness-ircc-forward-looking",
       "pass": true,
-      "detail": "latest effective_date 2026-10-09 is 39d old (max 62)"
+      "detail": "latest effective_date 2026-11-17 is 3d old (max 62)"
     },
     {
       "name": "staleness-govuk-visa-times",
       "pass": true,
-      "detail": "latest effective_date 2026-09-09 is 69d old (max 120)"
+      "detail": "latest effective_date 2026-09-09 is 72d old (max 120)"
     },
     {
       "name": "staleness-ircc-noncountry",
       "pass": true,
-      "detail": "latest effective_date 2026-11-12 is 5d old (max 45)"
+      "detail": "latest effective_date 2026-11-18 is 2d old (max 45)"
     },
     {
       "name": "staleness-govuk-inuk-times",
       "pass": true,
-      "detail": "latest effective_date 2026-09-09 is 69d old (max 500)"
+      "detail": "latest effective_date 2026-09-09 is 72d old (max 500)"
     },
     {
       "name": "volatility-guard",
       "pass": true,
-      "detail": "9 >10x jumps flagged for review",
+      "detail": "11 >10x jumps flagged for review",
       "flagged": [
         {
           "entity_id": "nz-permanent-resident-visa--p80",
@@ -216,6 +216,16 @@
           "entity_id": "nz-work-to-residence-visa--p50",
           "v1": 4,
           "v2": 53
+        },
+        {
+          "entity_id": "ca-visitor-visa--ps",
+          "v1": 1,
+          "v2": 69
+        },
+        {
+          "entity_id": "ca-visitor-visa--wb",
+          "v1": 1,
+          "v2": 69
         }
       ]
     },
